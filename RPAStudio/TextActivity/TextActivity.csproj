@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75205F2D-1AD9-4700-9EAF-4113262C79EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TextActivity</RootNamespace>
+    <AssemblyName>TextActivity</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\ClickTextActivity.cs" />
+    <Compile Include="Designer\ClickTextDesigner.xaml.cs">
+      <DependentUpon>ClickTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\DoubleClickActivity.cs" />
+    <Compile Include="Designer\DoubleClickDesigner.xaml.cs">
+      <DependentUpon>DoubleClickDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\ExtractDataActivity.cs" />
+    <Compile Include="Designer\ExtractDataDesigner.xaml.cs">
+      <DependentUpon>ExtractDataDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\FindPositionActivity.cs" />
+    <Compile Include="Designer\FindPositionDesigner.xaml.cs">
+      <DependentUpon>FindPositionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\FindTextActivity.cs" />
+    <Compile Include="Designer\FindTextDesigner.xaml.cs">
+      <DependentUpon>FindTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\GetFullTextActivity.cs" />
+    <Compile Include="Designer\GetFullTextDesigner.xaml.cs">
+      <DependentUpon>GetFullTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\GetVisibleTextActivity.cs" />
+    <Compile Include="Designer\GetVisibleTextDesigner.xaml.cs">
+      <DependentUpon>GetVisibleTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\HoverTextActivity.cs" />
+    <Compile Include="Designer\HoverTextDesigner.xaml.cs">
+      <DependentUpon>HoverTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\MouseCilckType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Designer\ClickTextDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\DoubleClickDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\ExtractDataDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\FindPositionDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\FindTextDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\GetFullTextDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\GetVisibleTextDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Designer\HoverTextDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlActivity\ControlActivity.csproj">
+      <Project>{d591d790-1907-4172-8efa-176c35d7d5a5}</Project>
+      <Name>ControlActivity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MouseActivity\MouseActivity.csproj">
+      <Project>{4d0c8911-fd98-4439-af5e-275cabf29590}</Project>
+      <Name>MouseActivity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins.Shared.Library\Plugins.Shared.Library.csproj">
+      <Project>{6879c801-1124-477a-97d8-0961e6d710b2}</Project>
+      <Name>Plugins.Shared.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,17 @@
+RPAStudio/*/Debug
+RPAStudio/*/Release
+RPAStudio/*/obj
+RPAStudio/packages/*
+RPAStudio/*/bin
+RPAStudio/Debug
+RPAStudio/Release
+RPAStudio/ipch
+RPAStudio/RPAStudio.VC.db
+RPAStudio/.vs
+RPAStudio/DesktopGrab
+RPAStudio/*/GeneratedFiles
+*.vcxproj.user
+*shproj.user
+*csproj.user
+RPAStudio/RPAStudio/Styles/*
+*.user
