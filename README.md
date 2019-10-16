@@ -9,7 +9,6 @@
     
 ## 安装
   * 环境：windows;.net4.5以上
-  * 下载: [http://rpa.openserver.cn/](http://rpa.openserver.cn/)
   * 编译: 克隆源代码，VS2015编译运行二进制文件
   
 ## 支持
