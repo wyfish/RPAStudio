@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RPA.Core.Activities.FileActivity">
+    <DataTemplate  x:Key="ChangeTypeEditor" >
+        <local:FileChangeTypeControl CheckedText="{Binding Value}"></local:FileChangeTypeControl>
+    </DataTemplate>
+    <DataTemplate x:Key="NotifyFiltersEditor">
+        <local:NotifyFiltersControl CheckedText="{Binding Value}"></local:NotifyFiltersControl>
+    </DataTemplate>
+</ResourceDictionary>

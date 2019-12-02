@@ -1,0 +1,51 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Core.Activities.DebugActivity.LogMessageDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:wu="clr-namespace:RPA.Core.Activities.DebugActivity"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    
+    xmlns:psl="clr-namespace:Plugins.Shared.Library;assembly=Plugins.Shared.Library"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
+    psla:ActivityDesignerAttached.Icon="Resources/DebugActivity/log-message.png"
+    >
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <ObjectDataProvider x:Key="LogLevel" MethodName="GetValues" ObjectType="{x:Type sys:Enum}" >
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="psl:SharedObject+enOutputType"/>
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+            <Style x:Key="NonEditableComboboxStyle" TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+                <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+                <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}" />
+                <Setter Property="BorderBrush" Value="#D0D7E2" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="Height" Value="23" />
+            </Style>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <pslc:CollapsableActivity>
+        <Grid>
+            <DockPanel LastChildFill="True" Width="300">
+                <DockPanel Dock="Top" LastChildFill="True">
+                    <Label Name="LogLevelLabel" Width="63" DockPanel.Dock="Left" Content="级别" />
+                    <ComboBox Name="LogLevelComboBox" Style="{StaticResource NonEditableComboboxStyle}" VerticalContentAlignment="Center" DockPanel.Dock="Right" Text="Info" SelectedItem="{Binding Path=ModelItem.Level, Mode=TwoWay}" ItemsSource="{Binding Source={StaticResource LogLevel}}" />
+                </DockPanel>
+                <DockPanel Dock="Bottom" LastChildFill="True" Margin="0,5,0,0" VerticalAlignment="Center">
+                    <Label Name="LogDataLabel" DockPanel.Dock="Left" Content="消息" Width="63" />
+                    <sapv:ExpressionTextBox Name="LogDataTextBox" DockPanel.Dock="Right" HintText="文本必须用双引号括起来" ExpressionType="{x:Type sys:Object}" OwnerActivity="{Binding Path=ModelItem}" Expression="{Binding Path=ModelItem.Message, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
+                </DockPanel>
+            </DockPanel>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

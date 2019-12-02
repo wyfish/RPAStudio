@@ -1,0 +1,147 @@
+﻿<sap:WorkflowElementDialog
+    x:Class="RPA.Core.Activities.DataTableActivity.Dialog.JoinDataTablesWizard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
+    xmlns:sd="clr-namespace:System.Data;assembly=System.Data" 
+    xmlns:local="clr-namespace:RPA.Core.Activities.DataTableActivity"
+    xmlns:themes="http://schemas.actiprosoftware.com/winfx/xaml/themes" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+    xmlns:src="clr-namespace:Plugins.Shared.Library.Converters;assembly=Plugins.Shared.Library"
+    Padding="0" WindowResizeMode="CanResizeWithGrip" WindowSizeToContent="Manual" MinWidth="540" MinHeight="380" 
+    Title="附加数据表" 
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    >
+    <sap:WorkflowElementDialog.Resources>
+        <ObjectDataProvider x:Key="OperatorEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:JoinOperator" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="TypeEnum" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:JoinType" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <src:EnumOperationConverter x:Key="EnumOperationConverter" />
+        <src:EnumsToDisplayNameConverter x:Key="EnumsToDisplayNameConverter" />
+        <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+        <Style x:Key="{x:Type ToolTip}" BasedOn="{StaticResource {x:Type ToolTip}}" TargetType="{x:Type ToolTip}">
+            <Style.Triggers>
+                <Trigger Property="Content" Value="Static Empty">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Trigger>
+                <Trigger Property="Content" Value="Null">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="{x:Type sapv:ExpressionTextBox}" TargetType="{x:Type sapv:ExpressionTextBox}">
+            <Setter Property="Height" Value="23" />
+            <Setter Property="MaxLines" Value="1" />
+            <!--<Setter Property="Background" Value="{DynamicResource {x:Static EditBackgroundFocusedBrushKey}}" />-->
+        </Style>
+        <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="23" />
+            <Setter Property="Width" Value="20" />
+        </Style>
+    </sap:WorkflowElementDialog.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <DockPanel Margin="1" LastChildFill="false">
+            <Grid DockPanel.Dock="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Content="输入数据表1" Grid.Column="0" Grid.Row="0" />
+                <sapv:ExpressionTextBox Grid.Column="1" Grid.Row="0" Width="120" MaxLines="1" ExpressionType="{x:Type sd:DataTable}" 
+                                        HintText="InputDataTable" Expression="{Binding Path=ModelItem.DataTable1, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
+                                        OwnerActivity="{Binding Path=ModelItem}" />
+                <Label Content="输入数据表2" Grid.Column="0" Grid.Row="1" />
+                <sapv:ExpressionTextBox Grid.Column="1" Grid.Row="1" Width="120" MaxLines="1" ExpressionType="{x:Type sd:DataTable}" 
+                                        HintText="InputDataTable" Expression="{Binding Path=ModelItem.DataTable2, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
+                                        OwnerActivity="{Binding Path=ModelItem}" />
+            </Grid>
+            <sapv:ExpressionTextBox DockPanel.Dock="Right" Width="120" UseLocationExpression="true" MaxLines="1" ExpressionType="{x:Type sd:DataTable}" 
+                                    HintText="OutputDataTable" Expression="{Binding Path=ModelItem.OutputDataTable, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out, Mode=TwoWay}" 
+                                    OwnerActivity="{Binding Path=ModelItem}" />
+            <Label VerticalAlignment="Center" DockPanel.Dock="Right" Content="输出数据表" />
+        </DockPanel>
+        <DockPanel Grid.Row="1" LastChildFill="false">
+            <Label Content="Static JoinType" Grid.Column="0" Grid.Row="1" />
+            <ComboBox Name="TypeBox" Grid.Column="2" HorizontalContentAlignment="Center" Margin="1" 
+                      ItemsSource="{Binding Source={StaticResource TypeEnum}, Converter={StaticResource EnumsToDisplayNameConverter}}" 
+                      SelectedItem="{Binding Operator , Converter={StaticResource EnumOperationConverter}}" />
+        </DockPanel>
+        <DockPanel Grid.Row="2" Margin="1,10,1,0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,10,1,0">
+                <Grid IsSharedSizeScope="true" Margin="0,5,0,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*" />
+                        <ColumnDefinition Width="59*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Row="1" Margin="1" Orientation="Horizontal" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" />
+                    <Grid Row="2" Margin="1" ColumnSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" SharedSizeGroup="Col1" />
+                            <ColumnDefinition Width="150" SharedSizeGroup="Col2" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="DataTable1" />
+                        <Label Grid.Column="1" Content="操作" />
+                        <Label Grid.Column="2" Content="DataTable2" />
+                    </Grid>
+                    <ItemsControl Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Arguments, Mode=TwoWay}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120" SharedSizeGroup="Col1" />
+                                        <ColumnDefinition Width="150" SharedSizeGroup="Col2" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" SharedSizeGroup="Col4" />
+                                        <ColumnDefinition Width="Auto" SharedSizeGroup="Col5" />
+                                    </Grid.ColumnDefinitions>
+                                    <DockPanel LastChildFill="true" Margin="1" />
+                                    <sapv:ExpressionTextBox Grid.Column="0" HintText="Static ColumnText" Margin="1" Expression="{Binding Column1 , Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" OwnerActivity="{Binding Path=ModelItem, RelativeSource={RelativeSource AncestorType={x:Type sap:WorkflowElementDialog}}}" />
+                                    <ComboBox Grid.Column="1" HorizontalContentAlignment="Center" Margin="1" 
+                                              ItemsSource="{Binding Source={StaticResource OperatorEnum}, Converter={StaticResource EnumsToDisplayNameConverter}}" 
+                                              SelectedItem="{Binding Operator , Converter={StaticResource EnumOperationConverter}}" />
+                                    <sapv:ExpressionTextBox Grid.Column="2" HintText="Static ColumnText" Margin="1" Expression="{Binding Column2 , Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" OwnerActivity="{Binding Path=ModelItem, RelativeSource={RelativeSource AncestorType={x:Type sap:WorkflowElementDialog}}}" />
+                                    <Button Click="RemoveArgumentClick" Grid.Column="3" Focusable="false" Margin="1,1,0,1" Tag="{Binding Path=Index}">
+                                        <Path Margin="4" Data="F0 M 0,0 L 1,1 M 0,1 L 1,0 " Stretch="Uniform" StrokeThickness="1.5" Stroke="Gray" />
+                                    </Button>
+                                    <Button Click="AddArgumentClick" Grid.Column="4" Focusable="false" Margin="0,1,1,1" Tag="{Binding Path=Index}">
+                                        <Path Margin="4" Data="F0 M 0,0 L 1,1 M 0,1 L 1,0 " Stretch="Uniform" StrokeThickness="1.5" Stroke="Gray">
+                                            <Path.RenderTransform>
+                                                <RotateTransform Angle="45" CenterX="3.5"  CenterY="3.5"></RotateTransform>
+                                            </Path.RenderTransform>
+                                        </Path>
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</sap:WorkflowElementDialog>

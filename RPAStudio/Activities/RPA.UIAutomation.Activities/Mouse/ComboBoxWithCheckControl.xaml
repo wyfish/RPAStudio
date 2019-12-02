@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="RPA.UIAutomation.Activities.Mouse.ComboBoxWithCheckControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPA.UIAutomation.Activities.Mouse"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ComboBox IsEditable="True" Text="{Binding CheckedText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,RelativeSource={RelativeSource AncestorType={x:Type local:ComboBoxWithCheckControl}}}" LostFocus="ComboBox_LostFocus">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Padding" Value="0" />
+                    <Setter Property="BorderThickness" Value="0" />
+                </Style>
+            </ComboBox.ItemContainerStyle>
+            <CheckBox Name="cbAlt" Content="Alt" Checked="Alt_Checked" Unchecked="Alt_Checked" />
+            <CheckBox Name="cbCtrl" Content="Ctrl" Checked="Ctrl_Checked"  Unchecked="Ctrl_Checked"/>
+            <CheckBox Name="cbShift" Content="Shift" Checked="Shift_Checked" Unchecked="Shift_Checked"/>
+            <CheckBox Name="cbWin" Content="Win" Checked="Win_Checked" Unchecked="Win_Checked"/>
+        </ComboBox>
+    </Grid>
+</UserControl>

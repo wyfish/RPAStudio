@@ -1,0 +1,2 @@
+1.该目录保存活动组件项目自动生成的nupkg包
+2.push.bat双击运行后自动推送当前目录下所有nupkg包到rpa-nexus.openserver.cn

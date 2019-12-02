@@ -1,0 +1,72 @@
+﻿<sap:ActivityDesigner 
+    x:Class="RPA.Integration.Activities.ExcelPlugins.ExcelCreateDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    Loaded="IcoPath_Loaded"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    >
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing x:Name="icoPath">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <pslc:CollapsableActivity>
+        <StackPanel >
+            <StackPanel Orientation="Horizontal" Height="25">
+                <sapv:ExpressionTextBox
+                    HintText="打开文件路径"
+                    x:Name="expressTextBox"
+                    Expression="{Binding ModelItem.PathUrl, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay}"
+                    ExpressionType="{x:Type sys:String}"
+                    OwnerActivity="{Binding ModelItem}"
+                    VerticalAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    MaxLines="1"  Height="25" Width="260" />
+                <Button x:Name="getUrlButton" Click="PathSelect"    VerticalAlignment="Top" Width="25" Content="···"/>
+            </StackPanel>
+            <Grid Height="5"></Grid>
+            <StackPanel Orientation="Horizontal" Height="25">
+
+                <sapv:ExpressionTextBox
+                        x:Name="expressTextBox1"
+                        Expression="{Binding ModelItem.SavePathUrl, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay}"
+                        ExpressionType="{x:Type sys:String}"
+                        HintText="文件保存路径"
+                        OwnerActivity="{Binding ModelItem}"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        MaxLines="1"  Height="25" Width="260" />
+                <Button x:Name="getUrlButton1" Click="ShowSaveFileDialog"  Width="25" Content="···"/>
+            </StackPanel>
+            <Grid Height="10"></Grid>
+            <Grid>
+                <RadioButton Visibility="Hidden"  IsChecked="{Binding ModelItem.Save, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="65" Content="保存"/>
+                <RadioButton Visibility="Hidden" IsChecked="{Binding ModelItem.SaveAs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="58" Content="另存为"/>
+                <sap:WorkflowItemPresenter
+                        HintText="Drop Activity Here"
+                        Item="{Binding ModelItem.Body.Handler, Mode=TwoWay}" />
+            </Grid>
+        </StackPanel>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

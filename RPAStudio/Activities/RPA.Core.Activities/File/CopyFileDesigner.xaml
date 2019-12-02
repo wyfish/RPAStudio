@@ -1,0 +1,49 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Core.Activities.FileActivity.CopyFileDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"            
+    xmlns:sadc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="pack://application:,,,/RPA.Core.Activities;Component/Resources/File/appline.png">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+    <pslc:CollapsableActivity >
+        <Grid  Height="80" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="44*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <sapv:ExpressionTextBox MaxLines="1" HintText="The path of the file to be copied."
+                                    Expression="{Binding Path=ModelItem.Path, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }" 
+                                    ExpressionType="sys:String"
+                                    OwnerActivity="{Binding Path=ModelItem}" Margin="0,0,25,10"/>
+                <Button x:Name="button" Content="..." VerticalAlignment="Center" Width="20" Height="30" Click="button_Click_fileFrom" HorizontalAlignment="Right" Margin="0,0,0,10"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <sapv:ExpressionTextBox MaxLines="1" HintText="The destination path where the file is to be copied."
+                                    Expression="{Binding Path=ModelItem.Destination, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }" 
+                                    ExpressionType="sys:String"
+                                    OwnerActivity="{Binding Path=ModelItem}" Margin="0,0,25,10"/>
+                <Button x:Name="button1" Content="..." VerticalAlignment="Center" Width="20" Height="30" Click="button_Click_fileTo" HorizontalAlignment="Right" Margin="0,0,0,10"/>
+            </Grid>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

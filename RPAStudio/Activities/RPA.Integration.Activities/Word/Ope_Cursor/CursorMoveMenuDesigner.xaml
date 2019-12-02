@@ -1,0 +1,34 @@
+﻿<sap:ActivityDesigner 
+    x:Class="RPA.Integration.Activities.WordPlugins.CursorMoveMenuDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    Loaded="IcoPath_Loaded"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    >
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing x:Name="icoPath">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <pslc:CollapsableActivity >
+        <Grid >
+            <TextBox Margin="100,0,105,25" BorderThickness="0" IsReadOnly="True" VerticalContentAlignment ="Center" Text="移 动 到"/>
+            <StackPanel Margin="35,25,40,0" Orientation="Horizontal">
+                <RadioButton  IsChecked="{Binding ModelItem.Head, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" Width="65" Content="开头"/>
+                <RadioButton  IsChecked="{Binding ModelItem.Tail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" Width="52" Content="行尾"/>
+                <RadioButton  IsChecked="{Binding ModelItem.NextPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" Width="58" Content="下一页"/>
+            </StackPanel>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

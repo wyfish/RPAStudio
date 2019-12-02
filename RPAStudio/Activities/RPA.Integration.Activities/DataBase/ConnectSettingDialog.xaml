@@ -1,0 +1,88 @@
+﻿<Window x:Class="RPA.Integration.Activities.Database.ConnectSettingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+        xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+        xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+        xmlns:local="clr-namespace:RPA.Integration.Activities.Database"
+        xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+        mc:Ignorable="d"
+        BorderBrush="#1883D7"
+        BorderThickness="1"
+        WindowStartupLocation="CenterScreen" 
+        MaxHeight="174" MinHeight="174" Height="150" 
+        Width="340" MaxWidth="340" MinWidth="290"
+        ResizeMode="NoResize" WindowStyle="None">
+
+    <!--MouseLeftButtonDown="Window_MouseLeftButtonDown"-->
+
+    <!--<Window.Resources>
+        <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" x:Uid="swdv:ArgumentToExpressionConverter_1" />
+    </Window.Resources>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="0" >
+            <Label x:Name="TitleText" Content="连接设置"  FontSize="12"></Label>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Button Name="btnClose" FontSize="12" Height="26" Width="30" Foreground="Black" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                    Click="btnClose_Click" BorderThickness="0">❌</Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="#F0F0F0">
+            <Label x:Name="NewConn1" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom">新建数据库连接</Label>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Background="#F0F0F0">
+            <Button Name="btnWizard"  FontSize="14" Height="26" Width="105" Foreground="Black" 
+                    Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                    Click="btnWizard_Click"
+                    BorderBrush="LightGray"
+                    BorderThickness="1" Margin="0,10,33,0">连接向导</Button>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Background="#F0F0F0" IsEnabled="True">
+            <sapv:ExpressionTextBox 
+                x:Name="etb" 
+                x:Uid="PART_expressionTextBox"  
+                Margin="10,10,10,0"        
+                Focusable="True" Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"
+                ExpressionType="sys:String">
+            </sapv:ExpressionTextBox>
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" Background="#F0F0F0">
+            <ComboBox x:Name="comboBox"
+                      IsReadOnly="False"
+                      IsTextSearchEnabled="False"
+                      SelectionChanged="comboBox_SelectionChanged"
+                      HorizontalAlignment="Left" Margin="10,8,0,0"
+                      VerticalAlignment="Top" Width="318"  Height="27"/>
+        </Grid>
+
+        <Grid Grid.Row="4" Grid.ColumnSpan="2">
+            <Button Name="btnOk"  FontSize="12" Height="23" Width="53" Foreground="Black" 
+                    Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                    Click="btnOk_Click" BorderThickness="1" Margin="0,5,10,0">OK</Button>
+        </Grid>
+
+    </Grid>
+</Window>

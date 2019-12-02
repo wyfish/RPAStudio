@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPA.UIAutomation.Activities</RootNamespace>
+    <AssemblyName>RPA.UIAutomation.Activities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="FlaUI.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.Core.2.0.0-rc1\lib\net45\FlaUI.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FlaUI.UIA2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.UIA2.2.0.0-rc1\lib\net45\FlaUI.UIA2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FlaUI.UIA3, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\FlaUI.UIA3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Browser\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.UIAutomationClient, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\Interop.UIAutomationClient.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LitJSON, Version=0.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LitJson.0.15.0\lib\net45\LitJSON.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\packages\Unofficial.Microsoft.mshtml.7.0.3300\lib\net40\Microsoft.mshtml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\packages\ThammimTech.Microsoft.Vbe.Interop.15.0.0\lib\net20\Microsoft.Vbe.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\packages\Microsoft.VisualStudio.OLE.Interop.7.10.6071\lib\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Selenium.WebDriver.4.0.0-alpha03\lib\net45\WebDriver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\CommonVariable.cs" />
+    <Compile Include="Attribute\GetAttr.cs" />
+    <Compile Include="Attribute\GetAttrDesigner.xaml.cs">
+      <DependentUpon>GetAttrDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Attribute\GetPos.cs" />
+    <Compile Include="Attribute\GetPosDesigner.xaml.cs">
+      <DependentUpon>GetPosDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Attribute\SetClipRegion.cs" />
+    <Compile Include="Attribute\SetClipRegionDesigner.xaml.cs">
+      <DependentUpon>SetClipRegionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Attribute\TakeScreenShot.cs" />
+    <Compile Include="Attribute\TakeScreenShotDesigner.xaml.cs">
+      <DependentUpon>TakeScreenShotDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Attribute\WaitAttr.cs" />
+    <Compile Include="Attribute\WaitAttrDesigner.xaml.cs">
+      <DependentUpon>WaitAttrDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\AttachBrowser.cs" />
+    <Compile Include="Browser\AttachBrowserDesigner.xaml.cs">
+      <DependentUpon>AttachBrowserDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\CloseTab.cs" />
+    <Compile Include="Browser\CloseTabDesigner.xaml.cs">
+      <DependentUpon>CloseTabDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\CommonVariable.cs" />
+    <Compile Include="Browser\GoBack.cs" />
+    <Compile Include="Browser\GoBackDesigner.xaml.cs">
+      <DependentUpon>GoBackDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\GoForward.cs" />
+    <Compile Include="Browser\GoForwardDesigner.xaml.cs">
+      <DependentUpon>GoForwardDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\GoHome.cs" />
+    <Compile Include="Browser\GoHomeDesigner.xaml.cs">
+      <DependentUpon>GoHomeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\InsertJS.cs" />
+    <Compile Include="Browser\InsertJSDesigner.xaml.cs">
+      <DependentUpon>InsertJSDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\NavigateTo.cs" />
+    <Compile Include="Browser\NavigateToDesigner.xaml.cs">
+      <DependentUpon>NavigateToDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\NewBrowser.cs" />
+    <Compile Include="Browser\NewBrowserDesigner.xaml.cs">
+      <DependentUpon>NewBrowserDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\OpenBrowser.cs" />
+    <Compile Include="Browser\OpenBrowserDesigner.xaml.cs">
+      <DependentUpon>OpenBrowserDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\Refresh.cs" />
+    <Compile Include="Browser\RefreshDesigner.xaml.cs">
+      <DependentUpon>RefreshDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\SetWebAttr.cs" />
+    <Compile Include="Browser\SetWebAttrDesigner.xaml.cs">
+      <DependentUpon>SetWebAttrDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Activate.cs" />
+    <Compile Include="Control\ActivateDesigner.xaml.cs">
+      <DependentUpon>ActivateDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Check.cs" />
+    <Compile Include="Control\CheckDesigner.xaml.cs">
+      <DependentUpon>CheckDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommonVariable.cs" />
+    <Compile Include="Control\GetText.cs" />
+    <Compile Include="Control\GetTextDesigner.xaml.cs">
+      <DependentUpon>GetTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Highlight.cs" />
+    <Compile Include="Control\HighlightDesigner.xaml.cs">
+      <DependentUpon>HighlightDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SelectItem.cs" />
+    <Compile Include="Control\SelectItemDesigner.xaml.cs">
+      <DependentUpon>SelectItemDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SelectMultiItems.cs" />
+    <Compile Include="Control\SelectMultiItemsDesigner.xaml.cs">
+      <DependentUpon>SelectMultiItemsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetActiveFocus.cs" />
+    <Compile Include="Control\SetActiveFocusDesigner.xaml.cs">
+      <DependentUpon>SetActiveFocusDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetText.cs" />
+    <Compile Include="Control\SetTextDesigner.xaml.cs">
+      <DependentUpon>SetTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\AnchorBase.cs" />
+    <Compile Include="Find\AnchorBaseDesigner.xaml.cs">
+      <DependentUpon>AnchorBaseDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\CAAnchor.cs" />
+    <Compile Include="Find\CAAnchorDesigner.xaml.cs">
+      <DependentUpon>CAAnchorDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\CommonVariable.cs" />
+    <Compile Include="Find\EleExists.cs" />
+    <Compile Include="Find\EleExistsDesigner.xaml.cs">
+      <DependentUpon>EleExistsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\EleScope.cs" />
+    <Compile Include="Find\EleScopeDesigner.xaml.cs">
+      <DependentUpon>EleScopeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\EleVanish.cs" />
+    <Compile Include="Find\EleVanishDesigner.xaml.cs">
+      <DependentUpon>EleVanishDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\FindChildren.cs" />
+    <Compile Include="Find\FindChildrenDesigner.xaml.cs">
+      <DependentUpon>FindChildrenDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\FindEle.cs" />
+    <Compile Include="Find\FindEleDesigner.xaml.cs">
+      <DependentUpon>FindEleDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\FindReEle.cs" />
+    <Compile Include="Find\FindReEleDesigner.xaml.cs">
+      <DependentUpon>FindReEleDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\GetAncestor.cs" />
+    <Compile Include="Find\GetAncestorDesigner.xaml.cs">
+      <DependentUpon>GetAncestorDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Find\IndicateScreen.cs" />
+    <Compile Include="Find\IndicateScreenDesigner.xaml.cs">
+      <DependentUpon>IndicateScreenDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\HotKeyActivity.cs" />
+    <Compile Include="KeyBoard\HotKeyDesigner.xaml.cs">
+      <DependentUpon>HotKeyDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\KeyboardTypes.cs" />
+    <Compile Include="KeyBoard\SecureTextActivity.cs" />
+    <Compile Include="KeyBoard\SecureTextDesigner.xaml.cs">
+      <DependentUpon>SecureTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\TypeIntoActivity.cs" />
+    <Compile Include="KeyBoard\TypeIntoDesigner.xaml.cs">
+      <DependentUpon>TypeIntoDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse\ClickActivity.cs" />
+    <Compile Include="Mouse\ComboBoxWithCheckControl.xaml.cs">
+      <DependentUpon>ComboBoxWithCheckControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse\Common.cs" />
+    <Compile Include="Mouse\CommonVariable.cs" />
+    <Compile Include="Mouse\DoubleClickActivity.cs" />
+    <Compile Include="Mouse\HoverClickActivity.cs" />
+    <Compile Include="Mouse\KeyModifiersEditor.cs" />
+    <Compile Include="Mouse\MouseButtonTypeEditor.cs" />
+    <Compile Include="Mouse\MouseClickType.cs" />
+    <Compile Include="Mouse\MouseClickTypeEditor.cs" />
+    <Compile Include="Mouse\MouseDesigner.xaml.cs">
+      <DependentUpon>MouseDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse\MousePyFormatTemplate.cs" />
+    <Compile Include="Mouse\PropertyEditorResources.xaml.cs">
+      <DependentUpon>PropertyEditorResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse\UIExtend.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Text\ClickTextActivity.cs" />
+    <Compile Include="Text\ClickTextDesigner.xaml.cs">
+      <DependentUpon>ClickTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\DoubleClickActivity.cs" />
+    <Compile Include="Text\DoubleClickDesigner.xaml.cs">
+      <DependentUpon>DoubleClickDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\ExtractDataActivity.cs" />
+    <Compile Include="Text\ExtractDataDesigner.xaml.cs">
+      <DependentUpon>ExtractDataDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\FindPositionActivity.cs" />
+    <Compile Include="Text\FindPositionDesigner.xaml.cs">
+      <DependentUpon>FindPositionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\FindTextActivity.cs" />
+    <Compile Include="Text\FindTextDesigner.xaml.cs">
+      <DependentUpon>FindTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\GetFullTextActivity.cs" />
+    <Compile Include="Text\GetFullTextDesigner.xaml.cs">
+      <DependentUpon>GetFullTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\GetVisibleTextActivity.cs" />
+    <Compile Include="Text\GetVisibleTextDesigner.xaml.cs">
+      <DependentUpon>GetVisibleTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\HoverTextActivity.cs" />
+    <Compile Include="Text\HoverTextDesigner.xaml.cs">
+      <DependentUpon>HoverTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Text\MouseCilckType.cs" />
+    <Compile Include="Window\CommonVariable.cs" />
+    <Compile Include="Window\FindWindowActivity.cs" />
+    <Compile Include="Window\FindWindowDesigner.xaml.cs">
+      <DependentUpon>FindWindowDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowActive.cs" />
+    <Compile Include="Window\WindowActiveDesigner.xaml.cs">
+      <DependentUpon>WindowActiveDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowAttach.cs" />
+    <Compile Include="Window\WindowAttachDesigner.xaml.cs">
+      <DependentUpon>WindowAttachDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowClose.cs" />
+    <Compile Include="Window\WindowCloseDesigner.xaml.cs">
+      <DependentUpon>WindowCloseDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowHide.cs" />
+    <Compile Include="Window\WindowHideDesigner.xaml.cs">
+      <DependentUpon>WindowHideDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowMaxi.cs" />
+    <Compile Include="Window\WindowMaxiDesigner.xaml.cs">
+      <DependentUpon>WindowMaxiDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowMin.cs" />
+    <Compile Include="Window\WindowMinDesigner.xaml.cs">
+      <DependentUpon>WindowMinDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowMove.cs" />
+    <Compile Include="Window\WindowMoveDesigner.xaml.cs">
+      <DependentUpon>WindowMoveDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowRestore.cs" />
+    <Compile Include="Window\WindowRestoreDesigner.xaml.cs">
+      <DependentUpon>WindowRestoreDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window\WindowShow.cs" />
+    <Compile Include="Window\WindowShowDesigner.xaml.cs">
+      <DependentUpon>WindowShowDesigner.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="RPA.UIAutomation.Activities.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plugins.Shared.Library\Plugins.Shared.Library.csproj">
+      <Project>{6879c801-1124-477a-97d8-0961e6d710b2}</Project>
+      <Name>Plugins.Shared.Library</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="activity.config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Attribute\GetAttrDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Attribute\GetPosDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Attribute\SetClipRegionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Attribute\TakeScreenShotDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Attribute\WaitAttrDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\AttachBrowserDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\CloseTabDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\GoBackDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\GoForwardDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\GoHomeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\InsertJSDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\NavigateToDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\NewBrowserDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\OpenBrowserDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\RefreshDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\SetWebAttrDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\ActivateDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\CheckDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\GetTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\HighlightDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\SelectItemDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\SelectMultiItemsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\SetActiveFocusDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\SetTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\AnchorBaseDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\CAAnchorDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\EleExistsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\EleScopeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\EleVanishDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\FindChildrenDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\FindEleDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\FindReEleDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\GetAncestorDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Find\IndicateScreenDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\HotKeyDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\SecureTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\TypeIntoDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mouse\ComboBoxWithCheckControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mouse\MouseDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mouse\PropertyEditorResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\ClickTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\DoubleClickDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\ExtractDataDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\FindPositionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\FindTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\GetFullTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\GetVisibleTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Text\HoverTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\FindWindowDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowActiveDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowAttachDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowCloseDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowHideDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowMaxiDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowMinDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowMoveDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowRestoreDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window\WindowShowDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Browser\Interop.SHDocVw.dll" />
+    <Resource Include="Resources\Window\findwindow.png" />
+    <Resource Include="Resources\Window\WindowActive.png" />
+    <Resource Include="Resources\Window\WindowAttach.png" />
+    <Resource Include="Resources\Window\WindowClose.png" />
+    <Resource Include="Resources\Window\WindowHide.png" />
+    <Resource Include="Resources\Window\WindowMaxi.png" />
+    <Resource Include="Resources\Window\WindowMin.png" />
+    <Resource Include="Resources\Window\WindowMove.png" />
+    <Resource Include="Resources\Window\WindowRestore.png" />
+    <Resource Include="Resources\Window\WindowShow.png" />
+    <Resource Include="Resources\Text\click.png" />
+    <Resource Include="Resources\Text\exist.png" />
+    <Resource Include="Resources\Text\extract.png" />
+    <Resource Include="Resources\Text\find.png" />
+    <Resource Include="Resources\Text\gettext.png" />
+    <Resource Include="Resources\Text\hower.png" />
+    <Resource Include="Resources\KeyBoard\hotkey.png" />
+    <Resource Include="Resources\KeyBoard\text.png" />
+    <Resource Include="Resources\Find\AnchorBase.png" />
+    <Resource Include="Resources\Find\EleExists.png" />
+    <Resource Include="Resources\Find\EleScope.png" />
+    <Resource Include="Resources\Find\EleVanish.png" />
+    <Resource Include="Resources\Find\FindChildren.png" />
+    <Resource Include="Resources\Find\FindEle.png" />
+    <Resource Include="Resources\Find\FindReEle.png" />
+    <Resource Include="Resources\Find\GetAncestor.png" />
+    <Resource Include="Resources\Find\IndicateScreen.png" />
+    <Resource Include="Resources\Control\Activate.png" />
+    <Resource Include="Resources\Control\Check.png" />
+    <Resource Include="Resources\Control\GetText.png" />
+    <Resource Include="Resources\Control\Highlight.png" />
+    <Resource Include="Resources\Control\SelectItem.png" />
+    <Resource Include="Resources\Control\SelectMultiItems.png" />
+    <Resource Include="Resources\Control\SetFocus.png" />
+    <Resource Include="Resources\Control\settext.png" />
+    <Resource Include="Resources\Browser\CloseTab.png" />
+    <Resource Include="Resources\Browser\GoBack.png" />
+    <Resource Include="Resources\Browser\GoForward.png" />
+    <Resource Include="Resources\Browser\GoHome.png" />
+    <Resource Include="Resources\Browser\InsertJS.png" />
+    <Resource Include="Resources\Browser\NavigateTo.png" />
+    <Resource Include="Resources\Browser\OpenBrowser.png" />
+    <Resource Include="Resources\Browser\RefreshBrowser.png" />
+    <Resource Include="Resources\Browser\SetWebAttr.png" />
+    <Resource Include="Resources\Attribute\GetAttr.png" />
+    <Resource Include="Resources\Attribute\GetPos.png" />
+    <Resource Include="Resources\Attribute\SetClipRegion.png" />
+    <Resource Include="Resources\Attribute\TakeScreenShot.png" />
+    <Resource Include="Resources\Attribute\WaitAttr.png" />
+    <Resource Include="Resources\Mouse\hover.png" />
+    <Resource Include="Resources\Mouse\menu.png" />
+    <Resource Include="Resources\Mouse\mouseclick.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>del "$(ProjectDir)..\nupkgs\$(TargetName).*.nupkg"
+
+for /D %25%25f in (%25LocalAppData%25\RPAStudio\Packages\Installed\RPA.*.Activities.*) do (
+    rmdir  /S /Q %25%25f
+)</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+nuget pack "$(ProjectPath)" -properties Configuration=Debug
+)
+if $(ConfigurationName) == Release (
+nuget pack "$(ProjectPath)" -properties Configuration=Release
+)
+xcopy "$(TargetDir)*.nupkg" "$(ProjectDir)..\nupkgs\"  /Y
+xcopy "$(TargetDir)*.nupkg" "$(SolutionDir)RPAStudio\$(OutDir)Packages\"  /Y
+del "$(TargetDir)*.nupkg"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

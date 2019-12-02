@@ -1,0 +1,23 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Integration.Activities.Mail.ArchiveOutlookMailsDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
+    psla:ActivityDesignerAttached.Icon="Resources/Mail/archive-mail.png"
+    psla:ActivityDesignerAttached.Resources="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml"
+    >
+    <pslc:CollapsableActivity>
+        <DockPanel LastChildFill="True" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <sapv:ExpressionTextBox DockPanel.Dock="Top" MaxLines="1" HintText="待存档账户名称" ExpressionType="{x:Type s:String}" OwnerActivity="{Binding ModelItem}" Expression="{Binding Path=ModelItem.Account, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
+            <DockPanel LastChildFill="True" Dock="Bottom" Margin="0,5,0,0">
+                <Button Name="LoadButton" ToolTip="选择Outlook数据文件的保存路径" Style="{StaticResource ToolBarButtonStyle}" BorderThickness="1" BorderBrush="#D0D7E2"  
+                        Width="25" Height="25" Content="..."  Margin="2,0,2,0" DockPanel.Dock="Right" Click="LoadButton_Click" />
+                <sapv:ExpressionTextBox DockPanel.Dock="Left" MaxLines="1" HintText="Outlook数据文件保存路径" ExpressionType="{x:Type s:String}" OwnerActivity="{Binding ModelItem}" Expression="{Binding Path=ModelItem.PstFilePath, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
+            </DockPanel>
+        </DockPanel>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

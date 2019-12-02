@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>RPA Studio Solution</title>
+  </head>
+
+  <body>
+          First Name:<br>
+          <input type="text" id="First_Name"><br>
+          Last Name:<br>
+          <input type="text" id="Last_Name"><br>
+          Age:<br>
+          <input type="text" id="Age"><br>
+          <button onclick="SubmitValues()">Submit</button>
+          <script type="text/javascript">
+          function SubmitValues(){
+            var First_Name = document.getElementById("First_Name").value;
+            var Last_Name = document.getElementById("Last_Name").value;
+            var Age = document.getElementById("Age").value;
+            window.external.setResult(First_Name + "," + Last_Name + "," + Age);
+            return true;
+          }  
+          </script>
+  </body>
+  </html>

@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{089464AC-7A2B-4BDC-BD6A-3C76005FFC35}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPA.Core.Activities</RootNamespace>
+    <AssemblyName>RPA.Core.Activities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CsvHelper.2.16.3.0\lib\net45\CsvHelper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationDesigner.xaml.cs">
+      <DependentUpon>ApplicationDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Application\CloseApplicationActivity.cs" />
+    <Compile Include="Application\CloseApplicationDesigner.xaml.cs">
+      <DependentUpon>CloseApplicationDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Application\GetProcessActivity.cs" />
+    <Compile Include="Application\KillProcessActivity.cs" />
+    <Compile Include="Application\OpenApplicationActivity.cs" />
+    <Compile Include="Application\OpenApplicationDesigner.xaml.cs">
+      <DependentUpon>OpenApplicationDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Application\StartProcessActivity.cs" />
+    <Compile Include="Application\StartProcessDesigner.xaml.cs">
+      <DependentUpon>StartProcessDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clipboard\CopySelectTextActivity.cs" />
+    <Compile Include="Clipboard\CopySelectTextDesigner.xaml.cs">
+      <DependentUpon>CopySelectTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clipboard\GetFromClipboardAvtivity.cs" />
+    <Compile Include="Clipboard\SetToClipboardActivity.cs" />
+    <Compile Include="Clipboard\SetToClipboardDesigner.xaml.cs">
+      <DependentUpon>SetToClipboardDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\AddDataColumn.cs" />
+    <Compile Include="DataTable\AddDataColumnDesigner.xaml.cs">
+      <DependentUpon>AddDataColumnDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\AddDataRow.cs" />
+    <Compile Include="DataTable\AddDataRowDesigner.xaml.cs">
+      <DependentUpon>AddDataRowDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\BuildDataTable.cs" />
+    <Compile Include="DataTable\BuildDataTableDesigner.xaml.cs">
+      <DependentUpon>BuildDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\ClearDataTable.cs" />
+    <Compile Include="DataTable\ClearDataTableDesigner.xaml.cs">
+      <DependentUpon>ClearDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\BuildDataTableDialog.xaml.cs">
+      <DependentUpon>BuildDataTableDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\EditableComboBoxControl.xaml.cs">
+      <DependentUpon>EditableComboBoxControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\FilterDataTableWizard.xaml.cs">
+      <DependentUpon>FilterDataTableWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\GenerateDataTableDialog.xaml.cs">
+      <DependentUpon>GenerateDataTableDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\IntCollectionEditor.xaml.cs">
+      <DependentUpon>IntCollectionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\JoinDataTablesWizard.xaml.cs">
+      <DependentUpon>JoinDataTablesWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Dialog\NewColumnDialog.xaml.cs">
+      <DependentUpon>NewColumnDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\FilterDataTable.cs" />
+    <Compile Include="DataTable\FilterDataTableDesigner.xaml.cs">
+      <DependentUpon>FilterDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\ForEachRow.cs" />
+    <Compile Include="DataTable\ForEachRowDesigner.xaml.cs">
+      <DependentUpon>ForEachRowDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\GenerateDataTable.cs" />
+    <Compile Include="DataTable\GenerateDataTableDesigner.xaml.cs">
+      <DependentUpon>GenerateDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\GetRowItem.cs" />
+    <Compile Include="DataTable\GetRowItemDesigner.xaml.cs">
+      <DependentUpon>GetRowItemDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\JoinDataTables.cs" />
+    <Compile Include="DataTable\JoinDataTablesDesigner.xaml.cs">
+      <DependentUpon>JoinDataTablesDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\LookupDataTable.cs" />
+    <Compile Include="DataTable\LookupDataTableDesigner.xaml.cs">
+      <DependentUpon>LookupDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\MergeDataTable.cs" />
+    <Compile Include="DataTable\MergeDataTableDesigner.xaml.cs">
+      <DependentUpon>MergeDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\Operators\DataTableExtensions.cs" />
+    <Compile Include="DataTable\Operators\EmptyFilterOperationToBooleanConverter.cs" />
+    <Compile Include="DataTable\Operators\FilterOperationArgument.cs" />
+    <Compile Include="DataTable\Operators\FilterOperationFactory.cs" />
+    <Compile Include="DataTable\Operators\JoinOperationArgument.cs" />
+    <Compile Include="DataTable\Operators\Operation.cs" />
+    <Compile Include="DataTable\Operators\TableFormatter.cs" />
+    <Compile Include="DataTable\OutputDataTable.cs" />
+    <Compile Include="DataTable\OutputDataTableDesigner.xaml.cs">
+      <DependentUpon>OutputDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\RemoveDataColumn.cs" />
+    <Compile Include="DataTable\RemoveDataColumnDesigner.xaml.cs">
+      <DependentUpon>RemoveDataColumnDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\RemoveDataRow.cs" />
+    <Compile Include="DataTable\RemoveDataRowDesigner.xaml.cs">
+      <DependentUpon>RemoveDataRowDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\RemoveDuplicateRows.cs" />
+    <Compile Include="DataTable\RemoveDuplicateRowsDesigner.xaml.cs">
+      <DependentUpon>RemoveDuplicateRowsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\SortDataTable.cs" />
+    <Compile Include="DataTable\SortDataTableDesigner.xaml.cs">
+      <DependentUpon>SortDataTableDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataTable\ViewModel\JoinOperationViewModel.cs" />
+    <Compile Include="DataTable\ViewModel\ViewModels.cs" />
+    <Compile Include="DateTime\DateConvertActivity.cs" />
+    <Compile Include="DateTime\DateTimeType.cs" />
+    <Compile Include="DateTime\GetDateTimeActivity.cs" />
+    <Compile Include="DateTime\GetDateTimeDesigner.xaml.cs">
+      <DependentUpon>GetDateTimeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DebugActivity\CommentActivity.cs" />
+    <Compile Include="DebugActivity\CommentDesigner.xaml.cs">
+      <DependentUpon>CommentDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DebugActivity\CommentOutActivity.cs" />
+    <Compile Include="DebugActivity\CommentOutDesigner.xaml.cs">
+      <DependentUpon>CommentOutDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DebugActivity\LogMessageActivity.cs" />
+    <Compile Include="DebugActivity\LogMessageDesigner.xaml.cs">
+      <DependentUpon>LogMessageDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ButtonsClickTypeEditor.cs" />
+    <Compile Include="Dialog\CalloutActivity.cs" />
+    <Compile Include="Dialog\CalloutActivityDesigner.xaml.cs">
+      <DependentUpon>CalloutActivityDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\CalloutWindow.xaml.cs">
+      <DependentUpon>CalloutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\CustomInputActivity.cs" />
+    <Compile Include="Dialog\CustomInputDesigner.xaml.cs">
+      <DependentUpon>CustomInputDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\CustomInputWindow.xaml.cs">
+      <DependentUpon>CustomInputWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\InputDialogActivity.cs" />
+    <Compile Include="Dialog\InputDialogDesigner.xaml.cs">
+      <DependentUpon>InputDialogDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\InputDialogWindow.xaml.cs">
+      <DependentUpon>InputDialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\MessageBoxActivity.cs" />
+    <Compile Include="Dialog\MessageBoxDesigner.xaml.cs">
+      <DependentUpon>MessageBoxDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\PasswordBoxAssistant.cs" />
+    <Compile Include="Dialog\SelectDesigner.xaml.cs">
+      <DependentUpon>SelectDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\SelectFileActivity.cs" />
+    <Compile Include="Dialog\SelectFolderActivity.cs" />
+    <Compile Include="Environment\CommonVariable.cs" />
+    <Compile Include="Environment\GetEnvPath.cs" />
+    <Compile Include="Environment\GetEnvPathDesigner.xaml.cs">
+      <DependentUpon>GetEnvPathDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\GetEnvVar.cs" />
+    <Compile Include="Environment\GetEnvVarDesigner.xaml.cs">
+      <DependentUpon>GetEnvVarDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\GetPassword.cs" />
+    <Compile Include="Environment\GetPasswordDesigner.xaml.cs">
+      <DependentUpon>GetPasswordDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\WinBeep.cs" />
+    <Compile Include="Environment\WinBeepDesigner.xaml.cs">
+      <DependentUpon>WinBeepDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Event\MonitorActivity.cs" />
+    <Compile Include="Event\MonitorActivityDesigner.xaml.cs">
+      <DependentUpon>MonitorActivityDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\AppendLineActivity.cs" />
+    <Compile Include="File\AppendLineDesigner.xaml.cs">
+      <DependentUpon>AppendLineDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\ChangeTypeEditor.cs" />
+    <Compile Include="File\CopyFileActivity.cs" />
+    <Compile Include="File\CopyFileDesigner.xaml.cs">
+      <DependentUpon>CopyFileDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\CreateDirectoryActivity.cs" />
+    <Compile Include="File\CreateDirectoryDesigner.xaml.cs">
+      <DependentUpon>CreateDirectoryDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\CreateFileActivity.cs" />
+    <Compile Include="File\DeleteActivity.cs" />
+    <Compile Include="File\FileChangeTriggerActivity.cs" />
+    <Compile Include="File\FileChangeTriggerActivityDesigner.xaml.cs">
+      <DependentUpon>FileChangeTriggerActivityDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\FileChangeTypeControl.xaml.cs">
+      <DependentUpon>FileChangeTypeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\MoveFileActivity.cs" />
+    <Compile Include="File\NotifyFiltersControl.xaml.cs">
+      <DependentUpon>NotifyFiltersControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\NotifyFiltersEditor.cs" />
+    <Compile Include="File\PathExistsActivity.cs" />
+    <Compile Include="File\PathExistsDesigner.xaml.cs">
+      <DependentUpon>PathExistsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\PathTypeEditor.cs" />
+    <Compile Include="File\PropertyEditorResources.xaml.cs">
+      <DependentUpon>PropertyEditorResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\ReadTextFileActivity.cs" />
+    <Compile Include="File\ReadTextFileDesigner.xaml.cs">
+      <DependentUpon>ReadTextFileDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="File\WriteTextFileActivity.cs" />
+    <Compile Include="Orchestrator\CommonVariable.cs" />
+    <Compile Include="Orchestrator\GetCredential.cs" />
+    <Compile Include="Orchestrator\GetCredentialDesigner.xaml.cs">
+      <DependentUpon>GetCredentialDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Orchestrator\SetCredential.cs" />
+    <Compile Include="Orchestrator\SetCredentialDesigner.xaml.cs">
+      <DependentUpon>SetCredentialDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PowerShell\PowerShellActivity.cs" />
+    <Compile Include="PowerShell\PowerShellDesigner.xaml.cs">
+      <DependentUpon>PowerShellDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\CompilerRunner.cs" />
+    <Compile Include="Workflow\InvokeCodeActivity.cs" />
+    <Compile Include="Workflow\InvokeCodeDesigner.xaml.cs">
+      <DependentUpon>InvokeCodeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\InvokeWorkflowFileActivity.cs" />
+    <Compile Include="Workflow\InvokeWorkflowFileDesigner.xaml.cs">
+      <DependentUpon>InvokeWorkflowFileDesigner.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Resources\Workflow\invoke.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Resource Include="activity.config.xml" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="RPA.Core.Activities.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Application\ApplicationDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Application\CloseApplicationDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Application\OpenApplicationDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Application\StartProcessDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Clipboard\CopySelectTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Clipboard\SetToClipboardDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\AddDataColumnDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\AddDataRowDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\BuildDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\ClearDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\BuildDataTableDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\EditableComboBoxControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\FilterDataTableWizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\GenerateDataTableDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\IntCollectionEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\JoinDataTablesWizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\Dialog\NewColumnDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\FilterDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\ForEachRowDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\GenerateDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\GetRowItemDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\JoinDataTablesDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\LookupDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\MergeDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\OutputDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\RemoveDataColumnDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\RemoveDataRowDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\RemoveDuplicateRowsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataTable\SortDataTableDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DateTime\GetDateTimeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DebugActivity\CommentDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DebugActivity\CommentOutDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DebugActivity\LogMessageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\CalloutActivityDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\CalloutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\CustomInputDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\CustomInputWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\InputDialogDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\InputDialogWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\MessageBoxDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialog\SelectDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Environment\GetEnvPathDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Environment\GetEnvVarDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Environment\GetPasswordDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Environment\WinBeepDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Event\MonitorActivityDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\AppendLineDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\CopyFileDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\CreateDirectoryDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\FileChangeTriggerActivityDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\FileChangeTypeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\NotifyFiltersControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\PathExistsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\PropertyEditorResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="File\ReadTextFileDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Orchestrator\GetCredentialDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Orchestrator\SetCredentialDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PowerShell\PowerShellDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Workflow\InvokeCodeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Workflow\InvokeWorkflowFileDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plugins.Shared.Library\Plugins.Shared.Library.csproj">
+      <Project>{6879c801-1124-477a-97d8-0961e6d710b2}</Project>
+      <Name>Plugins.Shared.Library</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Application\menu.png" />
+    <Resource Include="Resources\Application\mouseclick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Application\close.png" />
+    <Resource Include="Resources\Application\killprocess.png" />
+    <Resource Include="Resources\Application\openApplication.png" />
+    <Resource Include="Resources\Application\process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DateTime\convert.png" />
+    <Resource Include="Resources\DateTime\date.png" />
+    <Resource Include="Resources\DateTime\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Clipboard\copyselecttext.png" />
+    <Resource Include="Resources\Clipboard\gettext.png" />
+    <Resource Include="Resources\Clipboard\setclipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Dialog\RPAStudio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Dialog\callout.png" />
+    <Resource Include="Resources\Dialog\custom_input.png" />
+    <Resource Include="Resources\Dialog\inputdialog.png" />
+    <Resource Include="Resources\Dialog\messagebox.png" />
+    <Resource Include="Resources\Dialog\selectfile.png" />
+    <Resource Include="Resources\Dialog\selectfolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Environment\beep.png" />
+    <Resource Include="Resources\Environment\envfolder.png" />
+    <Resource Include="Resources\Environment\envvariable.png" />
+    <Resource Include="Resources\Environment\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\File\appline.png" />
+    <Resource Include="Resources\File\copyfile.png" />
+    <Resource Include="Resources\File\createdir.png" />
+    <Resource Include="Resources\File\delete.png" />
+    <Resource Include="Resources\File\filechange.png" />
+    <Resource Include="Resources\File\fileexist.png" />
+    <Resource Include="Resources\File\movefile.png" />
+    <Resource Include="Resources\File\newfile.png" />
+    <Resource Include="Resources\File\read.png" />
+    <Resource Include="Resources\File\write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Orchestrator\Credential.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PowerShell\powershell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DataTable\datatable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DebugActivity\comment.png" />
+    <Resource Include="Resources\DebugActivity\log-message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Event\monitor.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+nuget pack "$(ProjectPath)" -properties Configuration=Debug
+)
+if $(ConfigurationName) == Release (
+nuget pack "$(ProjectPath)" -properties Configuration=Release
+)
+xcopy "$(TargetDir)*.nupkg" "$(ProjectDir)..\nupkgs\"  /Y
+xcopy "$(TargetDir)*.nupkg" "$(SolutionDir)RPAStudio\$(OutDir)Packages\"  /Y
+del "$(TargetDir)*.nupkg"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>del "$(ProjectDir)..\nupkgs\$(TargetName).*.nupkg"
+
+for /D %25%25f in (%25LocalAppData%25\RPAStudio\Packages\Installed\RPA.*.Activities.*) do (
+    rmdir  /S /Q %25%25f
+)</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

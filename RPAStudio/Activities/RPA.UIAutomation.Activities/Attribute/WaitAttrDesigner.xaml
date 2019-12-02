@@ -1,0 +1,56 @@
+﻿<sap:ActivityDesigner x:Class="RPA.UIAutomation.Activities.Attribute.WaitAttrDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding Path=ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <pslc:CollapsableActivity >
+        <Grid Height="80" >
+            <sapv:ExpressionTextBox
+                x:Name="expressTextBox"
+                Expression="{Binding Path=ModelItem.Item, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                ExpressionType="sys:String"
+                HintText="要等待的属性的名称"
+                OwnerActivity="{Binding Path=ModelItem}"
+                Margin="0,10,25,40"
+                MaxLines="1" RenderTransformOrigin="0.5,0.5" Height="Auto" HorizontalAlignment="Right" Width="240" />
+            <ComboBox x:Name="comboBox"
+                      IsEditable="True"
+                      IsReadOnly="False"
+                      IsTextSearchEnabled="False"
+                      ItemsSource="{Binding Path=ModelItem.AttrEnums}"
+                      SelectionChanged="comboBox_SelectionChanged"
+                      HorizontalAlignment="Left" Margin="245,10,0,0"
+                      VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.27,0" Height="30"/>
+            <sapv:ExpressionTextBox
+                Expression="{Binding Path=ModelItem.Value, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                ExpressionType="sys:String"
+                HintText="指定属性的预期值"
+                OwnerActivity="{Binding Path=ModelItem}"
+                Margin="0,50,0,0"
+                Grid.Row="0"
+                MaxLines="1" RenderTransformOrigin="0.5,0.5" >
+            </sapv:ExpressionTextBox>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

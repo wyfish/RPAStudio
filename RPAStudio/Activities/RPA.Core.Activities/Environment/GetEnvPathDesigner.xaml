@@ -1,0 +1,48 @@
+﻿<sap:ActivityDesigner 
+    x:Class="RPA.Core.Activities.EnvironmentActivity.GetEnvPathDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    Loaded="IcoPath_Loaded"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    >
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing x:Name="icoPath">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <pslc:CollapsableActivity >
+        <Grid Height="40">
+            <TextBox  Margin="20,10,176,10" BorderThickness="0" IsReadOnly="True" Text="特殊文件夹"  VerticalAlignment="Center" Foreground="Indigo" TabIndex="0" Height="20" HorizontalAlignment="Center">
+            </TextBox>
+            <ComboBox x:Name="comboBox"
+                IsEditable="True"
+                IsReadOnly="False"
+                IsTextSearchEnabled="False"
+                Text="{Binding Path=ModelItem.FolderType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                ItemsSource="{Binding Path=ModelItem.FolderTypePro}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.27,0" Height="25" Margin="89,5,0,0" 
+                />
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

@@ -1,0 +1,12 @@
+﻿<sap:WorkflowElementDialog x:Class="Plugins.Shared.Library.Editors.TextEditorDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation" sap:Title="文本编辑器" MinHeight="300" MinWidth="400" MaxHeight="600" MaxWidth="800" sap:WindowResizeMode="CanResizeWithGrip" sap:WindowSizeToContent="Manual" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Content="Text (String)" HorizontalAlignment="Left" Grid.Row="0" />
+        <DockPanel LastChildFill="True" Grid.Row="1">
+            <TextBox Name="TextBoxEditor" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Top" Text="{Binding ModelItem.Text, Mode=TwoWay, UpdateSourceTrigger=Default}" />
+        </DockPanel>
+    </Grid>
+</sap:WorkflowElementDialog>

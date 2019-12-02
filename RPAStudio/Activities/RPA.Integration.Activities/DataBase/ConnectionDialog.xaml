@@ -1,0 +1,38 @@
+﻿<sap:WorkflowElementDialog 
+    x:Class="RPA.Integration.Activities.Database.ConnectionDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:RPA.Integration.Activities.Database"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    Title="连接设置"
+    WindowResizeMode="NoResize" Width="320" >
+
+    <sap:WorkflowElementDialog.Resources>
+        <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+    </sap:WorkflowElementDialog.Resources>
+
+    <DockPanel>
+        <DockPanel  Margin="0, 4, 0, 8" DockPanel.Dock="Bottom" Background="{x:Static SystemColors.ControlBrush}" x:Name="ConnectionSettings">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" >
+                <TextBlock Text="连接配置" VerticalAlignment="Center" HorizontalAlignment="Left" Width="150" />
+
+                <Button Content="连接向导" Click="NewConnectionButton_Click" VerticalAlignment="Center" HorizontalAlignment="Right"
+                    Margin="30,0,0,0" Width="130" Padding="5,0" Height="24"/>
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Vertical" Margin="0,6,0,0">
+                <sapv:ExpressionTextBox Expression="{Binding Path=ModelItem.ConnectionString, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, ConverterParameter=In, UpdateSourceTrigger=PropertyChanged}" x:Name="ConnStringExpr"  
+                                OwnerActivity="{Binding Path=ModelItem}" ExpressionType="sys:String" MaxLines="1" Background="White"
+                                HintText="" Margin="0,8,0,0" Height="24" VerticalAlignment="Stretch"/>
+
+                <ComboBox Margin="0,10,0,0" VerticalAlignment="Stretch" Height="23" Background="White"
+                          x:Name="SourceList"
+                                    SelectionChanged="ComboboxControl_SelectionChanged"
+                                    SelectedItem="{Binding ModelItem.ProviderName, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, ConverterParameter=In, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+</sap:WorkflowElementDialog>

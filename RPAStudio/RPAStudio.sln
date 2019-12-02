@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.Shared.Library", "Plugins.Shared.Library\Plugins.Shared.Library.csproj", "{6879C801-1124-477A-97D8-0961E6D710B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activities", "Activities", "{C87147D8-967E-4F75-B08C-828E0CC6FC70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.Script.Activities", "Activities\RPA.Script.Activities\RPA.Script.Activities.csproj", "{431B570E-507D-4E67-B648-A7BCA1E99B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.Core.Activities", "Activities\RPA.Core.Activities\RPA.Core.Activities.csproj", "{089464AC-7A2B-4BDC-BD6A-3C76005FFC35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.UIAutomation.Activities", "Activities\RPA.UIAutomation.Activities\RPA.UIAutomation.Activities.csproj", "{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.Integration.Activities", "Activities\RPA.Integration.Activities\RPA.Integration.Activities.csproj", "{09C40C47-F9ED-4156-B856-731D88871717}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6879C801-1124-477A-97D8-0961E6D710B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6879C801-1124-477A-97D8-0961E6D710B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6879C801-1124-477A-97D8-0961E6D710B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6879C801-1124-477A-97D8-0961E6D710B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431B570E-507D-4E67-B648-A7BCA1E99B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431B570E-507D-4E67-B648-A7BCA1E99B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431B570E-507D-4E67-B648-A7BCA1E99B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431B570E-507D-4E67-B648-A7BCA1E99B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089464AC-7A2B-4BDC-BD6A-3C76005FFC35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089464AC-7A2B-4BDC-BD6A-3C76005FFC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089464AC-7A2B-4BDC-BD6A-3C76005FFC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089464AC-7A2B-4BDC-BD6A-3C76005FFC35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C40C47-F9ED-4156-B856-731D88871717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C40C47-F9ED-4156-B856-731D88871717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C40C47-F9ED-4156-B856-731D88871717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C40C47-F9ED-4156-B856-731D88871717}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{431B570E-507D-4E67-B648-A7BCA1E99B3B} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
+		{089464AC-7A2B-4BDC-BD6A-3C76005FFC35} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
+		{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
+		{09C40C47-F9ED-4156-B856-731D88871717} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
+	EndGlobalSection
+EndGlobal

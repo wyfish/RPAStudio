@@ -1,0 +1,35 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:nm="clr-namespace:System.Net.Mail;assembly=System"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+                      
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
+    psla:ActivityDesignerAttached.Icon="Resources/Mail/SendMail.png"
+    psla:ActivityDesignerAttached.Resources="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml"
+    >
+    <pslc:CollapsableActivity>
+        <DockPanel LastChildFill="True" HorizontalAlignment="Center" Width="300">
+            <DockPanel Dock="Bottom">
+                <StackPanel DockPanel.Dock="Top">
+                    <Label Name="AttachFiles" HorizontalAlignment="Center" Content="附件" Style="{StaticResource ClickableLabel}" MouseDown="AttachFiles_MouseDown" />
+                </StackPanel>
+            </DockPanel>
+            <DockPanel Dock="Top" LastChildFill="True">
+                <DockPanel LastChildFill="True">
+                    <StackPanel DockPanel.Dock="Left">
+                        <Label Name="MailMessageLabel" Content="邮件" Margin="0,6,0,0" />
+                        <Label Name="BodyLabel" Content="正文" Margin="0,8,0,0" />
+                    </StackPanel>
+                </DockPanel>
+                <StackPanel DockPanel.Dock="Right">
+                    <sapv:ExpressionTextBox Name="MailMessageTextBox" Margin="0,5,0,0" DockPanel.Dock="Left" AcceptsReturn="True" HintText="邮件对象" ExpressionType="{x:Type nm:MailMessage}" OwnerActivity="{Binding Path=ModelItem}" Expression="{Binding Path=ModelItem.MailMessage, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
+                    <sapv:ExpressionTextBox Name="BodyTextBox" Margin="0,5,0,0" DockPanel.Dock="Left" AcceptsReturn="True" MaxLines="10" HintText="邮件正文，以双引号括起来" ExpressionType="{x:Type s:String}" OwnerActivity="{Binding Path=ModelItem}" Expression="{Binding Path=ModelItem.Body, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
+                </StackPanel>
+            </DockPanel>
+        </DockPanel>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

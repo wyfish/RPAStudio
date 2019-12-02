@@ -1,0 +1,22 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System.Windows.Controls.Primitives;assembly=PresentationFramework"
+    xmlns:controls="clr-namespace:Plugins.Shared.Library.Controls"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    >
+
+    <Style TargetType="{x:Type sapv:ExpressionTextBox}">
+        <Setter Property="Height" Value="30" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="MaxLines" Value="1" />
+
+        <!--不加的话经常有双Border效果出现，原因未知-->
+        <Setter Property="Padding" Value="1" />
+        
+        
+    </Style>
+
+
+</ResourceDictionary>

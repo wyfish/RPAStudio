@@ -1,0 +1,18 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Core.Activities.DebugActivity.CommentOutDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    
+    xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
+    psla:ActivityDesignerAttached.Icon="Resources/DebugActivity/comment.png"
+    psla:ActivityDesignerAttached.Resources="Themes/Generic.xaml"
+     >
+    <pslc:CollapsableActivity>
+        <Border BorderThickness="1">
+            <sap:WorkflowItemPresenter AutomationProperties.AutomationId="Body" HorizontalAlignment="Center" HintText="拖放控件到这里" MinWidth="400" AllowedItemType="{x:Type sa:Activity}" Item="{Binding Path=ModelItem.Body, Mode=TwoWay}" />
+        </Border>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

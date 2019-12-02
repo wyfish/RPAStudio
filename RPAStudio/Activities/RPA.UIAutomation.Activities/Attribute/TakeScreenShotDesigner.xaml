@@ -1,0 +1,56 @@
+﻿<sap:ActivityDesigner x:Class="RPA.UIAutomation.Activities.Attribute.TakeScreenShotDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" Loaded="ActivityDesigner_Loaded">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding Path=ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+    <pslc:CollapsableActivity >
+        <Grid Height="80" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Name="grid1">
+                <TextBlock Name="navigateTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" >点击屏幕</Hyperlink>
+                </TextBlock>
+            </Grid>
+            <Grid Name="grid" Visibility="{Binding Path=ModelItem.visibility}" >
+                <Button Style="{StaticResource ButtonNoHover}" MouseDoubleClick="Button_MouseDoubleClick" Margin="0,0,25,0" MaxWidth="230">
+                    <Image Name="navigateImage"  Source="{Binding Path=ModelItem.SourceImgPath,Mode=OneWay, Converter={StaticResource ProjectPathConverters},ConverterParameter=.screenshots}" Stretch="UniformToFill"  Visibility="Visible" RenderOptions.BitmapScalingMode="HighQuality" UseLayoutRounding="True"/>
+                </Button>
+                <Button Name="navigateButton" Click="NavigateButtonClick" Initialized="NavigateButtonInitialized" Visibility="Visible" Margin="240,0,0,60" Style="{StaticResource ButtonNoHover}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/menu.png" Stretch="Fill"/>
+                    </Button.Background>
+                    <Button.ContextMenu>
+                        <ContextMenu Name="contextMenu">
+                            <MenuItem Header="重新选取" Click="meauItemClickOne">
+                                <MenuItem.Icon>
+                                    <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+            </Grid>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

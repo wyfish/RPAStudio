@@ -1,0 +1,58 @@
+﻿<sap:ActivityDesigner 
+    x:Class="RPA.Integration.Activities.Mail.MoveIMAPMailDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:RPA.Integration.Activities.Mail"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:mime="clr-namespace:MimeKit;assembly=MimeKit"
+   >
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding Path=ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <pslc:CollapsableActivity Height="60"  >
+        <Grid>
+            <sapv:ExpressionTextBox
+                x:Name="expressTextBox"
+                Expression="{Binding Path=ModelItem.MailMoveMessage, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                ExpressionType="mime:MimeMessage"
+                HintText="邮件消息"
+                OwnerActivity="{Binding Path=ModelItem}"
+                Margin="10,0,0,34"
+                Grid.Row="0"
+                MaxWidth="240"
+                MaxLines="1" Height="Auto" HorizontalAlignment="Left" Width="240" />
+            <sapv:ExpressionTextBox
+                x:Name="expressTextBox1"
+                Expression="{Binding Path=ModelItem.MailFolderTo, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                ExpressionType="sys:String"
+                HintText="邮件文件夹"
+                OwnerActivity="{Binding Path=ModelItem}"
+                Margin="10,35,10,0"
+                Grid.Row="0"
+                MaxWidth="240"
+                MaxLines="1" Height="Auto" />
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

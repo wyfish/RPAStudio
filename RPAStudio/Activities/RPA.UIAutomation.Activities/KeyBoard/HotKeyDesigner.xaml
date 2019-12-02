@@ -1,0 +1,72 @@
+﻿<sap:ActivityDesigner x:Class="RPA.UIAutomation.Activities.Keyboard.HotKeyDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:RPA.UIAutomation.Activities.Keyboard"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" Loaded="ActivityDesigner_Loaded"
+    >
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding Path=ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+    <pslc:CollapsableActivity >
+        <Grid  Height="120">
+            <TextBlock Name="navigateTextBlock" Margin="35,28,50,56">     
+                 <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" >点击屏幕</Hyperlink>
+           </TextBlock>
+            <Button Style="{StaticResource ButtonNoHover}" MouseDoubleClick="Button_MouseDoubleClick" Margin="0,0,30,55" MaxWidth="230">
+                <Image Name="navigateImage"  Source="{Binding Path=ModelItem.SourceImgPath,Mode=OneWay, Converter={StaticResource ProjectPathConverters},ConverterParameter=.screenshots}" Stretch="UniformToFill"  Visibility="Visible" RenderOptions.BitmapScalingMode="HighQuality" UseLayoutRounding="True"/>
+            </Button>
+            <Grid Name="grid" Visibility="{Binding Path=ModelItem.visibility}"  HorizontalAlignment="Left"  >
+                <Button Name="navigateButton"  Click="NavigateButtonClick" Initialized="NavigateButtonInitialized" Visibility="Visible" Margin="243,0,0,100" Width="17" Style="{StaticResource ButtonNoHover}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/menu.png" Stretch="UniformToFill" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Button.Background>
+                    <Button.ContextMenu>
+                        <ContextMenu Name="contextMenu">
+                            <MenuItem Header="重新选取" Click="meauItemClickOne">
+                                <MenuItem.Icon>
+                                    <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+            </Grid>
+            <TextBlock Margin="0,70,0,33" HorizontalAlignment="Left" Width="16"  Text="Alt" />
+            <CheckBox IsChecked="{Binding Path=ModelItem.Alt}" Margin="0,92,244,12" />
+            <TextBlock Margin="32,70,0,33" HorizontalAlignment="Left" Width="25"  Text="Ctrl" />
+            <CheckBox IsChecked="{Binding Path=ModelItem.Ctrl}" Margin="35,92,203,7" />
+            <TextBlock Margin="68,70,0,33" HorizontalAlignment="Left" Width="26"  Text="Shift" />
+            <CheckBox IsChecked="{Binding Path=ModelItem.Shift}" Margin="73,92,166,0" Height="18" VerticalAlignment="Top" />
+            <TextBlock Margin="105,70,0,34" HorizontalAlignment="Left" Width="25" Text="Win" />
+            <CheckBox IsChecked="{Binding Path=ModelItem.Win}" Margin="107,92,130,10" />
+            <TextBlock Margin="190,69,0,36" HorizontalAlignment="Left" Width="25" Text="Key"/>
+            <ComboBox x:Name="comboBox"
+                      IsEditable="True" 
+                      IsReadOnly="False"
+                      IsTextSearchEnabled = "False"
+                      Text="{Binding Path=ModelItem.SelectedKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   
+                      ItemsSource="{Binding Path=ModelItem.KeyTypes}"
+                      SelectionChanged="comboBox_SelectionChanged"
+                      HorizontalAlignment="Left" Margin="147,89,0,0"
+                      VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.27,0" Height="21"/>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

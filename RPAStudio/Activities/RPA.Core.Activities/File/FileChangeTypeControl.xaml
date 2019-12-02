@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="RPA.Core.Activities.FileActivity.FileChangeTypeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPA.Core.Activities.FileActivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ComboBox IsEditable="True" Text="{Binding CheckedText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,RelativeSource={RelativeSource AncestorType={x:Type local:FileChangeTypeControl}}}" LostFocus="ComboBox_LostFocus" >
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Padding" Value="0" />
+                    <Setter Property="BorderThickness" Value="0" />
+                </Style>
+            </ComboBox.ItemContainerStyle>
+            <CheckBox Name="cbCreated" Content="Created" Checked="Created_Checked" Unchecked="Created_Checked" />
+            <CheckBox Name="cbDeleted" Content="Deleted" Checked="Deleted_Checked"  Unchecked="Deleted_Checked"/>
+            <CheckBox Name="cbChanged" Content="Changed" Checked="Changed_Checked" Unchecked="Changed_Checked"/>
+            <CheckBox Name="cbRenamed" Content="Renamed" Checked="Renamed_Checked" Unchecked="Renamed_Checked"/>
+            <CheckBox Name="cbAll" Content="All" Checked="All_Checked" Unchecked="All_Checked"/>
+        </ComboBox>
+    </Grid>
+</UserControl>

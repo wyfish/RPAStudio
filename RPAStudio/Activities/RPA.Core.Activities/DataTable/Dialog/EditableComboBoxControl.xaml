@@ -1,0 +1,65 @@
+﻿<Window 
+    x:Class="RPA.Core.Activities.DataTableActivity.Dialog.EditableComboBoxControl"
+    xmlns:sap="clr-namespace:RPA.Core.Activities.DataTableActivity.Dialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    >
+
+    <Window.Resources>
+        <Geometry x:Key="DownArrowGeometry">M 0 0 L 3.5 4 L 7 0 Z</Geometry>
+        <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Height" Value="23" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <DockPanel LastChildFill="true" VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="0" />
+                </Grid.RowDefinitions>
+                <DockPanel LastChildFill="true" Grid.Row="0">
+                    <Button Click="Button_Click" DockPanel.Dock="Right" Width="18" MinHeight="23" 
+                            BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}" >
+                        <Path Name="Arrow" Data="{StaticResource DownArrowGeometry}"
+                                HorizontalAlignment="Center" Stretch="Uniform" Margin="2,1,2,0"
+                                VerticalAlignment="Center" Fill="{Binding RelativeSource={RelativeSource Self}}"
+                              >
+                        </Path>
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="BorderThickness" Value="1" />
+                                <Setter Property="BorderBrush" Value="{Binding BorderBrush , ElementName=ComboboxInputBox}" />
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <TextBox Name="ComboboxInputBox" DockPanel.Dock="Left" MaxLines="1" Text="{Binding SelectedItem , ElementName=Combobox, Mode=TwoWay}" />
+                </DockPanel>
+                <ComboBox Name="PropertiesComboBox" Height="0" Grid.Row="1" 
+                          ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                          LostFocus="ComboboxInputBox_OnLostFocus"
+                          SelectionChanged="PropertiesComboBox_SelectionChanged"
+                          ItemsSource="{Binding Path=ItemsSource, ElementName=Combobox, Mode=TwoWay}" 
+                          BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock Text="{Binding}" Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                    <ComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                        </ItemsPanelTemplate>
+                    </ComboBox.ItemsPanel>
+                </ComboBox>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,81 @@
+﻿<sap:ActivityDesigner 
+    x:Class="RPA.UIAutomation.Activities.Attribute.GetAttrDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" 
+    Loaded="ActivityDesigner_Loaded">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding Path=ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+
+    <pslc:CollapsableActivity >
+        <Grid Height="120" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,0,0,35" Grid.RowSpan="2">
+                <Grid Name="grid1" >
+                    <TextBlock Name="navigateTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" >点击屏幕</Hyperlink>
+                    </TextBlock>
+                </Grid>
+                <Grid Name="grid" Visibility="{Binding Path=ModelItem.visibility}" >
+                    <Button Style="{StaticResource ButtonNoHover}" MouseDoubleClick="Button_MouseDoubleClick" Margin="0,0,20,0" MaxWidth="230">
+                        <Image Name="navigateImage"  Source="{Binding Path=ModelItem.SourceImgPath,Mode=OneWay, Converter={StaticResource ProjectPathConverters},ConverterParameter=.screenshots}" Stretch="UniformToFill"  Visibility="Visible" RenderOptions.BitmapScalingMode="HighQuality" UseLayoutRounding="True"/>
+                    </Button>
+                    <Button Name="navigateButton" Click="NavigateButtonClick" Initialized="NavigateButtonInitialized" Visibility="Visible" Margin="240,0,0,60" Style="{StaticResource ButtonNoHover}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/menu.png" Stretch="Fill"/>
+                        </Button.Background>
+                        <Button.ContextMenu>
+                            <ContextMenu Name="contextMenu">
+                                <MenuItem Header="重新选取" Click="meauItemClickOne">
+                                    <MenuItem.Icon>
+                                        <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+                </Grid>
+            </Grid>
+            <sapv:ExpressionTextBox
+                x:Name="expressTextBox"
+                Expression="{Binding Path=ModelItem.AttrName, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
+                ExpressionType="sys:String"
+                HintText="要检索的属性的名称"
+                OwnerActivity="{Binding Path=ModelItem}"
+                Margin="0,25,19,0"
+                Grid.Row="1"
+                MaxLines="1" RenderTransformOrigin="0.5,0.5" Height="Auto" >
+            </sapv:ExpressionTextBox>
+            <ComboBox x:Name="comboBox"
+                      IsEditable="True"
+                      IsReadOnly="False"
+                      IsTextSearchEnabled="False"
+                      ItemsSource="{Binding Path=ModelItem.AttrEnums}"
+                      SelectionChanged="comboBox_SelectionChanged"
+                      HorizontalAlignment="Left" Margin="241,25,0,0"
+                      VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.27,0" Height="35" Grid.Row="1"/>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

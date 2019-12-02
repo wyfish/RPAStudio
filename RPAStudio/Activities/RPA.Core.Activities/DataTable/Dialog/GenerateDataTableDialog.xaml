@@ -1,0 +1,310 @@
+﻿<Window
+    x:Class="RPA.Core.Activities.DataTableActivity.Dialog.GenerateDataTableDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:saps="clr-namespace:RPA.Core.Activities.DataTableActivity.Dialog"
+    xmlns:src="clr-namespace:Plugins.Shared.Library.Converters;assembly=Plugins.Shared.Library"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Title="生成数据表" 
+    Height="640" Width="900" Background="White" 
+    MinHeight="400" MinWidth="650" 
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    WindowStartupLocation ="CenterScreen"
+    >
+    <Window.Resources>
+        <Geometry x:Key="DownArrowGeometry">M 0 0 L 3.5 4 L 7 0 Z</Geometry>
+        <src:BooleanNotConverter x:Key="BooleanNotConverter" />
+        <src:SeparatorsToFriendlyStringConverter x:Key="SeparatorsToStringConverter" />
+        <Style x:Key="OptionLabelStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+            <Setter Property="Width" Value="120" />
+        </Style>
+        <Style x:Key="FormatOptionsStyle" TargetType="{x:Type GroupBox}" BasedOn="{StaticResource {x:Type Label}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding UseWordsInfo}" Value="True">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </DataTrigger>
+            </Style.Triggers>
+            <Setter Property="Visibility" Value="Visible" />
+        </Style>
+
+        <CollectionViewSource x:Key="CollectionElements" Source="{Binding Path=CollectionElements, ElementName=CollectionEditor, Mode=TwoWay}" />
+        <src:IntCollectionToStringConverter x:Key="intCollectionToStringConverter" />
+        <Path x:Key="AddPath" StrokeThickness="1.5" StrokeStartLineCap="Square" StrokeEndLineCap="Square" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="{Binding RelativeSource={RelativeSource Self}, Path=(TextElement.Foreground)}">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigure StartPoint="0,0">
+                            <LineSegment Point="25,25" />
+                        </PathFigure>
+                        <PathFigure StartPoint="0,25">
+                            <LineSegment Point="25,0" />
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Style x:Key="ButtonStyle"  TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Height" Value="23" />
+        </Style>
+    </Window.Resources>
+
+    <DockPanel LastChildFill="true">
+        <DockPanel Dock="Bottom" HorizontalAlignment="Right" LastChildFill="true" Margin="10,5,10,10">
+            <Button Click="CancelButton_Click" Content="取消" DockPanel.Dock="Right" Width="65" />
+            <Button Click="OkButton_Click" Name="OKButton" Content="确定" DockPanel.Dock="Right" Width="65" Margin="10,0" />
+        </DockPanel>
+        <Separator DockPanel.Dock="Bottom" />
+        <Grid DockPanel.Dock="Top" Margin="10,5,10,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*" />
+                <ColumnDefinition Width="40*" />
+            </Grid.ColumnDefinitions>
+            <Grid Column="0" Margin="0,0,5,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="220" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <DockPanel LastChildFill="true" Grid.Row="0">
+                    <GroupBox Header="输入示例">
+                        <TextBox Name="InputTextBox" DockPanel.Dock="Bottom" BorderThickness="0" 
+                                 HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AcceptsReturn="true" 
+                                 Text="{Binding InputText , Mode=TwoWay}" />
+                    </GroupBox>
+                </DockPanel>
+                <DockPanel LastChildFill="true" Grid.Row="1" Margin="0,5,0,0">
+                    <GroupBox Name="TablePreviewGroupBox" Header="预览测试">
+                        <DataGrid Name="OutputDataTable" DockPanel.Dock="Bottom" Background="Transparent" 
+                                  BorderBrush="Transparent" IsReadOnly="true" CanUserSortColumns="false" 
+                                  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" 
+                                  HorizontalGridLinesBrush="{Binding BorderBrush , ElementName=TablePreviewGroupBox}" 
+                                  VerticalGridLinesBrush="{Binding BorderBrush , ElementName=TablePreviewGroupBox}" />
+                    </GroupBox>
+                </DockPanel>
+            </Grid>
+            <Border Grid.Column="1">
+                <StackPanel Margin="5,0,0,0">
+                    <GroupBox Header="数据表选项">
+                        <StackPanel Margin="3,10,0,7">
+                            <CheckBox Content="自动检测列类型" HorizontalAlignment="Left" IsChecked="{Binding AutoDetectTypes , Mode=TwoWay}" />
+                            <CheckBox Content="首行作数据表头" Margin="0,12,0,0" HorizontalAlignment="Left" IsChecked="{Binding UseColumnHeader , Mode=TwoWay}" />
+                            <CheckBox Content="忽略首行" Margin="0,12,0,0" VerticalAlignment="Center" IsChecked="{Binding UseRowHeader , Mode=TwoWay}" />
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="格式选项" Margin="0,15,0,0">
+                        <StackPanel Margin="0,7,72,7">
+                            <StackPanel Margin="3,10,0,7">
+                                <CheckBox Content="CSV Parse" VerticalAlignment="Center" IsChecked="{Binding CsvParsing , Mode=TwoWay}" />
+                            </StackPanel>
+                            <DockPanel LastChildFill="true">
+                                <Label Content="列分隔符" VerticalAlignment="Bottom" DockPanel.Dock="Left" Style="{StaticResource OptionLabelStyle}"/>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="0" />
+                                    </Grid.RowDefinitions>
+                                    <DockPanel LastChildFill="true" Grid.Row="0" Margin="0,0,-73,0">
+                                        <Button Click="Button_Click" DockPanel.Dock="Right" Width="18" MinHeight="23" 
+                                            BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}" >
+                                            <Path Name="Arrow1" Data="{StaticResource DownArrowGeometry}"
+                                                HorizontalAlignment="Center" Stretch="Uniform" Margin="2,1,2,0"
+                                                VerticalAlignment="Center" Fill="{Binding RelativeSource={RelativeSource Self}}"/>
+                                            <Button.Style>
+                                                <Style TargetType="{x:Type Button}">
+                                                    <Setter Property="BorderThickness" Value="1" />
+                                                    <Setter Property="BorderBrush" Value="{Binding BorderBrush , ElementName=ComboboxInputBox}" />
+                                                </Style>
+                                            </Button.Style>
+                                        </Button>
+                                        <TextBox Name="ComboboxInputBox" DockPanel.Dock="Left" MaxLines="1" Text="{Binding ColumnSeparators, Mode=TwoWay}" />
+                                    </DockPanel>
+                                    <ComboBox Name="PropertiesComboBox" Height="0" Grid.Row="1" 
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                      LostFocus="ComboboxInputBox_OnLostFocus"
+                                      SelectionChanged="PropertiesComboBox_SelectionChanged"
+                                      ItemsSource="{Binding Path=ItemsSource,  Mode=TwoWay}" 
+                                      >
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <TextBlock Text="{Binding}" Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                        <ComboBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                                            </ItemsPanelTemplate>
+                                        </ComboBox.ItemsPanel>
+                                    </ComboBox>
+                                </Grid>
+                            </DockPanel>
+
+                            <DockPanel LastChildFill="true" Margin="0,8,0,0">
+                                <Label Content="换行符" VerticalAlignment="Bottom" DockPanel.Dock="Left" Style="{StaticResource OptionLabelStyle}"/>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="0" />
+                                    </Grid.RowDefinitions>
+                                    <DockPanel LastChildFill="true" Grid.Row="0" Margin="0,0,-73,0">
+                                        <Button Click="Button_Click_Newline" DockPanel.Dock="Right" Width="18" MinHeight="23" 
+                                                BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}" >
+                                            <Path Name="Arrow2" Data="{StaticResource DownArrowGeometry}"
+                                                HorizontalAlignment="Center" Stretch="Uniform" Margin="2,1,2,0"
+                                                VerticalAlignment="Center" Fill="{Binding RelativeSource={RelativeSource Self}}">
+                                            </Path>
+                                            <Button.Style>
+                                                <Style TargetType="{x:Type Button}">
+                                                    <Setter Property="BorderThickness" Value="1" />
+                                                    <Setter Property="BorderBrush" Value="{Binding BorderBrush , ElementName=ComboboxInputBox}" />
+                                                </Style>
+                                            </Button.Style>
+                                        </Button>
+                                        <TextBox Name="ComboboxInputBox_Newline" DockPanel.Dock="Left" MaxLines="1" Text="{Binding NewLineSeparator, Mode=TwoWay}" />
+                                    </DockPanel>
+                                    <ComboBox Name="PropertiesComboBox_Newline" Height="0" Grid.Row="1" 
+                                              ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                              ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                              LostFocus="ComboboxInputBox_Newline_OnLostFocus"
+                                              SelectionChanged="PropertiesComboBox_Newline_SelectionChanged"
+                                              ItemsSource="{Binding Path=ItemsSource, Mode=TwoWay}" 
+                                              BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <TextBlock Text="{Binding}" Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                        <ComboBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <WrapPanel Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                                            </ItemsPanelTemplate>
+                                        </ComboBox.ItemsPanel>
+                                    </ComboBox>
+                                </Grid>
+
+                            </DockPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="固定格式选项" Margin="0,15,0,0" >
+                        <DockPanel Margin="0,7,102,7" LastChildFill="true">
+                            <Label VerticalAlignment="Bottom" Content="预定义列" Style="{StaticResource OptionLabelStyle}" DockPanel.Dock="Left" />
+
+                            <!--<saps:IntCollectionEditor Margin="5,0,0,0" DockPanel.Dock="Right" IsEnabled="{Binding CsvParsing , Converter={StaticResource BooleanNotConverter}}">
+                                <saps:IntCollectionEditor.ItemsSource>
+                                    <Binding Mode="TwoWay" NotifyOnTargetUpdated="true" NotifyOnSourceUpdated="true" />
+                                </saps:IntCollectionEditor.ItemsSource>
+                            </saps:IntCollectionEditor>-->
+                            <Grid Margin="5,0,0,0" DockPanel.Dock="Right" IsEnabled="{Binding CsvParsing , Converter={StaticResource BooleanNotConverter}}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="0" />
+                                </Grid.RowDefinitions>
+                                <DockPanel LastChildFill="true" Grid.Row="0" Margin="0,0,-103,0">
+                                    <Button
+                                        Click="Button_Click_Intcollection"
+                                        DockPanel.Dock="Right" Width="18" BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox_Intcollection}" 
+                                        Height="{Binding ActualHeight , ElementName=ComboboxInputBox_, Mode=OneWay}" >
+                                        <Path Name="Arrow3" Data="{StaticResource DownArrowGeometry}"
+                                                HorizontalAlignment="Center" Stretch="Uniform" Margin="2,1,2,0"
+                                                VerticalAlignment="Center" Fill="{Binding RelativeSource={RelativeSource Self}}">
+                                        </Path>
+                                        <Button.Style>
+                                            <Style  TargetType="{x:Type Button}">
+                                                <Setter Property="BorderThickness" Value="1" />
+                                                <Setter Property="BorderBrush" Value="{Binding BorderBrush , ElementName=ComboboxInputBox_Intcollection}" />
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                    <TextBox Name="ComboboxInputBox_Intcollection" DockPanel.Dock="Left" MaxLines="1" 
+                                             Text="{Binding ItemsSource_Intcollection , ElementName=CollectionEditor, Mode=TwoWay, 
+                                                    UpdateSourceTrigger=LostFocus, Converter={StaticResource intCollectionToStringConverter}}" />
+                                </DockPanel>
+                                <ComboBox 
+                                          SelectionChanged="PropertiesComboBox_Intcollection_SelectionChanged"
+                                          Name="PropertiesComboBox_Intcollection" 
+                                          Grid.Row="1" DockPanel.Dock="Left" StaysOpenOnEdit="true" MaxDropDownHeight="200" 
+                                          ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                          BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}">
+                                    <ComboBox.ItemsSource>
+                                        <CompositeCollection>
+                                            <CollectionContainer Collection="{Binding Source={StaticResource CollectionElements}}" />
+                                            <ComboBoxItem Name="NewValueElement">
+                                                <ComboBoxItem.Template>
+                                                    <ControlTemplate>
+                                                        <DockPanel LastChildFill="true" Margin="5,2,0,2" Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}">
+                                                            <Button
+                                                                    Click="AddButton_Click"
+                                                                    DockPanel.Dock="Right" Width="16" Margin="2,0,10,0" 
+                                                                    Content="{StaticResource AddPath}" Style="{StaticResource ButtonStyle}" 
+                                                                    BorderBrush="{Binding BorderBrush , ElementName=ComboboxInputBox}" RenderTransformOrigin="0.5,0.5" >
+                                                                <Button.RenderTransform>
+                                                                    <TransformGroup>
+                                                                        <ScaleTransform/>
+                                                                        <SkewTransform/>
+                                                                        <RotateTransform Angle="45"/>
+                                                                        <TranslateTransform/>
+                                                                    </TransformGroup>
+                                                                </Button.RenderTransform>
+                                                            </Button>
+                                                            <TextBox Name="NewValueTextBox" DockPanel.Dock="Left" Text="{Binding NewValue , ElementName=CollectionEditor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                                        </DockPanel>
+                                                    </ControlTemplate>
+                                                </ComboBoxItem.Template>
+                                            </ComboBoxItem>
+                                        </CompositeCollection>
+                                    </ComboBox.ItemsSource>
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel LastChildFill="true" Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}">
+                                                <Button 
+                                                        Click="RemoveElementButton_Click"
+                                                        DockPanel.Dock="Right" Width="16" Margin="2,0,10,0">
+                                                    <Button.Style>
+                                                        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonStyle}">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding IsMouseOver , RelativeSource={RelativeSource FindAncestor , AncestorType={x:Type ComboBoxItem}}}" Value="True">
+                                                                    <Setter Property="Visibility" Value="Visible" />
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                            <Setter Property="Visibility" Value="Hidden" />
+                                                        </Style>
+                                                    </Button.Style>
+                                                    <Path Margin="1.5" StrokeThickness="1.5" StrokeStartLineCap="Square" StrokeEndLineCap="Square" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="{Binding RelativeSource={RelativeSource Self}, Path=(TextElement.Foreground)}">
+                                                        <Path.Data>
+                                                            <PathGeometry>
+                                                                <PathGeometry.Figures>
+                                                                    <PathFigure StartPoint="0,0">
+                                                                        <LineSegment Point="25,25" />
+                                                                    </PathFigure>
+                                                                    <PathFigure StartPoint="0,25">
+                                                                        <LineSegment Point="25,0" />
+                                                                    </PathFigure>
+                                                                </PathGeometry.Figures>
+                                                            </PathGeometry>
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Button>
+                                                <TextBox DockPanel.Dock="Left" Text="{Binding Value , Mode=TwoWay}" />
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                    <ComboBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Name="ItemsPanel" Width="{Binding ActualWidth , ElementName=ComboboxInputBox, Mode=OneWay}" />
+                                        </ItemsPanelTemplate>
+                                    </ComboBox.ItemsPanel>
+                                </ComboBox>
+                            </Grid>
+                        </DockPanel>
+                    </GroupBox>
+                    <Button Click="Preview_Click" HorizontalAlignment="Right" Margin="0,10,0,0" Height="23" Padding="10,0" Content="预览" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

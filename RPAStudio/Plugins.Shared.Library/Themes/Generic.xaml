@@ -1,0 +1,18 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System.Windows.Controls.Primitives;assembly=PresentationFramework"
+    xmlns:src="clr-namespace:Plugins.Shared.Library"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    >
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Styles/Converter.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Styles/Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Styles/ContentControl.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Styles/TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Styles/ComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Styles/Label.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

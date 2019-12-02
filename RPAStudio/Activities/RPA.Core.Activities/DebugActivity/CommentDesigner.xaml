@@ -1,0 +1,20 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Core.Activities.DebugActivity.CommentDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
+    psla:ActivityDesignerAttached.Icon="Resources/DebugActivity/comment.png"
+    psla:ActivityDesignerAttached.Resources="Themes/Generic.xaml"
+     >
+    <pslc:CollapsableActivity>
+        <DockPanel LastChildFill="True" MaxHeight="300" MaxWidth="500">
+            <Grid>
+                <TextBox Text="{Binding ModelItem.Text}" FontSize="16" BorderThickness="0" Foreground="#048101" HorizontalAlignment="Left" VerticalAlignment="Bottom" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" />
+            </Grid>
+        </DockPanel>
+    </pslc:CollapsableActivity>
+    
+</sap:ActivityDesigner>

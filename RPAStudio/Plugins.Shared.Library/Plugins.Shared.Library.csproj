@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6879C801-1124-477A-97D8-0961E6D710B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plugins.Shared.Library</RootNamespace>
+    <AssemblyName>Plugins.Shared.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CSharp-easy-RSA-PEM">
+      <HintPath>.\CSharp-easy-RSA-PEM.dll</HintPath>
+    </Reference>
+    <Reference Include="FlaUI.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.Core.2.0.0-rc1\lib\net45\FlaUI.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlaUI.UIA2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.UIA2.2.0.0-rc1\lib\net45\FlaUI.UIA2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlaUI.UIA3, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\FlaUI.UIA3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gma.UserActivityMonitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Gma.UserActivityMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.UIAutomationClient, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\Interop.UIAutomationClient.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.3.2\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.3.2\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Workspaces.1.3.2\lib\net45\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.VisualBasic.1.3.2\lib\net45\Microsoft.CodeAnalysis.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.VisualBasic.Workspaces.1.3.2\lib\net45\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.3.2\lib\net45\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces.Desktop, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.3.2\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Common, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Common.4.5.3\lib\net45\NuGet.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Configuration, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Configuration.4.5.3\lib\net45\NuGet.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Frameworks.4.5.3\lib\net45\NuGet.Frameworks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Packaging, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Packaging.4.5.3\lib\net45\NuGet.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Packaging.Core.4.5.3\lib\net45\NuGet.Packaging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Protocol, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Protocol.4.5.3\lib\net45\NuGet.Protocol.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Resolver, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Resolver.4.5.3\lib\net45\NuGet.Resolver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Versioning, Version=4.5.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Versioning.4.5.3\lib\net45\NuGet.Versioning.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.27.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Reflection.Metadata, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.2.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsAccessBridgeInterop, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\WindowsAccessBridgeInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attached\ActivityDesignerAttached.cs" />
+    <Compile Include="BaseActivities\AsyncTaskCodeActivity.cs" />
+    <Compile Include="BaseActivities\AsyncTaskNativeActivity.cs" />
+    <Compile Include="BaseActivities\AsyncTaskNativeImplementation.cs" />
+    <Compile Include="BaseActivities\ContinuableAsyncCodeActivity.cs" />
+    <Compile Include="BaseActivities\ContinuableAsyncNativeActivity.cs" />
+    <Compile Include="BookmarkResumptionHelper.cs" />
+    <Compile Include="CodeCompletion\ExpressionNodeComparer.cs" />
+    <Compile Include="Controls\CollapsableActivity.cs" />
+    <Compile Include="Converters\BooleanNotConverter.cs" />
+    <Compile Include="Converters\DataTableColumnToPropertiesConverter.cs" />
+    <Compile Include="Converters\DataTableColumnToTypeConverter.cs" />
+    <Compile Include="Converters\EnumOperationConverter.cs" />
+    <Compile Include="Converters\EnumsToDisplayNameConverter.cs" />
+    <Compile Include="Converters\GenericValueJsonConverter.cs" />
+    <Compile Include="Converters\GenericValueTypeConverter.cs" />
+    <Compile Include="Converters\IntCollectionToStringConverter.cs" />
+    <Compile Include="Converters\LogicalOperatorToBooleanConverter.cs" />
+    <Compile Include="Converters\ProjectPathConverter.cs" />
+    <Compile Include="Converters\SeparatorsToFriendlyStringConverter.cs" />
+    <Compile Include="Editors\PythonScriptEditor.cs" />
+    <Compile Include="Editors\VBNetCodeEditor.cs" />
+    <Compile Include="Editors\EditorTemplates.xaml.cs">
+      <DependentUpon>EditorTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\PythonScriptEditorDialog.xaml.cs">
+      <DependentUpon>PythonScriptEditorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\VBNetCodeEditorDialog.xaml.cs">
+      <DependentUpon>VBNetCodeEditorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ArgumentCollectionEditor.cs" />
+    <Compile Include="Editors\CollectionArgumentEditor.cs" />
+    <Compile Include="Editors\DictionaryArgumentEditor.cs" />
+    <Compile Include="CodeCompletion\EditorUtil.cs" />
+    <Compile Include="CodeCompletion\ExpressionNode.cs" />
+    <Compile Include="CodeCompletion\QueryCompletionData.cs" />
+    <Compile Include="Editors\TextEditor.cs" />
+    <Compile Include="Editors\TextEditorDialog.xaml.cs">
+      <DependentUpon>TextEditorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\SystemCollectionsGenericExtensions.cs" />
+    <Compile Include="Extensions\LogToOutputWindowTextWriter.cs" />
+    <Compile Include="Extensions\SystemExtensions.cs" />
+    <Compile Include="Extensions\WorkflowRuntime.cs" />
+    <Compile Include="Librarys\Base64.cs" />
+    <Compile Include="Librarys\Common.cs" />
+    <Compile Include="Librarys\DataTableFormatter.cs" />
+    <Compile Include="Librarys\FormatOptions.cs" />
+    <Compile Include="Librarys\GenericValue.cs" />
+    <Compile Include="Librarys\JsonParser.cs" />
+    <Compile Include="Librarys\MyComputerInfo.cs" />
+    <Compile Include="Librarys\RSACommon.cs" />
+    <Compile Include="Librarys\TableFormatter.cs" />
+    <Compile Include="Librarys\TableOptions.cs" />
+    <Compile Include="Nuget\NuGetPackageController.cs" />
+    <Compile Include="Nuget\NuGetPackageControllerLogger.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SharedObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UiAutomation\JavaUiNode.cs" />
+    <Compile Include="UiAutomation\OverlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiAutomation\OverlayForm.designer.cs">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiAutomation\UIAUiNode.cs" />
+    <Compile Include="UiAutomation\UiCommon.cs" />
+    <Compile Include="UiAutomation\UiElement.cs" />
+    <Compile Include="UiAutomation\UiElementParams.cs" />
+    <Compile Include="UiAutomation\UiNode.cs" />
+    <Compile Include="Win32Api.cs" />
+    <Compile Include="Window\ShowImageWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\ShowImageWindow.Designer.cs">
+      <DependentUpon>ShowImageWindow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Editors\EditorTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editors\PythonScriptEditorDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Editors\VBNetCodeEditorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Editors\TextEditorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Converter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Editors\Highlighting\Python-Mode.xshd" />
+    <None Include="Nuget\NuGet.Default.Config" />
+    <None Include="Nuget\NuGet.User.Config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Event.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiAutomation\OverlayForm.resx">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\ShowImageWindow.resx">
+      <DependentUpon>ShowImageWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Field.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Local.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Method.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.NamedType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Namespace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSharp-easy-RSA-PEM.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UiAutomation\cursor.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gma.UserActivityMonitor.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WindowsAccessBridge-32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WindowsAccessBridge-64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WindowsAccessBridge.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="WindowsAccessBridgeInterop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Nuget\NuGet.*.Config" "$(SolutionDir)RPAStudio\$(OutDir)"  /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

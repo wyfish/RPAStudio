@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09C40C47-F9ED-4156-B856-731D88871717}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPA.Integration.Activities</RootNamespace>
+    <AssemblyName>RPA.Integration.Activities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\packages\BouncyCastle.Crypto.dll.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FluentFTP, Version=26.0.2.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentFTP.26.0.2\lib\net45\FluentFTP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.12.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\HtmlAgilityPack.1.11.12\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LitJSON, Version=0.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LitJson.0.13.0\lib\net45\LitJSON.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LitJson2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LitJson2.1.0.0\lib\LitJson2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MailKit, Version=2.4.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MailKit.2.4.1\lib\net45\MailKit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.ConnectionUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DataBase\Microsoft.Data.ConnectionUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DataBase\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Design.Interaction, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="MimeKit, Version=2.4.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MimeKit.2.4.1\lib\net45\MimeKit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase\Connect.cs" />
+    <Compile Include="DataBase\ConnectDesigner.xaml.cs">
+      <DependentUpon>ConnectDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ConnectionDialog.xaml.cs">
+      <DependentUpon>ConnectionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ConnectSettingDialog.xaml.cs">
+      <DependentUpon>ConnectSettingDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DatabaseConnection.cs" />
+    <Compile Include="DataBase\DBConnectionFactory.cs" />
+    <Compile Include="DataBase\Disconnect.cs" />
+    <Compile Include="DataBase\DisconnectDesigner.xaml.cs">
+      <DependentUpon>DisconnectDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ExecDesigner.xaml.cs">
+      <DependentUpon>ExecDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ExecInsert.cs" />
+    <Compile Include="DataBase\ExecInsertDesigner.xaml.cs">
+      <DependentUpon>ExecInsertDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ExecNoQuery.cs" />
+    <Compile Include="DataBase\ExecQuery.cs" />
+    <Compile Include="DataBase\SqlEditDialog.xaml.cs">
+      <DependentUpon>SqlEditDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Transaction.cs" />
+    <Compile Include="DataBase\TransactionDesigner.xaml.cs">
+      <DependentUpon>TransactionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Common\CommonVariable.cs" />
+    <Compile Include="Excel\CSVPlugins\AppendCSV.cs" />
+    <Compile Include="Excel\CSVPlugins\CSVEncoding.cs" />
+    <Compile Include="Excel\CSVPlugins\ReadCSV.cs" />
+    <Compile Include="Excel\CSVPlugins\ReadCSVDesigner.xaml.cs">
+      <DependentUpon>ReadCSVDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\CSVPlugins\WriteCSV.cs" />
+    <Compile Include="Excel\CSVPlugins\WriteCSVDesigner.xaml.cs">
+      <DependentUpon>WriteCSVDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Cell\CellGet.cs" />
+    <Compile Include="Excel\Ope_Cell\CellGetDesigner.xaml.cs">
+      <DependentUpon>CellGetDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Cell\CellMerge.cs" />
+    <Compile Include="Excel\Ope_Cell\CellMergeDesigner.xaml.cs">
+      <DependentUpon>CellMergeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Cell\CellSet.cs" />
+    <Compile Include="Excel\Ope_Cell\CellSetDesigner.xaml.cs">
+      <DependentUpon>CellSetDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Cell\PropertySorter.cs" />
+    <Compile Include="Excel\Ope_Process\ExcelCreate.cs" />
+    <Compile Include="Excel\Ope_Process\ExcelCreateDesigner.xaml.cs">
+      <DependentUpon>ExcelCreateDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Range\CopyPaste.cs" />
+    <Compile Include="Excel\Ope_Range\CopyPasteDesigner.xaml.cs">
+      <DependentUpon>CopyPasteDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Range\DeleteRange.cs" />
+    <Compile Include="Excel\Ope_Range\DeleteRangeDesigner.xaml.cs">
+      <DependentUpon>DeleteRangeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Range\ReadRange.cs" />
+    <Compile Include="Excel\Ope_Range\ReadRangeDesigner.xaml.cs">
+      <DependentUpon>ReadRangeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Range\WriteRange.cs" />
+    <Compile Include="Excel\Ope_Range\WriteRangeDesigner.xaml.cs">
+      <DependentUpon>WriteRangeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Replace\Replace.cs" />
+    <Compile Include="Excel\Ope_Replace\ReplaceDesigner.xaml.cs">
+      <DependentUpon>ReplaceDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_RowCol\GetCounts.cs" />
+    <Compile Include="Excel\Ope_RowCol\GetCountsDesigner.xaml.cs">
+      <DependentUpon>GetCountsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_RowCol\InsertRowCol.cs" />
+    <Compile Include="Excel\Ope_RowCol\InsertRowColDesigner.xaml.cs">
+      <DependentUpon>InsertRowColDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_RowCol\ReadRowCol.cs" />
+    <Compile Include="Excel\Ope_RowCol\ReadRowColDesigner.xaml.cs">
+      <DependentUpon>ReadRowColDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_RowCol\RowCol.cs" />
+    <Compile Include="Excel\Ope_RowCol\RowColDesigner.xaml.cs">
+      <DependentUpon>RowColDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Setting\AreaSetting.cs" />
+    <Compile Include="Excel\Ope_Setting\AreaSettingDesigner.xaml.cs">
+      <DependentUpon>AreaSettingDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Sheet\GetAllSheets.cs" />
+    <Compile Include="Excel\Ope_Sheet\GetAllSheetsDesigner.xaml.cs">
+      <DependentUpon>GetAllSheetsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Sheet\NewSheet.cs" />
+    <Compile Include="Excel\Ope_Sheet\NewSheetDesigner.xaml.cs">
+      <DependentUpon>NewSheetDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Sheet\OpenDelSheet.cs" />
+    <Compile Include="Excel\Ope_Sheet\OpenDelSheetDesigner.xaml.cs">
+      <DependentUpon>OpenDelSheetDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\Ope_Sheet\RenameSheet.cs" />
+    <Compile Include="Excel\Ope_Sheet\RenameSheetDesigner.xaml.cs">
+      <DependentUpon>RenameSheetDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\VBA\RunVBA.cs" />
+    <Compile Include="Excel\VBA\RunVBADesigner.xaml.cs">
+      <DependentUpon>RunVBADesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FTP\Delete.cs" />
+    <Compile Include="FTP\DirectoryExists.cs" />
+    <Compile Include="FTP\DownloadFiles.cs" />
+    <Compile Include="FTP\EnumerateObjects.cs" />
+    <Compile Include="FTP\Extensions.cs" />
+    <Compile Include="FTP\FileExists.cs" />
+    <Compile Include="FTP\FTPActDesigner.xaml.cs">
+      <DependentUpon>FTPActDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FTP\FtpConfiguration.cs" />
+    <Compile Include="FTP\FtpObjectInfo.cs" />
+    <Compile Include="FTP\FtpObjectType.cs" />
+    <Compile Include="FTP\FtpPermissions.cs" />
+    <Compile Include="FTP\FtpSession.cs" />
+    <Compile Include="FTP\FtpsMode.cs" />
+    <Compile Include="FTP\IFtpSession.cs" />
+    <Compile Include="FTP\SessionDesigner.xaml.cs">
+      <DependentUpon>SessionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FTP\SftpSession.cs" />
+    <Compile Include="FTP\UploadFiles.cs" />
+    <Compile Include="FTP\WithFtpSession.cs" />
+    <Compile Include="Mail\GetIMAPMail.cs" />
+    <Compile Include="Mail\GetIMAPMailDesigner.xaml.cs">
+      <DependentUpon>GetIMAPMailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\GetMailImgs.cs" />
+    <Compile Include="Mail\GetMailImgsDesigner.xaml.cs">
+      <DependentUpon>GetMailImgsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\GetPOP3Mail.cs" />
+    <Compile Include="Mail\GetPOP3MailDesigner.xaml.cs">
+      <DependentUpon>GetPOP3MailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\MoveIMAPMail.cs" />
+    <Compile Include="Mail\MoveIMAPMailDesigner.xaml.cs">
+      <DependentUpon>MoveIMAPMailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\ArchiveOutlookMailsActivity.cs" />
+    <Compile Include="Mail\Outlook\ArchiveOutlookMailsDesigner.xaml.cs">
+      <DependentUpon>ArchiveOutlookMailsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\ClearOutlookCacheActivity.cs" />
+    <Compile Include="Mail\Outlook\ClearOutlookCacheDesigner.xaml.cs">
+      <DependentUpon>ClearOutlookCacheDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\DeleteOutlookMailItemActivity.cs" />
+    <Compile Include="Mail\Outlook\DeleteOutlookMailItemDesigner.xaml.cs">
+      <DependentUpon>DeleteOutlookMailItemDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\GetOutlookMailMessagesActivity.cs" />
+    <Compile Include="Mail\Outlook\GetOutlookMailMessagesDesigner.xaml.cs">
+      <DependentUpon>GetOutlookMailMessagesDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\MoveOutlookMessageActivity.cs" />
+    <Compile Include="Mail\Outlook\MoveOutlookMessageDesigner.xaml.cs">
+      <DependentUpon>MoveOutlookMessageDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\OutlookAPI.cs" />
+    <Compile Include="Mail\Outlook\Receiver.cs" />
+    <Compile Include="Mail\Outlook\ReplyToOutlookMailMessageActivity.cs" />
+    <Compile Include="Mail\Outlook\ReplyToOutlookMailMessageDesigner.xaml.cs">
+      <DependentUpon>ReplyToOutlookMailMessageDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\SaveOutlookAttachementsActivity.cs" />
+    <Compile Include="Mail\Outlook\SaveOutlookAttachementsDesigner.xaml.cs">
+      <DependentUpon>SaveOutlookAttachementsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\Outlook\SendOutlookMailActivity.cs" />
+    <Compile Include="Mail\Outlook\SendOutlookMailDesigner.xaml.cs">
+      <DependentUpon>SendOutlookMailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\SaveMail.cs" />
+    <Compile Include="Mail\SaveMailAttachments.cs" />
+    <Compile Include="Mail\SaveMailAttachmentsDesigner.xaml.cs">
+      <DependentUpon>SaveMailAttachmentsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\SaveMailDesigner.xaml.cs">
+      <DependentUpon>SaveMailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\SendMail.cs" />
+    <Compile Include="Mail\SendMailDesigner.xaml.cs">
+      <DependentUpon>SendMailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Word\CommonFunc\CommonVariable.cs" />
+    <Compile Include="Word\Ope_Cursor\CursorMove.cs" />
+    <Compile Include="Word\Ope_Cursor\CursorMoveDesigner.xaml.cs">
+      <DependentUpon>CursorMoveDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Cursor\CursorMoveMenu.cs" />
+    <Compile Include="Word\Ope_Cursor\CursorMoveMenuDesigner.xaml.cs">
+      <DependentUpon>CursorMoveMenuDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Process\WordCreate.cs" />
+    <Compile Include="Word\Ope_Process\WordCreateDesigner.xaml.cs">
+      <DependentUpon>WordCreateDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Settings\Settings.cs" />
+    <Compile Include="Word\Ope_Settings\SettingsDesigner.xaml.cs">
+      <DependentUpon>SettingsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\Backspace.cs" />
+    <Compile Include="Word\Ope_Write\BackspaceDesigner.xaml.cs">
+      <DependentUpon>BackspaceDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\CopyPaste.cs" />
+    <Compile Include="Word\Ope_Write\CopyPasteDesigner.xaml.cs">
+      <DependentUpon>CopyPasteDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\GetContent.cs" />
+    <Compile Include="Word\Ope_Write\GetContentDesigner.xaml.cs">
+      <DependentUpon>GetContentDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\InsertFile.cs" />
+    <Compile Include="Word\Ope_Write\InsertFileDesigner.xaml.cs">
+      <DependentUpon>InsertFileDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\MarkLink.cs" />
+    <Compile Include="Word\Ope_Write\MarkLinkDesigner.xaml.cs">
+      <DependentUpon>MarkLinkDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\PageAndNewline.cs" />
+    <Compile Include="Word\Ope_Write\PageAndNewlineDesigner.xaml.cs">
+      <DependentUpon>PageAndNewlineDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\WholeStory.cs" />
+    <Compile Include="Word\Ope_Write\WholeStoryDesigner.xaml.cs">
+      <DependentUpon>WholeStoryDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Word\Ope_Write\WriteText.cs" />
+    <Compile Include="Word\Ope_Write\WriteTextDesigner.xaml.cs">
+      <DependentUpon>WriteTextDesigner.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="RPA.Integration.Activities.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plugins.Shared.Library\Plugins.Shared.Library.csproj">
+      <Project>{6879c801-1124-477a-97d8-0961e6d710b2}</Project>
+      <Name>Plugins.Shared.Library</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="activity.config.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DataBase\ConnectDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\ConnectionDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\ConnectSettingDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\DisconnectDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\ExecDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\ExecInsertDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\SqlEditDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataBase\TransactionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\CSVPlugins\ReadCSVDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\CSVPlugins\WriteCSVDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Cell\CellGetDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Cell\CellMergeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Cell\CellSetDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Process\ExcelCreateDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Range\CopyPasteDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Range\DeleteRangeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Range\ReadRangeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Range\WriteRangeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Replace\ReplaceDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_RowCol\GetCountsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_RowCol\InsertRowColDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_RowCol\ReadRowColDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_RowCol\RowColDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Setting\AreaSettingDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Sheet\GetAllSheetsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Sheet\NewSheetDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Sheet\OpenDelSheetDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Sheet\RenameSheetDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\VBA\RunVBADesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FTP\FTPActDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FTP\SessionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\GetIMAPMailDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\GetMailImgsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\GetPOP3MailDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\MoveIMAPMailDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\ArchiveOutlookMailsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\ClearOutlookCacheDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\DeleteOutlookMailItemDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\GetOutlookMailMessagesDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\MoveOutlookMessageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\ReplyToOutlookMailMessageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\SaveOutlookAttachementsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\Outlook\SendOutlookMailDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\SaveMailAttachmentsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\SaveMailDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mail\SendMailDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Cursor\CursorMoveDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Cursor\CursorMoveMenuDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Process\WordCreateDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Settings\SettingsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\BackspaceDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\CopyPasteDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\GetContentDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\InsertFileDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\MarkLinkDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\PageAndNewlineDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\WholeStoryDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Word\Ope_Write\WriteTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataBase\Microsoft.Data.ConnectionUI.Dialog.dll" />
+    <Content Include="DataBase\Microsoft.Data.ConnectionUI.dll" />
+    <Resource Include="Resources\Excel\csv.png" />
+    <Resource Include="Resources\Word\backspace.png" />
+    <Resource Include="Resources\Word\copy.png" />
+    <Resource Include="Resources\Word\create.png" />
+    <Resource Include="Resources\Word\getcontent.png" />
+    <Resource Include="Resources\Word\mark.png" />
+    <Resource Include="Resources\Word\move1.png" />
+    <Resource Include="Resources\Word\move2.png" />
+    <Resource Include="Resources\Word\newline.png" />
+    <Resource Include="Resources\Word\property.png" />
+    <Resource Include="Resources\Word\save.png" />
+    <Resource Include="Resources\Word\text.png" />
+    <Resource Include="Resources\Word\wholestory.png" />
+    <Resource Include="Resources\Word\writefile.png" />
+    <Resource Include="Resources\Mail\archive-mail.png" />
+    <Resource Include="Resources\Mail\clear-mail-cache.png" />
+    <Resource Include="Resources\Mail\delete-mail.png" />
+    <Resource Include="Resources\Mail\GetImgs.png" />
+    <Resource Include="Resources\Mail\GetMail.png" />
+    <Resource Include="Resources\Mail\MoveMail.png" />
+    <Resource Include="Resources\Mail\outlook.png" />
+    <Resource Include="Resources\Mail\SaveMail.png" />
+    <Resource Include="Resources\Mail\SaveMailAttachments.png" />
+    <Resource Include="Resources\Mail\SendMail.png" />
+    <Resource Include="Resources\FTP\FTP.png" />
+    <Resource Include="Resources\Excel\cellmerge.png" />
+    <Resource Include="Resources\Excel\copy.png" />
+    <Resource Include="Resources\Excel\create.png" />
+    <Resource Include="Resources\Excel\getcell.png" />
+    <Resource Include="Resources\Excel\newsheet.png" />
+    <Resource Include="Resources\Excel\opensheet.png" />
+    <Resource Include="Resources\Excel\rangedelete.png" />
+    <Resource Include="Resources\Excel\rangeread.png" />
+    <Resource Include="Resources\Excel\rangewrite.png" />
+    <Resource Include="Resources\Excel\renamesheet.png" />
+    <Resource Include="Resources\Excel\replace.png" />
+    <Resource Include="Resources\Excel\rowcol.png" />
+    <Resource Include="Resources\Excel\save.png" />
+    <Resource Include="Resources\Excel\setcell.png" />
+    <Resource Include="Resources\Excel\setting.png" />
+    <Resource Include="Resources\Excel\sheetnames.png" />
+    <Resource Include="Resources\Excel\vba.png" />
+    <Resource Include="Resources\DataBase\connect.png" />
+    <Resource Include="Resources\DataBase\disconnect.png" />
+    <Resource Include="Resources\DataBase\insert.png" />
+    <Resource Include="Resources\DataBase\noquery.png" />
+    <Resource Include="Resources\DataBase\query.png" />
+    <Resource Include="Resources\DataBase\transaction.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>del "$(ProjectDir)..\nupkgs\$(TargetName).*.nupkg"
+
+for /D %25%25f in (%25LocalAppData%25\RPAStudio\Packages\Installed\RPA.*.Activities.*) do (
+    rmdir  /S /Q %25%25f
+)</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+nuget pack "$(ProjectPath)" -properties Configuration=Debug
+)
+if $(ConfigurationName) == Release (
+nuget pack "$(ProjectPath)" -properties Configuration=Release
+)
+xcopy "$(TargetDir)*.nupkg" "$(ProjectDir)..\nupkgs\"  /Y
+xcopy "$(TargetDir)*.nupkg" "$(SolutionDir)RPAStudio\$(OutDir)Packages\"  /Y
+del "$(TargetDir)*.nupkg"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
