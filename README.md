@@ -1,4 +1,4 @@
-# <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/RPAStudio/Resource/Ico/RPAStudio.ico" width="32"> RPA机器人流程自动化
+# <img src=" https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/RPAStudio.ico" width="32"> RPA机器人流程自动化
 ![https://img.shields.io/badge/license-GPL--3.0-brightblue](https://img.shields.io/badge/license-GPL--3.0-brightblue)
 
 ## 什么是RPA机器人流程自动化？
@@ -10,13 +10,13 @@
 ## 安装
   * 环境：windows;.net4.5以上
   * 编译: 克隆源代码，VS2015编译运行二进制文件
-  
+
 ## 支持
   * UI自动化：windows窗口、swing窗口、IE浏览器UI自动化;
   * 浏览器自动化： IE、chrome、firefox浏览器;
   * 应用程序集成： Word、Excel、CSV、Mail、数据库（Sql server、Mysql、Orcale）、FTP、Python（Python3）
   * 更多...
-  
+
 ## 问题反馈及联系
   * QQ交流群: 767682308
-  <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/RPAStudio/Resource/Qrcode/qq.jpg" width="440" height="540">
+    <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/qq.jpg" width="440" height="540">
