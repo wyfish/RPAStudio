@@ -10,14 +10,19 @@
 ## 安装
   * 环境：windows;.net4.5以上
   * 编译: 克隆源代码，VS2015编译运行二进制文件
-
+  * 预览版下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.0-rc.exe) 
+  * 旧版本下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v1.0.8.6.exe)
+  
 ## 支持
   * UI自动化：windows窗口、swing窗口、IE浏览器UI自动化;
   * 浏览器自动化： IE、chrome、firefox浏览器;
   * 应用程序集成： Word、Excel、CSV、Mail、数据库（Sql server、Mysql、Orcale）、FTP、Python（Python3）
   * 更多...
+  
+## 知识库
+   * [知识库](https://github.com/rpa-ai/RPAStudio/wiki)
 
-## 问题反馈及联系
+## 合作及联系
   * QQ交流群: 767682308
-  * 合作联系邮箱：wow218@126.com
+  * 联系邮箱：wow218@126.com
   <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/qq.jpg" width="440" height="540">
