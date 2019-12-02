@@ -19,4 +19,5 @@
 
 ## 问题反馈及联系
   * QQ交流群: 767682308
-    <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/qq.jpg" width="440" height="540">
+  * 合作联系邮箱：wow218@126.com
+  <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/qq.jpg" width="440" height="540">
