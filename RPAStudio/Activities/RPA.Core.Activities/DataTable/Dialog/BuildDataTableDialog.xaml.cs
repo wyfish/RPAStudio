@@ -20,7 +20,7 @@ namespace RPA.Core.Activities.DataTableActivity.Dialog
 
         private ModelItem _activityModel;
 
-        internal BuildDataTableDialog  BuildDataTableWnd = null;
+        internal BuildDataTableDialog BuildDataTableWnd=null;
 
         public DataTable DataTable
         {

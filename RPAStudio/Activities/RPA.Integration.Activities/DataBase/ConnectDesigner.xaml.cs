@@ -16,6 +16,7 @@ namespace RPA.Integration.Activities.Database
 {
     public partial class ConnectDesigner
     {
+        ConnectSettingDialog dialog;
         public ConnectDesigner()
         {
             InitializeComponent();

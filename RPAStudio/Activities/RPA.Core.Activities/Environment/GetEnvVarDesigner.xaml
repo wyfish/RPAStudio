@@ -38,7 +38,7 @@
                 ExpressionType="sys:String"
                 HintText="Enter a string"
                 OwnerActivity="{Binding Path=ModelItem}"
-                Margin="40,2,78,2"
+                Margin="5,2,25,2"
                 Grid.Row="0"
                 MaxLines="1" RenderTransformOrigin="0.5,0.5" Height="Auto" >
             </sapv:ExpressionTextBox>
@@ -48,7 +48,7 @@
                       IsTextSearchEnabled="False"
                       ItemsSource="{Binding Path=ModelItem.EnvVarPro}"
                       SelectionChanged="comboBox_SelectionChanged"
-                      HorizontalAlignment="Left" Margin="185,2,0,0"
+                      HorizontalAlignment="Left" Margin="240,2,0,0"
                       VerticalAlignment="Top" Width="18" Height="36"/>
         </Grid>
     </pslc:CollapsableActivity>

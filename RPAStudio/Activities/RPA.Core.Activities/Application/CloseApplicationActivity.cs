@@ -62,6 +62,11 @@ namespace RPA.Core.Activities.ApplicationActivity
             try
             {
                 string _ProcessName = ProcessName.Get(context);
+                if(_ProcessName.ToUpper().EndsWith(".EXE"))
+                {
+                    _ProcessName = _ProcessName.Substring(0,_ProcessName.Length-4);
+                }
+
                 Process[] ps = Process.GetProcessesByName(_ProcessName);
                 foreach(Process item in ps)
                 {

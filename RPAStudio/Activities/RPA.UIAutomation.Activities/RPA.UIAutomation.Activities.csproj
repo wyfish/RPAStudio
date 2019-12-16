@@ -622,7 +622,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Browser\Interop.SHDocVw.dll" />
+    <Content Include="Interop.SHDocVw.dll" />
     <Resource Include="Resources\Window\findwindow.png" />
     <Resource Include="Resources\Window\WindowActive.png" />
     <Resource Include="Resources\Window\WindowAttach.png" />

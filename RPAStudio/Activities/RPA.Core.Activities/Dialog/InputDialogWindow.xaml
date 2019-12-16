@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RPA.Core.Activities.DialogActivity"
         xmlns:ff="clr-namespace:RPA.Core.Activities.DialogActivity.Windows"
         mc:Ignorable="d"
-        Height="215" Width="350"  ResizeMode="NoResize" Icon="pack://application:,,,/RPA.Core.Activities;Component/Resources/Dialog/RPAStudio.ico">
+        Height="216" Width="350"  ResizeMode="NoResize" Icon="pack://application:,,,/RPA.Core.Activities;Component/Resources/Dialog/RPAStudio.ico">
     <Grid FocusManager.FocusedElement="{Binding ElementName=ChangeControlGrid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="55*"/>
@@ -26,7 +26,7 @@
                 <ComboBox x:Name="cbBox" Visibility="Hidden" Margin="0,30,0,30" VerticalContentAlignment="Center" Text="{Binding Path=RValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
             <Grid Grid.Row="1">
-                <Button Content="OK" Width="80" Background="DarkGray" Click="Button_Click"/>
+                <Button Content="OK" Width="80" Click="Button_Click" Margin="125,3,139,7"/>
             </Grid>
         </Grid>
     </Grid>

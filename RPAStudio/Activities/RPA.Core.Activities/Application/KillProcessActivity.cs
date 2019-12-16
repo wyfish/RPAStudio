@@ -51,7 +51,10 @@ namespace RPA.Core.Activities.ApplicationActivity
         {
             Process ps = Processes.Get(context);
             string psName = ProcessName.Get(context);
-            
+            if (psName.ToUpper().EndsWith(".EXE"))
+            {
+                psName = psName.Substring(0, psName.Length - 4);
+            }
             try
             {
                 if (ps != null) ps.Kill();

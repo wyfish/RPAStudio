@@ -667,8 +667,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="DataBase\Microsoft.Data.ConnectionUI.Dialog.dll" />
-    <Content Include="DataBase\Microsoft.Data.ConnectionUI.dll" />
+    <Content Include="Microsoft.Data.ConnectionUI.Dialog.dll" />
+    <Content Include="Microsoft.Data.ConnectionUI.dll" />
     <Resource Include="Resources\Excel\csv.png" />
     <Resource Include="Resources\Word\backspace.png" />
     <Resource Include="Resources\Word\copy.png" />

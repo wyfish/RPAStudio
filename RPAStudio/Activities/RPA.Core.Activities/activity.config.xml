@@ -65,9 +65,9 @@
   </Group>
   <Group Name="程序设计" >
     <Group Name="调试">
-      <Activity Name="注释" Icon="Resources/Debug/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentActivity,RPA.Core.Activities" ToolTip="添加一个注释到工作流"/>
-      <Activity Name="注释活动" Icon="Resources/Debug/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentOutActivity,RPA.Core.Activities" ToolTip="一个容器，放入里面的活动将不被执行"/>
-      <Activity Name="输出日志" Icon="Resources/Debug/log-message.png"  TypeOf="RPA.Core.Activities.DebugActivity.LogMessageActivity,RPA.Core.Activities" ToolTip="打印日志到输出窗口及日志文件中"/>
+      <Activity Name="注释" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentActivity,RPA.Core.Activities" ToolTip="添加一个注释到工作流"/>
+      <Activity Name="注释活动" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentOutActivity,RPA.Core.Activities" ToolTip="一个容器，放入里面的活动将不被执行"/>
+      <Activity Name="输出日志" Icon="Resources/DebugActivity/log-message.png"  TypeOf="RPA.Core.Activities.DebugActivity.LogMessageActivity,RPA.Core.Activities" ToolTip="打印日志到输出窗口及日志文件中"/>
     </Group>
     <Group Name="DataTable">
       <Activity Name="添加数据列" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataColumn,   RPA.Core.Activities" ToolTip="将DataColumn添加到指定的DataTable"/>

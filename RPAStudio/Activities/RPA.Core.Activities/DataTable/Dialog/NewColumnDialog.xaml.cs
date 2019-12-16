@@ -47,7 +47,7 @@ namespace RPA.Core.Activities.DataTableActivity.Dialog
             get { return this.columnName; }
         }
 
-        internal Image WarningImage = null;
+        internal Image WarningImage=null;
 
         //private bool _contentLoaded;
 

@@ -16,7 +16,7 @@ namespace RPA.Core.Activities.FileActivity
         {
             if (resources == null)
             {
-                Uri resourceLocator = new Uri(string.Concat(typeof(PropertyEditorResources).Assembly.GetName().Name, @";component/Control/PropertyEditorResources.xaml"),
+                Uri resourceLocator = new Uri(string.Concat(typeof(PropertyEditorResources).Assembly.GetName().Name, @";component/File/PropertyEditorResources.xaml"),
                     UriKind.RelativeOrAbsolute);
                 resources = (ResourceDictionary)Application.LoadComponent(resourceLocator);
             }

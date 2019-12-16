@@ -105,16 +105,16 @@ namespace Plugins.Shared.Library.Nuget
             }
         }
 
-        private SourceRepositoryProvider _sourceRepositoryProvider = null;
+        /// <summary>
+        /// 不缓存，因为有可能中间包源被禁用
+        /// </summary>
         public SourceRepositoryProvider SourceRepositoryProvider
         {
             get
             {
-                if (_sourceRepositoryProvider == null)
-                {
-                    var psp = new PackageSourceProvider(Settings, null, new PackageSourceProvider(UserSettings).LoadPackageSources());
-                    _sourceRepositoryProvider = new SourceRepositoryProvider(psp, Repository.Provider.GetCoreV3());
-                }
+                var psp = new PackageSourceProvider(Settings, null, new PackageSourceProvider(UserSettings).LoadPackageSources());
+                var _sourceRepositoryProvider = new SourceRepositoryProvider(psp, Repository.Provider.GetCoreV3());
+
                 return _sourceRepositoryProvider;
             }
         }
@@ -187,32 +187,79 @@ namespace Plugins.Shared.Library.Nuget
         /// </summary>
         /// <param name="searchString"></param>
         /// <returns></returns>
-        public async Task<List<IPackageSearchMetadata>> Search(string searchString)
+        public async Task<List<IPackageSearchMetadata>> Search(string searchString,bool includePrerelease,string source = "")
         {
             var result = new List<IPackageSearchMetadata>();
 
             foreach (var sourceRepository in SourceRepositoryProvider.GetRepositories())
             {
+                if(!string.IsNullOrEmpty(source))
+                {
+                    //包源过滤
+                    if(sourceRepository.PackageSource.Source.ToLower() != source.ToLower())
+                    {
+                        continue;
+                    }
+                }
+
                 var searchResource = await sourceRepository.GetResourceAsync<PackageSearchResource>();
                 var supportedFramework = new[] { ".NETFramework,Version=v4.5.2" };
-                var searchFilter = new SearchFilter(true)
+                var searchFilter = new SearchFilter(includePrerelease)
                 {
                     SupportedFrameworks = supportedFramework,
-                    IncludeDelisted = false
+                    IncludeDelisted = true
                 };
 
                 var jsonNugetPackages = await searchResource
-                            .SearchAsync(searchString, searchFilter, 0, 50, Logger, CancellationToken.None);
+                            .SearchAsync(searchString, searchFilter, 0, 50, NullLogger.Instance, CancellationToken.None);
 
-                foreach (var p in jsonNugetPackages.Where(x => x.Identity.Id.ToLower().Contains(searchString.ToLower())))
+                //TODO WJF 应该根据id还是title来模糊匹配呢？？
+                if(string.IsNullOrEmpty(searchString))
                 {
-                    var exists = result.Where(x => x.Identity.Id == p.Identity.Id).FirstOrDefault();
-                    if (exists == null) result.Add(p);
+                    foreach (var p in jsonNugetPackages)
+                    {
+                        var exists = result.Where(x => x.Identity.Id == p.Identity.Id).FirstOrDefault();
+                        if (exists == null) result.Add(p);
+                    }
                 }
+                else
+                {
+                    foreach (var p in jsonNugetPackages.Where(x => x.Title.ToLower().Contains(searchString.ToLower())))
+                    {
+                        var exists = result.Where(x => x.Identity.Id == p.Identity.Id).FirstOrDefault();
+                        if (exists == null) result.Add(p);
+                    }
+                }
+
             }
 
             return result;
         }
+
+
+        public async Task<List<IPackageSearchMetadata>> SearchPackageVersions(string packageid, bool includePrerelease)
+        {
+            var ret = new List<IPackageSearchMetadata>();
+            foreach (var sourceRepository in SourceRepositoryProvider.GetRepositories())
+            {
+                var searchResource = await sourceRepository.GetResourceAsync<PackageMetadataResource>();
+
+                var metadataList = await searchResource
+                            .GetMetadataAsync(packageid, includePrerelease, true, NullLogger.Instance, CancellationToken.None);
+
+                if(metadataList.Count() > ret.Count())
+                {
+                    ret = metadataList.ToList();
+                }
+            }
+
+            return ret;
+        }
+
+
+
+
+
 
 
         public async Task GetPackageDependencies(PackageIdentity package, SourceCacheContext cacheContext, ISet<SourcePackageDependencyInfo> availablePackages)
@@ -240,7 +287,7 @@ namespace Plugins.Shared.Library.Nuget
 
         public async Task DownloadAndInstall(PackageIdentity identity)
         {
-            //TODO WJF 包源靠前的地址已经找到和安装了包的时候不要再继续下面的包源操作了
+            //包源靠前的地址已经找到和安装了包的时候不要再继续下面的包源操作了
             try
             {
                 using (var cacheContext = new SourceCacheContext())
@@ -367,10 +414,8 @@ namespace Plugins.Shared.Library.Nuget
             return result;
         }
 
-        public LocalPackageInfo getLocal(string identity)
+        private LocalPackageInfo getLocal(string identity)
         {
-            List<Lazy<INuGetResourceProvider>> providers = CreateResourceProviders();
-
             FindLocalPackagesResourceV2 findLocalPackagev2 = new FindLocalPackagesResourceV2(PackagesInstallFolder);
             var packages = findLocalPackagev2.GetPackages(Logger, CancellationToken.None).ToList();
             packages = packages.Where(p => p.Identity.Id == identity).ToList();
@@ -383,6 +428,24 @@ namespace Plugins.Shared.Library.Nuget
             return res;
         }
 
+        public LocalPackageInfo GetLocalPackageInfo(PackageIdentity identity)
+        {
+            FindLocalPackagesResourceV2 findLocalPackagev2 = new FindLocalPackagesResourceV2(PackagesInstallFolder);
+            var packages = findLocalPackagev2.GetPackages(Logger, CancellationToken.None).ToList();
+            packages = packages.Where(p => p.Identity.Id == identity.Id).ToList();
+            LocalPackageInfo res = null;
+            foreach (var p in packages)
+            {
+                if (p.Identity.Version == identity.Version)
+                {
+                    res = p;
+                    break;
+                }
+            }
+            return res;
+        }
+
+
         private void InstallFile(string installedPath, string f)
         {
             string source = "";
@@ -393,7 +456,25 @@ namespace Plugins.Shared.Library.Nuget
             try
             {
                 source = System.IO.Path.Combine(installedPath, f);
-                f2 = f.Substring(f.IndexOf("/", 4) + 1);
+
+                //多种情况特殊处理，如lib\xx.dll lib\net452\xx.dll content\xxx\xxx.dll等等
+                var arr = f.Split('/');
+                if(arr[0] == "lib")
+                {
+                    if(arr.Length == 2)
+                    {
+                        f2 = f.Substring(f.IndexOf("/", 3) + 1);
+                    }
+                    else
+                    {
+                        f2 = f.Substring(f.IndexOf("/", 4) + 1);
+                    }
+                }
+                else
+                {
+                    f2 = f.Substring(f.IndexOf("/", 0) + 1);
+                }
+
                 filename = System.IO.Path.GetFileName(f2);
                 dir = System.IO.Path.GetDirectoryName(f2);
                 target = System.IO.Path.Combine(TargetFolder, dir, filename);
@@ -430,7 +511,16 @@ namespace Plugins.Shared.Library.Nuget
         }
 
 
+        public NuspecReader GetNuspecReaderInPackagesInstallFolder(PackageIdentity identity)
+        {
+            var packagePathResolver = new NuGet.Packaging.PackagePathResolver(PackagesInstallFolder);
+            var installedPath = packagePathResolver.GetInstalledPath(identity);
 
+            PackageReaderBase packageReader;
+            packageReader = new PackageFolderReader(installedPath);
+
+            return packageReader.NuspecReader;
+        }
 
 
 

@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <copyright>$copyright$</copyright>
-    <tags>RPA Office Activity</tags>
+    <tags>RPA Integration Activity</tags>
   </metadata>
   <files>
     <file src="bin\$configuration$\*.*" target="lib/net452" exclude="bin\$configuration$\*.pdb;bin\$configuration$\$id$.dll;bin\$configuration$\$id$.dll.config" />

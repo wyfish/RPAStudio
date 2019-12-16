@@ -653,6 +653,7 @@ namespace Plugins.Shared.Library.UiAutomation
         /// <param name="filePath">不提供的话程序自动生成全局唯一名字，并在项目当前目录下的.screenshots目录下生成</param>
         public string CaptureInformativeScreenshotToFile(string filePath = null)
         {
+            var ret = "";
             if (filePath == null)
             {
                 var guid = Guid.NewGuid().ToString("N");
@@ -663,7 +664,9 @@ namespace Plugins.Shared.Library.UiAutomation
                     System.IO.Directory.CreateDirectory(screenshotsPath);
                 }
 
-                filePath = screenshotsPath + @"\" + guid + @".png";
+                var fileName = guid + @".png";
+                ret = fileName;
+                filePath = screenshotsPath + @"\" + fileName;
             }
 
             if(currentInformativeScreenshot == null)
@@ -674,7 +677,7 @@ namespace Plugins.Shared.Library.UiAutomation
 
             currentInformativeScreenshot.Save(filePath);
 
-            return filePath;
+            return ret;
         }
 
         /// <summary>

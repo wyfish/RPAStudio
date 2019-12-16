@@ -5,6 +5,7 @@ using System.Windows.Data;
 using System.Globalization;
 using Excel = Microsoft.Office.Interop.Excel;
 using Plugins.Shared.Library;
+using System.Collections.ObjectModel;
 
 namespace RPA.Integration.Activities.ExcelPlugins
 {
@@ -99,11 +100,20 @@ namespace RPA.Integration.Activities.ExcelPlugins
                 {
                     data = sheet.Columns[rowColNum].Value;
                 }
-                object[][] sss = data as object[][];
-                object sasa = sss[1][1];
+
+                //Collection<object> _data = new Collection<object>();
+
+                //foreach (object cell in ((object[,])data))
+                //{
+                //    if (cell != null)
+                //    {
+                //        _data.Add(cell);
+                //    }
+                //    else
+                //        break;
+                //}
 
                 RolColData.Set(context, data);
-
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(sheet);
                 sheet = null;
                 GC.Collect();

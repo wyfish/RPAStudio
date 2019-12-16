@@ -25,26 +25,12 @@
         </DrawingBrush>
     </sap:ActivityDesigner.Icon>
     <psl:CollapsableActivity>
-        <Grid  Height="80" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="45*"/>
-                <RowDefinition Height="44*"/>
-            </Grid.RowDefinitions>
-            <Grid>
-                <sapv:ExpressionTextBox Name="FileNameTextBox" MaxLines="1" HintText="File name.Text must be quoted"
+        <Grid  Height="30" >
+            <sapv:ExpressionTextBox Name="FileNameTextBox" MaxLines="1" HintText="File name.Text must be quoted"
                                     Expression="{Binding Path=ModelItem.URL, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }" 
                                         ExpressionType="sys:String"
-                                        OwnerActivity="{Binding Path=ModelItem}" Margin="45,0,25,10"/>
-                <Button x:Name="button" Content="..." VerticalAlignment="Center" Width="20" Height="30" HorizontalAlignment="Right" Margin="0,0,0,10" Click="button_Click"/>
-                <Label x:Name="label" Content="URL" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
-            </Grid>
-            <Grid Grid.Row="1">
-                <sapv:ExpressionTextBox Name="AppendLineTextBox" MaxLines="1" HintText="Text must be quoted"
-                                        Expression="{Binding Path=ModelItem.ResultValue, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=InOut }" 
-                                        ExpressionType="sys:String"
-                                    OwnerActivity="{Binding Path=ModelItem}" Margin="45,0,0,10"/>
-                <Label x:Name="label1" Content="Result" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
-            </Grid>
+                                        OwnerActivity="{Binding Path=ModelItem}" Margin="0,0,25,0"/>
+            <Button x:Name="button" Content="..." VerticalAlignment="Center" Width="20" Height="30" HorizontalAlignment="Right" Click="button_Click"/>
         </Grid>
     </psl:CollapsableActivity >
 </sap:ActivityDesigner>

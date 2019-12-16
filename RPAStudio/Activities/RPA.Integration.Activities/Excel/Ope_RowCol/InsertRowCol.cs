@@ -5,6 +5,7 @@ using System.Windows.Data;
 using System.Globalization;
 using Excel = Microsoft.Office.Interop.Excel;
 using Plugins.Shared.Library;
+using System.Collections.ObjectModel;
 
 namespace RPA.Integration.Activities.ExcelPlugins
 {
@@ -87,8 +88,6 @@ namespace RPA.Integration.Activities.ExcelPlugins
                     sheet = excelApp.ActiveSheet;
                 else
                     sheet = excelApp.ActiveWorkbook.Sheets[sheetName];
-
-                object data = new object();
 
                 Int32 rowColNum = RowColNum.Get(context);
                 if(CurrInsertType == InsertType.复制行)

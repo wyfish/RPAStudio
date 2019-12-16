@@ -7,7 +7,7 @@
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
     psla:ActivityDesignerAttached.Icon="Resources/DebugActivity/comment.png"
-    psla:ActivityDesignerAttached.Resources="Themes/Generic.xaml"
+    psla:ActivityDesignerAttached.Resources="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml"
      >
     <pslc:CollapsableActivity>
         <DockPanel LastChildFill="True" MaxHeight="300" MaxWidth="500">

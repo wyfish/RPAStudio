@@ -36,7 +36,7 @@ namespace RPA.Core.Activities.DialogActivity
         [Category("输出")]
         [Description("提供的HTML页面返回的字符串。")]
         [DisplayNameAttribute("Result")]
-        public InOutArgument<string> ResultValue { get; set; }
+        public OutArgument<string> ResultValue { get; set; }
 
         CountdownEvent latch;
         private void refreshData(CountdownEvent latch)

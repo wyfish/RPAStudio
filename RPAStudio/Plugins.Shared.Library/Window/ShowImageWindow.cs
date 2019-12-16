@@ -13,7 +13,8 @@ namespace Plugins.Shared.Library.Window
 
         public void ShowImage(string src)
         {
-            Image img = Image.FromFile(src);
+            var filename = SharedObject.Instance.ProjectPath + @"\.screenshots\"+ src;
+            Image img = Image.FromFile(filename);
             this.BackgroundImage = img;
             this.Width = img.Width;
             this.Height = img.Height;

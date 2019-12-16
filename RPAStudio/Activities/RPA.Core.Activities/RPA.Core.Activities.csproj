@@ -353,7 +353,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Resource Include="activity.config.xml" />
+    <Resource Include="activity.config.xml">
+      <SubType>Designer</SubType>
+    </Resource>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
