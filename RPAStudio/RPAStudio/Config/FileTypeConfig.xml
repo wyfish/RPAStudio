@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FileTypeConfig>
+  <Sequence Title="新建序列" Description="创建一个新的序列工作流" FileName="Sequence" />
+  <Flowchart Title="新建流程图" Description="创建一个新的流程图工作流" FileName="Flowchart" />
+  <StateMachine Title="新建状态机" Description="创建一个新的状态机工作流" FileName="StateMachine" />
+  <GlobalHandler Title="新建全局处理器" Description="创建一个新的异常处理器工作流" FileName="GlobalHandler" />
+</FileTypeConfig>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="RPAStudio.UserControls.LocalsContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPAStudio.UserControls"
+             xmlns:libs="clr-namespace:RPAStudio.Librarys"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+             mc:Ignorable="d" 
+             DataContext="{Binding Locals, Source={StaticResource Locator}}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="SizeChanged">
+            <cmd:EventToCommand Command="{Binding SizeChangedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" x:Name="columnName"/>
+        <Grid Grid.Column="1" x:Name="columnValue"/>
+        <ListView Grid.ColumnSpan="2" BorderThickness="0" ItemsSource="{Binding LocalsList}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionMode="Single"   >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontSize" Value="13"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView x:Name="gridView">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="名称" Width="{Binding ElementName=columnName,Path=ActualWidth}" />
+                    <GridViewColumn Header="值" Width="{Binding ElementName=columnValue,Path=ActualWidth}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <TextBox Text="{Binding Value}" ToolTip="{Binding Value}"  IsReadOnly="True" VerticalAlignment="Center" Margin="0,0,30,0" MaxHeight="50" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" />
+                                    <libs:ColorButtonThreeState Margin="0,0,0,0" Width="25" Height="25" ToolTip="查看属性值" Command="{Binding ViewValueDetailCommand}" def_img="pack://application:,,,/Resources/Image/Dock/view-variable.png" HorizontalAlignment="Right" />
+                                </Grid>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

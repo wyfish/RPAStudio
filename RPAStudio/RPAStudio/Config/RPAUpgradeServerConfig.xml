@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--该配置文件放在服务端，Version，Md5，Url及UpdateLog要填写正确-->
+<RPAUpgradeServerConfig>
+  <AutoUpgradePackpage Version="2.0.0.0" Md5="e0590d4719b2d7080cc3d2b2652ee225" Url="http://rpa.openserver.cn/download/RPAStudioAutoUpgrade-v2.0.0.0.exe" />
+  <!--更新日志-->
+  <UpdateLog>
+    <Item>活动库改为动态加载</Item>
+    <Item>设计器功能优化</Item>
+    <Item>其它已知问题修复</Item>
+  </UpdateLog>
+</RPAUpgradeServerConfig>

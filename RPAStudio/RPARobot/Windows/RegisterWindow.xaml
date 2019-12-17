@@ -1,0 +1,85 @@
+﻿<Window x:Class="RPARobot.Windows.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RPARobot.Windows"
+        mc:Ignorable="d"
+        DataContext="{Binding Register, Source={StaticResource Locator}}"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        Title="注册产品" Height="300" Width="400" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowDrop="True">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="MouseLeftButtonDown">
+            <cmd:EventToCommand Command="{Binding MouseLeftButtonDownCommand}" ></cmd:EventToCommand>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Closing">
+            <cmd:EventToCommand Command="{Binding ClosingCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Drop">
+            <cmd:EventToCommand Command="{Binding DropCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <GroupBox Header="注册信息" Margin="10">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Right">状态：</TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
+                        <TextBlock HorizontalAlignment="Right">有效期：</TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Text="程序未注册" Foreground="Red" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="程序已注册" Foreground="Green" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
+                            <TextBlock Text="截止到 "></TextBlock>
+                            <TextBlock Text="{Binding ExpiresDate}" Foreground="Blue"></TextBlock>
+                        </StackPanel>
+                        <TextBlock Text="永久有效 " Foreground="Blue" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
+                    </Grid>
+                    
+
+
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="1" Margin="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Width="100" Height="25" ToolTip="请将机器码文件导出并发送给授权方完成授权" Command="{Binding ExportMachineCodeFileCommand}">导出机器码文件…</Button>
+                <Button Width="100" Height="25" ToolTip="选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口" Margin="20,0,10,0" Command="{Binding ImportAuthorizationFileCommand}">导入授权码文件…</Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CloseCommand}">关闭</Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

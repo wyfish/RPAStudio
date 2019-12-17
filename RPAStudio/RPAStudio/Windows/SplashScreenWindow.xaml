@@ -1,0 +1,37 @@
+﻿<Window x:Class="RPAStudio.Windows.SplashScreenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        mc:Ignorable="d ignore"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        DataContext="{Binding SplashScreen, Source={StaticResource Locator}}"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        >
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid Width="650" Height="440">
+        <Image Source="pack://application:,,,/Resources/Image/Windows/SplashScreen/startup.png" ></Image>
+        <!--<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel>
+                <TextBlock FontSize="100" Foreground="White" FontWeight="Bold" >RPAStudio</TextBlock>
+                <TextBlock FontSize="20" Foreground="White" FontStyle="Italic" >机器人流程自动化平台</TextBlock>
+            </StackPanel>
+        </Grid>-->
+
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="463,167,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Foreground="#d3e3f0" Text="Version " ></TextBlock>
+                <TextBlock Foreground="#d3e3f0" Text="{Binding Version}"></TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

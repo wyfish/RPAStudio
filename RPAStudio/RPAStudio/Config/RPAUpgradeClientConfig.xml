@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--该配置文件放在客户端-->
+<RPAUpgradeClientConfig>
+  <RPAUpgradeServerConfig Url="http://rpa.openserver.cn/download/RPAUpgradeServerConfig.xml" />
+  <!--更新日志-->
+  <UpdateLog>
+    <Item>活动库改为动态加载</Item>
+    <Item>设计器功能优化</Item>
+    <Item>其它已知问题修复</Item>
+  </UpdateLog>
+</RPAUpgradeClientConfig>
