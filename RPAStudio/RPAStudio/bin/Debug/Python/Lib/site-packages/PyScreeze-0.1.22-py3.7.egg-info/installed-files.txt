@@ -1,0 +1,7 @@
+..\pyscreeze\__init__.py
+..\pyscreeze\__pycache__\__init__.cpython-37.pyc
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+requires.txt
+top_level.txt

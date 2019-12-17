@@ -1,0 +1,13 @@
+..\pygetwindow\__init__.py
+..\pygetwindow\__pycache__\__init__.cpython-37.pyc
+..\pygetwindow\__pycache__\_pygetwindow_macos.cpython-37.pyc
+..\pygetwindow\__pycache__\_pygetwindow_win.cpython-37.pyc
+..\pygetwindow\__pycache__\foo.cpython-37.pyc
+..\pygetwindow\_pygetwindow_macos.py
+..\pygetwindow\_pygetwindow_win.py
+..\pygetwindow\foo.py
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+requires.txt
+top_level.txt
