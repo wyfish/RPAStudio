@@ -371,18 +371,6 @@
     <None Include="Resources\FileTemplate\StateMachine.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <Page Include="Styles\Button.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\ContextMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\Main.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <None Include="Resources\FileTemplate\Main.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>

@@ -15,3 +15,13 @@ RPAStudio/*/GeneratedFiles
 *csproj.user
 RPAStudio/RPAStudio/Styles/*
 *.user
+/RPAStudio/Activities/RPA.Core.Activities/bin/Debug
+/RPAStudio/Activities/RPA.Core.Activities/obj
+/RPAStudio/Activities/RPA.Integration.Activities/obj
+/RPAStudio/Activities/RPA.Script.Activities/obj/Debug
+/RPAStudio/Activities/RPA.UIAutomation.Activities/obj
+/.vs/RPAStudio/v16
+/.vs
+/RPAStudio/Activities/RPA.Integration.Activities/bin/Debug
+/RPAStudio/Activities/RPA.Script.Activities/bin/Debug
+/RPAStudio/Activities/RPA.UIAutomation.Activities/bin/Debug
