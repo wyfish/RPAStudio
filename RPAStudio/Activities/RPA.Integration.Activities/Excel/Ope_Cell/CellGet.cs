@@ -21,7 +21,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Category("单元格选项")]
         [OverloadGroup("CellColAndRow")]
         [RequiredArgument]
-        [DisplayName("列")]
+        [DisplayName("行")]
         [Browsable(true)]
         public InArgument<Int32> CellRow
         {
@@ -39,7 +39,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Category("单元格选项")]
         [OverloadGroup("CellColAndRow")]
         [RequiredArgument]
-        [DisplayName("行")]
+        [DisplayName("列")]
         [Browsable(true)]
         public InArgument<Int32> CellColumn
         {

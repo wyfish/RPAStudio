@@ -57,14 +57,6 @@
       <HintPath>..\..\packages\HtmlAgilityPack.1.11.12\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="LitJSON, Version=0.13.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LitJson.0.13.0\lib\net45\LitJSON.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="LitJson2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\LitJson2.1.0.0\lib\LitJson2.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="MailKit, Version=2.4.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MailKit.2.4.1\lib\net45\MailKit.dll</HintPath>
       <Private>False</Private>

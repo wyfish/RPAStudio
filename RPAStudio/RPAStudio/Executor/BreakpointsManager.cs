@@ -70,31 +70,37 @@ namespace RPAStudio.Executor
             return map;
         }
 
-        public static void SetBreakpoint(DocumentViewModel activeDocument,string activityId,bool IsEnabled)
+        public static void SetBreakpoint(DocumentViewModel activeDocument, string activityId, bool IsEnabled)
         {
-            var workflowDesigner = activeDocument.WorkflowDesignerInstance;
-
-            var wfElementToSourceLocationMap = UpdateSourceLocationMappingInDebuggerService(workflowDesigner);
-            var activityIdToWfElementMap = BuildActivityIdToWfElementMap(wfElementToSourceLocationMap);
-            if(activityIdToWfElementMap.ContainsKey(activityId))
+            try
             {
-                SourceLocation srcLoc = wfElementToSourceLocationMap[activityIdToWfElementMap[activityId]];
+                var workflowDesigner = activeDocument.WorkflowDesignerInstance;
 
-                if (IsEnabled)
+                var wfElementToSourceLocationMap = UpdateSourceLocationMappingInDebuggerService(workflowDesigner);
+                var activityIdToWfElementMap = BuildActivityIdToWfElementMap(wfElementToSourceLocationMap);
+                if (activityIdToWfElementMap.ContainsKey(activityId))
                 {
-                    workflowDesigner.DebugManagerView.InsertBreakpoint(srcLoc, BreakpointTypes.Enabled | BreakpointTypes.Bounded);
+                    SourceLocation srcLoc = wfElementToSourceLocationMap[activityIdToWfElementMap[activityId]];
+
+                    if (IsEnabled)
+                    {
+                        workflowDesigner.DebugManagerView.InsertBreakpoint(srcLoc, BreakpointTypes.Enabled | BreakpointTypes.Bounded);
+                    }
+                    else
+                    {
+                        workflowDesigner.DebugManagerView.DeleteBreakpoint(srcLoc);
+                    }
                 }
                 else
                 {
-                    workflowDesigner.DebugManagerView.DeleteBreakpoint(srcLoc);
+                    //找不到断点位置，说明文件有修改，则该断点信息删除
+                    ProjectSettingsDataManager.Instance.m_projectBreakpointsDataManager.RemoveBreakpointLocation(activeDocument.RelativeXamlPath, activityId);
                 }
             }
-            else
+            catch (Exception err)
             {
-                //找不到断点位置，说明文件有修改，则该断点信息删除
-                ProjectSettingsDataManager.Instance.m_projectBreakpointsDataManager.RemoveBreakpointLocation(activeDocument.RelativeXamlPath, activityId);
+                Logger.Debug(err, logger);
             }
-            
         }
 
         public static void ToggleBreakpoint(DocumentViewModel activeDocument)

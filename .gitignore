@@ -13,7 +13,6 @@ RPAStudio/*/GeneratedFiles
 *.vcxproj.user
 *shproj.user
 *csproj.user
-RPAStudio/RPAStudio/Styles/*
 *.user
 /RPAStudio/Activities/RPA.Core.Activities/bin/Debug
 /RPAStudio/Activities/RPA.Core.Activities/obj

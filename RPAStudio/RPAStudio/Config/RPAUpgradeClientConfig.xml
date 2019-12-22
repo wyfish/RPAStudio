@@ -4,7 +4,7 @@
   <RPAUpgradeServerConfig Url="http://rpa.openserver.cn/download/RPAUpgradeServerConfig.xml" />
   <!--更新日志-->
   <UpdateLog>
-    <Item>活动库改为动态加载</Item>
+    <Item>包管理器完善</Item>
     <Item>设计器功能优化</Item>
     <Item>其它已知问题修复</Item>
   </UpdateLog>

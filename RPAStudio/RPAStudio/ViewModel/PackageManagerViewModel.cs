@@ -35,8 +35,6 @@ namespace RPAStudio.ViewModel
         private ListBox m_listBoxSearchResult;
         private RichTextBox m_richTextBox;
 
-        //private static readonly object s_locker = new object();
-
         public SettingItem CurrentSelectedSettingItem { get; set; }
 
         public PackageSourceSearchResultItem CurrentSelectedPackageSourceSearchResultItem { get; set; }

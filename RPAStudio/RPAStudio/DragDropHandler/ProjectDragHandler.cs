@@ -23,14 +23,13 @@ namespace RPAStudio.DragDropHandler
                 var designer = ViewModelLocator.Instance.Dock.ActiveDocument.WorkflowDesignerInstance;
 
                 var type = Type.GetType("RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities");
-                //var dragActivity = new InvokeWorkflowFileActivity();
+
                 dynamic dragActivity = Activator.CreateInstance(type);
                 dragActivity.SetWorkflowFilePath(item.Path);
 
 
                 //通过类型获取对应的显示名并进行设置
 
-                //var activity_item = ViewModelLocator.Instance.Activities.GetActivityTreeItemByType(typeof(InvokeWorkflowFileActivity));
                 var activity_item = ViewModelLocator.Instance.Activities.GetActivityTreeItemByType(type);
                 if (activity_item != null)
                 {
@@ -45,10 +44,6 @@ namespace RPAStudio.DragDropHandler
                
                 if (resultActivity != null)
                 {
-                    //ModelItem mi = designer.Context.Services.GetService<ModelTreeManager>().CreateModelItem(null, resultActivity);
-                    //DataObject data = new DataObject();
-                    //data.SetData(DragDropHelper.ModelItemDataFormat, mi);
-
                     //动态生成组件，以便解决拖动到flowchart报错的问题
                     var dag = new DynamicActivityGenerator("_DynamicActivityGenerator_" + System.Guid.NewGuid().ToString());
                     var t = dag.AppendSubWorkflowTemplate(System.Guid.NewGuid().ToString(), Common.ToXaml(resultActivity));
@@ -73,7 +68,6 @@ namespace RPAStudio.DragDropHandler
 
                 var type = Type.GetType("RPA.Script.Activities.Python.InvokePythonFileActivity,RPA.Script.Activities");
 
-                //var dragActivity = new InvokePythonFileActivity();
                 dynamic dragActivity = Activator.CreateInstance(type);
 
                 if (item.Path.StartsWith(SharedObject.Instance.ProjectPath, System.StringComparison.CurrentCultureIgnoreCase))
@@ -84,7 +78,6 @@ namespace RPAStudio.DragDropHandler
 
                 //通过类型获取对应的显示名并进行设置
 
-                //var activity_item = ViewModelLocator.Instance.Activities.GetActivityTreeItemByType(typeof(InvokePythonFileActivity));
                 var activity_item = ViewModelLocator.Instance.Activities.GetActivityTreeItemByType(type);
                 if (activity_item != null)
                 {
@@ -99,10 +92,6 @@ namespace RPAStudio.DragDropHandler
 
                 if (resultActivity != null)
                 {
-                    //ModelItem mi = designer.Context.Services.GetService<ModelTreeManager>().CreateModelItem(null, resultActivity);
-                    //DataObject data = new DataObject();
-                    //data.SetData(DragDropHelper.ModelItemDataFormat, mi);
-
                     //动态生成组件，以便解决拖动到flowchart报错的问题
                     var dag = new DynamicActivityGenerator("_DynamicActivityGenerator_" + System.Guid.NewGuid().ToString());
                     var t = dag.AppendSubWorkflowTemplate(System.Guid.NewGuid().ToString(), Common.ToXaml(resultActivity));

@@ -46,7 +46,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;ENABLE_AUTHORIZATION_CHECK</DefineConstants>
+    <DefineConstants>TRACE;ENABLE_AUTHORIZATION_CHECK--</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -136,7 +136,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NPinyinPro, Version=0.3.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -371,12 +371,6 @@
     <None Include="Resources\FileTemplate\StateMachine.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
-    <None Include="Resources\FileTemplate\Main.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Include="Resources\FileTemplate\Sequence.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
     <Page Include="Styles\Button.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -389,6 +383,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <None Include="Resources\FileTemplate\Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="Resources\FileTemplate\Sequence.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <Page Include="UserControls\CheckUpgradeContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

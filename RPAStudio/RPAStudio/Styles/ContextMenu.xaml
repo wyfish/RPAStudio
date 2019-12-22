@@ -20,12 +20,12 @@
     <ContextMenu x:Key="SnippetsUserAddContextMenu">
         <MenuItem Header="打开" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Dock/snippet-file.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Dock/snippet-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="移除" Command="{Binding RemoveSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Dock/menu-remove.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Dock/menu-remove.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -33,7 +33,7 @@
     <ContextMenu x:Key="SnippetsContextMenu">
         <MenuItem Header="打开" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Dock/menu-open.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Dock/menu-open.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -42,24 +42,24 @@
     <ContextMenu x:Key="ProjectRootContextMenu">
         <MenuItem Header="打开项目文件夹" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/open-dir.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/open-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="项目设置" Command="{Binding OpenProjectSettingsCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/settings.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/settings.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="新建文件夹..." Command="{Binding NewFolderCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/add-dir.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/add-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="导入工作流..." Command="{Binding ImportWorkflowCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/workflow.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/workflow.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -69,29 +69,29 @@
     <ContextMenu x:Key="ProjectDirectoryContextMenu">
         <MenuItem Header="打开" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/open-dir.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/open-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="重命名" Command="{Binding RenameDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/rename.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="删除" Command="{Binding DeleteDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/delete.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="新建文件夹..." Command="{Binding NewFolderCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/add-dir.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/add-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="导入工作流..." Command="{Binding ImportWorkflowCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/workflow.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/workflow.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -100,23 +100,23 @@
     <ContextMenu x:Key="ProjectMainXamlContextMenu">
         <MenuItem Header="打开" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/open-file.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="重命名" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/rename.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="删除" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/delete.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="运行" Command="{Binding RunCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/run.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/run.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -125,28 +125,28 @@
     <ContextMenu x:Key="ProjectXamlContextMenu">
         <MenuItem Header="打开" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/open-file.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="重命名" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/rename.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="删除" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/delete.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="运行" Command="{Binding RunCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/run.png" />
+                <Image Source="pack://application:,,,/Resources/Image/Project/run.png" />
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="设置为主文件" Command="{Binding SetAsMainCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/main.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/main.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -155,12 +155,12 @@
     <ContextMenu x:Key="ProjectFileContextMenu">
         <MenuItem Header="重命名" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/rename.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="删除" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/delete.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
@@ -168,18 +168,18 @@
     <ContextMenu x:Key="RecentProjectItemContextMenu">
         <MenuItem Header="打开项目" Command="{Binding OpenProjectCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Project/open-file.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <MenuItem Header="打开项目所在目录" Command="{Binding OpenProjectDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Dock/file-explorer.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Dock/file-explorer.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
         <MenuItem Header="从列表中移除" Command="{Binding RemoveFromListCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
-                <Image Source="pack://application:,,,/Resource/Image/Dock/remove.png"/>
+                <Image Source="pack://application:,,,/Resources/Image/Dock/remove.png"/>
             </MenuItem.Icon>
         </MenuItem>
     </ContextMenu>
