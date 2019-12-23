@@ -1,5 +1,6 @@
 <p align="center">
-<img src="https://gitee.com/rpa_ai/RPAStudio/raw/master/RPAStudio/ico/RPAStudio.ico"width="150" />
+    ![]()
+<img src="https://raw.github.com/wiki/rpa-ai/RPAStudio/images/Home/rpa_logo@48.png"width="150" />
 </p>
 <h1 align="center"> RPA机器人流程自动化</h1> 
 <p align="center">
@@ -36,16 +37,16 @@
 ## 知识库
    * [知识库](https://gitee.com/rpa_ai/RPAStudio/wikis/Home)
 ## 页面展示
-![](https://images.gitee.com/uploads/images/2019/1223/170223_ac515090_5539659.png "案例图1.png")
+![](https://raw.github.com/wiki/rpa-ai/RPAStudio/images/Home/案例图1.png)
 <br>
 
-![](https://images.gitee.com/uploads/images/2019/1223/170239_59657e5d_5539659.png "案例图2.png")
+![](https://raw.github.com/wiki/rpa-ai/RPAStudio/images/Home/案例图2.png)
 <br>
 
-![](https://images.gitee.com/uploads/images/2019/1223/170254_94ef1fab_5539659.png "案例图3.png")
+![](https://raw.github.com/wiki/rpa-ai/RPAStudio/images/Home/案例图3.png)
 <br>
 
-![](https://images.gitee.com/uploads/images/2019/1223/170312_ed126dde_5539659.png "案例图4.png")
+![](https://raw.github.com/wiki/rpa-ai/RPAStudio/images/Home/案例图4.png)
 
 ## 版权声明
   * 本软件使用 GPL3.0 协议，请严格遵照协议内容!
