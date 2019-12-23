@@ -1,5 +1,4 @@
 <p align="center">
-    ![]()
 <img src="https://raw.github.com/wiki/rpa-ai/RPAStudio/images/Home/rpa_logo@48.png"width="150" />
 </p>
 <h1 align="center"> RPA机器人流程自动化</h1> 
