@@ -10,7 +10,7 @@
 ## 安装
   * 环境：windows;.net4.5以上
   * 编译: 克隆源代码，VS2015编译运行二进制文件
-  * 预览版下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.0-rc.exe) 
+  * 下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.1.exe) 
   * 旧版本下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v1.0.8.6.exe)
   
 ## 支持
