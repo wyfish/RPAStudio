@@ -1,10 +1,24 @@
-# <img src=" https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/RPAStudio.ico" width="32"> RPA机器人流程自动化
-![https://img.shields.io/badge/license-GPL--3.0-brightblue](https://img.shields.io/badge/license-GPL--3.0-brightblue)
+<p align="center">
+<img src="https://gitee.com/rpa_ai/RPAStudio/raw/master/RPAStudio/ico/RPAStudio.ico"width="150" />
+</p>
+<h1 align="center"> RPA机器人流程自动化</h1> 
+<p align="center">
+    <a href="http://rpa.openserver.cn">
+        <img src="https://img.shields.io/badge/Licence-GPL3.0-green.svg?style=flat" />
+    </a>    
+     <a href="http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.1.exe">
+        <img src="https://img.shields.io/badge/download-80m-red.svg" />
+    </a>
+    </p>
+<p align="center">    
+    <b>如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！</b>
+</p>
 
-## 什么是RPA机器人流程自动化？
+
+## 项目介绍
    RPA软件是一种机器人流程自动化技术，通过配置机器人自动化软件模拟和人类在软件系统中交互的动作来执行业务流程。RPA软件机器人运行时像人类操作应用程序一样，中间不需要用户交互操作。RPA软件根据规则与其他系统交互，根据需要执行各种重复性任务。一个RPA软件机器人可以7*24不间断进行工作，为企业节省成本，提高工作效率。
     
-## RPA机器人流程自动化能为您做什么？
+## 系统功能
    RPA适用于财务税务、人力资源、金融业、制造业、信息技术、运营销售等重复劳动率高的行业。机器人执行效率远高于人工操作，出错率极低。
     
 ## 安装
@@ -20,9 +34,22 @@
   * 更多...
   
 ## 知识库
-   * [知识库](https://github.com/rpa-ai/RPAStudio/wiki)
+   * [知识库](https://gitee.com/rpa_ai/RPAStudio/wikis/Home)
+## 页面展示
+![](https://images.gitee.com/uploads/images/2019/1223/170223_ac515090_5539659.png "案例图1.png")
+<br>
 
+![](https://images.gitee.com/uploads/images/2019/1223/170239_59657e5d_5539659.png "案例图2.png")
+<br>
+
+![](https://images.gitee.com/uploads/images/2019/1223/170254_94ef1fab_5539659.png "案例图3.png")
+<br>
+
+![](https://images.gitee.com/uploads/images/2019/1223/170312_ed126dde_5539659.png "案例图4.png")
+
+## 版权声明
+  * 本软件使用 GPL3.0 协议，请严格遵照协议内容!
 ## 合作及联系
   * QQ交流群: 767682308
   * 联系邮箱：miaogy@turbochain.ai
-  <img src="https://github.com/rpa-ai/RPAStudio/blob/master/RPAStudio/ico/qq.jpg" width="440" height="540">
+  <img src="https://gitee.com/rpa_ai/RPAStudio/raw/master/RPAStudio/ico/qq.jpg" width="440" height="540">
