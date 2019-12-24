@@ -52,4 +52,4 @@
 ## 合作及联系
   * QQ交流群: 767682308
   * 联系邮箱：miaogy@turbochain.ai
-  <img src="https://gitee.com/rpa_ai/RPAStudio/raw/master/RPAStudio/ico/qq.jpg" width="440" height="540">
+  <img src="https://github.com/rpa-ai/RPAStudio/raw/master/RPAStudio/ico/qq.jpg" width="440" height="540">
