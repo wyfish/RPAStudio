@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AvailableActivities Name="利用可能" IsExpanded="true">
+  <Group Name="ワークフロー" IsSortable="True">
+    <!--<Group Name="检查点">
+      <Activity Name="Check False" IsSystem="true" TypeOf="FlowDecision" />
+      <Activity Name="Check True" IsSystem="true" TypeOf="FlowSwitch" />
+    </Group>-->
+    <Group Name="フローチャート">
+      <Activity Name="Flow Decision" IsSystem="true" TypeOf="FlowDecision" />
+      <Activity Name="Flow Switch" IsSystem="true" TypeOf="FlowSwitch" />
+      <Activity Name="Flowchart" IsSystem="true" TypeOf="Flowchart" />
+    </Group>
+    <Group Name="ステートマシン" >
+      <Activity Name="Final State" IsSystem="true" TypeOf="FinalState" />
+      <Activity Name="State" IsSystem="true" TypeOf="State" />
+      <Activity Name="StateMachine" IsSystem="true" TypeOf="StateMachine" />
+    </Group>
+    <Group Name="例外処理" >
+      <Activity Name="Rethrow" IsSystem="true" TypeOf="Rethrow" />
+      <Activity Name="Terminate Workflow" IsSystem="true" TypeOf="TerminateWorkflow" />
+      <Activity Name="Throw" IsSystem="true" TypeOf="Throw" />
+      <Activity Name="Try Catch" IsSystem="true" TypeOf="TryCatch" />
+    </Group>
+    <Group Name="制御" >
+      <Activity Name="Assign" IsSystem="true" TypeOf="Assign" />
+      <Activity Name="Cancellation Scope" IsSystem="true" TypeOf="CancellationScope" />
+      <Activity Name="Delay" IsSystem="true" TypeOf="Delay" />
+      <Activity Name="Do While" IsSystem="true" TypeOf="DoWhile" />
+      <Activity Name="For Each" IsSystem="true" TypeOf="ForEach" />
+      <Activity Name="If" IsSystem="true" TypeOf="If" />
+      <Activity Name="Parallel" IsSystem="true" TypeOf="Parallel" />
+      <Activity Name="Parallel For Each" IsSystem="true" TypeOf="ParallelForEach" />
+      <Activity Name="Pick" IsSystem="true" TypeOf="Pick" />
+      <Activity Name="Pick Branch" IsSystem="true" TypeOf="PickBranch" />
+      <Activity Name="Sequence" IsSystem="true" TypeOf="Sequence" />
+      <Activity Name="Switch" IsSystem="true" TypeOf="Switch" />
+      <Activity Name="While" IsSystem="true" TypeOf="While" />
+    </Group>
+
+  </Group>
+  <Group Name="プログラミング" >
+    <Group Name="データ収集">
+      <Activity Name="追加" IsSystem="true" TypeOf="AddToCollection" ToolTip="将项添加到指定的集合。"/>
+      <Activity  Name="クリア" IsSystem="true" TypeOf="ClearCollection" ToolTip="清除指定的项集合。" />
+      <Activity  Name="存在" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="指示给定集合中是否存在给定项。" />
+      <Activity  Name="削除" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="从指定集合中移除项。" />
+    </Group>
+    <Group Name="デバッグ">
+      <Activity Name="Write Line" IsSystem="true" TypeOf="WriteLine" />
+    </Group>
+  </Group>
+</AvailableActivities>

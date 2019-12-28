@@ -163,4 +163,34 @@
   <data name="verify_public_rsa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\RPARobot\Resources\key\verify.public.rsa.pem;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="AvailableActivities_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\AvailableActivities_en.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AvailableActivities_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\AvailableActivities_ja.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FavoriteActivities_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\FavoriteActivities_en.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FavoriteActivities_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\FavoriteActivities_ja.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FileTypeConfig_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\FileTypeConfig_en.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FileTypeConfig_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\FileTypeConfig_ja.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectConfig_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\ProjectConfig_en.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectConfig_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\ProjectConfig_ja.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RecentActivities_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\RecentActivities_en.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RecentActivities_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\RecentActivities_ja.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

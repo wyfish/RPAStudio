@@ -281,7 +281,8 @@ namespace RPAStudio.ViewModel
         private void updateFavoriteActivitiesConfig()
         {
             //保存收藏夹内容到FavoriteActivities.xml
-            var xmlPath = App.LocalRPAStudioDir + @"\Config\FavoriteActivities.xml";
+            //var xmlPath = App.LocalRPAStudioDir + @"\Config\FavoriteActivities.xml";
+            var xmlPath = GetActivitiesXML("FavoriteActivities");
             XmlDocument doc = new XmlDocument();
             doc.Load(xmlPath);
             var rootNode = doc.DocumentElement;
@@ -295,6 +296,21 @@ namespace RPAStudio.ViewModel
             }
 
             doc.Save(xmlPath);
+        }
+
+        private string GetActivitiesXML(string activityName)
+        {
+            string culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            string resourceXML = App.LocalRPAStudioDir + @"\Config\" + activityName + "_en.xml";
+            if (culture.Equals("zh"))
+            {
+                return App.LocalRPAStudioDir + @"\Config\" + activityName + ".xml";
+            }
+            else if (culture.Equals("ja"))
+            {
+                return App.LocalRPAStudioDir + @"\Config\" + activityName + "_ja.xml";
+            }
+            return resourceXML;
         }
 
         public void MountActivityConfig(string activity_config_xml)
@@ -396,7 +412,8 @@ namespace RPAStudio.ViewModel
             ActivityItems.Add(ItemRecent);
 
             XmlDocument doc = new XmlDocument();
-            doc.Load(App.LocalRPAStudioDir+ @"\Config\RecentActivities.xml");
+            //doc.Load(App.LocalRPAStudioDir+ @"\Config\RecentActivities.xml");
+            doc.Load(GetActivitiesXML("RecentActivities"));
             var rootNode = doc.DocumentElement;
 
             ItemRecent.Name = (rootNode as XmlElement).GetAttribute("Name");
@@ -412,7 +429,8 @@ namespace RPAStudio.ViewModel
             ActivityItems.Add(ItemFavorites);
 
             XmlDocument doc = new XmlDocument();
-            doc.Load(App.LocalRPAStudioDir+ @"\Config\FavoriteActivities.xml");
+            //doc.Load(App.LocalRPAStudioDir+ @"\Config\FavoriteActivities.xml");
+            doc.Load(GetActivitiesXML("FavoriteActivities"));
             var rootNode = doc.DocumentElement;
 
             ItemFavorites.Name = (rootNode as XmlElement).GetAttribute("Name");
@@ -467,8 +485,8 @@ namespace RPAStudio.ViewModel
             if(AvailableActivitiesXmlDocument == null)
             {
                 XmlDocument doc = new XmlDocument();
-
-                using (var ms = new MemoryStream(RPAStudio.Properties.Resources.AvailableActivities))
+                var resourceXML = RPAStudio.Properties.ResourceLocalizer.GetResourceByName("AvailableActivities");
+                using (var ms = new MemoryStream(resourceXML))
                 {
                     ms.Flush();
                     ms.Position = 0;

@@ -69,8 +69,6 @@ namespace RPAStudio.ViewModel
             });
         }
 
-
-
         /// <summary>
         /// The <see cref="Version" /> property's name.
         /// </summary>

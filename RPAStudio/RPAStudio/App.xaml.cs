@@ -142,38 +142,17 @@ namespace RPAStudio
                 System.IO.Directory.CreateDirectory(configDir);
             }
 
-
             //以下的XML是用户可能会修改的配置，升级时一般要保留旧数据
             //TODO WJF 后期需要根据XML里的版本号对配置文件数据进行迁移
-            if (!System.IO.File.Exists(configDir + @"\CodeSnippets.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.CodeSnippets;
-                System.IO.File.WriteAllBytes(configDir + @"\CodeSnippets.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\FavoriteActivities.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.FavoriteActivities;
-                System.IO.File.WriteAllBytes(configDir + @"\FavoriteActivities.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\ProjectUserConfig.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.ProjectConfig;
-                System.IO.File.WriteAllBytes(configDir + @"\ProjectUserConfig.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\RecentActivities.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.RecentActivities;
-                System.IO.File.WriteAllBytes(configDir + @"\RecentActivities.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\RecentProjects.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.RecentProjects;
-                System.IO.File.WriteAllBytes(configDir + @"\RecentProjects.xml", data);
-            }
+            CopyResourceToConfig(configDir, "CodeSnippets");
+            CopyResourceToConfig(configDir, "FavoriteActivities");
+            CopyResourceToConfig(configDir, "FavoriteActivities_en");
+            CopyResourceToConfig(configDir, "FavoriteActivities_ja");
+            CopyResourceToConfig(configDir, "ProjectUserConfig");
+            CopyResourceToConfig(configDir, "RecentActivities");
+            CopyResourceToConfig(configDir, "RecentActivities_en");
+            CopyResourceToConfig(configDir, "RecentActivities_ja");
+            CopyResourceToConfig(configDir, "RecentProjects");
 
             if (!System.IO.File.Exists(configDir + @"\RPAStudio.settings"))
             {
@@ -186,6 +165,17 @@ namespace RPAStudio
                 {
                     Logger.Debug(string.Format("升级xml配置文件 {0} ……", App.LocalRPAStudioDir + @"\Config\RPAStudio.settings"), logger);
                 }
+            }
+        }
+
+        private void CopyResourceToConfig(string configDir, string resourceName)
+        {
+            string path = string.Format(@"{0}\{1}.xml", configDir, resourceName);
+            if (!System.IO.File.Exists(path))
+            {
+                //byte[] data = RPAStudio.Properties.Resources.FavoriteActivities;
+                byte[] data = RPAStudio.Properties.ResourceLocalizer.GetResourceByName(resourceName);
+                System.IO.File.WriteAllBytes(path, data);
             }
         }
 

@@ -55,6 +55,7 @@ namespace RPAStudio.ViewModel
         Stopwatch workflowExecutorStopwatch = new Stopwatch();
 
         public static Dictionary<string, BitmapImage> SystemIconDic = new Dictionary<string, BitmapImage>();
+        private readonly string prefixTitle;
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -83,6 +84,10 @@ namespace RPAStudio.ViewModel
 
             Messenger.Default.Register<DockViewModel>(this, "DocumentsCountChanged", DocumentsCountChanged);
             Messenger.Default.Register<MessengerObjects.ProjectStateChanged>(this, OnProjectStateChangedMessage);
+
+            string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            prefixTitle = isoCulture.Equals("zh") ? "RPA机器人流程自动化平台" : "RPA Robotic Process Automation Platform";
+            _debugOrContinueWorkflowButtonToolTipProperty = P_Debug + "（F7）";
         }
 
 
@@ -367,16 +372,15 @@ namespace RPAStudio.ViewModel
 
                 if(value)
                 {
-                    DebugOrContinueWorkflowButtonHeader = "继续";
+                    DebugOrContinueWorkflowButtonHeader = P_Continue; // 继续
                 }
                 else
                 {
-                    DebugOrContinueWorkflowButtonHeader = "调试";
+                    DebugOrContinueWorkflowButtonHeader = P_Debug; // 调试
                 }
             }
         }
-
-
+               
 
 
         /// <summary>
@@ -413,11 +417,7 @@ namespace RPAStudio.ViewModel
             }
         }
 
-
-
-
-
-        
+               
 
         /// <summary>
         /// The <see cref="IsWorkflowDebugging" /> property's name.
@@ -990,7 +990,7 @@ namespace RPAStudio.ViewModel
         /// </summary>
         public const string TitlePropertyName = "Title";
 
-        private readonly string prefixTitle = "RPA机器人流程自动化平台";
+        //private readonly string prefixTitle = "RPA机器人流程自动化平台";
         private string _titleProperty = "";
 
         /// <summary>
@@ -1529,7 +1529,7 @@ namespace RPAStudio.ViewModel
         /// </summary>
         public const string DebugOrContinueWorkflowButtonToolTipPropertyName = "DebugOrContinueWorkflowButtonToolTip";
 
-        private string _debugOrContinueWorkflowButtonToolTipProperty = "调试（F7）";
+        private string _debugOrContinueWorkflowButtonToolTipProperty = "";
 
         /// <summary>
         /// Sets and gets the DebugOrContinueWorkflowButtonToolTip property.
@@ -2093,14 +2093,291 @@ namespace RPAStudio.ViewModel
             }
         }
 
+        #region Binding from MainContent.xaml
+        // 设置
+        public string P_CheckUpdates {
+            get { return GetResString("CheckUpdates.Text"); }
+        }
 
+        // 设计
+        public string P_Design {
+            get { return GetResString("Design.Header"); }
+        }
 
+        // 执行
+        public string P_Execution {
+            get { return GetResString("Execution.Header"); }
+        }
 
+        // 文件
+        public string P_File {
+            get { return GetResString("File.Header"); }
+        }
 
+        // 新建
+        public string P_New {
+            get { return GetResString("New.Header"); }
+        }
 
+        // 序列图
+        public string P_SequenceDiagram {
+            get { return GetResString("SequenceDiagram.Header"); }
+        }
 
-        
+        // 序列图（Ctrl+N）
+        public string P_SequenceDiagram_ToolTip {
+            get { return GetResString("SequenceDiagram.ToolTip"); }
+        }
+
+        // 流程图
+        public string P_FlowChart {
+            get { return GetResString("FlowChart.Header"); }
+        }
+
+        // 状态机
+        public string P_StateMachine {
+            get { return GetResString("StateMachine.Header"); }
+        }
+
+        // 保存
+        public string P_Save {
+            get { return GetResString("Save.Header"); }
+        }
+
+        // 保存（Ctrl+S）
+        public string P_Save_ToolTip {
+            get { return GetResString("Save.ToolTip"); }
+        }
+
+        // 另存为
+        public string P_SaveAs {
+            get { return GetResString("SaveAs.Header"); }
+        }
+
+        // 全部保存
+        public string P_SaveAll {
+            get { return GetResString("SaveAll.Header"); }
+        }
+
+        // 全部保存（Ctrl+Shift+S）
+        public string P_SaveAll_ToolTip {
+            get { return GetResString("SaveAll.ToolTip"); }
+        }
+
+        // 运行
+        public string P_Run {
+            get { return GetResString("Run.Header"); }
+        }
+
+        // 运行（F5）
+        public string P_Run_ToolTip {
+            get { return GetResString("Run.ToolTip"); }
+        }
+
+        // 编辑
+        public string P_Edit {
+            get { return GetResString("Edit.Header"); }
+        }
+
+        // 剪切
+        public string P_Cut {
+            get { return GetResString("Cut.Header"); }
+        }
+
+        // 复制
+        public string P_Copy {
+            get { return GetResString("Copy.Header"); }
+        }
+
+        // 粘贴
+        public string P_Paste {
+            get { return GetResString("Paste.Header"); }
+        }
+
+        // 依赖
+        public string P_Depends {
+            get { return GetResString("Depends.Header"); }
+        }
+
+        // 包管理器
+        public string P_PackageManager {
+            get { return GetResString("PackageManager.Header"); }
+        }
+
+        // 管理nupkg包，实现安装、卸载、更新包等操作（Ctrl+P）
+        public string P_PackageManager_ToolTip {
+            get { return GetResString("PackageManager.ToolTip"); }
+        }
+
+        // 部署
+        public string P_Deploy {
+            get { return GetResString("Deploy.Header"); }
+        }
+
+        // 发布
+        public string P_Release {
+            get { return GetResString("Release.Header"); }
+        }
+
+        // 打包发布
+        public string P_Release_ToolTip {
+            get { return GetResString("Release.ToolTip"); }
+        }
+
+        // 启动
+        public string P_Start2 {
+            get { return GetResString("Start2.Header"); }
+        }
+
+        // 停止
+        public string P_Stop {
+            get { return GetResString("Stop.Header"); }
+        }
+
+        // 停止（F12）
+        public string P_Stop_ToolTip {
+            get { return GetResString("Stop.ToolTip"); }
+        }
+
+        // 调试
+        public string P_Debug {
+            get { return GetResString("Debug.Header"); }
+        }
+
+        // 中断
+        public string P_Break {
+            get { return GetResString("Break.Header"); }
+        }
+
+        // 中断执行（暂停）
+        public string P_Break_ToolTip {
+            get { return GetResString("Break.ToolTip"); }
+        }
+
+        // 逐语句
+        public string P_StepInto {
+            get { return GetResString("StepInto.Header"); }
+        }
+
+        // 逐语句（F11）
+        public string P_StepInto_ToolTip {
+            get { return GetResString("StepInto.ToolTip"); }
+        }
+
+        // 逐过程
+        public string P_StepOver {
+            get { return GetResString("StepOver.Header"); }
+        }
+
+        // 逐过程（Shift+F11）
+        public string P_StepOver_ToolTip {
+            get { return GetResString("StepOver.ToolTip"); }
+        }
+
+        // 校验
+        public string P_Varidate {
+            get { return GetResString("Varidate.Header"); }
+        }
+
+        // 检查错误（F8）
+        public string P_Varidate_ToolTip {
+            get { return GetResString("Varidate.ToolTip"); }
+        }
+
+        // 断点
+        public string P_BreakPoint {
+            get { return GetResString("BreakPoint.Header"); }
+        }
+
+        // 切换断点（F9）
+        public string P_BreakPoint_ToolTip {
+            get { return GetResString("BreakPoint.ToolTip"); }
+        }
+
+        // 切换断点
+        public string P_BreakPoint2 {
+            get { return GetResString("BreakPoint2.Header"); }
+        }
+
+        // 切换断点（F9）
+        public string P_BreakPoint2_ToolTip {
+            get { return GetResString("BreakPoint2.ToolTip"); }
+        }
+
+        // 清除所有断点
+        public string P_CrearAllBreakPoints {
+            get { return GetResString("CrearAllBreakPoints.Header"); }
+        }
+
+        // 清除所有断点（Shift+F9）
+        public string P_CrearAllBreakPoints_ToolTip {
+            get { return GetResString("CrearAllBreakPoints.ToolTip"); }
+        }
+
+        // 慢速 调试
+        public string P_SlowDebug {
+            get { return GetResString("SlowDebug.Header"); }
+        }
+
+        // 以最慢的1x到最快4x进行不同速度的调试运行
+        public string P_SlowDebug_ToolTip {
+            get { return GetResString("SlowDebug.ToolTip"); }
+        }
+
+        // 选项
+        public string P_Option {
+            get { return GetResString("Option.Header"); }
+        }
+
+        // 高亮元素
+        public string P_HighlightElement {
+            get { return GetResString("HighlightElement.Header"); }
+        }
+
+        // 记录活动
+        public string P_RecordActivity {
+            get { return GetResString("RecordActivity.Header"); }
+        }
+
+        // 异常时中断
+        public string P_InterruptOnException {
+            get { return GetResString("InterruptOnException.Header"); }
+        }
+
+        // 日志
+        public string P_Log {
+            get { return GetResString("Log.Header"); }
+        }
+
+        // 打开日志
+        public string P_OpenLog {
+            get { return GetResString("OpenLog.Header"); }
+        }
+
+        // 打开日志（Ctrl+L）
+        public string P_OpenLog_ToolTip {
+            get { return GetResString("OpenLog.ToolTip"); }
+        }
+
+        // 继续
+        public string P_Continue {
+            get { return GetResString("Continue"); }
+        }
+
+        private string GetResString(string key)
+        {
+            string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            // Only 'zh' and 'ja' localizations are available. Others will be shown in English.
+            if (isoCulture.Equals("zh") || isoCulture.Equals("ja"))
+            {
+                return Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
+            }
+            var en = new System.Globalization.CultureInfo("en");
+            return Properties.Resources.ResourceManager.GetString(key, en);
+        }
+
+        #endregion
     }
 
-    
+
 }
