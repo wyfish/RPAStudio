@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPARobot.Windows"
+        xmlns:localization="clr-namespace:RPARobot.Localization"
         mc:Ignorable="d"
         DataContext="{Binding Register, Source={StaticResource Locator}}"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-        Title="注册产品" Height="300" Width="400" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowDrop="True">
+        Title="{x:Static localization:Strings.RegisterYourProductTitle}" Height="300" Width="400" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowDrop="True">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -31,7 +32,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid>
-            <GroupBox Header="注册信息" Margin="10">
+            <GroupBox Header="{x:Static localization:Strings.RegistrationInformationHeader}" Margin="10">
                 <Grid Margin="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
@@ -43,41 +44,41 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
-                        <TextBlock HorizontalAlignment="Right">状态：</TextBlock>
+                        <TextBlock HorizontalAlignment="Right" Text="{x:Static localization:Strings.StatusText}" />
                     </Grid>
 
                     <Grid Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                        <TextBlock HorizontalAlignment="Right">有效期：</TextBlock>
+                        <TextBlock HorizontalAlignment="Right" Text="{x:Static localization:Strings.ValidityPeriodText}"/>
                     </Grid>
 
                     <Grid Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-                        <TextBlock Text="程序未注册" Foreground="Red" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}"></TextBlock>
-                        <TextBlock Text="程序已注册" Foreground="Green" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="{x:Static localization:Strings.NotRegisteredText}" Foreground="Red" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="{x:Static localization:Strings.RegisteredText}" Foreground="Green" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
                     </Grid>
 
                     <Grid Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
-                            <TextBlock Text="截止到 "></TextBlock>
+                            <TextBlock Text="{x:Static localization:Strings.TillText}"></TextBlock>
                             <TextBlock Text="{Binding ExpiresDate}" Foreground="Blue"></TextBlock>
                         </StackPanel>
-                        <TextBlock Text="永久有效 " Foreground="Blue" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="{x:Static localization:Strings.PermanentText}" Foreground="Blue" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
                     </Grid>
-                    
+
 
 
                 </Grid>
             </GroupBox>
         </Grid>
         <Grid Grid.Row="1" Margin="10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Width="100" Height="25" ToolTip="请将机器码文件导出并发送给授权方完成授权" Command="{Binding ExportMachineCodeFileCommand}">导出机器码文件…</Button>
-                <Button Width="100" Height="25" ToolTip="选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口" Margin="20,0,10,0" Command="{Binding ImportAuthorizationFileCommand}">导入授权码文件…</Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="330">
+                <Button Width="155" Height="25" x:Uid="ExportMachineCode" ToolTip="请将机器码文件导出并发送给授权方完成授权" Command="{Binding ExportMachineCodeFileCommand}" Content="{x:Static localization:Strings.ExportMachineCodeContent}" Margin="0,2"/>
+                <Button Width="141" Height="25" x:Uid="ImportMachineCode" ToolTip="选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口" Margin="20,2,10,2" Command="{Binding ImportAuthorizationFileCommand}" Content="{x:Static localization:Strings.ImportMachineCodeContent}"/>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CloseCommand}">关闭</Button>
+                <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CloseCommand}" Content="{x:Static localization:Strings.CloseContent}"/>
             </StackPanel>
         </Grid>
 
