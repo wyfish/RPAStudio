@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Do" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="DropActivityHere" xml:space="preserve">
+    <value>Drop activity here</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>进程名称</value>
+  </data>
+  <data name="Category1" xml:space="preserve">
+    <value>UI对象</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>窗口指示器</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>用于在执行活动时查找特定UI元素的Text属性</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>输出</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>表示当前Windows会话中正在运行的进程的进程对象的集合。</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>描述要关闭的流程的流程类型对象。</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>要关闭的进程的名称。</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>指定在抛出错误之前等待活动运行的时间(以毫秒为单位)。默认值为3000毫秒(3秒)。</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>可以在启动时传递给应用程序的参数。</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>可以找到要打开的应用程序的可执行文件的完整文件路径。注意:所有字符串都必须放在引号之间。</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>当前工作目录的路径。这个字段只接受字符串变量。注意:所有字符串变量必须放在引号之间。</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>可以找到要打开的应用程序的executabel文件的完整路径。注意:所有字符串都必须放在引号之间。</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>从剪贴板中检索的数据。</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>要复制到剪贴板的文本。</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>拷贝文件或文件夹</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>输入</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>要附加到DataTable的列集合的DataColumn对象。如果设置了此属性，则会忽略“选项”类别下的所有属性</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>新列的名称</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>要添加列的DataTable对象</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>允许为空</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>指定新列中字段是否允许为空</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>自动递增</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value> 指定在添加新行时列的值是否自动递增</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>唯一约束</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value> 指定新列的每一行中的值必须是唯一的</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>最大长度</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value> 指定新列的值的最大长度</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>默认值</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>要添加到DataTable的DataRow对象，如果设置了此属性，则忽略ArrayRow属性。</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>要添加到DataTable的对象数组。每个对象的类型应映射到DataTable中其对应列的类型。</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>要添加行数据的DataTable对象</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>根据行列信息生成的DataTable表</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>要清除所有数据的DataTable对象</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>要筛选的DataTable变量。该字段仅支持DataTable变量</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>行过滤模式</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>指定是否通过保留或删除目标行来过滤表</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>列过滤模式</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>指定是通过保留还是删除目标列来过滤表</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>过滤结果DataTable</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>执行单行操作的DataTable变量</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>索引</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>指定要转换为表的非结构化数据的来源。该字段仅支持String变量</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>如果使用OCR进行抓取，并且选中了“获取单词信息”复选框，则此字段包含IEnumerable&lt;KeyValuePair&lt;Rectangle,String&gt;&gt;具有WordsInfo值的变量</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>固定格式选项</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>列宽</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>指定要在表中创建的列的大小。该字段仅支持IEnumerable &lt;Int32&gt;变量。</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>格式化选项</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>列分隔符</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>指定要用作列分隔符的字符。该字段仅支持String变量</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>行分隔符</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>指定要用作换行符分隔符的字符。该字段仅支持String变量</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>CSV解析</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>类型自动检测</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>选中后，自动检测列或行类型，无论是String，Int32等。</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>列标题</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>如果选中，则使用第一个标识的列作为列标题</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>行标题</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>如果选中，则使用第一个标识的行作为行标题</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>生成的DataTable变量</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>行</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>要从中检索值的DataRow对象</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>要从DataRow检索其值的DataColumn对象。如果设置了此属性，则忽略ColumnName和ColumnIndex属性。</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>列索引</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>要从DataRow检索其值的列的索引</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>列名称</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>要从DataRow检索其值的列的名称。如果设置了此属性，则忽略ColumnIndex属性</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>指定DataRow的列值</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>DataTable1</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>要在此操作中使用的第一个表，存储在DataTable变量中。该字段仅支持DataTable变量</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>DataTable2</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>要在此操作中使用的第二个表，存储在DataTable变量中。该字段仅支持DataTable变量</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>JoinType</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>要在其中执行查找的DataTable变量</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>查找值</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>要在指定DataTable变量中搜索的值</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>开始列</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>要从DataRow检索其值的DataColumn对象。在此属性字段中设置变量会禁用其他两个属性</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>要从DataRow检索其值的列的索引。在此属性字段中设置变量会禁用其他两个属性</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>要从DataRow检索其值的列的名称。在此属性字段中设置变量会禁用其他两个属性</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>结束列</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>返回在此列与RowIndex属性中的值之间的坐标处找到的单元格</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>返回在此列与RowIndex属性值之间的坐标处找到的单元格的列索引</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>返回在此列与RowIndex属性中的值之间的坐标处找到的单元格的列名称</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>单元格值</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>单元格中找到的值</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>行索引</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>单元格的Row索引</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>合并源DataTable的DataTable对象</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>源</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>要添加到目标DataTable的DataTable对象</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>合并操作</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>指定合并两个DataTable时要执行的操作</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>要写入字符串的DataTable对象</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>DataTable作为字符串的输出</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>要从中删除列的DataTable对象</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>要从DataTable的列集合中删除的DataColumn对象。如果设置了此属性，则忽略其它两个列索引选项</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>要从DataTable的列集合中删除的列的索引。如果设置了此属性，则忽略其它两个列索引选项</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>要从DataTable的列集合中删除的列的名称。如果设置了此属性，则忽略其它两个列索引选项</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>要删除的DataRow对象。如果设置了此属性，则忽略行索引选项</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>要删除的行的索引。如果设置了此属性，则忽略DataRow索引选项</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>要从中删除重复行的DataTable变量</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>输出已删除重复行的DataTable，存储在DataTable变量中。放置与Input字段中的变量相同的变量会更改初始变量，而提供新变量会使初始变量不受影响。</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>要排序的DataTable变量</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>列排序</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>按其排序的列的变量。该字段仅支持DataColumn变量。在此属性字段中设置变量会禁用其他两个属性</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>排序后的DataTable变量。放置与Input字段中的变量相同的变量会更改初始变量，而添加新变量会使初始变量不受影响。</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>日期时间</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>转换类型</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>时间类型</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>UI元素</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>输入UIElement</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>使用坐标点</value>
+  </data>
+  <data name="Description75" xml:space="preserve">
+    <value>弹出窗口的文本。</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>弹出窗口的标题。</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>持续时间，直到弹出窗口自动关闭。默认情况下，弹出窗口不会关闭。</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>这表示HTML文件的完整路径或外部URL。</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>提供的HTML页面返回的字符串。</value>
+  </data>
+  <data name="Description80" xml:space="preserve">
+    <value>表单字段的标签。</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>可供选择的选项数组。如果将其设置为只包含一个元素，则会出现一个文本框来编写文本。如果将其设置为包含2或3个元素，则它们将显示为要从中选择的单选按钮。如果将其设置为包含3个以上的项，则它们将作为组合框显示以供选择。此字段只支持字符串数组变量。</value>
+  </data>
+  <data name="Description82" xml:space="preserve">
+    <value>输入对话框的标题。</value>
+  </data>
+  <data name="Description83" xml:space="preserve">
+    <value>用户在输入对话框中插入的值。</value>
+  </data>
+  <data name="Description84" xml:space="preserve">
+    <value>消息框对话框的标题。</value>
+  </data>
+  <data name="Description85" xml:space="preserve">
+    <value>要显示在消息框中的文本。</value>
+  </data>
+  <data name="Description86" xml:space="preserve">
+    <value>表示消息框对话框中按下的按钮的字符串。它可以是:Ok,Yes,No或Cancel</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>系统文件夹</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>文件夹路径</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>变量名称</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>变量值</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>结果</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>提示音类型</value>
+  </data>
+  <data name="Description87" xml:space="preserve">
+    <value>文件的路径。如果路径不完整，则在项目文件夹中创建文件。</value>
+  </data>
+  <data name="Description88" xml:space="preserve">
+    <value>要附加到文件中的文本。</value>
+  </data>
+  <data name="Description89" xml:space="preserve">
+    <value>要复制的文件的路径。</value>
+  </data>
+  <data name="Description90" xml:space="preserve">
+    <value>要复制文件的目标路径。</value>
+  </data>
+  <data name="Description91" xml:space="preserve">
+    <value>要创建的目录的完整路径。</value>
+  </data>
+  <data name="Description92" xml:space="preserve">
+    <value>要创建的文件的名称。</value>
+  </data>
+  <data name="Description93" xml:space="preserve">
+    <value>要创建的文件的完整路径。</value>
+  </data>
+  <data name="Description94" xml:space="preserve">
+    <value>要永久删除的文件或目录的路径。</value>
+  </data>
+  <data name="Description95" xml:space="preserve">
+    <value>要移动的文件的路径。</value>
+  </data>
+  <data name="Description96" xml:space="preserve">
+    <value>要移动文件的目标路径。</value>
+  </data>
+  <data name="Description97" xml:space="preserve">
+    <value>要检查的完整路径。</value>
+  </data>
+  <data name="Description98" xml:space="preserve">
+    <value>声明是否找到文档或文件。</value>
+  </data>
+  <data name="Description99" xml:space="preserve">
+    <value>要读取的文件的路径。</value>
+  </data>
+  <data name="Description100" xml:space="preserve">
+    <value>从存储在字符串变量中的文件中提取的文本。</value>
+  </data>
+  <data name="Description101" xml:space="preserve">
+    <value>要写入的文件的路径。</value>
+  </data>
+  <data name="Description102" xml:space="preserve">
+    <value>要写入文件的文本。</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>凭据名称</value>
+  </data>
+  <data name="Description103" xml:space="preserve">
+    <value> 系统中获取的凭据名称</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>超时时间(毫秒)</value>
+  </data>
+  <data name="Description104" xml:space="preserve">
+    <value> 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）</value>
+  </data>
+  <data name="Description105" xml:space="preserve">
+    <value> 检索到的凭证的安全密码</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="Description106" xml:space="preserve">
+    <value> 检索到的凭证的用户名</value>
+  </data>
+  <data name="Description107" xml:space="preserve">
+    <value> 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）,默认值为30000毫秒（30秒）</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>错误继续执行</value>
+  </data>
+  <data name="Description108" xml:space="preserve">
+    <value> 指定即使活动引发错误, 自动化是否仍应继续</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>凭证选项</value>
+  </data>
+  <data name="Description109" xml:space="preserve">
+    <value> 设置凭证的用户名</value>
+  </data>
+  <data name="Description110" xml:space="preserve">
+    <value> 设置凭证的密码</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>凭证名称</value>
+  </data>
+  <data name="Description111" xml:space="preserve">
+    <value> 要更新的凭据名称</value>
+  </data>
+  <data name="Description112" xml:space="preserve">
+    <value>要执行的PowerShell命令。</value>
+  </data>
+  <data name="Description113" xml:space="preserve">
+    <value>传递给用于执行命令的管道的编写器的PSObjects的集合。可以是另一个InvokePowerShell活动的输出。</value>
+  </data>
+  <data name="Description114" xml:space="preserve">
+    <value>命令执行时返回的一组类型参数objets。可以用于管道几个InvokePowerShell活动。</value>
+  </data>
+  <data name="Description115" xml:space="preserve">
+    <value>工作流文件路径，必须用双引号括起来</value>
+  </data>
+</root>

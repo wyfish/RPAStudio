@@ -29,12 +29,12 @@ namespace RPA.Core.Activities.DialogActivity
 
         [Category("Input")]
         [RequiredArgument]
-        [Description("这表示HTML文件的完整路径或外部URL。")]
+        [Localize.LocalizedDescription("Description78")] //这表示HTML文件的完整路径或外部URL。 //This represents the full path or external URL of the HTML file. //これは、HTMLファイルの完全パスまたは外部URLを表します。
         [DisplayNameAttribute("URL")]
         public InArgument<string> URL { get; set; }
 
-        [Category("输出")]
-        [Description("提供的HTML页面返回的字符串。")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description79")] //提供的HTML页面返回的字符串。 //The string returned by the provided HTML page. //指定されたHTMLページによって返される文字列。
         [DisplayNameAttribute("Result")]
         public OutArgument<string> ResultValue { get; set; }
 

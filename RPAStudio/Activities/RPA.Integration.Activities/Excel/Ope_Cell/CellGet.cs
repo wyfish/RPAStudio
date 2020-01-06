@@ -21,7 +21,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Category("单元格选项")]
         [OverloadGroup("CellColAndRow")]
         [RequiredArgument]
-        [DisplayName("行")]
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow
         {
@@ -39,7 +39,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Category("单元格选项")]
         [OverloadGroup("CellColAndRow")]
         [RequiredArgument]
-        [DisplayName("列")]
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn
         {
@@ -65,7 +65,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Category("工作表选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         [Description("为空代表当前活动工作表")]
         public InArgument<string> SheetName
@@ -75,9 +75,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
-        [DisplayName("单元格内容")]
+        [Localize.LocalizedDisplayName("DisplayName19")] //单元格内容 //Cell content //セルコンテンツ
         [Browsable(true)]
         public OutArgument<object> CellContent
         {

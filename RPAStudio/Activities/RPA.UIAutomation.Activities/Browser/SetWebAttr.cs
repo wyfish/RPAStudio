@@ -11,46 +11,46 @@ namespace RPA.UIAutomation.Activities.Browser
     [Designer(typeof(SetWebAttrDesigner))]
     public sealed class SetWebAttr : CodeActivity
     {
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("公共")]
-        [DisplayName("延迟时间(结束)")]
-        [Description("执行活动后的延迟时间(以毫秒为单位),默认时间为300毫秒")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName17")] //延迟时间(结束) //Delay time (end) //遅延時間（終了）
+        [Localize.LocalizedDescription("Description30")] //执行活动后的延迟时间(以毫秒为单位),默认时间为300毫秒 //The delay in milliseconds after the activity is executed. The default time is 300 milliseconds. //アクティビティが実行された後のミリ秒単位の遅延デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayAfter { get; set; }
 
-        [Category("公共")]
-        [DisplayName("延迟时间(开始)")]
-        [Description("活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是200毫秒。")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName18")] //延迟时间(开始) //Delay time (start) //遅延時間（開始）
+        [Localize.LocalizedDescription("Description31")] //活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是200毫秒。 //The delay (in milliseconds) before the activity begins any operation, the default amount of time is 200 milliseconds. //アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は200ミリ秒です。
         public InArgument<Int32> DelayBefore { get; set; }
 
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("UI对象")]
-        [DisplayName("超时时间")]
-        [Description("指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [Localize.LocalizedDisplayName("DisplayName12")] //超时时间 //overtime time //タイムアウト
+        [Localize.LocalizedDescription("Description15")] //指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です
         public InArgument<Int32> TimeoutMS { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
         InArgument<string> _Attribute;
-        [Category("输入")]
-        [DisplayName("HTML属性")]
-        [Description("要更改的HTML属性的名称")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName26")] //HTML属性 //HTML attribute //HTML属性
+        [Localize.LocalizedDescription("Description32")] //要更改的HTML属性的名称 //The name of the HTML attribute to change //変更するHTML属性の名前
         [RequiredArgument]
         [Browsable(true)]
         public InArgument<string> Attribute
@@ -66,10 +66,10 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
         InArgument<string> _Value;
-        [Category("输入")]
-        [DisplayName("值")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName27")] //值 //value //価値
         [RequiredArgument]
-        [Description("要设置为指定属性的值。仅支持字符串变量")]
+        [Localize.LocalizedDescription("Description33")] //要设置为指定属性的值。仅支持字符串变量 //The value to be set to the specified property.  Only string variables are supported //指定したプロパティに設定する値。 文字列変数のみがサポートされています
         [Browsable(true)]
         public InArgument<string> Value
         {

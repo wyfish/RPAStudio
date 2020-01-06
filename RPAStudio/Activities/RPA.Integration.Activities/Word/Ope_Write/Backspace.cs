@@ -14,8 +14,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<Int32> _BackCounts = 1;
-        [Category("选项")]
-        [DisplayName("退格次数")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName127")] //退格次数 //Backspace //バックスペース
         [Browsable(true)]
         public InArgument<Int32> BackCounts
         {

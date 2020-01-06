@@ -17,8 +17,8 @@ namespace RPA.Integration.Activities.Mail
     public sealed class SaveOutlookAttachementsActivity : AsyncCodeActivity
     {
         [Category("Input")]
-        [DisplayName("保存路径")]
-        [Description("附件的保存路径")]
+        [Localize.LocalizedDisplayName("DisplayName106")] //保存路径 //Save path //保存パス
+        [Localize.LocalizedDescription("Description69")] //附件的保存路径 //Attachment path //添付パス
         public InArgument<string> FolderPath
         {
             get;
@@ -26,8 +26,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("邮件对象")]
-        [Description("指定邮件对象")]
+        [Localize.LocalizedDisplayName("DisplayName95")] //邮件对象 //Mail object //メールオブジェクト
+        [Localize.LocalizedDescription("Description61")] //指定邮件对象 //Specify mail object //メールオブジェクトを指定する
         [RequiredArgument]
         public InArgument<MailMessage> Message
         {
@@ -36,8 +36,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Output")]
-        [DisplayName("附件列表")]
-        [Description("输出附件列表")]
+        [Localize.LocalizedDisplayName("DisplayName82")] //附件列表 //Attachment list //添付リスト
+        [Localize.LocalizedDescription("Description70")] //输出附件列表 //Output attachment list //出力添付リスト
         public OutArgument<IEnumerable<string>> Attachments
         {
             get;
@@ -45,8 +45,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("过滤器")]
-        [Description("正则表达式过滤器，只有符合过滤条件的附件名才会被保存")]
+        [Localize.LocalizedDisplayName("DisplayName101")] //过滤器 //filter //フィルター
+        [Localize.LocalizedDescription("Description71")] //正则表达式过滤器，只有符合过滤条件的附件名才会被保存 //Regular expression filter, only attachment names that match the filter will be saved //正規表現フィルター、フィルターに一致する添付ファイル名のみが保存されます
         [DefaultValue(null)]
         public InArgument<string> Filter
         {

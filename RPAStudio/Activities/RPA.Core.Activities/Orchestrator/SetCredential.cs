@@ -28,10 +28,10 @@ namespace RPA.Core.Activities.OrchestratorActivity
         public string icoPath { get { return "pack://application:,,,/RPA.Core.Activities;Component/Resources/Orchestrator/Credential.png"; } }
 
         public InArgument<Int32> _TimeoutMS = 30000;
-        [Category("选项")]
-        [DisplayName("超时时间(毫秒)")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName49")] //超时时间(毫秒) //Timeout (ms) //タイムアウト（ミリ秒）
         [Browsable(true)]
-        [Description(" 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）,默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedDescription("Description107")] // 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）,默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised. The default value is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定しますデフォルト値は30000ミリ秒（30秒）です
         public InArgument<Int32> TimeoutMS
         {
             get
@@ -44,43 +44,43 @@ namespace RPA.Core.Activities.OrchestratorActivity
             }
         }
 
-        [Category("选项")]
-        [DisplayName("错误继续执行")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName51")] //错误继续执行 //Error continues to execute //エラーは引き続き実行されます
         [Browsable(true)]
-        [Description(" 指定即使活动引发错误, 自动化是否仍应继续")]
+        [Localize.LocalizedDescription("Description108")] // 指定即使活动引发错误, 自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> errorContinue
         {
             get;
             set;
         }
 
-        [Category("凭证选项")]
+        [Localize.LocalizedCategory("Category10")] //凭证选项 //Credential option //資格情報オプション
         [RequiredArgument]
-        [DisplayName("用户名")]
+        [Localize.LocalizedDisplayName("DisplayName50")] //用户名 //username //ユーザー名
         [Browsable(true)]
-        [Description(" 设置凭证的用户名")]
+        [Localize.LocalizedDescription("Description109")] // 设置凭证的用户名 //Set the username of the credential //資格情報のユーザー名を設定します
         public InArgument<string> UserName
         {
             get;
             set;
         }
 
-        [Category("凭证选项")]
+        [Localize.LocalizedCategory("Category10")] //凭证选项 //Credential option //資格情報オプション
         [RequiredArgument]
-        [DisplayName("密码")]
+        [Localize.LocalizedDisplayName("DisplayName45")] //密码 //password //パスワード
         [Browsable(true)]
-        [Description(" 设置凭证的密码")]
+        [Localize.LocalizedDescription("Description110")] // 设置凭证的密码 //Set the password for the credential //資格情報のパスワードを設定します
         public InArgument<SecureString> PassWord
         {
             get;
             set;
         }
 
-        [Category("凭证选项")]
+        [Localize.LocalizedCategory("Category10")] //凭证选项 //Credential option //資格情報オプション
         [RequiredArgument]
-        [DisplayName("凭证名称")]
+        [Localize.LocalizedDisplayName("DisplayName52")] //凭证名称 //Credential name //資格情報名
         [Browsable(true)]
-        [Description(" 要更新的凭据名称")]
+        [Localize.LocalizedDescription("Description111")] // 要更新的凭据名称 //The name of the credential to update //更新する資格情報の名前
         public InArgument<string> CredentialName
         {
             get;

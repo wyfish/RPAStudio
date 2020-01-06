@@ -27,76 +27,76 @@ namespace RPA.Integration.Activities.Mail
         }
 
 
-        [Category("登录")]
+        [Localize.LocalizedCategory("Category16")] //登录 //Log in //ログイン
         [RequiredArgument]
-        [DisplayName("邮件账户")]
-        [Description("用于发送邮件的电子邮件帐户")]
+        [Localize.LocalizedDisplayName("DisplayName64")] //邮件账户 //Mail account //メールアカウント
+        [Localize.LocalizedDescription("Description21")] //用于发送邮件的电子邮件帐户 //Email account used to send mail //メールの送信に使用されるメールアカウント
         public InArgument<string> Email { get; set; }
-        [Category("登录")]
+        [Localize.LocalizedCategory("Category16")] //登录 //Log in //ログイン
         [RequiredArgument]
-        [DisplayName("密码")]
-        [Description("用于发送邮件的电子邮件帐户的密码")]
+        [Localize.LocalizedDisplayName("DisplayName57")] //密码 //password //パスワード
+        [Localize.LocalizedDescription("Description22")] //用于发送邮件的电子邮件帐户的密码 //The password for the email account used to send the message //メッセージの送信に使用される電子メールアカウントのパスワード
         public InArgument<string> Password { get; set; }
 
 
-        [Category("主机")]
+        [Localize.LocalizedCategory("DisplayName54")] //主机 //Host //ホスト
         [RequiredArgument]
-        [DisplayName("服务器")]
-        [Description("使用的电子邮件服务器主机")]
+        [Localize.LocalizedDisplayName("Category13")] //服务器 //server //サーバー
+        [Localize.LocalizedDescription("Description23")] //使用的电子邮件服务器主机 //Email server host used //使用されているメールサーバーホスト
         public InArgument<string> Server { get; set; }
-        [Category("主机")]
-        [DisplayName("端口")]
-        [Description("电子邮件将通过的端口")]
+        [Localize.LocalizedCategory("DisplayName54")] //主机 //Host //ホスト
+        [Localize.LocalizedDisplayName("DisplayName55")] //端口 //port //港
+        [Localize.LocalizedDescription("Description24")] //电子邮件将通过的端口 //The port that the email will pass through //電子メールが通過するポート
         public InArgument<Int32> Port { get; set; }
 
 
-        [Category("寄件人")]
-        [DisplayName("名称")]
-        [Description("发件人的显示名称")]
+        [Localize.LocalizedCategory("Category18")] //寄件人 //Sender //送信者
+        [Localize.LocalizedDisplayName("DisplayName83")] //名称 //Name //お名前
+        [Localize.LocalizedDescription("Description48")] //发件人的显示名称 //Sender's display name //送信者の表示名
         public InArgument<string> Name { get; set; }
-        [Category("寄件人")]
-        [DisplayName("发件人")]
-        [Description("发件人的电子邮件地址")]
+        [Localize.LocalizedCategory("Category18")] //寄件人 //Sender //送信者
+        [Localize.LocalizedDisplayName("DisplayName84")] //发件人 //Sender //送信者
+        [Localize.LocalizedDescription("Description49")] //发件人的电子邮件地址 //Sender's email address //送信者のメールアドレス
         public InArgument<string> From { get; set; }
 
 
-        [Category("收件人")]
+        [Localize.LocalizedCategory("Category19")] //收件人 //Recipient //受取人
         [RequiredArgument]
-        [DisplayName("收件人")]
-        [Description("电子邮件的主要收件人")]
+        [Localize.LocalizedDisplayName("Category19")] //收件人 //Recipient //受取人
+        [Localize.LocalizedDescription("Description50")] //电子邮件的主要收件人 //Primary recipient of the email //電子メールの主要な受信者
         public InArgument<string[]> Receivers_To { get; set; }
-        [Category("收件人")]
-        [DisplayName("抄送")]
-        [Description("电子邮件的次要收件人")]
+        [Localize.LocalizedCategory("Category19")] //收件人 //Recipient //受取人
+        [Localize.LocalizedDisplayName("DisplayName85")] //抄送 //Cc //Cc
+        [Localize.LocalizedDescription("Description51")] //电子邮件的次要收件人 //Secondary recipient of the email //メールの二次受信者
         public InArgument<string[]> Receivers_Cc { get; set; }
-        [Category("收件人")]
-        [DisplayName("密件抄送")]
-        [Description("电子邮件的隐藏收件人")]
+        [Localize.LocalizedCategory("Category19")] //收件人 //Recipient //受取人
+        [Localize.LocalizedDisplayName("DisplayName86")] //密件抄送 //BCC //Bcc
+        [Localize.LocalizedDescription("Description52")] //电子邮件的隐藏收件人 //Hidden recipient of email //メールの隠された受信者
         public InArgument<string[]> Receivers_Bcc { get; set; }
 
 
-        [Category("电子邮件")]
-        [DisplayName("主题")]
-        [Description("电子邮件的主题")]
+        [Localize.LocalizedCategory("Category20")] //电子邮件 //e-mail //メール
+        [Localize.LocalizedDisplayName("DisplayName87")] //主题 //Theme //テーマ
+        [Localize.LocalizedDescription("Description53")] //电子邮件的主题 //Email subject //メールの件名
         public InArgument<string> MailTopic { get; set; }
-        [Category("电子邮件")]
-        [DisplayName("正文")]
-        [Description("电子邮件的正文")]
+        [Localize.LocalizedCategory("Category20")] //电子邮件 //e-mail //メール
+        [Localize.LocalizedDisplayName("DisplayName88")] //正文 //Text //本体
+        [Localize.LocalizedDescription("Description54")] //电子邮件的正文 //The body of the email //メールの本文
         public InArgument<string> MailBody { get; set; }
 
 
-        [Category("选项")]
-        [DisplayName("安全连接")]
-        [Description("指定用于连接的SSL和/或TLS加密")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName66")] //安全连接 //Secure connection //安全な接続
+        [Localize.LocalizedDescription("Description26")] //指定用于连接的SSL和/或TLS加密 //Specify SSL and/or TLS encryption for the connection //接続にSSLおよび/またはTLS暗号化を指定する
         public SecureSocketOptions SecureConnection { get; set; }
-        [Category("选项")]
-        [DisplayName("优先级")]
-        [Description("邮件的优先级标志")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName89")] //优先级 //Priority //優先順位
+        [Localize.LocalizedDescription("Description55")] //邮件的优先级标志 //Mail priority flag //メール優先フラグ
         public MessagePriority msgProperty { get; set; }
         public bool _IsBodyHtml = true;
-        [Category("选项")]
-        [DisplayName("HTML格式")]
-        [Description(" 指定邮件正文是否以HTML格式编写")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName90")] //HTML格式 //HTML format //HTML形式
+        [Localize.LocalizedDescription("Description56")] // 指定邮件正文是否以HTML格式编写 //Specify whether the body of the message is written in HTML format //メッセージの本文をHTML形式で記述するかどうかを指定します
         public bool IsBodyHtml
         {
             get
@@ -110,15 +110,15 @@ namespace RPA.Integration.Activities.Mail
         }
 
 
-        [Category("附件")]
-        [DisplayName("文件")]
-        [Description("要添加到电子邮件中的附件")]
+        [Localize.LocalizedCategory("Category21")] //附件 //Attachments //添付ファイル
+        [Localize.LocalizedDisplayName("DisplayName91")] //文件 //File //ファイル
+        [Localize.LocalizedDescription("Description57")] //要添加到电子邮件中的附件 //Attachments to add to the email //メールに追加する添付ファイル
         public InArgument<string[]> AttachFiles { get; set; }
 
 
-        [Category("转发")]
-        [DisplayName("消息体")]
-        [Description("要转发的消息,该字段仅支持MailMessage对象")]
+        [Localize.LocalizedCategory("Category22")] //转发 //Forward //進む
+        [Localize.LocalizedDisplayName("DisplayName92")] //消息体 //Message body //メッセージ本文
+        [Localize.LocalizedDescription("Description58")] //要转发的消息,该字段仅支持MailMessage对象 //For messages to be forwarded, this field only supports MailMessage objects. //転送されるメッセージの場合、このフィールドはMailMessageオブジェクトのみをサポートします。
         public InArgument<MimeMessage> TransMailMessage { get; set; }
 
         [Browsable(false)]

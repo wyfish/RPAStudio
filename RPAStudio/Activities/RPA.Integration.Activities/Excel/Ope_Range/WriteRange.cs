@@ -20,8 +20,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> SheetName
         {
@@ -30,7 +30,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         [Category("单元格起始")]
-        [DisplayName("行")]
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
@@ -38,7 +38,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Category("单元格起始")]
-        [DisplayName("列")]
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -55,7 +55,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get; set;
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [DisplayName("表头")]
         [Browsable(true)]
         public bool isTitle
@@ -63,11 +63,11 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get;set;
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
         [DisplayName("DataTable")]
         [Browsable(true)]
-        [Description("写入数据的DataTable变量名")]
+        [Localize.LocalizedDescription("Description20")] //写入数据的DataTable变量名 //DataTable variable name to write data to //データを書き込むDataTable変数名
         public InArgument<System.Data.DataTable> DataTable
         {
             get;

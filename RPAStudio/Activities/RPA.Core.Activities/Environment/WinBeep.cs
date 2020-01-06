@@ -23,8 +23,8 @@ namespace RPA.Core.Activities.EnvironmentActivity
             系统提示
         }
 
-        [Category("选项")]
-        [DisplayName("提示音类型")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName47")] //提示音类型 //Beep type //ビープタイプ
         [Browsable(true)]
         public BeepTypes BeepType
         {

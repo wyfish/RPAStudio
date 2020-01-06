@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,732 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Category1" xml:space="preserve">
+    <value>Connection configuration</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>The connection string used to establish a database connection</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>Connection string</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>The name of the database provider used to access the database</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>Program name</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>Database Connectivity</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>Variable for saving database connections (DatabaseConnection only)</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>Database connection to close (DatabaseConnection variable)</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>overtime time</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>Specify browser response timeout (ms)</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>Error continues to execute</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>Whether an error occurs or not</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>Existing database connection</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>Insert the DataTable variable in the table.  The name and description of the DataTable column must match the name and description in the database table</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>The SQL table in which to insert data</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>Table Name</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>Results of the</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>Store the number of affected rows in the Int32 variable</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>Command type</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>Specify how to interpret the command string</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>Executed SQL command statement</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>parameter</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>For UPDATE, INSERT, and DELETE statements, the return value is the number of rows affected by the command.  For all other types of statements, the return value is -1</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>Store the output of the SQL query in the DataTable variable</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>Specifies whether database operations in this activity should be wrapped in a database transaction</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>File path</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>Separator</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>Character Encoding</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>Column name</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>Row</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>Worksheet name</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>Cell content</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>The delay in milliseconds after the activity is performed.  The default time is 3000 milliseconds.</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>The time (in milliseconds) before the deferred activity begins any operation.  The default time is 0 milliseconds.</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>New/Open Document Options</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>Whether to create a new document</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>Whether the process is visible</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>Save option</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>Whether the program exits</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>Paste option</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>Paste the starting cell of the cell range</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>Paste the work area name of the cell area</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>Copy option</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value>Store a DataTable that reads data</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value>DataTable variable name to write data to</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>Row operation</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>Row selection</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>Line number / column number (start)</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>Line number / column number (end)</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>Cell fill color</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>Font setting</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>Colour</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>Bottom line</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>Row height column width</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>Row height</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>Column width</value>
+  </data>
+  <data name="Category12" xml:space="preserve">
+    <value>frame</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>Border selection</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>Worksheet order</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>Function option</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>Worksheet new name</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>VBA name</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>return value</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>path</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>does it exist</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>Local path</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>Create folder</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>Include subfolders</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>cover</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>Enumerate file</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>FTP path</value>
+  </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>create</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>server</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>port</value>
+  </data>
+  <data name="Category14" xml:space="preserve">
+    <value>Credential</value>
+  </data>
+  <data name="DisplayName56" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="DisplayName57" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="DisplayName58" xml:space="preserve">
+    <value>Anonymous login</value>
+  </data>
+  <data name="Category15" xml:space="preserve">
+    <value>Security Settings</value>
+  </data>
+  <data name="DisplayName59" xml:space="preserve">
+    <value>FTPS mode</value>
+  </data>
+  <data name="DisplayName60" xml:space="preserve">
+    <value>Use SFTP</value>
+  </data>
+  <data name="DisplayName61" xml:space="preserve">
+    <value>Client certificate path</value>
+  </data>
+  <data name="DisplayName62" xml:space="preserve">
+    <value>Client certificate password</value>
+  </data>
+  <data name="DisplayName63" xml:space="preserve">
+    <value>Accept all certificates</value>
+  </data>
+  <data name="Category16" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="DisplayName64" xml:space="preserve">
+    <value>Mail account</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value>Email account used to send mail</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>The password for the email account used to send the message</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>Email server host used</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>The port that the email will pass through</value>
+  </data>
+  <data name="DisplayName65" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>Retrieve the message's mail folder</value>
+  </data>
+  <data name="DisplayName66" xml:space="preserve">
+    <value>Secure connection</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>Specify SSL and/or TLS encryption for the connection</value>
+  </data>
+  <data name="DisplayName67" xml:space="preserve">
+    <value>Retrieve the number of messages</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>Number of messages retrieved from the top of the list</value>
+  </data>
+  <data name="DisplayName68" xml:space="preserve">
+    <value>Tag message deletion</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>Specifies whether the read message should be marked for deletion</value>
+  </data>
+  <data name="DisplayName69" xml:space="preserve">
+    <value>Mark as read</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>Specifies whether the retrieved message is marked as read</value>
+  </data>
+  <data name="DisplayName70" xml:space="preserve">
+    <value>Retrieve only unread messages</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>Specifies whether to retrieve only unread messages</value>
+  </data>
+  <data name="DisplayName71" xml:space="preserve">
+    <value>Retrieve all unread messages</value>
+  </data>
+  <data name="Category17" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="DisplayName72" xml:space="preserve">
+    <value>Subject keyword</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>Filter the corresponding message based on the subject of the message</value>
+  </data>
+  <data name="DisplayName73" xml:space="preserve">
+    <value>Sender keyword</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>Filter the corresponding message based on the sender's address</value>
+  </data>
+  <data name="DisplayName74" xml:space="preserve">
+    <value>Content keyword</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>Filter the corresponding message based on the message's hypertext content</value>
+  </data>
+  <data name="DisplayName75" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>Use the retrieved message as a collection of MailMessage objects</value>
+  </data>
+  <data name="DisplayName76" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>The message used to extract the image, this field only supports the MimeMessage variable.</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>Store the mail in the mail to a local directory. If it is empty, it will not be saved.</value>
+  </data>
+  <data name="DisplayName77" xml:space="preserve">
+    <value>Picture path list</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>Picture local save path list</value>
+  </data>
+  <data name="DisplayName78" xml:space="preserve">
+    <value>Image resource list</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>Save image information, divided into address and base64 code</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>Specifies whether messages should be sent using SSL</value>
+  </data>
+  <data name="DisplayName79" xml:space="preserve">
+    <value>Target folder</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>The mail folder to which you want to move the message</value>
+  </data>
+  <data name="DisplayName80" xml:space="preserve">
+    <value>Source folder</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>A folder where you can find mail messages</value>
+  </data>
+  <data name="DisplayName81" xml:space="preserve">
+    <value>Mail message</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>MailMessage object to move</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>To save the full path of the MailMessage object</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>The MailMessage object to save</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>The full path to save the MimeMessage attachment</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>MimeMessage attachment to save</value>
+  </data>
+  <data name="DisplayName82" xml:space="preserve">
+    <value>Attachment list</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>Retrieved attachment</value>
+  </data>
+  <data name="Category18" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>Sender's display name</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>Sender's email address</value>
+  </data>
+  <data name="Category19" xml:space="preserve">
+    <value>Recipient</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>Primary recipient of the email</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>Cc</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>Secondary recipient of the email</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>BCC</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>Hidden recipient of email</value>
+  </data>
+  <data name="Category20" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>Email subject</value>
+  </data>
+  <data name="DisplayName88" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>The body of the email</value>
+  </data>
+  <data name="DisplayName89" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>Mail priority flag</value>
+  </data>
+  <data name="DisplayName90" xml:space="preserve">
+    <value>HTML format</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>Specify whether the body of the message is written in HTML format</value>
+  </data>
+  <data name="Category21" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="DisplayName91" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>Attachments to add to the email</value>
+  </data>
+  <data name="Category22" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="DisplayName92" xml:space="preserve">
+    <value>Message body</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>For messages to be forwarded, this field only supports MailMessage objects.</value>
+  </data>
+  <data name="DisplayName93" xml:space="preserve">
+    <value>Archive path (.pst)</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>Outlook data file save path</value>
+  </data>
+  <data name="DisplayName94" xml:space="preserve">
+    <value>To be archived account</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>Outlook account name</value>
+  </data>
+  <data name="DisplayName95" xml:space="preserve">
+    <value>Mail object</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>Specify mail object</value>
+  </data>
+  <data name="DisplayName96" xml:space="preserve">
+    <value>Timeout (ms)</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds)</value>
+  </data>
+  <data name="DisplayName97" xml:space="preserve">
+    <value>Get the number of messages</value>
+  </data>
+  <data name="DisplayName98" xml:space="preserve">
+    <value>Output mailing list</value>
+  </data>
+  <data name="DisplayName99" xml:space="preserve">
+    <value>Mail directory</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>From which mail directory to get mail</value>
+  </data>
+  <data name="DisplayName100" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="DisplayName101" xml:space="preserve">
+    <value>filter</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>Only messages that match the filter will be retrieved.</value>
+  </data>
+  <data name="DisplayName102" xml:space="preserve">
+    <value>Get attachment</value>
+  </data>
+  <data name="DisplayName103" xml:space="preserve">
+    <value>Get only unread messages</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>Whether to get only unread mail, check by default</value>
+  </data>
+  <data name="DisplayName104" xml:space="preserve">
+    <value>Mark as read</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>Whether to automatically mark received messages as read</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>Outlook mail directory</value>
+  </data>
+  <data name="DisplayName105" xml:space="preserve">
+    <value>Reply to everyone</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>If you don't check it, you will only reply to the sender. If you check it, you will not only give the sender, but also reply to all the CCs.</value>
+  </data>
+  <data name="DisplayName106" xml:space="preserve">
+    <value>Save path</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>Attachment path</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>Output attachment list</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>Regular expression filter, only attachment names that match the filter will be saved</value>
+  </data>
+  <data name="DisplayName107" xml:space="preserve">
+    <value>Secret delivery</value>
+  </data>
+  <data name="DisplayName108" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>The expected display name that the messaging system must support in order to use</value>
+  </data>
+  <data name="DisplayName109" xml:space="preserve">
+    <value>Whether to save as a draft</value>
+  </data>
+  <data name="DisplayName110" xml:space="preserve">
+    <value>Cursor moving distance</value>
+  </data>
+  <data name="DisplayName111" xml:space="preserve">
+    <value>Whether to select</value>
+  </data>
+  <data name="Category23" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="DisplayName112" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="DisplayName113" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="DisplayName114" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="DisplayName115" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="DisplayName116" xml:space="preserve">
+    <value>beginning</value>
+  </data>
+  <data name="DisplayName117" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="DisplayName118" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+  <data name="DisplayName119" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="DisplayName120" xml:space="preserve">
+    <value>Font color</value>
+  </data>
+  <data name="DisplayName121" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="DisplayName122" xml:space="preserve">
+    <value>Font shadow</value>
+  </data>
+  <data name="Category24" xml:space="preserve">
+    <value>Page attribute</value>
+  </data>
+  <data name="Category25" xml:space="preserve">
+    <value>Page margin</value>
+  </data>
+  <data name="DisplayName123" xml:space="preserve">
+    <value>Left margin</value>
+  </data>
+  <data name="DisplayName124" xml:space="preserve">
+    <value>Right margin</value>
+  </data>
+  <data name="DisplayName125" xml:space="preserve">
+    <value>Top margin</value>
+  </data>
+  <data name="DisplayName126" xml:space="preserve">
+    <value>Bottom margin</value>
+  </data>
+  <data name="DisplayName127" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="DisplayName128" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="DisplayName129" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="DisplayName130" xml:space="preserve">
+    <value>Document content</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>Get all the content text in a Word document</value>
+  </data>
+  <data name="Category26" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="DisplayName131" xml:space="preserve">
+    <value>Image link</value>
+  </data>
+  <data name="Category27" xml:space="preserve">
+    <value>Bookmark</value>
+  </data>
+  <data name="DisplayName132" xml:space="preserve">
+    <value>Bookmark name</value>
+  </data>
+  <data name="Category28" xml:space="preserve">
+    <value>Hyperlinks</value>
+  </data>
+  <data name="DisplayName133" xml:space="preserve">
+    <value>Hyperlink name</value>
+  </data>
+  <data name="DisplayName134" xml:space="preserve">
+    <value>Hyperlink label</value>
+  </data>
+  <data name="DisplayName135" xml:space="preserve">
+    <value>Hyperlink address</value>
+  </data>
+  <data name="DisplayName136" xml:space="preserve">
+    <value>Pagination/line feeds</value>
+  </data>
+  <data name="DisplayName137" xml:space="preserve">
+    <value>Pagination</value>
+  </data>
+  <data name="DisplayName138" xml:space="preserve">
+    <value>Wrap</value>
+  </data>
+  <data name="DisplayName139" xml:space="preserve">
+    <value>Text content</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>The number of lines written before writing text</value>
+  </data>
 </root>

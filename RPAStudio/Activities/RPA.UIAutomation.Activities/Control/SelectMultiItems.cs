@@ -17,45 +17,45 @@ namespace RPA.UIAutomation.Activities.Control
         [Browsable(false)]
         public string _DisplayName { get { return "Select Multiltems"; } }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("公共")]
-        [DisplayName("延迟时间(结束)")]
-        [Description("执行活动后的延迟时间(以毫秒为单位),默认时间为300毫秒")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName17")] //延迟时间(结束) //Delay time (end) //遅延時間（終了）
+        [Localize.LocalizedDescription("Description30")] //执行活动后的延迟时间(以毫秒为单位),默认时间为300毫秒 //The delay in milliseconds after the activity is executed. The default time is 300 milliseconds. //アクティビティが実行された後のミリ秒単位の遅延デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayAfter { get; set; }
 
-        [Category("公共")]
-        [DisplayName("延迟时间(开始)")]
-        [Description("活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是300毫秒。")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName18")] //延迟时间(开始) //Delay time (start) //遅延時間（開始）
+        [Localize.LocalizedDescription("Description34")] //活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是300毫秒。 //The delay (in milliseconds) before the activity begins any operation, the default amount of time is 300 milliseconds. //アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayBefore { get; set; }
 
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G2")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("添加到现有选择")]
+        [Localize.LocalizedDisplayName("DisplayName32")] //添加到现有选择 //Add to existing selection //既存の選択に追加
         public bool AddToSelection { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("项目组")]
+        [Localize.LocalizedDisplayName("DisplayName33")] //项目组 //Project Team //プロジェクトチーム
         public InArgument<string[]> MultipleItems { get; set; }
 
         [Browsable(false)]

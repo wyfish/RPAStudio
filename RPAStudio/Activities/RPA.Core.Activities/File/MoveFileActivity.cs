@@ -17,12 +17,12 @@ namespace RPA.Core.Activities.FileActivity
         }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description1")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [RequiredArgument]
         [Category("From")]
-        [Description("要移动的文件的路径。")]
+        [Localize.LocalizedDescription("Description95")] //要移动的文件的路径。 //The path to the file to move. //移動するファイルへのパス。
         public InArgument<string> Path { get; set; }
 
         [Category("Options")]
@@ -30,7 +30,7 @@ namespace RPA.Core.Activities.FileActivity
 
         [RequiredArgument]
         [Category("To")]
-        [Description("要移动文件的目标路径。")]
+        [Localize.LocalizedDescription("Description96")] //要移动文件的目标路径。 //The target path to move the file. //ファイルを移動するターゲットパス。
         public InArgument<string> Destination { get; set; }
 
         [Browsable(false)]

@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="clr-namespace:System.Windows.Controls.Primitives;assembly=PresentationFramework"
     xmlns:controls="clr-namespace:Plugins.Shared.Library.Controls"
+    xmlns:lcz="clr-namespace:Plugins.Shared.Library.Localization"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     >
     <Style TargetType="{x:Type controls:CollapsableActivity}">
@@ -21,7 +22,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Grid.Style>
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Foreground="#FF6D6D6D">双击以查看</TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Foreground="#FF6D6D6D" Text="{x:Static lcz:Strings.DubleClickToViewText}"/>
                         </Grid>
                         <Grid>
                             <Grid.Style>

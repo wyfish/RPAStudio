@@ -40,10 +40,10 @@
   </Group>
   <Group Name="プログラミング" >
     <Group Name="データ収集">
-      <Activity Name="追加" IsSystem="true" TypeOf="AddToCollection" ToolTip="将项添加到指定的集合。"/>
-      <Activity  Name="クリア" IsSystem="true" TypeOf="ClearCollection" ToolTip="清除指定的项集合。" />
-      <Activity  Name="存在" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="指示给定集合中是否存在给定项。" />
-      <Activity  Name="削除" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="从指定集合中移除项。" />
+      <Activity Name="追加" IsSystem="true" TypeOf="AddToCollection" ToolTip="指定されたコレクションにアイテムを追加します。"/>
+      <Activity  Name="クリア" IsSystem="true" TypeOf="ClearCollection" ToolTip="指定されたアイテムコレクションをクリアします。" />
+      <Activity  Name="存在" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="特定のアイテムが特定のコレクションに存在するかどうかを示します。" />
+      <Activity  Name="削除" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="指定されたコレクションからアイテムを削除します。" />
     </Group>
     <Group Name="デバッグ">
       <Activity Name="Write Line" IsSystem="true" TypeOf="WriteLine" />

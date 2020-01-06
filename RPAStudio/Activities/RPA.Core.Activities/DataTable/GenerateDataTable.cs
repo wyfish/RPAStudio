@@ -27,60 +27,60 @@ namespace RPA.Core.Activities.DataTableActivity
             }
         }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("输入")]
-        [Description("指定要转换为表的非结构化数据的来源。该字段仅支持String变量")]
+        [Localize.LocalizedDisplayName("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDescription("Description32")] //指定要转换为表的非结构化数据的来源。该字段仅支持String变量 //Specifies the source of unstructured data to be converted to a table.  This field only supports String variables. //テーブルに変換する非構造化データのソースを指定します。 このフィールドは文字列変数のみをサポートします。
         public InArgument<string> InputString { get; set; }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(false)]
-        [DisplayName("位置")]
-        [Description("如果使用OCR进行抓取，并且选中了“获取单词信息”复选框，则此字段包含IEnumerable<KeyValuePair<Rectangle,String>>具有WordsInfo值的变量")]
+        [Localize.LocalizedDisplayName("DisplayName10")] //位置 //position //場所
+        [Localize.LocalizedDescription("Description33")] //如果使用OCR进行抓取，并且选中了“获取单词信息”复选框，则此字段包含IEnumerable<KeyValuePair<Rectangle,String>>具有WordsInfo值的变量 //If you use OCR for fetching and the Get Word Information check box is selected, this field contains IEnumerable<KeyValuePair<Rectangle,String>> variables with WordsInfo values //フェッチにOCRを使用し、[単語情報の取得]チェックボックスがオンになっている場合、このフィールドにはWordsInfo値を持つIEnumerable <KeyValuePair <Rectangle、String >>変数が含まれます。
         public InArgument<IEnumerable<KeyValuePair<Rectangle, String>>> Positions { get; set; }
 
-        [Category("固定格式选项")]
-        [DisplayName("列宽")]
-        [Description("指定要在表中创建的列的大小。该字段仅支持IEnumerable <Int32>变量。")]
+        [Localize.LocalizedCategory("Category5")] //固定格式选项 //Fixed format option //固定形式オプション
+        [Localize.LocalizedDisplayName("DisplayName11")] //列宽 //Column width //列幅
+        [Localize.LocalizedDescription("Description34")] //指定要在表中创建的列的大小。该字段仅支持IEnumerable <Int32>变量。 //Specifies the size of the column to be created in the table.  This field only supports the IEnumerable <Int32> variable. //テーブルに作成される列のサイズを指定します。 このフィールドは、IEnumerable <Int32>変数のみをサポートします。
         public InArgument<IEnumerable<Int32>> ColumnSizes { get; set; }
 
-        [Category("格式化选项")]
-        [DisplayName("列分隔符")]
-        [Description("指定要用作列分隔符的字符。该字段仅支持String变量")]
+        [Localize.LocalizedCategory("Category6")] //格式化选项 //Formatting options //書式設定オプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //列分隔符 //Column separator //列区切り
+        [Localize.LocalizedDescription("Description35")] //指定要用作列分隔符的字符。该字段仅支持String变量 //Specifies the character to use as the column separator.  This field only supports String variables. //列区切りとして使用する文字を指定します。 このフィールドは文字列変数のみをサポートします。
         public InArgument<string> ColumnSeparators { get; set; }
 
-        [Category("格式化选项")]
-        [DisplayName("行分隔符")]
-        [Description("指定要用作换行符分隔符的字符。该字段仅支持String变量")]
+        [Localize.LocalizedCategory("Category6")] //格式化选项 //Formatting options //書式設定オプション
+        [Localize.LocalizedDisplayName("DisplayName13")] //行分隔符 //Line separator //行区切り
+        [Localize.LocalizedDescription("Description36")] //指定要用作换行符分隔符的字符。该字段仅支持String变量 //Specifies the character to be used as a newline separator.  This field only supports String variables. //改行セパレーターとして使用される文字を指定します。 このフィールドは文字列変数のみをサポートします。
         public InArgument<string> NewLineSeparator { get; set; }
 
-        [Category("格式化选项")]
-        [DisplayName("CSV解析")]
-        [Description("CSV解析")]
+        [Localize.LocalizedCategory("Category6")] //格式化选项 //Formatting options //書式設定オプション
+        [Localize.LocalizedDisplayName("DisplayName14")] //CSV解析 //CSV parsing //CSV解析
+        [Localize.LocalizedDescription("DisplayName14")] //CSV解析 //CSV parsing //CSV解析
         public InArgument<bool> CSVParse { get; set; }
 
 
-        [Category("选项")]
-        [DisplayName("类型自动检测")]
-        [Description("选中后，自动检测列或行类型，无论是String，Int32等。")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName15")] //类型自动检测 //Type automatic detection //タイプ自動検出
+        [Localize.LocalizedDescription("Description37")] //选中后，自动检测列或行类型，无论是String，Int32等。 //When selected, the column or row type is automatically detected, whether it is String, Int32, etc. //選択すると、文字列、Int32など、列または行のタイプが自動的に検出されます。
         public bool AutoDetectTypes { get; set; }
 
-        [Category("选项")]
-        [DisplayName("列标题")]
-        [Description("如果选中，则使用第一个标识的列作为列标题")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName16")] //列标题 //Column heading //列見出し
+        [Localize.LocalizedDescription("Description38")] //如果选中，则使用第一个标识的列作为列标题 //If checked, the first identified column is used as the column header //チェックした場合、最初に識別された列が列ヘッダーとして使用されます
         public bool UseColumnHeader { get; set; }
 
 
-        [Category("选项")]
-        [DisplayName("行标题")]
-        [Description("如果选中，则使用第一个标识的行作为行标题")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName17")] //行标题 //Row header //行ヘッダー
+        [Localize.LocalizedDescription("Description39")] //如果选中，则使用第一个标识的行作为行标题 //If checked, the first identified row is used as the row header //チェックした場合、最初に識別された行が行ヘッダーとして使用されます
         public bool UseRowHeader { get; set; }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [DisplayName("DataTable")]
-        [Description("生成的DataTable变量")]
+        [Localize.LocalizedDescription("Description40")] //生成的DataTable变量 //Generated DataTable variable //生成されたDataTable変数
         public OutArgument<DataTable> DataTable { get; set; }
 
 

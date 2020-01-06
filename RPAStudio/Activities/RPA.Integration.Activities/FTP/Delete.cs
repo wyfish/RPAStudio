@@ -12,8 +12,8 @@ namespace RPA.Integration.Activities.FTP
     public class Delete : ContinuableAsyncCodeActivity
     {
         [RequiredArgument]
-        [Category("输入")]
-        [DisplayName("路径")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName45")] //路径 //path //パス
         public InArgument<string> RemotePath { get; set; }
 
 

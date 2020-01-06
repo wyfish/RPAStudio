@@ -24,40 +24,40 @@ namespace RPA.UIAutomation.Activities.Window
         [Browsable(false)]
         public Window currWindow { get; set; }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("窗口")]
-        [Description("存储窗口的变量。该字段仅接受Window变量")]
+        [Localize.LocalizedDisplayName("DisplayName62")] //窗口 //Window //窓
+        [Localize.LocalizedDescription("Description76")] //存储窗口的变量。该字段仅接受Window变量 //The variable that stores the window.  This field only accepts Window variables //ウィンドウを格納する変数。 このフィールドはウィンドウ変数のみを受け入れます
         public InArgument<Window> ActiveWindow { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("高度")]
-        [Description(" 窗口的新高度，支持正负整数")]
+        [Localize.LocalizedDisplayName("DisplayName64")] //高度 //Height //身長
+        [Localize.LocalizedDescription("Description79")] // 窗口的新高度，支持正负整数 //The new height of the window, supporting positive and negative integers //正および負の整数をサポートするウィンドウの新しい高さ
         public InArgument<Int32> Height { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("宽度")]
-        [Description("窗口的新宽度，支持正负整数")]
+        [Localize.LocalizedDisplayName("DisplayName65")] //宽度 //Width //幅
+        [Localize.LocalizedDescription("Description80")] //窗口的新宽度，支持正负整数 //The new width of the window, supporting positive and negative integers //正および負の整数をサポートするウィンドウの新しい幅
         public InArgument<Int32> Width { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("坐标X")]
-        [Description("窗口的新位置坐标X轴，支持正负整数")]
+        [Localize.LocalizedDisplayName("DisplayName66")] //坐标X //Coordinate X //座標X
+        [Localize.LocalizedDescription("Description81")] //窗口的新位置坐标X轴，支持正负整数 //The new position coordinate of the window is X-axis, supporting positive and negative integers //ウィンドウの新しい位置座標はX軸であり、正および負の整数をサポートします
         public InArgument<Int32> PosX { get; set; }
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("坐标Y")]
-        [Description("窗口的新坐标位置Y轴，支持正负整数")]
+        [Localize.LocalizedDisplayName("DisplayName67")] //坐标Y //Coordinate Y //Y座標
+        [Localize.LocalizedDescription("Description82")] //窗口的新坐标位置Y轴，支持正负整数 //The new coordinate position of the window is Y-axis, supporting positive and negative integers //ウィンドウの新しい座標位置はY軸で、正および負の整数をサポートします
         public InArgument<Int32> PosY { get; set; }
 
         [Browsable(false)]

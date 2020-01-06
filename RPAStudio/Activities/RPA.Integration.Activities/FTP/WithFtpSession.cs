@@ -19,48 +19,48 @@ namespace RPA.Integration.Activities.FTP
         public ActivityAction<IFtpSession> Body { get; set; }
 
         [RequiredArgument]
-        [Category("服务器")]
-        [DisplayName("主机")]
+        [Localize.LocalizedCategory("Category13")] //服务器 //server //サーバー
+        [Localize.LocalizedDisplayName("DisplayName54")] //主机 //Host //ホスト
         public InArgument<string> Host { get; set; }
 
-        [Category("服务器")]
-        [DisplayName("端口")]
+        [Localize.LocalizedCategory("Category13")] //服务器 //server //サーバー
+        [Localize.LocalizedDisplayName("DisplayName55")] //端口 //port //港
         public InArgument<int> Port { get; set; }
 
-        [Category("凭据")]
-        [DisplayName("用户名")]
+        [Localize.LocalizedCategory("Category14")] //凭据 //Credential //クレデンシャル
+        [Localize.LocalizedDisplayName("DisplayName56")] //用户名 //username //ユーザー名
         public InArgument<string> Username { get; set; }
 
-        [Category("凭据")]
-        [DisplayName("密码")]
+        [Localize.LocalizedCategory("Category14")] //凭据 //Credential //クレデンシャル
+        [Localize.LocalizedDisplayName("DisplayName57")] //密码 //password //パスワード
         public InArgument<string> Password { get; set; }
 
         [DefaultValue(false)]
-        [Category("凭据")]
-        [DisplayName("匿名登录")]
+        [Localize.LocalizedCategory("Category14")] //凭据 //Credential //クレデンシャル
+        [Localize.LocalizedDisplayName("DisplayName58")] //匿名登录 //Anonymous login //匿名ログイン
         public bool UseAnonymousLogin { get; set; }
 
         [DefaultValue(FtpsMode.None)]
-        [Category("安全设置")]
-        [DisplayName("FTPS模式")]
+        [Localize.LocalizedCategory("Category15")] //安全设置 //Security Settings //セキュリティ設定
+        [Localize.LocalizedDisplayName("DisplayName59")] //FTPS模式 //FTPS mode //FTPSモード
         public FtpsMode FtpsMode { get; set; }
 
         [DefaultValue(false)]
-        [Category("安全设置")]
-        [DisplayName("使用SFTP")]
+        [Localize.LocalizedCategory("Category15")] //安全设置 //Security Settings //セキュリティ設定
+        [Localize.LocalizedDisplayName("DisplayName60")] //使用SFTP //Use SFTP //SFTPを使用する
         public bool UseSftp { get; set; }
 
-        [Category("安全设置")]
-        [DisplayName("客户端证书路径")]
+        [Localize.LocalizedCategory("Category15")] //安全设置 //Security Settings //セキュリティ設定
+        [Localize.LocalizedDisplayName("DisplayName61")] //客户端证书路径 //Client certificate path //クライアント証明書のパス
         public InArgument<string> ClientCertificatePath { get; set; }
 
-        [Category("安全设置")]
-        [DisplayName("客户端证书密码")]
+        [Localize.LocalizedCategory("Category15")] //安全设置 //Security Settings //セキュリティ設定
+        [Localize.LocalizedDisplayName("DisplayName62")] //客户端证书密码 //Client certificate password //クライアント証明書のパスワード
         public InArgument<string> ClientCertificatePassword { get; set; }
 
         [DefaultValue(false)]
-        [Category("安全设置")]
-        [DisplayName("接受所有证书")]
+        [Localize.LocalizedCategory("Category15")] //安全设置 //Security Settings //セキュリティ設定
+        [Localize.LocalizedDisplayName("DisplayName63")] //接受所有证书 //Accept all certificates //すべての証明書を受け入れます
         public bool AcceptAllCertificates { get; set; }
 
 

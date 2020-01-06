@@ -37,11 +37,11 @@ namespace RPA.Script.Activities.Python
         } = "";
 
         [Category("Input")]
-        [Description("Python脚本代码执行时的工作目录，默认为当前项目目录")]
+        [Localize.LocalizedDescription("Description4")] //Python脚本代码执行时的工作目录，默认为当前项目目录 //The working directory when the Python script code is executed. The default is the current project directory. //Pythonスクリプトコードが実行されるときの作業ディレクトリデフォルトは現在のプロジェクトディレクトリです。
         public InArgument<string> PythonWorkingDirectory { get; set; }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description3")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError
         {
             get;

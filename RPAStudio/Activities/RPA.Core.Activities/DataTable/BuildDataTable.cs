@@ -47,10 +47,10 @@ namespace RPA.Core.Activities.DataTableActivity
         }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
         [DisplayName("DataTable")]
-        [Description("根据行列信息生成的DataTable表")]
+        [Localize.LocalizedDescription("Description25")] //根据行列信息生成的DataTable表 //a DataTable generated from row and column information //行と列の情報から生成されたDataTable
         public OutArgument<DataTable> DataTable { get; set; }
 
 

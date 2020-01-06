@@ -22,8 +22,8 @@ namespace RPA.Integration.Activities.Mail
         private const int DefaultTimeoutMS = 30000;
 
         [Category("Common")]
-        [DisplayName("超时时间(毫秒)")]
-        [Description(" 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedDisplayName("DisplayName96")] //超时时间(毫秒) //Timeout (ms) //タイムアウト（ミリ秒）
+        [Localize.LocalizedDescription("Description62")] // 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です
         public InArgument<int> TimeoutMS
         {
             get;
@@ -31,7 +31,7 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("邮件对象")]
+        [Localize.LocalizedDisplayName("DisplayName95")] //邮件对象 //Mail object //メールオブジェクト
         [RequiredArgument]
         public InArgument<MailMessage> MailMessage
         {
@@ -40,8 +40,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("回复所有人")]
-        [Description("不勾选的话只回复给发送者，勾选的话不仅给发送者，还会给所有抄送者回复邮件")]
+        [Localize.LocalizedDisplayName("DisplayName105")] //回复所有人 //Reply to everyone //全員に返信
+        [Localize.LocalizedDescription("Description68")] //不勾选的话只回复给发送者，勾选的话不仅给发送者，还会给所有抄送者回复邮件 //If you don't check it, you will only reply to the sender. If you check it, you will not only give the sender, but also reply to all the CCs. //チェックしない場合は送信者に返信するだけで、チェックする場合は送信者だけでなくすべてのCCに返信します。
         public bool ReplyAll
         {
             get;
@@ -49,7 +49,7 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Email")]
-        [DisplayName("正文")]
+        [Localize.LocalizedDisplayName("DisplayName88")] //正文 //Text //本体
         public InArgument<string> Body
         {
             get;
@@ -58,7 +58,7 @@ namespace RPA.Integration.Activities.Mail
 
 
         [Category("Attachments")]
-        [DisplayName("附件")]
+        [Localize.LocalizedDisplayName("Category21")] //附件 //Attachments //添付ファイル
         public List<InArgument<string>> Files
         {
             get;
@@ -67,7 +67,7 @@ namespace RPA.Integration.Activities.Mail
 
 
         [Category("Attachments")]
-        [DisplayName("附件列表")]
+        [Localize.LocalizedDisplayName("DisplayName82")] //附件列表 //Attachment list //添付リスト
         [DefaultValue(null)]
         public InArgument<IEnumerable<string>> AttachmentsCollection
         {

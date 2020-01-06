@@ -15,30 +15,30 @@ namespace RPA.UIAutomation.Activities.Attribute
         [Browsable(false)]
         public string _DisplayName { get { return "Get Pos"; } }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G2")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
-        [DisplayName("矩阵坐标")]
-        [Description("屏幕坐标中指定的UiElement的结果边界矩形")]
+        [Localize.LocalizedDisplayName("DisplayName6")] //矩阵坐标 //Matrix coordinates //マトリックス座標
+        [Localize.LocalizedDescription("Description6")] //屏幕坐标中指定的UiElement的结果边界矩形 //Result boundary rectangle of UiElement specified in screen coordinates //画面座標で指定されたUiElementの結果境界長方形
         public OutArgument<Rectangle>  Rectangle { get; set; }
 
         [Browsable(false)]

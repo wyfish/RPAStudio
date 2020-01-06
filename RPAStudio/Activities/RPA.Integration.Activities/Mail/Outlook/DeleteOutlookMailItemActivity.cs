@@ -14,8 +14,8 @@ namespace RPA.Integration.Activities.Mail
     public sealed class DeleteOutlookMailItemActivity : AsyncCodeActivity
     {
         [Category("Input")]
-        [DisplayName("邮件对象")]
-        [Description("指定邮件对象")]
+        [Localize.LocalizedDisplayName("DisplayName95")] //邮件对象 //Mail object //メールオブジェクト
+        [Localize.LocalizedDescription("Description61")] //指定邮件对象 //Specify mail object //メールオブジェクトを指定する
         [RequiredArgument]
         public InArgument<MailMessage> MailMessage
         {

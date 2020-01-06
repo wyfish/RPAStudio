@@ -23,16 +23,16 @@ namespace RPA.Core.Activities.DataTableActivity
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [DisplayName("DataTable")]
-        [Description("要写入字符串的DataTable对象")]
+        [Localize.LocalizedDescription("Description61")] //要写入字符串的DataTable对象 //The DataTable object to write to the string //文字列に書き込むDataTableオブジェクト
         public InArgument<DataTable> DataTable { get; set; }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
-        [DisplayName("文本")]
-        [Description("DataTable作为字符串的输出")]
+        [Localize.LocalizedDisplayName("DisplayName32")] //文本 //Text //テキスト
+        [Localize.LocalizedDescription("Description62")] //DataTable作为字符串的输出 //DataTable as a string output //文字列出力としてのDataTable
         public OutArgument<string> Text { get; set; }
 
 

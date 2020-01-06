@@ -103,7 +103,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         //}
 
         [Category("工作表选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         [Description("为空代表当前活动工作表")]
         public InArgument<string> SheetName
@@ -113,7 +113,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [DisplayName("行数")]
         [Browsable(true)]
         [Description("工作表中有效行数")]
@@ -124,7 +124,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [DisplayName("列数")]
         [Browsable(true)]
         [Description("工作表中有效行数")]

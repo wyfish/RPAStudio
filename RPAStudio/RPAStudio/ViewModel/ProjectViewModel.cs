@@ -243,7 +243,8 @@ namespace RPAStudio.ViewModel
                 try
                 {
                     string activity_config_xml = null;
-                    var activity_config_info = Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+                    //var activity_config_info = Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+                    var activity_config_info = Get_Localized_activity_config_info(dll_file_name_without_ext);
 
                     try
                     {
@@ -251,23 +252,36 @@ namespace RPAStudio.ViewModel
                         {
                             activity_config_xml = reader.ReadToEnd();
                             Logger.Debug($"开始挂载{dll_file}中的活动配置信息……", logger);
-
+                            // Start mounting Active configuration information in
                             ViewModelLocator.Instance.Activities.MountActivityConfig(activity_config_xml);
                         }
                     }
                     catch (Exception err)
                     {
                         SharedObject.Instance.Output(SharedObject.enOutputType.Error, $"挂载{dll_file}中的activity.config.xml信息出错", err);
+                        //Mount Error in activity.config.xml information
                     }
-                   
+
                 }
                 catch (Exception)
                 {
                     //dll中找不到activity.config.xml时会报错走到这里，无须打印错误日志
+                    //When activity.config.xml is not found in the dll, it will report an error and go here without printing the error log
                 }
             }
+        }
 
-
+        private System.Windows.Resources.StreamResourceInfo Get_Localized_activity_config_info(string dll_file_name_without_ext)
+        {
+            string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            try
+            {
+                return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config_{locale}.xml", UriKind.Absolute));
+            }
+            catch (Exception)
+            {
+                return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+            }
         }
 
         public ProjectJsonConfig ProcessProjectJsonConfig()

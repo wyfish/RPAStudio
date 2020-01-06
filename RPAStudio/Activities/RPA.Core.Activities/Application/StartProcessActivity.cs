@@ -19,19 +19,19 @@ namespace RPA.Core.Activities.ApplicationActivity
         }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description1")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [Category("Input")]
-        [Description("可以在启动时传递给应用程序的参数。")]
+        [Localize.LocalizedDescription("Description8")] //可以在启动时传递给应用程序的参数。 //Parameters that can be passed to the application at startup. //起動時にアプリケーションに渡すことができるパラメーター。
         public InArgument<string> Arguments { get; set; }
 
         [Category("Input")]
-        [Description("可以找到要打开的应用程序的executabel文件的完整路径。注意:所有字符串都必须放在引号之间。")]
+        [Localize.LocalizedDescription("Description11")] //可以找到要打开的应用程序的executabel文件的完整路径。注意:所有字符串都必须放在引号之间。 //You can find the full path to the executabel file of the application you want to open.  Note: All strings must be placed between quotes. //開きたいアプリケーションのexecutabelファイルへのフルパスを見つけることができます。 注：すべての文字列は引用符で囲む必要があります。
         public InArgument<string> FileName { get; set; }
 
         [Category("Input")]
-        [Description("当前工作目录的路径。这个字段只接受字符串变量。注意:所有字符串变量必须放在引号之间。")]
+        [Localize.LocalizedDescription("Description10")] //当前工作目录的路径。这个字段只接受字符串变量。注意:所有字符串变量必须放在引号之间。 //The path to the current working directory.  This field only accepts string variables.  Note: All string variables must be placed between quotes. //現在の作業ディレクトリへのパス。 このフィールドは文字列変数のみを受け入れます。 注：すべての文字列変数は引用符で囲む必要があります。
         public InArgument<string> WorkingDirectory { get; set; }
 
         [Category("Input")]

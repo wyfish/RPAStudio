@@ -39,13 +39,13 @@ namespace RPA.Core.Activities.DialogActivity
         }
 
         [Category("Input")]
-        [Description("消息框对话框的标题。")]
+        [Localize.LocalizedDescription("Description84")] //消息框对话框的标题。 //The title of the message box dialog. //メッセージボックスダイアログのタイトル。
         [DisplayNameAttribute("Caption")]
         public InArgument<string> Captions { get; set; }
 
         [RequiredArgument]
         [Category("Input")]
-        [Description("要显示在消息框中的文本。")]
+        [Localize.LocalizedDescription("Description85")] //要显示在消息框中的文本。 //The text to display in the message box. //メッセージボックスに表示するテキスト。
         [DisplayNameAttribute("Text")]
         public InArgument<string> Text { get; set; }
 
@@ -53,8 +53,8 @@ namespace RPA.Core.Activities.DialogActivity
         [DisplayNameAttribute("TopMost")]
         public bool TopMost { get; set; }
 
-        [Category("输出")]
-        [Description("表示消息框对话框中按下的按钮的字符串。它可以是:Ok,Yes,No或Cancel")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description86")] //表示消息框对话框中按下的按钮的字符串。它可以是:Ok,Yes,No或Cancel //A string representing the button pressed in the message box dialog.  It can be: Ok, Yes, No or Cancel //メッセージボックスダイアログで押されたボタンを表す文字列。 次のいずれかです。[OK]、[はい]、[いいえ]、または[キャンセル]
         public OutArgument<string> ChosenButton { get; set; }
 
         protected override void Execute(CodeActivityContext context)

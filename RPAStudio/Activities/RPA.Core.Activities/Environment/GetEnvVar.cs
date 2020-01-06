@@ -53,9 +53,9 @@ namespace RPA.Core.Activities.EnvironmentActivity
             }
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("变量名称")]
+        [Localize.LocalizedDisplayName("DisplayName43")] //变量名称 //Variable name //変数名
         [Browsable(true)]
         public InArgument<string> EnvVarName
         {
@@ -63,9 +63,9 @@ namespace RPA.Core.Activities.EnvironmentActivity
             set;
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("变量值")]
+        [Localize.LocalizedDisplayName("DisplayName44")] //变量值 //variable //変数値
         [Browsable(true)]
         public OutArgument<string> EnvVarValue
         {

@@ -17,16 +17,16 @@ namespace RPA.Core.Activities.PowerShellActivity
     public sealed class ShellActivity<T> : CodeActivity
     {
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description1")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [RequiredArgument]
         [Category("Input")]
-        [Description("要执行的PowerShell命令。")]
+        [Localize.LocalizedDescription("Description112")] //要执行的PowerShell命令。 //The PowerShell command to execute. //実行するPowerShellコマンド。
         public InArgument<string> CommandText { get; set; }
 
         [Category("Input")]
-        [Description("传递给用于执行命令的管道的编写器的PSObjects的集合。可以是另一个InvokePowerShell活动的输出。")]
+        [Localize.LocalizedDescription("Description113")] //传递给用于执行命令的管道的编写器的PSObjects的集合。可以是另一个InvokePowerShell活动的输出。 //A collection of PSObjects passed to the writer of the pipeline used to execute the command.  Can be the output of another InvokePowerShell activity. //コマンドの実行に使用されるパイプラインのライターに渡されるPSObjectのコレクション。 別のInvokePowerShellアクティビティの出力にすることができます。
         public InArgument<Collection<PSObject>> Input { get; set; }
 
         [Category("Input")]
@@ -53,8 +53,8 @@ namespace RPA.Core.Activities.PowerShellActivity
         [Browsable(true)]
         public Dictionary<string, Argument> PowerShellVariables { get; private set; } = new Dictionary<string, Argument>();
 
-        [Category("输出")]
-        [Description("命令执行时返回的一组类型参数objets。可以用于管道几个InvokePowerShell活动。")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description114")] //命令执行时返回的一组类型参数objets。可以用于管道几个InvokePowerShell活动。 //A set of type parameters objets returned when the command is executed.  Can be used to pipe several InvokePowerShell activities. //コマンドの実行時に返される一連の型パラメーターオブジェクト。 いくつかのInvokePowerShellアクティビティのパイプに使用できます。
         public OutArgument<Collection<T>> Output { get; set; }
 
 

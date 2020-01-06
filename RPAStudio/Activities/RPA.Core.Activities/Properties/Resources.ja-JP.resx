@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Do" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="DropActivityHere" xml:space="preserve">
+    <value>Drop activity here</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>プロセス名</value>
+  </data>
+  <data name="Category1" xml:space="preserve">
+    <value>UIオブジェクト</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>ウィンドウインジケータ</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>出力</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>現在のWindowsセッションで実行されているプロセスを表すプロセスオブジェクトのコレクション。</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>終了するプロセスを記述するプロセスタイプオブジェクト。</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>クローズするプロセスの名前。</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>エラーをスローする前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは3000ミリ秒（3秒）です。</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>起動時にアプリケーションに渡すことができるパラメーター。</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>開きたいアプリケーションの実行可能ファイルの完全なファイルパスを見つけることができます。 注：すべての文字列は引用符で囲む必要があります。</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>現在の作業ディレクトリへのパス。 このフィールドは文字列変数のみを受け入れます。 注：すべての文字列変数は引用符で囲む必要があります。</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>開きたいアプリケーションのexecutabelファイルへのフルパスを見つけることができます。 注：すべての文字列は引用符で囲む必要があります。</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>クリップボードから取得したデータ。</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>クリップボードにコピーされるテキスト。</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>ファイルまたはフォルダーをコピーする</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>入力</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>DataTableの列セットにアタッチされるDataColumnオブジェクト。 このプロパティが設定されている場合、オプションカテゴリの下のすべてのプロパティは無視されます</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>新しい列の名前</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>列を追加するDataTableオブジェクト</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>空にすることができます</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>新しい列のフィールドを空にすることを許可するかどうかを指定します</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>自動インクリメント</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value>新しい行が追加されたときに列の値を自動的にインクリメントするかどうかを指定します</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>ユニーク制約</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value>新しい列の各行の値は一意でなければなりません</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>最大長</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value>新しい列の値の最大長を指定します</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>デフォルト値</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>DataTableに追加されるDataRowオブジェクトこのプロパティが設定されている場合、ArrayRowプロパティは無視されます。</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>DataTableに追加するオブジェクトの配列。 各オブジェクトのタイプは、DataTable内の対応する列のタイプにマップする必要があります。</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>行データを追加するDataTableオブジェクト</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>行と列の情報から生成されたDataTable</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>すべてのデータをクリアするDataTableオブジェクト</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>フィルタリングするDataTable変数。 このフィールドはDataTable変数のみをサポートします</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>ラインフィルタリングモード</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>ターゲット行を保持するか削除することによってテーブルをフィルターするかどうかを指定します</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>列フィルタリングモード</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>ターゲット列を保持または削除して、テーブルをフィルタリングするかどうかを指定します</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>結果のDataTableをフィルター処理する</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>DataTable変数の単一行操作</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>索引</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>テーブルに変換する非構造化データのソースを指定します。 このフィールドは文字列変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>フェッチにOCRを使用し、[単語情報の取得]チェックボックスがオンになっている場合、このフィールドにはWordsInfo値を持つIEnumerable &lt;KeyValuePair &lt;Rectangle、String &gt;&gt;変数が含まれます。</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>固定形式オプション</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>列幅</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>テーブルに作成される列のサイズを指定します。 このフィールドは、IEnumerable &lt;Int32&gt;変数のみをサポートします。</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>書式設定オプション</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>列区切り</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>列区切りとして使用する文字を指定します。 このフィールドは文字列変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>行区切り</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>改行セパレーターとして使用される文字を指定します。 このフィールドは文字列変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>CSV解析</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>タイプ自動検出</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>選択すると、文字列、Int32など、列または行のタイプが自動的に検出されます。</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>列見出し</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>チェックした場合、最初に識別された列が列ヘッダーとして使用されます</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>行ヘッダー</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>チェックした場合、最初に識別された行が行ヘッダーとして使用されます</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>生成されたDataTable変数</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>行</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>値を取得するDataRowオブジェクト</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>コラム</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>値がDataRowから取得されるDataColumnオブジェクト。 このプロパティが設定されている場合、ColumnNameプロパティとColumnIndexプロパティは無視されます。</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>列インデックス</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>値がDataRowから取得される列のインデックス</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>値がDataRowから取得される列の名前。 このプロパティが設定されている場合、ColumnIndexプロパティは無視されます</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>価値</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>DataRowの列値を指定します</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>DataTable1</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>この操作で使用する最初のテーブルは、DataTable変数に格納されます。 このフィールドはDataTable変数のみをサポートします</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>DataTable2</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>この操作で使用される2番目のテーブルは、DataTable変数に格納されます。 このフィールドはDataTable変数のみをサポートします</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>JoinType</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>ルックアップを実行するDataTable変数</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>価値を見つける</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>指定されたDataTable変数で検索する値</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>開始列</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>値がDataRowから取得されるDataColumnオブジェクト。 このプロパティフィールドで変数を設定すると、他の2つのプロパティが無効になります</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>値がDataRowから取得される列のインデックス。 このプロパティフィールドで変数を設定すると、他の2つのプロパティが無効になります</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>値がDataRowから取得される列の名前。 このプロパティフィールドで変数を設定すると、他の2つのプロパティが無効になります</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>終了列</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>この列とRowIndexプロパティの値の間の座標にあるセルを返します</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>この列とRowIndexプロパティの値の間の座標にあるセルの列インデックスを返します</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>この列とRowIndexプロパティの値の間の座標にあるセルの列名を返します</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>セル値</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>セルで見つかった値</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>行インデックス</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>セルの行インデックス</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>目標</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>ソースDataTableのDataTableオブジェクトをマージします</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>出所</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>ターゲットDataTableに追加されるDataTableオブジェクト</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>マージ操作</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>2つのDataTableをマージするときの処理を指定します</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>文字列に書き込むDataTableオブジェクト</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>文字列出力としてのDataTable</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>列を削除するDataTableオブジェクト</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>DataTableの列セットから削除されるDataColumnオブジェクト。 このプロパティが設定されている場合、他の2つの列インデックスオプションは無視されます</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>DataTableの列セットから削除する列のインデックス。 このプロパティが設定されている場合、他の2つの列インデックスオプションは無視されます</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>DataTableの列セットから削除する列の名前。 このプロパティが設定されている場合、他の2つの列インデックスオプションは無視されます</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>削除するDataRowオブジェクト。 このプロパティが設定されている場合、行のインデックス付けオプションを無視する</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>削除する行のインデックス。 このプロパティが設定されている場合、DataRowインデックスオプションを無視します</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>重複行を削除するDataTable変数</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>DataTable変数に保存された重複行が削除されたDataTableを出力します。 入力フィールドの変数と同じ変数を配置すると、初期変数が変更されますが、新しい変数を指定すると、初期変数は影響を受けません。</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>ソートされるDataTable変数</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>列ソート</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>ソートされた列の変数。 このフィールドは、DataColumn変数のみをサポートします。 このプロパティフィールドで変数を設定すると、他の2つのプロパティが無効になります</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>お名前</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>並べ替え</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>ソートされたDataTable変数。 入力フィールドの変数と同じ変数を配置すると、初期変数が変更され、新しい変数を追加しても初期変数は影響を受けません。</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>日時</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>変換タイプ</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>時間タイプ</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>UI要素</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>UIElementを入力</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>座標点を使用する</value>
+  </data>
+  <data name="Description75" xml:space="preserve">
+    <value>ポップアップウィンドウのテキスト。</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>ポップアップウィンドウのタイトル。</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>ポップアップウィンドウが自動的に閉じるまでの時間。 デフォルトでは、ポップアップは閉じません。</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>これは、HTMLファイルの完全パスまたは外部URLを表します。</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>指定されたHTMLページによって返される文字列。</value>
+  </data>
+  <data name="Description80" xml:space="preserve">
+    <value>フォームフィールドのラベル。</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>選択するオプションの配列。 要素を1つだけ含むように設定すると、テキストを構成するテキストボックスが表示されます。  2つまたは3つの要素を含むように設定されている場合、選択するラジオボタンとして表示されます。  3つ以上のアイテムを含むように設定されている場合、それらは選択用のコンボボックスとして表示されます。 このフィールドは文字列配列変数のみをサポートします。</value>
+  </data>
+  <data name="Description82" xml:space="preserve">
+    <value>ダイアログのタイトルを入力します。</value>
+  </data>
+  <data name="Description83" xml:space="preserve">
+    <value>ユーザーが入力ダイアログに挿入した値。</value>
+  </data>
+  <data name="Description84" xml:space="preserve">
+    <value>メッセージボックスダイアログのタイトル。</value>
+  </data>
+  <data name="Description85" xml:space="preserve">
+    <value>メッセージボックスに表示するテキスト。</value>
+  </data>
+  <data name="Description86" xml:space="preserve">
+    <value>メッセージボックスダイアログで押されたボタンを表す文字列。 次のいずれかです。[OK]、[はい]、[いいえ]、または[キャンセル]</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>システムフォルダ</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>フォルダーパス</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>変数名</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>変数値</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>ビープタイプ</value>
+  </data>
+  <data name="Description87" xml:space="preserve">
+    <value>ファイルへのパス。 パスが不完全な場合は、プロジェクトフォルダーにファイルを作成します。</value>
+  </data>
+  <data name="Description88" xml:space="preserve">
+    <value>ファイルに添付するテキスト。</value>
+  </data>
+  <data name="Description89" xml:space="preserve">
+    <value>コピーするファイルへのパス。</value>
+  </data>
+  <data name="Description90" xml:space="preserve">
+    <value>コピーするファイルのターゲットパス。</value>
+  </data>
+  <data name="Description91" xml:space="preserve">
+    <value>作成するディレクトリへのフルパス。</value>
+  </data>
+  <data name="Description92" xml:space="preserve">
+    <value>作成するファイルの名前。</value>
+  </data>
+  <data name="Description93" xml:space="preserve">
+    <value>作成するファイルへのフルパス。</value>
+  </data>
+  <data name="Description94" xml:space="preserve">
+    <value>完全に削除するファイルまたはディレクトリへのパス。</value>
+  </data>
+  <data name="Description95" xml:space="preserve">
+    <value>移動するファイルへのパス。</value>
+  </data>
+  <data name="Description96" xml:space="preserve">
+    <value>ファイルを移動するターゲットパス。</value>
+  </data>
+  <data name="Description97" xml:space="preserve">
+    <value>チェックするフルパス。</value>
+  </data>
+  <data name="Description98" xml:space="preserve">
+    <value>ドキュメントまたはファイルが見つかったかどうかを宣言します。</value>
+  </data>
+  <data name="Description99" xml:space="preserve">
+    <value>読み込むファイルへのパス。</value>
+  </data>
+  <data name="Description100" xml:space="preserve">
+    <value>文字列変数に保存されているファイルから抽出されたテキスト。</value>
+  </data>
+  <data name="Description101" xml:space="preserve">
+    <value>書き込まれるファイルへのパス。</value>
+  </data>
+  <data name="Description102" xml:space="preserve">
+    <value>ファイルに書き込まれるテキスト。</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>資格情報名</value>
+  </data>
+  <data name="Description103" xml:space="preserve">
+    <value>システムで取得した資格情報の名前</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>タイムアウト（ミリ秒）</value>
+  </data>
+  <data name="Description104" xml:space="preserve">
+    <value>エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です</value>
+  </data>
+  <data name="Description105" xml:space="preserve">
+    <value>取得した資格情報の安全なパスワード</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="Description106" xml:space="preserve">
+    <value>取得したバウチャーのユーザー名</value>
+  </data>
+  <data name="Description107" xml:space="preserve">
+    <value>エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定しますデフォルト値は30000ミリ秒（30秒）です</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>エラーは引き続き実行されます</value>
+  </data>
+  <data name="Description108" xml:space="preserve">
+    <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>資格情報オプション</value>
+  </data>
+  <data name="Description109" xml:space="preserve">
+    <value>資格情報のユーザー名を設定します</value>
+  </data>
+  <data name="Description110" xml:space="preserve">
+    <value>資格情報のパスワードを設定します</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>資格情報名</value>
+  </data>
+  <data name="Description111" xml:space="preserve">
+    <value>更新する資格情報の名前</value>
+  </data>
+  <data name="Description112" xml:space="preserve">
+    <value>実行するPowerShellコマンド。</value>
+  </data>
+  <data name="Description113" xml:space="preserve">
+    <value>コマンドの実行に使用されるパイプラインのライターに渡されるPSObjectのコレクション。 別のInvokePowerShellアクティビティの出力にすることができます。</value>
+  </data>
+  <data name="Description114" xml:space="preserve">
+    <value>コマンドの実行時に返される一連の型パラメーターオブジェクト。 いくつかのInvokePowerShellアクティビティのパイプに使用できます。</value>
+  </data>
+  <data name="Description115" xml:space="preserve">
+    <value>ワークフローファイルのパス。二重引用符で囲む必要があります</value>
+  </data>
+</root>

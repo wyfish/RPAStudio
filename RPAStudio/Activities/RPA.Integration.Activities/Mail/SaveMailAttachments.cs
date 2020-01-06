@@ -34,20 +34,20 @@ namespace RPA.Integration.Activities.Mail
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("路径")]
-        [Description("要保存MimeMessage附件的完整路径")]
+        [Localize.LocalizedDisplayName("DisplayName45")] //路径 //path //パス
+        [Localize.LocalizedDescription("Description45")] //要保存MimeMessage附件的完整路径 //The full path to save the MimeMessage attachment //MimeMessage添付ファイルを保存するフルパス
         public InArgument<string> PathName { get; set; }
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("邮件消息")]
-        [Description("要保存的MimeMessage附件")]
+        [Localize.LocalizedDisplayName("DisplayName81")] //邮件消息 //Mail message //メールメッセージ
+        [Localize.LocalizedDescription("Description46")] //要保存的MimeMessage附件 //MimeMessage attachment to save //保存するMimeMessage添付ファイル
         public InArgument<MimeMessage> MimeMessageAttachs { get; set; }
 
-        [Category("输出")]
-        [DisplayName("附件列表")]
-        [Description("检索到的附件")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName82")] //附件列表 //Attachment list //添付リスト
+        [Localize.LocalizedDescription("Description47")] //检索到的附件 //Retrieved attachment //取得した添付ファイル
         public InArgument<string[]> AttachFiles { get; set; }
 
 

@@ -17,7 +17,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Browsable(false)]
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/sheetnames.png"; } }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
         [DisplayName("工作表名称列表")]
         [Browsable(true)]

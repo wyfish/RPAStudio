@@ -22,15 +22,15 @@ namespace RPA.UIAutomation.Activities.Browser
         [Browsable(false)]
         public ActivityAction<object> Body { get; set; }
 
-        [Category("选项")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("浏览器类型")]
-        [Description("选择要使用的浏览器类型。可以使用以下选项：IE，Firefox，Chrome")]
+        [Localize.LocalizedDisplayName("DisplayName15")] //浏览器类型 //Browser type //ブラウザの種類
+        [Localize.LocalizedDescription("Description17")] //选择要使用的浏览器类型。可以使用以下选项：IE，Firefox，Chrome //Choose the type of browser you want to use.  The following options are available: IE, Firefox, Chrome //使用するブラウザの種類を選択します。 次のオプションが利用可能です：IE、Firefox、Chrome
         public BrowserTypes BrowserType
         {
             get;
@@ -38,11 +38,11 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
         [RequiredArgument]
-        [DisplayName("网址URL")]
-        [Description("要在指定浏览器中打开的URL")]
+        [Localize.LocalizedDisplayName("DisplayName23")] //网址URL //URL //URL
+        [Localize.LocalizedDescription("Description27")] //要在指定浏览器中打开的URL //The URL to open in the specified browser //指定されたブラウザーで開くURL
         public InArgument<string> Url
         {
             get;
@@ -51,9 +51,9 @@ namespace RPA.UIAutomation.Activities.Browser
 
         /*为等待浏览器页面显示，如果未显示无法获得对应句柄或InternetExplorer变量*/
         InArgument<Int32> _OverTime = 10 * 1000;
-        [Category("选项")]
-        [DisplayName("超时时间")]
-        [Description("指定浏览器响应超时时间(毫秒)")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //超时时间 //overtime time //タイムアウト
+        [Localize.LocalizedDescription("Description28")] //指定浏览器响应超时时间(毫秒) //Specify browser response timeout (ms) //ブラウザーの応答タイムアウト（ミリ秒）を指定する
         public InArgument<Int32> OverTime
         {
             get
@@ -67,9 +67,9 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("私密/无痕")]
+        [Localize.LocalizedDisplayName("DisplayName24")] //私密/无痕 //Private/no trace //プライベート/トレースなし
         public bool Private
         {
             get;
@@ -77,7 +77,7 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
 
-        //[Category("选项")]
+        //[Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         //[Browsable(true)]
         //[DisplayName("新会话")]
         //public bool NewSession
@@ -87,19 +87,19 @@ namespace RPA.UIAutomation.Activities.Browser
         //}
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("隐藏")]
+        [Localize.LocalizedDisplayName("DisplayName25")] //隐藏 //Hide //隠す
         public bool Hidden
         {
             get;
             set;
         }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
-        [DisplayName("浏览器")]
-        [Description("存储浏览器的变量。该字段仅接受Browser变量")]
+        [Localize.LocalizedDisplayName("DisplayName11")] //浏览器 //Browser //ブラウザ
+        [Localize.LocalizedDescription("Description29")] //存储浏览器的变量。该字段仅接受Browser变量 //Store the variables of the browser.  This field only accepts the Browser variable //ブラウザの変数を保存します。 このフィールドはブラウザ変数のみを受け入れます
         public OutArgument<Browser> Browser
         {
             get;

@@ -13,16 +13,16 @@ namespace RPA.Integration.Activities.FTP
     public class EnumerateObjects : ContinuableAsyncCodeActivity
     {
         [RequiredArgument]
-        [Category("输入")]
-        [DisplayName("路径")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName45")] //路径 //path //パス
         public InArgument<string> RemotePath { get; set; }
 
-        [Category("选项")]
-        [DisplayName("包含子文件夹")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName49")] //包含子文件夹 //Include subfolders //サブフォルダーを含める
         public bool Recursive { get; set; }
 
-        [Category("输出")]
-        [DisplayName("枚举文件")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName51")] //枚举文件 //Enumerate file //ファイルを列挙する
         public OutArgument<IEnumerable<FtpObjectInfo>> Files { get; set; }
 
 

@@ -20,10 +20,10 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
-        [DisplayName("浏览器Browser")]
-        [Description("新浏览器标签页面。该字段仅支持Browser变量")]
+        [Localize.LocalizedDisplayName("DisplayName16")] //浏览器Browser //Browser Browser //ブラウザブラウザ
+        [Localize.LocalizedDescription("Description26")] //新浏览器标签页面。该字段仅支持Browser变量 //New browser tab page.  This field only supports the Browser variable. //新しいブラウザタブページ。 このフィールドは、ブラウザ変数のみをサポートします。
         public OutArgument<Browser> newBrowser { get; set; }
 
 

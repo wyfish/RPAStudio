@@ -16,8 +16,8 @@ namespace RPA.Integration.Activities.WordPlugins
 
 
         ExcelFontEnum _Font;
-        [Category("字体设置")]
-        [DisplayName("字体")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName31")] //字体 //Font //フォント
         public ExcelFontEnum Font
         {
             get { return _Font; }
@@ -25,8 +25,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<float> _FontSize = 10.5F;
-        [Category("字体设置")]
-        [DisplayName("字体大小")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName119")] //字体大小 //Font size //フォントサイズ
         public InArgument<float> FontSize
         {
             get { return _FontSize; }
@@ -34,8 +34,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         WdColorIndexEnum _FontColor;
-        [Category("字体设置")]
-        [DisplayName("字体颜色")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName120")] //字体颜色 //Font color //フォントの色
         public WdColorIndexEnum FontColor
         {
             get { return _FontColor; }
@@ -43,8 +43,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _FontBold = false;
-        [Category("字体设置")]
-        [DisplayName("粗体")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName34")] //粗体 //Bold //太字
         public bool FontBold
         {
             get { return _FontBold; }
@@ -53,8 +53,8 @@ namespace RPA.Integration.Activities.WordPlugins
 
 
         bool _FontItalic = false;
-        [Category("字体设置")]
-        [DisplayName("斜体")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName35")] //斜体 //Italic //斜体
         public bool FontItalic
         {
             get { return _FontItalic; }
@@ -62,8 +62,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _FontUnderLine = false;
-        [Category("字体设置")]
-        [DisplayName("下划线")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName121")] //下划线 //Underline //下線
         public bool FontUnderLine
         {
             get { return _FontUnderLine; }
@@ -71,8 +71,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _Shadow = false;
-        [Category("字体设置")]
-        [DisplayName("字体阴影")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName122")] //字体阴影 //Font shadow //フォントの影
         public bool Shadow
         {
             get { return _Shadow; }
@@ -88,8 +88,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         alignStyle _Align = alignStyle.左对齐;
-        [Category("页面属性")]
-        [DisplayName("对齐方式")]
+        [Localize.LocalizedCategory("Category24")] //页面属性 //Page attribute //ページ属性
+        [Localize.LocalizedDisplayName("DisplayName30")] //对齐方式 //Alignment //アライメント
         [Browsable(true)]
         public alignStyle Align
         {
@@ -99,8 +99,8 @@ namespace RPA.Integration.Activities.WordPlugins
 
 
         InArgument<Int32> _LeftMargin = 80;
-        [Category("页面边距")]
-        [DisplayName("左边距")]
+        [Localize.LocalizedCategory("Category25")] //页面边距 //Page margin //ページ余白
+        [Localize.LocalizedDisplayName("DisplayName123")] //左边距 //Left margin //左マージン
         [Browsable(true)]
         public InArgument<Int32> LeftMargin
         {
@@ -109,8 +109,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<Int32> _RightMargin = 80;
-        [Category("页面边距")]
-        [DisplayName("右边距")]
+        [Localize.LocalizedCategory("Category25")] //页面边距 //Page margin //ページ余白
+        [Localize.LocalizedDisplayName("DisplayName124")] //右边距 //Right margin //右マージン
         [Browsable(true)]
         public InArgument<Int32> RightMargin
         {
@@ -119,8 +119,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<Int32> _TopMargin = 64;
-        [Category("页面边距")]
-        [DisplayName("上边距")]
+        [Localize.LocalizedCategory("Category25")] //页面边距 //Page margin //ページ余白
+        [Localize.LocalizedDisplayName("DisplayName125")] //上边距 //Top margin //上マージン
         [Browsable(true)]
         public InArgument<Int32> TopMargin
         {
@@ -129,8 +129,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<Int32> _BottomMargin = 64;
-        [Category("页面边距")]
-        [DisplayName("下边距")]
+        [Localize.LocalizedCategory("Category25")] //页面边距 //Page margin //ページ余白
+        [Localize.LocalizedDisplayName("DisplayName126")] //下边距 //Bottom margin //下マージン
         [Browsable(true)]
         public InArgument<Int32> BottomMargin
         {

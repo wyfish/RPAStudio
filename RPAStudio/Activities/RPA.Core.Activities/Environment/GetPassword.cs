@@ -94,8 +94,8 @@ namespace RPA.Core.Activities.EnvironmentActivity
             }
         }
 
-        [Category("选项")]
-        [DisplayName("密码")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName45")] //密码 //password //パスワード
         [Browsable(false)]
         public string EnPassword
         {
@@ -103,9 +103,9 @@ namespace RPA.Core.Activities.EnvironmentActivity
             get;
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("结果")]
+        [Localize.LocalizedDisplayName("DisplayName46")] //结果 //result //結果
         [Browsable(true)]
         public OutArgument<string> Password
         {

@@ -19,29 +19,29 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [Browsable(false)]
         public string _DisplayName { get { return "Type Into"; } }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description55")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [Category("Common")]
-        [Description("执行活动后的延迟时间(以毫秒为单位)。默认时间为300毫秒。")]
+        [Localize.LocalizedDescription("Description56")] //执行活动后的延迟时间(以毫秒为单位)。默认时间为300毫秒。 //The delay time, in milliseconds, after the activity is executed. The default time is 300 milliseconds. //アクティビティが実行された後のミリ秒単位の遅延。 デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayAfter { get; set; }
 
         [Category("Common")]
-        [Description("延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为300毫秒。")]
+        [Localize.LocalizedDescription("Description57")] //延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为300毫秒。 //The delay time, in milliseconds, before the deferred the activity is executed. The default time is 300 milliseconds. //遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayBefore { get; set; }
 
         [Browsable(false)]
@@ -61,21 +61,21 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [Category("输入项")]
         public InArgument<string> Text { get; set; }
 
-        [Category("鼠标选项")]
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public bool isRunClick { get; set; }
 
 
-        [Category("鼠标选项")]
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public Int32 ClickType { get; set; }
-        [Category("鼠标选项")]
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public Int32 MouseButton { get; set; }
 
-        [Category("鼠标选项")]
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public InArgument<Int32> offsetX { get; set; }
-        [Category("鼠标选项")]
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public InArgument<Int32> offsetY { get; set; }
-        [Category("鼠标选项")]
-        [DisplayName("使用坐标点")]
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
         public bool usePoint { get; set; }
 
         [Browsable(false)]

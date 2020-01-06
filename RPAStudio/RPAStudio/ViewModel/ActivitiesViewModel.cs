@@ -485,7 +485,7 @@ namespace RPAStudio.ViewModel
             if(AvailableActivitiesXmlDocument == null)
             {
                 XmlDocument doc = new XmlDocument();
-                var resourceXML = RPAStudio.Properties.ResourceLocalizer.GetResourceByName("AvailableActivities");
+                var resourceXML = Properties.ResourceLocalizer.GetLocalizedResource("AvailableActivities");
                 using (var ms = new MemoryStream(resourceXML))
                 {
                     ms.Flush();

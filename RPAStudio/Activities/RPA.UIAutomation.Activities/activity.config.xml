@@ -1,87 +1,87 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--活动配置信息-->
 <activity.config>
-  <Group Name="UI 自动化" ToolTip="一些UI自动化的模拟组件">
-    <Group Name="UI元素">
-      <Group Name="鼠标">
-        <Activity Name="单击" Icon="Resources/Mouse/mouseclick.png" TypeOf="RPA.UIAutomation.Activities.Mouse.ClickActivity,RPA.UIAutomation.Activities" ToolTip="模拟鼠标单击"/>
-        <Activity Name="双击" Icon="Resources/Mouse/mouseclick.png" TypeOf="RPA.UIAutomation.Activities.Mouse.DoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="模拟鼠标双击" />
-        <Activity Name="悬浮" Icon="Resources/Mouse/hover.png" TypeOf="RPA.UIAutomation.Activities.Mouse.HoverClickActivity,RPA.UIAutomation.Activities" ToolTip="模拟鼠标悬浮"/>
+  <Group Name="UI Automation" ToolTip="Some UI automation simulation components">
+    <Group Name="UI Element">
+      <Group Name="Mouse">
+        <Activity Name="Click" Icon="Resources/Mouse/mouseclick.png" TypeOf="RPA.UIAutomation.Activities.Mouse.ClickActivity,RPA.UIAutomation.Activities" ToolTip="Simulated mouse click"/>
+        <Activity Name="Double click" Icon="Resources/Mouse/mouseclick.png" TypeOf="RPA.UIAutomation.Activities.Mouse.DoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="Simulate mouse double click" />
+        <Activity Name="Hover" Icon="Resources/Mouse/hover.png" TypeOf="RPA.UIAutomation.Activities.Mouse.HoverClickActivity,RPA.UIAutomation.Activities" ToolTip="Simulated mouse hover"/>
       </Group>
-      <Group Name="键盘">
-        <Activity Name="发送热键" Icon="Resources/KeyBoard/hotkey.png" TypeOf="RPA.UIAutomation.Activities.Keyboard.HotKeyActivity,RPA.UIAutomation.Activities" ToolTip="向选定句柄发送按键事件"/>
-        <Activity Name="输入文本" Icon="Resources/KeyBoard/text.png" TypeOf="RPA.UIAutomation.Activities.Keyboard.TypeIntoActivity,RPA.UIAutomation.Activities" ToolTip="向选定窗口发送文本"/>
-        <Activity Name="输入安全文本" Icon="Resources/KeyBoard/text.png" TypeOf="RPA.UIAutomation.Activities.Keyboard.SecureTextActivity,RPA.UIAutomation.Activities" ToolTip="向选定窗口发送安全文本"/>
+      <Group Name="Keyboard">
+        <Activity Name="Send Hotkey" Icon="Resources/KeyBoard/hotkey.png" TypeOf="RPA.UIAutomation.Activities.Keyboard.HotKeyActivity,RPA.UIAutomation.Activities" ToolTip="Send a key event to the selected handle"/>
+        <Activity Name="Input Text" Icon="Resources/KeyBoard/text.png" TypeOf="RPA.UIAutomation.Activities.Keyboard.TypeIntoActivity,RPA.UIAutomation.Activities" ToolTip="Send text to the selected window"/>
+        <Activity Name="Password text" Icon="Resources/KeyBoard/text.png" TypeOf="RPA.UIAutomation.Activities.Keyboard.SecureTextActivity,RPA.UIAutomation.Activities" ToolTip="Send secure text to the selected window"/>
       </Group>
-      <Group Name="控制">
-        <Activity Name="启用" Icon="Resources/Control/Activate.png" TypeOf="RPA.UIAutomation.Activities.Control.Activate,RPA.UIAutomation.Activities" ToolTip="使您可以激活指定的UI元素。例如，它可用于将窗口带到前台"/>
-        <Activity Name="校验" Icon="Resources/Control/Check.png" TypeOf="RPA.UIAutomation.Activities.Control.Check,RPA.UIAutomation.Activities" ToolTip="使选择或清除单选按钮和复选框等其它UI元素"/>
-        <Activity Name="获取文本" Icon="Resources/Control/GetText.png" TypeOf="RPA.UIAutomation.Activities.Control.GetText,RPA.UIAutomation.Activities" ToolTip="从指定的UI元素中提取文本值"/>
-        <Activity Name="设置文本" Icon="Resources/Control/SetText.png" TypeOf="RPA.UIAutomation.Activities.Control.SetText,RPA.UIAutomation.Activities" ToolTip="在选定UI对象写入文本"/>
-        <Activity Name="高亮显示" Icon="Resources/Control/Highlight.png" TypeOf="RPA.UIAutomation.Activities.Control.Highlight,RPA.UIAutomation.Activities" ToolTip="突出显示指定的UI元素"/>
-        <Activity Name="选择项目" Icon="Resources/Control/SelectItem.png" TypeOf="RPA.UIAutomation.Activities.Control.SelectItem,RPA.UIAutomation.Activities" ToolTip="从组合框或列表框中选择项目。在屏幕上指示元素后，活动中将显示包含所有可用选项的列表。 注意：在运行工作流之前未与之交互的组合框或列表框上使用此活动可能导致活动引发错误。避免此问题的最佳做法是添加Click活动，该活动配置为在执行Select Item活动之前单击目标下拉菜单。"/>
-        <Activity Name="选择多个项目" Icon="Resources/Control/SelectMultiItems.png" TypeOf="RPA.UIAutomation.Activities.Control.SelectMultiItems,RPA.UIAutomation.Activities" ToolTip="从组合框或列表框中选择多个项目。在屏幕上指示元素后，活动中将显示包含所有可用选项的列表。"/>
-        <Activity Name="设置焦点" Icon="Resources/Control/SetFocus.png" TypeOf="RPA.UIAutomation.Activities.Control.SetActiveFocus,RPA.UIAutomation.Activities" ToolTip="将键盘焦点设置为指定的UI元素"/>
+      <Group Name="Control">
+        <Activity Name="Activate" Icon="Resources/Control/Activate.png" TypeOf="RPA.UIAutomation.Activities.Control.Activate,RPA.UIAutomation.Activities" ToolTip="Enables you to activate the specified UI element. For example, it can be used to bring a window to the foreground"/>
+        <Activity Name="Check" Icon="Resources/Control/Check.png" TypeOf="RPA.UIAutomation.Activities.Control.Check,RPA.UIAutomation.Activities" ToolTip="Make selection or clear other UI elements such as radio buttons and checkboxes"/>
+        <Activity Name="GetText" Icon="Resources/Control/GetText.png" TypeOf="RPA.UIAutomation.Activities.Control.GetText,RPA.UIAutomation.Activities" ToolTip="Extract text values from specified UI elements"/>
+        <Activity Name="SetText" Icon="Resources/Control/SetText.png" TypeOf="RPA.UIAutomation.Activities.Control.SetText,RPA.UIAutomation.Activities" ToolTip="Write text in selected UI object"/>
+        <Activity Name="Highlight" Icon="Resources/Control/Highlight.png" TypeOf="RPA.UIAutomation.Activities.Control.Highlight,RPA.UIAutomation.Activities" ToolTip="Highlight the specified UI element"/>
+        <Activity Name="SelectItem" Icon="Resources/Control/SelectItem.png" TypeOf="RPA.UIAutomation.Activities.Control.SelectItem,RPA.UIAutomation.Activities" ToolTip="Select an item from the combo box or list box. When an element is indicated on the screen, a list of all available options is displayed in the activity. Note: Using this activity on a combo box or list box that did not interact with it before running the workflow may cause the activity to raise an error. The best practice to avoid this problem is to add a Click activity that is configured to click the target drop-down menu before executing the Select Item activity."/>
+        <Activity Name="SelectMultiItems" Icon="Resources/Control/SelectMultiItems.png" TypeOf="RPA.UIAutomation.Activities.Control.SelectMultiItems,RPA.UIAutomation.Activities" ToolTip="Select multiple items from the combo box or list box. When an element is indicated on the screen, a list of all available options is displayed in the activity."/>
+        <Activity Name="SetFocus" Icon="Resources/Control/SetFocus.png" TypeOf="RPA.UIAutomation.Activities.Control.SetActiveFocus,RPA.UIAutomation.Activities" ToolTip="Set keyboard focus to the specified UI element"/>
       </Group>
-      <Group Name="查找">
-        <Activity Name="UI元素存在性"  Icon="Resources/Find/EleExists.png" TypeOf="RPA.UIAutomation.Activities.Find.EleExists,RPA.UIAutomation.Activities"           ToolTip="使您可以验证UI元素是否存在，即使它不可见"/>
-        <Activity Name="UI元素范围"    Icon="Resources/Find/EleScope.png" TypeOf="RPA.UIAutomation.Activities.Find.EleScope,RPA.UIAutomation.Activities"             ToolTip="一个容器，使您可以附加到现有UI元素并在其中执行多个操作"/>
-        <Activity Name="查找UI子元素"  Icon="Resources/Find/FindChildren.png" TypeOf="RPA.UIAutomation.Activities.Find.FindChildren,RPA.UIAutomation.Activities"     ToolTip="根据指定的范围和过滤条件检索子UI元素的集合"/>
-        <Activity Name="查找UI元素"    Icon="Resources/Find/FindEle.png" TypeOf="RPA.UIAutomation.Activities.Find.FindEle,RPA.UIAutomation.Activities"               ToolTip="等待指定的UI元素出现在屏幕上（位于前台）并将其作为UiElement变量返回。如果要查明元素是否已启用，请使用例如Get Attribute或Wait Attribute等活动以及该aastate属性"/>
-        <Activity Name="查找相对元素"  Icon="Resources/Find/FindReEle.png" TypeOf="RPA.UIAutomation.Activities.Find.FindReEle,RPA.UIAutomation.Activities"        ToolTip="使用相对于固定元素的位置搜索UI元素。当可靠的选择器不可用时，应该使用它"/>
-        <Activity Name="获取根元素"    Icon="Resources/Find/GetAncestor.png" TypeOf="RPA.UIAutomation.Activities.Find.GetAncestor,RPA.UIAutomation.Activities"       ToolTip="检索获取指定UI元素的祖先UI元素"/>
-        <Activity Name="屏幕选择UI"    Icon="Resources/Find/IndicateScreen.png" TypeOf="RPA.UIAutomation.Activities.Find.IndicateScreen,RPA.UIAutomation.Activities" ToolTip="允许用户在运行工作流程时在屏幕上选择UI元素或区域"/>
-        <Activity Name="等待元素消失"  Icon="Resources/Find/EleVanish.png" TypeOf="RPA.UIAutomation.Activities.Find.EleVanish,RPA.UIAutomation.Activities"           ToolTip="等待指定的UI元素从屏幕上消失"/>
+      <Group Name="Find">
+        <Activity Name="UIElementExists"  Icon="Resources/Find/EleExists.png" TypeOf="RPA.UIAutomation.Activities.Find.EleExists,RPA.UIAutomation.Activities"           ToolTip="Enables you to verify that the UI element is present even if it is not visible"/>
+        <Activity Name="UIElementScope"    Icon="Resources/Find/EleScope.png" TypeOf="RPA.UIAutomation.Activities.Find.EleScope,RPA.UIAutomation.Activities"             ToolTip="a container that allows you to attach to an existing UI element and perform multiple operations on it"/>
+        <Activity Name="FindChildren"  Icon="Resources/Find/FindChildren.png" TypeOf="RPA.UIAutomation.Activities.Find.FindChildren,RPA.UIAutomation.Activities"     ToolTip="Retrieve a collection of child UI elements based on the specified scope and filter criteria"/>
+        <Activity Name="Find UI elements"    Icon="Resources/Find/FindEle.png" TypeOf="RPA.UIAutomation.Activities.Find.FindEle,RPA.UIAutomation.Activities"               ToolTip="Wait for the specified UI element to appear on the screen (in the foreground) and return it as a UiElement variable.  If you want to find out if an element is enabled, use an activity such as Get Attribute or Wait Attribute and the aastate attribute."/>
+        <Activity Name="Find relative elements"  Icon="Resources/Find/FindReEle.png" TypeOf="RPA.UIAutomation.Activities.Find.FindReEle,RPA.UIAutomation.Activities"        ToolTip="Search for UI elements using locations relative to fixed elements.  It should be used when a reliable selector is not available"/>
+        <Activity Name="Get the root element"    Icon="Resources/Find/GetAncestor.png" TypeOf="RPA.UIAutomation.Activities.Find.GetAncestor,RPA.UIAutomation.Activities"       ToolTip="Retrieve the ancestor UI element that gets the specified UI element"/>
+        <Activity Name="Screen selection UI"    Icon="Resources/Find/IndicateScreen.png" TypeOf="RPA.UIAutomation.Activities.Find.IndicateScreen,RPA.UIAutomation.Activities" ToolTip="Allow users to select UI elements or regions on the screen when running a workflow"/>
+        <Activity Name="Waiting for element to disappear"  Icon="Resources/Find/EleVanish.png" TypeOf="RPA.UIAutomation.Activities.Find.EleVanish,RPA.UIAutomation.Activities"           ToolTip="Waiting for the specified UI element to disappear from the screen"/>
       </Group>
-      <Group Name="属性">
-        <Activity Name="获取属性" Icon="Resources/Attribute/GetAttr.png" TypeOf="RPA.UIAutomation.Activities.Attribute.GetAttr,RPA.UIAutomation.Activities" ToolTip="检索UI元素的指定属性的值"/>
-        <Activity Name="等待属性" Icon="Resources/Attribute/WaitAttr.png" TypeOf="RPA.UIAutomation.Activities.Attribute.WaitAttr,RPA.UIAutomation.Activities" ToolTip="等待UI元素属性的值等于指定字符串"/>
-        <Activity Name="获取坐标" Icon="Resources/Attribute/GetPos.png" TypeOf="RPA.UIAutomation.Activities.Attribute.GetPos,RPA.UIAutomation.Activities" ToolTip="检索指定UI元素的边界矩形"/>
-        <Activity Name="设置剪裁区域" Icon="Resources/Attribute/SetClipRegion.png" TypeOf="RPA.UIAutomation.Activities.Attribute.SetClipRegion,RPA.UIAutomation.Activities" ToolTip="设置UI元素的剪切区域"/>
-        <Activity Name="截图" Icon="Resources/Attribute/TakeScreenShot.png" TypeOf="RPA.UIAutomation.Activities.Attribute.TakeScreenShot,RPA.UIAutomation.Activities" ToolTip="获取指定UI元素的屏幕截图"/>
-      </Group>
-    </Group>
-    <Group Name="文本">
-      <Group Name="鼠标">
-        <Activity Name="点击文本" Icon="Resources/Text/click.png" TypeOf="RPA.UIAutomation.Activities.Text.ClickTextActivity,RPA.UIAutomation.Activities" ToolTip="在UI元素中检索指定的字符串，并点击它"/>
-        <Activity Name="双击文本" Icon="Resources/Text/click.png" TypeOf="RPA.UIAutomation.Activities.Text.DoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="在UI元素中检索指定的字符串，并双击它"/>
-        <Activity Name="悬浮文本" Icon="Resources/Text/hower.png" TypeOf="RPA.UIAutomation.Activities.Text.HoverTextActivity,RPA.UIAutomation.Activities" ToolTip="在UI元素中检索指定的字符串，并悬停在它上面"/>
-      </Group>
-      <Group Name="屏幕抓取">
-        <Activity Name="提取结构化数据" Icon="Resources/Text/extract.png" TypeOf="RPA.UIAutomation.Activities.Text.ExtractDataActivity,RPA.UIAutomation.Activities" ToolTip="从指定的web页面提取数据。您可以通过在属性面板的ExtractMetadata字段中提供XML字符串来指定要提取哪些信息。通过使用数据抓取向导，可以使用设置的所有属性轻松生成。"/>
-        <Activity Name="查找字符串位置" Icon="Resources/Text/find.png" TypeOf="RPA.UIAutomation.Activities.Text.FindPositionActivity,RPA.UIAutomation.Activities" ToolTip="在UI元素中搜索给定的字符串，并返回另一个UI元素，该元素将剪切区域设置为该字符串的屏幕位置。"/>
-        <Activity Name="获取全文本" Icon="Resources/Text/gettext.png" TypeOf="RPA.UIAutomation.Activities.Text.GetFullTextActivity,RPA.UIAutomation.Activities" ToolTip="使用全文屏幕抓取方法从指定的UI元素中提取字符串及其信息。在执行屏幕抓取时，还可以自动生成此活动以及容器。"/>
-        <Activity Name="获取可视化文本" Icon="Resources/Text/gettext.png" TypeOf="RPA.UIAutomation.Activities.Text.GetVisibleTextActivity,RPA.UIAutomation.Activities" ToolTip="使用本机屏幕抓取方法从指定的UI元素中提取字符串及其信息。在执行屏幕抓取时，还可以自动生成此活动以及容器。"/>
-      </Group>
-      <Group Name="查找">
-        <Activity Name="查找文本" Icon="Resources/Text/exist.png" TypeOf="RPA.UIAutomation.Activities.Text.FindTextActivity,RPA.UIAutomation.Activities" ToolTip="检查是否在给定的UI元素中找到文本"/>
+      <Group Name="Attributes">
+        <Activity Name="Get attribute" Icon="Resources/Attribute/GetAttr.png" TypeOf="RPA.UIAutomation.Activities.Attribute.GetAttr,RPA.UIAutomation.Activities" ToolTip="Retrieve the value of the specified property of the UI element"/>
+        <Activity Name="Waiting attribute" Icon="Resources/Attribute/WaitAttr.png" TypeOf="RPA.UIAutomation.Activities.Attribute.WaitAttr,RPA.UIAutomation.Activities" ToolTip="Waiting for the value of the UI element property to be equal to the specified string"/>
+        <Activity Name="Get coordinates" Icon="Resources/Attribute/GetPos.png" TypeOf="RPA.UIAutomation.Activities.Attribute.GetPos,RPA.UIAutomation.Activities" ToolTip="Retrieve the bounding rectangle of the specified UI element"/>
+        <Activity Name="Set the crop area" Icon="Resources/Attribute/SetClipRegion.png" TypeOf="RPA.UIAutomation.Activities.Attribute.SetClipRegion,RPA.UIAutomation.Activities" ToolTip="Set the clipping area of ​​the UI element"/>
+        <Activity Name="Screenshot" Icon="Resources/Attribute/TakeScreenShot.png" TypeOf="RPA.UIAutomation.Activities.Attribute.TakeScreenShot,RPA.UIAutomation.Activities" ToolTip="Get a screenshot of the specified UI element"/>
       </Group>
     </Group>
-    <Group Name="Window窗口">
-      <Activity Name="关闭窗口" Icon="Resources/Window/WindowClose.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowClose,RPA.UIAutomation.Activities" ToolTip="关闭指示的窗口"/>
-      <Activity Name="活动窗口" Icon="Resources/Window/WindowActive.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowActive,RPA.UIAutomation.Activities" ToolTip="检索当前活动窗口，并允许您在其中执行多个操作"/>
-      <Activity Name="窗口最大化" Icon="Resources/Window/WindowMaxi.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowMaxi,RPA.UIAutomation.Activities" ToolTip="最大化指示的窗口"/>
-      <Activity Name="窗口最小化" Icon="Resources/Window/WindowMin.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowMin,RPA.UIAutomation.Activities" ToolTip="最小化指示的窗口"/>
-      <Activity Name="窗口隐藏" Icon="Resources/Window/WindowHide.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowHide,RPA.UIAutomation.Activities" ToolTip="隐藏指示的窗口，使窗口完全不可见"/>
-      <Activity Name="窗口显示" Icon="Resources/Window/WindowShow.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowShow,RPA.UIAutomation.Activities" ToolTip="显示并激活指定的窗口"/>
-      <Activity Name="恢复窗口" Icon="Resources/Window/WindowRestore.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowRestore,RPA.UIAutomation.Activities" ToolTip="将指定窗口恢复为原始大小和位置"/>
-      <Activity Name="移动窗口" Icon="Resources/Window/WindowMove.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowMove,RPA.UIAutomation.Activities" ToolTip="更改指示窗口的位置和尺寸"/>
-      <Activity Name="附加窗口" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="可以附加到已打开的窗口并在其中执行多个操作的容器，使用Desktop记录器时也会自动生成此活动"/>
-      <Activity Name="查找窗口" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="查找指定的窗口"/>
+    <Group Name="text">
+      <Group Name="Mouse">
+        <Activity Name="Click text" Icon="Resources/Text/click.png" TypeOf="RPA.UIAutomation.Activities.Text.ClickTextActivity,RPA.UIAutomation.Activities" ToolTip="Retrieve the specified string in the UI element and click on it"/>
+        <Activity Name="Double click on the text" Icon="Resources/Text/click.png" TypeOf="RPA.UIAutomation.Activities.Text.DoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="Retrieve the specified string in the UI element and double click on it"/>
+        <Activity Name="Floating text" Icon="Resources/Text/hower.png" TypeOf="RPA.UIAutomation.Activities.Text.HoverTextActivity,RPA.UIAutomation.Activities" ToolTip="Retrieve the specified string in the UI element and hover over it"/>
+      </Group>
+      <Group Name="Screen capture">
+        <Activity Name="Extract structured data" Icon="Resources/Text/extract.png" TypeOf="RPA.UIAutomation.Activities.Text.ExtractDataActivity,RPA.UIAutomation.Activities" ToolTip="Extract data from the specified web page.  You can specify which information to extract by providing an XML string in the ExtractMetadata field of the properties panel.  By using the Data Crawl Wizard, you can easily generate with all the properties you set."/>
+        <Activity Name="Find string position" Icon="Resources/Text/find.png" TypeOf="RPA.UIAutomation.Activities.Text.FindPositionActivity,RPA.UIAutomation.Activities" ToolTip="Searches for a given string in the UI element and returns another UI element that sets the clipping region to the screen position of the string."/>
+        <Activity Name="Get full text" Icon="Resources/Text/gettext.png" TypeOf="RPA.UIAutomation.Activities.Text.GetFullTextActivity,RPA.UIAutomation.Activities" ToolTip="Use the full-text screen fetch method to extract strings and their information from the specified UI elements.  This activity and container can also be automatically generated when performing a screen capture."/>
+        <Activity Name="Get visual text" Icon="Resources/Text/gettext.png" TypeOf="RPA.UIAutomation.Activities.Text.GetVisibleTextActivity,RPA.UIAutomation.Activities" ToolTip="Use the native screen fetch method to extract strings and their information from the specified UI elements.  This activity and container can also be automatically generated when performing a screen capture."/>
+      </Group>
+      <Group Name="Find">
+        <Activity Name="Find text" Icon="Resources/Text/exist.png" TypeOf="RPA.UIAutomation.Activities.Text.FindTextActivity,RPA.UIAutomation.Activities" ToolTip="Check if the text is found in the given UI element"/>
+      </Group>
     </Group>
-    <Group Name="浏览器">
-      <Activity Name="打开浏览器" Icon="Resources/Browser/OpenBrowser.png"   TypeOf="RPA.UIAutomation.Activities.Browser.OpenBrowser,RPA.UIAutomation.Activities" ToolTip="在指定的URL上打开浏览器并在其中执行多个活动"/>
-      <Activity Name="附加浏览器" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.AttachBrowser,RPA.UIAutomation.Activities" ToolTip="附加到已打开的浏览器并在其中执行多个操作"/>
-      <Activity Name="获取新页面" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.NewBrowser,RPA.UIAutomation.Activities" ToolTip="获取最新打开的浏览器页面，需要配合打开浏览器
-                或附加浏览器在活动流程中使用,以获得跳转的新标签页面"/>
-      <Activity Name="回退"       Icon="Resources/Browser/GoBack.png"        TypeOf="RPA.UIAutomation.Activities.Browser.GoBack,RPA.UIAutomation.Activities" ToolTip="返回指定浏览器的历史列表"/>
-      <Activity Name="前进"       Icon="Resources/Browser/GoForward.png"     TypeOf="RPA.UIAutomation.Activities.Browser.GoForward,RPA.UIAutomation.Activities" ToolTip="在指定浏览器的历史列表中前进"/>
-      <Activity Name="导航"       Icon="Resources/Browser/NavigateTo.png"    TypeOf="RPA.UIAutomation.Activities.Browser.NavigateTo,RPA.UIAutomation.Activities" ToolTip="将浏览器导航到指定的URL"/>
-      <Activity Name="刷新"       Icon="Resources/Browser/RefreshBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.Refresh,RPA.UIAutomation.Activities" ToolTip="重新加载当前在指定浏览器中显示的网页"/>
-      <Activity Name="主页"       Icon="Resources/Browser/GoHome.png"        TypeOf="RPA.UIAutomation.Activities.Browser.GoHome,RPA.UIAutomation.Activities" ToolTip="导航到当前主页或开始页面"/>
-      <Activity Name="关闭页面"   Icon="Resources/Browser/CloseTab.png"      TypeOf="RPA.UIAutomation.Activities.Browser.CloseTab,RPA.UIAutomation.Activities" ToolTip="关闭浏览器页面"/>
-      <Activity Name="注入JS脚本" Icon="Resources/Browser/InsertJS.png"      TypeOf="RPA.UIAutomation.Activities.Browser.InsertJS,RPA.UIAutomation.Activities" ToolTip="在与UiElement对应的网页的上下文中执行JavaScript代码"/>
-      <Activity Name="设置Web属性" Icon="Resources/Browser/SetWebAttr.png"   TypeOf="RPA.UIAutomation.Activities.Browser.SetWebAttr,RPA.UIAutomation.Activities" ToolTip="设置Input的值"/>
+    <Group Name="Window">
+      <Activity Name="Close the window" Icon="Resources/Window/WindowClose.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowClose,RPA.UIAutomation.Activities" ToolTip="Close the indicated window"/>
+      <Activity Name="Active window" Icon="Resources/Window/WindowActive.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowActive,RPA.UIAutomation.Activities" ToolTip="Retrieve the current active window and allow you to perform multiple actions in it"/>
+      <Activity Name="Window maximization" Icon="Resources/Window/WindowMaxi.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowMaxi,RPA.UIAutomation.Activities" ToolTip="Window that maximizes the indication"/>
+      <Activity Name="Window minimization" Icon="Resources/Window/WindowMin.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowMin,RPA.UIAutomation.Activities" ToolTip="Minimize the indicated window"/>
+      <Activity Name="Window hiding" Icon="Resources/Window/WindowHide.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowHide,RPA.UIAutomation.Activities" ToolTip="Hide the indicated window to make the window completely invisible"/>
+      <Activity Name="Window display" Icon="Resources/Window/WindowShow.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowShow,RPA.UIAutomation.Activities" ToolTip="Display and activate the specified window"/>
+      <Activity Name="Restore window" Icon="Resources/Window/WindowRestore.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowRestore,RPA.UIAutomation.Activities" ToolTip="Restore the specified window to its original size and position"/>
+      <Activity Name="Moving window" Icon="Resources/Window/WindowMove.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowMove,RPA.UIAutomation.Activities" ToolTip="Change the position and size of the indicator window"/>
+      <Activity Name="Attach window" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="A container that can be attached to an open window and perform multiple actions in it, which is also automatically generated when using the Desktop logger"/>
+      <Activity Name="Search window" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="Find the specified window"/>
+    </Group>
+    <Group Name="Browser">
+      <Activity Name="Open browser" Icon="Resources/Browser/OpenBrowser.png"   TypeOf="RPA.UIAutomation.Activities.Browser.OpenBrowser,RPA.UIAutomation.Activities" ToolTip="Open a browser on the specified URL and execute multiple activities in it"/>
+      <Activity Name="Additional browser" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.AttachBrowser,RPA.UIAutomation.Activities" ToolTip="Attach to an open browser and perform multiple actions in it"/>
+      <Activity Name="Get new page" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.NewBrowser,RPA.UIAutomation.Activities" ToolTip="Get the newly opened browser page, you need to cooperate to open the browser
+                Or attach a browser to use in the event flow to get a new tab page for a jump"/>
+      <Activity Name="Go Back"       Icon="Resources/Browser/GoBack.png"        TypeOf="RPA.UIAutomation.Activities.Browser.GoBack,RPA.UIAutomation.Activities" ToolTip="Returns the history list of the specified browser"/>
+      <Activity Name="Go Forward"       Icon="Resources/Browser/GoForward.png"     TypeOf="RPA.UIAutomation.Activities.Browser.GoForward,RPA.UIAutomation.Activities" ToolTip="Advance in the history list of the specified browser"/>
+      <Activity Name="Navigation"       Icon="Resources/Browser/NavigateTo.png"    TypeOf="RPA.UIAutomation.Activities.Browser.NavigateTo,RPA.UIAutomation.Activities" ToolTip="Navigate the browser to the specified URL"/>
+      <Activity Name="Refresh"       Icon="Resources/Browser/RefreshBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.Refresh,RPA.UIAutomation.Activities" ToolTip="Reload the page currently displayed in the specified browser"/>
+      <Activity Name="Homepage"       Icon="Resources/Browser/GoHome.png"        TypeOf="RPA.UIAutomation.Activities.Browser.GoHome,RPA.UIAutomation.Activities" ToolTip="Navigate to the current home page or start page"/>
+      <Activity Name="Close page"   Icon="Resources/Browser/CloseTab.png"      TypeOf="RPA.UIAutomation.Activities.Browser.CloseTab,RPA.UIAutomation.Activities" ToolTip="Close the browser page"/>
+      <Activity Name="Inject JS script" Icon="Resources/Browser/InsertJS.png"      TypeOf="RPA.UIAutomation.Activities.Browser.InsertJS,RPA.UIAutomation.Activities" ToolTip="Execute JavaScript code in the context of a web page corresponding to UiElement"/>
+      <Activity Name="Set web properties" Icon="Resources/Browser/SetWebAttr.png"   TypeOf="RPA.UIAutomation.Activities.Browser.SetWebAttr,RPA.UIAutomation.Activities" ToolTip="Set the value of Input"/>
     </Group>
   </Group>
 </activity.config>

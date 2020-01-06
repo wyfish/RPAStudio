@@ -29,16 +29,5 @@ namespace RPAStudio.Properties
             return (byte[])value;
         }
 
-        internal static string GetResString(string key)
-        {
-            string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            // Only 'zh' and 'ja' localizations are available. Others will be shown in English.
-            if (isoCulture.Equals("zh") || isoCulture.Equals("ja"))
-            {
-                return Resources.ResourceManager.GetString(key, CultureInfo.CurrentCulture);
-            }
-            return Resources.ResourceManager.GetString(key, new CultureInfo("en"));
-        }
-
     }
 }

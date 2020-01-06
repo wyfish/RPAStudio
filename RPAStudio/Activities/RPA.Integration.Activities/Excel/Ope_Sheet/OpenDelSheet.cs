@@ -18,20 +18,20 @@ namespace RPA.Integration.Activities.ExcelPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Word/create.png"; } }
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
         [OverloadGroup("SheetName")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> SheetName
         { get; set; }
 
 
         InArgument<Int32> _SheetIndex;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [OverloadGroup("SheetIndex")]
         [RequiredArgument]
-        [DisplayName("工作表次序")]
+        [Localize.LocalizedDisplayName("DisplayName40")] //工作表次序 //Worksheet order //ワークシートの順序
         [Browsable(true)]
         public InArgument<Int32> SheetIndex
         {
@@ -52,8 +52,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         FuncOptions _FuncOption = (FuncOptions)1;
-        [Category("选项")]
-        [DisplayName("功能选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName41")] //功能选项 //Function option //機能オプション
         [Browsable(true)]
         public FuncOptions FuncOption
         {

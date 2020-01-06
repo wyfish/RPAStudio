@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+    <Group Name="アプリケーション統合">
+      <Group Name="Word">
+        <Group Name="処理">
+          <Activity Name="ドキュメントを開く/ドキュメントを保存"  Icon="Resources/Word/create.png" TypeOf="RPA.Integration.Activities.WordPlugins.WordCreate,RPA.Integration.Activities" ToolTip="ローカルのWord文書/新しいWord文書を開き、保存/名前を付けて保存"/>
+        </Group>
+        <Group Name="書き込み">
+          <Activity Name="テキストを書く"       Icon="Resources/Word/text.png"  TypeOf="RPA.Integration.Activities.WordPlugins.WriteText,RPA.Integration.Activities" ToolTip="現在のWord文書のカーソル位置にテキストを書き込む"/>
+          <Activity Name="改行/改ページ"      Icon="Resources/Word/newline.png" TypeOf="RPA.Integration.Activities.WordPlugins.PageAndNewline,RPA.Integration.Activities" ToolTip="現在のWord文書のカーソル位置のキャリッジリターン行/新しいページ"/>
+          <Activity Name="書き込みファイル"       Icon="Resources/Word/writefile.png" TypeOf="RPA.Integration.Activities.WordPlugins.InsertFile,RPA.Integration.Activities" ToolTip="既存のローカルWord文書の内容全体を現在のWord文書カーソルに書き込みます"/>
+          <Activity Name="ブックマーク/ハイパーリンク/画像" Icon="Resources/Word/mark.png" TypeOf="RPA.Integration.Activities.WordPlugins.MarkLink,RPA.Integration.Activities" ToolTip="現在のWord文書のカーソル位置にブックマーク/ハイパーリンク/画像を挿入します"/>
+          <Activity Name="バックスペース削除"       Icon="Resources/Word/backspace.png" TypeOf="RPA.Integration.Activities.WordPlugins.Backspace,RPA.Integration.Activities" ToolTip="現在のWord文書のカーソル位置でのN回のバックスペース削除"/>
+          <Activity Name="コピー/貼り付け"      Icon="Resources/Word/copy.png" TypeOf="RPA.Integration.Activities.WordPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="コピー：通常は「カーソル移動」機能を使用して、選択したコンテンツをペーストボードにコピーしますペースト：ペーストボードのコンテンツを現在のWord文書のカーソル位置に書き込みます。"/>
+          <Activity Name="すべて選択"           Icon="Resources/Word/wholestory.png" TypeOf="RPA.Integration.Activities.WordPlugins.WholeStory,RPA.Integration.Activities" ToolTip="Word文書の内容全体を選択状態に設定します"/>
+          <Activity Name="ドキュメントのコンテンツを取得する"   Icon="Resources/Word/getcontent.png" TypeOf="RPA.Integration.Activities.WordPlugins.GetContent,RPA.Integration.Activities" ToolTip="Word文書のすべてのテキストを取得する"/>
+        </Group>
+        <Group Name="カーソル">
+          <Activity Name="上下左右に移動" Icon="Resources/Word/move1.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMove,RPA.Integration.Activities" ToolTip="現在のWordドキュメントカーソルが上下に移動し、コンテンツを選択するかどうかを選択します。"/>
+          <Activity Name="列アイテムの移動"     Icon="Resources/Word/move2.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMoveMenu,RPA.Integration.Activities" ToolTip="ドキュメントの開始/終了/次のページへのカーソル移動が含まれます"/>
+        </Group>
+        <Group Name="設定">
+          <Activity Name="フォントとページのプロパティ" Icon="Resources/Word/property.png" TypeOf="RPA.Integration.Activities.WordPlugins.Settings,RPA.Integration.Activities" ToolTip="現在のドキュメントの選択したテキストのフォント形式/ページ余白/ページ配置を設定します"/>
+        </Group>
+      </Group>
+
+      <Group Name="Excel">
+        <Group Name="処理">
+          <Activity Name="オープン/保存" Icon="Resources/Excel/create.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ExcelCreate,RPA.Integration.Activities" ToolTip="ローカルのExcelドキュメントを開くか、新しいExcelの新しいドキュメントを作成して、新しいパスとして保存/保存します"/>
+        </Group>
+        <Group Name="ワークシート">
+          <Activity Name="ワークシートを開く/削除する" Icon="Resources/Excel/opensheet.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.OpenDelSheet,RPA.Integration.Activities" ToolTip="現在アクティブなExcelドキュメントでブックを開く"/>
+          <Activity Name="新しいワークシート" Icon="Resources/Excel/newsheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.NewSheet,RPA.Integration.Activities" ToolTip="現在のExcelドキュメントで新しいブックを作成する"/>
+          <Activity Name="ワークシートの名前変更" Icon="Resources/Excel/renamesheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RenameSheet,RPA.Integration.Activities" ToolTip="現在のExcelドキュメント内の既存のブックの名前を変更する"/>
+          <Activity Name="ワークシート名のリスト" Icon="Resources/Excel/sheetnames.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetAllSheets,RPA.Integration.Activities" ToolTip="すべてのワークシート名のリストを取得します"/>
+        </Group>
+        <Group Name="セル">
+          <Activity Name="セルを結合する" Icon="Resources/Excel/cellmerge.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellMerge,RPA.Integration.Activities" ToolTip="セル結合操作のセル範囲を指定します"/>
+          <Activity Name="セルのコンテンツを取得する" Icon="Resources/Excel/getcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellGet,RPA.Integration.Activities" ToolTip="指定した場所のセルのテキストコンテンツを取得します"/>
+          <Activity Name="セルの内容を設定する" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="指定した場所のセルのテキストコンテンツを設定します"/>
+        </Group>
+        <Group Name="行/列">
+          <Activity Name="行/列を読み込む" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="データの行または列を読み取る"/>
+          <Activity Name="行/列をコピー" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="指定した位置でデータの行または列をコピーします"/>
+          <Activity Name="行/列操作" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="行または列の非表示/追加/削除操作を含める"/>
+          <Activity Name="行/列数をカウント" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="対応するワークブックの行/列の対応する総数を取得します。"/>
+        </Group>
+        <Group Name="エリア">
+          <Activity Name="エリアを削除"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="削除するセル範囲を指定します"/>
+          <Activity Name="貼り付け/コピー"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="選択した領域のデータがペーストボードにコピーされ、他の領域に書き込まれます。"/>
+          <Activity Name="エリアコンテンツを読む" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="指定したセル範囲をDataTable変数にコピーします"/>
+          <Activity Name="エリア書き込みコンテンツ" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="DataTable変数から指定された領域にデータを書き込みます"/>
+        </Group>
+        <Group Name="置換">
+          <Activity Name="検索して置換" Icon="Resources/Excel/replace.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.Replace,RPA.Integration.Activities" ToolTip="ワークシートの対応するコンテンツを見つけて、指定されたコンテンツに置き換えます"/>
+        </Group>
+        <Group Name="VBA">
+          <Activity Name="VBAを実行する" Icon="Resources/Excel/vba.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RunVBA,RPA.Integration.Activities"  ToolTip="EXCELに存在するVBAスクリプトを指定してパラメーターを実行し、戻り値を取得します"/>
+        </Group>
+        <Group Name="設定">
+          <Activity Name="エリア設定" Icon="Resources/Excel/setting.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AreaSetting,RPA.Integration.Activities"  ToolTip="選択したセル範囲のテキスト形式/行の高さ、列の幅/境界線/コンテンツの配置設定"/>
+        </Group>
+      </Group>
+      <Group Name="CSV">
+        <Activity Name="CSV読み取り" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadCSV, RPA.Integration.Activities" ToolTip="CVSファイルの内容をDataTable変数に読み取ります"/>
+        <Activity Name="CSV書き込み" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteCSV, RPA.Integration.Activities" ToolTip="DataTable変数の内容は、指定されたCVSファイルに書き込まれます。"/>
+        <Activity Name="CSV追加" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AppendCSV, RPA.Integration.Activities" ToolTip="DataTable変数の内容を指定されたCVSファイルの末尾に追加します"/>
+      </Group>
+      <Group Name="メール">
+        <Group Name="SMTP">
+          <Activity Name="SMTPメールを送信する" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendMail, RPA.Integration.Activities" ToolTip="SMTPプロトコルを使用してメールを送信する"/>
+        </Group>
+        <Group Name="POP3">
+          <Activity Name="POP3メールメッセージを取得する" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetPOP3Mail, RPA.Integration.Activities" ToolTip="指定されたサーバーからPOP3メールを取得します。"/>
+        </Group>
+        <Group Name="IMAP">
+          <Activity Name="IMAPメールを取得する" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetIMAPMail, RPA.Integration.Activities" ToolTip="指定されたサーバーからIMAPメールを取得する"/>
+          <Activity Name="モバイルIMAPメール" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveIMAPMail, RPA.Integration.Activities" ToolTip="IMAP電子メールを指定されたフォルダーに移動する"/>
+        </Group>
+        <Activity Name="メールを保存" Icon="Resources/Mail/SaveMail.png" TypeOf="RPA.Integration.Activities.Mail.SaveMail, RPA.Integration.Activities" ToolTip="指定したフォルダーにメールを保存します。 フォルダーが存在しない場合は作成します。 フォルダーが指定されていない場合、ダウンロードはプロジェクトフォルダーに保存されます。 指定したフォルダー内のメッセージと同じ名前でファイルを上書きします"/>
+        <Activity Name="添付ファイルを保存" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveMailAttachments, RPA.Integration.Activities" ToolTip="メールの添付ファイルを指定したフォルダーに保存します。 フォルダーが存在しない場合は作成します。 フォルダーが指定されていない場合、ダウンロードはプロジェクトフォルダーに保存されます。 指定したフォルダー内の添付ファイルと同じ名前のファイルを上書きします"/>
+        <Activity Name="画像を保存" Icon="Resources/Mail/GetImgs.png" TypeOf="RPA.Integration.Activities.Mail.GetMailImgs, RPA.Integration.Activities" ToolTip="指定したフォルダーにメール画像を保存します。 フォルダーが存在しない場合は作成します。 指定したフォルダー内の添付ファイルと同じ名前で画像を上書きします"/>
+        <Group Name="Outlook">
+          <Activity Name="Outlookメールを取得する" Icon="Resources/Mail/outlook.png" TypeOf="RPA.Integration.Activities.Mail.GetOutlookMailMessagesActivity, RPA.Integration.Activities" ToolTip="Outlookからメールを取得する"/>
+          <Activity Name="モバイルOutlookメール" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveOutlookMessageActivity, RPA.Integration.Activities" ToolTip="Outlookメールを指定されたフォルダーに移動する"/>
+          <Activity Name="Outlookメールに返信する" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageActivity, RPA.Integration.Activities" ToolTip="Outlookからのメールへの返信"/>
+          <Activity Name="Outlookメールを送信する" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendOutlookMailActivity, RPA.Integration.Activities" ToolTip="Outlookからメールを送信する"/>
+          <Activity Name="Outlookの添付ファイルを保存する" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveOutlookAttachementsActivity, RPA.Integration.Activities" ToolTip="Outlookメールに添付ファイルを保存する"/>
+          <Activity Name="Outlookメールを削除する" Icon="Resources/Mail/delete-mail.png" TypeOf="RPA.Integration.Activities.Mail.DeleteOutlookMailItemActivity, RPA.Integration.Activities" ToolTip="指定されたOutlook電子メールを削除し、削除されたメールディレクトリに配置します既に削除されたメールディレクトリにある場合は、完全に削除します。"/>
+          <Activity Name="Outlookメールをアーカイブする" Icon="Resources/Mail/archive-mail.png" TypeOf="RPA.Integration.Activities.Mail.ArchiveOutlookMailsActivity, RPA.Integration.Activities" ToolTip="Outlookメールをアーカイブする"/>
+          <Activity Name="Outlookキャッシュを空にする" Icon="Resources/Mail/clear-mail-cache.png" TypeOf="RPA.Integration.Activities.Mail.ClearOutlookCacheActivity, RPA.Integration.Activities" ToolTip="Outlookメールのキャッシュ情報を消去する"/>
+        </Group>
+      </Group>
+      <Group Name="データベース">
+        <Activity Name="接続"     Icon="Resources/Database/connect.png" TypeOf="RPA.Integration.Activities.Database.Connect, RPA.Integration.Activities" ToolTip="標準の接続文字列を使用してデータベースに接続します"/>
+        <Activity Name="接続を閉じる" Icon="Resources/Database/disconnect.png" TypeOf="RPA.Integration.Activities.Database.Disconnect, RPA.Integration.Activities" ToolTip="データベースへの接続を閉じます"/>
+        <Activity Name="結果のないクエリを実行する(Execute Non Qurery)" Icon="Resources/Database/noquery.png" TypeOf="RPA.Integration.Activities.Database.ExecNoQuery, RPA.Integration.Activities" ToolTip="データベースで非クエリステートメントを実行します。  UPDATE、INSERT、およびDELETEステートメントの場合、戻り値はコマンドの影響を受ける行の数です。 他のすべてのタイプのステートメントの場合、戻り値は-1です"/>
+        <Activity Name="クエリを実行する"        Icon="Resources/Database/query.png" TypeOf="RPA.Integration.Activities.Database.ExecQuery, RPA.Integration.Activities" ToolTip="データベースに対してクエリを実行し、クエリの結果を返します"/>
+        <Activity Name="ステートメントの挿入"       Icon="Resources/Database/insert.png" TypeOf="RPA.Integration.Activities.Database.ExecInsert, RPA.Integration.Activities" ToolTip="データベースに対してクエリを実行し、クエリの結果を返します"/>
+        <Activity Name="トランザクションを実行する(Transaction)"  Icon="Resources/Database/transaction.png" TypeOf="RPA.Integration.Activities.Database.Transaction, RPA.Integration.Activities" ToolTip="データベースに接続され、データベースとの複数のトランザクションを持つシーケンス。 UseTransactionがtrueに設定されている場合、含まれている操作は単一のトランザクションで実行され、失敗がない場合は最後に適用されます。
+                UseTransactionがfalseに設定されている場合、すべての操作は個別にコミットされます。このアクティビティの最後に、データベースへの接続が閉じられます。このアクティビティはDatabaseConnection変数を返します"/>
+      </Group>
+      <Group Name="FTP">
+        <Activity Name="FTPセッション"      Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.WithFtpSession, RPA.Integration.Activities" ToolTip="FTP接続とプロセス実行を実装する親ウィンドウ"/>
+        <Activity Name="ディレクトリが存在するかどうか" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DirectoryExists, RPA.Integration.Activities" ToolTip="FTPサーバーにディレクトリが存在するかどうかを確認します。"/>
+        <Activity Name="ファイルが存在するかどうか" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.FileExists, RPA.Integration.Activities" ToolTip="指定したファイルがFTPサーバーに存在するかどうかを確認してください。"/>
+        <Activity Name="削除する"         Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.Delete, RPA.Integration.Activities" ToolTip="指定した場所のファイルまたはフォルダーを削除します"/>
+        <Activity Name="ファイルのダウンロード"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DownloadFiles, RPA.Integration.Activities" ToolTip="指定されたディレクトリにファイルをダウンロードするFTPサーバー"/>
+        <Activity Name="ファイルをアップロード"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.UploadFiles, RPA.Integration.Activities" ToolTip="ローカルファイルをFTPサーバーにアップロードする"/>
+        <Activity Name="列挙オブジェクト"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.EnumerateObjects, RPA.Integration.Activities" ToolTip="列挙オブジェクト"/>
+      </Group>
+    </Group>
+</activity.config>

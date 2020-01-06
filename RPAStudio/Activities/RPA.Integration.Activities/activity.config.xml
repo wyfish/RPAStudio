@@ -1,114 +1,115 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--活动配置信息-->
 <activity.config>
-    <Group Name="应用程序集成">
+    <Group Name="Application integration">
       <Group Name="Word">
-        <Group Name="过程">
-          <Activity Name="文档打开/保存文档"  Icon="Resources/Word/create.png" TypeOf="RPA.Integration.Activities.WordPlugins.WordCreate,RPA.Integration.Activities" ToolTip="打开本地Word文档/新建Word新文档以及保存/另存为"/>
+        <Group Name="Process">
+          <Activity Name="Open/Save Document"  Icon="Resources/Word/create.png" TypeOf="RPA.Integration.Activities.WordPlugins.WordCreate,RPA.Integration.Activities" ToolTip="Open Local Word Document / New Word Document and Save / Save As"/>
         </Group>
-        <Group Name="写入">
-          <Activity Name="写入文本"       Icon="Resources/Word/text.png"  TypeOf="RPA.Integration.Activities.WordPlugins.WriteText,RPA.Integration.Activities" ToolTip="在当前Word文档光标位置写入文本"/>
-          <Activity Name="换行/分页"      Icon="Resources/Word/newline.png" TypeOf="RPA.Integration.Activities.WordPlugins.PageAndNewline,RPA.Integration.Activities" ToolTip="在当前Word文档光标位置回车换行/新页面"/>
-          <Activity Name="写入文件"       Icon="Resources/Word/writefile.png" TypeOf="RPA.Integration.Activities.WordPlugins.InsertFile,RPA.Integration.Activities" ToolTip="将已存在的本地Word文档全部内容写入当前Word文档光标处"/>
-          <Activity Name="书签/超链接/图片" Icon="Resources/Word/mark.png" TypeOf="RPA.Integration.Activities.WordPlugins.MarkLink,RPA.Integration.Activities" ToolTip="当前Word文档光标位置插入书签/超链接/图片"/>
-          <Activity Name="退格删除"       Icon="Resources/Word/backspace.png" TypeOf="RPA.Integration.Activities.WordPlugins.Backspace,RPA.Integration.Activities" ToolTip="在当前Word文档光标位置退格删除N次"/>
-          <Activity Name="复制/粘贴"      Icon="Resources/Word/copy.png" TypeOf="RPA.Integration.Activities.WordPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="复制:将选定内容复制到粘贴板，通常配合'光标移动'功能使用 粘贴:将粘贴板内容写入当前Word文档光标位置"/>
-          <Activity Name="全选"           Icon="Resources/Word/wholestory.png" TypeOf="RPA.Integration.Activities.WordPlugins.WholeStory,RPA.Integration.Activities" ToolTip="将Word文档全部内容设置为选取状态"/>
-          <Activity Name="获取文档内容"   Icon="Resources/Word/getcontent.png" TypeOf="RPA.Integration.Activities.WordPlugins.GetContent,RPA.Integration.Activities" ToolTip="获取Word文档中全部文字"/>
+        <Group Name="Write">
+          <Activity Name="Write text"       Icon="Resources/Word/text.png"  TypeOf="RPA.Integration.Activities.WordPlugins.WriteText,RPA.Integration.Activities" ToolTip="Write text at the current Word document cursor position"/>
+          <Activity Name="Line feed/page break"      Icon="Resources/Word/newline.png" TypeOf="RPA.Integration.Activities.WordPlugins.PageAndNewline,RPA.Integration.Activities" ToolTip="In the current Word document cursor position carriage return line / new page"/>
+          <Activity Name="Write file"       Icon="Resources/Word/writefile.png" TypeOf="RPA.Integration.Activities.WordPlugins.InsertFile,RPA.Integration.Activities" ToolTip="Write the entire contents of the existing local Word document to the current Word document cursor"/>
+          <Activity Name="Bookmark/Hyperlink/Picture" Icon="Resources/Word/mark.png" TypeOf="RPA.Integration.Activities.WordPlugins.MarkLink,RPA.Integration.Activities" ToolTip="Insert a bookmark/hyperlink/picture at the current Word document cursor position"/>
+          <Activity Name="Backspace deletion"       Icon="Resources/Word/backspace.png" TypeOf="RPA.Integration.Activities.WordPlugins.Backspace,RPA.Integration.Activities" ToolTip="Backspace deletion at the current Word document cursor position N times"/>
+          <Activity Name="Copy and Paste"      Icon="Resources/Word/copy.png" TypeOf="RPA.Integration.Activities.WordPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="Copy: Copy the selected content to the pasteboard, usually with the 'Cursor Move' function. Paste: Write the pasteboard content to the current Word document cursor position."/>
+          <Activity Name="Select all"           Icon="Resources/Word/wholestory.png" TypeOf="RPA.Integration.Activities.WordPlugins.WholeStory,RPA.Integration.Activities" ToolTip="Set the entire contents of the Word document to the selected state"/>
+          <Activity Name="Get document content"   Icon="Resources/Word/getcontent.png" TypeOf="RPA.Integration.Activities.WordPlugins.GetContent,RPA.Integration.Activities" ToolTip="Get all the text in a Word document"/>
         </Group>
-        <Group Name="光标">
-          <Activity Name="上下左右移动" Icon="Resources/Word/move1.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMove,RPA.Integration.Activities" ToolTip="当前Word文档光标上下移动并可选择内容是否选中"/>
-          <Activity Name="移动列项"     Icon="Resources/Word/move2.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMoveMenu,RPA.Integration.Activities" ToolTip="包含光标移动到文档开头/结尾/下一页功能"/>
+        <Group Name="Cursor">
+          <Activity Name="Move up and down, left and right" Icon="Resources/Word/move1.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMove,RPA.Integration.Activities" ToolTip="The current Word document cursor moves up and down and selects whether the content is selected."/>
+          <Activity Name="Moving column items"     Icon="Resources/Word/move2.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMoveMenu,RPA.Integration.Activities" ToolTip="Contains cursor movement to the beginning/end/next page of the document"/>
         </Group>
-        <Group Name="设置">
-          <Activity Name="字体与页面属性" Icon="Resources/Word/property.png" TypeOf="RPA.Integration.Activities.WordPlugins.Settings,RPA.Integration.Activities" ToolTip="设置当前文档选中文本的字体格式/页面边距/页面对齐方式"/>
+        <Group Name="Setting">
+          <Activity Name="Font and page properties" Icon="Resources/Word/property.png" TypeOf="RPA.Integration.Activities.WordPlugins.Settings,RPA.Integration.Activities" ToolTip="Set the font format/page margin/page alignment of the selected text of the current document"/>
         </Group>
       </Group>
 
       <Group Name="Excel">
-        <Group Name="过程">
-          <Activity Name="打开/保存" Icon="Resources/Excel/create.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ExcelCreate,RPA.Integration.Activities" ToolTip="打开本地Excel文档或新建Excel新文档并保存/另存为新路径"/>
+        <Group Name="Process">
+          <Activity Name="Open/Save" Icon="Resources/Excel/create.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ExcelCreate,RPA.Integration.Activities" ToolTip="Open a local Excel document or create a new Excel new document and save/save as a new path"/>
         </Group>
-        <Group Name="工作表">
-          <Activity Name="打开/删除工作表" Icon="Resources/Excel/opensheet.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.OpenDelSheet,RPA.Integration.Activities" ToolTip="打开当前活动Excel文档中的工作簿"/>
-          <Activity Name="新建工作表" Icon="Resources/Excel/newsheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.NewSheet,RPA.Integration.Activities" ToolTip="在当前Excel文档中新建工作簿"/>
-          <Activity Name="工作表重命名" Icon="Resources/Excel/renamesheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RenameSheet,RPA.Integration.Activities" ToolTip="当前Excel文档中对已存在的工作簿进行重命名"/>
-          <Activity Name="工作表名称列表" Icon="Resources/Excel/sheetnames.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetAllSheets,RPA.Integration.Activities" ToolTip="获取所有工作表名称列表"/>
+        <Group Name="Worksheet">
+          <Activity Name="Open/Delete worksheet" Icon="Resources/Excel/opensheet.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.OpenDelSheet,RPA.Integration.Activities" ToolTip="Open a workbook in the currently active Excel document"/>
+          <Activity Name="New worksheet" Icon="Resources/Excel/newsheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.NewSheet,RPA.Integration.Activities" ToolTip="Create a new workbook in the current Excel document"/>
+          <Activity Name="Worksheet rename" Icon="Resources/Excel/renamesheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RenameSheet,RPA.Integration.Activities" ToolTip="Rename an existing workbook in the current Excel document"/>
+          <Activity Name="List of worksheet names" Icon="Resources/Excel/sheetnames.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetAllSheets,RPA.Integration.Activities" ToolTip="Get a list of all worksheet names"/>
         </Group>
-        <Group Name="单元格">
-          <Activity Name="合并单元格" Icon="Resources/Excel/cellmerge.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellMerge,RPA.Integration.Activities" ToolTip="指定单元格区域进行单元格合并操作"/>
-          <Activity Name="获取单元格内容" Icon="Resources/Excel/getcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellGet,RPA.Integration.Activities" ToolTip="获取指定位置单元格的文本内容"/>
-          <Activity Name="设置单元格内容" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="设置指定位置单元格的文本内容"/>
+        <Group Name="Cell">
+          <Activity Name="Merge Cells" Icon="Resources/Excel/cellmerge.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellMerge,RPA.Integration.Activities" ToolTip="Specify a cell range for cell merge operations"/>
+          <Activity Name="Get cell content" Icon="Resources/Excel/getcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellGet,RPA.Integration.Activities" ToolTip="Get the text content of the specified location cell"/>
+          <Activity Name="Set cell content" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="Set the text content of the specified location cell"/>
         </Group>
-        <Group Name="行/列">
-          <Activity Name="读取行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="读取一行或一列数据"/>
-          <Activity Name="复制行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="在指定位置复制一行或一列数据"/>
-          <Activity Name="行/列操作" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="包括对行或列的隐藏/新增/删除操作"/>
-          <Activity Name="获取行/列数" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="获取相应相应工作簿行/列总数,遇空行/列截止"/>
+        <Group Name="Row/Column">
+          <Activity Name="Read Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="Read a row or column of data"/>
+          <Activity Name="Copy Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="Copy a row or column of data at a specified position"/>
+          <Activity Name="Row/Column operation" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="Including hidden/add/delete operations on rows or columns"/>
+          <Activity Name="Count Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="Get the corresponding total number of corresponding workbook rows / columns."/>
         </Group>
-        <Group Name="区域">
-          <Activity Name="删除区域"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="指定单元格区域进行删除操作"/>
-          <Activity Name="粘贴/复制"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="选定区域的数据复制到粘贴板写入到其它区域中"/>
-          <Activity Name="读取区域内容" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="指定单元格区域复制到DataTable变量中"/>
-          <Activity Name="区域写入内容" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="将DataTable变量中的数据写入到指定区域"/>
+        <Group Name="Region">
+          <Activity Name="Delete area"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="Specify a cell range to delete"/>
+          <Activity Name="Paste/copy"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="The data of the selected area is copied to the pasteboard and written to other areas."/>
+          <Activity Name="Read area content" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="Copy the specified range of cells to the DataTable variable"/>
+          <Activity Name="Area write content" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="Write data from the DataTable variable to the specified area"/>
         </Group>
-        <Group Name="替换">
-          <Activity Name="查找替换" Icon="Resources/Excel/replace.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.Replace,RPA.Integration.Activities" ToolTip="查找工作表相应内容并替换为指定内容"/>
+        <Group Name="Replace">
+          <Activity Name="Find and replace" Icon="Resources/Excel/replace.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.Replace,RPA.Integration.Activities" ToolTip="Find the corresponding content of the worksheet and replace it with the specified content"/>
         </Group>
         <Group Name="VBA">
-          <Activity Name="执行VBA" Icon="Resources/Excel/vba.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RunVBA,RPA.Integration.Activities"  ToolTip="指定EXCEL中存在的VBA脚本赋于参数运行并可取得返回值"/>
+          <Activity Name="Execute VBA" Icon="Resources/Excel/vba.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RunVBA,RPA.Integration.Activities"  ToolTip="Specify the VBA script existing in EXCEL to run the parameter and get the return value"/>
         </Group>
-        <Group Name="设置">
-          <Activity Name="区域设置" Icon="Resources/Excel/setting.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AreaSetting,RPA.Integration.Activities"  ToolTip="对选定单元格区域进行文字格式/行高列宽/边框/内容对齐方式设置"/>
+        <Group Name="Setting">
+          <Activity Name="Regional settings" Icon="Resources/Excel/setting.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AreaSetting,RPA.Integration.Activities"  ToolTip="Text format/row height column width/border/content alignment settings for selected range of cells"/>
         </Group>
       </Group>
       <Group Name="CSV">
-        <Activity Name="CSV读取" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadCSV, RPA.Integration.Activities" ToolTip="将CVS文件内容读取到DataTable变量中"/>
-        <Activity Name="CSV写入" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteCSV, RPA.Integration.Activities" ToolTip="DataTable变量中内容写入到指定CVS文件中"/>
-        <Activity Name="CSV追加" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AppendCSV, RPA.Integration.Activities" ToolTip="DataTable变量中内容追加到指定CVS文件末尾"/>
+        <Activity Name="CSV Read" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadCSV, RPA.Integration.Activities" ToolTip="Read the contents of the CVS file into the DataTable variable"/>
+        <Activity Name="CSV Write" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteCSV, RPA.Integration.Activities" ToolTip="The contents of the DataTable variable are written to the specified CVS file."/>
+        <Activity Name="CSV Append" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AppendCSV, RPA.Integration.Activities" ToolTip="Append the contents of the DataTable variable to the end of the specified CVS file"/>
       </Group>
       <Group Name="Mail">
         <Group Name="SMTP">
-          <Activity Name="发送SMTP邮件" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendMail, RPA.Integration.Activities" ToolTip="使用SMTP协议发送电子邮件"/>
+          <Activity Name="Send SMTP mail" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendMail, RPA.Integration.Activities" ToolTip="Send email using SMTP protocol"/>
         </Group>
         <Group Name="POP3">
-          <Activity Name="获取POP3邮件消息" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetPOP3Mail, RPA.Integration.Activities" ToolTip="从指定的服务器检索POP3电子邮件。"/>
+          <Activity Name="Get POP3 mail messages" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetPOP3Mail, RPA.Integration.Activities" ToolTip="Retrieve POP3 email from the specified server."/>
         </Group>
         <Group Name="IMAP">
-          <Activity Name="获取IMAP邮件" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetIMAPMail, RPA.Integration.Activities" ToolTip="从指定的服务器检索IMAP电子邮件"/>
-          <Activity Name="移动IMAP邮件" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveIMAPMail, RPA.Integration.Activities" ToolTip="将IMAP电子邮件移动到指定的文件夹"/>
+          <Activity Name="Get IMAP mail" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetIMAPMail, RPA.Integration.Activities" ToolTip="Retrieve IMAP email from the specified server"/>
+          <Activity Name="Mobile IMAP mail" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveIMAPMail, RPA.Integration.Activities" ToolTip="Move IMAP email to the specified folder"/>
         </Group>
-        <Activity Name="保存邮件" Icon="Resources/Mail/SaveMail.png" TypeOf="RPA.Integration.Activities.Mail.SaveMail, RPA.Integration.Activities" ToolTip="将电子邮件保存到指定的文件夹。如果该文件夹不存在，则创建该文件夹。如果未指定文件夹，则下载将保存在项目文件夹中。将覆盖指定文件夹中与邮件同名的文件"/>
-        <Activity Name="保存附件" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveMailAttachments, RPA.Integration.Activities" ToolTip="将邮件附件保存到指定的文件夹。如果该文件夹不存在，则创建该文件夹。如果未指定文件夹，则下载将保存在项目文件夹中。将覆盖指定文件夹中与附件同名的文件"/>
-        <Activity Name="保存图片" Icon="Resources/Mail/GetImgs.png" TypeOf="RPA.Integration.Activities.Mail.GetMailImgs, RPA.Integration.Activities" ToolTip="将邮件图片保存到指定的文件夹。如果该文件夹不存在，则创建该文件夹。将覆盖指定文件夹中与附件同名的图片"/>
+        <Activity Name="Save Mail" Icon="Resources/Mail/SaveMail.png" TypeOf="RPA.Integration.Activities.Mail.SaveMail, RPA.Integration.Activities" ToolTip="Save the email to the specified folder.  If the folder does not exist, create it.  If a folder is not specified, the download will be saved in the project folder.  Will overwrite the file with the same name as the message in the specified folder"/>
+        <Activity Name="Save Attachment" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveMailAttachments, RPA.Integration.Activities" ToolTip="Save the mail attachment to the specified folder.  If the folder does not exist, create it.  If a folder is not specified, the download will be saved in the project folder.  Will overwrite the file with the same name as the attachment in the specified folder"/>
+        <Activity Name="Save Picture" Icon="Resources/Mail/GetImgs.png" TypeOf="RPA.Integration.Activities.Mail.GetMailImgs, RPA.Integration.Activities" ToolTip="Save the mail picture to the specified folder.  If the folder does not exist, create it.  Will overwrite the image with the same name as the attachment in the specified folder"/>
         <Group Name="OutLook">
-          <Activity Name="获取Outlook邮件" Icon="Resources/Mail/outlook.png" TypeOf="RPA.Integration.Activities.Mail.GetOutlookMailMessagesActivity, RPA.Integration.Activities" ToolTip="从Outlook获取电子邮件"/>
-          <Activity Name="移动Outlook邮件" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveOutlookMessageActivity, RPA.Integration.Activities" ToolTip="将Outlook电子邮件移动到指定的文件夹"/>
-          <Activity Name="回复Outlook邮件" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageActivity, RPA.Integration.Activities" ToolTip="从Outlook回复电子邮件"/>
-          <Activity Name="发送Outlook邮件" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendOutlookMailActivity, RPA.Integration.Activities" ToolTip="从Outlook发送电子邮件"/>
-          <Activity Name="保存Outlook附件" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveOutlookAttachementsActivity, RPA.Integration.Activities" ToolTip="保存Outlook电子邮件的附件"/>
-          <Activity Name="删除Outlook邮件" Icon="Resources/Mail/delete-mail.png" TypeOf="RPA.Integration.Activities.Mail.DeleteOutlookMailItemActivity, RPA.Integration.Activities" ToolTip="删除指定的Outlook电子邮件,将其放入已删除邮件目录中，若是已经在已删除邮件目录中，则彻底删除"/>
-          <Activity Name="归档Outlook邮件" Icon="Resources/Mail/archive-mail.png" TypeOf="RPA.Integration.Activities.Mail.ArchiveOutlookMailsActivity, RPA.Integration.Activities" ToolTip="归档Outlook电子邮件"/>
-          <Activity Name="清空Outlook缓存" Icon="Resources/Mail/clear-mail-cache.png" TypeOf="RPA.Integration.Activities.Mail.ClearOutlookCacheActivity, RPA.Integration.Activities" ToolTip="清空Outlook电子邮件的缓存信息"/>
+          <Activity Name="Get Outlook mail" Icon="Resources/Mail/outlook.png" TypeOf="RPA.Integration.Activities.Mail.GetOutlookMailMessagesActivity, RPA.Integration.Activities" ToolTip="Get email from Outlook"/>
+          <Activity Name="Mobile Outlook mail" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveOutlookMessageActivity, RPA.Integration.Activities" ToolTip="Move Outlook emails to the specified folder"/>
+          <Activity Name="Reply to Outlook email" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageActivity, RPA.Integration.Activities" ToolTip="Reply to email from Outlook"/>
+          <Activity Name="Send Outlook mail" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendOutlookMailActivity, RPA.Integration.Activities" ToolTip="Send an email from Outlook"/>
+          <Activity Name="Save Outlook attachments" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveOutlookAttachementsActivity, RPA.Integration.Activities" ToolTip="Save attachments to Outlook emails"/>
+          <Activity Name="Delete Outlook mail" Icon="Resources/Mail/delete-mail.png" TypeOf="RPA.Integration.Activities.Mail.DeleteOutlookMailItemActivity, RPA.Integration.Activities" ToolTip="Delete the specified Outlook email and put it in the deleted mail directory. If it is already in the deleted mail directory, delete it completely."/>
+          <Activity Name="Archive Outlook mail" Icon="Resources/Mail/archive-mail.png" TypeOf="RPA.Integration.Activities.Mail.ArchiveOutlookMailsActivity, RPA.Integration.Activities" ToolTip="Archive Outlook emails"/>
+          <Activity Name="Empty the Outlook cache" Icon="Resources/Mail/clear-mail-cache.png" TypeOf="RPA.Integration.Activities.Mail.ClearOutlookCacheActivity, RPA.Integration.Activities" ToolTip="Clear cached information for Outlook emails"/>
         </Group>
       </Group>
-      <Group Name="数据库">
-        <Activity Name="连接"     Icon="Resources/Database/connect.png" TypeOf="RPA.Integration.Activities.Database.Connect, RPA.Integration.Activities" ToolTip="使用标准连接字符串连接到数据库"/>
-        <Activity Name="关闭连接" Icon="Resources/Database/disconnect.png" TypeOf="RPA.Integration.Activities.Database.Disconnect, RPA.Integration.Activities" ToolTip="关闭与数据库的连接"/>
-        <Activity Name="执行无结果集查询(Execute Non Qurery)" Icon="Resources/Database/noquery.png" TypeOf="RPA.Integration.Activities.Database.ExecNoQuery, RPA.Integration.Activities" ToolTip="在数据库上执行非查询语句。对于UPDATE，INSERT和DELETE语句，返回值是受命令影响的行数。对于所有其他类型的语句，返回值为-1"/>
-        <Activity Name="执行查询(Execute Query)"        Icon="Resources/Database/query.png" TypeOf="RPA.Integration.Activities.Database.ExecQuery, RPA.Integration.Activities" ToolTip="对数据库执行查询并返回查询结果"/>
-        <Activity Name="插入语句(Insert)"       Icon="Resources/Database/insert.png" TypeOf="RPA.Integration.Activities.Database.ExecInsert, RPA.Integration.Activities" ToolTip="对数据库执行查询并返回查询结果"/>
-        <Activity Name="执行事务(Transaction)"  Icon="Resources/Database/transaction.png" TypeOf="RPA.Integration.Activities.Database.Transaction, RPA.Integration.Activities" ToolTip="连接到数据库并具有可以与数据库执行多个事务的Sequence。如果UseTransaction设置为true，则包含的操作将在单个事务中执行，如果没有任何失败，则在最后应用。
-                如果UseTransaction设置为false，则单独提交所有操作。此活动结束时，将关闭与数据库的连接。此活动返回DatabaseConnection变量"/>
+      <Group Name="Database">
+        <Activity Name="Connection"     Icon="Resources/Database/connect.png" TypeOf="RPA.Integration.Activities.Database.Connect, RPA.Integration.Activities" ToolTip="Connect to the database using a standard connection string"/>
+        <Activity Name="Close the connection" Icon="Resources/Database/disconnect.png" TypeOf="RPA.Integration.Activities.Database.Disconnect, RPA.Integration.Activities" ToolTip="Close the connection to the database"/>
+        <Activity Name="Perform a resultless query(Execute Non Qurery)" Icon="Resources/Database/noquery.png" TypeOf="RPA.Integration.Activities.Database.ExecNoQuery, RPA.Integration.Activities" ToolTip="Execute a non-query statement on the database.  For UPDATE, INSERT, and DELETE statements, the return value is the number of rows affected by the command.  For all other types of statements, the return value is -1"/>
+        <Activity Name="Execute Query"        Icon="Resources/Database/query.png" TypeOf="RPA.Integration.Activities.Database.ExecQuery, RPA.Integration.Activities" ToolTip="Execute a query against the database and return the results of the query"/>
+        <Activity Name="Insert statement (Insert)"       Icon="Resources/Database/insert.png" TypeOf="RPA.Integration.Activities.Database.ExecInsert, RPA.Integration.Activities" ToolTip="Execute a query against the database and return the results of the query"/>
+        <Activity Name="Execute transaction(Transaction)"  Icon="Resources/Database/transaction.png" TypeOf="RPA.Integration.Activities.Database.Transaction, RPA.Integration.Activities" ToolTip="A sequence connected to a database and having multiple transactions with the database. If UseTransaction is set to true, the contained operations will be performed in a single transaction, and if there are no failures, they will be applied last.
+                
+If UseTransaction is set to false, all operations are committed individually. At the end of this activity, the connection to the database will be closed. This activity returns the DatabaseConnection variable"/>
       </Group>
       <Group Name="FTP">
-        <Activity Name="FTP会话"      Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.WithFtpSession, RPA.Integration.Activities" ToolTip="实现FTP连接以及流程运行的父窗口"/>
-        <Activity Name="目录是否存在" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DirectoryExists, RPA.Integration.Activities" ToolTip="检查FTP服务器上是否存在某个目录"/>
-        <Activity Name="文件是否存在" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.FileExists, RPA.Integration.Activities" ToolTip="检查FTP服务器上是否存在指定文件"/>
-        <Activity Name="删除"         Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.Delete, RPA.Integration.Activities" ToolTip="删除指定位置的文件或文件夹"/>
-        <Activity Name="文件下载"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DownloadFiles, RPA.Integration.Activities" ToolTip="FTP服务器指定目录上下载文件"/>
-        <Activity Name="上传文件"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.UploadFiles, RPA.Integration.Activities" ToolTip="将本地文件上传到FTP服务器"/>
-        <Activity Name="枚举对象"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.EnumerateObjects, RPA.Integration.Activities" ToolTip="枚举对象"/>
+        <Activity Name="FTP session"      Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.WithFtpSession, RPA.Integration.Activities" ToolTip="The parent window that implements the FTP connection and the process run"/>
+        <Activity Name="Whether the directory exists" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DirectoryExists, RPA.Integration.Activities" ToolTip="Check if a directory exists on the FTP server."/>
+        <Activity Name="Whether the file exists" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.FileExists, RPA.Integration.Activities" ToolTip="Check if the specified file exists on the FTP server."/>
+        <Activity Name="Delete"         Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.Delete, RPA.Integration.Activities" ToolTip="Delete files or folders in the specified location"/>
+        <Activity Name="Document dowload"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DownloadFiles, RPA.Integration.Activities" ToolTip="FTP server to download files on the specified directory"/>
+        <Activity Name="Upload files"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.UploadFiles, RPA.Integration.Activities" ToolTip="Upload local files to an FTP server"/>
+        <Activity Name="Enumerate objects"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.EnumerateObjects, RPA.Integration.Activities" ToolTip="Enumeration object"/>
       </Group>
     </Group>
 </activity.config>

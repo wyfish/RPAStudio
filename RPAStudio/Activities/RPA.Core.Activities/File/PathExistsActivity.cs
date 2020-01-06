@@ -20,14 +20,14 @@ namespace RPA.Core.Activities.FileActivity
 
         [RequiredArgument]
         [Category("Input")]
-        [Description("要检查的完整路径。")]
+        [Localize.LocalizedDescription("Description97")] //要检查的完整路径。 //The full path to check. //チェックするフルパス。
         public InArgument<string> Path { get; set; }
 
         [Category("Input")]
         public int PathType { get; set; }
 
-        [Category("输出")]
-        [Description("声明是否找到文档或文件。")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description98")] //声明是否找到文档或文件。 //Declare whether a document or file is found. //ドキュメントまたはファイルが見つかったかどうかを宣言します。
         public OutArgument<Boolean> Exists { get; set; }
 
         static PathExistsActivity()

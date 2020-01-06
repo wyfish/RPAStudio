@@ -15,8 +15,8 @@ namespace RPA.Integration.Activities.WordPlugins
 
 
         InArgument<Int32> _OperateCount = 1;
-        [Category("选项")]
-        [DisplayName("分页/换行次数")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName136")] //分页/换行次数 //Pagination/line feeds //ページネーション/ラインフィード
         [Browsable(true)]
         public InArgument<Int32> OperateCount
         {
@@ -31,8 +31,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _PageBreak;
-        [Category("选项")]
-        [DisplayName("分页")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName137")] //分页 //Pagination //ページネーション
         [Browsable(true)]
         public bool PageBreak
         {
@@ -47,8 +47,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _NewLine;
-        [Category("选项")]
-        [DisplayName("换行")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName138")] //换行 //Wrap //ラップ
         [Browsable(true)]
         public bool NewLine
         {

@@ -22,7 +22,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
         [DisplayName("行号/列号")]
         [Browsable(true)]
@@ -38,7 +38,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
         [DisplayName("行/列")]
         [Browsable(true)]
@@ -47,8 +47,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get; set;
         }
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Description("为空代表当前活动工作表")]
         [Browsable(true)]
         public InArgument<string> SheetName
@@ -56,7 +56,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get; set;
         }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
         [DisplayName("行/列数据")]
         [Browsable(true)]

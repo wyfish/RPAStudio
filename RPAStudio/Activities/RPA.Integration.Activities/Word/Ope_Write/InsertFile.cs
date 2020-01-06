@@ -15,8 +15,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<string> _PathUrl;
-        [Category("选项")]
-        [DisplayName("文件路径")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [RequiredArgument]
         [Browsable(true)]
         public InArgument<string> PathUrl

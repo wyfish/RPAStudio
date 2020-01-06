@@ -13,26 +13,26 @@ namespace RPA.Integration.Activities.FTP
     public class UploadFiles : ContinuableAsyncCodeActivity
     {
         [RequiredArgument]
-        [Category("输入")]
-        [DisplayName("本地路径")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName47")] //本地路径 //Local path //ローカルパス
         public InArgument<string> LocalPath { get; set; }
 
         [RequiredArgument]
-        [Category("输入")]
-        [DisplayName("FTP路径")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName52")] //FTP路径 //FTP path //FTPパス
         public InArgument<string> RemotePath { get; set; }
 
 
-        [Category("选项")]
-        [DisplayName("包含子文件夹")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName49")] //包含子文件夹 //Include subfolders //サブフォルダーを含める
         public bool Recursive { get; set; }
 
-        [Category("选项")]
-        [DisplayName("创建")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName53")] //创建 //create //作成する
         public bool Create { get; set; }
 
-        [Category("选项")]
-        [DisplayName("覆盖")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName50")] //覆盖 //cover //カバー
         public bool Overwrite { get; set; }
 
         [Browsable(false)]

@@ -13,26 +13,26 @@ namespace RPA.Integration.Activities.FTP
     public class DownloadFiles : ContinuableAsyncCodeActivity
     {
         [RequiredArgument]
-        [Category("输入")]
-        [DisplayName("路径")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName45")] //路径 //path //パス
         public InArgument<string> RemotePath { get; set; }
 
 
         [RequiredArgument]
-        [Category("输入")]
-        [DisplayName("本地路径")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName47")] //本地路径 //Local path //ローカルパス
         public InArgument<string> LocalPath { get; set; }
 
-        [Category("选项")]
-        [DisplayName("创建文件夹")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName48")] //创建文件夹 //Create folder //フォルダーを作成
         public bool Recursive { get; set; }
 
-        [Category("选项")]
-        [DisplayName("包含子文件夹")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName49")] //包含子文件夹 //Include subfolders //サブフォルダーを含める
         public bool Create { get; set; }
 
-        [Category("选项")]
-        [DisplayName("覆盖")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName50")] //覆盖 //cover //カバー
         public bool Overwrite { get; set; }
 
         [Browsable(false)]

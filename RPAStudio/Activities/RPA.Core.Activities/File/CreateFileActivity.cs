@@ -18,17 +18,17 @@ namespace RPA.Core.Activities.FileActivity
         }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description1")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [RequiredArgument]
         [Category("File")]
-        [Description("要创建的文件的名称。")]
+        [Localize.LocalizedDescription("Description92")] //要创建的文件的名称。 //The name of the file to create. //作成するファイルの名前。
         public InArgument<string> Name { get; set; }
 
         [RequiredArgument]
         [Category("File")]
-        [Description("要创建的文件的完整路径。")]
+        [Localize.LocalizedDescription("Description93")] //要创建的文件的完整路径。 //The full path to the file to be created. //作成するファイルへのフルパス。
         public InArgument<string> Path { get; set; }
 
         [Browsable(false)]

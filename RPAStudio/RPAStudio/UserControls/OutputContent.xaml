@@ -23,11 +23,11 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Grid Width="25" Height="25" ToolTip="显示时间" >
+                <Grid Width="25" Height="25" x:Uid="ShowTimeStamp" ToolTip="显示时间" >
                     <libs:ColorButtonThreeState Command="{Binding ShowTimestampsCommand}" Visibility="{Binding IsShowTimestamps,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}" def_img="pack://application:,,,/Resources/Image/Output/timestamp.png" def="#c2c2c2"/>
                     <libs:ColorButtonThreeState Command="{Binding ShowTimestampsCommand}" Visibility="{Binding IsShowTimestamps,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" def_img="pack://application:,,,/Resources/Image/Output/timestamp.png" />
                 </Grid>
-                <Grid Height="25" ToolTip="错误" Margin="5,0,0,0">
+                <Grid Height="25" x:Uid="Error" ToolTip="错误" Margin="5,0,0,0">
                     <libs:ColorButtonThreeState Command="{Binding ShowErrorCommand}" Visibility="{Binding IsShowError,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"  def_img="pack://application:,,,/Resources/Image/Output/error.png" def="#c2c2c2">
                         <TextBlock Text="{Binding ErrorCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
@@ -35,7 +35,7 @@
                         <TextBlock Text="{Binding ErrorCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
                 </Grid>
-                <Grid Height="25" ToolTip="警告" Margin="5,0,0,0">
+                <Grid Height="25" x:Uid="Warning" ToolTip="警告" Margin="5,0,0,0">
                     <libs:ColorButtonThreeState Command="{Binding ShowWarningCommand}" Visibility="{Binding IsShowWarning,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"  def_img="pack://application:,,,/Resources/Image/Output/warning.png" def="#c2c2c2">
                         <TextBlock Text="{Binding WarningCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
@@ -43,7 +43,7 @@
                         <TextBlock Text="{Binding WarningCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
                 </Grid>
-                <Grid Height="25" ToolTip="信息" Margin="5,0,0,0">
+                <Grid Height="25" x:Uid="Information" ToolTip="信息" Margin="5,0,0,0">
                     <libs:ColorButtonThreeState Command="{Binding ShowInformationCommand}" Visibility="{Binding IsShowInformation,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"  def_img="pack://application:,,,/Resources/Image/Output/information.png" def="#c2c2c2">
                         <TextBlock Text="{Binding InformationCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
@@ -51,7 +51,7 @@
                         <TextBlock Text="{Binding InformationCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
                 </Grid>
-                <Grid Height="25" ToolTip="跟踪" Margin="5,0,0,0">
+                <Grid Height="25" x:Uid="Track" ToolTip="跟踪" Margin="5,0,0,0">
                     <libs:ColorButtonThreeState Command="{Binding ShowTraceCommand}" Visibility="{Binding IsShowTrace,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"  def_img="pack://application:,,,/Resources/Image/Output/trace.png" def="#c2c2c2">
                         <TextBlock Text="{Binding TraceCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
@@ -59,11 +59,11 @@
                         <TextBlock Text="{Binding TraceCount}" Margin="0,0,5,0" />
                     </libs:ColorButtonThreeState>
                 </Grid>
-                <libs:ColorButtonThreeState Margin="5,0,0,0" Width="25" Height="25" ToolTip="清空所有" Command="{Binding ClearAllCommand}" def_img="pack://application:,,,/Resources/Image/Output/clear-all.png" />
+                <libs:ColorButtonThreeState Margin="5,0,0,0" Width="25" Height="25" x:Uid="ClearAll" ToolTip="清空所有" Command="{Binding ClearAllCommand}" def_img="pack://application:,,,/Resources/Image/Output/clear-all.png" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" Focusable="True" >
-            <uc:SearchTextBoxControl HintText="搜索" SearchText="{Binding SearchText}" />
+            <uc:SearchTextBoxControl x:Uid="Search1" HintText="搜索" SearchText="{Binding SearchText}" />
         </Grid>
         <Grid Grid.Row="2" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
             <ListBox ItemsSource="{Binding OutputItems}" libs:ListBoxBehavior.ScrollOnNewItem="true" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionMode="Single" >
@@ -126,7 +126,7 @@
             </ListBox>
         </Grid>
         <Grid Grid.Row="2" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-            <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060">搜索结果为空</TextBlock>
+            <TextBlock x:Uid="SearchEmpty" FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060">搜索结果为空</TextBlock>
         </Grid>
     </Grid>
 </UserControl>

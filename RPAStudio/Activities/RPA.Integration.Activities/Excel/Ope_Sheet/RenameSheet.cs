@@ -18,9 +18,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/renamesheet.png"; } }
 
         InArgument<string> _SheetName;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("工作表新名称")]
+        [Localize.LocalizedDisplayName("DisplayName42")] //工作表新名称 //Worksheet new name //ワークシートの新しい名前
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public InArgument<string> SheetName
@@ -35,19 +35,19 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
         [OverloadGroup("SheetName")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> OldSheetName
         { get; set; }
 
         InArgument<Int32> _SheetIndex;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [OverloadGroup("SheetIndex")]
         [RequiredArgument]
-        [DisplayName("工作表次序")]
+        [Localize.LocalizedDisplayName("DisplayName40")] //工作表次序 //Worksheet order //ワークシートの順序
         [Browsable(true)]
         public InArgument<Int32> SheetIndex
         {

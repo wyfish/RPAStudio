@@ -17,8 +17,8 @@ namespace RPA.Integration.Activities.WordPlugins
         InArgument<string> _Pic;
         [RequiredArgument]
         [OverloadGroup("Picture")]
-        [Category("图片")]
-        [DisplayName("图片链接")]
+        [Localize.LocalizedCategory("Category26")] //图片 //Image //写真
+        [Localize.LocalizedDisplayName("DisplayName131")] //图片链接 //Image link //画像リンク
         [Browsable(true)]
         public InArgument<string> Pic
         {
@@ -32,8 +32,8 @@ namespace RPA.Integration.Activities.WordPlugins
         InArgument<string> _BookMark;
         [RequiredArgument]
         [OverloadGroup("BookMark")]
-        [Category("书签")]
-        [DisplayName("书签名称")]
+        [Localize.LocalizedCategory("Category27")] //书签 //Bookmark //しおり
+        [Localize.LocalizedDisplayName("DisplayName132")] //书签名称 //Bookmark name //ブックマーク名
         [Browsable(true)]
         public InArgument<string> BookMark
         {
@@ -46,8 +46,8 @@ namespace RPA.Integration.Activities.WordPlugins
         InArgument<string> _LinkName;
         [RequiredArgument]
         [OverloadGroup("Link")]
-        [Category("超链接")]
-        [DisplayName("超链接名称")]
+        [Localize.LocalizedCategory("Category28")] //超链接 //Hyperlinks //ハイパーリンク
+        [Localize.LocalizedDisplayName("DisplayName133")] //超链接名称 //Hyperlink name //ハイパーリンク名
         [Browsable(true)]
         public InArgument<string> LinkName
         {
@@ -58,8 +58,8 @@ namespace RPA.Integration.Activities.WordPlugins
         InArgument<string> _LinkMark;
         [RequiredArgument]
         [OverloadGroup("Link")]
-        [Category("超链接")]   
-        [DisplayName("超链接标签")]
+        [Localize.LocalizedCategory("Category28")] //超链接 //Hyperlinks //ハイパーリンク   
+        [Localize.LocalizedDisplayName("DisplayName134")] //超链接标签 //Hyperlink label //ハイパーリンクラベル
         [Browsable(true)]
         public InArgument<string> LinkMark
         {
@@ -70,8 +70,8 @@ namespace RPA.Integration.Activities.WordPlugins
         InArgument<string> _LinkAddr;
         [RequiredArgument]
         [OverloadGroup("Link")]
-        [Category("超链接")]
-        [DisplayName("超链接地址")]
+        [Localize.LocalizedCategory("Category28")] //超链接 //Hyperlinks //ハイパーリンク
+        [Localize.LocalizedDisplayName("DisplayName135")] //超链接地址 //Hyperlink address //ハイパーリンクアドレス
         [Browsable(true)]
         public InArgument<string> LinkAddr
         {

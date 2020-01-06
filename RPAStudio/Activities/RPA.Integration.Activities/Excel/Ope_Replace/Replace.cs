@@ -28,7 +28,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         [Category("工作表选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> SheetName
         {

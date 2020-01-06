@@ -16,8 +16,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Browsable(false)]
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/rangedelete.png"; } }
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> SheetName
         {
@@ -25,7 +25,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Category("单元格起始")]
-        [DisplayName("行")]
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
@@ -33,7 +33,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Category("单元格起始")]
-        [DisplayName("列")]
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -50,7 +50,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Category("单元格终点")]
-        [DisplayName("行")]
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_End
         {
@@ -58,7 +58,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Category("单元格终点")]
-        [DisplayName("列")]
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_End
         {
@@ -74,7 +74,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get; set;
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [DisplayName("ShiftCells")]
         [Browsable(true)]
         public bool ShiftCells
@@ -91,7 +91,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
             EntireColumn
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [DisplayName("ShiftCells")]
         [Browsable(true)]
         public ShiftTypes ShiftType

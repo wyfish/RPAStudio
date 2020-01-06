@@ -39,7 +39,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         InArgument<Int32> _DelayAfter = 3000;
         [Category("Common")]
-        [Description("执行活动后的延迟时间(以毫秒为单位)。默认时间为3000毫秒。")]
+        [Localize.LocalizedDescription("Description15")] //执行活动后的延迟时间(以毫秒为单位)。默认时间为3000毫秒。 //The delay in milliseconds after the activity is performed.  The default time is 3000 milliseconds. //アクティビティが実行された後のミリ秒単位の遅延。 デフォルトの時間は3000ミリ秒です。
         public InArgument<Int32> DelayAfter
         {
             get
@@ -54,7 +54,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         InArgument<Int32> _DelayBefore = 0;
         [Category("Common")]
-        [Description("延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为0毫秒。")]
+        [Localize.LocalizedDescription("Description16")] //延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为0毫秒。 //The time (in milliseconds) before the deferred activity begins any operation.  The default time is 0 milliseconds. //遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は0ミリ秒です。
         public InArgument<Int32> DelayBefore
         {
             get
@@ -68,8 +68,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<string> _PathUrl;
-        [Category("新建/打开文档选项")]
-        [DisplayName("文件路径")]
+        [Localize.LocalizedCategory("Category6")] //新建/打开文档选项 //New/Open Document Options //新規/開くドキュメントオプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public InArgument<string> PathUrl
@@ -86,8 +86,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         bool _NewDoc;
-        [Category("新建/打开文档选项")]
-        [DisplayName("是否创建新文档")]
+        [Localize.LocalizedCategory("Category6")] //新建/打开文档选项 //New/Open Document Options //新規/開くドキュメントオプション
+        [Localize.LocalizedDisplayName("DisplayName20")] //是否创建新文档 //Whether to create a new document //新しいドキュメントを作成するかどうか
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool NewDoc
@@ -103,8 +103,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         bool _IsVisible = true;
-        [Category("新建/打开文档选项")]
-        [DisplayName("流程是否可见")]
+        [Localize.LocalizedCategory("Category6")] //新建/打开文档选项 //New/Open Document Options //新規/開くドキュメントオプション
+        [Localize.LocalizedDisplayName("DisplayName21")] //流程是否可见 //Whether the process is visible //プロセスが見えるかどうか
         [Browsable(true)]
         public bool IsVisible
         {
@@ -114,8 +114,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         InArgument<string> _SavePathUrl;
-        [Category("保存选项")]
-        [DisplayName("文件路径")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [Browsable(true)]
         public InArgument<string> SavePathUrl
         {
@@ -130,8 +130,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         bool _IsExit = true;
-        [Category("保存选项")]
-        [DisplayName("程序是否退出")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName22")] //程序是否退出 //Whether the program exits //プログラムが終了するかどうか
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool IsExit
@@ -148,8 +148,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         bool _Save = true;
-        [Category("保存选项")]
-        [DisplayName("保存")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName23")] //保存 //save //保存する
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool Save
@@ -165,8 +165,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         bool _SaveAs;
-        [Category("保存选项")]
-        [DisplayName("另存为")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName24")] //另存为 //Save as //名前を付けて保存
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool SaveAs

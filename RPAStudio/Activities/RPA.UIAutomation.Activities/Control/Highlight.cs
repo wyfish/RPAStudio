@@ -15,34 +15,34 @@ namespace RPA.UIAutomation.Activities.Control
         [Browsable(false)]
         public string _DisplayName { get { return "Highlight"; } }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("颜色")]
+        [Localize.LocalizedDisplayName("DisplayName29")] //颜色 //Colour //色
         public InArgument<Color> Value { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("高亮时间(秒)")]
+        [Localize.LocalizedDisplayName("DisplayName30")] //高亮时间(秒) //Highlight time (seconds) //ハイライト時間（秒）
         public InArgument<Int32> HighlightTime { get; set; }
 
         [Browsable(false)]

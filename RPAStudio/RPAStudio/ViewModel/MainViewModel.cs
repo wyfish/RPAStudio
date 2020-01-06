@@ -88,6 +88,7 @@ namespace RPAStudio.ViewModel
             string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
             prefixTitle = isoCulture.Equals("zh") ? "RPA机器人流程自动化平台" : "RPA Robotic Process Automation Platform";
             _debugOrContinueWorkflowButtonToolTipProperty = P_Debug + "（F7）";
+            _debugOrContinueWorkflowButtonHeaderProperty = P_Debug;
         }
 
 
@@ -1566,7 +1567,8 @@ namespace RPAStudio.ViewModel
         /// </summary>
         public const string DebugOrContinueWorkflowButtonHeaderPropertyName = "DebugOrContinueWorkflowButtonHeader";
 
-        private string _debugOrContinueWorkflowButtonHeaderProperty = "调试";
+        //private string _debugOrContinueWorkflowButtonHeaderProperty = "调试";
+        private string _debugOrContinueWorkflowButtonHeaderProperty = "";
 
         /// <summary>
         /// Sets and gets the DebugOrContinueWorkflowButtonHeader property.

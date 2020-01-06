@@ -14,8 +14,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _Copy = true;
-        [Category("选项")]
-        [DisplayName("复制")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName128")] //复制 //Copy //コピー
         [Browsable(true)]
         public bool Copy
         {
@@ -30,8 +30,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _Paste;
-        [Category("选项")]
-        [DisplayName("粘贴")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName129")] //粘贴 //Paste //貼り付け
         [Browsable(true)]
         public bool Paste
         {

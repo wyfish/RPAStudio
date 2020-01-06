@@ -16,28 +16,28 @@ namespace RPA.UIAutomation.Activities.Find
         [Browsable(false)]
         public string _DisplayName { get { return "Element Exists"; } }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("Selector")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("Element")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
         [RequiredArgument]
         [DisplayName("存在性")]
-        [Description("指示元素是否存在。该字段只支持布尔变量")]
+        [Localize.LocalizedDescription("Description37")] //指示元素是否存在。该字段只支持布尔变量 //Indicates if the element exists.  This field only supports Boolean variables //要素が存在するかどうかを示します。 このフィールドはブール変数のみをサポートします
         public OutArgument<bool> IsExist { get; set; }
 
         [Browsable(false)]

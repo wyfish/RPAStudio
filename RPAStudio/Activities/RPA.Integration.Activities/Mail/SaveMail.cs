@@ -29,15 +29,15 @@ namespace RPA.Integration.Activities.Mail
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("路径")]
-        [Description("要保存MailMessage对象的完整路径")]
+        [Localize.LocalizedDisplayName("DisplayName45")] //路径 //path //パス
+        [Localize.LocalizedDescription("Description43")] //要保存MailMessage对象的完整路径 //To save the full path of the MailMessage object //MailMessageオブジェクトのフルパスを保存するには
         public InArgument<string> PathName { get; set; }
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("邮件消息")]
-        [Description("要保存的MailMessage对象")]
+        [Localize.LocalizedDisplayName("DisplayName81")] //邮件消息 //Mail message //メールメッセージ
+        [Localize.LocalizedDescription("Description44")] //要保存的MailMessage对象 //The MailMessage object to save //保存するMailMessageオブジェクト
         public InArgument<MimeMessage> MimeMessageSave { get; set; }
 
 
