@@ -380,8 +380,8 @@
     <Compile Include="Windows\SplashScreenWindow.xaml.cs">
       <DependentUpon>SplashScreenWindow.xaml</DependentUpon>
     </Compile>
-    <None Include="Localization\RPAStudio_Resx.xlsx" />
-    <None Include="Localization\RPAStudio_Strings.xlsx" />
+    <None Include="Localization\xUidStrings.xlsx" />
+    <None Include="Localization\xStaticStrings.xlsx" />
     <None Include="Resources\FileTemplate\Flowchart.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>

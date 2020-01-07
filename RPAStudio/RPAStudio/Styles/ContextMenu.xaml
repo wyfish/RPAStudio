@@ -2,9 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:cmd="http://www.galasoft.ch/mvvmlight"
                     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:localize="clr-namespace:RPAStudio.Localization"
                     >
     <ContextMenu x:Key="ActivitiyContextMenu">
-        <MenuItem Header="添加到收藏夹"  Command="{Binding AddToFavoritesCommand}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static localize:Strings.AddToFavorites}"  Command="{Binding AddToFavoritesCommand}" CommandParameter="{Binding}"/>
     </ContextMenu>
 
     <ContextMenu x:Key="FavoriteActivitiyContextMenu">
@@ -166,18 +167,18 @@
     </ContextMenu>
 
     <ContextMenu x:Key="RecentProjectItemContextMenu">
-        <MenuItem Header="打开项目" Command="{Binding OpenProjectCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static localize:Strings.OpenProject}" Command="{Binding OpenProjectCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="打开项目所在目录" Command="{Binding OpenProjectDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static localize:Strings.OpenProjectDir}" Command="{Binding OpenProjectDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/file-explorer.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="从列表中移除" Command="{Binding RemoveFromListCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static localize:Strings.RemoveFromList}" Command="{Binding RemoveFromListCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/remove.png"/>
             </MenuItem.Icon>

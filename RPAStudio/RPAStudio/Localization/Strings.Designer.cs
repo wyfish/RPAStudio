@@ -70,6 +70,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Add to Favorites に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AddToFavorites {
+            get {
+                return ResourceManager.GetString("AddToFavorites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Attributes に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string AttributesText {
@@ -214,6 +223,24 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Open the project に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenProject {
+            get {
+                return ResourceManager.GetString("OpenProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open the project directory に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenProjectDir {
+            get {
+                return ResourceManager.GetString("OpenProjectDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Original name : に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string OriginalNameText {
@@ -327,6 +354,15 @@ namespace RPAStudio.Localization {
         public static string ReleaseToText {
             get {
                 return ResourceManager.GetString("ReleaseToText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Remove from list に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RemoveFromList {
+            get {
+                return ResourceManager.GetString("RemoveFromList", resourceCulture);
             }
         }
         

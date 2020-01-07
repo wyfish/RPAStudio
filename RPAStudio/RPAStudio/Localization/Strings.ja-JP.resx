@@ -120,6 +120,9 @@
   <data name="ActivityText" xml:space="preserve">
     <value>アクティビティ</value>
   </data>
+  <data name="AddToFavorites" xml:space="preserve">
+    <value>お気に入りに追加</value>
+  </data>
   <data name="AttributesText" xml:space="preserve">
     <value>属性</value>
   </data>
@@ -168,6 +171,12 @@
   <data name="OKText" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>プロジェクトを開く</value>
+  </data>
+  <data name="OpenProjectDir" xml:space="preserve">
+    <value>プロジェクトディレクトリを開く</value>
+  </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>変更前の名称：</value>
   </data>
@@ -206,6 +215,9 @@
   </data>
   <data name="ReleaseToText" xml:space="preserve">
     <value>リリース先</value>
+  </data>
+  <data name="RemoveFromList" xml:space="preserve">
+    <value>リストから削除</value>
   </data>
   <data name="RenameTitle" xml:space="preserve">
     <value>名前を変更</value>

@@ -597,4 +597,10 @@
   <data name="Description82" xml:space="preserve">
     <value>窗口的新坐标位置Y轴，支持正负整数</value>
   </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>重新选取</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>点击屏幕</value>
+  </data>
 </root>

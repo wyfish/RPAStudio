@@ -345,10 +345,21 @@ namespace RPAStudio.ViewModel
 
         private void InitDependencies(ProjectTreeItem projectItem)
         {
+            string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            string dependencyPackage = "Dependency package";
+            if (isoCulture.Equals("zh"))
+            {
+                dependencyPackage = "依赖包";
+            }
+            else if (isoCulture.Equals("ja"))
+            {
+                dependencyPackage = "依存パッケージ";
+            }
+
             var dependRootItem = new ProjectTreeItem(this);
             dependRootItem.IsDependRoot = true;
             dependRootItem.IsExpanded = true;
-            dependRootItem.Name = "依赖包";
+            dependRootItem.Name = dependencyPackage;
             dependRootItem.Icon = "pack://application:,,,/Resources/Image/Project/dependencies.png";
             projectItem.Children.Add(dependRootItem);
 

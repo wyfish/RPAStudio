@@ -597,4 +597,10 @@
   <data name="Description82" xml:space="preserve">
     <value>The new coordinate position of the window is Y-axis, supporting positive and negative integers</value>
   </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>Reselect</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>Tap the screen</value>
+  </data>
 </root>

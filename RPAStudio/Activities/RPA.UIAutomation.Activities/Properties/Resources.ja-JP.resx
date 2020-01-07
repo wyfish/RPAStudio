@@ -597,4 +597,10 @@
   <data name="Description82" xml:space="preserve">
     <value>ウィンドウの新しい座標位置はY軸で、正および負の整数をサポートします</value>
   </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>再選択</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>画面をタップ</value>
+  </data>
 </root>
