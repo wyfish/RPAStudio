@@ -7,7 +7,8 @@
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
-    Title="连接设置"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
+    Title="{x:Static lclz:Resources.ConnectionSettings}"
     WindowResizeMode="NoResize" Width="320" >
 
     <sap:WorkflowElementDialog.Resources>
@@ -17,9 +18,9 @@
     <DockPanel>
         <DockPanel  Margin="0, 4, 0, 8" DockPanel.Dock="Bottom" Background="{x:Static SystemColors.ControlBrush}" x:Name="ConnectionSettings">
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" >
-                <TextBlock Text="连接配置" VerticalAlignment="Center" HorizontalAlignment="Left" Width="150" />
+                <TextBlock Text="{x:Static lclz:Resources.ConnectionConfiguration}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="150" />
 
-                <Button Content="连接向导" Click="NewConnectionButton_Click" VerticalAlignment="Center" HorizontalAlignment="Right"
+                <Button Content="{x:Static lclz:Resources.ConnectionWizard}" Click="NewConnectionButton_Click" VerticalAlignment="Center" HorizontalAlignment="Right"
                     Margin="30,0,0,0" Width="130" Padding="5,0" Height="24"/>
             </StackPanel>
 

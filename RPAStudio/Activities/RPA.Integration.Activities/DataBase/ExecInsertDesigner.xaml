@@ -8,6 +8,7 @@
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
    >
 
@@ -33,7 +34,7 @@
 
     <pslc:CollapsableActivity>
         <Grid Height="85">
-            <Button Click="ConnSet" Margin="60,0,65,60"  Width="135" Height="25">配置数据库连接</Button>
+            <Button Click="ConnSet" Margin="60,0,65,60"  Width="135" Height="25" Content="{x:Static lclz:Resources.ConfigureDatabaseConnection}"/>
             <sapv:ExpressionTextBox 
                     Width="260"
                     Expression="{Binding Path=ModelItem.TableName,

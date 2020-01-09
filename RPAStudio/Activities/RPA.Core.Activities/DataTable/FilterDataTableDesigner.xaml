@@ -6,6 +6,7 @@
     xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
     xmlns:local="clr-namespace:RPA.Core.Activities.DataTableActivity"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
@@ -33,7 +34,7 @@
 
     <pslc:CollapsableActivity>
         <Grid Height="30">
-            <Button x:Name="getUrlButton" Click="DataTableBuild" Margin="75,5,80,0" RenderTransformOrigin="-0.5,0.5" Width="105" Height="25">向导</Button>
+            <Button x:Name="getUrlButton" Click="DataTableBuild" Margin="75,5,80,0" RenderTransformOrigin="-0.5,0.5" Width="105" Height="25" Content="{x:Static lclz:Resources.GuideText}"/>
         </Grid>
     </pslc:CollapsableActivity>
 

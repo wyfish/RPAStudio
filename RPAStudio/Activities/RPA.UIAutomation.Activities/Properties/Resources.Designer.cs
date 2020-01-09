@@ -61,6 +61,24 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
+        ///   The name of the attribute to retrieve に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AttributeNameToGet_HintText {
+            get {
+                return ResourceManager.GetString("AttributeNameToGet.HintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Expected value of the specified attribute に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AttributeToExpect_HintText {
+            get {
+                return ResourceManager.GetString("AttributeToExpect.HintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Public に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category1 {
@@ -156,6 +174,15 @@ namespace RPA.UIAutomation.Activities.Properties {
         public static string Category9 {
             get {
                 return ResourceManager.GetString("Category9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The name of the HTML attribute to change に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ChangeHTMLAttribute_HintText {
+            get {
+                return ResourceManager.GetString("ChangeHTMLAttribute.HintText", resourceCulture);
             }
         }
         
@@ -1501,11 +1528,38 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
+        ///   The name of the property to wait for に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PropertyNameToWait_HintText {
+            get {
+                return ResourceManager.GetString("PropertyNameToWait.HintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Reselect に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReselectIt {
             get {
                 return ResourceManager.GetString("ReselectIt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The value to be set to the specified attribute. Only string variables are supported に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SetAttributeValue_HintText {
+            get {
+                return ResourceManager.GetString("SetAttributeValue.HintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Specify the URL opened in the browser に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SpecifyTheURL_HintText {
+            get {
+                return ResourceManager.GetString("SpecifyTheURL.HintText", resourceCulture);
             }
         }
         

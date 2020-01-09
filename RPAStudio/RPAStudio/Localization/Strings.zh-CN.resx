@@ -123,6 +123,12 @@
   <data name="AddToFavorites" xml:space="preserve">
     <value>添加到收藏夹</value>
   </data>
+  <data name="AllPackages" xml:space="preserve">
+    <value>所有包</value>
+  </data>
+  <data name="AllPackagesTip" xml:space="preserve">
+    <value>从所有的包源地址来查看或搜索包</value>
+  </data>
   <data name="AttributesText" xml:space="preserve">
     <value>属性</value>
   </data>
@@ -134,6 +140,12 @@
   </data>
   <data name="CodeSnippetText" xml:space="preserve">
     <value>代码片断</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>询问</value>
+  </data>
+  <data name="CopyCtrlC" xml:space="preserve">
+    <value>复制（Ctrl+C）</value>
   </data>
   <data name="CopyText" xml:space="preserve">
     <value>复制</value>
@@ -150,17 +162,38 @@
   <data name="CustomPathText" xml:space="preserve">
     <value>自定义位置</value>
   </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DependencyText" xml:space="preserve">
+    <value>依赖包</value>
+  </data>
   <data name="DescriptionText" xml:space="preserve">
     <value>描述</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="ImportWorkflowDot" xml:space="preserve">
+    <value>导入工作流…</value>
   </data>
   <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
     <value>包含预发布版本</value>
   </data>
+  <data name="jsonFormatError" xml:space="preserve">
+    <value>项目配置文件project.json的内容格式不正确</value>
+  </data>
   <data name="LocalRobotContent" xml:space="preserve">
     <value>本地机器人</value>
   </data>
+  <data name="Message_SaveConfirm" xml:space="preserve">
+    <value>文件有修改，需要保存文件\"{0}\"吗？</value>
+  </data>
   <data name="NameText" xml:space="preserve">
     <value>名称</value>
+  </data>
+  <data name="NewFolderDot" xml:space="preserve">
+    <value>新建文件夹...</value>
   </data>
   <data name="NewFolderTitle" xml:space="preserve">
     <value>新建文件夹</value>
@@ -174,8 +207,17 @@
   <data name="OpenProject" xml:space="preserve">
     <value>打开项目</value>
   </data>
+  <data name="OpenProjectDialog" xml:space="preserve">
+    <value>工作流项目文件|project.json|工作流文件|*.xaml</value>
+  </data>
   <data name="OpenProjectDir" xml:space="preserve">
     <value>打开项目所在目录</value>
+  </data>
+  <data name="OpenProjectFolder" xml:space="preserve">
+    <value>打开项目文件夹</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>打开</value>
   </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>原始名：</value>
@@ -191,6 +233,12 @@
   </data>
   <data name="PathText" xml:space="preserve">
     <value>位置</value>
+  </data>
+  <data name="ProjectDependencies" xml:space="preserve">
+    <value>项目依赖包</value>
+  </data>
+  <data name="ProjectOpenError" xml:space="preserve">
+    <value>打开项目出错！</value>
   </data>
   <data name="ProjectSettingsDesc" xml:space="preserve">
     <value>修改项目相关配置如名称和描述</value>
@@ -216,19 +264,61 @@
   <data name="ReleaseToText" xml:space="preserve">
     <value>发布到</value>
   </data>
+  <data name="RemoveFromFavorites" xml:space="preserve">
+    <value>从收藏夹移除</value>
+  </data>
   <data name="RemoveFromList" xml:space="preserve">
     <value>从列表中移除</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>移除</value>
   </data>
   <data name="RenameTitle" xml:space="preserve">
     <value>重命名</value>
   </data>
+  <data name="RunText" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="RuntimeError" xml:space="preserve">
+    <value>运行时执行错误</value>
+  </data>
   <data name="SearchTextWatermark" xml:space="preserve">
     <value>此处输入要搜索的内容</value>
+  </data>
+  <data name="SetAsMainFile" xml:space="preserve">
+    <value>设置为主文件</value>
+  </data>
+  <data name="SetFromAddress" xml:space="preserve">
+    <value>设置包源地址</value>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="ShowAvailable" xml:space="preserve">
+    <value>显示可用</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>查看消息详情</value>
+  </data>
+  <data name="ShowFavorites" xml:space="preserve">
+    <value>显示收藏</value>
+  </data>
+  <data name="ShowRecent" xml:space="preserve">
+    <value>显示最近</value>
   </data>
   <data name="TargetNameText" xml:space="preserve">
     <value>目标名：</value>
   </data>
   <data name="VersionText" xml:space="preserve">
     <value>版本号</value>
+  </data>
+  <data name="ViewAllDependencies" xml:space="preserve">
+    <value>查看当前项目的所有依赖包</value>
+  </data>
+  <data name="WorkflowCheckError" xml:space="preserve">
+    <value>工作流校验错误，请检查参数配置</value>
+  </data>
+  <data name="WorkflowVerificationOK" xml:space="preserve">
+    <value>工作流校验正确</value>
   </data>
 </root>

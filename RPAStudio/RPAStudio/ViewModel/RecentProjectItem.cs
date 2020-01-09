@@ -1,12 +1,13 @@
 ﻿using System;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
 using System.Xml;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -145,7 +146,7 @@ namespace RPAStudio.ViewModel
                         else
                         {
                             //不存在则提示用户移除条目
-                            var ret = MessageBox.Show(App.Current.MainWindow, string.Format("无法打开项目配置文件\"{0}\"，是否从最近项目列表中移除该条目？", ProjectFilePath), "询问", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                            var ret = MessageBox.Show(App.Current.MainWindow, string.Format("无法打开项目配置文件\"{0}\"，是否从最近项目列表中移除该条目？", ProjectFilePath), ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
                             if (ret == MessageBoxResult.OK)
                             {
                                 removeMyself();

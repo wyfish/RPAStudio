@@ -654,4 +654,40 @@
   <data name="Description115" xml:space="preserve">
     <value>Workflow file path, must be enclosed in double quotes</value>
   </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>Reselect</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>Tap the screen</value>
+  </data>
+  <data name="DragControlHere" xml:space="preserve">
+    <value>Drag and drop controls here</value>
+  </data>
+  <data name="GuideText" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="DoubleQuotesHintText" xml:space="preserve">
+    <value>Text must be enclosed in double quotes</value>
+  </data>
+  <data name="EditCode" xml:space="preserve">
+    <value>Edit code</value>
+  </data>
+  <data name="EditParameter" xml:space="preserve">
+    <value>Edit parameter</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+  <data name="ImportParameters" xml:space="preserve">
+    <value>Import parameters</value>
+  </data>
+  <data name="LevelText" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="NewsText" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="SpecialFolder" xml:space="preserve">
+    <value>Special folder</value>
+  </data>
 </root>

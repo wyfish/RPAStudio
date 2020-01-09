@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--活动配置信息-->
 <activity.config>
-    <Group Name="Application integration">
+    <Group Name="App Integration">
       <Group Name="Word">
         <Group Name="Process">
           <Activity Name="Open/Save Document"  Icon="Resources/Word/create.png" TypeOf="RPA.Integration.Activities.WordPlugins.WordCreate,RPA.Integration.Activities" ToolTip="Open Local Word Document / New Word Document and Save / Save As"/>
         </Group>
         <Group Name="Write">
-          <Activity Name="Write text"       Icon="Resources/Word/text.png"  TypeOf="RPA.Integration.Activities.WordPlugins.WriteText,RPA.Integration.Activities" ToolTip="Write text at the current Word document cursor position"/>
+          <Activity Name="Write Text"       Icon="Resources/Word/text.png"  TypeOf="RPA.Integration.Activities.WordPlugins.WriteText,RPA.Integration.Activities" ToolTip="Write text at the current Word document cursor position"/>
           <Activity Name="Line feed/page break"      Icon="Resources/Word/newline.png" TypeOf="RPA.Integration.Activities.WordPlugins.PageAndNewline,RPA.Integration.Activities" ToolTip="In the current Word document cursor position carriage return line / new page"/>
-          <Activity Name="Write file"       Icon="Resources/Word/writefile.png" TypeOf="RPA.Integration.Activities.WordPlugins.InsertFile,RPA.Integration.Activities" ToolTip="Write the entire contents of the existing local Word document to the current Word document cursor"/>
+          <Activity Name="Write File"       Icon="Resources/Word/writefile.png" TypeOf="RPA.Integration.Activities.WordPlugins.InsertFile,RPA.Integration.Activities" ToolTip="Write the entire contents of the existing local Word document to the current Word document cursor"/>
           <Activity Name="Bookmark/Hyperlink/Picture" Icon="Resources/Word/mark.png" TypeOf="RPA.Integration.Activities.WordPlugins.MarkLink,RPA.Integration.Activities" ToolTip="Insert a bookmark/hyperlink/picture at the current Word document cursor position"/>
-          <Activity Name="Backspace deletion"       Icon="Resources/Word/backspace.png" TypeOf="RPA.Integration.Activities.WordPlugins.Backspace,RPA.Integration.Activities" ToolTip="Backspace deletion at the current Word document cursor position N times"/>
+          <Activity Name="Backspace"       Icon="Resources/Word/backspace.png" TypeOf="RPA.Integration.Activities.WordPlugins.Backspace,RPA.Integration.Activities" ToolTip="Backspace deletion at the current Word document cursor position N times"/>
           <Activity Name="Copy and Paste"      Icon="Resources/Word/copy.png" TypeOf="RPA.Integration.Activities.WordPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="Copy: Copy the selected content to the pasteboard, usually with the 'Cursor Move' function. Paste: Write the pasteboard content to the current Word document cursor position."/>
-          <Activity Name="Select all"           Icon="Resources/Word/wholestory.png" TypeOf="RPA.Integration.Activities.WordPlugins.WholeStory,RPA.Integration.Activities" ToolTip="Set the entire contents of the Word document to the selected state"/>
-          <Activity Name="Get document content"   Icon="Resources/Word/getcontent.png" TypeOf="RPA.Integration.Activities.WordPlugins.GetContent,RPA.Integration.Activities" ToolTip="Get all the text in a Word document"/>
+          <Activity Name="Select All"           Icon="Resources/Word/wholestory.png" TypeOf="RPA.Integration.Activities.WordPlugins.WholeStory,RPA.Integration.Activities" ToolTip="Set the entire contents of the Word document to the selected state"/>
+          <Activity Name="Get Document Content"   Icon="Resources/Word/getcontent.png" TypeOf="RPA.Integration.Activities.WordPlugins.GetContent,RPA.Integration.Activities" ToolTip="Get all the text in a Word document"/>
         </Group>
         <Group Name="Cursor">
           <Activity Name="Move up and down, left and right" Icon="Resources/Word/move1.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMove,RPA.Integration.Activities" ToolTip="The current Word document cursor moves up and down and selects whether the content is selected."/>
@@ -26,70 +26,70 @@
       </Group>
 
       <Group Name="Excel">
-        <Group Name="Process">
+        <Group Name="Processing">
           <Activity Name="Open/Save" Icon="Resources/Excel/create.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ExcelCreate,RPA.Integration.Activities" ToolTip="Open a local Excel document or create a new Excel new document and save/save as a new path"/>
         </Group>
         <Group Name="Worksheet">
-          <Activity Name="Open/Delete worksheet" Icon="Resources/Excel/opensheet.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.OpenDelSheet,RPA.Integration.Activities" ToolTip="Open a workbook in the currently active Excel document"/>
-          <Activity Name="New worksheet" Icon="Resources/Excel/newsheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.NewSheet,RPA.Integration.Activities" ToolTip="Create a new workbook in the current Excel document"/>
-          <Activity Name="Worksheet rename" Icon="Resources/Excel/renamesheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RenameSheet,RPA.Integration.Activities" ToolTip="Rename an existing workbook in the current Excel document"/>
-          <Activity Name="List of worksheet names" Icon="Resources/Excel/sheetnames.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetAllSheets,RPA.Integration.Activities" ToolTip="Get a list of all worksheet names"/>
+          <Activity Name="Open/Delete Worksheet" Icon="Resources/Excel/opensheet.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.OpenDelSheet,RPA.Integration.Activities" ToolTip="Open a workbook in the currently active Excel document"/>
+          <Activity Name="New Worksheet" Icon="Resources/Excel/newsheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.NewSheet,RPA.Integration.Activities" ToolTip="Create a new workbook in the current Excel document"/>
+          <Activity Name="Rename Worksheet" Icon="Resources/Excel/renamesheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RenameSheet,RPA.Integration.Activities" ToolTip="Rename an existing workbook in the current Excel document"/>
+          <Activity Name="Get Worksheets Name" Icon="Resources/Excel/sheetnames.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetAllSheets,RPA.Integration.Activities" ToolTip="Get a list of all worksheet names"/>
         </Group>
         <Group Name="Cell">
           <Activity Name="Merge Cells" Icon="Resources/Excel/cellmerge.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellMerge,RPA.Integration.Activities" ToolTip="Specify a cell range for cell merge operations"/>
-          <Activity Name="Get cell content" Icon="Resources/Excel/getcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellGet,RPA.Integration.Activities" ToolTip="Get the text content of the specified location cell"/>
-          <Activity Name="Set cell content" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="Set the text content of the specified location cell"/>
+          <Activity Name="Read Cell" Icon="Resources/Excel/getcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellGet,RPA.Integration.Activities" ToolTip="Get the text content of the specified location cell"/>
+          <Activity Name="Write Cell" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="Set the text content of the specified location cell"/>
         </Group>
         <Group Name="Row/Column">
           <Activity Name="Read Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="Read a row or column of data"/>
           <Activity Name="Copy Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="Copy a row or column of data at a specified position"/>
-          <Activity Name="Row/Column operation" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="Including hidden/add/delete operations on rows or columns"/>
+          <Activity Name="Row/Column Operation" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="Including hidden/add/delete operations on rows or columns"/>
           <Activity Name="Count Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="Get the corresponding total number of corresponding workbook rows / columns."/>
         </Group>
-        <Group Name="Region">
-          <Activity Name="Delete area"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="Specify a cell range to delete"/>
-          <Activity Name="Paste/copy"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="The data of the selected area is copied to the pasteboard and written to other areas."/>
-          <Activity Name="Read area content" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="Copy the specified range of cells to the DataTable variable"/>
-          <Activity Name="Area write content" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="Write data from the DataTable variable to the specified area"/>
+        <Group Name="Range">
+          <Activity Name="Delete Range"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="Specify a cell range to delete"/>
+          <Activity Name="Copy/Paste"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="The data of the selected area is copied to the pasteboard and written to other areas."/>
+          <Activity Name="Read Range" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="Copy the specified range of cells to the DataTable variable"/>
+          <Activity Name="Write Range" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="Write data from the DataTable variable to the specified area"/>
         </Group>
         <Group Name="Replace">
           <Activity Name="Find and replace" Icon="Resources/Excel/replace.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.Replace,RPA.Integration.Activities" ToolTip="Find the corresponding content of the worksheet and replace it with the specified content"/>
         </Group>
         <Group Name="VBA">
-          <Activity Name="Execute VBA" Icon="Resources/Excel/vba.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RunVBA,RPA.Integration.Activities"  ToolTip="Specify the VBA script existing in EXCEL to run the parameter and get the return value"/>
+          <Activity Name="Invoke VBA" Icon="Resources/Excel/vba.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RunVBA,RPA.Integration.Activities"  ToolTip="Specify the VBA script existing in EXCEL to run the parameter and get the return value"/>
         </Group>
         <Group Name="Setting">
           <Activity Name="Regional settings" Icon="Resources/Excel/setting.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AreaSetting,RPA.Integration.Activities"  ToolTip="Text format/row height column width/border/content alignment settings for selected range of cells"/>
         </Group>
       </Group>
       <Group Name="CSV">
-        <Activity Name="CSV Read" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadCSV, RPA.Integration.Activities" ToolTip="Read the contents of the CVS file into the DataTable variable"/>
-        <Activity Name="CSV Write" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteCSV, RPA.Integration.Activities" ToolTip="The contents of the DataTable variable are written to the specified CVS file."/>
-        <Activity Name="CSV Append" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AppendCSV, RPA.Integration.Activities" ToolTip="Append the contents of the DataTable variable to the end of the specified CVS file"/>
+        <Activity Name="Read CSV" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadCSV, RPA.Integration.Activities" ToolTip="Read the contents of the CVS file into the DataTable variable"/>
+        <Activity Name="Write CSV" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteCSV, RPA.Integration.Activities" ToolTip="The contents of the DataTable variable are written to the specified CVS file."/>
+        <Activity Name="Append To CSV" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AppendCSV, RPA.Integration.Activities" ToolTip="Append the contents of the DataTable variable to the end of the specified CVS file"/>
       </Group>
       <Group Name="Mail">
         <Group Name="SMTP">
-          <Activity Name="Send SMTP mail" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendMail, RPA.Integration.Activities" ToolTip="Send email using SMTP protocol"/>
+          <Activity Name="Send SMTP Mail Message" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendMail, RPA.Integration.Activities" ToolTip="Send email using SMTP protocol"/>
         </Group>
         <Group Name="POP3">
-          <Activity Name="Get POP3 mail messages" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetPOP3Mail, RPA.Integration.Activities" ToolTip="Retrieve POP3 email from the specified server."/>
+          <Activity Name="Get POP3 Mail Messages" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetPOP3Mail, RPA.Integration.Activities" ToolTip="Retrieve POP3 email from the specified server."/>
         </Group>
         <Group Name="IMAP">
           <Activity Name="Get IMAP mail" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetIMAPMail, RPA.Integration.Activities" ToolTip="Retrieve IMAP email from the specified server"/>
           <Activity Name="Mobile IMAP mail" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveIMAPMail, RPA.Integration.Activities" ToolTip="Move IMAP email to the specified folder"/>
         </Group>
-        <Activity Name="Save Mail" Icon="Resources/Mail/SaveMail.png" TypeOf="RPA.Integration.Activities.Mail.SaveMail, RPA.Integration.Activities" ToolTip="Save the email to the specified folder.  If the folder does not exist, create it.  If a folder is not specified, the download will be saved in the project folder.  Will overwrite the file with the same name as the message in the specified folder"/>
-        <Activity Name="Save Attachment" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveMailAttachments, RPA.Integration.Activities" ToolTip="Save the mail attachment to the specified folder.  If the folder does not exist, create it.  If a folder is not specified, the download will be saved in the project folder.  Will overwrite the file with the same name as the attachment in the specified folder"/>
+        <Activity Name="Save Mail Message" Icon="Resources/Mail/SaveMail.png" TypeOf="RPA.Integration.Activities.Mail.SaveMail, RPA.Integration.Activities" ToolTip="Save the email to the specified folder.  If the folder does not exist, create it.  If a folder is not specified, the download will be saved in the project folder.  Will overwrite the file with the same name as the message in the specified folder"/>
+        <Activity Name="Save Attachments" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveMailAttachments, RPA.Integration.Activities" ToolTip="Save the mail attachment to the specified folder.  If the folder does not exist, create it.  If a folder is not specified, the download will be saved in the project folder.  Will overwrite the file with the same name as the attachment in the specified folder"/>
         <Activity Name="Save Picture" Icon="Resources/Mail/GetImgs.png" TypeOf="RPA.Integration.Activities.Mail.GetMailImgs, RPA.Integration.Activities" ToolTip="Save the mail picture to the specified folder.  If the folder does not exist, create it.  Will overwrite the image with the same name as the attachment in the specified folder"/>
         <Group Name="OutLook">
-          <Activity Name="Get Outlook mail" Icon="Resources/Mail/outlook.png" TypeOf="RPA.Integration.Activities.Mail.GetOutlookMailMessagesActivity, RPA.Integration.Activities" ToolTip="Get email from Outlook"/>
-          <Activity Name="Mobile Outlook mail" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveOutlookMessageActivity, RPA.Integration.Activities" ToolTip="Move Outlook emails to the specified folder"/>
-          <Activity Name="Reply to Outlook email" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageActivity, RPA.Integration.Activities" ToolTip="Reply to email from Outlook"/>
-          <Activity Name="Send Outlook mail" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendOutlookMailActivity, RPA.Integration.Activities" ToolTip="Send an email from Outlook"/>
-          <Activity Name="Save Outlook attachments" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveOutlookAttachementsActivity, RPA.Integration.Activities" ToolTip="Save attachments to Outlook emails"/>
-          <Activity Name="Delete Outlook mail" Icon="Resources/Mail/delete-mail.png" TypeOf="RPA.Integration.Activities.Mail.DeleteOutlookMailItemActivity, RPA.Integration.Activities" ToolTip="Delete the specified Outlook email and put it in the deleted mail directory. If it is already in the deleted mail directory, delete it completely."/>
-          <Activity Name="Archive Outlook mail" Icon="Resources/Mail/archive-mail.png" TypeOf="RPA.Integration.Activities.Mail.ArchiveOutlookMailsActivity, RPA.Integration.Activities" ToolTip="Archive Outlook emails"/>
-          <Activity Name="Empty the Outlook cache" Icon="Resources/Mail/clear-mail-cache.png" TypeOf="RPA.Integration.Activities.Mail.ClearOutlookCacheActivity, RPA.Integration.Activities" ToolTip="Clear cached information for Outlook emails"/>
+          <Activity Name="Get Outlook Mail Messages" Icon="Resources/Mail/outlook.png" TypeOf="RPA.Integration.Activities.Mail.GetOutlookMailMessagesActivity, RPA.Integration.Activities" ToolTip="Get email from Outlook"/>
+          <Activity Name="Move Outlook Mail Message" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveOutlookMessageActivity, RPA.Integration.Activities" ToolTip="Move Outlook emails to the specified folder"/>
+          <Activity Name="Reply To Outlook Mail Message" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageActivity, RPA.Integration.Activities" ToolTip="Reply to email from Outlook"/>
+          <Activity Name="Send Outlook Mail Message" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendOutlookMailActivity, RPA.Integration.Activities" ToolTip="Send an email from Outlook"/>
+          <Activity Name="Save Outlook Attachments" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveOutlookAttachementsActivity, RPA.Integration.Activities" ToolTip="Save attachments to Outlook emails"/>
+          <Activity Name="Delete Outlook Mail Message" Icon="Resources/Mail/delete-mail.png" TypeOf="RPA.Integration.Activities.Mail.DeleteOutlookMailItemActivity, RPA.Integration.Activities" ToolTip="Delete the specified Outlook email and put it in the deleted mail directory. If it is already in the deleted mail directory, delete it completely."/>
+          <Activity Name="Archive Outlook Mail Message" Icon="Resources/Mail/archive-mail.png" TypeOf="RPA.Integration.Activities.Mail.ArchiveOutlookMailsActivity, RPA.Integration.Activities" ToolTip="Archive Outlook emails"/>
+          <Activity Name="Clear Outlook Cache" Icon="Resources/Mail/clear-mail-cache.png" TypeOf="RPA.Integration.Activities.Mail.ClearOutlookCacheActivity, RPA.Integration.Activities" ToolTip="Clear cached information for Outlook emails"/>
         </Group>
       </Group>
       <Group Name="Database">

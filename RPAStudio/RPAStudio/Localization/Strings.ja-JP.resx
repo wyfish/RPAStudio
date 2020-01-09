@@ -123,8 +123,14 @@
   <data name="AddToFavorites" xml:space="preserve">
     <value>お気に入りに追加</value>
   </data>
+  <data name="AllPackages" xml:space="preserve">
+    <value>すべてのパッケージ</value>
+  </data>
+  <data name="AllPackagesTip" xml:space="preserve">
+    <value>すべてのパケット送信元アドレスからのパケットの表示または検索</value>
+  </data>
   <data name="AttributesText" xml:space="preserve">
-    <value>属性</value>
+    <value>プロパティ</value>
   </data>
   <data name="CancelText" xml:space="preserve">
     <value>キャンセル</value>
@@ -134,6 +140,12 @@
   </data>
   <data name="CodeSnippetText" xml:space="preserve">
     <value>コードスニペット</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="CopyCtrlC" xml:space="preserve">
+    <value>コピー（Ctrl+C）</value>
   </data>
   <data name="CopyText" xml:space="preserve">
     <value>コピー</value>
@@ -150,17 +162,38 @@
   <data name="CustomPathText" xml:space="preserve">
     <value>カスタムのパス</value>
   </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DependencyText" xml:space="preserve">
+    <value>依存関係</value>
+  </data>
   <data name="DescriptionText" xml:space="preserve">
     <value>説明</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="ImportWorkflowDot" xml:space="preserve">
+    <value>ワークフローのインポート…</value>
   </data>
   <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
     <value>プレリリース版を含む</value>
   </data>
+  <data name="jsonFormatError" xml:space="preserve">
+    <value>プロジェクト構成ファイルproject.jsonのコンテンツの形式が正しくありません</value>
+  </data>
   <data name="LocalRobotContent" xml:space="preserve">
     <value>ローカルロボット</value>
   </data>
+  <data name="Message_SaveConfirm" xml:space="preserve">
+    <value>ファイルが変更されました。ファイル\"{0}\"を保存しますか？</value>
+  </data>
   <data name="NameText" xml:space="preserve">
     <value>名前</value>
+  </data>
+  <data name="NewFolderDot" xml:space="preserve">
+    <value>新しいフォルダー...</value>
   </data>
   <data name="NewFolderTitle" xml:space="preserve">
     <value>新規フォルダ</value>
@@ -174,14 +207,23 @@
   <data name="OpenProject" xml:space="preserve">
     <value>プロジェクトを開く</value>
   </data>
+  <data name="OpenProjectDialog" xml:space="preserve">
+    <value>ワークフロープロジェクトファイル|project.json|ワークフローファイル|*.xaml</value>
+  </data>
   <data name="OpenProjectDir" xml:space="preserve">
     <value>プロジェクトディレクトリを開く</value>
+  </data>
+  <data name="OpenProjectFolder" xml:space="preserve">
+    <value>プロジェクトフォルダーを開く</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>開く</value>
   </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>変更前の名称：</value>
   </data>
   <data name="OutlineText" xml:space="preserve">
-    <value>アウトライン</value>
+    <value>概要</value>
   </data>
   <data name="OutputText" xml:space="preserve">
     <value>出力</value>
@@ -191,6 +233,12 @@
   </data>
   <data name="PathText" xml:space="preserve">
     <value>パス</value>
+  </data>
+  <data name="ProjectDependencies" xml:space="preserve">
+    <value>プロジェクトの依存関係</value>
+  </data>
+  <data name="ProjectOpenError" xml:space="preserve">
+    <value>プロジェクトオープンエラー！</value>
   </data>
   <data name="ProjectSettingsDesc" xml:space="preserve">
     <value>名前や説明などのプロジェクト関連の構成を変更します</value>
@@ -216,19 +264,61 @@
   <data name="ReleaseToText" xml:space="preserve">
     <value>リリース先</value>
   </data>
+  <data name="RemoveFromFavorites" xml:space="preserve">
+    <value>お気に入りから削除</value>
+  </data>
   <data name="RemoveFromList" xml:space="preserve">
     <value>リストから削除</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>削除</value>
   </data>
   <data name="RenameTitle" xml:space="preserve">
     <value>名前を変更</value>
   </data>
+  <data name="RunText" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="RuntimeError" xml:space="preserve">
+    <value>実行時エラー</value>
+  </data>
   <data name="SearchTextWatermark" xml:space="preserve">
     <value>検索文字列を入力してください</value>
+  </data>
+  <data name="SetAsMainFile" xml:space="preserve">
+    <value>メインファイルとして設定</value>
+  </data>
+  <data name="SetFromAddress" xml:space="preserve">
+    <value>設定パケットの送信元アドレス</value>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="ShowAvailable" xml:space="preserve">
+    <value>利用可能を表示</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>メッセージの詳細を表示する</value>
+  </data>
+  <data name="ShowFavorites" xml:space="preserve">
+    <value>お気に入りを表示</value>
+  </data>
+  <data name="ShowRecent" xml:space="preserve">
+    <value>最近を表示</value>
   </data>
   <data name="TargetNameText" xml:space="preserve">
     <value>変更後の名称：</value>
   </data>
   <data name="VersionText" xml:space="preserve">
     <value>バージョン</value>
+  </data>
+  <data name="ViewAllDependencies" xml:space="preserve">
+    <value>現在のプロジェクトのすべての依存関係を表示する</value>
+  </data>
+  <data name="WorkflowCheckError" xml:space="preserve">
+    <value>ワークフローチェックエラー。パラメータ設定を確認してください</value>
+  </data>
+  <data name="WorkflowVerificationOK" xml:space="preserve">
+    <value>ワークフローの検証は正常です</value>
   </data>
 </root>

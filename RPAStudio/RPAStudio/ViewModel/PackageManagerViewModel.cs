@@ -1,24 +1,25 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using System.Collections.ObjectModel;
-using System.Windows;
-using System;
-using Plugins.Shared.Library.Nuget;
-using RPAStudio.Librarys;
+﻿using System;
 using System.Collections.Generic;
-using NuGet.Configuration;
-using System.Windows.Controls;
+using System.Collections.ObjectModel;
 using System.Linq;
-using Newtonsoft.Json.Linq;
-using NuGet.Versioning;
-using NuGet.Packaging.Core;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Navigation;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using NuGet.Protocol.Core.Types;
+using System.Windows;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using NuGet.Configuration;
 using NuGet.Packaging;
+using NuGet.Packaging.Core;
+using NuGet.Protocol.Core.Types;
+using NuGet.Versioning;
+using Newtonsoft.Json.Linq;
+using Plugins.Shared.Library.Nuget;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -135,13 +136,13 @@ namespace RPAStudio.ViewModel
             //初始化
             SettingItems.Clear();
 
-            var itemSettings = new SettingItem(this,SettingItem.enSettingItemType.Settings,"设置","设置包源地址", "pack://application:,,,/Resources/Image/Windows/PackageManager/settings.png");
+            var itemSettings = new SettingItem(this,SettingItem.enSettingItemType.Settings, ResxIF.GetString("SettingsText"), ResxIF.GetString("SetFromAddress"), "pack://application:,,,/Resources/Image/Windows/PackageManager/settings.png");
             SettingItems.Add(itemSettings);
 
-            var itemProjectDependencies = new SettingItem(this, SettingItem.enSettingItemType.ProjectDependencies, "项目依赖包", "查看当前项目的所有依赖包", "pack://application:,,,/Resources/Image/Windows/PackageManager/project-dependencies.png");
+            var itemProjectDependencies = new SettingItem(this, SettingItem.enSettingItemType.ProjectDependencies, ResxIF.GetString("ProjectDependencies"), ResxIF.GetString("ViewAllDependencies"), "pack://application:,,,/Resources/Image/Windows/PackageManager/project-dependencies.png");
             SettingItems.Add(itemProjectDependencies);
 
-            var itemAllPackages = new SettingItem(this, SettingItem.enSettingItemType.AllPackages, "所有包", "从所有的包源地址来查看或搜索包", "pack://application:,,,/Resources/Image/Windows/PackageManager/all-packages.png");
+            var itemAllPackages = new SettingItem(this, SettingItem.enSettingItemType.AllPackages, ResxIF.GetString("AllPackages"), ResxIF.GetString("AllPackagesTip"), "pack://application:,,,/Resources/Image/Windows/PackageManager/all-packages.png");
             SettingItems.Add(itemAllPackages);
 
             if(selectType == SettingItem.enSettingItemType.Settings)
@@ -1840,7 +1841,7 @@ namespace RPAStudio.ViewModel
                         if (SelectedItemRequireLicenseAcceptance)
                         {
                             //确定接收许可证吗？
-                            var ret = MessageBox.Show(m_view, "该程序包要求你在安装前接受其许可证条款，确定接受吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                            var ret = MessageBox.Show(m_view, "该程序包要求你在安装前接受其许可证条款，确定接受吗？", ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (ret != MessageBoxResult.Yes)
                             {
                                 return;

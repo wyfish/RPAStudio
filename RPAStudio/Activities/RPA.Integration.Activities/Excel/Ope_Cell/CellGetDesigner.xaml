@@ -5,7 +5,8 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
-    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     Loaded="IcoPath_Loaded"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     >
@@ -32,7 +33,7 @@
 
     <pslc:CollapsableActivity >
         <Grid x:Name="grid1"  Height="45" >
-            <TextBox Text="行" VerticalAlignment="Center" BorderThickness="0" IsReadOnly="True" VerticalContentAlignment="Center"  Margin="30,15,210,14" Height="16" RenderTransformOrigin="1.25,0.625"></TextBox>
+            <TextBox Text="{x:Static lclz:Resources.DisplayName16}" VerticalAlignment="Center" BorderThickness="0" IsReadOnly="True" VerticalContentAlignment="Center"  Margin="30,15,210,14" Height="16" RenderTransformOrigin="1.25,0.625"></TextBox>
             <sapv:ExpressionTextBox
                 x:Name="expressTextBox"
                 Expression="{Binding Path=ModelItem.CellRow, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
@@ -46,7 +47,7 @@
                 VerticalContentAlignment="Center"
                 MaxLines="1" RenderTransformOrigin="0.5,0.5" Height="25" >
             </sapv:ExpressionTextBox>
-            <TextBox Text="列" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center"  Margin="130,15,110,14" Height="16"/>
+            <TextBox Text="{x:Static lclz:Resources.DisplayName17}" BorderThickness="0" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center"  Margin="130,15,110,14" Height="16"/>
             <sapv:ExpressionTextBox
                 x:Name="expressTextBox_Copy"
                 Expression="{Binding ModelItem.CellColumn, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay}"

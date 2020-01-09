@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--活动配置信息-->
 <activity.config>
-  <Group Name="アプリケーション統合">
+  <Group Name="アプリの連携">
     <Group Name="Python">
       <Activity Name="スクリプトコードを実行" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonScriptActivity,RPA.Script.Activities" ToolTip="Pythonスクリプトコードの同期実行、パラメーターの受け渡しのサポート"/>
       <Activity Name="スクリプトファイルを実行" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonFileActivity,RPA.Script.Activities" ToolTip="Pythonスクリプトファイルの同期実行、パラメーターの受け渡しのサポート"/>

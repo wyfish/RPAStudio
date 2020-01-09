@@ -1,18 +1,19 @@
 ﻿using System;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
 using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
-using RPAStudio.Librarys;
-using log4net;
 using System.Windows;
-using Newtonsoft.Json;
-using GalaSoft.MvvmLight.Messaging;
 using System.Windows.Controls;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using log4net;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NuGet;
 using NuGet.Versioning;
+using RPAStudio.Localization;
+using RPAStudio.Librarys;
 
 namespace RPAStudio.ViewModel
 {
@@ -525,7 +526,7 @@ namespace RPAStudio.ViewModel
                             //创建项目失败
                             Logger.Error(e, logger);
 
-                            MessageBox.Show(App.Current.MainWindow, "创建项目目录失败，请检查", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            MessageBox.Show(App.Current.MainWindow, "创建项目目录失败，请检查", ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                             return;
                         }
 
@@ -688,13 +689,7 @@ namespace RPAStudio.ViewModel
             ProjectPath = defaultCreatePath;
 
         }
-
-
     }
-
-
-
-
 
 
     public class ProjectJsonConfig

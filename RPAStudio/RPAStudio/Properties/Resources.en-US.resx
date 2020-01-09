@@ -226,7 +226,7 @@
     <value>Error</value>
   </data>
   <data name="Execution.Header" xml:space="preserve">
-    <value>Execution</value>
+    <value>Debug</value>
   </data>
   <data name="ExpandAll.ToolTip" xml:space="preserve">
     <value>Expand All</value>

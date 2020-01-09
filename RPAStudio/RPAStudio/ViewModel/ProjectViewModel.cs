@@ -1,23 +1,24 @@
 ﻿using System;
-using GalaSoft.MvvmLight;
-using log4net;
-using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight.Command;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Threading.Tasks;
+using System.Reflection;
+using System.Windows;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using Newtonsoft.Json;
-using System.IO;
-using System.Windows;
+using Newtonsoft.Json.Linq;
+using NuGet.Versioning;
+using log4net;
+using Plugins.Shared.Library;
+using Plugins.Shared.Library.Nuget;
 using RPAStudio.Librarys;
 using RPAStudio.Windows;
 using RPAStudio.DataManager;
 using RPAStudio.DragDropHandler;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
-using NuGet.Versioning;
-using Plugins.Shared.Library.Nuget;
-using System.Reflection;
-using Plugins.Shared.Library;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -195,7 +196,7 @@ namespace RPAStudio.ViewModel
                     Logger.Error(err, logger);
                     CurrentProjectJsonFile = "";
                     Common.RunInUI(() => {
-                        MessageBox.Show(App.Current.MainWindow, "打开项目出错！", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("ProjectOpenError"), ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning); ;
                     });
                 }finally
                 {
@@ -345,21 +346,11 @@ namespace RPAStudio.ViewModel
 
         private void InitDependencies(ProjectTreeItem projectItem)
         {
-            string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            string dependencyPackage = "Dependency package";
-            if (isoCulture.Equals("zh"))
-            {
-                dependencyPackage = "依赖包";
-            }
-            else if (isoCulture.Equals("ja"))
-            {
-                dependencyPackage = "依存パッケージ";
-            }
-
             var dependRootItem = new ProjectTreeItem(this);
             dependRootItem.IsDependRoot = true;
             dependRootItem.IsExpanded = true;
-            dependRootItem.Name = dependencyPackage;
+            //dependRootItem.Name = "依赖包";
+            dependRootItem.Name = ResxIF.GetString("DependencyText");
             dependRootItem.Icon = "pack://application:,,,/Resources/Image/Project/dependencies.png";
             projectItem.Children.Add(dependRootItem);
 

@@ -603,4 +603,22 @@
   <data name="TapScreen" xml:space="preserve">
     <value>点击屏幕</value>
   </data>
+  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+    <value>要检索的属性的名称</value>
+  </data>
+  <data name="AttributeToExpect.HintText" xml:space="preserve">
+    <value>指定属性的预期值</value>
+  </data>
+  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+    <value>要更改的HTML属性的名称</value>
+  </data>
+  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+    <value>要等待的属性的名称</value>
+  </data>
+  <data name="SetAttributeValue.HintText" xml:space="preserve">
+    <value>要设置为指定属性的值。仅支持字符串变量</value>
+  </data>
+  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+    <value>指定浏览器中打开的URL</value>
+  </data>
 </root>

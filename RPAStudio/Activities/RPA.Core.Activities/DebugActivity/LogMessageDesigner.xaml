@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:wu="clr-namespace:RPA.Core.Activities.DebugActivity"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -38,12 +39,12 @@
         <Grid>
             <DockPanel LastChildFill="True" Width="300">
                 <DockPanel Dock="Top" LastChildFill="True">
-                    <Label Name="LogLevelLabel" Width="63" DockPanel.Dock="Left" Content="级别" />
+                    <Label Name="LogLevelLabel" Width="63" DockPanel.Dock="Left" Content="{x:Static lclz:Resources.LevelText}" />
                     <ComboBox Name="LogLevelComboBox" Style="{StaticResource NonEditableComboboxStyle}" VerticalContentAlignment="Center" DockPanel.Dock="Right" Text="Info" SelectedItem="{Binding Path=ModelItem.Level, Mode=TwoWay}" ItemsSource="{Binding Source={StaticResource LogLevel}}" />
                 </DockPanel>
                 <DockPanel Dock="Bottom" LastChildFill="True" Margin="0,5,0,0" VerticalAlignment="Center">
-                    <Label Name="LogDataLabel" DockPanel.Dock="Left" Content="消息" Width="63" />
-                    <sapv:ExpressionTextBox Name="LogDataTextBox" DockPanel.Dock="Right" HintText="文本必须用双引号括起来" ExpressionType="{x:Type sys:Object}" OwnerActivity="{Binding Path=ModelItem}" Expression="{Binding Path=ModelItem.Message, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
+                    <Label Name="LogDataLabel" DockPanel.Dock="Left" Content="{x:Static lclz:Resources.NewsText}" Width="63" />
+                    <sapv:ExpressionTextBox Name="LogDataTextBox" DockPanel.Dock="Right" HintText="{x:Static lclz:Resources.DoubleQuotesHintText}" ExpressionType="{x:Type sys:Object}" OwnerActivity="{Binding Path=ModelItem}" Expression="{Binding Path=ModelItem.Message, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" />
                 </DockPanel>
             </DockPanel>
         </Grid>

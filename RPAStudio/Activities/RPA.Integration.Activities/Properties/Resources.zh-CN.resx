@@ -840,4 +840,49 @@
   <data name="Description74" xml:space="preserve">
     <value>写入文本前写入的行数</value>
   </data>
+  <data name="AddText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="ConfigureDatabaseConnection" xml:space="preserve">
+    <value>配置数据库连接</value>
+  </data>
+  <data name="ConnectionConfiguration" xml:space="preserve">
+    <value>连接配置</value>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>连接设置</value>
+  </data>
+  <data name="ConnectionWizard" xml:space="preserve">
+    <value>连接向导</value>
+  </data>
+  <data name="ContentText" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="EditSQL" xml:space="preserve">
+    <value>SQL编辑</value>
+  </data>
+  <data name="EndArea" xml:space="preserve">
+    <value>结束区域</value>
+  </data>
+  <data name="HideText" xml:space="preserve">
+    <value>隐藏</value>
+  </data>
+  <data name="MailFolder" xml:space="preserve">
+    <value>邮件文件夹</value>
+  </data>
+  <data name="MailMessage" xml:space="preserve">
+    <value>邮件消息</value>
+  </data>
+  <data name="NewDatabaseConnection" xml:space="preserve">
+    <value>新建数据库连接</value>
+  </data>
+  <data name="ParameterText" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="StartArea" xml:space="preserve">
+    <value>开始区域</value>
+  </data>
 </root>

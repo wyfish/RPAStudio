@@ -1,16 +1,16 @@
 ﻿using System;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
 using System.Xml;
 using System.IO;
 using System.Collections.Generic;
-using RPAStudio.Librarys;
-using log4net;
-using RPAUpdate.Librarys;
 using System.Threading;
-using GalaSoft.MvvmLight.Messaging;
 using System.Windows;
 using System.Threading.Tasks;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using log4net;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
+using RPAUpdate.Librarys;
 
 namespace RPAStudio.ViewModel
 {
@@ -73,7 +73,7 @@ namespace RPAStudio.ViewModel
                             //重命名失败
                             Logger.Error(string.Format("重命名{0}到{1}失败", obj.SaveFilePath, finishedFilePath), logger);
 
-                            MessageBox.Show(App.Current.MainWindow, "升级包重命名操作出现异常，请检查！", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            MessageBox.Show(App.Current.MainWindow, "升级包重命名操作出现异常，请检查！", ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                         else
                         {
@@ -88,12 +88,12 @@ namespace RPAStudio.ViewModel
                             File.Delete(obj.SaveFilePath);
                         }
 
-                        MessageBox.Show(App.Current.MainWindow, "升级包MD5校验不一致，请重试！", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show(App.Current.MainWindow, "升级包MD5校验不一致，请重试！", ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(App.Current.MainWindow, "下载过程中出现异常，请检查并重试！", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(App.Current.MainWindow, "下载过程中出现异常，请检查并重试！", ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
                 
             });
@@ -124,7 +124,7 @@ namespace RPAStudio.ViewModel
         private void doInstallUpgradePackage(string upgradePackageFilePath)
         {
             //弹窗提示用户是否现在立刻更新程序
-            var ret = MessageBox.Show(App.Current.MainWindow, "升级包已经下载好，是否现在更新？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
+            var ret = MessageBox.Show(App.Current.MainWindow, "升级包已经下载好，是否现在更新？", ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
             if (ret == MessageBoxResult.Yes)
             {
                 bool isDocumentNeedSave = false;

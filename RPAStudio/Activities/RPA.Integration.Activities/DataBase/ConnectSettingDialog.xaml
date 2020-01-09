@@ -8,6 +8,7 @@
         xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
         xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
         xmlns:local="clr-namespace:RPA.Integration.Activities.Database"
+        xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
         xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
         mc:Ignorable="d"
         BorderBrush="#1883D7"
@@ -40,7 +41,7 @@
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="0" >
-            <Label x:Name="TitleText" Content="连接设置"  FontSize="12"></Label>
+            <Label x:Name="TitleText" Content="{x:Static lclz:Resources.ConnectionSettings}"  FontSize="12"></Label>
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="1">
@@ -49,14 +50,14 @@
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0" Background="#F0F0F0">
-            <Label x:Name="NewConn1" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom">新建数据库连接</Label>
+            <Label x:Name="NewConn1" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="{x:Static lclz:Resources.NewDatabaseConnection}"/>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1" Background="#F0F0F0">
             <Button Name="btnWizard"  FontSize="14" Height="26" Width="105" Foreground="Black" 
                     Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Right" 
                     Click="btnWizard_Click"
                     BorderBrush="LightGray"
-                    BorderThickness="1" Margin="0,10,33,0">连接向导</Button>
+                    BorderThickness="1" Margin="0,10,33,0" Content="{x:Static lclz:Resources.ConnectionWizard}"/>
         </Grid>
 
         <Grid Grid.Row="2" Grid.ColumnSpan="2" Background="#F0F0F0" IsEnabled="True">

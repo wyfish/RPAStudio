@@ -3,92 +3,92 @@
 <activity.config>
   <Group Name="System" >
     <Group Name="File">
-      <Activity Name="Append line" Icon="Resources/File/appline.png" TypeOf="RPA.Core.Activities.FileActivity.AppendLineActivity,RPA.Core.Activities" ToolTip="Appends the specified string to the file, and if the file does not exist, it is created." />
-      <Activity Name="Copy file" Icon="Resources/File/copyfile.png" TypeOf="RPA.Core.Activities.FileActivity.CopyFileActivity,RPA.Core.Activities" ToolTip="Copy files from the specified location to another location." />
-      <Activity Name="Create folder" Icon="Resources/File/createdir.png" TypeOf="RPA.Core.Activities.FileActivity.CreateDirectoryActivity,RPA.Core.Activities" ToolTip="Create a directory at the specified location." />
-      <Activity Name="Create a file" Icon="Resources/File/newfile.png" TypeOf="RPA.Core.Activities.FileActivity.CreateFileActivity,RPA.Core.Activities" ToolTip="Create a file at the specified location." />
+      <Activity Name="Append Line" Icon="Resources/File/appline.png" TypeOf="RPA.Core.Activities.FileActivity.AppendLineActivity,RPA.Core.Activities" ToolTip="Appends the specified string to the file, and if the file does not exist, it is created." />
+      <Activity Name="Copy File" Icon="Resources/File/copyfile.png" TypeOf="RPA.Core.Activities.FileActivity.CopyFileActivity,RPA.Core.Activities" ToolTip="Copy files from the specified location to another location." />
+      <Activity Name="Create Folder" Icon="Resources/File/createdir.png" TypeOf="RPA.Core.Activities.FileActivity.CreateDirectoryActivity,RPA.Core.Activities" ToolTip="Create a directory at the specified location." />
+      <Activity Name="Create File" Icon="Resources/File/newfile.png" TypeOf="RPA.Core.Activities.FileActivity.CreateFileActivity,RPA.Core.Activities" ToolTip="Create a file at the specified location." />
       <Activity Name="Delete" Icon="Resources/File/delete.png" TypeOf="RPA.Core.Activities.FileActivity.DeleteActivity,RPA.Core.Activities" ToolTip="Delete files or folders in the specified location." />
-      <Activity Name="Move files" Icon="Resources/File/movefile.png" TypeOf="RPA.Core.Activities.FileActivity.MoveFileActivity,RPA.Core.Activities" ToolTip="Move a file from a specified location to another location." />
-      <Activity Name="Path exists" Icon="Resources/File/fileexist.png" TypeOf="RPA.Core.Activities.FileActivity.PathExistsActivity,RPA.Core.Activities" ToolTip="Check if the specified path exists.  This path can represent a file path or a directory path." />
-      <Activity Name="Read text file" Icon="Resources/File/read.png" TypeOf="RPA.Core.Activities.FileActivity.ReadTextFileActivity,RPA.Core.Activities" ToolTip="Read all characters from the specified file." />
-      <Activity Name="Write text file" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.WriteTextFileActivity,RPA.Core.Activities" ToolTip="Writes the specified text to the file and the existing text is overwritten." />
-      <Activity Name="File change event" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.FileChangeTriggerActivity,RPA.Core.Activities" ToolTip="File change event." />
+      <Activity Name="Move File" Icon="Resources/File/movefile.png" TypeOf="RPA.Core.Activities.FileActivity.MoveFileActivity,RPA.Core.Activities" ToolTip="Move a file from a specified location to another location." />
+      <Activity Name="Path Exists" Icon="Resources/File/fileexist.png" TypeOf="RPA.Core.Activities.FileActivity.PathExistsActivity,RPA.Core.Activities" ToolTip="Check if the specified path exists.  This path can represent a file path or a directory path." />
+      <Activity Name="Read Text File" Icon="Resources/File/read.png" TypeOf="RPA.Core.Activities.FileActivity.ReadTextFileActivity,RPA.Core.Activities" ToolTip="Read all characters from the specified file." />
+      <Activity Name="Write Text File" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.WriteTextFileActivity,RPA.Core.Activities" ToolTip="Writes the specified text to the file and the existing text is overwritten." />
+      <Activity Name="File Change Trigger" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.FileChangeTriggerActivity,RPA.Core.Activities" ToolTip="File change event." />
     </Group>
     <Group Name="Clipboard">
-      <Activity Name="Copy selected text" Icon="Resources/Clipboard/copyselecttext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.CopySelectTextActivity,RPA.Core.Activities" ToolTip="Use the clipboard function to get the selected text." />
-      <Activity Name="Get text from the clipboard" Icon="Resources/Clipboard/gettext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.GetFromClipboardActivity,RPA.Core.Activities" ToolTip="Retrieve data from the clipboard." />
-      <Activity Name="Set clipboard" Icon="Resources/Clipboard/setclipboard.png" TypeOf="RPA.Core.Activities.ClipboardActivity.SetToClipboardActivity,RPA.Core.Activities" ToolTip="Place the specified text/file on the clipboard." />
+      <Activity Name="Copy Selected Text" Icon="Resources/Clipboard/copyselecttext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.CopySelectTextActivity,RPA.Core.Activities" ToolTip="Use the clipboard function to get the selected text." />
+      <Activity Name="Get From Clipboard" Icon="Resources/Clipboard/gettext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.GetFromClipboardActivity,RPA.Core.Activities" ToolTip="Retrieve data from the clipboard." />
+      <Activity Name="Set To Clipboard" Icon="Resources/Clipboard/setclipboard.png" TypeOf="RPA.Core.Activities.ClipboardActivity.SetToClipboardActivity,RPA.Core.Activities" ToolTip="Place the specified text/file on the clipboard." />
     </Group>
     <Group Name="Application">
-      <Activity Name="Close the app" Icon="Resources/Application/close.png" TypeOf="RPA.Core.Activities.ApplicationActivity.CloseApplicationActivity,RPA.Core.Activities" ToolTip="Close the application that corresponds to the specified UI element." />
-      <Activity Name="Acquisition process" Icon="Resources/Application/process.png" TypeOf="RPA.Core.Activities.ApplicationActivity.GetProcessActivity,RPA.Core.Activities" ToolTip="Get a list of all running processes." />
-      <Activity Name="Kill the process" Icon="Resources/Application/killprocess.png" TypeOf="RPA.Core.Activities.ApplicationActivity.KillProcessActivity,RPA.Core.Activities" ToolTip="Terminate the specified process." />
+      <Activity Name="Close Application" Icon="Resources/Application/close.png" TypeOf="RPA.Core.Activities.ApplicationActivity.CloseApplicationActivity,RPA.Core.Activities" ToolTip="Close the application that corresponds to the specified UI element." />
+      <Activity Name="Get Processes" Icon="Resources/Application/process.png" TypeOf="RPA.Core.Activities.ApplicationActivity.GetProcessActivity,RPA.Core.Activities" ToolTip="Get a list of all running processes." />
+      <Activity Name="Kill Process" Icon="Resources/Application/killprocess.png" TypeOf="RPA.Core.Activities.ApplicationActivity.KillProcessActivity,RPA.Core.Activities" ToolTip="Terminate the specified process." />
       <!--<Activity Name="打开应用程序" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.OpenApplicationActivity,RPA.Core.Activities" ToolTip="启动指定应用程序并在其中执行多个操作的容器。此外，它还可以将参数列表传递给应用程序。" />-->
-      <Activity Name="Startup process" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.StartProcessActivity,RPA.Core.Activities" ToolTip="Start the specified application and optionally pass a list of parameters to it." />
+      <Activity Name="Start Process" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.StartProcessActivity,RPA.Core.Activities" ToolTip="Start the specified application and optionally pass a list of parameters to it." />
     </Group>
     <Group Name="Dialog">
-      <Activity Name="Label" Icon="Resources/Dialog/callout.png" TypeOf="RPA.Core.Activities.DialogActivity.CalloutActivity,RPA.Core.Activities" ToolTip="Displays a pop-up with a title and text on the specified UI element for a certain amount of time." />
-      <Activity Name="Custom input" Icon="Resources/Dialog/custom_input.png" TypeOf="RPA.Core.Activities.DialogActivity.CustomInputActivity,RPA.Core.Activities" ToolTip="Shows the HTML file that sends the data back to the workflow." />
-      <Activity Name="Input dialog" Icon="Resources/Dialog/inputdialog.png" TypeOf="RPA.Core.Activities.DialogActivity.InputDialogActivity,RPA.Core.Activities" ToolTip="A dialog box is displayed prompting the user with a tag message and an input field." />
-      <Activity Name="Dialog" Icon="Resources/Dialog/messagebox.png" TypeOf="RPA.Core.Activities.DialogActivity.MessageBoxActivity,RPA.Core.Activities" ToolTip="Displays a message box with the given text with button options." />
-      <Activity Name="Select a document" Icon="Resources/Dialog/selectfile.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFileActivity,RPA.Core.Activities" ToolTip="Open a dialog to select a file." />
-      <Activity Name="Select folder" Icon="Resources/Dialog/selectfolder.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFolderActivity,RPA.Core.Activities" ToolTip="Open the dialog to select a folder." />
+      <Activity Name="Callout" Icon="Resources/Dialog/callout.png" TypeOf="RPA.Core.Activities.DialogActivity.CalloutActivity,RPA.Core.Activities" ToolTip="Displays a pop-up with a title and text on the specified UI element for a certain amount of time." />
+      <Activity Name="Custom Input" Icon="Resources/Dialog/custom_input.png" TypeOf="RPA.Core.Activities.DialogActivity.CustomInputActivity,RPA.Core.Activities" ToolTip="Shows the HTML file that sends the data back to the workflow." />
+      <Activity Name="Input Dialog" Icon="Resources/Dialog/inputdialog.png" TypeOf="RPA.Core.Activities.DialogActivity.InputDialogActivity,RPA.Core.Activities" ToolTip="A dialog box is displayed prompting the user with a tag message and an input field." />
+      <Activity Name="Message Box" Icon="Resources/Dialog/messagebox.png" TypeOf="RPA.Core.Activities.DialogActivity.MessageBoxActivity,RPA.Core.Activities" ToolTip="Displays a message box with the given text with button options." />
+      <Activity Name="Select File" Icon="Resources/Dialog/selectfile.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFileActivity,RPA.Core.Activities" ToolTip="Open a dialog to select a file." />
+      <Activity Name="Select Folder" Icon="Resources/Dialog/selectfolder.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFolderActivity,RPA.Core.Activities" ToolTip="Open the dialog to select a folder." />
     </Group>
     <Group Name="Environment">
       <Activity Name="Beep" Icon="Resources/Environment/beep.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.WinBeep,RPA.Core.Activities" ToolTip="Buzzer or system beep, etc." />
-      <Activity Name="Get system path" Icon="Resources/Environment/envfolder.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvPath,RPA.Core.Activities" ToolTip="Get the path to the specified system special folder" />
-      <Activity Name="Get system variables" Icon="Resources/Environment/envvariable.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvVar,RPA.Core.Activities" ToolTip="Get the contents of the specified environment variable" />
-      <Activity Name="Get password" Icon="Resources/Environment/password.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetPassword,RPA.Core.Activities" ToolTip="Encrypt the password by associating it with the current user.  Only workflows running under the current user context can decrypt the password." />
+      <Activity Name="Get Environment Folder" Icon="Resources/Environment/envfolder.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvPath,RPA.Core.Activities" ToolTip="Get the path to the specified system special folder" />
+      <Activity Name="Get Environment Variable" Icon="Resources/Environment/envvariable.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvVar,RPA.Core.Activities" ToolTip="Get the contents of the specified environment variable" />
+      <Activity Name="Get Password" Icon="Resources/Environment/password.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetPassword,RPA.Core.Activities" ToolTip="Encrypt the password by associating it with the current user.  Only workflows running under the current user context can decrypt the password." />
     </Group>
-    <Group Name="Command Line">
-      <Activity Name="PowerShell" Icon="Resources/PowerShell/powershell.png" TypeOf="RPA.Core.Activities.PowerShellActivity.ShellActivity,RPA.Core.Activities" ToolTip="Execute command line commands or scripts" />
+    <Group Name="PowerShell">
+      <Activity Name="Invoke PowerShell" Icon="Resources/PowerShell/powershell.png" TypeOf="RPA.Core.Activities.PowerShellActivity.ShellActivity,RPA.Core.Activities" ToolTip="Execute command line commands or scripts" />
     </Group>
-    <Group Name="Date time">
-      <Activity Name="Get current date/time" Icon="Resources/DateTime/date.png" TypeOf="RPA.Core.Activities.DateTimeActivity.GetDateTimeActivity,RPA.Core.Activities" ToolTip="Get current date/time" />
-      <Activity Name="Date time conversion" Icon="Resources/DateTime/convert.png" TypeOf="RPA.Core.Activities.DateTimeActivity.DateConvertActivity,RPA.Core.Activities" ToolTip="Date time conversion" />
+    <Group Name="Date Time">
+      <Activity Name="Get Current Date/Time" Icon="Resources/DateTime/date.png" TypeOf="RPA.Core.Activities.DateTimeActivity.GetDateTimeActivity,RPA.Core.Activities" ToolTip="Get current date/time" />
+      <Activity Name="Date Time Conversion" Icon="Resources/DateTime/convert.png" TypeOf="RPA.Core.Activities.DateTimeActivity.DateConvertActivity,RPA.Core.Activities" ToolTip="Date time conversion" />
     </Group>
   </Group>
-  <Group Name="Coordinator" >
-    <Group Name="Digital assets">
-      <Activity Name="Obtaining credentials" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.GetCredential,RPA.Core.Activities" ToolTip="Use the provided AssetName to get the specified credentials and return the username and security password." />
-      <Activity Name="Setting credentials" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.SetCredential,RPA.Core.Activities" ToolTip="Enables you to update the value of the indicated credential asset, which is already available in the Windows Credentials list, whether it is a global asset or a personal computer asset." />
+  <Group Name="Orchestrator" >
+    <Group Name="Digital Assets">
+      <Activity Name="Get Credentials" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.GetCredential,RPA.Core.Activities" ToolTip="Use the provided AssetName to get the specified credentials and return the username and security password." />
+      <Activity Name="Set Credentials" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.SetCredential,RPA.Core.Activities" ToolTip="Enables you to update the value of the indicated credential asset, which is already available in the Windows Credentials list, whether it is a global asset or a personal computer asset." />
     </Group>
   </Group>
   <Group Name="Workflow">
-    <Group Name="Carried out" >
+    <Group Name="Invoke" >
       <Activity Name="Invoke Code" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="Synchronous execution of VB.Net code, support for passing parameters"/>
-      <Activity Name="Invoke Workflow file" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="Synchronous execution of a workflow file, support for passing parameters"/>
+      <Activity Name="Invoke Workflow File" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="Synchronous execution of a workflow file, support for passing parameters"/>
     </Group>
   </Group>
-  <Group Name="User event" >
-    <Activity Name="Monitoring events" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="User event" />
+  <Group Name="User Events" >
+    <Activity Name="Monitor Events" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="User event" />
   </Group>
   <Group Name="Programming" >
-    <Group Name="Debugging">
+    <Group Name="Debug">
       <Activity Name="Comment" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentActivity,RPA.Core.Activities" ToolTip="Add a comment to the workflow"/>
-      <Activity Name="Annotation activity" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentOutActivity,RPA.Core.Activities" ToolTip="a container, the activity placed inside will not be executed"/>
-      <Activity Name="Output log" Icon="Resources/DebugActivity/log-message.png"  TypeOf="RPA.Core.Activities.DebugActivity.LogMessageActivity,RPA.Core.Activities" ToolTip="Print logs to output windows and log files"/>
+      <Activity Name="Comment Out" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentOutActivity,RPA.Core.Activities" ToolTip="a container, the activity placed inside will not be executed"/>
+      <Activity Name="Log Message" Icon="Resources/DebugActivity/log-message.png"  TypeOf="RPA.Core.Activities.DebugActivity.LogMessageActivity,RPA.Core.Activities" ToolTip="Print logs to output windows and log files"/>
     </Group>
     <Group Name="DataTable">
-      <Activity Name="Add data column" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataColumn,   RPA.Core.Activities" ToolTip="Add DataColumn to the specified DataTable"/>
-      <Activity Name="Add data row" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataRow,      RPA.Core.Activities" ToolTip="Add a DataRow to the specified DataTable"/>
-      <Activity Name="Build data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.BuildDataTable,  RPA.Core.Activities" ToolTip="Create a DataTable based on the specified pattern"/>
-      <Activity Name="Clear data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ClearDataTable,  RPA.Core.Activities" ToolTip="Clear all data in the specified DataTable"/>
-      <Activity Name="Filter data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.FilterDataTable, RPA.Core.Activities" ToolTip="Lets you DataTable filter variables by specifying conditions in the Filter Wizard window. Activities can retain or delete rows or columns based on logical conditions specified in the wizard.
-                The event body contains a 'Filter Wizard' button so you can access the wizard and customize your settings at any time"/>
+      <Activity Name="Add Data Column" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataColumn,   RPA.Core.Activities" ToolTip="Add DataColumn to the specified DataTable"/>
+      <Activity Name="Add Data Row" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataRow,      RPA.Core.Activities" ToolTip="Add a DataRow to the specified DataTable"/>
+      <Activity Name="Build Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.BuildDataTable,  RPA.Core.Activities" ToolTip="Create a DataTable based on the specified pattern"/>
+      <Activity Name="Clear Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ClearDataTable,  RPA.Core.Activities" ToolTip="Clear all data in the specified DataTable"/>
+      <Activity Name="Filter Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.FilterDataTable, RPA.Core.Activities" ToolTip="Lets you DataTable filter variables by specifying conditions in the Filter Wizard window. Activities can retain or delete rows or columns based on logical conditions specified in the wizard.
+The event body contains a 'Filter Wizard' button so you can access the wizard and customize your settings at any time"/>
       <!--<Activity Name="单行操作"   Icon="DataTable/datatable.png"  TypeOf="DataTableActivity.ForEachRow,      DataTableActivity" ToolTip="对指定DataTable变量中的每一行执行一次操作"/>-->
-      <Activity Name="Generating data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GenerateDataTable,RPA.Core.Activities" ToolTip="Generate DataTable variables from unstructured data.  This activity allows you to select column and row separators based on the generated table."/>
-      <Activity Name="Get row data" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="Get the value from the DataRow variable based on the specified column"/>
-      <Activity Name="Additional data sheet" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.JoinDataTables,  RPA.Core.Activities" ToolTip="Combine rows from two tables with the same value as each other according to the Join rule specified in the JoinType property"/>
-      <Activity Name="Find data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.LookupDataTable, RPA.Core.Activities" ToolTip="This activity enables you to search the specified provided value, DataTable and return the RowIndex where it was found.
+      <Activity Name="Generate Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GenerateDataTable,RPA.Core.Activities" ToolTip="Generate DataTable variables from unstructured data.  This activity allows you to select column and row separators based on the generated table."/>
+      <Activity Name="Get Row Item" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="Get the value from the DataRow variable based on the specified column"/>
+      <Activity Name="Join Data Tables" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.JoinDataTables,  RPA.Core.Activities" ToolTip="Combine rows from two tables with the same value as each other according to the Join rule specified in the JoinType property"/>
+      <Activity Name="Lookup Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.LookupDataTable, RPA.Core.Activities" ToolTip="This activity enables you to search the specified provided value, DataTable and return the RowIndex where it was found.
 This activity can also help you return the value found in the cell with the row coordinates specified in the RowIndex property and the column coordinates specified in the Target Column property category."/>
-      <Activity Name="Consolidated data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.MergeDataTable,  RPA.Core.Activities" ToolTip="Merge the specified DataTable with the current DataTable,
+      <Activity Name="Merge Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.MergeDataTable,  RPA.Core.Activities" ToolTip="Merge the specified DataTable with the current DataTable,
 Indicates whether changes are retained and how to handle missing schemas in the current DataTable"/>
-      <Activity Name="Output data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.OutputDataTable, RPA.Core.Activities" ToolTip="Write a DataTable to a string using the CSV format"/>
-      <Activity Name="Delete data column" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataColumn,RPA.Core.Activities" ToolTip="Remove DataColumn from the specified DataTable"/>
-      <Activity Name="Delete data row" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataRow,   RPA.Core.Activities" ToolTip="Remove DataColumn from the specified DataTable"/>
-      <Activity Name="Delete duplicate rows" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="Remove duplicate row data from the specified DataTable"/>
-      <Activity Name="Sort data table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="The DataTable sorts the integers in ascending or descending order based on the value of the specified column."/>
+      <Activity Name="Output Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.OutputDataTable, RPA.Core.Activities" ToolTip="Write a DataTable to a string using the CSV format"/>
+      <Activity Name="Delete Data Column" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataColumn,RPA.Core.Activities" ToolTip="Remove DataColumn from the specified DataTable"/>
+      <Activity Name="Delete Data Row" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataRow,   RPA.Core.Activities" ToolTip="Remove DataColumn from the specified DataTable"/>
+      <Activity Name="Delete Duplicate Rows" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="Remove duplicate row data from the specified DataTable"/>
+      <Activity Name="Sort Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="The DataTable sorts the integers in ascending or descending order based on the value of the specified column."/>
     </Group>
   </Group>
 </activity.config>

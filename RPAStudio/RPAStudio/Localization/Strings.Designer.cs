@@ -79,7 +79,25 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Attributes に類似しているローカライズされた文字列を検索します。
+        ///   All Packages に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AllPackages {
+            get {
+                return ResourceManager.GetString("AllPackages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   View or search packets from all packet source addresses に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AllPackagesTip {
+            get {
+                return ResourceManager.GetString("AllPackagesTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Property に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string AttributesText {
             get {
@@ -111,6 +129,24 @@ namespace RPAStudio.Localization {
         public static string CodeSnippetText {
             get {
                 return ResourceManager.GetString("CodeSnippetText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Confirm に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ConfirmText {
+            get {
+                return ResourceManager.GetString("ConfirmText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Copy(Ctrl+C) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CopyCtrlC {
+            get {
+                return ResourceManager.GetString("CopyCtrlC", resourceCulture);
             }
         }
         
@@ -160,11 +196,47 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Delete に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DeleteText {
+            get {
+                return ResourceManager.GetString("DeleteText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dependency に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DependencyText {
+            get {
+                return ResourceManager.GetString("DependencyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Description に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DescriptionText {
             get {
                 return ResourceManager.GetString("DescriptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ErrorText {
+            get {
+                return ResourceManager.GetString("ErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Import workflow… に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ImportWorkflowDot {
+            get {
+                return ResourceManager.GetString("ImportWorkflowDot", resourceCulture);
             }
         }
         
@@ -178,6 +250,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   The content of the project configuration file project.json is incorrectly formatted に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string jsonFormatError {
+            get {
+                return ResourceManager.GetString("jsonFormatError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Local Robot に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string LocalRobotContent {
@@ -187,11 +268,29 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   The file has been modified. Do you need to save the file \&quot;{0}\&quot;? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Message_SaveConfirm {
+            get {
+                return ResourceManager.GetString("Message_SaveConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string NameText {
             get {
                 return ResourceManager.GetString("NameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   New folder... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string NewFolderDot {
+            get {
+                return ResourceManager.GetString("NewFolderDot", resourceCulture);
             }
         }
         
@@ -232,11 +331,38 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   WorkflowProjectFile|project.json|WorkflowFile|*.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenProjectDialog {
+            get {
+                return ResourceManager.GetString("OpenProjectDialog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Open the project directory に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string OpenProjectDir {
             get {
                 return ResourceManager.GetString("OpenProjectDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open project folder に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenProjectFolder {
+            get {
+                return ResourceManager.GetString("OpenProjectFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenText {
+            get {
+                return ResourceManager.GetString("OpenText", resourceCulture);
             }
         }
         
@@ -282,6 +408,24 @@ namespace RPAStudio.Localization {
         public static string PathText {
             get {
                 return ResourceManager.GetString("PathText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Project dependencies に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ProjectDependencies {
+            get {
+                return ResourceManager.GetString("ProjectDependencies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Error opening project! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ProjectOpenError {
+            get {
+                return ResourceManager.GetString("ProjectOpenError", resourceCulture);
             }
         }
         
@@ -358,11 +502,29 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Remove from favorites に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RemoveFromFavorites {
+            get {
+                return ResourceManager.GetString("RemoveFromFavorites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Remove from list に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string RemoveFromList {
             get {
                 return ResourceManager.GetString("RemoveFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Remove に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RemoveText {
+            get {
+                return ResourceManager.GetString("RemoveText", resourceCulture);
             }
         }
         
@@ -376,11 +538,92 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Run に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RunText {
+            get {
+                return ResourceManager.GetString("RunText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Runtime error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RuntimeError {
+            get {
+                return ResourceManager.GetString("RuntimeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Enter what to search for here に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SearchTextWatermark {
             get {
                 return ResourceManager.GetString("SearchTextWatermark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Set as main file に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SetAsMainFile {
+            get {
+                return ResourceManager.GetString("SetAsMainFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Set the packet source address に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SetFromAddress {
+            get {
+                return ResourceManager.GetString("SetFromAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SettingsText {
+            get {
+                return ResourceManager.GetString("SettingsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Show available に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ShowAvailable {
+            get {
+                return ResourceManager.GetString("ShowAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Show details に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ShowDetails {
+            get {
+                return ResourceManager.GetString("ShowDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Show favorites に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ShowFavorites {
+            get {
+                return ResourceManager.GetString("ShowFavorites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Show recent に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ShowRecent {
+            get {
+                return ResourceManager.GetString("ShowRecent", resourceCulture);
             }
         }
         
@@ -399,6 +642,33 @@ namespace RPAStudio.Localization {
         public static string VersionText {
             get {
                 return ResourceManager.GetString("VersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   View all dependencies of the current project に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewAllDependencies {
+            get {
+                return ResourceManager.GetString("ViewAllDependencies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Workflow check error, please check parameter configuration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string WorkflowCheckError {
+            get {
+                return ResourceManager.GetString("WorkflowCheckError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Workflow verification is correct に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string WorkflowVerificationOK {
+            get {
+                return ResourceManager.GetString("WorkflowVerificationOK", resourceCulture);
             }
         }
     }

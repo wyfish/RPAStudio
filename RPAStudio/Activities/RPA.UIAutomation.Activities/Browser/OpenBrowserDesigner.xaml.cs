@@ -30,6 +30,7 @@ namespace RPA.UIAutomation.Activities.Browser
         public OpenBrowserDesigner()
         {
             InitializeComponent();
+            Net.Surviveplus.Localization.WpfLocalization.ApplyResources(this, Properties.Resources.ResourceManager);
             //SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "详细错误信息说明，可省略");
         }
 

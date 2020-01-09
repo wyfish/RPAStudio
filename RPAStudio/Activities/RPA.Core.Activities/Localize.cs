@@ -40,18 +40,5 @@ namespace RPA.Core.Activities
             }
         }
 
-        internal static class LocalText
-        {
-            private static bool _iszh = System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("zh");
-            private static bool _isja = System.Globalization.CultureInfo.CurrentCulture.Name.StartsWith("jp");
-
-            internal static string ArgumentError {
-                get {
-                    if (_iszh) return "FileName和Arguments都为空，至少需要一个不为空。";
-                    if (_isja) return "FileNameとArgumentsは両方とも空です。少なくとも1つは必要ありません。";
-                    return "FileName and Arguments are both empty, at least one is not required.";
-                }
-            }
-        }
     }
 }

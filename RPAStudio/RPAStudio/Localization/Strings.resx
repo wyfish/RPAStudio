@@ -123,8 +123,14 @@
   <data name="AddToFavorites" xml:space="preserve">
     <value>Add to Favorites</value>
   </data>
+  <data name="AllPackages" xml:space="preserve">
+    <value>All Packages</value>
+  </data>
+  <data name="AllPackagesTip" xml:space="preserve">
+    <value>View or search packets from all packet source addresses</value>
+  </data>
   <data name="AttributesText" xml:space="preserve">
-    <value>Attributes</value>
+    <value>Property</value>
   </data>
   <data name="CancelText" xml:space="preserve">
     <value>Cancel</value>
@@ -134,6 +140,12 @@
   </data>
   <data name="CodeSnippetText" xml:space="preserve">
     <value>CodeSnippet</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="CopyCtrlC" xml:space="preserve">
+    <value>Copy(Ctrl+C)</value>
   </data>
   <data name="CopyText" xml:space="preserve">
     <value>Copy</value>
@@ -150,17 +162,38 @@
   <data name="CustomPathText" xml:space="preserve">
     <value>Custom path</value>
   </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DependencyText" xml:space="preserve">
+    <value>Dependency</value>
+  </data>
   <data name="DescriptionText" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ImportWorkflowDot" xml:space="preserve">
+    <value>Import workflow…</value>
   </data>
   <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
     <value>Include pre-release versions</value>
   </data>
+  <data name="jsonFormatError" xml:space="preserve">
+    <value>The content of the project configuration file project.json is incorrectly formatted</value>
+  </data>
   <data name="LocalRobotContent" xml:space="preserve">
     <value>Local Robot</value>
   </data>
+  <data name="Message_SaveConfirm" xml:space="preserve">
+    <value>The file has been modified. Do you need to save the file \"{0}\"?</value>
+  </data>
   <data name="NameText" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="NewFolderDot" xml:space="preserve">
+    <value>New folder...</value>
   </data>
   <data name="NewFolderTitle" xml:space="preserve">
     <value>New Folder</value>
@@ -174,8 +207,17 @@
   <data name="OpenProject" xml:space="preserve">
     <value>Open the project</value>
   </data>
+  <data name="OpenProjectDialog" xml:space="preserve">
+    <value>WorkflowProjectFile|project.json|WorkflowFile|*.xaml</value>
+  </data>
   <data name="OpenProjectDir" xml:space="preserve">
     <value>Open the project directory</value>
+  </data>
+  <data name="OpenProjectFolder" xml:space="preserve">
+    <value>Open project folder</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>Open</value>
   </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>Original name :</value>
@@ -191,6 +233,12 @@
   </data>
   <data name="PathText" xml:space="preserve">
     <value>Path</value>
+  </data>
+  <data name="ProjectDependencies" xml:space="preserve">
+    <value>Project dependencies</value>
+  </data>
+  <data name="ProjectOpenError" xml:space="preserve">
+    <value>Error opening project!</value>
   </data>
   <data name="ProjectSettingsDesc" xml:space="preserve">
     <value>Modify project related configuration such as name and description</value>
@@ -216,19 +264,61 @@
   <data name="ReleaseToText" xml:space="preserve">
     <value>Release to</value>
   </data>
+  <data name="RemoveFromFavorites" xml:space="preserve">
+    <value>Remove from favorites</value>
+  </data>
   <data name="RemoveFromList" xml:space="preserve">
     <value>Remove from list</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>Remove</value>
   </data>
   <data name="RenameTitle" xml:space="preserve">
     <value>Rename</value>
   </data>
+  <data name="RunText" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="RuntimeError" xml:space="preserve">
+    <value>Runtime error</value>
+  </data>
   <data name="SearchTextWatermark" xml:space="preserve">
     <value>Enter what to search for here</value>
+  </data>
+  <data name="SetAsMainFile" xml:space="preserve">
+    <value>Set as main file</value>
+  </data>
+  <data name="SetFromAddress" xml:space="preserve">
+    <value>Set the packet source address</value>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ShowAvailable" xml:space="preserve">
+    <value>Show available</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>Show details</value>
+  </data>
+  <data name="ShowFavorites" xml:space="preserve">
+    <value>Show favorites</value>
+  </data>
+  <data name="ShowRecent" xml:space="preserve">
+    <value>Show recent</value>
   </data>
   <data name="TargetNameText" xml:space="preserve">
     <value>Target name :</value>
   </data>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>
+  </data>
+  <data name="ViewAllDependencies" xml:space="preserve">
+    <value>View all dependencies of the current project</value>
+  </data>
+  <data name="WorkflowCheckError" xml:space="preserve">
+    <value>Workflow check error, please check parameter configuration</value>
+  </data>
+  <data name="WorkflowVerificationOK" xml:space="preserve">
+    <value>Workflow verification is correct</value>
   </data>
 </root>

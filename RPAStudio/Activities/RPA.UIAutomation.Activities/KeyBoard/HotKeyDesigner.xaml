@@ -5,6 +5,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:local="clr-namespace:RPA.UIAutomation.Activities.Keyboard"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" Loaded="ActivityDesigner_Loaded"
     >
     <sap:ActivityDesigner.Resources>
@@ -28,7 +29,7 @@
     <pslc:CollapsableActivity >
         <Grid  Height="120">
             <TextBlock Name="navigateTextBlock" Margin="35,28,50,56">     
-                 <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" >点击屏幕</Hyperlink>
+                 <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" ><Run Text="{x:Static lclz:Resources.TapScreen}"/></Hyperlink>
            </TextBlock>
             <Button Style="{StaticResource ButtonNoHover}" MouseDoubleClick="Button_MouseDoubleClick" Margin="0,0,30,55" MaxWidth="230">
                 <Image Name="navigateImage"  Source="{Binding Path=ModelItem.SourceImgPath,Mode=OneWay, Converter={StaticResource ProjectPathConverters},ConverterParameter=.screenshots}" Stretch="UniformToFill"  Visibility="Visible" RenderOptions.BitmapScalingMode="HighQuality" UseLayoutRounding="True"/>
@@ -40,7 +41,7 @@
                     </Button.Background>
                     <Button.ContextMenu>
                         <ContextMenu Name="contextMenu">
-                            <MenuItem Header="重新选取" Click="meauItemClickOne">
+                            <MenuItem Header="{x:Static lclz:Resources.ReselectIt}" Click="meauItemClickOne">
                                 <MenuItem.Icon>
                                     <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
                                 </MenuItem.Icon>

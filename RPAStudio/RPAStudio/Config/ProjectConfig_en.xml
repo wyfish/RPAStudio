@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ProjectConfig>
-  <Process Title="New Process" Description="Design an automated process starting with a blank project" ProjectName="BlankProcess" ProjectDescription="Blank process"  />
+  <Process Title="New Process" Description="Start with a blank project to design a new automation process." ProjectName="BlankProcess" ProjectDescription="Blank process"  />
 </ProjectConfig>

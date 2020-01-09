@@ -840,4 +840,49 @@
   <data name="Description74" xml:space="preserve">
     <value>The number of lines written before writing text</value>
   </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ConfigureDatabaseConnection" xml:space="preserve">
+    <value>Configure database connection</value>
+  </data>
+  <data name="ConnectionConfiguration" xml:space="preserve">
+    <value>Connection configuration</value>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>Connection settings</value>
+  </data>
+  <data name="ConnectionWizard" xml:space="preserve">
+    <value>Connection Wizard</value>
+  </data>
+  <data name="ContentText" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditSQL" xml:space="preserve">
+    <value>Edit SQL</value>
+  </data>
+  <data name="EndArea" xml:space="preserve">
+    <value>End area</value>
+  </data>
+  <data name="HideText" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="MailFolder" xml:space="preserve">
+    <value>Mail folder</value>
+  </data>
+  <data name="MailMessage" xml:space="preserve">
+    <value>Mail message</value>
+  </data>
+  <data name="NewDatabaseConnection" xml:space="preserve">
+    <value>New database connection</value>
+  </data>
+  <data name="ParameterText" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="StartArea" xml:space="preserve">
+    <value>Start area</value>
+  </data>
 </root>

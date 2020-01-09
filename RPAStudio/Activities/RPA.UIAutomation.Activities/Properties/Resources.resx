@@ -603,4 +603,22 @@
   <data name="TapScreen" xml:space="preserve">
     <value>Tap the screen</value>
   </data>
+  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+    <value>The name of the attribute to retrieve</value>
+  </data>
+  <data name="AttributeToExpect.HintText" xml:space="preserve">
+    <value>Expected value of the specified attribute</value>
+  </data>
+  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+    <value>The name of the HTML attribute to change</value>
+  </data>
+  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+    <value>The name of the property to wait for</value>
+  </data>
+  <data name="SetAttributeValue.HintText" xml:space="preserve">
+    <value>The value to be set to the specified attribute. Only string variables are supported</value>
+  </data>
+  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+    <value>Specify the URL opened in the browser</value>
+  </data>
 </root>

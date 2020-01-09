@@ -1,31 +1,32 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using log4net;
-using RPAStudio.Librarys;
+﻿using System;
 using System.Activities;
 using System.Activities.Core.Presentation;
 using System.Activities.Presentation.Metadata;
+using System.Activities.Presentation.View;
+using System.Activities.XamlIntegration;
+using System.Activities.Validation;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Resources;
-using System;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Windows.Media.Imaging;
-using GalaSoft.MvvmLight.Messaging;
-using RPAStudio.Windows;
 using System.Windows.Threading;
-using Plugins.Shared.Library;
-using RPAStudio.Executor;
-using System.Activities.XamlIntegration;
-using System.Activities.Validation;
 using System.Diagnostics;
 using System.ComponentModel;
-using System.Activities.Presentation.View;
 using System.Windows.Input;
 using System.Xml;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using log4net;
+using Plugins.Shared.Library;
+using RPAStudio.Executor;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
+using RPAStudio.Windows;
 
 namespace RPAStudio.ViewModel
 {
@@ -853,18 +854,6 @@ namespace RPAStudio.ViewModel
         }
 
 
-      
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1041,7 +1030,8 @@ namespace RPAStudio.ViewModel
                     () =>
                     {
                         ViewModelLocator.Instance.Start.m_view.IsEnabled = false;
-                        var fileFullPath = Common.ShowSelectSingleFileDialog("工作流项目文件|project.json|工作流文件|*.xaml");
+                        //var fileFullPath = Common.ShowSelectSingleFileDialog("工作流项目文件|project.json|工作流文件|*.xaml");
+                        var fileFullPath = Common.ShowSelectSingleFileDialog(ResxIF.GetString("OpenProjectDialog"));
 
                         //延迟调用，避免双击选择文件时误触发后面的消息
                         Application.Current.Dispatcher.InvokeAsync(new Action(() =>
@@ -1077,7 +1067,8 @@ namespace RPAStudio.ViewModel
                                 else
                                 {
                                     hasError = true;
-                                    errorMsg = "项目配置文件project.json的内容格式不正确";
+                                    //errorMsg = "项目配置文件project.json的内容格式不正确";
+                                    errorMsg = ResxIF.GetString("jsonFormatError");
                                 }
                                
                             }
@@ -1124,7 +1115,7 @@ namespace RPAStudio.ViewModel
 
                             if(hasError)
                             {
-                                MessageBox.Show(App.Current.MainWindow, errorMsg, "错误", MessageBoxButton.OK,MessageBoxImage.Warning);
+                                MessageBox.Show(App.Current.MainWindow, errorMsg, ResxIF.GetString("ErrorText"), MessageBoxButton.OK,MessageBoxImage.Warning);
                             }
                             else
                             {
@@ -1369,10 +1360,6 @@ namespace RPAStudio.ViewModel
 
 
 
-
-
-
-
         private RelayCommand _runWorkflowCommand;
 
         /// <summary>
@@ -1559,9 +1546,6 @@ namespace RPAStudio.ViewModel
 
 
 
-
-
-
         /// <summary>
         /// The <see cref="DebugOrContinueWorkflowButtonHeader" /> property's name.
         /// </summary>
@@ -1663,11 +1647,6 @@ namespace RPAStudio.ViewModel
         }
         
 
-
-
-
-
-        
 
 
 
@@ -1838,7 +1817,8 @@ namespace RPAStudio.ViewModel
                         var result = ActivityValidationServices.Validate(workflow);
                         if (result.Errors.Count == 0)
                         {
-                            MessageBox.Show(App.Current.MainWindow, "工作流校验正确", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            // 工作流校验正确
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowVerificationOK"), "提示", MessageBoxButton.OK, MessageBoxImage.Information);
                         }
                         else
                         {
@@ -1846,8 +1826,8 @@ namespace RPAStudio.ViewModel
                             {
                                 SharedObject.Instance.Output(SharedObject.enOutputType.Error, err.Message);
                             }
-                            
-                            MessageBox.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 工作流校验错误，请检查参数配置
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowCheckError"), "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                     }));
             }
@@ -1891,12 +1871,6 @@ namespace RPAStudio.ViewModel
                     }));
             }
         }
-
-
-
-
-
-
 
 
 
@@ -2368,14 +2342,16 @@ namespace RPAStudio.ViewModel
 
         private string GetResString(string key)
         {
-            string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            // Only 'zh' and 'ja' localizations are available. Others will be shown in English.
-            if (isoCulture.Equals("zh") || isoCulture.Equals("ja"))
-            {
-                return Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
-            }
-            var en = new System.Globalization.CultureInfo("en");
-            return Properties.Resources.ResourceManager.GetString(key, en);
+            return Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
+
+            //string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            //// Only 'zh' and 'ja' localizations are available. Others will be shown in English.
+            //if (isoCulture.Equals("zh") || isoCulture.Equals("ja"))
+            //{
+            //    return Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
+            //}
+            //var en = new System.Globalization.CultureInfo("en");
+            //return Properties.Resources.ResourceManager.GetString(key, en);
         }
 
         #endregion

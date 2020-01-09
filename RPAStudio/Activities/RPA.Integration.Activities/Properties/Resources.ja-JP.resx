@@ -223,7 +223,7 @@
     <value>行</value>
   </data>
   <data name="DisplayName17" xml:space="preserve">
-    <value>コラム</value>
+    <value>列</value>
   </data>
   <data name="DisplayName18" xml:space="preserve">
     <value>ワークシート名</value>
@@ -839,5 +839,50 @@
   </data>
   <data name="Description74" xml:space="preserve">
     <value>テキストを書き込む前に書き込まれた行数</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="ConfigureDatabaseConnection" xml:space="preserve">
+    <value>データベース接続設定</value>
+  </data>
+  <data name="ConnectionConfiguration" xml:space="preserve">
+    <value>接続構成</value>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>接続設定</value>
+  </data>
+  <data name="ConnectionWizard" xml:space="preserve">
+    <value>接続ウィザード</value>
+  </data>
+  <data name="ContentText" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="EditSQL" xml:space="preserve">
+    <value>SQL編集</value>
+  </data>
+  <data name="EndArea" xml:space="preserve">
+    <value>終了エリア</value>
+  </data>
+  <data name="HideText" xml:space="preserve">
+    <value>隠す</value>
+  </data>
+  <data name="MailFolder" xml:space="preserve">
+    <value>メールフォルダ</value>
+  </data>
+  <data name="MailMessage" xml:space="preserve">
+    <value>メールメッセージ</value>
+  </data>
+  <data name="NewDatabaseConnection" xml:space="preserve">
+    <value>新しいデータベース接続</value>
+  </data>
+  <data name="ParameterText" xml:space="preserve">
+    <value>パラメータ</value>
+  </data>
+  <data name="StartArea" xml:space="preserve">
+    <value>開始エリア</value>
   </data>
 </root>

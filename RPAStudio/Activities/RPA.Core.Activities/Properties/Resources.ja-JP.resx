@@ -654,4 +654,40 @@
   <data name="Description115" xml:space="preserve">
     <value>ワークフローファイルのパス。二重引用符で囲む必要があります</value>
   </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>再選択</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>画面をタップ</value>
+  </data>
+  <data name="DragControlHere" xml:space="preserve">
+    <value>ここにコントロールをドラッグアンドドロップします</value>
+  </data>
+  <data name="GuideText" xml:space="preserve">
+    <value>ガイド</value>
+  </data>
+  <data name="DoubleQuotesHintText" xml:space="preserve">
+    <value>テキストは二重引用符で囲む必要があります</value>
+  </data>
+  <data name="EditCode" xml:space="preserve">
+    <value>コードを編集</value>
+  </data>
+  <data name="EditParameter" xml:space="preserve">
+    <value>パラメーターの編集</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>パスワードを入力してください</value>
+  </data>
+  <data name="ImportParameters" xml:space="preserve">
+    <value>パラメータをインポート</value>
+  </data>
+  <data name="LevelText" xml:space="preserve">
+    <value>レベル</value>
+  </data>
+  <data name="NewsText" xml:space="preserve">
+    <value>ニュース</value>
+  </data>
+  <data name="SpecialFolder" xml:space="preserve">
+    <value>特別なフォルダ</value>
+  </data>
 </root>

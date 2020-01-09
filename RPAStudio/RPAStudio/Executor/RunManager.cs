@@ -11,6 +11,7 @@ using System.Activities.XamlIntegration;
 using System.Activities.Validation;
 using GalaSoft.MvvmLight.Messaging;
 using RPAStudio.Librarys;
+using RPAStudio.Localization;
 using Plugins.Shared.Library.Extensions;
 using Plugins.Shared.Library;
 
@@ -72,7 +73,7 @@ namespace RPAStudio.Executor
             }
             else
             {
-                MessageBox.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowCheckError"), ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -91,8 +92,9 @@ namespace RPAStudio.Executor
                 if(!string.IsNullOrEmpty(obj.TerminationException.Message))
                 {
                     Common.RunInUI(()=> {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "运行时执行错误", obj.TerminationException.ToString());
-                        MessageBox.Show(App.Current.MainWindow, obj.TerminationException.Message, "运行时执行错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                        // 运行时执行错误
+                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, ResxIF.GetString("RuntimeError"), obj.TerminationException.ToString());
+                        MessageBox.Show(App.Current.MainWindow, obj.TerminationException.Message, ResxIF.GetString("RuntimeError"), MessageBoxButton.OK, MessageBoxImage.Error);
                     });
                 }
             }
