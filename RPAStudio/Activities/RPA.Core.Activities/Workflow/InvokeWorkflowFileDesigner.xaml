@@ -11,7 +11,7 @@
     psla:ActivityDesignerAttached.Icon="Resources/Workflow/invoke.png"
     psla:ActivityDesignerAttached.Resources="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml"
     >
-    
+
     <pslc:CollapsableActivity>
         <Grid Height="100">
             <Grid.RowDefinitions>
@@ -19,7 +19,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid>
-                <sapv:ExpressionTextBox Margin="0,0,30,0" OwnerActivity="{Binding Path=ModelItem}" ExpressionType="s:String" HintText="工作流文件路径，必须用双引号括起来"
+                <sapv:ExpressionTextBox Margin="0,0,30,0" OwnerActivity="{Binding Path=ModelItem}" ExpressionType="s:String" HintText="{x:Static lclz:Resources.WorkflowFilepathTip}"
                                 Expression="{Binding Path=ModelItem.WorkflowFilePath,Mode=TwoWay,Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In}" />
                 <Button x:Name="BrowserBtn" Width="25" Height="25" HorizontalAlignment="Right" Margin="0,0,1,0" Click="BrowserBtn_Click" >...</Button>
             </Grid>
@@ -28,11 +28,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="EditArgumentsBtn" Width="100" Height="25" HorizontalAlignment="Center" Click="EditArgumentsBtn_Click" Content="{x:Static lclz:Resources.EditParameter}"/>
-                <Button x:Name="ImportArgumentsBtn"  Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="ImportArgumentsBtn_Click" Content="{x:Static lclz:Resources.ImportParameters}"/> 
-
+                <Button x:Name="EditArgumentsBtn" Content="{x:Static lclz:Resources.EditParameter}" Width="100" Height="25" HorizontalAlignment="Center" Click="EditArgumentsBtn_Click"/>
+                <Button x:Name="ImportArgumentsBtn" Content="{x:Static lclz:Resources.ImportParameters}" Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="ImportArgumentsBtn_Click"/>
             </Grid>
         </Grid>
     </pslc:CollapsableActivity>
-    
+
 </sap:ActivityDesigner>

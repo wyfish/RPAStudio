@@ -160,13 +160,13 @@
     <value>Custom</value>
   </data>
   <data name="CustomPathText" xml:space="preserve">
-    <value>Custom path</value>
+    <value>Custom URL</value>
   </data>
   <data name="DeleteText" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="DependencyText" xml:space="preserve">
-    <value>Dependency</value>
+    <value>Dependencies</value>
   </data>
   <data name="DescriptionText" xml:space="preserve">
     <value>Description</value>
@@ -174,8 +174,23 @@
   <data name="ErrorText" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="Error_AlreadyRunning" xml:space="preserve">
+    <value>The program is already running</value>
+  </data>
+  <data name="Error_CallDeveloper" xml:space="preserve">
+    <value>An exception occurred during the program operation, please contact the software developer!</value>
+  </data>
+  <data name="Error_Critical_Exit" xml:space="preserve">
+    <value>A serious error occurred during the running of the program, and it is about to quit. Please contact the software developer!</value>
+  </data>
   <data name="ImportWorkflowDot" xml:space="preserve">
     <value>Import workflow…</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="InstalledText" xml:space="preserve">
+    <value>Installed</value>
   </data>
   <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
     <value>Include pre-release versions</value>
@@ -219,6 +234,9 @@
   <data name="OpenText" xml:space="preserve">
     <value>Open</value>
   </data>
+  <data name="OperatingRule" xml:space="preserve">
+    <value>Operating rules</value>
+  </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>Original name :</value>
   </data>
@@ -235,7 +253,7 @@
     <value>Path</value>
   </data>
   <data name="ProjectDependencies" xml:space="preserve">
-    <value>Project dependencies</value>
+    <value>Project Dependencies</value>
   </data>
   <data name="ProjectOpenError" xml:space="preserve">
     <value>Error opening project!</value>
@@ -250,19 +268,19 @@
     <value>Project</value>
   </data>
   <data name="PublishProjectTitle" xml:space="preserve">
-    <value>Publish the project</value>
+    <value>Publish Project</value>
   </data>
   <data name="ReleaseContent" xml:space="preserve">
-    <value>Release</value>
+    <value>Publish</value>
   </data>
   <data name="ReleaseLocationText" xml:space="preserve">
-    <value>Release location</value>
+    <value>Publish Location</value>
   </data>
   <data name="ReleaseNoteText" xml:space="preserve">
-    <value>Release note</value>
+    <value>Release Notes</value>
   </data>
   <data name="ReleaseToText" xml:space="preserve">
-    <value>Release to</value>
+    <value>Publish to</value>
   </data>
   <data name="RemoveFromFavorites" xml:space="preserve">
     <value>Remove from favorites</value>
@@ -308,6 +326,15 @@
   </data>
   <data name="TargetNameText" xml:space="preserve">
     <value>Target name :</value>
+  </data>
+  <data name="UninstallText" xml:space="preserve">
+    <value>Uninstall</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="VersionOnly" xml:space="preserve">
+    <value>Version</value>
   </data>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>

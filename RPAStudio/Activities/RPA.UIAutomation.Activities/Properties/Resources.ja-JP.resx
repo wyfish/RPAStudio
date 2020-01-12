@@ -601,7 +601,7 @@
     <value>再選択</value>
   </data>
   <data name="TapScreen" xml:space="preserve">
-    <value>画面をタップ</value>
+    <value>画面上で指定</value>
   </data>
   <data name="AttributeNameToGet.HintText" xml:space="preserve">
     <value>取得する属性の名前</value>

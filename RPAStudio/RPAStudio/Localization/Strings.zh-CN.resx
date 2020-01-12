@@ -174,8 +174,23 @@
   <data name="ErrorText" xml:space="preserve">
     <value>错误</value>
   </data>
+  <data name="Error_AlreadyRunning" xml:space="preserve">
+    <value>该程序已经运行，不能重复运行！</value>
+  </data>
+  <data name="Error_CallDeveloper" xml:space="preserve">
+    <value>程序运行过程中出现了异常，请联系软件开发商！</value>
+  </data>
+  <data name="Error_Critical_Exit" xml:space="preserve">
+    <value>程序运行过程中出现了严重错误，即将退出，请联系软件开发商！</value>
+  </data>
   <data name="ImportWorkflowDot" xml:space="preserve">
     <value>导入工作流…</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>安装</value>
+  </data>
+  <data name="InstalledText" xml:space="preserve">
+    <value>已安装</value>
   </data>
   <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
     <value>包含预发布版本</value>
@@ -218,6 +233,9 @@
   </data>
   <data name="OpenText" xml:space="preserve">
     <value>打开</value>
+  </data>
+  <data name="OperatingRule" xml:space="preserve">
+    <value>运行规则</value>
   </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>原始名：</value>
@@ -308,6 +326,15 @@
   </data>
   <data name="TargetNameText" xml:space="preserve">
     <value>目标名：</value>
+  </data>
+  <data name="UninstallText" xml:space="preserve">
+    <value>卸载</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="VersionOnly" xml:space="preserve">
+    <value>版本</value>
   </data>
   <data name="VersionText" xml:space="preserve">
     <value>版本号</value>

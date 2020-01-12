@@ -30,12 +30,14 @@ namespace RPA.Core.Activities
                 : base(LocalizedResources.GetString(resourceKey), order) { }
         }
 
+
         internal static class LocalizedResources
         {
             readonly static ResourceManager _ResourceManager = new ResourceManager(typeof(Properties.Resources));
-
+            
             public static string GetString(string resourceKey)
             {
+                Properties.Resources.Culture = System.Globalization.CultureInfo.CurrentCulture;
                 return _ResourceManager.GetString(resourceKey) ?? resourceKey;
             }
         }

@@ -97,7 +97,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI element matrix に類似しているローカライズされた文字列を検索します。
+        ///   UI Element matrix に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category11 {
             get {
@@ -142,7 +142,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI element clipping matrix に類似しているローカライズされた文字列を検索します。
+        ///   UI Element clipping matrix に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category6 {
             get {
@@ -385,7 +385,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Enter UIElement に類似しているローカライズされた文字列を検索します。
+        ///   Enter UI Element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description3 {
             get {
@@ -466,7 +466,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UiElement variable.  This property cannot be used with the Selector property.  This field only supports UiElement variables に類似しているローカライズされた文字列を検索します。
+        ///   UI Element variable.  This property cannot be used with the Selector property.  This field only supports UI Element variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description38 {
             get {
@@ -565,7 +565,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   The ui element found.  This field only supports UIElement type variables に類似しているローカライズされた文字列を検索します。
+        ///   The UI Element found.  This field only supports UIElement type variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description48 {
             get {
@@ -1096,7 +1096,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   value に類似しているローカライズされた文字列を検索します。
+        ///   Value に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName27 {
             get {
@@ -1105,7 +1105,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   operating に類似しているローカライズされた文字列を検索します。
+        ///   Operating に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName28 {
             get {
@@ -1204,7 +1204,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   range に類似しているローカライズされた文字列を検索します。
+        ///   Range に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName38 {
             get {
@@ -1213,7 +1213,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   filter に類似しているローカライズされた文字列を検索します。
+        ///   Filter に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName39 {
             get {
@@ -1258,7 +1258,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   position に類似しているローカライズされた文字列を検索します。
+        ///   Position に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName43 {
             get {
@@ -1321,7 +1321,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   result に類似しているローカライズされた文字列を検索します。
+        ///   Result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName5 {
             get {
@@ -1564,7 +1564,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   Tap the screen に類似しているローカライズされた文字列を検索します。
+        ///   Indicate on screen に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TapScreen {
             get {

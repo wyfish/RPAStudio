@@ -23,8 +23,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="EditCodeBtn" Width="100" Height="25" HorizontalAlignment="Center" Click="EditCodeBtn_Click" Content="{x:Static lclz:Resources.EditCode}"/>
-                <Button x:Name="EditArgumentsBtn"  Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="EditArgumentsBtn_Click" Content="{x:Static lclz:Resources.EditParameter}"/> 
+                <Button x:Name="EditCodeBtn" Content="{x:Static lclz:Resources.EditCode}" Width="100" Height="25" HorizontalAlignment="Center" Click="EditCodeBtn_Click" />
+                <Button x:Name="EditArgumentsBtn" Content="{x:Static lclz:Resources.EditParameter}" Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="EditArgumentsBtn_Click" />
             </Grid>
         </Grid>
     </pslc:CollapsableActivity>

@@ -48,7 +48,7 @@
       <Activity Name="日時の変換" Icon="Resources/DateTime/convert.png" TypeOf="RPA.Core.Activities.DateTimeActivity.DateConvertActivity,RPA.Core.Activities" ToolTip="日時の変換" />
     </Group>
   </Group>
-  <Group Name="コーディネーター" >
+  <Group Name="Orchestrator" >
     <Group Name="デジタル資産">
       <Activity Name="資格情報の取得" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.GetCredential,RPA.Core.Activities" ToolTip="提供されたAssetNameを使用して、指定された資格情報を取得し、ユーザー名とセキュリティパスワードを返します。" />
       <Activity Name="資格情報の設定" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.SetCredential,RPA.Core.Activities" ToolTip="指定された資格情報資産の値を更新できます。この資産は、グローバル資産またはパーソナルコンピューター資産のどちらであっても、Windows資格情報リストで既に利用可能です。" />

@@ -538,13 +538,13 @@
     <value>Variable name</value>
   </data>
   <data name="DisplayName44" xml:space="preserve">
-    <value>variable</value>
+    <value>Variable</value>
   </data>
   <data name="DisplayName45" xml:space="preserve">
-    <value>password</value>
+    <value>Password</value>
   </data>
   <data name="DisplayName46" xml:space="preserve">
-    <value>result</value>
+    <value>Result</value>
   </data>
   <data name="DisplayName47" xml:space="preserve">
     <value>Beep type</value>
@@ -613,7 +613,7 @@
     <value>The secure password of the retrieved credentials</value>
   </data>
   <data name="DisplayName50" xml:space="preserve">
-    <value>username</value>
+    <value>UserName</value>
   </data>
   <data name="Description106" xml:space="preserve">
     <value>User name of the retrieved voucher</value>
@@ -658,7 +658,7 @@
     <value>Reselect</value>
   </data>
   <data name="TapScreen" xml:space="preserve">
-    <value>Tap the screen</value>
+    <value>Indicate on screen</value>
   </data>
   <data name="DragControlHere" xml:space="preserve">
     <value>Drag and drop controls here</value>
@@ -689,5 +689,14 @@
   </data>
   <data name="SpecialFolder" xml:space="preserve">
     <value>Special folder</value>
+  </data>
+  <data name="WorkflowFilepathTip" xml:space="preserve">
+    <value>Workflow file path, must be enclosed in double quotes</value>
+  </data>
+  <data name="CommonText" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="InputText" xml:space="preserve">
+    <value>Input</value>
   </data>
 </root>

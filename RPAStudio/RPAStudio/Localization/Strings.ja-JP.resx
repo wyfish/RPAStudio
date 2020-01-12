@@ -160,7 +160,7 @@
     <value>カスタム</value>
   </data>
   <data name="CustomPathText" xml:space="preserve">
-    <value>カスタムのパス</value>
+    <value>カスタム URL</value>
   </data>
   <data name="DeleteText" xml:space="preserve">
     <value>削除</value>
@@ -174,8 +174,23 @@
   <data name="ErrorText" xml:space="preserve">
     <value>エラー</value>
   </data>
+  <data name="Error_AlreadyRunning" xml:space="preserve">
+    <value>すでに実行されています。多重起動はできません。</value>
+  </data>
+  <data name="Error_CallDeveloper" xml:space="preserve">
+    <value>プログラム操作中に例外が発生しました。ソフトウェア開発者に連絡してください！</value>
+  </data>
+  <data name="Error_Critical_Exit" xml:space="preserve">
+    <value>プログラムの実行中に重大なエラーが発生し、終了しようとしています。ソフトウェア開発者に連絡してください。</value>
+  </data>
   <data name="ImportWorkflowDot" xml:space="preserve">
     <value>ワークフローのインポート…</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>インストール</value>
+  </data>
+  <data name="InstalledText" xml:space="preserve">
+    <value>インストール済み</value>
   </data>
   <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
     <value>プレリリース版を含む</value>
@@ -219,6 +234,9 @@
   <data name="OpenText" xml:space="preserve">
     <value>開く</value>
   </data>
+  <data name="OperatingRule" xml:space="preserve">
+    <value>運用ルール</value>
+  </data>
   <data name="OriginalNameText" xml:space="preserve">
     <value>変更前の名称：</value>
   </data>
@@ -250,10 +268,10 @@
     <value>プロジェクト</value>
   </data>
   <data name="PublishProjectTitle" xml:space="preserve">
-    <value>プロジェクトを公開</value>
+    <value>プロジェクトをパブリッシュ</value>
   </data>
   <data name="ReleaseContent" xml:space="preserve">
-    <value>リリース</value>
+    <value>パブリッシュ</value>
   </data>
   <data name="ReleaseLocationText" xml:space="preserve">
     <value>リリース場所</value>
@@ -308,6 +326,15 @@
   </data>
   <data name="TargetNameText" xml:space="preserve">
     <value>変更後の名称：</value>
+  </data>
+  <data name="UninstallText" xml:space="preserve">
+    <value>アンインストール</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="VersionOnly" xml:space="preserve">
+    <value>バージョン</value>
   </data>
   <data name="VersionText" xml:space="preserve">
     <value>バージョン</value>

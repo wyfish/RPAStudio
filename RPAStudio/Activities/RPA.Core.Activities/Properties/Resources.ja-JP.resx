@@ -658,7 +658,7 @@
     <value>再選択</value>
   </data>
   <data name="TapScreen" xml:space="preserve">
-    <value>画面をタップ</value>
+    <value>画面上で指定</value>
   </data>
   <data name="DragControlHere" xml:space="preserve">
     <value>ここにコントロールをドラッグアンドドロップします</value>
@@ -689,5 +689,14 @@
   </data>
   <data name="SpecialFolder" xml:space="preserve">
     <value>特別なフォルダ</value>
+  </data>
+  <data name="WorkflowFilepathTip" xml:space="preserve">
+    <value>ワークフローファイルのパス。二重引用符で囲む必要があります</value>
+  </data>
+  <data name="CommonText" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="InputText" xml:space="preserve">
+    <value>Input</value>
   </data>
 </root>

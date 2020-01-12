@@ -187,7 +187,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Custom path に類似しているローカライズされた文字列を検索します。
+        ///   Custom URL に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string CustomPathText {
             get {
@@ -205,7 +205,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Dependency に類似しているローカライズされた文字列を検索します。
+        ///   Dependencies に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DependencyText {
             get {
@@ -219,6 +219,33 @@ namespace RPAStudio.Localization {
         public static string DescriptionText {
             get {
                 return ResourceManager.GetString("DescriptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The program is already running に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Error_AlreadyRunning {
+            get {
+                return ResourceManager.GetString("Error_AlreadyRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   An exception occurred during the program operation, please contact the software developer! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Error_CallDeveloper {
+            get {
+                return ResourceManager.GetString("Error_CallDeveloper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   A serious error occurred during the running of the program, and it is about to quit. Please contact the software developer! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Error_Critical_Exit {
+            get {
+                return ResourceManager.GetString("Error_Critical_Exit", resourceCulture);
             }
         }
         
@@ -237,6 +264,24 @@ namespace RPAStudio.Localization {
         public static string ImportWorkflowDot {
             get {
                 return ResourceManager.GetString("ImportWorkflowDot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Installation に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InstallationText {
+            get {
+                return ResourceManager.GetString("InstallationText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Installed に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InstalledText {
+            get {
+                return ResourceManager.GetString("InstalledText", resourceCulture);
             }
         }
         
@@ -367,6 +412,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Operating rules に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OperatingRule {
+            get {
+                return ResourceManager.GetString("OperatingRule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Original name : に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string OriginalNameText {
@@ -412,7 +466,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Project dependencies に類似しているローカライズされた文字列を検索します。
+        ///   Project Dependencies に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ProjectDependencies {
             get {
@@ -457,7 +511,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Publish the project に類似しているローカライズされた文字列を検索します。
+        ///   Publish Project に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PublishProjectTitle {
             get {
@@ -466,7 +520,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Release に類似しているローカライズされた文字列を検索します。
+        ///   Publish に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReleaseContent {
             get {
@@ -475,7 +529,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Release location に類似しているローカライズされた文字列を検索します。
+        ///   Publish Location に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReleaseLocationText {
             get {
@@ -484,7 +538,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Release note に類似しているローカライズされた文字列を検索します。
+        ///   Release Notes に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReleaseNoteText {
             get {
@@ -493,7 +547,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Release to に類似しているローカライズされた文字列を検索します。
+        ///   Publish to に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReleaseToText {
             get {
@@ -633,6 +687,33 @@ namespace RPAStudio.Localization {
         public static string TargetNameText {
             get {
                 return ResourceManager.GetString("TargetNameText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Uninstall に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UninstallText {
+            get {
+                return ResourceManager.GetString("UninstallText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Update に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UpdateText {
+            get {
+                return ResourceManager.GetString("UpdateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Version に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string VersionOnly {
+            get {
+                return ResourceManager.GetString("VersionOnly", resourceCulture);
             }
         }
         

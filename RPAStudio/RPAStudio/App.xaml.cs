@@ -1,9 +1,4 @@
-﻿using GalaSoft.MvvmLight.Threading;
-using log4net;
-using Plugins.Shared.Library.Extensions;
-using Plugins.Shared.Library.UiAutomation;
-using RPAStudio.Librarys;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -12,7 +7,13 @@ using System.Windows;
 using System.Windows.Threading;
 using System.Xml;
 using System.Reflection;
+using GalaSoft.MvvmLight.Threading;
+using log4net;
+using Plugins.Shared.Library.Extensions;
 using Plugins.Shared.Library.Nuget;
+using Plugins.Shared.Library.UiAutomation;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio
 {
@@ -70,7 +71,8 @@ namespace RPAStudio
             }
             else
             {
-                MessageBox.Show("该程序已经运行，不能重复运行！");
+                //MessageBox.Show("该程序已经运行，不能重复运行！");
+                MessageBox.Show(ResxIF.GetString("Error_AlreadyRunning"));
                 Environment.Exit(0);
             }
 
@@ -305,7 +307,8 @@ namespace RPAStudio
                     {
                         Logger.Error("非UI线程全局异常", logger);
                         Logger.Error(exception, logger);
-                        MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                        //MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                        MessageBox.Show(ResxIF.GetString("Error_CallDeveloper"));
                     }
 
                     if(exception is System.OutOfMemoryException)
@@ -317,8 +320,8 @@ namespace RPAStudio
                 {
                     Logger.Fatal("不可恢复的非UI线程全局异常", logger);
                     Logger.Fatal(ex, logger);
-                    MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
-
+                    //MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
+                    MessageBox.Show(ResxIF.GetString("Error_Critical_Exit"));
                     Environment.Exit(0);
                 }
             });
@@ -333,7 +336,8 @@ namespace RPAStudio
                     Logger.Error("UI线程全局异常", logger);
                     Logger.Error(e.Exception, logger);
                     e.Handled = true;
-                    MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                    //MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                    MessageBox.Show(ResxIF.GetString("Error_CallDeveloper"));
 
                     if (e.Exception is System.OutOfMemoryException)
                     {
@@ -344,8 +348,8 @@ namespace RPAStudio
                 {
                     Logger.Fatal("不可恢复的UI线程全局异常", logger);
                     Logger.Fatal(ex, logger);
-                    MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
-
+                    //MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
+                    MessageBox.Show(ResxIF.GetString("Error_Critical_Exit"));
                     Environment.Exit(0);
                 }
             });

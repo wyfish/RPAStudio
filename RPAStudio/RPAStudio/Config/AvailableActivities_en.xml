@@ -5,17 +5,17 @@
       <Activity Name="Check False" IsSystem="true" TypeOf="FlowDecision" />
       <Activity Name="Check True" IsSystem="true" TypeOf="FlowSwitch" />
     </Group>-->
-    <Group Name="Flow chart">
+    <Group Name="Flowchart">
       <Activity Name="Flow Decision" IsSystem="true" TypeOf="FlowDecision" />
       <Activity Name="Flow Switch" IsSystem="true" TypeOf="FlowSwitch" />
       <Activity Name="Flowchart" IsSystem="true" TypeOf="Flowchart" />
     </Group>
-    <Group Name="State machine" >
+    <Group Name="State Machine" >
       <Activity Name="Final State" IsSystem="true" TypeOf="FinalState" />
       <Activity Name="State" IsSystem="true" TypeOf="State" />
-      <Activity Name="StateMachine" IsSystem="true" TypeOf="StateMachine" />
+      <Activity Name="State Machine" IsSystem="true" TypeOf="StateMachine" />
     </Group>
-    <Group Name="Exception handling" >
+    <Group Name="Error Handling" >
       <Activity Name="Rethrow" IsSystem="true" TypeOf="Rethrow" />
       <Activity Name="Terminate Workflow" IsSystem="true" TypeOf="TerminateWorkflow" />
       <Activity Name="Throw" IsSystem="true" TypeOf="Throw" />
@@ -39,13 +39,13 @@
 
   </Group>
   <Group Name="Programming" >
-    <Group Name="Data collection">
-      <Activity Name="Add to" IsSystem="true" TypeOf="AddToCollection" ToolTip="Add items to the specified collection."/>
-      <Activity  Name="Clear" IsSystem="true" TypeOf="ClearCollection" ToolTip="Clear the specified item collection." />
-      <Activity  Name="Exists" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="Indicates whether a given item exists in a given collection." />
-      <Activity  Name="Remove" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="Remove an item from the specified collection." />
+    <Group Name="Collection">
+      <Activity Name="Add To Collection" IsSystem="true" TypeOf="AddToCollection" ToolTip="Add items to the specified collection."/>
+      <Activity  Name="Clear Collection" IsSystem="true" TypeOf="ClearCollection" ToolTip="Clear the specified item collection." />
+      <Activity  Name="Exists In Collection" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="Indicates whether a given item exists in a given collection." />
+      <Activity  Name="Remove From Collection" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="Remove an item from the specified collection." />
     </Group>
-    <Group Name="Debugging">
+    <Group Name="Debug">
       <Activity Name="Write Line" IsSystem="true" TypeOf="WriteLine" />
     </Group>
   </Group>

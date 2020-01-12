@@ -448,16 +448,16 @@
     <value>State machine</value>
   </data>
   <data name="StepInto.Header" xml:space="preserve">
-    <value>Step-into</value>
+    <value>Step-In</value>
   </data>
   <data name="StepInto.ToolTip" xml:space="preserve">
-    <value>Step-into (F11)</value>
+    <value>Step-In (F11)</value>
   </data>
   <data name="StepOver.Header" xml:space="preserve">
-    <value>Step-over</value>
+    <value>Step-Over</value>
   </data>
   <data name="StepOver.ToolTip" xml:space="preserve">
-    <value>Step-over (Shift+F11)</value>
+    <value>Step-Over (Shift+F11)</value>
   </data>
   <data name="Stop.Header" xml:space="preserve">
     <value>Stop</value>
@@ -484,7 +484,7 @@
     <value>View attribute values</value>
   </data>
   <data name="ViewLogs.Content" xml:space="preserve">
-    <value>View logs</value>
+    <value>View Log</value>
   </data>
   <data name="Warning.ToolTip" xml:space="preserve">
     <value>Warning</value>

@@ -226,7 +226,7 @@
     <value>エラー</value>
   </data>
   <data name="Execution.Header" xml:space="preserve">
-    <value>実行</value>
+    <value>デバッグ</value>
   </data>
   <data name="ExpandAll.ToolTip" xml:space="preserve">
     <value>すべて展開</value>
@@ -319,7 +319,7 @@
     <value>出力</value>
   </data>
   <data name="PackageManager.Header" xml:space="preserve">
-    <value>パッケージマネージャ</value>
+    <value>パッケージを管理</value>
   </data>
   <data name="PackageManager.ToolTip" xml:space="preserve">
     <value>nupkgパッケージを管理し、パッケージのインストール、アンインストール、更新などの操作を実装します</value>
@@ -364,10 +364,10 @@
     <value>リリース</value>
   </data>
   <data name="Release.Header" xml:space="preserve">
-    <value>リリース</value>
+    <value>パブリッシュ</value>
   </data>
   <data name="Release.ToolTip" xml:space="preserve">
-    <value>パッケージをリリース</value>
+    <value>パッケージを公開します</value>
   </data>
   <data name="RemoveScreenshots.ToolTip" xml:space="preserve">
     <value>使用しないスクリーンショットを削除</value>
@@ -427,7 +427,7 @@
     <value>時間を表示</value>
   </data>
   <data name="SlowDebug.Header" xml:space="preserve">
-    <value>スローデバッグ</value>
+    <value>低速デバッグ</value>
   </data>
   <data name="SlowDebug.ToolTip" xml:space="preserve">
     <value>最も遅い1xから最も速い4xまでの異なる速度でデバッグを実行</value>
@@ -448,16 +448,16 @@
     <value>ステートマシン</value>
   </data>
   <data name="StepInto.Header" xml:space="preserve">
-    <value>ステップ実行</value>
+    <value>ステップ イン</value>
   </data>
   <data name="StepInto.ToolTip" xml:space="preserve">
-    <value>ステップ実行（F11）</value>
+    <value>ステップ イン（F11）</value>
   </data>
   <data name="StepOver.Header" xml:space="preserve">
-    <value>ステップ実行</value>
+    <value>ステップ オーバー</value>
   </data>
   <data name="StepOver.ToolTip" xml:space="preserve">
-    <value>ステップオーバー（Shift+F11）</value>
+    <value>ステップ オーバー（Shift+F11）</value>
   </data>
   <data name="Stop.Header" xml:space="preserve">
     <value>停止</value>

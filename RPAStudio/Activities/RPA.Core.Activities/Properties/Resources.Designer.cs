@@ -151,6 +151,15 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
+        ///   Common に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CommonText {
+            get {
+                return ResourceManager.GetString("CommonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description1 {
@@ -1528,7 +1537,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   variable に類似しているローカライズされた文字列を検索します。
+        ///   Variable に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName44 {
             get {
@@ -1537,7 +1546,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   password に類似しているローカライズされた文字列を検索します。
+        ///   Password に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName45 {
             get {
@@ -1546,7 +1555,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   result に類似しているローカライズされた文字列を検索します。
+        ///   Result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName46 {
             get {
@@ -1591,7 +1600,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   username に類似しているローカライズされた文字列を検索します。
+        ///   UserName に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName50 {
             get {
@@ -1735,6 +1744,15 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
+        ///   Input に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InputText {
+            get {
+                return ResourceManager.GetString("InputText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Level に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string LevelText {
@@ -1771,11 +1789,20 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Tap the screen に類似しているローカライズされた文字列を検索します。
+        ///   Indicate on screen に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TapScreen {
             get {
                 return ResourceManager.GetString("TapScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Workflow file path, must be enclosed in double quotes に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string WorkflowFilepathTip {
+            get {
+                return ResourceManager.GetString("WorkflowFilepathTip", resourceCulture);
             }
         }
     }

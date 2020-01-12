@@ -690,4 +690,13 @@
   <data name="SpecialFolder" xml:space="preserve">
     <value>特殊文件夹</value>
   </data>
+  <data name="WorkflowFilepathTip" xml:space="preserve">
+    <value>工作流文件路径，必须用双引号括起来</value>
+  </data>
+  <data name="CommonText" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="InputText" xml:space="preserve">
+    <value>Input</value>
+  </data>
 </root>
