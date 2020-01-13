@@ -1004,12 +1004,14 @@ namespace RPAStudio.ViewModel
 
                         if(RemoveUnusedScreenshotsCount == 0)
                         {
-                            MessageBox.Show(App.Current.MainWindow, "找不到需要清理的未使用的截图", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            // 找不到需要清理的未使用的截图
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("NoUnusedScreenshotsFound"), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                         }
                         else
                         {
                             RefreshCommand.Execute(null);
-                            MessageBox.Show(App.Current.MainWindow, string.Format("{0}个未使用的截图已经被成功移除", RemoveUnusedScreenshotsCount), "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            // {0}个未使用的截图已经被成功移除
+                            MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("UnusedScreenshotsSuccessfullyRemoved"), RemoveUnusedScreenshotsCount), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                         }
 
                     }));

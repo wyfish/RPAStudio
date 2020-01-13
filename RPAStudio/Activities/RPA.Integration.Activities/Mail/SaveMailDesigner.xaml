@@ -48,7 +48,7 @@
                 x:Name="expressTextBox1"
                 Expression="{Binding Path=ModelItem.PathName, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"
-                HintText="保存路径"
+                HintText="{x:Static lclz:Resources.DisplayName106}"
                 OwnerActivity="{Binding Path=ModelItem}"
                 Margin="10,35,35,0"
                 Grid.Row="0"

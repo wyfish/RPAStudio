@@ -139,7 +139,7 @@ namespace RPAStudio.ViewModel
 
                 if(isDocumentNeedSave)
                 {
-                    MessageBox.Show(App.Current.MainWindow, "您有文档修改但未保存，请保存文档后再升级", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(App.Current.MainWindow, "您有文档修改但未保存，请保存文档后再升级", ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
                 else
                 {

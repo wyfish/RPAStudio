@@ -323,7 +323,8 @@ namespace RPAStudio.ViewModel
         {
             if (IsDebugging)
             {
-                var ret = MessageBox.Show(App.Current.MainWindow, string.Format("当前文档正在被调试，确定终止调试并关闭\"{0}\"吗？", XamlPath), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
+                // 当前文档正在被调试，确定终止调试并关闭\"{0}\"吗？
+                var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("MB_CloseWhileDebugging"), XamlPath), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
                 if (ret == MessageBoxResult.Yes)
                 {
                     ViewModelLocator.Instance.Main.StopWorkflowCommand.Execute(null);

@@ -965,7 +965,8 @@ namespace RPAStudio.ViewModel
                     () =>
                     {
                         //删除目录
-                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format("确认删除目录\"{0}\"和它的所有内容吗？",Path),ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question,MessageBoxResult.Cancel);
+                        // 确认删除目录\"{0}\"和它的所有内容吗？
+                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("DeleteDirectoryConfirmation"), Path),ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question,MessageBoxResult.Cancel);
                         if(ret == MessageBoxResult.OK)
                         {
                             Common.DeleteDir(Path);
@@ -1027,7 +1028,8 @@ namespace RPAStudio.ViewModel
                     ?? (_deleteFileCommand = new RelayCommand(
                     () =>
                     {
-                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format("确认删除文件\"{0}\"吗？", Path), ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                        // 确认删除文件\"{0}\"吗？
+                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("DeleteFileConfirmation"), Path), ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
                         if (ret == MessageBoxResult.OK)
                         {
                             Common.DeleteFile(Path);

@@ -129,4 +129,19 @@
   <data name="Description4" xml:space="preserve">
     <value>Pythonスクリプトコードが実行されるときの作業ディレクトリデフォルトは現在のプロジェクトディレクトリです。</value>
   </data>
+  <data name="SetWorkingDirectory" xml:space="preserve">
+    <value>作業ディレクトリを設定する</value>
+  </data>
+  <data name="EditParameters" xml:space="preserve">
+    <value>パラメーターの編集</value>
+  </data>
+  <data name="SetWorkingDirectoryTip" xml:space="preserve">
+    <value>デフォルトの作業ディレクトリは現在のプロジェクトディレクトリです</value>
+  </data>
+  <data name="EditCode" xml:space="preserve">
+    <value>コードを編集</value>
+  </data>
+  <data name="PythonPathHintText" xml:space="preserve">
+    <value>Pythonスクリプトファイルのパス。二重引用符で囲む必要があります</value>
+  </data>
 </root>

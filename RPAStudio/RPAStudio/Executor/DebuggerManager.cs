@@ -353,7 +353,7 @@ namespace RPAStudio.Executor
                 }
                 catch (Exception )
                 {
-                    MessageBox.Show(App.Current.MainWindow, "停止调试发生异常！", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(App.Current.MainWindow, "停止调试发生异常！", ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }

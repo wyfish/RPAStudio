@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPAStudio.Windows"
-        xmlns:localization="clr-namespace:RPAStudio.Localization"
+        xmlns:lclz="clr-namespace:RPAStudio.Localization"
         mc:Ignorable="d"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:libs="clr-namespace:RPAStudio.Librarys"
@@ -27,7 +27,7 @@
             <TextBox Margin="10,10,10,0" Padding="5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontSize="14" Text="{Binding MsgDetails}" />
         </Grid>
         <Grid Grid.Row="1">
-            <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25"  Content="{x:Static localization:Strings.CopyText}" Command="{Binding CopyCommand}" IsDefault="True" HorizontalAlignment="Right" Margin="0,0,15,0" ></Button>
+            <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25"  Content="{x:Static lclz:Strings.CopyText}" Command="{Binding CopyCommand}" IsDefault="True" HorizontalAlignment="Right" Margin="0,0,15,0" ></Button>
         </Grid>
     </Grid>
 </Window>

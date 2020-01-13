@@ -348,4 +348,163 @@
   <data name="WorkflowVerificationOK" xml:space="preserve">
     <value>工作流校验正确</value>
   </data>
+  <data name="ByText" xml:space="preserve">
+    <value>由</value>
+  </data>
+  <data name="DefaultSourceAddress" xml:space="preserve">
+    <value>默认包源地址</value>
+  </data>
+  <data name="UserDefinedSourceAddress" xml:space="preserve">
+    <value>用户自定义包源地址</value>
+  </data>
+  <data name="NewPackageSource" xml:space="preserve">
+    <value>新建包源</value>
+  </data>
+  <data name="DeletePackageSource" xml:space="preserve">
+    <value>删除包源</value>
+  </data>
+  <data name="MoveUpPackageSource" xml:space="preserve">
+    <value>上移包源</value>
+  </data>
+  <data name="MoveDnPackageSource" xml:space="preserve">
+    <value>下移包源</value>
+  </data>
+  <data name="PackageSourceName" xml:space="preserve">
+    <value>包源名称</value>
+  </data>
+  <data name="PacketSourceAddress" xml:space="preserve">
+    <value>包源地址</value>
+  </data>
+  <data name="ChooseLocalSourcePath" xml:space="preserve">
+    <value>选择一个本地源路径</value>
+  </data>
+  <data name="OperatingText" xml:space="preserve">
+    <value>正在操作……</value>
+  </data>
+  <data name="EnterPackageSourceNameHere" xml:space="preserve">
+    <value>此处输入包源名称</value>
+  </data>
+  <data name="EnterPacketSourceAddressHere" xml:space="preserve">
+    <value>此处输入包源地址</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="AddToolTip" xml:space="preserve">
+    <value>将用户设置的包源名称和地址信息存到用户自定义包源地址列表中</value>
+  </data>
+  <data name="UpdateToolTip" xml:space="preserve">
+    <value>更新用户设置的包源名称和地址信息</value>
+  </data>
+  <data name="AcceptLicenseConfirmation" xml:space="preserve">
+    <value>该程序包要求你在安装前接受其许可证条款，确定接受吗？</value>
+  </data>
+  <data name="DescriptionWithColon" xml:space="preserve">
+    <value>描述：</value>
+  </data>
+  <data name="VersionWithColon" xml:space="preserve">
+    <value>版本：</value>
+  </data>
+  <data name="AuthorWithColon" xml:space="preserve">
+    <value>作者：</value>
+  </data>
+  <data name="LicenseWithColon" xml:space="preserve">
+    <value>许可证：</value>
+  </data>
+  <data name="ViewLicenseInformation" xml:space="preserve">
+    <value>查看许可证信息</value>
+  </data>
+  <data name="ReleaseDateWithColon" xml:space="preserve">
+    <value>发布日期：</value>
+  </data>
+  <data name="ProjectAddress" xml:space="preserve">
+    <value>项目地址：</value>
+  </data>
+  <data name="ViewProjectInformation" xml:space="preserve">
+    <value>查看项目信息</value>
+  </data>
+  <data name="TagWithColon" xml:space="preserve">
+    <value>标签：</value>
+  </data>
+  <data name="DependenciesWithColon" xml:space="preserve">
+    <value>依赖项：</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>名称不能为空</value>
+  </data>
+  <data name="NameHasIlligalCharacter" xml:space="preserve">
+    <value>名称不能有非法字符</value>
+  </data>
+  <data name="DeleteDirectoryConfirmation" xml:space="preserve">
+    <value>确认删除目录\"{0}\"和它的所有内容吗？</value>
+  </data>
+  <data name="DeleteFileConfirmation" xml:space="preserve">
+    <value>确认删除文件\"{0}\"吗？</value>
+  </data>
+  <data name="PronptText" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="NoUnusedScreenshotsFound" xml:space="preserve">
+    <value>找不到需要清理的未使用的截图</value>
+  </data>
+  <data name="UnusedScreenshotsSuccessfullyRemoved" xml:space="preserve">
+    <value>{0}个未使用的截图已经被成功移除</value>
+  </data>
+  <data name="MB_CannotOpenProjectConfigFile" xml:space="preserve">
+    <value>无法打开项目配置文件\"{0}\"，是否从最近项目列表中移除该条目？</value>
+  </data>
+  <data name="SameNameDirectoryAlreadyExists" xml:space="preserve">
+    <value>相同名字的目录已存在</value>
+  </data>
+  <data name="SameNameFileAlreadyExists" xml:space="preserve">
+    <value>相同名字的文件已存在</value>
+  </data>
+  <data name="SelectDirectoryToAddCodeSnippet" xml:space="preserve">
+    <value>请选择一个目录添加到代码片断中</value>
+  </data>
+  <data name="MessageDetails" xml:space="preserve">
+    <value>消息详情</value>
+  </data>
+  <data name="TheFileAlreadyExists" xml:space="preserve">
+    <value>指定的文件已存在</value>
+  </data>
+  <data name="PathCannotBeEmpty" xml:space="preserve">
+    <value>位置不能为空</value>
+  </data>
+  <data name="ThePathDoesNotExist" xml:space="preserve">
+    <value>指定的位置不存在</value>
+  </data>
+  <data name="NotInSubDirectory" xml:space="preserve">
+    <value>指定的位置必须是项目所在目录或其子目录中</value>
+  </data>
+  <data name="AttributeValue" xml:space="preserve">
+    <value>属性值</value>
+  </data>
+  <data name="MB_CloseWhileDebugging" xml:space="preserve">
+    <value>当前文档正在被调试，确定终止调试并关闭\"{0}\"吗？</value>
+  </data>
+  <data name="VariableTracking" xml:space="preserve">
+    <value>变量跟踪</value>
+  </data>
+  <data name="NameFieldCheckSucceeded" xml:space="preserve">
+    <value>名称字段校验成功</value>
+  </data>
+  <data name="PathFieldCheckSucceeded" xml:space="preserve">
+    <value>位置字段校验成功</value>
+  </data>
+  <data name="SameNameProjectAlreadyExists" xml:space="preserve">
+    <value>已经存在同名称的项目</value>
+  </data>
+  <data name="SelectPathToCreateNewProject" xml:space="preserve">
+    <value>请选择一个位置来新建项目</value>
+  </data>
+  <data name="MB_FailedToCreateProjectDirectory" xml:space="preserve">
+    <value>创建项目目录失败，请检查</value>
+  </data>
+  <data name="NotSupportBelowV2" xml:space="preserve">
+    <value>当前程序不再支持V2.0版本以下的旧版本项目！</value>
+  </data>
+  <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
+    <value>软件未通过授权检测，请注册产品！</value>
+  </data>
 </root>

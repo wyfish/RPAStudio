@@ -98,7 +98,7 @@
                     </Grid.RowDefinitions>
                     <TextBlock Text="{Binding Title}" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left"/>
                     <StackPanel Orientation="Horizontal" Grid.Column="1" >
-                        <TextBlock Text="由" VerticalAlignment="Center" Margin="5,0,0,0" />
+                        <TextBlock Text="{x:Static lclz:Strings.ByText}" VerticalAlignment="Center" Margin="5,0,0,0" />
                         <TextBlock Text="{Binding Authors}" VerticalAlignment="Center" Margin="5,0,0,0" />
                     </StackPanel>
                     <TextBlock MaxWidth="400" MaxHeight="70" Grid.Row="1" Grid.ColumnSpan="2" Foreground="#4D4D4D" Text="{Binding Description}" ToolTipService.InitialShowDelay="500" TextWrapping="Wrap" TextTrimming="WordEllipsis" HorizontalAlignment="Left" >
@@ -258,7 +258,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid Margin="10,10,10,0">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" >默认包源地址</TextBlock>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="{x:Static lclz:Strings.DefaultSourceAddress}"/>
                     </Grid>
                     <!--默认包源列表-->
                     <ListBox Grid.Row="1" BorderThickness="1" BorderBrush="#ABABAB" ItemsSource="{Binding DefaultPackageSourceItems}"
@@ -276,12 +276,12 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid Margin="10,10,10,0">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" >用户自定义包源地址</TextBlock>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="{x:Static lclz:Strings.UserDefinedSourceAddress}"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
-                            <Button IsEnabled="{Binding IsAddPackageSourceEnabled}" Command="{Binding AddPackageSourceCommand}" ToolTip="新建包源" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20">+</Button>
-                            <Button IsEnabled="{Binding IsRemovePackageSourceEnabled}" Command="{Binding RemovePackageSourceCommand}" ToolTip="删除包源" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20" Margin="5,0,0,0">-</Button>
-                            <Button IsEnabled="{Binding IsMoveUpPackageSourceEnabled}" Command="{Binding MoveUpPackageSourceCommand}" ToolTip="上移包源" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20" Margin="5,0,0,0">∧</Button>
-                            <Button IsEnabled="{Binding IsMoveDownPackageSourceEnabled}" Command="{Binding MoveDownPackageSourceCommand}" ToolTip="下移包源" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20" Margin="5,0,0,0">∨</Button>
+                            <Button IsEnabled="{Binding IsAddPackageSourceEnabled}" Command="{Binding AddPackageSourceCommand}" ToolTip="{x:Static lclz:Strings.NewPackageSource}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20">+</Button>
+                            <Button IsEnabled="{Binding IsRemovePackageSourceEnabled}" Command="{Binding RemovePackageSourceCommand}" ToolTip="{x:Static lclz:Strings.DeletePackageSource}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20" Margin="5,0,0,0">-</Button>
+                            <Button IsEnabled="{Binding IsMoveUpPackageSourceEnabled}" Command="{Binding MoveUpPackageSourceCommand}" ToolTip="{x:Static lclz:Strings.MoveUpPackageSource}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20" Margin="5,0,0,0">∧</Button>
+                            <Button IsEnabled="{Binding IsMoveDownPackageSourceEnabled}" Command="{Binding MoveDownPackageSourceCommand}" ToolTip="{x:Static lclz:Strings.MoveDnPackageSource}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="20" Height="20" Margin="5,0,0,0">∨</Button>
                         </StackPanel>
                     </Grid>
                     <!--用户自定义包源列表-->
@@ -309,14 +309,14 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">包源名称</TextBlock>
-                    <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">包源地址</TextBlock>
-                    <xctk:WatermarkTextBox IsReadOnly="{Binding IsOperatePackageSourceEnabled,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" Text="{Binding PackageSourceName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" KeepWatermarkOnGotFocus="True" Watermark="此处输入包源名称" Grid.Column="1" VerticalAlignment="Center"></xctk:WatermarkTextBox>
-                    <xctk:WatermarkTextBox IsReadOnly="{Binding IsOperatePackageSourceEnabled,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" Text="{Binding PackageSourceUri,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" KeepWatermarkOnGotFocus="True" Watermark="此处输入包源地址" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Center"></xctk:WatermarkTextBox>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static lclz:Strings.PackageSourceName}"/>
+                    <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static lclz:Strings.PacketSourceAddress}"/>
+                    <xctk:WatermarkTextBox IsReadOnly="{Binding IsOperatePackageSourceEnabled,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" Text="{Binding PackageSourceName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" KeepWatermarkOnGotFocus="True" Watermark="{x:Static lclz:Strings.EnterPackageSourceNameHere}" Grid.Column="1" VerticalAlignment="Center"></xctk:WatermarkTextBox>
+                    <xctk:WatermarkTextBox IsReadOnly="{Binding IsOperatePackageSourceEnabled,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" Text="{Binding PackageSourceUri,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" KeepWatermarkOnGotFocus="True" Watermark="{x:Static lclz:Strings.EnterPacketSourceAddressHere}" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Center"></xctk:WatermarkTextBox>
                     <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" >
-                        <Button IsEnabled="{Binding IsOperatePackageSourceEnabled}" Command="{Binding BrowserPackageSourceDirCommand}" ToolTip="选择一个本地源路径" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="35" Height="23">...</Button>
-                        <Button IsEnabled="{Binding IsOperatePackageSourceEnabled}" Visibility="{Binding IsShowUpdatePackageSourceBtn,Mode=OneWay, Converter={StaticResource BoolNotCollapsedConverter}}" Command="{Binding AddPackageSourceToConfigFileCommand}" ToolTip="将用户设置的包源名称和地址信息存到用户自定义包源地址列表中" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="60" Height="23" Margin="10,0,0,0">添加</Button>
-                        <Button IsEnabled="{Binding IsOperatePackageSourceEnabled}" Visibility="{Binding IsShowUpdatePackageSourceBtn,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" Command="{Binding UpdatePackageSourceToConfigFileCommand}" ToolTip="更新用户设置的包源名称和地址信息" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="60" Height="23" Margin="10,0,0,0">更新</Button>
+                        <Button IsEnabled="{Binding IsOperatePackageSourceEnabled}" Command="{Binding BrowserPackageSourceDirCommand}" ToolTip="{x:Static lclz:Strings.ChooseLocalSourcePath}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="35" Height="23">...</Button>
+                        <Button IsEnabled="{Binding IsOperatePackageSourceEnabled}" Visibility="{Binding IsShowUpdatePackageSourceBtn,Mode=OneWay, Converter={StaticResource BoolNotCollapsedConverter}}" Command="{Binding AddPackageSourceToConfigFileCommand}" ToolTip="{x:Static lclz:Strings.AddToolTip}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="60" Height="23" Margin="10,0,0,0" Content="{x:Static lclz:Strings.AddText}"/>
+                        <Button IsEnabled="{Binding IsOperatePackageSourceEnabled}" Visibility="{Binding IsShowUpdatePackageSourceBtn,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" Command="{Binding UpdatePackageSourceToConfigFileCommand}" ToolTip="{x:Static lclz:Strings.UpdateToolTip}" ToolTipService.InitialShowDelay="500" Style="{StaticResource ToolBarButtonStyle}" Width="60" Height="23" Margin="10,0,0,0" Content="{x:Static lclz:Strings.UpdateText}"/>
                     </StackPanel>
                 </Grid>
 
@@ -329,7 +329,7 @@
             <Border BorderBrush="#ababab" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="360" Height="120" Background="White" >
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Image Width="40" Height="40" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/Image/Ribbon/loading.gif"/>
-                    <TextBlock FontSize="15" Margin="0,10,0,0">正在操作……</TextBlock>
+                    <TextBlock FontSize="15" Margin="0,10,0,0" Text="{x:Static lclz:Strings.OperatingText}"/>
                 </StackPanel>
 
             </Border>

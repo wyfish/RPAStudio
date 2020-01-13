@@ -1,13 +1,14 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using log4net;
-using RPAStudio.Librarys;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System;
 using System.Xml;
 using NuGet;
 using System.IO;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -647,7 +648,7 @@ namespace RPAStudio.ViewModel
                             if (System.IO.File.Exists(outputPath))
                             {
                                 var info = string.Format("项目发布成功。\n名称：{0}\n版本：{1}\n位置：{2}\n", ViewModelLocator.Instance.Project.ProjectName, publishVersion, m_nupkgLocation);
-                                MessageBox.Show(App.Current.MainWindow, info, "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                                MessageBox.Show(App.Current.MainWindow, info, ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                             }
                         }
                         catch (Exception err)

@@ -4,7 +4,7 @@
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
     xmlns:s="clr-namespace:System;assembly=mscorlib"
-                      
+    xmlns:lclz="clr-namespace:RPA.Script.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
     psla:ActivityDesignerAttached.Icon="Resources/Python/python.png"
@@ -17,7 +17,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid>
-                <sapv:ExpressionTextBox Margin="0,0,30,0" OwnerActivity="{Binding Path=ModelItem}" ExpressionType="s:String" HintText="Python脚本文件路径，必须用双引号括起来"
+                <sapv:ExpressionTextBox Margin="0,0,30,0" OwnerActivity="{Binding Path=ModelItem}" ExpressionType="s:String" HintText="{x:Static lclz:Resources.PythonPathHintText}"
                                 Expression="{Binding Path=ModelItem.PythonFilePath,Mode=TwoWay,Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In}" />
                 <Button x:Name="BrowserBtn" Width="25" Height="25" HorizontalAlignment="Right" Margin="0,0,1,0" Click="BrowserBtn_Click" >...</Button>
             </Grid>
@@ -26,8 +26,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="ChangeWorkingDirectoryBtn" Width="100" Height="25" HorizontalAlignment="Center" Click="ChangeWorkingDirectoryBtn_Click" ToolTip="默认工作目录为当前项目目录" >设置工作目录</Button>
-                <Button x:Name="EditArgumentsBtn"  Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="EditArgumentsBtn_Click"  >编辑参数</Button>
+                <Button Content="{x:Static lclz:Resources.SetWorkingDirectory}" x:Name="ChangeWorkingDirectoryBtn" Width="115" Height="26" HorizontalAlignment="Center" Click="ChangeWorkingDirectoryBtn_Click" ToolTip="{x:Static lclz:Resources.SetWorkingDirectoryTip}" Margin="15,12,0,12"/>
+                <Button Content="{x:Static lclz:Resources.EditParameters}" x:Name="EditArgumentsBtn"  Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="EditArgumentsBtn_Click"/>
             </Grid>
         </Grid>
     </pslc:CollapsableActivity>

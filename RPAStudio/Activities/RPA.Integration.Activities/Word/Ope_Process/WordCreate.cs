@@ -35,7 +35,7 @@ namespace RPA.Integration.Activities.WordPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Word/create.png"; } }
 
         InArgument<string> _PathUrl;
-        [Category("打开/新建文档选项")]
+        [Localize.LocalizedCategory("Category38")] //打开/新建文档选项 //Open / New Document option //[開く] / [新しいドキュメント]オプション
         [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [Browsable(true)]
         public InArgument<string> PathUrl
@@ -51,7 +51,7 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
 
-        [Category("打开/新建文档选项")]
+        [Localize.LocalizedCategory("Category38")] //打开/新建文档选项 //Open / New Document option //[開く] / [新しいドキュメント]オプション
         [Localize.LocalizedDisplayName("DisplayName20")] //是否创建新文档 //Whether to create a new document //新しいドキュメントを作成するかどうか
         [Browsable(true)]
         public bool NewDoc
@@ -59,7 +59,7 @@ namespace RPA.Integration.Activities.WordPlugins
             get;set;
         }
 
-        [Category("打开/新建文档选项")]
+        [Localize.LocalizedCategory("Category38")] //打开/新建文档选项 //Open / New Document option //[開く] / [新しいドキュメント]オプション
         [Localize.LocalizedDisplayName("DisplayName21")] //流程是否可见 //Whether the process is visible //プロセスが見えるかどうか
         [Browsable(true)]
         public bool IsVisible

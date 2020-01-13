@@ -31,7 +31,7 @@
                     <sapv:ExpressionTextBox x:Uid="SpecifyTheURL"
                     Expression="{Binding Path=ModelItem.Url, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                     ExpressionType="sys:String"
-                    HintText="指定浏览器中打开的URL"
+                    HintText="{x:Static lclz:Resources.SpecifyTheURL_HintText}"
                     OwnerActivity="{Binding Path=ModelItem}"
                     Grid.Row="0"
                     MaxWidth="260"

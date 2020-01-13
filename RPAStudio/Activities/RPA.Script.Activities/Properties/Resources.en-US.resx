@@ -118,15 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Description1" xml:space="preserve">
-    <value>Python脚本文件路径，必须用双引号括起来</value>
+    <value>Python script file path, must be enclosed in double quotes</value>
   </data>
   <data name="Description2" xml:space="preserve">
-    <value>Python脚本文件执行时的工作目录，默认为当前项目目录</value>
+    <value>The working directory when the Python script file is executed. The default is the current project directory.</value>
   </data>
   <data name="Description3" xml:space="preserve">
-    <value>指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。</value>
+    <value>Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported.</value>
   </data>
   <data name="Description4" xml:space="preserve">
-    <value>Python脚本代码执行时的工作目录，默认为当前项目目录</value>
+    <value>The working directory when the Python script code is executed. The default is the current project directory.</value>
+  </data>
+  <data name="SetWorkingDirectory" xml:space="preserve">
+    <value>Set Working Directory</value>
+  </data>
+  <data name="EditParameters" xml:space="preserve">
+    <value>Edit Parameters</value>
+  </data>
+  <data name="SetWorkingDirectoryTip" xml:space="preserve">
+    <value>The default working directory is the current project directory</value>
+  </data>
+  <data name="EditCode" xml:space="preserve">
+    <value>Edit Code</value>
+  </data>
+  <data name="PythonPathHintText" xml:space="preserve">
+    <value>Python script file path, must be enclosed in double quotes</value>
   </data>
 </root>

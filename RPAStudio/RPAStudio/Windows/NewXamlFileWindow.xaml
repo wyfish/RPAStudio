@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPAStudio.Windows"
-        xmlns:localization="clr-namespace:RPAStudio.Localization"
+        xmlns:lclz="clr-namespace:RPAStudio.Localization"
         mc:Ignorable="d"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
@@ -52,11 +52,11 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0">
-                    <TextBlock Text="{x:Static localization:Strings.NameText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" />
+                    <TextBlock Text="{x:Static lclz:Strings.NameText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" />
                 </Grid>
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Border Margin="0,5" BorderBrush="#ABABAB" BorderThickness="1" Visibility="{Binding IsFileNameCorrect,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                        <Image ToolTip="名称字段校验成功" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
+                        <Image ToolTip="{x:Static lclz:Strings.NameFieldCheckSucceeded}" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
                     </Border>
 
                     <Border Margin="0,5" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsFileNameCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
@@ -76,11 +76,11 @@
                 </Grid>
 
                 <Grid Grid.Row="1" Grid.Column="0">
-                    <TextBlock Text="{x:Static localization:Strings.PathText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" />
+                    <TextBlock Text="{x:Static lclz:Strings.PathText}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" />
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
                     <Border Margin="0,5,35,5" BorderBrush="#ABABAB" BorderThickness="1" Visibility="{Binding IsFilePathCorrect,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                        <Image ToolTip="位置字段校验成功" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
+                        <Image ToolTip="{x:Static lclz:Strings.PathFieldCheckSucceeded}" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
                     </Border>
 
                     <Border Margin="0,5,35,5" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsFilePathCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
@@ -97,7 +97,7 @@
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#f1f1f1">
             <Border VerticalAlignment="Top" BorderThickness="0,1,0,0" BorderBrush="#b8b8b8"></Border>
-            <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" HorizontalAlignment="Right" Content="{x:Static localization:Strings.CreateText}" Command="{Binding CreateFileCommand}" Margin="0,0,10,0" IsDefault="True"></Button>
+            <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" HorizontalAlignment="Right" Content="{x:Static lclz:Strings.CreateText}" Command="{Binding CreateFileCommand}" Margin="0,0,10,0" IsDefault="True"></Button>
         </Grid>
     </Grid>
 </Window>

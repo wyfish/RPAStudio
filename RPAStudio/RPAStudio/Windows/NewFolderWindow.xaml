@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPAStudio.Windows"
-        xmlns:localization="clr-namespace:RPAStudio.Localization"
+        xmlns:lclz="clr-namespace:RPAStudio.Localization"
         mc:Ignorable="d"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         DataContext="{Binding NewFolder, Source={StaticResource Locator}}"
         Icon="/Resources/Ico/RPAStudio.ico" x:Uid="NewFolder"
-        Title="{x:Static localization:Strings.NewFolderTitle}" Height="125" Width="415" ResizeMode="NoResize">
+        Title="{x:Static lclz:Strings.NewFolderTitle}" Height="125" Width="415" ResizeMode="NoResize">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -27,11 +27,11 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Grid.Column="0">
-            <TextBlock Text="{x:Static localization:Strings.NameText}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
+            <TextBlock Text="{x:Static lclz:Strings.NameText}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" />
         </Grid>
         <Grid Grid.Row="0"  Grid.Column="1" Height="35" Margin="0,0,10,0">
             <Border Margin="0,5" BorderBrush="#ABABAB" BorderThickness="1" Visibility="{Binding IsFolderNameCorrect,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                <Image ToolTip="名称字段校验成功" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
+                <Image ToolTip="{x:Static lclz:Strings.NameFieldCheckSucceeded}" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
             </Border>
 
             <Border Margin="0,5" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsFolderNameCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
@@ -51,8 +51,8 @@
         
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" x:Uid="OK" Content="{x:Static localization:Strings.OKText}" Command="{Binding OkCommand}" IsDefault="True" ></Button>
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" x:Uid="Cancel" Content="{x:Static localization:Strings.CancelText}" Command="{Binding CancelCommand}" Margin="15,0,10,0" ></Button>
+                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" x:Uid="OK" Content="{x:Static lclz:Strings.OKText}" Command="{Binding OkCommand}" IsDefault="True" ></Button>
+                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" x:Uid="Cancel" Content="{x:Static lclz:Strings.CancelText}" Command="{Binding CancelCommand}" Margin="15,0,10,0" ></Button>
             </StackPanel>
         </Grid>
     </Grid>

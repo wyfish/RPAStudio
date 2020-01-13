@@ -1841,6 +1841,7 @@ namespace RPAStudio.ViewModel
                         if (SelectedItemRequireLicenseAcceptance)
                         {
                             //确定接收许可证吗？
+                            // 该程序包要求你在安装前接受其许可证条款，确定接受吗？
                             var ret = MessageBox.Show(m_view, "该程序包要求你在安装前接受其许可证条款，确定接受吗？", ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (ret != MessageBoxResult.Yes)
                             {
@@ -2007,29 +2008,32 @@ namespace RPAStudio.ViewModel
             
             m_richTextBox.Document.Blocks.Clear();
 
-            richTextBoxInsertRun(m_richTextBox, "描述：", item.Description, true);
-            richTextBoxInsertRun(m_richTextBox, "版本：", item.Identity.Version.OriginalVersion);
-            richTextBoxInsertRun(m_richTextBox, "作者：", item.Authors);
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("DescriptionWithColon"), item.Description, true); // 描述：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("VersionWithColon"), item.Identity.Version.OriginalVersion); // 版本：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("AuthorWithColon"), item.Authors); // 作者：
 
             if (!string.IsNullOrEmpty(item.LicenseUrl?.AbsoluteUri))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "许可证：", "查看许可证信息", item.LicenseUrl.AbsoluteUri);
+                // 许可证：, 查看许可证信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("LicenseWithColon"), ResxIF.GetString("ViewLicenseInformation"), item.LicenseUrl.AbsoluteUri);
             }
-
-            richTextBoxInsertRun(m_richTextBox, "发布日期：", item.Published?.ToLocalTime().ToString("G"));
+            // 发布日期：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("ReleaseDateWithColon"), item.Published?.ToLocalTime().ToString("G"));
 
             if (!string.IsNullOrEmpty(item.ProjectUrl?.AbsoluteUri))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "项目地址：", "查看项目信息", item.ProjectUrl.AbsoluteUri);
+                // 项目地址：, 查看项目信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("ProjectAddress"), ResxIF.GetString("ViewProjectInformation"), item.ProjectUrl.AbsoluteUri);
             }
 
             if (!string.IsNullOrEmpty(item.Tags))
             {
-                richTextBoxInsertRun(m_richTextBox, "标签：", item.Tags);
+                // 标签：
+                richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("TagWithColon"), item.Tags);
             }
 
             //显示依赖项
-            richTextBoxInsertDependencies(m_richTextBox, "依赖项：", item.DependencySets.ToList());
+            richTextBoxInsertDependencies(m_richTextBox, ResxIF.GetString("DependenciesWithColon"), item.DependencySets.ToList());
            
         }
 
@@ -2071,29 +2075,32 @@ namespace RPAStudio.ViewModel
             m_richTextBox.Document.Blocks.Clear();
             m_richTextBox.ScrollToHome();
 
-            richTextBoxInsertRun(m_richTextBox, "描述：", item.Description,true);
-            richTextBoxInsertRun(m_richTextBox, "版本：", item.InstalledVersion);
-            richTextBoxInsertRun(m_richTextBox, "作者：", item.Authors);
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("DescriptionWithColon"), item.Description,true); // 描述：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("VersionWithColon"), item.InstalledVersion); // 版本：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("AuthorWithColon"), item.Authors);   // 作者：
 
             if (!string.IsNullOrEmpty(item.LicenseUrl))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "许可证：", "查看许可证信息", item.LicenseUrl);
+                // 许可证：, 查看许可证信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("LicenseWithColon"), ResxIF.GetString("ViewLicenseInformation"), item.LicenseUrl);
             }
-
-            richTextBoxInsertRun(m_richTextBox, "发布日期：", item.PublishTime);
+            // 发布日期：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("ReleaseDateWithColon"), item.PublishTime);
 
             if (!string.IsNullOrEmpty(item.ProjectUrl))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "项目地址：", "查看项目信息", item.ProjectUrl);
+                // 项目地址：, 查看项目信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("ProjectAddress"), ResxIF.GetString("ViewProjectInformation"), item.ProjectUrl);
             }
 
             if (!string.IsNullOrEmpty(item.Tags))
             {
-                richTextBoxInsertRun(m_richTextBox, "标签：", item.Tags);
+                // 标签：
+                richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("TagWithColon"), item.Tags);
             }
 
             //显示依赖项
-            richTextBoxInsertDependencies(m_richTextBox, "依赖项：", item.Dependencies);
+            richTextBoxInsertDependencies(m_richTextBox, ResxIF.GetString("DependenciesWithColon"), item.Dependencies);
 
             //异步请求网络然后再刷新下这个包条目对应的信息（默认选择第一项，用户手动选择下拉列表项时也触发刷新）
             Task.Run(async () =>

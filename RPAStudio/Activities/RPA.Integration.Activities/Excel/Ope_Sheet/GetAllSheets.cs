@@ -19,7 +19,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
-        [DisplayName("工作表名称列表")]
+        [Localize.LocalizedDisplayName("DisplayName176")] //工作表名称列表 //List of worksheet names //ワークシート名のリスト
         [Browsable(true)]
         public OutArgument<string[]> SheetNames
         {

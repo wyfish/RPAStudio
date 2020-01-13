@@ -19,13 +19,13 @@ namespace RPA.Integration.Activities.ExcelPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/copy.png"; } }
 
         [Localize.LocalizedCategory("Category8")] //粘贴选项 //Paste option //貼り付けオプション
-        [DisplayName("目标文件路径")]
+        [Localize.LocalizedDisplayName("DisplayName143")] //目标文件路径 //Destination File Path //宛先ファイルのパス
         [Browsable(true)]
         public InArgument<string> DestFilePath { get; set;}
 
 
         [Localize.LocalizedCategory("Category8")] //粘贴选项 //Paste option //貼り付けオプション
-        [DisplayName("目标单元格行")]
+        [Localize.LocalizedDisplayName("DisplayName144")] //目标单元格行 //Target Cell row //ターゲットセル行
         [Browsable(true)]
         public InArgument<Int32> DestCellRow
         {
@@ -33,7 +33,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category8")] //粘贴选项 //Paste option //貼り付けオプション
-        [DisplayName("目标单元格列")]
+        [Localize.LocalizedDisplayName("DisplayName145")] //目标单元格列 //Target Cell column //ターゲットセル列
         [Browsable(true)]
         public InArgument<Int32> DestCellColumn
         {
@@ -42,7 +42,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         InArgument<string> _DestCell;
         [Localize.LocalizedCategory("Category8")] //粘贴选项 //Paste option //貼り付けオプション
-        [DisplayName("目标单元格名称")]
+        [Localize.LocalizedDisplayName("DisplayName146")] //目标单元格名称 //Target cell name //ターゲットセル名
         [Browsable(true)]
         [Localize.LocalizedDescription("Description17")] //粘贴单元格区域的起始单元格 //Paste the starting cell of the cell range //セル範囲の開始セルを貼り付けます
         public InArgument<string> DestCell
@@ -59,7 +59,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         InArgument<string> _DestSheet;
         [Localize.LocalizedCategory("Category8")] //粘贴选项 //Paste option //貼り付けオプション
-        [DisplayName("目标工作表")]
+        [Localize.LocalizedDisplayName("DisplayName147")] //目标工作表 //Target sheet //対象シート
         [Browsable(true)]
         [Localize.LocalizedDescription("Description18")] //粘贴单元格区域的工作薄名称 //Paste the work area name of the cell area //セル領域の作業領域名を貼り付けます
         public InArgument<string> DestSheet
@@ -83,7 +83,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category9")] //复制选项 //Copy option //コピーオプション
-        [DisplayName("起始单元格行")]
+        [Localize.LocalizedDisplayName("DisplayName148")] //起始单元格行 //Starting cell row //開始セル行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
@@ -91,7 +91,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category9")] //复制选项 //Copy option //コピーオプション
-        [DisplayName("起始单元格列")]
+        [Localize.LocalizedDisplayName("DisplayName149")] //起始单元格列 //Starting cell column //開始セル列
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -99,8 +99,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category9")] //复制选项 //Copy option //コピーオプション
-        [DisplayName("起始单元格名称")]
-        [Description("代表单元格名称的VB表达式，如A1")]
+        [Localize.LocalizedDisplayName("DisplayName150")] //起始单元格名称 //Starting cell name //開始セル名
+        [Localize.LocalizedDescription("Description76")] //代表单元格名称的VB表达式，如A1 //VB expression representing the cell name, such as A1 //A1などのセル名を表すVB式
         [Browsable(true)]
         public InArgument<string> CellName_Begin
         {
@@ -108,7 +108,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category9")] //复制选项 //Copy option //コピーオプション
-        [DisplayName("终点单元格行")]
+        [Localize.LocalizedDisplayName("DisplayName151")] //终点单元格行 //End cell row //終了セル行
         [Browsable(true)]
         public InArgument<Int32> CellRow_End
         {
@@ -116,7 +116,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category9")] //复制选项 //Copy option //コピーオプション
-        [DisplayName("终点单元格列")]
+        [Localize.LocalizedDisplayName("DisplayName152")] //终点单元格列 //End cell column //終了セル列
         [Browsable(true)]
         public InArgument<Int32> CellColumn_End
         {
@@ -124,8 +124,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         [Localize.LocalizedCategory("Category9")] //复制选项 //Copy option //コピーオプション
-        [Description("代表单元格名称的VB表达式，如B2")]
-        [DisplayName("终点单元格名称")]
+        [Localize.LocalizedDescription("Description78")] //代表单元格名称的VB表达式，如B2 //VB expression representing the cell name, such as B2 //B2などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName153")] //终点单元格名称 //End cell name //終了セル名
         [Browsable(true)]
         public InArgument<string> CellName_End
         {

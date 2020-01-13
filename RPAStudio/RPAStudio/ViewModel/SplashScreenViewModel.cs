@@ -1,13 +1,14 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System;
+using System.IO;
+using System.Windows;
+using System.Threading.Tasks;
+using System.Xml;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using log4net;
-using RPAStudio.Librarys;
-using System.Windows;
-using System;
-using System.Threading.Tasks;
 using RPAStudio.Windows;
-using System.Xml;
-using System.IO;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -105,9 +106,10 @@ namespace RPAStudio.ViewModel
             //授权检测
             if (!IsNotExpired())
             {
-                var tip = "软件未通过授权检测，请注册产品！";
+                // 软件未通过授权检测，请注册产品！
+                var tip = ResxIF.GetString("TheSoftwareFailedAuthorizationTest");
                 Logger.Debug(tip, logger);
-                MessageBox.Show(tip, "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(tip, ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Error);
                 Environment.Exit(0);
                 return;
             }

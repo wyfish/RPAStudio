@@ -18,8 +18,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Browsable(false)]
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/replace.png"; } }
 
-        [Category("工作表选项")]
-        [DisplayName("所有工作表")]
+        [Localize.LocalizedCategory("Category31")] //工作表选项 //Sheet Options //シートオプション
+        [Localize.LocalizedDisplayName("DisplayName155")] //所有工作表 //All worksheets //すべてのワークシート
         [Browsable(true)]
         public bool AllSheets
         {
@@ -27,7 +27,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("工作表选项")]
+        [Localize.LocalizedCategory("Category31")] //工作表选项 //Sheet Options //シートオプション
         [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> SheetName
@@ -36,24 +36,24 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("区域选项")]
-        [DisplayName("所有区域")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDisplayName("DisplayName156")] //所有区域 //All areas //すべてのエリア
         [Browsable(true)]
         public bool AllRange
         {
             get; set;
         }
 
-        [Category("区域选项")]
-        [DisplayName("单元格起始行")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDisplayName("DisplayName157")] //单元格起始行 //Cell start row //セル開始行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
             get;set;
         }
 
-        [Category("区域选项")]
-        [DisplayName("单元格起始列")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDisplayName("DisplayName158")] //单元格起始列 //Cell start column //セル開始列
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -61,34 +61,34 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("区域选项")]
-        [DisplayName("单元格起始名称")]
-        [Description("代表单元格名称的VB表达式，如A1")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDisplayName("DisplayName159")] //单元格起始名称 //Cell start name //セル開始名
+        [Localize.LocalizedDescription("Description76")] //代表单元格名称的VB表达式，如A1 //VB expression representing the cell name, such as A1 //A1などのセル名を表すVB式
         [Browsable(true)]
         public InArgument<string> CellName_Begin
         {
             get; set;
         }
 
-        [Category("区域选项")]
-        [DisplayName("单元格终点行")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDisplayName("DisplayName160")] //单元格终点行 //Cell end row //セル終了行
         [Browsable(true)]
         public InArgument<Int32> CellRow_End
         {
             get; set;
         }
 
-        [Category("区域选项")]
-        [DisplayName("单元格终点列")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDisplayName("DisplayName161")] //单元格终点列 //Cell end column //セル終了列
         [Browsable(true)]
         public InArgument<Int32> CellColumn_End
         {
             get; set;
         }
 
-        [Category("区域选项")]
-        [Description("代表单元格名称的VB表达式，如B2")]
-        [DisplayName("单元格终点名称")]
+        [Localize.LocalizedCategory("Category35")] //区域选项 //Regional options //地域オプション
+        [Localize.LocalizedDescription("Description78")] //代表单元格名称的VB表达式，如B2 //VB expression representing the cell name, such as B2 //B2などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName162")] //单元格终点名称 //Cell end name //セル終了名
         [Browsable(true)]
         public InArgument<string> CellName_End
         {
@@ -96,8 +96,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("替换选项")]
-        [DisplayName("查找内容")]
+        [Localize.LocalizedCategory("Category36")] //替换选项 //Replace option //交換オプション
+        [Localize.LocalizedDisplayName("DisplayName163")] //查找内容 //Find content //コンテンツを見つける
         [RequiredArgument]
         [Browsable(true)]
         public InArgument<string> FindData
@@ -105,8 +105,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get; set;
         }
 
-        [Category("替换选项")]
-        [DisplayName("替换内容")]
+        [Localize.LocalizedCategory("Category36")] //替换选项 //Replace option //交換オプション
+        [Localize.LocalizedDisplayName("DisplayName164")] //替换内容 //Replace content //コンテンツを置き換える
         [RequiredArgument]
         [Browsable(true)]
         public InArgument<string> ReplaceData
@@ -114,18 +114,18 @@ namespace RPA.Integration.Activities.ExcelPlugins
             get; set;
         }
 
-        [Category("替换选项")]
-        [DisplayName("区分大小写")]
+        [Localize.LocalizedCategory("Category36")] //替换选项 //Replace option //交換オプション
+        [Localize.LocalizedDisplayName("DisplayName165")] //区分大小写 //Case sensitive //大文字と小文字を区別
         [Browsable(true)]
         public bool IsTextTransform { get; set; }
 
-        [Category("替换选项")]
-        [DisplayName("单元格匹配")]
+        [Localize.LocalizedCategory("Category36")] //替换选项 //Replace option //交換オプション
+        [Localize.LocalizedDisplayName("DisplayName166")] //单元格匹配 //Cell match //セル一致
         [Browsable(true)]
         public bool IsCellMatch { get; set; }
 
-        [Category("替换选项")]
-        [DisplayName("区分半全角")]
+        [Localize.LocalizedCategory("Category36")] //替换选项 //Replace option //交換オプション
+        [Localize.LocalizedDisplayName("DisplayName167")] //区分半全角 //Distinguish half-full angle //ハーフフルアングルを区別する
         [Browsable(true)]
         public bool isSemiFull { get; set; }
 

@@ -1818,7 +1818,7 @@ namespace RPAStudio.ViewModel
                         if (result.Errors.Count == 0)
                         {
                             // 工作流校验正确
-                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowVerificationOK"), "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowVerificationOK"), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                         }
                         else
                         {
@@ -1827,7 +1827,7 @@ namespace RPAStudio.ViewModel
                                 SharedObject.Instance.Output(SharedObject.enOutputType.Error, err.Message);
                             }
                             // 工作流校验错误，请检查参数配置
-                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowCheckError"), "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowCheckError"), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                     }));
             }

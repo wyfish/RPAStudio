@@ -326,6 +326,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Editors\Highlighting\Python-Mode.xshd" />
+    <None Include="Nuget\NuGet.Default_zh.Config" />
+    <None Include="Nuget\NuGet.Default_ja.Config" />
     <None Include="Nuget\NuGet.Default.Config" />
     <None Include="Nuget\NuGet.User.Config" />
     <None Include="packages.config">

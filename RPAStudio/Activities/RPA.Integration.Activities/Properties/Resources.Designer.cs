@@ -22,7 +22,7 @@ namespace RPA.Integration.Activities.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace RPA.Integration.Activities.Properties {
         ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RPA.Integration.Activities.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace RPA.Integration.Activities.Properties {
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,2304 +61,2763 @@ namespace RPA.Integration.Activities.Properties {
         }
         
         /// <summary>
-        ///   Add に類似しているローカライズされた文字列を検索します。
+        ///   添加 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string AddText {
+        public static string AddText {
             get {
                 return ResourceManager.GetString("AddText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Connection configuration に類似しているローカライズされた文字列を検索します。
+        ///   连接配置 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category1 {
+        public static string Category1 {
             get {
                 return ResourceManager.GetString("Category1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Font setting に類似しているローカライズされた文字列を検索します。
+        ///   字体设置 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category10 {
+        public static string Category10 {
             get {
                 return ResourceManager.GetString("Category10", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Row height column width に類似しているローカライズされた文字列を検索します。
+        ///   行高列宽 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category11 {
+        public static string Category11 {
             get {
                 return ResourceManager.GetString("Category11", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   frame に類似しているローカライズされた文字列を検索します。
+        ///   边框 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category12 {
+        public static string Category12 {
             get {
                 return ResourceManager.GetString("Category12", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   server に類似しているローカライズされた文字列を検索します。
+        ///   服务器 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category13 {
+        public static string Category13 {
             get {
                 return ResourceManager.GetString("Category13", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Credential に類似しているローカライズされた文字列を検索します。
+        ///   凭据 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category14 {
+        public static string Category14 {
             get {
                 return ResourceManager.GetString("Category14", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Security Settings に類似しているローカライズされた文字列を検索します。
+        ///   安全设置 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category15 {
+        public static string Category15 {
             get {
                 return ResourceManager.GetString("Category15", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Log in に類似しているローカライズされた文字列を検索します。
+        ///   登录 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category16 {
+        public static string Category16 {
             get {
                 return ResourceManager.GetString("Category16", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Filter に類似しているローカライズされた文字列を検索します。
+        ///   筛选 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category17 {
+        public static string Category17 {
             get {
                 return ResourceManager.GetString("Category17", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sender に類似しているローカライズされた文字列を検索します。
+        ///   寄件人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category18 {
+        public static string Category18 {
             get {
                 return ResourceManager.GetString("Category18", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recipient に類似しているローカライズされた文字列を検索します。
+        ///   收件人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category19 {
+        public static string Category19 {
             get {
                 return ResourceManager.GetString("Category19", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Output に類似しているローカライズされた文字列を検索します。
+        ///   输出 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category2 {
+        public static string Category2 {
             get {
                 return ResourceManager.GetString("Category2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   e-mail に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category20 {
+        public static string Category20 {
             get {
                 return ResourceManager.GetString("Category20", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Attachments に類似しているローカライズされた文字列を検索します。
+        ///   附件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category21 {
+        public static string Category21 {
             get {
                 return ResourceManager.GetString("Category21", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Forward に類似しているローカライズされた文字列を検索します。
+        ///   转发 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category22 {
+        public static string Category22 {
             get {
                 return ResourceManager.GetString("Category22", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Direction に類似しているローカライズされた文字列を検索します。
+        ///   方向 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category23 {
+        public static string Category23 {
             get {
                 return ResourceManager.GetString("Category23", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Page attribute に類似しているローカライズされた文字列を検索します。
+        ///   页面属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category24 {
+        public static string Category24 {
             get {
                 return ResourceManager.GetString("Category24", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Page margin に類似しているローカライズされた文字列を検索します。
+        ///   页面边距 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category25 {
+        public static string Category25 {
             get {
                 return ResourceManager.GetString("Category25", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Image に類似しているローカライズされた文字列を検索します。
+        ///   图片 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category26 {
+        public static string Category26 {
             get {
                 return ResourceManager.GetString("Category26", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Bookmark に類似しているローカライズされた文字列を検索します。
+        ///   书签 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category27 {
+        public static string Category27 {
             get {
                 return ResourceManager.GetString("Category27", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Hyperlinks に類似しているローカライズされた文字列を検索します。
+        ///   超链接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category28 {
+        public static string Category28 {
             get {
                 return ResourceManager.GetString("Category28", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Disconnect に類似しているローカライズされた文字列を検索します。
+        ///   断开连接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category3 {
+        public static string Category3 {
             get {
                 return ResourceManager.GetString("Category3", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Option に類似しているローカライズされた文字列を検索します。
+        ///   单元格选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category4 {
+        public static string Category30 {
+            get {
+                return ResourceManager.GetString("Category30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   工作表选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category31 {
+            get {
+                return ResourceManager.GetString("Category31", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格起始 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category32 {
+            get {
+                return ResourceManager.GetString("Category32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格结束 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category33 {
+            get {
+                return ResourceManager.GetString("Category33", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格终点 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category34 {
+            get {
+                return ResourceManager.GetString("Category34", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   区域选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category35 {
+            get {
+                return ResourceManager.GetString("Category35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   替换选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category36 {
+            get {
+                return ResourceManager.GetString("Category36", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行列数选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category37 {
+            get {
+                return ResourceManager.GetString("Category37", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   打开/新建文档选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category38 {
+            get {
+                return ResourceManager.GetString("Category38", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category4 {
             get {
                 return ResourceManager.GetString("Category4", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Enter に類似しているローカライズされた文字列を検索します。
+        ///   输入 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category5 {
+        public static string Category5 {
             get {
                 return ResourceManager.GetString("Category5", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   New/Open Document Options に類似しているローカライズされた文字列を検索します。
+        ///   新建/打开文档选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category6 {
+        public static string Category6 {
             get {
                 return ResourceManager.GetString("Category6", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Save option に類似しているローカライズされた文字列を検索します。
+        ///   保存选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category7 {
+        public static string Category7 {
             get {
                 return ResourceManager.GetString("Category7", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Paste option に類似しているローカライズされた文字列を検索します。
+        ///   粘贴选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category8 {
+        public static string Category8 {
             get {
                 return ResourceManager.GetString("Category8", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Copy option に類似しているローカライズされた文字列を検索します。
+        ///   复制选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Category9 {
+        public static string Category9 {
             get {
                 return ResourceManager.GetString("Category9", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Configure database connection に類似しているローカライズされた文字列を検索します。
+        ///   配置数据库连接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ConfigureDatabaseConnection {
+        public static string ConfigureDatabaseConnection {
             get {
                 return ResourceManager.GetString("ConfigureDatabaseConnection", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Connection configuration に類似しているローカライズされた文字列を検索します。
+        ///   连接配置 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ConnectionConfiguration {
+        public static string ConnectionConfiguration {
             get {
                 return ResourceManager.GetString("ConnectionConfiguration", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Connection settings に類似しているローカライズされた文字列を検索します。
+        ///   连接设置 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ConnectionSettings {
+        public static string ConnectionSettings {
             get {
                 return ResourceManager.GetString("ConnectionSettings", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Connection Wizard に類似しているローカライズされた文字列を検索します。
+        ///   连接向导 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ConnectionWizard {
+        public static string ConnectionWizard {
             get {
                 return ResourceManager.GetString("ConnectionWizard", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Content に類似しているローカライズされた文字列を検索します。
+        ///   内容 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ContentText {
+        public static string ContentText {
             get {
                 return ResourceManager.GetString("ContentText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Delete に類似しているローカライズされた文字列を検索します。
+        ///   删除 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DeleteText {
+        public static string DeleteText {
             get {
                 return ResourceManager.GetString("DeleteText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The connection string used to establish a database connection に類似しているローカライズされた文字列を検索します。
+        ///   用于建立数据库连接的连接字符串 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description1 {
+        public static string Description1 {
             get {
                 return ResourceManager.GetString("Description1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specify how to interpret the command string に類似しているローカライズされた文字列を検索します。
+        ///   指定如何解释命令字符串 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description10 {
+        public static string Description10 {
             get {
                 return ResourceManager.GetString("Description10", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Executed SQL command statement に類似しているローカライズされた文字列を検索します。
+        ///   执行的SQL命令语句 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description11 {
+        public static string Description11 {
             get {
                 return ResourceManager.GetString("Description11", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   For UPDATE, INSERT, and DELETE statements, the return value is the number of rows affected by the command.  For all other types of statements, the return value is -1 に類似しているローカライズされた文字列を検索します。
+        ///   对于UPDATE，INSERT和DELETE语句，返回值是受命令影响的行数。对于所有其他类型的语句，返回值为-1 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description12 {
+        public static string Description12 {
             get {
                 return ResourceManager.GetString("Description12", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Store the output of the SQL query in the DataTable variable に類似しているローカライズされた文字列を検索します。
+        ///   将SQL查询的输出存储在DataTable变量中 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description13 {
+        public static string Description13 {
             get {
                 return ResourceManager.GetString("Description13", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specifies whether database operations in this activity should be wrapped in a database transaction に類似しているローカライズされた文字列を検索します。
+        ///   指定此活动中的数据库操作是否应包装在数据库事务中 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description14 {
+        public static string Description14 {
             get {
                 return ResourceManager.GetString("Description14", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The delay in milliseconds after the activity is performed.  The default time is 3000 milliseconds. に類似しているローカライズされた文字列を検索します。
+        ///   执行活动后的延迟时间(以毫秒为单位)。默认时间为3000毫秒。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description15 {
+        public static string Description15 {
             get {
                 return ResourceManager.GetString("Description15", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The time (in milliseconds) before the deferred activity begins any operation.  The default time is 0 milliseconds. に類似しているローカライズされた文字列を検索します。
+        ///   延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为0毫秒。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description16 {
+        public static string Description16 {
             get {
                 return ResourceManager.GetString("Description16", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Paste the starting cell of the cell range に類似しているローカライズされた文字列を検索します。
+        ///   粘贴单元格区域的起始单元格 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description17 {
+        public static string Description17 {
             get {
                 return ResourceManager.GetString("Description17", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Paste the work area name of the cell area に類似しているローカライズされた文字列を検索します。
+        ///   粘贴单元格区域的工作薄名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description18 {
+        public static string Description18 {
             get {
                 return ResourceManager.GetString("Description18", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Store a DataTable that reads data に類似しているローカライズされた文字列を検索します。
+        ///   存储读取数据的DataTable に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description19 {
+        public static string Description19 {
             get {
                 return ResourceManager.GetString("Description19", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The name of the database provider used to access the database に類似しているローカライズされた文字列を検索します。
+        ///   用于访问数据库的数据库提供程序的名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description2 {
+        public static string Description2 {
             get {
                 return ResourceManager.GetString("Description2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   DataTable variable name to write data to に類似しているローカライズされた文字列を検索します。
+        ///   写入数据的DataTable变量名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description20 {
+        public static string Description20 {
             get {
                 return ResourceManager.GetString("Description20", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Email account used to send mail に類似しているローカライズされた文字列を検索します。
+        ///   用于发送邮件的电子邮件帐户 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description21 {
+        public static string Description21 {
             get {
                 return ResourceManager.GetString("Description21", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The password for the email account used to send the message に類似しているローカライズされた文字列を検索します。
+        ///   用于发送邮件的电子邮件帐户的密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description22 {
+        public static string Description22 {
             get {
                 return ResourceManager.GetString("Description22", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Email server host used に類似しているローカライズされた文字列を検索します。
+        ///   使用的电子邮件服务器主机 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description23 {
+        public static string Description23 {
             get {
                 return ResourceManager.GetString("Description23", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The port that the email will pass through に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件将通过的端口 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description24 {
+        public static string Description24 {
             get {
                 return ResourceManager.GetString("Description24", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Retrieve the message&apos;s mail folder に類似しているローカライズされた文字列を検索します。
+        ///   检索消息的邮件文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description25 {
+        public static string Description25 {
             get {
                 return ResourceManager.GetString("Description25", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specify SSL and/or TLS encryption for the connection に類似しているローカライズされた文字列を検索します。
+        ///   指定用于连接的SSL和/或TLS加密 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description26 {
+        public static string Description26 {
             get {
                 return ResourceManager.GetString("Description26", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Number of messages retrieved from the top of the list に類似しているローカライズされた文字列を検索します。
+        ///   从列表顶部开始检索的消息数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description27 {
+        public static string Description27 {
             get {
                 return ResourceManager.GetString("Description27", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specifies whether the read message should be marked for deletion に類似しているローカライズされた文字列を検索します。
+        ///    指定是否应将读取的消息标记为删除 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description28 {
+        public static string Description28 {
             get {
                 return ResourceManager.GetString("Description28", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specifies whether the retrieved message is marked as read に類似しているローカライズされた文字列を検索します。
+        ///   指定是否将检索到的消息标记为已读 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description29 {
+        public static string Description29 {
             get {
                 return ResourceManager.GetString("Description29", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Database Connectivity に類似しているローカライズされた文字列を検索します。
+        ///   数据库连接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description3 {
+        public static string Description3 {
             get {
                 return ResourceManager.GetString("Description3", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specifies whether to retrieve only unread messages に類似しているローカライズされた文字列を検索します。
+        ///   指定是否仅检索未读消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description30 {
+        public static string Description30 {
             get {
                 return ResourceManager.GetString("Description30", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Filter the corresponding message based on the subject of the message に類似しているローカライズされた文字列を検索します。
+        ///   根据邮件主题筛选相应的邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description31 {
+        public static string Description31 {
             get {
                 return ResourceManager.GetString("Description31", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Filter the corresponding message based on the sender&apos;s address に類似しているローカライズされた文字列を検索します。
+        ///   根据发件人地址筛选相应的邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description32 {
+        public static string Description32 {
             get {
                 return ResourceManager.GetString("Description32", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Filter the corresponding message based on the message&apos;s hypertext content に類似しているローカライズされた文字列を検索します。
+        ///   根据邮件超文本内容筛选相应的邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description33 {
+        public static string Description33 {
             get {
                 return ResourceManager.GetString("Description33", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Use the retrieved message as a collection of MailMessage objects に類似しているローカライズされた文字列を検索します。
+        ///   将检索到的消息作为MailMessage对象的集合 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description34 {
+        public static string Description34 {
             get {
                 return ResourceManager.GetString("Description34", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The message used to extract the image, this field only supports the MimeMessage variable. に類似しているローカライズされた文字列を検索します。
+        ///   用于提取图片的邮件，该字段仅支持MimeMessage变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description35 {
+        public static string Description35 {
             get {
                 return ResourceManager.GetString("Description35", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Store the mail in the mail to a local directory. If it is empty, it will not be saved. に類似しているローカライズされた文字列を検索します。
+        ///   将邮件中的邮件存储到本地目录,为空则不保存 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description36 {
+        public static string Description36 {
             get {
                 return ResourceManager.GetString("Description36", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Picture local save path list に類似しているローカライズされた文字列を検索します。
+        ///   图片本地保存路径列表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description37 {
+        public static string Description37 {
             get {
                 return ResourceManager.GetString("Description37", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Save image information, divided into address and base64 code に類似しているローカライズされた文字列を検索します。
+        ///   保存图片信息，分为地址和base64码两种方式 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description38 {
+        public static string Description38 {
             get {
                 return ResourceManager.GetString("Description38", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specifies whether messages should be sent using SSL に類似しているローカライズされた文字列を検索します。
+        ///   指定是否应使用SSL发送消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description39 {
+        public static string Description39 {
             get {
                 return ResourceManager.GetString("Description39", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Database connection to close (DatabaseConnection variable) に類似しているローカライズされた文字列を検索します。
+        ///   要关闭的数据库连接(DatabaseConnection变量) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description4 {
+        public static string Description4 {
             get {
                 return ResourceManager.GetString("Description4", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The mail folder to which you want to move the message に類似しているローカライズされた文字列を検索します。
+        ///   要将消息移动到的邮件文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description40 {
+        public static string Description40 {
             get {
                 return ResourceManager.GetString("Description40", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   A folder where you can find mail messages に類似しているローカライズされた文字列を検索します。
+        ///   可以找到邮件消息的文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description41 {
+        public static string Description41 {
             get {
                 return ResourceManager.GetString("Description41", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   MailMessage object to move に類似しているローカライズされた文字列を検索します。
+        ///   要移动的MailMessage对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description42 {
+        public static string Description42 {
             get {
                 return ResourceManager.GetString("Description42", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   To save the full path of the MailMessage object に類似しているローカライズされた文字列を検索します。
+        ///   要保存MailMessage对象的完整路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description43 {
+        public static string Description43 {
             get {
                 return ResourceManager.GetString("Description43", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The MailMessage object to save に類似しているローカライズされた文字列を検索します。
+        ///   要保存的MailMessage对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description44 {
+        public static string Description44 {
             get {
                 return ResourceManager.GetString("Description44", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The full path to save the MimeMessage attachment に類似しているローカライズされた文字列を検索します。
+        ///   要保存MimeMessage附件的完整路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description45 {
+        public static string Description45 {
             get {
                 return ResourceManager.GetString("Description45", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   MimeMessage attachment to save に類似しているローカライズされた文字列を検索します。
+        ///   要保存的MimeMessage附件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description46 {
+        public static string Description46 {
             get {
                 return ResourceManager.GetString("Description46", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Retrieved attachment に類似しているローカライズされた文字列を検索します。
+        ///   检索到的附件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description47 {
+        public static string Description47 {
             get {
                 return ResourceManager.GetString("Description47", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sender&apos;s display name に類似しているローカライズされた文字列を検索します。
+        ///   发件人的显示名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description48 {
+        public static string Description48 {
             get {
                 return ResourceManager.GetString("Description48", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sender&apos;s email address に類似しているローカライズされた文字列を検索します。
+        ///   发件人的电子邮件地址 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description49 {
+        public static string Description49 {
             get {
                 return ResourceManager.GetString("Description49", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specify browser response timeout (ms) に類似しているローカライズされた文字列を検索します。
+        ///   指定浏览器响应超时时间(毫秒) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description5 {
+        public static string Description5 {
             get {
                 return ResourceManager.GetString("Description5", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Primary recipient of the email に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件的主要收件人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description50 {
+        public static string Description50 {
             get {
                 return ResourceManager.GetString("Description50", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Secondary recipient of the email に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件的次要收件人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description51 {
+        public static string Description51 {
             get {
                 return ResourceManager.GetString("Description51", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Hidden recipient of email に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件的隐藏收件人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description52 {
+        public static string Description52 {
             get {
                 return ResourceManager.GetString("Description52", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Email subject に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件的主题 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description53 {
+        public static string Description53 {
             get {
                 return ResourceManager.GetString("Description53", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The body of the email に類似しているローカライズされた文字列を検索します。
+        ///   电子邮件的正文 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description54 {
+        public static string Description54 {
             get {
                 return ResourceManager.GetString("Description54", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail priority flag に類似しているローカライズされた文字列を検索します。
+        ///   邮件的优先级标志 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description55 {
+        public static string Description55 {
             get {
                 return ResourceManager.GetString("Description55", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specify whether the body of the message is written in HTML format に類似しているローカライズされた文字列を検索します。
+        ///    指定邮件正文是否以HTML格式编写 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description56 {
+        public static string Description56 {
             get {
                 return ResourceManager.GetString("Description56", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Attachments to add to the email に類似しているローカライズされた文字列を検索します。
+        ///   要添加到电子邮件中的附件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description57 {
+        public static string Description57 {
             get {
                 return ResourceManager.GetString("Description57", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   For messages to be forwarded, this field only supports MailMessage objects. に類似しているローカライズされた文字列を検索します。
+        ///   要转发的消息,该字段仅支持MailMessage对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description58 {
+        public static string Description58 {
             get {
                 return ResourceManager.GetString("Description58", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Outlook data file save path に類似しているローカライズされた文字列を検索します。
+        ///   Outlook数据文件的保存路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description59 {
+        public static string Description59 {
             get {
                 return ResourceManager.GetString("Description59", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether an error occurs or not に類似しているローカライズされた文字列を検索します。
+        ///   出现错误是否继续执行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description6 {
+        public static string Description6 {
             get {
                 return ResourceManager.GetString("Description6", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Outlook account name に類似しているローカライズされた文字列を検索します。
+        ///   Outlook账户名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description60 {
+        public static string Description60 {
             get {
                 return ResourceManager.GetString("Description60", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specify mail object に類似しているローカライズされた文字列を検索します。
+        ///   指定邮件对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description61 {
+        public static string Description61 {
             get {
                 return ResourceManager.GetString("Description61", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) に類似しているローカライズされた文字列を検索します。
+        ///    指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description62 {
+        public static string Description62 {
             get {
                 return ResourceManager.GetString("Description62", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   From which mail directory to get mail に類似しているローカライズされた文字列を検索します。
+        ///   从哪个邮件目录去获取邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description63 {
+        public static string Description63 {
             get {
                 return ResourceManager.GetString("Description63", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Only messages that match the filter will be retrieved. に類似しているローカライズされた文字列を検索します。
+        ///   只有符合过滤条件的邮件才会被获取 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description64 {
+        public static string Description64 {
             get {
                 return ResourceManager.GetString("Description64", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether to get only unread mail, check by default に類似しているローカライズされた文字列を検索します。
+        ///   是否只获取未读邮件，默认打勾 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description65 {
+        public static string Description65 {
             get {
                 return ResourceManager.GetString("Description65", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether to automatically mark received messages as read に類似しているローカライズされた文字列を検索します。
+        ///   是否将接收到的邮件自动标记成已读 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description66 {
+        public static string Description66 {
             get {
                 return ResourceManager.GetString("Description66", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Outlook mail directory に類似しているローカライズされた文字列を検索します。
+        ///   Outlook邮件目录 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description67 {
+        public static string Description67 {
             get {
                 return ResourceManager.GetString("Description67", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   If you don&apos;t check it, you will only reply to the sender. If you check it, you will not only give the sender, but also reply to all the CCs. に類似しているローカライズされた文字列を検索します。
+        ///   不勾选的话只回复给发送者，勾选的话不仅给发送者，还会给所有抄送者回复邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description68 {
+        public static string Description68 {
             get {
                 return ResourceManager.GetString("Description68", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Attachment path に類似しているローカライズされた文字列を検索します。
+        ///   附件的保存路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description69 {
+        public static string Description69 {
             get {
                 return ResourceManager.GetString("Description69", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Insert the DataTable variable in the table.  The name and description of the DataTable column must match the name and description in the database table に類似しているローカライズされた文字列を検索します。
+        ///   插入表中的DataTable变量。DataTable列的名称和描述必须与数据库表中的名称和描述相匹配 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description7 {
+        public static string Description7 {
             get {
                 return ResourceManager.GetString("Description7", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Output attachment list に類似しているローカライズされた文字列を検索します。
+        ///   输出附件列表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description70 {
+        public static string Description70 {
             get {
                 return ResourceManager.GetString("Description70", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Regular expression filter, only attachment names that match the filter will be saved に類似しているローカライズされた文字列を検索します。
+        ///   正则表达式过滤器，只有符合过滤条件的附件名才会被保存 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description71 {
+        public static string Description71 {
             get {
                 return ResourceManager.GetString("Description71", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The expected display name that the messaging system must support in order to use に類似しているローカライズされた文字列を検索します。
+        ///   预期的显示名称，邮件系统必须支持该功能才能使用 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description72 {
+        public static string Description72 {
             get {
                 return ResourceManager.GetString("Description72", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Get all the content text in a Word document に類似しているローカライズされた文字列を検索します。
+        ///   获取到Word文档中的全部内容文字 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description73 {
+        public static string Description73 {
             get {
                 return ResourceManager.GetString("Description73", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The number of lines written before writing text に類似しているローカライズされた文字列を検索します。
+        ///   写入文本前写入的行数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description74 {
+        public static string Description74 {
             get {
                 return ResourceManager.GetString("Description74", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   The SQL table in which to insert data に類似しているローカライズされた文字列を検索します。
+        ///   代表单元格名称的VB表达式，如A1 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description8 {
+        public static string Description76 {
+            get {
+                return ResourceManager.GetString("Description76", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   为空代表当前活动工作表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description77 {
+            get {
+                return ResourceManager.GetString("Description77", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   代表单元格名称的VB表达式，如B2 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description78 {
+            get {
+                return ResourceManager.GetString("Description78", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   工作表中有效行数 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description79 {
+            get {
+                return ResourceManager.GetString("Description79", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   要在其中插入数据的SQL表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description8 {
             get {
                 return ResourceManager.GetString("Description8", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Store the number of affected rows in the Int32 variable に類似しているローカライズされた文字列を検索します。
+        ///   将受影响的行数存储到Int32变量中 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string Description9 {
+        public static string Description9 {
             get {
                 return ResourceManager.GetString("Description9", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Connection string に類似しているローカライズされた文字列を検索します。
+        ///   连接字符串 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName1 {
+        public static string DisplayName1 {
             get {
                 return ResourceManager.GetString("DisplayName1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   parameter に類似しているローカライズされた文字列を検索します。
+        ///   参数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName10 {
+        public static string DisplayName10 {
             get {
                 return ResourceManager.GetString("DisplayName10", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Account に類似しているローカライズされた文字列を検索します。
+        ///   账户 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName100 {
+        public static string DisplayName100 {
             get {
                 return ResourceManager.GetString("DisplayName100", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   filter に類似しているローカライズされた文字列を検索します。
+        ///   过滤器 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName101 {
+        public static string DisplayName101 {
             get {
                 return ResourceManager.GetString("DisplayName101", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Get attachment に類似しているローカライズされた文字列を検索します。
+        ///   获取附件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName102 {
+        public static string DisplayName102 {
             get {
                 return ResourceManager.GetString("DisplayName102", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Get only unread messages に類似しているローカライズされた文字列を検索します。
+        ///   只获取未读邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName103 {
+        public static string DisplayName103 {
             get {
                 return ResourceManager.GetString("DisplayName103", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mark as read に類似しているローカライズされた文字列を検索します。
+        ///   标记为已读 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName104 {
+        public static string DisplayName104 {
             get {
                 return ResourceManager.GetString("DisplayName104", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Reply to everyone に類似しているローカライズされた文字列を検索します。
+        ///   回复所有人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName105 {
+        public static string DisplayName105 {
             get {
                 return ResourceManager.GetString("DisplayName105", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Save path に類似しているローカライズされた文字列を検索します。
+        ///   保存路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName106 {
+        public static string DisplayName106 {
             get {
                 return ResourceManager.GetString("DisplayName106", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Secret delivery に類似しているローカライズされた文字列を検索します。
+        ///   密送 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName107 {
+        public static string DisplayName107 {
             get {
                 return ResourceManager.GetString("DisplayName107", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Display name に類似しているローカライズされた文字列を検索します。
+        ///   显示名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName108 {
+        public static string DisplayName108 {
             get {
                 return ResourceManager.GetString("DisplayName108", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether to save as a draft に類似しているローカライズされた文字列を検索します。
+        ///   是否保存成草稿 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName109 {
+        public static string DisplayName109 {
             get {
                 return ResourceManager.GetString("DisplayName109", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Transaction に類似しているローカライズされた文字列を検索します。
+        ///   事务 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName11 {
+        public static string DisplayName11 {
             get {
                 return ResourceManager.GetString("DisplayName11", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Cursor moving distance に類似しているローカライズされた文字列を検索します。
+        ///   游标移动距离 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName110 {
+        public static string DisplayName110 {
             get {
                 return ResourceManager.GetString("DisplayName110", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether to select に類似しているローカライズされた文字列を検索します。
+        ///   是否选中 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName111 {
+        public static string DisplayName111 {
             get {
                 return ResourceManager.GetString("DisplayName111", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Left に類似しているローカライズされた文字列を検索します。
+        ///   左 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName112 {
+        public static string DisplayName112 {
             get {
                 return ResourceManager.GetString("DisplayName112", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Right に類似しているローカライズされた文字列を検索します。
+        ///   右 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName113 {
+        public static string DisplayName113 {
             get {
                 return ResourceManager.GetString("DisplayName113", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Up に類似しているローカライズされた文字列を検索します。
+        ///   上 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName114 {
+        public static string DisplayName114 {
             get {
                 return ResourceManager.GetString("DisplayName114", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Down に類似しているローカライズされた文字列を検索します。
+        ///   下 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName115 {
+        public static string DisplayName115 {
             get {
                 return ResourceManager.GetString("DisplayName115", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   beginning に類似しているローカライズされた文字列を検索します。
+        ///   开头 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName116 {
+        public static string DisplayName116 {
             get {
                 return ResourceManager.GetString("DisplayName116", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   End に類似しているローカライズされた文字列を検索します。
+        ///   结尾 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName117 {
+        public static string DisplayName117 {
             get {
                 return ResourceManager.GetString("DisplayName117", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Next page に類似しているローカライズされた文字列を検索します。
+        ///   下一页 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName118 {
+        public static string DisplayName118 {
             get {
                 return ResourceManager.GetString("DisplayName118", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Font size に類似しているローカライズされた文字列を検索します。
+        ///   字体大小 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName119 {
+        public static string DisplayName119 {
             get {
                 return ResourceManager.GetString("DisplayName119", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   File path に類似しているローカライズされた文字列を検索します。
+        ///   文件路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName12 {
+        public static string DisplayName12 {
             get {
                 return ResourceManager.GetString("DisplayName12", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Font color に類似しているローカライズされた文字列を検索します。
+        ///   字体颜色 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName120 {
+        public static string DisplayName120 {
             get {
                 return ResourceManager.GetString("DisplayName120", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Underline に類似しているローカライズされた文字列を検索します。
+        ///   下划线 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName121 {
+        public static string DisplayName121 {
             get {
                 return ResourceManager.GetString("DisplayName121", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Font shadow に類似しているローカライズされた文字列を検索します。
+        ///   字体阴影 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName122 {
+        public static string DisplayName122 {
             get {
                 return ResourceManager.GetString("DisplayName122", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Left margin に類似しているローカライズされた文字列を検索します。
+        ///   左边距 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName123 {
+        public static string DisplayName123 {
             get {
                 return ResourceManager.GetString("DisplayName123", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Right margin に類似しているローカライズされた文字列を検索します。
+        ///   右边距 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName124 {
+        public static string DisplayName124 {
             get {
                 return ResourceManager.GetString("DisplayName124", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Top margin に類似しているローカライズされた文字列を検索します。
+        ///   上边距 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName125 {
+        public static string DisplayName125 {
             get {
                 return ResourceManager.GetString("DisplayName125", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Bottom margin に類似しているローカライズされた文字列を検索します。
+        ///   下边距 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName126 {
+        public static string DisplayName126 {
             get {
                 return ResourceManager.GetString("DisplayName126", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Backspace に類似しているローカライズされた文字列を検索します。
+        ///   退格次数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName127 {
+        public static string DisplayName127 {
             get {
                 return ResourceManager.GetString("DisplayName127", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Copy に類似しているローカライズされた文字列を検索します。
+        ///   复制 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName128 {
+        public static string DisplayName128 {
             get {
                 return ResourceManager.GetString("DisplayName128", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Paste に類似しているローカライズされた文字列を検索します。
+        ///   粘贴 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName129 {
+        public static string DisplayName129 {
             get {
                 return ResourceManager.GetString("DisplayName129", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Separator に類似しているローカライズされた文字列を検索します。
+        ///   分隔符 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName13 {
+        public static string DisplayName13 {
             get {
                 return ResourceManager.GetString("DisplayName13", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Document content に類似しているローカライズされた文字列を検索します。
+        ///   文档内容 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName130 {
+        public static string DisplayName130 {
             get {
                 return ResourceManager.GetString("DisplayName130", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Image link に類似しているローカライズされた文字列を検索します。
+        ///   图片链接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName131 {
+        public static string DisplayName131 {
             get {
                 return ResourceManager.GetString("DisplayName131", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Bookmark name に類似しているローカライズされた文字列を検索します。
+        ///   书签名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName132 {
+        public static string DisplayName132 {
             get {
                 return ResourceManager.GetString("DisplayName132", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Hyperlink name に類似しているローカライズされた文字列を検索します。
+        ///   超链接名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName133 {
+        public static string DisplayName133 {
             get {
                 return ResourceManager.GetString("DisplayName133", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Hyperlink label に類似しているローカライズされた文字列を検索します。
+        ///   超链接标签 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName134 {
+        public static string DisplayName134 {
             get {
                 return ResourceManager.GetString("DisplayName134", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Hyperlink address に類似しているローカライズされた文字列を検索します。
+        ///   超链接地址 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName135 {
+        public static string DisplayName135 {
             get {
                 return ResourceManager.GetString("DisplayName135", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Pagination/line feeds に類似しているローカライズされた文字列を検索します。
+        ///   分页/换行次数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName136 {
+        public static string DisplayName136 {
             get {
                 return ResourceManager.GetString("DisplayName136", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Pagination に類似しているローカライズされた文字列を検索します。
+        ///   分页 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName137 {
+        public static string DisplayName137 {
             get {
                 return ResourceManager.GetString("DisplayName137", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Wrap に類似しているローカライズされた文字列を検索します。
+        ///   换行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName138 {
+        public static string DisplayName138 {
             get {
                 return ResourceManager.GetString("DisplayName138", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Text content に類似しているローカライズされた文字列を検索します。
+        ///   文本内容 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName139 {
+        public static string DisplayName139 {
             get {
                 return ResourceManager.GetString("DisplayName139", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Character Encoding に類似しているローカライズされた文字列を検索します。
+        ///   字符编码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName14 {
+        public static string DisplayName14 {
             get {
                 return ResourceManager.GetString("DisplayName14", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Column name に類似しているローカライズされた文字列を検索します。
+        ///   单元格名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName15 {
+        public static string DisplayName141 {
+            get {
+                return ResourceManager.GetString("DisplayName141", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   合并/拆分 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName142 {
+            get {
+                return ResourceManager.GetString("DisplayName142", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   目标文件路径 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName143 {
+            get {
+                return ResourceManager.GetString("DisplayName143", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   目标单元格行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName144 {
+            get {
+                return ResourceManager.GetString("DisplayName144", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   目标单元格列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName145 {
+            get {
+                return ResourceManager.GetString("DisplayName145", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   目标单元格名称 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName146 {
+            get {
+                return ResourceManager.GetString("DisplayName146", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   目标工作表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName147 {
+            get {
+                return ResourceManager.GetString("DisplayName147", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   起始单元格行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName148 {
+            get {
+                return ResourceManager.GetString("DisplayName148", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   起始单元格列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName149 {
+            get {
+                return ResourceManager.GetString("DisplayName149", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列名 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName15 {
             get {
                 return ResourceManager.GetString("DisplayName15", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Row に類似しているローカライズされた文字列を検索します。
+        ///   起始单元格名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName16 {
+        public static string DisplayName150 {
+            get {
+                return ResourceManager.GetString("DisplayName150", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   终点单元格行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName151 {
+            get {
+                return ResourceManager.GetString("DisplayName151", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   终点单元格列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName152 {
+            get {
+                return ResourceManager.GetString("DisplayName152", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   终点单元格名称 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName153 {
+            get {
+                return ResourceManager.GetString("DisplayName153", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   表头 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName154 {
+            get {
+                return ResourceManager.GetString("DisplayName154", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   所有工作表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName155 {
+            get {
+                return ResourceManager.GetString("DisplayName155", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   所有区域 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName156 {
+            get {
+                return ResourceManager.GetString("DisplayName156", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格起始行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName157 {
+            get {
+                return ResourceManager.GetString("DisplayName157", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格起始列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName158 {
+            get {
+                return ResourceManager.GetString("DisplayName158", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格起始名称 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName159 {
+            get {
+                return ResourceManager.GetString("DisplayName159", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName16 {
             get {
                 return ResourceManager.GetString("DisplayName16", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Column に類似しているローカライズされた文字列を検索します。
+        ///   单元格终点行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName17 {
+        public static string DisplayName160 {
+            get {
+                return ResourceManager.GetString("DisplayName160", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格终点列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName161 {
+            get {
+                return ResourceManager.GetString("DisplayName161", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格终点名称 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName162 {
+            get {
+                return ResourceManager.GetString("DisplayName162", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找内容 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName163 {
+            get {
+                return ResourceManager.GetString("DisplayName163", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   替换内容 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName164 {
+            get {
+                return ResourceManager.GetString("DisplayName164", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   区分大小写 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName165 {
+            get {
+                return ResourceManager.GetString("DisplayName165", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   单元格匹配 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName166 {
+            get {
+                return ResourceManager.GetString("DisplayName166", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   区分半全角 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName167 {
+            get {
+                return ResourceManager.GetString("DisplayName167", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   有效数据 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName168 {
+            get {
+                return ResourceManager.GetString("DisplayName168", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   活动区域 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName169 {
+            get {
+                return ResourceManager.GetString("DisplayName169", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName17 {
             get {
                 return ResourceManager.GetString("DisplayName17", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Worksheet name に類似しているローカライズされた文字列を検索します。
+        ///   A1单元格列/行截止 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName18 {
+        public static string DisplayName170 {
+            get {
+                return ResourceManager.GetString("DisplayName170", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行数 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName171 {
+            get {
+                return ResourceManager.GetString("DisplayName171", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列数 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName172 {
+            get {
+                return ResourceManager.GetString("DisplayName172", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行号/列号 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName173 {
+            get {
+                return ResourceManager.GetString("DisplayName173", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行/列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName174 {
+            get {
+                return ResourceManager.GetString("DisplayName174", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行/列数据 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName175 {
+            get {
+                return ResourceManager.GetString("DisplayName175", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   工作表名称列表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName176 {
+            get {
+                return ResourceManager.GetString("DisplayName176", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   工作表名称 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName18 {
             get {
                 return ResourceManager.GetString("DisplayName18", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Cell content に類似しているローカライズされた文字列を検索します。
+        ///   单元格内容 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName19 {
+        public static string DisplayName19 {
             get {
                 return ResourceManager.GetString("DisplayName19", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Program name に類似しているローカライズされた文字列を検索します。
+        ///   程序名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName2 {
+        public static string DisplayName2 {
             get {
                 return ResourceManager.GetString("DisplayName2", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether to create a new document に類似しているローカライズされた文字列を検索します。
+        ///   是否创建新文档 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName20 {
+        public static string DisplayName20 {
             get {
                 return ResourceManager.GetString("DisplayName20", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether the process is visible に類似しているローカライズされた文字列を検索します。
+        ///   流程是否可见 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName21 {
+        public static string DisplayName21 {
             get {
                 return ResourceManager.GetString("DisplayName21", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Whether the program exits に類似しているローカライズされた文字列を検索します。
+        ///   程序是否退出 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName22 {
+        public static string DisplayName22 {
             get {
                 return ResourceManager.GetString("DisplayName22", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   save に類似しているローカライズされた文字列を検索します。
+        ///   保存 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName23 {
+        public static string DisplayName23 {
             get {
                 return ResourceManager.GetString("DisplayName23", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Save as に類似しているローカライズされた文字列を検索します。
+        ///   另存为 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName24 {
+        public static string DisplayName24 {
             get {
                 return ResourceManager.GetString("DisplayName24", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Row operation に類似しているローカライズされた文字列を検索します。
+        ///   行列操作 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName25 {
+        public static string DisplayName25 {
             get {
                 return ResourceManager.GetString("DisplayName25", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Row selection に類似しているローカライズされた文字列を検索します。
+        ///   行列选择 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName26 {
+        public static string DisplayName26 {
             get {
                 return ResourceManager.GetString("DisplayName26", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Line number / column number (start) に類似しているローカライズされた文字列を検索します。
+        ///   行号/列号(开始) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName27 {
+        public static string DisplayName27 {
             get {
                 return ResourceManager.GetString("DisplayName27", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Line number / column number (end) に類似しているローカライズされた文字列を検索します。
+        ///   行号/列号(结束) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName28 {
+        public static string DisplayName28 {
             get {
                 return ResourceManager.GetString("DisplayName28", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Cell fill color に類似しているローカライズされた文字列を検索します。
+        ///   单元格填充色 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName29 {
+        public static string DisplayName29 {
             get {
                 return ResourceManager.GetString("DisplayName29", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Variable for saving database connections (DatabaseConnection only) に類似しているローカライズされた文字列を検索します。
+        ///   用于保存数据库连接的变量(仅支持DatabaseConnection) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName3 {
+        public static string DisplayName3 {
             get {
                 return ResourceManager.GetString("DisplayName3", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Alignment に類似しているローカライズされた文字列を検索します。
+        ///   对齐方式 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName30 {
+        public static string DisplayName30 {
             get {
                 return ResourceManager.GetString("DisplayName30", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Font に類似しているローカライズされた文字列を検索します。
+        ///   字体 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName31 {
+        public static string DisplayName31 {
             get {
                 return ResourceManager.GetString("DisplayName31", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Font size に類似しているローカライズされた文字列を検索します。
+        ///   字号 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName32 {
+        public static string DisplayName32 {
             get {
                 return ResourceManager.GetString("DisplayName32", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Colour に類似しているローカライズされた文字列を検索します。
+        ///   颜色 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName33 {
+        public static string DisplayName33 {
             get {
                 return ResourceManager.GetString("DisplayName33", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Bold に類似しているローカライズされた文字列を検索します。
+        ///   粗体 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName34 {
+        public static string DisplayName34 {
             get {
                 return ResourceManager.GetString("DisplayName34", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Italic に類似しているローカライズされた文字列を検索します。
+        ///   斜体 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName35 {
+        public static string DisplayName35 {
             get {
                 return ResourceManager.GetString("DisplayName35", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Bottom line に類似しているローカライズされた文字列を検索します。
+        ///   底线 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName36 {
+        public static string DisplayName36 {
             get {
                 return ResourceManager.GetString("DisplayName36", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Row height に類似しているローカライズされた文字列を検索します。
+        ///   行高 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName37 {
+        public static string DisplayName37 {
             get {
                 return ResourceManager.GetString("DisplayName37", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Column width に類似しているローカライズされた文字列を検索します。
+        ///   列宽 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName38 {
+        public static string DisplayName38 {
             get {
                 return ResourceManager.GetString("DisplayName38", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Border selection に類似しているローカライズされた文字列を検索します。
+        ///   边框选择 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName39 {
+        public static string DisplayName39 {
             get {
                 return ResourceManager.GetString("DisplayName39", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   overtime time に類似しているローカライズされた文字列を検索します。
+        ///   超时时间 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName4 {
+        public static string DisplayName4 {
             get {
                 return ResourceManager.GetString("DisplayName4", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Worksheet order に類似しているローカライズされた文字列を検索します。
+        ///   工作表次序 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName40 {
+        public static string DisplayName40 {
             get {
                 return ResourceManager.GetString("DisplayName40", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Function option に類似しているローカライズされた文字列を検索します。
+        ///   功能选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName41 {
+        public static string DisplayName41 {
             get {
                 return ResourceManager.GetString("DisplayName41", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Worksheet new name に類似しているローカライズされた文字列を検索します。
+        ///   工作表新名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName42 {
+        public static string DisplayName42 {
             get {
                 return ResourceManager.GetString("DisplayName42", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   VBA name に類似しているローカライズされた文字列を検索します。
+        ///   VBA名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName43 {
+        public static string DisplayName43 {
             get {
                 return ResourceManager.GetString("DisplayName43", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   return value に類似しているローカライズされた文字列を検索します。
+        ///   返回值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName44 {
+        public static string DisplayName44 {
             get {
                 return ResourceManager.GetString("DisplayName44", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   path に類似しているローカライズされた文字列を検索します。
+        ///   路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName45 {
+        public static string DisplayName45 {
             get {
                 return ResourceManager.GetString("DisplayName45", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   does it exist に類似しているローカライズされた文字列を検索します。
+        ///   是否存在 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName46 {
+        public static string DisplayName46 {
             get {
                 return ResourceManager.GetString("DisplayName46", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Local path に類似しているローカライズされた文字列を検索します。
+        ///   本地路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName47 {
+        public static string DisplayName47 {
             get {
                 return ResourceManager.GetString("DisplayName47", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Create folder に類似しているローカライズされた文字列を検索します。
+        ///   创建文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName48 {
+        public static string DisplayName48 {
             get {
                 return ResourceManager.GetString("DisplayName48", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Include subfolders に類似しているローカライズされた文字列を検索します。
+        ///   包含子文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName49 {
+        public static string DisplayName49 {
             get {
                 return ResourceManager.GetString("DisplayName49", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Error continues to execute に類似しているローカライズされた文字列を検索します。
+        ///   错误继续执行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName5 {
+        public static string DisplayName5 {
             get {
                 return ResourceManager.GetString("DisplayName5", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   cover に類似しているローカライズされた文字列を検索します。
+        ///   覆盖 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName50 {
+        public static string DisplayName50 {
             get {
                 return ResourceManager.GetString("DisplayName50", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Enumerate file に類似しているローカライズされた文字列を検索します。
+        ///   枚举文件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName51 {
+        public static string DisplayName51 {
             get {
                 return ResourceManager.GetString("DisplayName51", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   FTP path に類似しているローカライズされた文字列を検索します。
+        ///   FTP路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName52 {
+        public static string DisplayName52 {
             get {
                 return ResourceManager.GetString("DisplayName52", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   create に類似しているローカライズされた文字列を検索します。
+        ///   创建 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName53 {
+        public static string DisplayName53 {
             get {
                 return ResourceManager.GetString("DisplayName53", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Host に類似しているローカライズされた文字列を検索します。
+        ///   主机 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName54 {
+        public static string DisplayName54 {
             get {
                 return ResourceManager.GetString("DisplayName54", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   port に類似しているローカライズされた文字列を検索します。
+        ///   端口 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName55 {
+        public static string DisplayName55 {
             get {
                 return ResourceManager.GetString("DisplayName55", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   username に類似しているローカライズされた文字列を検索します。
+        ///   用户名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName56 {
+        public static string DisplayName56 {
             get {
                 return ResourceManager.GetString("DisplayName56", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   password に類似しているローカライズされた文字列を検索します。
+        ///   密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName57 {
+        public static string DisplayName57 {
             get {
                 return ResourceManager.GetString("DisplayName57", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Anonymous login に類似しているローカライズされた文字列を検索します。
+        ///   匿名登录 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName58 {
+        public static string DisplayName58 {
             get {
                 return ResourceManager.GetString("DisplayName58", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   FTPS mode に類似しているローカライズされた文字列を検索します。
+        ///   FTPS模式 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName59 {
+        public static string DisplayName59 {
             get {
                 return ResourceManager.GetString("DisplayName59", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Existing database connection に類似しているローカライズされた文字列を検索します。
+        ///   现有数据库连接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName6 {
+        public static string DisplayName6 {
             get {
                 return ResourceManager.GetString("DisplayName6", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Use SFTP に類似しているローカライズされた文字列を検索します。
+        ///   使用SFTP に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName60 {
+        public static string DisplayName60 {
             get {
                 return ResourceManager.GetString("DisplayName60", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Client certificate path に類似しているローカライズされた文字列を検索します。
+        ///   客户端证书路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName61 {
+        public static string DisplayName61 {
             get {
                 return ResourceManager.GetString("DisplayName61", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Client certificate password に類似しているローカライズされた文字列を検索します。
+        ///   客户端证书密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName62 {
+        public static string DisplayName62 {
             get {
                 return ResourceManager.GetString("DisplayName62", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Accept all certificates に類似しているローカライズされた文字列を検索します。
+        ///   接受所有证书 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName63 {
+        public static string DisplayName63 {
             get {
                 return ResourceManager.GetString("DisplayName63", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail account に類似しているローカライズされた文字列を検索します。
+        ///   邮件账户 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName64 {
+        public static string DisplayName64 {
             get {
                 return ResourceManager.GetString("DisplayName64", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Folder に類似しているローカライズされた文字列を検索します。
+        ///   文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName65 {
+        public static string DisplayName65 {
             get {
                 return ResourceManager.GetString("DisplayName65", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Secure connection に類似しているローカライズされた文字列を検索します。
+        ///   安全连接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName66 {
+        public static string DisplayName66 {
             get {
                 return ResourceManager.GetString("DisplayName66", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Retrieve the number of messages に類似しているローカライズされた文字列を検索します。
+        ///   检索消息数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName67 {
+        public static string DisplayName67 {
             get {
                 return ResourceManager.GetString("DisplayName67", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Tag message deletion に類似しているローカライズされた文字列を検索します。
+        ///   标记消息删除 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName68 {
+        public static string DisplayName68 {
             get {
                 return ResourceManager.GetString("DisplayName68", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mark as read に類似しているローカライズされた文字列を検索します。
+        ///   标为已读 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName69 {
+        public static string DisplayName69 {
             get {
                 return ResourceManager.GetString("DisplayName69", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Table Name に類似しているローカライズされた文字列を検索します。
+        ///   表名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName7 {
+        public static string DisplayName7 {
             get {
                 return ResourceManager.GetString("DisplayName7", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Retrieve only unread messages に類似しているローカライズされた文字列を検索します。
+        ///   仅检索未读消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName70 {
+        public static string DisplayName70 {
             get {
                 return ResourceManager.GetString("DisplayName70", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Retrieve all unread messages に類似しているローカライズされた文字列を検索します。
+        ///   检索所有未读消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName71 {
+        public static string DisplayName71 {
             get {
                 return ResourceManager.GetString("DisplayName71", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Subject keyword に類似しているローカライズされた文字列を検索します。
+        ///   主题关键字 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName72 {
+        public static string DisplayName72 {
             get {
                 return ResourceManager.GetString("DisplayName72", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sender keyword に類似しているローカライズされた文字列を検索します。
+        ///   发件人关键字 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName73 {
+        public static string DisplayName73 {
             get {
                 return ResourceManager.GetString("DisplayName73", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Content keyword に類似しているローカライズされた文字列を検索します。
+        ///   内容关键字 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName74 {
+        public static string DisplayName74 {
             get {
                 return ResourceManager.GetString("DisplayName74", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Message に類似しているローカライズされた文字列を検索します。
+        ///   消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName75 {
+        public static string DisplayName75 {
             get {
                 return ResourceManager.GetString("DisplayName75", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail に類似しているローカライズされた文字列を検索します。
+        ///   邮件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName76 {
+        public static string DisplayName76 {
             get {
                 return ResourceManager.GetString("DisplayName76", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Picture path list に類似しているローカライズされた文字列を検索します。
+        ///   图片路径列表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName77 {
+        public static string DisplayName77 {
             get {
                 return ResourceManager.GetString("DisplayName77", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Image resource list に類似しているローカライズされた文字列を検索します。
+        ///   图片资源列表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName78 {
+        public static string DisplayName78 {
             get {
                 return ResourceManager.GetString("DisplayName78", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Target folder に類似しているローカライズされた文字列を検索します。
+        ///   目标文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName79 {
+        public static string DisplayName79 {
             get {
                 return ResourceManager.GetString("DisplayName79", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Results of the に類似しているローカライズされた文字列を検索します。
+        ///   执行结果 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName8 {
+        public static string DisplayName8 {
             get {
                 return ResourceManager.GetString("DisplayName8", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Source folder に類似しているローカライズされた文字列を検索します。
+        ///   源文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName80 {
+        public static string DisplayName80 {
             get {
                 return ResourceManager.GetString("DisplayName80", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail message に類似しているローカライズされた文字列を検索します。
+        ///   邮件消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName81 {
+        public static string DisplayName81 {
             get {
                 return ResourceManager.GetString("DisplayName81", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Attachment list に類似しているローカライズされた文字列を検索します。
+        ///   附件列表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName82 {
+        public static string DisplayName82 {
             get {
                 return ResourceManager.GetString("DisplayName82", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Name に類似しているローカライズされた文字列を検索します。
+        ///   名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName83 {
+        public static string DisplayName83 {
             get {
                 return ResourceManager.GetString("DisplayName83", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sender に類似しているローカライズされた文字列を検索します。
+        ///   发件人 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName84 {
+        public static string DisplayName84 {
             get {
                 return ResourceManager.GetString("DisplayName84", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Cc に類似しているローカライズされた文字列を検索します。
+        ///   抄送 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName85 {
+        public static string DisplayName85 {
             get {
                 return ResourceManager.GetString("DisplayName85", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   BCC に類似しているローカライズされた文字列を検索します。
+        ///   密件抄送 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName86 {
+        public static string DisplayName86 {
             get {
                 return ResourceManager.GetString("DisplayName86", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Theme に類似しているローカライズされた文字列を検索します。
+        ///   主题 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName87 {
+        public static string DisplayName87 {
             get {
                 return ResourceManager.GetString("DisplayName87", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Text に類似しているローカライズされた文字列を検索します。
+        ///   正文 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName88 {
+        public static string DisplayName88 {
             get {
                 return ResourceManager.GetString("DisplayName88", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Priority に類似しているローカライズされた文字列を検索します。
+        ///   优先级 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName89 {
+        public static string DisplayName89 {
             get {
                 return ResourceManager.GetString("DisplayName89", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Command type に類似しているローカライズされた文字列を検索します。
+        ///   命令类型 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName9 {
+        public static string DisplayName9 {
             get {
                 return ResourceManager.GetString("DisplayName9", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   HTML format に類似しているローカライズされた文字列を検索します。
+        ///   HTML格式 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName90 {
+        public static string DisplayName90 {
             get {
                 return ResourceManager.GetString("DisplayName90", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   File に類似しているローカライズされた文字列を検索します。
+        ///   文件 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName91 {
+        public static string DisplayName91 {
             get {
                 return ResourceManager.GetString("DisplayName91", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Message body に類似しているローカライズされた文字列を検索します。
+        ///   消息体 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName92 {
+        public static string DisplayName92 {
             get {
                 return ResourceManager.GetString("DisplayName92", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Archive path (.pst) に類似しているローカライズされた文字列を検索します。
+        ///   存档路径(.pst) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName93 {
+        public static string DisplayName93 {
             get {
                 return ResourceManager.GetString("DisplayName93", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   To be archived account に類似しているローカライズされた文字列を検索します。
+        ///   待存档账户 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName94 {
+        public static string DisplayName94 {
             get {
                 return ResourceManager.GetString("DisplayName94", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail object に類似しているローカライズされた文字列を検索します。
+        ///   邮件对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName95 {
+        public static string DisplayName95 {
             get {
                 return ResourceManager.GetString("DisplayName95", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Timeout (ms) に類似しているローカライズされた文字列を検索します。
+        ///   超时时间(毫秒) に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName96 {
+        public static string DisplayName96 {
             get {
                 return ResourceManager.GetString("DisplayName96", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Get the number of messages に類似しているローカライズされた文字列を検索します。
+        ///   获取邮件个数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName97 {
+        public static string DisplayName97 {
             get {
                 return ResourceManager.GetString("DisplayName97", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Output mailing list に類似しているローカライズされた文字列を検索します。
+        ///   输出邮件列表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName98 {
+        public static string DisplayName98 {
             get {
                 return ResourceManager.GetString("DisplayName98", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail directory に類似しているローカライズされた文字列を検索します。
+        ///   邮件目录 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DisplayName99 {
+        public static string DisplayName99 {
             get {
                 return ResourceManager.GetString("DisplayName99", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Edit SQL に類似しているローカライズされた文字列を検索します。
+        ///   SQL编辑 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string EditSQL {
+        public static string EditSQL {
             get {
                 return ResourceManager.GetString("EditSQL", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   End area に類似しているローカライズされた文字列を検索します。
+        ///   结束区域 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string EndArea {
+        public static string EndArea {
             get {
                 return ResourceManager.GetString("EndArea", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Hide に類似しているローカライズされた文字列を検索します。
+        ///   打开文件路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HideText {
+        public static string FilePathToOpen {
+            get {
+                return ResourceManager.GetString("FilePathToOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   文件保存路径 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FilePathToSave {
+            get {
+                return ResourceManager.GetString("FilePathToSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   隐藏 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string HideText {
             get {
                 return ResourceManager.GetString("HideText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail folder に類似しているローカライズされた文字列を検索します。
+        ///   邮件文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string MailFolder {
+        public static string MailFolder {
             get {
                 return ResourceManager.GetString("MailFolder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Mail message に類似しているローカライズされた文字列を検索します。
+        ///   邮件消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string MailMessage {
+        public static string MailMessage {
             get {
                 return ResourceManager.GetString("MailMessage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   New database connection に類似しているローカライズされた文字列を検索します。
+        ///   新建数据库连接 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string NewDatabaseConnection {
+        public static string NewDatabaseConnection {
             get {
                 return ResourceManager.GetString("NewDatabaseConnection", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Parameter に類似しているローカライズされた文字列を検索します。
+        ///   参数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string ParameterText {
+        public static string ParameterText {
             get {
                 return ResourceManager.GetString("ParameterText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Start area に類似しているローカライズされた文字列を検索します。
+        ///   开始区域 に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string StartArea {
+        public static string StartArea {
             get {
                 return ResourceManager.GetString("StartArea", resourceCulture);
             }

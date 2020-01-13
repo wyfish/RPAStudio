@@ -61,7 +61,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI Object に類似しているローカライズされた文字列を検索します。
+        ///   UI对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category1 {
             get {
@@ -70,7 +70,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Credential option に類似しているローカライズされた文字列を検索します。
+        ///   凭证选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category10 {
             get {
@@ -79,7 +79,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Output に類似しているローカライズされた文字列を検索します。
+        ///   输出 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category2 {
             get {
@@ -88,7 +88,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Enter に類似しているローカライズされた文字列を検索します。
+        ///   输入 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category3 {
             get {
@@ -97,7 +97,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Option に類似しているローカライズされた文字列を検索します。
+        ///   选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category4 {
             get {
@@ -106,7 +106,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Fixed format option に類似しているローカライズされた文字列を検索します。
+        ///   固定格式选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category5 {
             get {
@@ -115,7 +115,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Formatting options に類似しているローカライズされた文字列を検索します。
+        ///   格式化选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category6 {
             get {
@@ -124,7 +124,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Start column に類似しているローカライズされた文字列を検索します。
+        ///   开始列 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category7 {
             get {
@@ -133,7 +133,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   End column に類似しているローカライズされた文字列を検索します。
+        ///   结束列 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category8 {
             get {
@@ -142,7 +142,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column sort に類似しているローカライズされた文字列を検索します。
+        ///   列排序 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category9 {
             get {
@@ -160,7 +160,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. に類似しているローカライズされた文字列を検索します。
+        ///   指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description1 {
             get {
@@ -169,7 +169,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the current working directory.  This field only accepts string variables.  Note: All string variables must be placed between quotes. に類似しているローカライズされた文字列を検索します。
+        ///   当前工作目录的路径。这个字段只接受字符串变量。注意:所有字符串变量必须放在引号之间。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description10 {
             get {
@@ -178,7 +178,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The text extracted from the file stored in the string variable. に類似しているローカライズされた文字列を検索します。
+        ///   从存储在字符串变量中的文件中提取的文本。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description100 {
             get {
@@ -187,7 +187,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the file to be written. に類似しているローカライズされた文字列を検索します。
+        ///   要写入的文件的路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description101 {
             get {
@@ -196,7 +196,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The text to be written to the file. に類似しているローカライズされた文字列を検索します。
+        ///   要写入文件的文本。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description102 {
             get {
@@ -205,7 +205,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the credential obtained in the system に類似しているローカライズされた文字列を検索します。
+        ///    系统中获取的凭据名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description103 {
             get {
@@ -214,7 +214,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) に類似しているローカライズされた文字列を検索します。
+        ///    指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description104 {
             get {
@@ -223,7 +223,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The secure password of the retrieved credentials に類似しているローカライズされた文字列を検索します。
+        ///    检索到的凭证的安全密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description105 {
             get {
@@ -232,7 +232,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   User name of the retrieved voucher に類似しているローカライズされた文字列を検索します。
+        ///    检索到的凭证的用户名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description106 {
             get {
@@ -241,7 +241,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised. The default value is 30000 milliseconds (30 seconds) に類似しているローカライズされた文字列を検索します。
+        ///    指定在引发错误之前等待活动运行的时间量（以毫秒为单位）,默认值为30000毫秒（30秒） に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description107 {
             get {
@@ -250,7 +250,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies whether automation should continue even if the activity raises an error に類似しているローカライズされた文字列を検索します。
+        ///    指定即使活动引发错误, 自动化是否仍应继续 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description108 {
             get {
@@ -259,7 +259,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Set the username of the credential に類似しているローカライズされた文字列を検索します。
+        ///    设置凭证的用户名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description109 {
             get {
@@ -268,7 +268,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   You can find the full path to the executabel file of the application you want to open.  Note: All strings must be placed between quotes. に類似しているローカライズされた文字列を検索します。
+        ///   可以找到要打开的应用程序的executabel文件的完整路径。注意:所有字符串都必须放在引号之间。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description11 {
             get {
@@ -277,7 +277,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Set the password for the credential に類似しているローカライズされた文字列を検索します。
+        ///    设置凭证的密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description110 {
             get {
@@ -286,7 +286,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the credential to update に類似しているローカライズされた文字列を検索します。
+        ///    要更新的凭据名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description111 {
             get {
@@ -295,7 +295,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The PowerShell command to execute. に類似しているローカライズされた文字列を検索します。
+        ///   要执行的PowerShell命令。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description112 {
             get {
@@ -304,7 +304,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   A collection of PSObjects passed to the writer of the pipeline used to execute the command.  Can be the output of another InvokePowerShell activity. に類似しているローカライズされた文字列を検索します。
+        ///   传递给用于执行命令的管道的编写器的PSObjects的集合。可以是另一个InvokePowerShell活动的输出。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description113 {
             get {
@@ -313,7 +313,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   A set of type parameters objets returned when the command is executed.  Can be used to pipe several InvokePowerShell activities. に類似しているローカライズされた文字列を検索します。
+        ///   命令执行时返回的一组类型参数objets。可以用于管道几个InvokePowerShell活动。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description114 {
             get {
@@ -322,7 +322,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Workflow file path, must be enclosed in double quotes に類似しているローカライズされた文字列を検索します。
+        ///   工作流文件路径，必须用双引号括起来 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description115 {
             get {
@@ -331,7 +331,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The data retrieved from the clipboard. に類似しているローカライズされた文字列を検索します。
+        ///   从剪贴板中检索的数据。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description12 {
             get {
@@ -340,7 +340,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The text to be copied to the clipboard. に類似しているローカライズされた文字列を検索します。
+        ///   要复制到剪贴板的文本。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description13 {
             get {
@@ -349,7 +349,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Copy files or folders に類似しているローカライズされた文字列を検索します。
+        ///   拷贝文件或文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description14 {
             get {
@@ -358,7 +358,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataColumn object to be attached to the column set of the DataTable.  If this property is set, all properties under the Options category are ignored に類似しているローカライズされた文字列を検索します。
+        ///   要附加到DataTable的列集合的DataColumn对象。如果设置了此属性，则会忽略“选项”类别下的所有属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description15 {
             get {
@@ -367,7 +367,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the new column に類似しているローカライズされた文字列を検索します。
+        ///   新列的名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description16 {
             get {
@@ -376,7 +376,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable object to add the column to に類似しているローカライズされた文字列を検索します。
+        ///   要添加列的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description17 {
             get {
@@ -385,7 +385,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specify whether the fields in the new column are allowed to be empty に類似しているローカライズされた文字列を検索します。
+        ///   指定新列中字段是否允许为空 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description18 {
             get {
@@ -394,7 +394,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies whether the value of the column is automatically incremented when a new row is added に類似しているローカライズされた文字列を検索します。
+        ///    指定在添加新行时列的值是否自动递增 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description19 {
             get {
@@ -403,7 +403,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Process name に類似しているローカライズされた文字列を検索します。
+        ///   进程名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description2 {
             get {
@@ -412,7 +412,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specify the value in each row of the new column must be unique に類似しているローカライズされた文字列を検索します。
+        ///    指定新列的每一行中的值必须是唯一的 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description20 {
             get {
@@ -421,7 +421,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specify the maximum length of the value of the new column に類似しているローカライズされた文字列を検索します。
+        ///    指定新列的值的最大长度 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description21 {
             get {
@@ -430,7 +430,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataRow object to be added to the DataTable. If this property is set, the ArrayRow property is ignored. に類似しているローカライズされた文字列を検索します。
+        ///   要添加到DataTable的DataRow对象，如果设置了此属性，则忽略ArrayRow属性。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description22 {
             get {
@@ -439,7 +439,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   An array of objects to add to the DataTable.  The type of each object should be mapped to the type of its corresponding column in the DataTable. に類似しているローカライズされた文字列を検索します。
+        ///   要添加到DataTable的对象数组。每个对象的类型应映射到DataTable中其对应列的类型。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description23 {
             get {
@@ -448,7 +448,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable object to add row data to に類似しているローカライズされた文字列を検索します。
+        ///   要添加行数据的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description24 {
             get {
@@ -457,7 +457,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   a DataTable generated from row and column information に類似しているローカライズされた文字列を検索します。
+        ///   根据行列信息生成的DataTable表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description25 {
             get {
@@ -466,7 +466,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable object to clear all data に類似しているローカライズされた文字列を検索します。
+        ///   要清除所有数据的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description26 {
             get {
@@ -475,7 +475,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable variable to filter.  This field only supports DataTable variables に類似しているローカライズされた文字列を検索します。
+        ///   要筛选的DataTable变量。该字段仅支持DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description27 {
             get {
@@ -484,7 +484,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies whether to filter the table by keeping or deleting the target row に類似しているローカライズされた文字列を検索します。
+        ///   指定是否通过保留或删除目标行来过滤表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description28 {
             get {
@@ -493,7 +493,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specify whether to filter the table by retaining or deleting the target column に類似しているローカライズされた文字列を検索します。
+        ///   指定是通过保留还是删除目标列来过滤表 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description29 {
             get {
@@ -502,7 +502,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The Text property used to find specific UI elements when performing activities に類似しているローカライズされた文字列を検索します。
+        ///   用于在执行活动时查找特定UI元素的Text属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description3 {
             get {
@@ -511,7 +511,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Filter the result DataTable に類似しているローカライズされた文字列を検索します。
+        ///   过滤结果DataTable に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description30 {
             get {
@@ -520,7 +520,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   a single-row operation of the DataTable variable に類似しているローカライズされた文字列を検索します。
+        ///   执行单行操作的DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description31 {
             get {
@@ -529,7 +529,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the source of unstructured data to be converted to a table.  This field only supports String variables. に類似しているローカライズされた文字列を検索します。
+        ///   指定要转换为表的非结构化数据的来源。该字段仅支持String变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description32 {
             get {
@@ -538,7 +538,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   If you use OCR for fetching and the Get Word Information check box is selected, this field contains IEnumerable&lt;KeyValuePair&lt;Rectangle,String&gt;&gt; variables with WordsInfo values に類似しているローカライズされた文字列を検索します。
+        ///   如果使用OCR进行抓取，并且选中了“获取单词信息”复选框，则此字段包含IEnumerable&lt;KeyValuePair&lt;Rectangle,String&gt;&gt;具有WordsInfo值的变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description33 {
             get {
@@ -547,7 +547,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the size of the column to be created in the table.  This field only supports the IEnumerable &lt;Int32&gt; variable. に類似しているローカライズされた文字列を検索します。
+        ///   指定要在表中创建的列的大小。该字段仅支持IEnumerable &lt;Int32&gt;变量。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description34 {
             get {
@@ -556,7 +556,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the character to use as the column separator.  This field only supports String variables. に類似しているローカライズされた文字列を検索します。
+        ///   指定要用作列分隔符的字符。该字段仅支持String变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description35 {
             get {
@@ -565,7 +565,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the character to be used as a newline separator.  This field only supports String variables. に類似しているローカライズされた文字列を検索します。
+        ///   指定要用作换行符分隔符的字符。该字段仅支持String变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description36 {
             get {
@@ -574,7 +574,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   When selected, the column or row type is automatically detected, whether it is String, Int32, etc. に類似しているローカライズされた文字列を検索します。
+        ///   选中后，自动检测列或行类型，无论是String，Int32等。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description37 {
             get {
@@ -583,7 +583,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   If checked, the first identified column is used as the column header に類似しているローカライズされた文字列を検索します。
+        ///   如果选中，则使用第一个标识的列作为列标题 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description38 {
             get {
@@ -592,7 +592,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   If checked, the first identified row is used as the row header に類似しているローカライズされた文字列を検索します。
+        ///   如果选中，则使用第一个标识的行作为行标题 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description39 {
             get {
@@ -601,7 +601,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   A collection of process objects representing the processes that are running in the current Windows session. に類似しているローカライズされた文字列を検索します。
+        ///   表示当前Windows会话中正在运行的进程的进程对象的集合。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description4 {
             get {
@@ -610,7 +610,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Generated DataTable variable に類似しているローカライズされた文字列を検索します。
+        ///   生成的DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description40 {
             get {
@@ -619,7 +619,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataRow object from which to retrieve the value に類似しているローカライズされた文字列を検索します。
+        ///   要从中检索值的DataRow对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description41 {
             get {
@@ -628,7 +628,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataColumn object whose value is to be retrieved from the DataRow.  If this property is set, the ColumnName and ColumnIndex properties are ignored. に類似しているローカライズされた文字列を検索します。
+        ///   要从DataRow检索其值的DataColumn对象。如果设置了此属性，则忽略ColumnName和ColumnIndex属性。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description42 {
             get {
@@ -637,7 +637,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The index of the column whose value is to be retrieved from the DataRow に類似しているローカライズされた文字列を検索します。
+        ///   要从DataRow检索其值的列的索引 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description43 {
             get {
@@ -646,7 +646,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the column whose value is to be retrieved from the DataRow.  If this property is set, the ColumnIndex property is ignored に類似しているローカライズされた文字列を検索します。
+        ///   要从DataRow检索其值的列的名称。如果设置了此属性，则忽略ColumnIndex属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description44 {
             get {
@@ -655,7 +655,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specify the column value of the DataRow に類似しているローカライズされた文字列を検索します。
+        ///   指定DataRow的列值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description45 {
             get {
@@ -664,7 +664,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The first table to use in this operation is stored in the DataTable variable.  This field only supports DataTable variables に類似しているローカライズされた文字列を検索します。
+        ///   要在此操作中使用的第一个表，存储在DataTable变量中。该字段仅支持DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description46 {
             get {
@@ -673,7 +673,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The second table to be used in this operation is stored in the DataTable variable.  This field only supports DataTable variables に類似しているローカライズされた文字列を検索します。
+        ///   要在此操作中使用的第二个表，存储在DataTable变量中。该字段仅支持DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description47 {
             get {
@@ -682,7 +682,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable variable in which to perform the lookup に類似しているローカライズされた文字列を検索します。
+        ///   要在其中执行查找的DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description48 {
             get {
@@ -691,7 +691,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The value to search for in the specified DataTable variable に類似しているローカライズされた文字列を検索します。
+        ///   要在指定DataTable变量中搜索的值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description49 {
             get {
@@ -700,7 +700,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   A process type object that describes the process to be closed. に類似しているローカライズされた文字列を検索します。
+        ///   描述要关闭的流程的流程类型对象。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description5 {
             get {
@@ -709,7 +709,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataColumn object whose value is to be retrieved from the DataRow.  Setting a variable in this property field disables the other two properties に類似しているローカライズされた文字列を検索します。
+        ///   要从DataRow检索其值的DataColumn对象。在此属性字段中设置变量会禁用其他两个属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description50 {
             get {
@@ -718,7 +718,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The index of the column whose value is to be retrieved from the DataRow.  Setting a variable in this property field disables the other two properties に類似しているローカライズされた文字列を検索します。
+        ///   要从DataRow检索其值的列的索引。在此属性字段中设置变量会禁用其他两个属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description51 {
             get {
@@ -727,7 +727,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the column whose value is to be retrieved from the DataRow.  Setting a variable in this property field disables the other two properties に類似しているローカライズされた文字列を検索します。
+        ///   要从DataRow检索其值的列的名称。在此属性字段中设置变量会禁用其他两个属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description52 {
             get {
@@ -736,7 +736,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Returns the cell found at the coordinates between this column and the value in the RowIndex property に類似しているローカライズされた文字列を検索します。
+        ///   返回在此列与RowIndex属性中的值之间的坐标处找到的单元格 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description53 {
             get {
@@ -745,7 +745,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Returns the column index of the cell found at the coordinates between this column and the value of the RowIndex property に類似しているローカライズされた文字列を検索します。
+        ///   返回在此列与RowIndex属性值之间的坐标处找到的单元格的列索引 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description54 {
             get {
@@ -754,7 +754,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Returns the column name of the cell found at the coordinates between this column and the value in the RowIndex property に類似しているローカライズされた文字列を検索します。
+        ///   返回在此列与RowIndex属性中的值之间的坐标处找到的单元格的列名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description55 {
             get {
@@ -763,7 +763,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The value found in the cell に類似しているローカライズされた文字列を検索します。
+        ///   单元格中找到的值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description56 {
             get {
@@ -772,7 +772,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Row index of the cell に類似しているローカライズされた文字列を検索します。
+        ///   单元格的Row索引 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description57 {
             get {
@@ -781,7 +781,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Merge the DataTable object of the source DataTable に類似しているローカライズされた文字列を検索します。
+        ///   合并源DataTable的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description58 {
             get {
@@ -790,7 +790,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable object to be added to the target DataTable に類似しているローカライズされた文字列を検索します。
+        ///   要添加到目标DataTable的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description59 {
             get {
@@ -799,7 +799,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the process to close. に類似しているローカライズされた文字列を検索します。
+        ///   要关闭的进程的名称。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description6 {
             get {
@@ -808,7 +808,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specify what to do when merging two DataTables に類似しているローカライズされた文字列を検索します。
+        ///   指定合并两个DataTable时要执行的操作 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description60 {
             get {
@@ -817,7 +817,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable object to write to the string に類似しているローカライズされた文字列を検索します。
+        ///   要写入字符串的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description61 {
             get {
@@ -826,7 +826,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   DataTable as a string output に類似しているローカライズされた文字列を検索します。
+        ///   DataTable作为字符串的输出 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description62 {
             get {
@@ -835,7 +835,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable object from which to remove the column に類似しているローカライズされた文字列を検索します。
+        ///   要从中删除列的DataTable对象 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description63 {
             get {
@@ -844,7 +844,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataColumn object to be removed from the column set of the DataTable.  If this property is set, the other two column index options are ignored に類似しているローカライズされた文字列を検索します。
+        ///   要从DataTable的列集合中删除的DataColumn对象。如果设置了此属性，则忽略其它两个列索引选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description64 {
             get {
@@ -853,7 +853,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The index of the column to remove from the column set of the DataTable.  If this property is set, the other two column index options are ignored に類似しているローカライズされた文字列を検索します。
+        ///   要从DataTable的列集合中删除的列的索引。如果设置了此属性，则忽略其它两个列索引选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description65 {
             get {
@@ -862,7 +862,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the column to remove from the column set of the DataTable.  If this property is set, the other two column index options are ignored に類似しているローカライズされた文字列を検索します。
+        ///   要从DataTable的列集合中删除的列的名称。如果设置了此属性，则忽略其它两个列索引选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description66 {
             get {
@@ -871,7 +871,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataRow object to delete.  Ignore row indexing option if this property is set に類似しているローカライズされた文字列を検索します。
+        ///   要删除的DataRow对象。如果设置了此属性，则忽略行索引选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description67 {
             get {
@@ -880,7 +880,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The index of the row to delete.  Ignore DataRow indexing option if this property is set に類似しているローカライズされた文字列を検索します。
+        ///   要删除的行的索引。如果设置了此属性，则忽略DataRow索引选项 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description68 {
             get {
@@ -889,7 +889,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable variable from which to remove duplicate rows に類似しているローカライズされた文字列を検索します。
+        ///   要从中删除重复行的DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description69 {
             get {
@@ -898,7 +898,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Specifies the amount of time, in milliseconds, to wait for an activity to run before throwing an error.  The default is 3000 milliseconds (3 seconds). に類似しているローカライズされた文字列を検索します。
+        ///   指定在抛出错误之前等待活动运行的时间(以毫秒为单位)。默认值为3000毫秒(3秒)。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description7 {
             get {
@@ -907,7 +907,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Outputs a DataTable with duplicate rows removed, stored in the DataTable variable.  Placing the same variable as the variable in the Input field changes the initial variable, while providing a new variable makes the initial variable unaffected. に類似しているローカライズされた文字列を検索します。
+        ///   输出已删除重复行的DataTable，存储在DataTable变量中。放置与Input字段中的变量相同的变量会更改初始变量，而提供新变量会使初始变量不受影响。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description70 {
             get {
@@ -916,7 +916,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The DataTable variable to be sorted に類似しているローカライズされた文字列を検索します。
+        ///   要排序的DataTable变量 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description71 {
             get {
@@ -925,7 +925,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The variable of the column sorted by it.  This field only supports DataColumn variables.  Setting a variable in this property field disables the other two properties に類似しているローカライズされた文字列を検索します。
+        ///   按其排序的列的变量。该字段仅支持DataColumn变量。在此属性字段中设置变量会禁用其他两个属性 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description72 {
             get {
@@ -934,7 +934,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The sorted DataTable variable.  Placing the same variable as the variable in the Input field changes the initial variable, and adding a new variable leaves the initial variable unaffected. に類似しているローカライズされた文字列を検索します。
+        ///   排序后的DataTable变量。放置与Input字段中的变量相同的变量会更改初始变量，而添加新变量会使初始变量不受影响。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description73 {
             get {
@@ -943,7 +943,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Enter UIElement に類似しているローカライズされた文字列を検索します。
+        ///   输入UIElement に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description74 {
             get {
@@ -952,7 +952,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The text of the popup window. に類似しているローカライズされた文字列を検索します。
+        ///   弹出窗口的文本。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description75 {
             get {
@@ -961,7 +961,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The title of the popup window. に類似しているローカライズされた文字列を検索します。
+        ///   弹出窗口的标题。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description76 {
             get {
@@ -970,7 +970,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Duration until the pop-up window closes automatically.  By default, pop-ups do not close. に類似しているローカライズされた文字列を検索します。
+        ///   持续时间，直到弹出窗口自动关闭。默认情况下，弹出窗口不会关闭。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description77 {
             get {
@@ -979,7 +979,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   This represents the full path or external URL of the HTML file. に類似しているローカライズされた文字列を検索します。
+        ///   这表示HTML文件的完整路径或外部URL。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description78 {
             get {
@@ -988,7 +988,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The string returned by the provided HTML page. に類似しているローカライズされた文字列を検索します。
+        ///   提供的HTML页面返回的字符串。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description79 {
             get {
@@ -997,7 +997,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Parameters that can be passed to the application at startup. に類似しているローカライズされた文字列を検索します。
+        ///   可以在启动时传递给应用程序的参数。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description8 {
             get {
@@ -1006,7 +1006,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The label of the form field. に類似しているローカライズされた文字列を検索します。
+        ///   表单字段的标签。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description80 {
             get {
@@ -1015,7 +1015,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   An array of options to choose from.  If you set it to contain only one element, a text box will appear to compose the text.  If it is set to contain 2 or 3 elements, they will appear as the radio button to choose from.  If it is set to contain more than 3 items, they will be displayed as a combo box for selection.  This field only supports string array variables. に類似しているローカライズされた文字列を検索します。
+        ///   可供选择的选项数组。如果将其设置为只包含一个元素，则会出现一个文本框来编写文本。如果将其设置为包含2或3个元素，则它们将显示为要从中选择的单选按钮。如果将其设置为包含3个以上的项，则它们将作为组合框显示以供选择。此字段只支持字符串数组变量。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description81 {
             get {
@@ -1024,7 +1024,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Enter the title of the dialog. に類似しているローカライズされた文字列を検索します。
+        ///   输入对话框的标题。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description82 {
             get {
@@ -1033,7 +1033,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The value inserted by the user in the input dialog. に類似しているローカライズされた文字列を検索します。
+        ///   用户在输入对话框中插入的值。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description83 {
             get {
@@ -1042,7 +1042,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The title of the message box dialog. に類似しているローカライズされた文字列を検索します。
+        ///   消息框对话框的标题。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description84 {
             get {
@@ -1051,7 +1051,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The text to display in the message box. に類似しているローカライズされた文字列を検索します。
+        ///   要显示在消息框中的文本。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description85 {
             get {
@@ -1060,7 +1060,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   A string representing the button pressed in the message box dialog.  It can be: Ok, Yes, No or Cancel に類似しているローカライズされた文字列を検索します。
+        ///   表示消息框对话框中按下的按钮的字符串。它可以是:Ok,Yes,No或Cancel に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description86 {
             get {
@@ -1069,7 +1069,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the file.  If the path is incomplete, create a file in the project folder. に類似しているローカライズされた文字列を検索します。
+        ///   文件的路径。如果路径不完整，则在项目文件夹中创建文件。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description87 {
             get {
@@ -1078,7 +1078,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The text to be attached to the file. に類似しているローカライズされた文字列を検索します。
+        ///   要附加到文件中的文本。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description88 {
             get {
@@ -1087,7 +1087,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the file to be copied. に類似しているローカライズされた文字列を検索します。
+        ///   要复制的文件的路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description89 {
             get {
@@ -1096,7 +1096,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   You can find the full file path of the executable for the application you want to open.  Note: All strings must be placed between quotes. に類似しているローカライズされた文字列を検索します。
+        ///   可以找到要打开的应用程序的可执行文件的完整文件路径。注意:所有字符串都必须放在引号之间。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description9 {
             get {
@@ -1105,7 +1105,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The target path of the file to be copied. に類似しているローカライズされた文字列を検索します。
+        ///   要复制文件的目标路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description90 {
             get {
@@ -1114,7 +1114,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The full path to the directory to be created. に類似しているローカライズされた文字列を検索します。
+        ///   要创建的目录的完整路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description91 {
             get {
@@ -1123,7 +1123,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The name of the file to create. に類似しているローカライズされた文字列を検索します。
+        ///   要创建的文件的名称。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description92 {
             get {
@@ -1132,7 +1132,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The full path to the file to be created. に類似しているローカライズされた文字列を検索します。
+        ///   要创建的文件的完整路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description93 {
             get {
@@ -1141,7 +1141,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the file or directory to be permanently deleted. に類似しているローカライズされた文字列を検索します。
+        ///   要永久删除的文件或目录的路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description94 {
             get {
@@ -1150,7 +1150,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the file to move. に類似しているローカライズされた文字列を検索します。
+        ///   要移动的文件的路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description95 {
             get {
@@ -1159,7 +1159,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The target path to move the file. に類似しているローカライズされた文字列を検索します。
+        ///   要移动文件的目标路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description96 {
             get {
@@ -1168,7 +1168,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The full path to check. に類似しているローカライズされた文字列を検索します。
+        ///   要检查的完整路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description97 {
             get {
@@ -1177,7 +1177,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Declare whether a document or file is found. に類似しているローカライズされた文字列を検索します。
+        ///   声明是否找到文档或文件。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description98 {
             get {
@@ -1186,7 +1186,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The path to the file to be read. に類似しているローカライズされた文字列を検索します。
+        ///   要读取的文件的路径。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description99 {
             get {
@@ -1195,7 +1195,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Window selector に類似しているローカライズされた文字列を検索します。
+        ///   窗口指示器 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName1 {
             get {
@@ -1204,7 +1204,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   position に類似しているローカライズされた文字列を検索します。
+        ///   位置 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName10 {
             get {
@@ -1213,7 +1213,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column width に類似しているローカライズされた文字列を検索します。
+        ///   列宽 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName11 {
             get {
@@ -1222,7 +1222,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column separator に類似しているローカライズされた文字列を検索します。
+        ///   列分隔符 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName12 {
             get {
@@ -1231,7 +1231,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Line separator に類似しているローカライズされた文字列を検索します。
+        ///   行分隔符 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName13 {
             get {
@@ -1240,7 +1240,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   CSV parsing に類似しているローカライズされた文字列を検索します。
+        ///   CSV解析 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName14 {
             get {
@@ -1249,7 +1249,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Type automatic detection に類似しているローカライズされた文字列を検索します。
+        ///   类型自动检测 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName15 {
             get {
@@ -1258,7 +1258,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column heading に類似しているローカライズされた文字列を検索します。
+        ///   列标题 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName16 {
             get {
@@ -1267,7 +1267,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Row header に類似しているローカライズされた文字列を検索します。
+        ///   行标题 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName17 {
             get {
@@ -1276,7 +1276,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Row に類似しているローカライズされた文字列を検索します。
+        ///   行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName18 {
             get {
@@ -1285,7 +1285,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column に類似しているローカライズされた文字列を検索します。
+        ///   列 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName19 {
             get {
@@ -1294,7 +1294,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Allowed to be empty に類似しているローカライズされた文字列を検索します。
+        ///   允许为空 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName2 {
             get {
@@ -1303,7 +1303,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column index に類似しているローカライズされた文字列を検索します。
+        ///   列索引 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName20 {
             get {
@@ -1312,7 +1312,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column name に類似しているローカライズされた文字列を検索します。
+        ///   列名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName21 {
             get {
@@ -1321,7 +1321,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   value に類似しているローカライズされた文字列を検索します。
+        ///   值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName22 {
             get {
@@ -1357,7 +1357,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Find value に類似しているローカライズされた文字列を検索します。
+        ///   查找值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName26 {
             get {
@@ -1366,7 +1366,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Cell value に類似しているローカライズされた文字列を検索します。
+        ///   单元格值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName27 {
             get {
@@ -1375,7 +1375,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Row index に類似しているローカライズされた文字列を検索します。
+        ///   行索引 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName28 {
             get {
@@ -1384,7 +1384,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   aims に類似しているローカライズされた文字列を検索します。
+        ///   目标 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName29 {
             get {
@@ -1393,7 +1393,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Auto increment に類似しているローカライズされた文字列を検索します。
+        ///   自动递增 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName3 {
             get {
@@ -1402,7 +1402,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   source に類似しているローカライズされた文字列を検索します。
+        ///   源 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName30 {
             get {
@@ -1411,7 +1411,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Merge operation に類似しているローカライズされた文字列を検索します。
+        ///   合并操作 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName31 {
             get {
@@ -1420,7 +1420,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Text に類似しているローカライズされた文字列を検索します。
+        ///   文本 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName32 {
             get {
@@ -1429,7 +1429,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Name に類似しているローカライズされた文字列を検索します。
+        ///   名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName33 {
             get {
@@ -1438,7 +1438,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Sort に類似しているローカライズされた文字列を検索します。
+        ///   排序 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName34 {
             get {
@@ -1447,7 +1447,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Date time に類似しているローカライズされた文字列を検索します。
+        ///   日期时间 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName35 {
             get {
@@ -1456,7 +1456,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Conversion type に類似しているローカライズされた文字列を検索します。
+        ///   转换类型 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName36 {
             get {
@@ -1465,7 +1465,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Time に類似しているローカライズされた文字列を検索します。
+        ///   时间 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName37 {
             get {
@@ -1474,7 +1474,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Time type に類似しているローカライズされた文字列を検索します。
+        ///   时间类型 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName38 {
             get {
@@ -1483,7 +1483,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI Element に類似しているローカライズされた文字列を検索します。
+        ///   UI元素 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName39 {
             get {
@@ -1492,7 +1492,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Unique constraint に類似しているローカライズされた文字列を検索します。
+        ///   唯一约束 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName4 {
             get {
@@ -1501,7 +1501,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Use coordinate points に類似しているローカライズされた文字列を検索します。
+        ///   使用坐标点 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName40 {
             get {
@@ -1510,7 +1510,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   System folder に類似しているローカライズされた文字列を検索します。
+        ///   系统文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName41 {
             get {
@@ -1519,7 +1519,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Folder path に類似しているローカライズされた文字列を検索します。
+        ///   文件夹路径 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName42 {
             get {
@@ -1528,7 +1528,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Variable name に類似しているローカライズされた文字列を検索します。
+        ///   变量名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName43 {
             get {
@@ -1537,7 +1537,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Variable に類似しているローカライズされた文字列を検索します。
+        ///   变量值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName44 {
             get {
@@ -1546,7 +1546,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Password に類似しているローカライズされた文字列を検索します。
+        ///   密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName45 {
             get {
@@ -1555,7 +1555,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Result に類似しているローカライズされた文字列を検索します。
+        ///   结果 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName46 {
             get {
@@ -1564,7 +1564,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Beep type に類似しているローカライズされた文字列を検索します。
+        ///   提示音类型 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName47 {
             get {
@@ -1573,7 +1573,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Credential name に類似しているローカライズされた文字列を検索します。
+        ///   凭据名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName48 {
             get {
@@ -1582,7 +1582,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Timeout (ms) に類似しているローカライズされた文字列を検索します。
+        ///   超时时间(毫秒) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName49 {
             get {
@@ -1591,7 +1591,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   The maximum length に類似しているローカライズされた文字列を検索します。
+        ///   最大长度 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName5 {
             get {
@@ -1600,7 +1600,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   UserName に類似しているローカライズされた文字列を検索します。
+        ///   用户名 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName50 {
             get {
@@ -1609,7 +1609,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Error continues to execute に類似しているローカライズされた文字列を検索します。
+        ///   错误继续执行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName51 {
             get {
@@ -1618,7 +1618,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Credential name に類似しているローカライズされた文字列を検索します。
+        ///   凭证名称 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName52 {
             get {
@@ -1627,7 +1627,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Defaults に類似しているローカライズされた文字列を検索します。
+        ///   默认值 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName6 {
             get {
@@ -1636,7 +1636,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Line filtering mode に類似しているローカライズされた文字列を検索します。
+        ///   行过滤模式 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName7 {
             get {
@@ -1645,7 +1645,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Column filtering mode に類似しているローカライズされた文字列を検索します。
+        ///   列过滤模式 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName8 {
             get {
@@ -1654,7 +1654,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   index に類似しているローカライズされた文字列を検索します。
+        ///   索引 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName9 {
             get {
@@ -1672,7 +1672,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Text must be enclosed in double quotes に類似しているローカライズされた文字列を検索します。
+        ///   文本必须用双引号括起来 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DoubleQuotesHintText {
             get {
@@ -1681,7 +1681,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Drag and drop controls here に類似しているローカライズされた文字列を検索します。
+        ///   拖放控件到这里 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DragControlHere {
             get {
@@ -1699,7 +1699,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Edit code に類似しているローカライズされた文字列を検索します。
+        ///   编辑代码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EditCode {
             get {
@@ -1708,7 +1708,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Edit parameter に類似しているローカライズされた文字列を検索します。
+        ///   编辑参数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EditParameter {
             get {
@@ -1717,7 +1717,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Enter password に類似しているローカライズされた文字列を検索します。
+        ///   输入密码 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EnterPassword {
             get {
@@ -1726,7 +1726,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Guide に類似しているローカライズされた文字列を検索します。
+        ///   向导 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string GuideText {
             get {
@@ -1735,7 +1735,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Import parameters に類似しているローカライズされた文字列を検索します。
+        ///   导入参数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ImportParameters {
             get {
@@ -1753,7 +1753,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Level に類似しているローカライズされた文字列を検索します。
+        ///   级别 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string LevelText {
             get {
@@ -1762,7 +1762,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   News に類似しているローカライズされた文字列を検索します。
+        ///   消息 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string NewsText {
             get {
@@ -1771,7 +1771,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Reselect に類似しているローカライズされた文字列を検索します。
+        ///   重新选取 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReselectIt {
             get {
@@ -1780,7 +1780,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Special folder に類似しているローカライズされた文字列を検索します。
+        ///   特殊文件夹 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SpecialFolder {
             get {
@@ -1789,7 +1789,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Indicate on screen に類似しているローカライズされた文字列を検索します。
+        ///   点击屏幕 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TapScreen {
             get {
@@ -1798,7 +1798,7 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
-        ///   Workflow file path, must be enclosed in double quotes に類似しているローカライズされた文字列を検索します。
+        ///   工作流文件路径，必须用双引号括起来 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string WorkflowFilepathTip {
             get {

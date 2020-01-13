@@ -11,6 +11,7 @@ using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using Xceed.Wpf.AvalonDock.Layout;
 using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -79,7 +80,7 @@ namespace RPAStudio.ViewModel
             m_layoutAnchorable = new LayoutAnchorable();
             m_layoutAnchorable.CanClose = false;
             m_layoutAnchorable.CanHide = false;
-            m_layoutAnchorable.Title = "变量跟踪";
+            m_layoutAnchorable.Title = ResxIF.GetString("VariableTracking"); // 变量跟踪
             m_layoutAnchorable.IsActive = true;
             m_layoutAnchorable.Content = new LocalsContent();
             m_view.m_leftLayoutAnchorablePane.Children.Add(m_layoutAnchorable);

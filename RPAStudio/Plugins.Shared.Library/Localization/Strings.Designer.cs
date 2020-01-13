@@ -61,7 +61,7 @@ namespace Plugins.Shared.Library.Localization {
         }
         
         /// <summary>
-        ///   DubleClick to view に類似しているローカライズされた文字列を検索します。
+        ///   DubleClick To View に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DubleClickToViewText {
             get {

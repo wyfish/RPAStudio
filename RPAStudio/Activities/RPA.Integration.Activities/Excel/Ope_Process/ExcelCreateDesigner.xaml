@@ -5,7 +5,8 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
-    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     Loaded="IcoPath_Loaded"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     >
@@ -34,7 +35,7 @@
         <StackPanel >
             <StackPanel Orientation="Horizontal" Height="25">
                 <sapv:ExpressionTextBox
-                    HintText="打开文件路径"
+                    HintText="{x:Static lclz:Resources.FilePathToOpen}"
                     x:Name="expressTextBox"
                     Expression="{Binding ModelItem.PathUrl, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay}"
                     ExpressionType="{x:Type sys:String}"
@@ -51,7 +52,7 @@
                         x:Name="expressTextBox1"
                         Expression="{Binding ModelItem.SavePathUrl, ConverterParameter=In, Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay}"
                         ExpressionType="{x:Type sys:String}"
-                        HintText="文件保存路径"
+                        HintText="{x:Static lclz:Resources.FilePathToSave}"
                         OwnerActivity="{Binding ModelItem}"
                         Grid.Row="0"
                         VerticalAlignment="Center"
@@ -61,8 +62,8 @@
             </StackPanel>
             <Grid Height="10"></Grid>
             <Grid>
-                <RadioButton Visibility="Hidden"  IsChecked="{Binding ModelItem.Save, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="65" Content="保存"/>
-                <RadioButton Visibility="Hidden" IsChecked="{Binding ModelItem.SaveAs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="58" Content="另存为"/>
+                <RadioButton Visibility="Hidden"  IsChecked="{Binding ModelItem.Save, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="65" Content="{x:Static lclz:Resources.DisplayName23}"/>
+                <RadioButton Visibility="Hidden" IsChecked="{Binding ModelItem.SaveAs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="58" Content="{x:Static lclz:Resources.DisplayName24}"/>
                 <sap:WorkflowItemPresenter
                         HintText="Drop Activity Here"
                         Item="{Binding ModelItem.Body.Handler, Mode=TwoWay}" />

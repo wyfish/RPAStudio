@@ -24,7 +24,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("行号/列号")]
+        [Localize.LocalizedDisplayName("DisplayName173")] //行号/列号 //Line / column number //行/列番号
         [Browsable(true)]
         public InArgument<Int32> RowColNum
         {
@@ -40,7 +40,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("行/列")]
+        [Localize.LocalizedDisplayName("DisplayName174")] //行/列 //Row / Column //行/列
         [Browsable(true)]
         public InsertType CurrInsertType
         {
@@ -49,7 +49,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
-        [Description("为空代表当前活动工作表")]
+        [Localize.LocalizedDescription("Description77")] //为空代表当前活动工作表 //Blank represents the currently active worksheet //空白は現在アクティブなワークシートを表します
         [Browsable(true)]
         public InArgument<string> SheetName
         {
@@ -58,7 +58,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("行/列数据")]
+        [Localize.LocalizedDisplayName("DisplayName175")] //行/列数据 //Row / Column data //行/列データ
         [Browsable(true)]
         public InArgument<object> RolColData
         {

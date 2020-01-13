@@ -349,7 +349,7 @@
     <value>パス</value>
   </data>
   <data name="DisplayName46" xml:space="preserve">
-    <value>存在するかどうか</value>
+    <value>存在確認</value>
   </data>
   <data name="DisplayName47" xml:space="preserve">
     <value>ローカルパス</value>
@@ -370,7 +370,7 @@
     <value>FTPパス</value>
   </data>
   <data name="DisplayName53" xml:space="preserve">
-    <value>作成する</value>
+    <value>作成</value>
   </data>
   <data name="Category13" xml:space="preserve">
     <value>サーバー</value>
@@ -379,7 +379,7 @@
     <value>ホスト</value>
   </data>
   <data name="DisplayName55" xml:space="preserve">
-    <value>港</value>
+    <value>ポート</value>
   </data>
   <data name="Category14" xml:space="preserve">
     <value>クレデンシャル</value>
@@ -496,7 +496,7 @@
     <value>取得したメッセージをMailMessageオブジェクトのコレクションとして使用します</value>
   </data>
   <data name="DisplayName76" xml:space="preserve">
-    <value>郵便</value>
+    <value>メール</value>
   </data>
   <data name="Description35" xml:space="preserve">
     <value>画像の抽出に使用されるメッセージ。このフィールドはMimeMessage変数のみをサポートします。</value>
@@ -571,7 +571,7 @@
     <value>送信者のメールアドレス</value>
   </data>
   <data name="Category19" xml:space="preserve">
-    <value>受取人</value>
+    <value>受信者</value>
   </data>
   <data name="Description50" xml:space="preserve">
     <value>電子メールの主要な受信者</value>
@@ -592,13 +592,13 @@
     <value>メール</value>
   </data>
   <data name="DisplayName87" xml:space="preserve">
-    <value>テーマ</value>
+    <value>件名</value>
   </data>
   <data name="Description53" xml:space="preserve">
     <value>メールの件名</value>
   </data>
   <data name="DisplayName88" xml:space="preserve">
-    <value>本体</value>
+    <value>本文</value>
   </data>
   <data name="Description54" xml:space="preserve">
     <value>メールの本文</value>
@@ -884,5 +884,158 @@
   </data>
   <data name="StartArea" xml:space="preserve">
     <value>開始エリア</value>
+  </data>
+  <data name="Category30" xml:space="preserve">
+    <value>セルオプション</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>A1などのセル名を表すVB式</value>
+  </data>
+  <data name="DisplayName141" xml:space="preserve">
+    <value>セル名</value>
+  </data>
+  <data name="Category31" xml:space="preserve">
+    <value>シートオプション</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>空白は現在アクティブなワークシートを表します</value>
+  </data>
+  <data name="Category32" xml:space="preserve">
+    <value>開始セル</value>
+  </data>
+  <data name="Category33" xml:space="preserve">
+    <value>終了セル</value>
+  </data>
+  <data name="DisplayName142" xml:space="preserve">
+    <value>マージ/分割</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>B2などのセル名を表すVB式</value>
+  </data>
+  <data name="DisplayName143" xml:space="preserve">
+    <value>宛先ファイルのパス</value>
+  </data>
+  <data name="DisplayName144" xml:space="preserve">
+    <value>ターゲットセル行</value>
+  </data>
+  <data name="DisplayName145" xml:space="preserve">
+    <value>ターゲットセル列</value>
+  </data>
+  <data name="DisplayName146" xml:space="preserve">
+    <value>ターゲットセル名</value>
+  </data>
+  <data name="DisplayName147" xml:space="preserve">
+    <value>対象シート</value>
+  </data>
+  <data name="DisplayName148" xml:space="preserve">
+    <value>開始セル行</value>
+  </data>
+  <data name="DisplayName149" xml:space="preserve">
+    <value>開始セル列</value>
+  </data>
+  <data name="DisplayName150" xml:space="preserve">
+    <value>開始セル名</value>
+  </data>
+  <data name="DisplayName151" xml:space="preserve">
+    <value>終了セル行</value>
+  </data>
+  <data name="DisplayName152" xml:space="preserve">
+    <value>終了セル列</value>
+  </data>
+  <data name="DisplayName153" xml:space="preserve">
+    <value>終了セル名</value>
+  </data>
+  <data name="Category34" xml:space="preserve">
+    <value>セルエンド</value>
+  </data>
+  <data name="DisplayName154" xml:space="preserve">
+    <value>ヘッダー</value>
+  </data>
+  <data name="DisplayName155" xml:space="preserve">
+    <value>すべてのワークシート</value>
+  </data>
+  <data name="Category35" xml:space="preserve">
+    <value>地域オプション</value>
+  </data>
+  <data name="DisplayName156" xml:space="preserve">
+    <value>すべてのエリア</value>
+  </data>
+  <data name="DisplayName157" xml:space="preserve">
+    <value>セル開始行</value>
+  </data>
+  <data name="DisplayName158" xml:space="preserve">
+    <value>セル開始列</value>
+  </data>
+  <data name="DisplayName159" xml:space="preserve">
+    <value>セル開始名</value>
+  </data>
+  <data name="DisplayName160" xml:space="preserve">
+    <value>セル終了行</value>
+  </data>
+  <data name="DisplayName161" xml:space="preserve">
+    <value>セル終了列</value>
+  </data>
+  <data name="DisplayName162" xml:space="preserve">
+    <value>セル終了名</value>
+  </data>
+  <data name="Category36" xml:space="preserve">
+    <value>交換オプション</value>
+  </data>
+  <data name="DisplayName163" xml:space="preserve">
+    <value>コンテンツを見つける</value>
+  </data>
+  <data name="DisplayName164" xml:space="preserve">
+    <value>コンテンツを置き換える</value>
+  </data>
+  <data name="DisplayName165" xml:space="preserve">
+    <value>大文字と小文字を区別</value>
+  </data>
+  <data name="DisplayName166" xml:space="preserve">
+    <value>セル一致</value>
+  </data>
+  <data name="DisplayName167" xml:space="preserve">
+    <value>ハーフフルアングルを区別する</value>
+  </data>
+  <data name="Category37" xml:space="preserve">
+    <value>行と列のオプション</value>
+  </data>
+  <data name="DisplayName168" xml:space="preserve">
+    <value>有効なデータ</value>
+  </data>
+  <data name="DisplayName169" xml:space="preserve">
+    <value>アクティブエリア</value>
+  </data>
+  <data name="DisplayName170" xml:space="preserve">
+    <value>A1セルの列/行のカットオフ</value>
+  </data>
+  <data name="DisplayName171" xml:space="preserve">
+    <value>行数</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>ワークシート内の有効な行の数</value>
+  </data>
+  <data name="DisplayName172" xml:space="preserve">
+    <value>列数</value>
+  </data>
+  <data name="DisplayName173" xml:space="preserve">
+    <value>行/列番号</value>
+  </data>
+  <data name="DisplayName174" xml:space="preserve">
+    <value>行/列</value>
+  </data>
+  <data name="DisplayName175" xml:space="preserve">
+    <value>行/列データ</value>
+  </data>
+  <data name="DisplayName176" xml:space="preserve">
+    <value>ワークシート名のリスト</value>
+  </data>
+  <data name="Category38" xml:space="preserve">
+    <value>[開く] / [新しいドキュメント]オプション</value>
+  </data>
+  <data name="FilePathToOpen" xml:space="preserve">
+    <value>開くファイルのパス</value>
+  </data>
+  <data name="FilePathToSave" xml:space="preserve">
+    <value>ファイル保存パス</value>
   </data>
 </root>

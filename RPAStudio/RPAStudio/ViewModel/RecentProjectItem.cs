@@ -146,7 +146,8 @@ namespace RPAStudio.ViewModel
                         else
                         {
                             //不存在则提示用户移除条目
-                            var ret = MessageBox.Show(App.Current.MainWindow, string.Format("无法打开项目配置文件\"{0}\"，是否从最近项目列表中移除该条目？", ProjectFilePath), ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                            // 无法打开项目配置文件\"{0}\"，是否从最近项目列表中移除该条目？
+                            var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("MB_CannotOpenProjectConfigFile"), ProjectFilePath), ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
                             if (ret == MessageBoxResult.OK)
                             {
                                 removeMyself();

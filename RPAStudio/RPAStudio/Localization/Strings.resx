@@ -142,7 +142,7 @@
     <value>CodeSnippet</value>
   </data>
   <data name="ConfirmText" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Ask</value>
   </data>
   <data name="CopyCtrlC" xml:space="preserve">
     <value>Copy(Ctrl+C)</value>
@@ -347,5 +347,164 @@
   </data>
   <data name="WorkflowVerificationOK" xml:space="preserve">
     <value>Workflow verification is correct</value>
+  </data>
+  <data name="ByText" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="DefaultSourceAddress" xml:space="preserve">
+    <value>Default packet source address</value>
+  </data>
+  <data name="UserDefinedSourceAddress" xml:space="preserve">
+    <value>User-defined packet source address</value>
+  </data>
+  <data name="NewPackageSource" xml:space="preserve">
+    <value>New package source</value>
+  </data>
+  <data name="DeletePackageSource" xml:space="preserve">
+    <value>Delete package source</value>
+  </data>
+  <data name="MoveUpPackageSource" xml:space="preserve">
+    <value>Move up the packet source</value>
+  </data>
+  <data name="MoveDnPackageSource" xml:space="preserve">
+    <value>Move down the packet source</value>
+  </data>
+  <data name="PackageSourceName" xml:space="preserve">
+    <value>Package source name</value>
+  </data>
+  <data name="PacketSourceAddress" xml:space="preserve">
+    <value>Packet source address</value>
+  </data>
+  <data name="ChooseLocalSourcePath" xml:space="preserve">
+    <value>Choose a local source path</value>
+  </data>
+  <data name="OperatingText" xml:space="preserve">
+    <value>Operating......</value>
+  </data>
+  <data name="EnterPackageSourceNameHere" xml:space="preserve">
+    <value>Enter package source name here</value>
+  </data>
+  <data name="EnterPacketSourceAddressHere" xml:space="preserve">
+    <value>Enter the packet source address here</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddToolTip" xml:space="preserve">
+    <value>Store the packet source name and address information set by the user into the user-defined packet source address list</value>
+  </data>
+  <data name="UpdateToolTip" xml:space="preserve">
+    <value>Update the package source name and address information set by the user</value>
+  </data>
+  <data name="AcceptLicenseConfirmation" xml:space="preserve">
+    <value>The package requires you to accept its license terms before installation. Are you sure?</value>
+  </data>
+  <data name="DescriptionWithColon" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="VersionWithColon" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="AuthorWithColon" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="LicenseWithColon" xml:space="preserve">
+    <value>License:</value>
+  </data>
+  <data name="ViewLicenseInformation" xml:space="preserve">
+    <value>View license information</value>
+  </data>
+  <data name="ReleaseDateWithColon" xml:space="preserve">
+    <value>Release date:</value>
+  </data>
+  <data name="ProjectAddress" xml:space="preserve">
+    <value>Project Address:</value>
+  </data>
+  <data name="ViewProjectInformation" xml:space="preserve">
+    <value>View project information</value>
+  </data>
+  <data name="TagWithColon" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="DependenciesWithColon" xml:space="preserve">
+    <value>Dependencies:</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>Name is required</value>
+  </data>
+  <data name="NameHasIlligalCharacter" xml:space="preserve">
+    <value>Name must not have illegal characters</value>
+  </data>
+  <data name="DeleteDirectoryConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete the directory \"{0} \" and all its contents?</value>
+  </data>
+  <data name="DeleteFileConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete the file \"{0} \"?</value>
+  </data>
+  <data name="PronptText" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="NoUnusedScreenshotsFound" xml:space="preserve">
+    <value>Cannot find unused screenshots that need to be cleaned</value>
+  </data>
+  <data name="UnusedScreenshotsSuccessfullyRemoved" xml:space="preserve">
+    <value>{0} unused screenshots have been successfully removed</value>
+  </data>
+  <data name="MB_CannotOpenProjectConfigFile" xml:space="preserve">
+    <value>Could not open project configuration file \"{0} \", remove this entry from the recent project list?</value>
+  </data>
+  <data name="SameNameDirectoryAlreadyExists" xml:space="preserve">
+    <value>A directory with the same name already exists</value>
+  </data>
+  <data name="SameNameFileAlreadyExists" xml:space="preserve">
+    <value>A file with the same name already exists</value>
+  </data>
+  <data name="SelectDirectoryToAddCodeSnippet" xml:space="preserve">
+    <value>Please select a directory to add to the code snippet</value>
+  </data>
+  <data name="MessageDetails" xml:space="preserve">
+    <value>Message details</value>
+  </data>
+  <data name="TheFileAlreadyExists" xml:space="preserve">
+    <value>The specified file already exists</value>
+  </data>
+  <data name="PathCannotBeEmpty" xml:space="preserve">
+    <value>Path cannot be empty</value>
+  </data>
+  <data name="ThePathDoesNotExist" xml:space="preserve">
+    <value>The specified path does not exist</value>
+  </data>
+  <data name="NotInSubDirectory" xml:space="preserve">
+    <value>The specified location must be in the directory where the project is located or in its subdirectory</value>
+  </data>
+  <data name="AttributeValue" xml:space="preserve">
+    <value>Attribute value</value>
+  </data>
+  <data name="MB_CloseWhileDebugging" xml:space="preserve">
+    <value>The current document is being debugged. Are you sure you want to terminate debugging and close \"{0} \"?</value>
+  </data>
+  <data name="VariableTracking" xml:space="preserve">
+    <value>Variable Tracking</value>
+  </data>
+  <data name="NameFieldCheckSucceeded" xml:space="preserve">
+    <value>Name field check succeeded</value>
+  </data>
+  <data name="PathFieldCheckSucceeded" xml:space="preserve">
+    <value>Path field check succeeded</value>
+  </data>
+  <data name="SameNameProjectAlreadyExists" xml:space="preserve">
+    <value>A project with the same name already exists</value>
+  </data>
+  <data name="SelectPathToCreateNewProject" xml:space="preserve">
+    <value>Please select a location to create a new project</value>
+  </data>
+  <data name="MB_FailedToCreateProjectDirectory" xml:space="preserve">
+    <value>Failed to create project directory, please check</value>
+  </data>
+  <data name="NotSupportBelowV2" xml:space="preserve">
+    <value>The current program no longer supports older versions of projects below V2.0!</value>
+  </data>
+  <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
+    <value>The software failed the authorization test, please register the product!</value>
   </data>
 </root>
