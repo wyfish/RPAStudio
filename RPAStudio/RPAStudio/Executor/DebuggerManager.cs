@@ -5,19 +5,20 @@ using System.Activities.Presentation;
 using System.Activities.Tracking;
 using System.Activities.Validation;
 using System.Activities.XamlIntegration;
-using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Threading;
 using System.Activities.Presentation.Services;
 using System.Activities.Presentation.Debug;
-using System.Reflection;
-using GalaSoft.MvvmLight.Messaging;
-using RPAStudio.ViewModel;
 using System.Activities.Presentation.Model;
 using System.Activities.Statements;
-using RPAStudio.Librarys;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Windows;
+using System.Windows.Threading;
+using GalaSoft.MvvmLight.Messaging;
 using Plugins.Shared.Library.Extensions;
 using Plugins.Shared.Library;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
+using RPAStudio.ViewModel;
 
 namespace RPAStudio.Executor
 {
@@ -299,7 +300,7 @@ namespace RPAStudio.Executor
             }
             else
             {
-                MessageBox.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -352,7 +353,7 @@ namespace RPAStudio.Executor
                 }
                 catch (Exception )
                 {
-                    MessageBox.Show(App.Current.MainWindow, "停止调试发生异常！", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(App.Current.MainWindow, "停止调试发生异常！", ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }

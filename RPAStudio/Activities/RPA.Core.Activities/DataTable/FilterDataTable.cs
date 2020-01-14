@@ -49,25 +49,25 @@ namespace RPA.Core.Activities.DataTableActivity
 
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [DisplayName("DataTable")]
-        [Description("要筛选的DataTable变量。该字段仅支持DataTable变量")]
+        [Localize.LocalizedDescription("Description27")] //要筛选的DataTable变量。该字段仅支持DataTable变量 //The DataTable variable to filter.  This field only supports DataTable variables //フィルタリングするDataTable変数。 このフィールドはDataTable変数のみをサポートします
         public InArgument<DataTable> DataTable { get; set; }
 
-        [Category("选项")]
-        [DisplayName("行过滤模式")]
-        [Description("指定是否通过保留或删除目标行来过滤表")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName7")] //行过滤模式 //Line filtering mode //ラインフィルタリングモード
+        [Localize.LocalizedDescription("Description28")] //指定是否通过保留或删除目标行来过滤表 //Specifies whether to filter the table by keeping or deleting the target row //ターゲット行を保持するか削除することによってテーブルをフィルターするかどうかを指定します
         public SelectMode FilterRowsMo​​de { get; set; }
 
-        [Category("选项")]
-        [DisplayName("列过滤模式")]
-        [Description("指定是通过保留还是删除目标列来过滤表")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName8")] //列过滤模式 //Column filtering mode //列フィルタリングモード
+        [Localize.LocalizedDescription("Description29")] //指定是通过保留还是删除目标列来过滤表 //Specify whether to filter the table by retaining or deleting the target column //ターゲット列を保持または削除して、テーブルをフィルタリングするかどうかを指定します
         public SelectMode SelectColumnsMode { get; set; }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [DisplayName("DataTable")]
-        [Description("过滤结果DataTable")]
+        [Localize.LocalizedDescription("Description30")] //过滤结果DataTable //Filter the result DataTable //結果のDataTableをフィルター処理する
         public OutArgument<DataTable> OutDataTable { get; set; }
 
 

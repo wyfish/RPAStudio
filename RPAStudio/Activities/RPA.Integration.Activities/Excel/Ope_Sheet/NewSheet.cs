@@ -18,9 +18,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/newsheet.png"; } }
 
         InArgument<string> _SheetName;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public InArgument<string> SheetName

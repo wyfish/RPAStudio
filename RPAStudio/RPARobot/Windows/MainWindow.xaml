@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPARobot.Windows"
+        xmlns:localization="clr-namespace:RPARobot.Localization"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:controls="clr-namespace:HighlightableTextBlock;assembly=HighlightableTextBlock"
@@ -12,7 +13,7 @@
         mc:Ignorable="d"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         MinWidth="300" MinHeight="400"
-        Title="RPA机器人" Height="600" Width="800" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+        Title="{x:Static localization:Strings.RPARobotTitle}" Height="600" Width="800" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -28,6 +29,10 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="32"/>
             <RowDefinition Height="25"/>
@@ -36,28 +41,28 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <ToolBar>
-                <Button ToolTip="刷新" Command="{Binding RefreshCommand}">
+                <Button x:Uid="Refresh" ToolTip="刷新" Command="{Binding RefreshCommand}">
                     <Image Source="/Resources/Image/Main/Refresh.png" />
                 </Button>
-                <Button ToolTip="用户设置" Command="{Binding UserPreferencesCommand}">
+                <Button x:Uid="UserSettings" ToolTip="用户设置" Command="{Binding UserPreferencesCommand}">
                     <Image Source="/Resources/Image/Main/settings.png" />
                 </Button>
-                <Button ToolTip="浏览日志" Command="{Binding ViewLogsCommand}">
+                <Button x:Uid="BrowseLogs" ToolTip="浏览日志" Command="{Binding ViewLogsCommand}">
                     <Image Source="/Resources/Image/Main/logs.png" />
                 </Button>
                 <Separator />
-                <Button ToolTip="注册产品" Command="{Binding RegisterProductCommand}">
+                <Button x:Uid="RegisterYourProduct" ToolTip="注册产品" Command="{Binding RegisterProductCommand}">
                     <Image Source="/Resources/Image/Main/register.png" />
                 </Button>
             </ToolBar>
         </Grid>
-        <Grid Grid.Row="1" Focusable="True" >
-            <uc:SearchTextBoxControl HintText="搜索" SearchText="{Binding SearchText}" />
+        <Grid Grid.Row="1" Focusable="True" Grid.ColumnSpan="2" >
+            <uc:SearchTextBoxControl x:Uid="Search" HintText="搜索" SearchText="{Binding SearchText}" />
         </Grid>
 
-        <Grid Grid.Row="2" Visibility="{Binding IsWorkflowRunning,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
+        <Grid Grid.Row="2" Visibility="{Binding IsWorkflowRunning,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" Grid.ColumnSpan="2" Margin="0,0,0,25" Grid.RowSpan="2">
             <Grid Height="40" Background="#e0ebf6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -76,11 +81,11 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Row="3" Background="White">
-            <TextBlock Text="可用流程列表" FontSize="15" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" />
+        <Grid Grid.Row="3" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="{x:Static localization:Strings.AvailableProcessesListText}" FontSize="15" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" />
         </Grid>
 
-        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
+        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" Grid.ColumnSpan="2">
             <ListBox ItemsSource="{Binding PackageItems}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionMode="Single" ScrollViewer.CanContentScroll="False" >
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
@@ -137,7 +142,7 @@
                                         <TextBlock Foreground="#c3c3c3" IsHitTestVisible="False"  controls:HighlightableTextBlock.HightlightText="{Binding SearchText}" controls:HighlightableTextBlock.HighlightBrush="Transparent" controls:HighlightableTextBlock.HighlightTextBrush="#ff9052" Text="{Binding Name}" VerticalAlignment="Center" />
                                     </Grid>
                                 </Grid>
-                                
+
                                 <Border BorderBrush="#e8e8e8" BorderThickness="0,0,0,1" VerticalAlignment="Bottom"/>
                             </Grid>
                         </ContentControl>
@@ -145,12 +150,12 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
-        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-            <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060">搜索结果为空</TextBlock>
+        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}" Grid.ColumnSpan="2">
+            <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060" Text="{x:Static localization:Strings.SearchResultEmptyText}"/>
         </Grid>
 
 
-        <Grid Grid.Row="5" Background="#eeeeee">
+        <Grid Grid.Row="5" Background="#eeeeee" Grid.ColumnSpan="2">
 
         </Grid>
     </Grid>

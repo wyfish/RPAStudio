@@ -10,8 +10,8 @@ namespace RPA.Integration.Activities.WordPlugins
     public sealed class CursorMove : AsyncCodeActivity
     {
         InArgument<Int32> _MovePos = 1;
-        [Category("选项")]
-        [DisplayName("游标移动距离")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName110")] //游标移动距离 //Cursor moving distance //カーソル移動距離
         [Browsable(true)]
         public InArgument<Int32> MovePos
         {
@@ -25,37 +25,37 @@ namespace RPA.Integration.Activities.WordPlugins
             }
         }
 
-        [Category("选项")]
-        [DisplayName("是否选中")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName111")] //是否选中 //Whether to select //選択するかどうか
         [Browsable(true)]
         public bool IsSelect
         {
             get;set;
         }
 
-        [Category("方向")]
-        [DisplayName("左")]
+        [Localize.LocalizedCategory("Category23")] //方向 //Direction //方向
+        [Localize.LocalizedDisplayName("DisplayName112")] //左 //Left //左
         [Browsable(true)]
         public bool Left
         {
             get;set;
         }
-        [Category("方向")]
-        [DisplayName("右")]
+        [Localize.LocalizedCategory("Category23")] //方向 //Direction //方向
+        [Localize.LocalizedDisplayName("DisplayName113")] //右 //Right //右
         [Browsable(true)]
         public bool Right
         {
             get; set;
         }
-        [Category("方向")]
-        [DisplayName("上")]
+        [Localize.LocalizedCategory("Category23")] //方向 //Direction //方向
+        [Localize.LocalizedDisplayName("DisplayName114")] //上 //Up //上
         [Browsable(true)]
         public bool Up
         {
             get; set;
         }
-        [Category("方向")]
-        [DisplayName("下")]
+        [Localize.LocalizedCategory("Category23")] //方向 //Direction //方向
+        [Localize.LocalizedDisplayName("DisplayName115")] //下 //Down //下
         [Browsable(true)]
         public bool Down
         {

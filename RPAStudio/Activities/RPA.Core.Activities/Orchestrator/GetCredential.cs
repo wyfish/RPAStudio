@@ -23,41 +23,41 @@ namespace RPA.Core.Activities.OrchestratorActivity
         public string icoPath { get { return "pack://application:,,,/RPA.Core.Activities;Component/Resources/Orchestrator/Credential.png"; } }
 
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("凭据名称")]
+        [Localize.LocalizedDisplayName("DisplayName48")] //凭据名称 //Credential name //資格情報名
         [Browsable(true)]
-        [Description(" 系统中获取的凭据名称")]
+        [Localize.LocalizedDescription("Description103")] // 系统中获取的凭据名称 //The name of the credential obtained in the system //システムで取得した資格情報の名前
         public InArgument<string> CredentialName
         {
             get;
             set;
         }
 
-        [Category("选项")]
-        [DisplayName("超时时间(毫秒)")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName49")] //超时时间(毫秒) //Timeout (ms) //タイムアウト（ミリ秒）
         [Browsable(true)]
-        [Description(" 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedDescription("Description104")] // 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です
         public InArgument<Int32> TimeoutMS
         {
             get;
             set;
         }
 
-        [Category("输出")]
-        [DisplayName("密码")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName45")] //密码 //password //パスワード
         [Browsable(true)]
-        [Description(" 检索到的凭证的安全密码")]
+        [Localize.LocalizedDescription("Description105")] // 检索到的凭证的安全密码 //The secure password of the retrieved credentials //取得した資格情報の安全なパスワード
         public OutArgument<SecureString> PassWord
         {
             get;
             set;
         }
 
-        [Category("输出")]
-        [DisplayName("用户名")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName50")] //用户名 //username //ユーザー名
         [Browsable(true)]
-        [Description(" 检索到的凭证的用户名")]
+        [Localize.LocalizedDescription("Description106")] // 检索到的凭证的用户名 //User name of the retrieved voucher //取得したバウチャーのユーザー名
         public OutArgument<string> UserName
         {
             get;

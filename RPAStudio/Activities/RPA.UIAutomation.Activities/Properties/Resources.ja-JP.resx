@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Category1" xml:space="preserve">
+    <value>一般公開</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>エラー実行</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>UIオブジェクト</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>ウィンドウインジケータ</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>UI要素</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>UIElementを入力</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>入力</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>取得するプロパティの名前。 このフィールドは文字列のみをサポートします</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>出力</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>属性の値を指定します</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>マトリックス座標</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>画面座標で指定されたUiElementの結果境界長方形</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>面せん断方向</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>クリッピング領域の方向を拡張します</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>別のアクティビティによって返されたUiElement変数を使用します。 このプロパティをSelectorプロパティと一緒に使用することはできません。 このフィールドはUiElement変数のみをサポートします</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>UI要素のクリッピング行列</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>実行待ち</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>指定されたUI要素のスクリーンショットが取得されるまでの遅延（ミリ秒）。 デフォルトの時間は300ミリ秒です。</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>スクリーンショット</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>結果のスクリーンショット。 このフィールドは画像変数のみをサポートします</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>アクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは10000ミリ秒（10秒）です</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>待機するプロパティの名前。 定義済みの属性リストは、アクティビティのドロップダウンリストとして使用できます。 このフィールドは文字列変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>属性値</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>属性の期待値を指定します。 このフィールドは文字列変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>ブラウザ</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>添付する既存のブラウザ変数</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>タイムアウト</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>UIセレクター</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>UIブラウザー</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>アクティビティによって返されるブラウザ変数</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>ブラウザの種類</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>使用するブラウザの種類を選択します。 次のオプションが利用可能です：IE、Firefox、Chrome</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>ブラウザブラウザ</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>閉じるブラウザーページ。 このフィールドは、ブラウザ変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>遅延時間（終了）</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value>アクティビティが実行された後の遅延（ミリ秒）デフォルトの時間は3000ミリ秒です。</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>遅延時間（開始）</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value>アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は3000ミリ秒です。</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>JavaScriptコード</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value>実行するJavaScriptコード。 ここに文字列として書き込むか、実行するコードを含む.jsファイルへのフルパスを追加できます。</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>JavaScriptコードデータ</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>JavaScriptコードのデータを文字列または文字列変数として入力します</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>JavaScript出力</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>JavaScriptコードから返された文字列結果</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>ナビゲートするブラウザーページ。 このフィールドは、ブラウザ変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>ナビゲーションURL</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>表示するページの場所</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>新しいブラウザタブページ。 このフィールドは、ブラウザ変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>指定されたブラウザーで開くURL</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>ブラウザーの応答タイムアウト（ミリ秒）を指定する</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>プライベート/トレースなし</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>隠す</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>ブラウザの変数を保存します。 このフィールドはブラウザ変数のみを受け入れます</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>アクティビティが実行された後のミリ秒単位の遅延デフォルトの時間は300ミリ秒です。</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は200ミリ秒です。</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>HTML属性</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>変更するHTML属性の名前</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>価値</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>指定したプロパティに設定する値。 文字列変数のみがサポートされています</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は300ミリ秒です。</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>色</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>ハイライト時間（秒）</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>プロジェクト</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>既存の選択に追加</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>プロジェクトチーム</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は2000ミリ秒です。</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>テキスト</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>UI要素のTextプロパティを書き込む文字列</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>アンカー位置</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>アンカー境界ボックス</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>ターゲット境界ボックス</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>要素が存在するかどうかを示します。 このフィールドはブール変数のみをサポートします</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>UiElement変数。 このプロパティをSelectorプロパティと一緒に使用することはできません。 このフィールドはUiElement変数のみをサポートします</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>後続の子アクティビティで使用されるUI要素</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを、値（TrueまたはFalse）で指定します</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>要素が停止するのを待っています</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>このオプションを選択すると、アクティビティは指定されたイベントの終わりまで待機します</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>要素が消えるのを待っています</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>このオプションを選択すると、ui要素がまだアクティブであっても、アクティビティは画面からui要素が消えるまで待機するだけです。</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>閉じるウィンドウ。 このフィールドはウィンドウ変数のみを受け入れます</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>範囲</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>フィルター</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>xml文字列は、コレクション内のすべてのUIオブジェクトが満たすべき条件を指定します。</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>子要素</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>すべてのui子要素は、設定されたフィルターとスコープに従います。 このフィールドはIEnumerable &lt;UIElement&gt;変数のみをサポートします</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>アクティビティを待っています</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>このオプションを選択すると、アクティビティは指定されたui要素がアクティブになるのを待ちます。</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>見えるまで待っています</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>このオプションを選択すると、アクティビティは指定されたui要素が表示されるまで待機します。</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>見つかったui要素。 このフィールドはUIElementタイプの変数のみをサポートします</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>場所</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>相対要素</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>探している相対的なui要素。  UIElementタイプの変数のみがサポートされています</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>親ノードレベル</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>親ノードを見つけるためのUI階層のレベルを指定する</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>親ノード</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>要素の親。  UIElementタイプの変数のみがサポートされています</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>UI要素が選択されたときに前のウィンドウを非表示にする</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>このオプションを使用すると、画面上の領域を選択できます。</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>指定されたUI要素を選択します</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>アクティビティが実行された後のミリ秒単位の遅延。 デフォルトの時間は300ミリ秒です。</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は300ミリ秒です。</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>ボタンオプション</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>その他のボタン</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>マウスオプション</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>座標点を使用する</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>UI要素のマトリックス</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>UIAutomationInfoを入力します</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>ひも</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>クリックする文字列</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は200ミリ秒です。</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>指定された番号</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>テキストフィールドの文字列が指定されたui要素に複数回表示される場合、クリック数の代わりにここに出現回数を指定します</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>このオプションをオンにすると、選択したテキストの画面レイアウトは変更されません</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>クリックするテキスト</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>待ち時間</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>次のページへのロードを待機する時間</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>最大抽出</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>抽出できるデータの最大値</value>
+  </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>次のコネクタ</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>セレクタは、次のページに移動するために使用されるリンク/ボタンを識別します。 既存のuielement属性に関連する必要があります</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>フォームメッセージを送信する</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>オンにすると、特定のメッセージをターゲットアプリケーションに送信して、次のページに移動するための次のリンク/ボタンをクリックします。 この入力方法はバックグラウンドで機能し、ほとんどのデスクトップアプリケーションと互換性がありますが、最速の方法ではありません</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>シミュレートされたクリック</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>オンにすると、ターゲットアプリケーションのテクノロジーシミュレーションを使用して、次のページに移動するために使用される次のリンク/ボタンをクリックします。 この入力メソッドは、3つの入力メソッドの中で最も速く、バックグラウンドで機能します。</value>
+  </data>
+  <data name="DisplayName56" xml:space="preserve">
+    <value>対象データを抽出する</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>指定したWebページから抽出するデータを定義できるXML文字列</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>探している文字列が配置されているui要素。</value>
+  </data>
+  <data name="DisplayName57" xml:space="preserve">
+    <value>非表示を無視</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>このチェックボックスがオンの場合、指定されたui要素の文字列情報は抽出されず、このチェックボックスはデフォルトでは選択されません。</value>
+  </data>
+  <data name="DisplayName58" xml:space="preserve">
+    <value>セパレーター</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>文字列の先駆者として使用する文字を指定します。 フィールドが空の場合、すべての既知のテキスト区切り文字（スペース、ピリオド、コンマなど）が使用されます</value>
+  </data>
+  <data name="DisplayName59" xml:space="preserve">
+    <value>単語情報</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>指定されたui要素で見つかった各単語の画面座標</value>
+  </data>
+  <data name="DisplayName60" xml:space="preserve">
+    <value>ウィンドウタイトル</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>Windowのタイトルを入力</value>
+  </data>
+  <data name="DisplayName61" xml:space="preserve">
+    <value>Windowのクラス名</value>
+  </data>
+  <data name="Description75" xml:space="preserve">
+    <value>Windowのクラス名を入力</value>
+  </data>
+  <data name="DisplayName62" xml:space="preserve">
+    <value>窓</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>ウィンドウを格納する変数。 このフィールドはウィンドウ変数のみを受け入れます</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>アクティブなウィンドウが見つかりました。 このフィールドはウィンドウ変数のみをサポートします。  Window変数が指定されている場合、SearchScopeプロパティとSelectorプロパティは無視されます。</value>
+  </data>
+  <data name="DisplayName63" xml:space="preserve">
+    <value>ウィンドウハンドル</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>閉じるウィンドウハンドル。</value>
+  </data>
+  <data name="DisplayName64" xml:space="preserve">
+    <value>身長</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>正および負の整数をサポートするウィンドウの新しい高さ</value>
+  </data>
+  <data name="DisplayName65" xml:space="preserve">
+    <value>幅</value>
+  </data>
+  <data name="Description80" xml:space="preserve">
+    <value>正および負の整数をサポートするウィンドウの新しい幅</value>
+  </data>
+  <data name="DisplayName66" xml:space="preserve">
+    <value>座標X</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>ウィンドウの新しい位置座標はX軸であり、正および負の整数をサポートします</value>
+  </data>
+  <data name="DisplayName67" xml:space="preserve">
+    <value>Y座標</value>
+  </data>
+  <data name="Description82" xml:space="preserve">
+    <value>ウィンドウの新しい座標位置はY軸で、正および負の整数をサポートします</value>
+  </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>再選択</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>画面上で指定</value>
+  </data>
+  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+    <value>取得する属性の名前</value>
+  </data>
+  <data name="AttributeToExpect.HintText" xml:space="preserve">
+    <value>指定された属性の期待値</value>
+  </data>
+  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+    <value>変更するHTML属性の名前</value>
+  </data>
+  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+    <value>待機するプロパティの名前</value>
+  </data>
+  <data name="SetAttributeValue.HintText" xml:space="preserve">
+    <value>指定された属性に設定される値。文字列変数のみがサポートされています</value>
+  </data>
+  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+    <value>ブラウザで開かれたURLを指定します</value>
+  </data>
+</root>

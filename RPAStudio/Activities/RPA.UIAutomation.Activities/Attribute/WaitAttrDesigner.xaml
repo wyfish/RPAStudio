@@ -4,6 +4,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library">
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -26,7 +27,7 @@
 
     <pslc:CollapsableActivity >
         <Grid Height="80" >
-            <sapv:ExpressionTextBox
+            <sapv:ExpressionTextBox x:Uid="PropertyNameToWait"
                 x:Name="expressTextBox"
                 Expression="{Binding Path=ModelItem.Item, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"
@@ -42,7 +43,7 @@
                       SelectionChanged="comboBox_SelectionChanged"
                       HorizontalAlignment="Left" Margin="245,10,0,0"
                       VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.27,0" Height="30"/>
-            <sapv:ExpressionTextBox
+            <sapv:ExpressionTextBox x:Uid="AttributeToExpect"
                 Expression="{Binding Path=ModelItem.Value, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"
                 HintText="指定属性的预期值"

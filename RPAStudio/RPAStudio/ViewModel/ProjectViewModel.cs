@@ -1,23 +1,24 @@
 ﻿using System;
-using GalaSoft.MvvmLight;
-using log4net;
-using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight.Command;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Threading.Tasks;
+using System.Reflection;
+using System.Windows;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using Newtonsoft.Json;
-using System.IO;
-using System.Windows;
+using Newtonsoft.Json.Linq;
+using NuGet.Versioning;
+using log4net;
+using Plugins.Shared.Library;
+using Plugins.Shared.Library.Nuget;
 using RPAStudio.Librarys;
 using RPAStudio.Windows;
 using RPAStudio.DataManager;
 using RPAStudio.DragDropHandler;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
-using NuGet.Versioning;
-using Plugins.Shared.Library.Nuget;
-using System.Reflection;
-using Plugins.Shared.Library;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -195,7 +196,7 @@ namespace RPAStudio.ViewModel
                     Logger.Error(err, logger);
                     CurrentProjectJsonFile = "";
                     Common.RunInUI(() => {
-                        MessageBox.Show(App.Current.MainWindow, "打开项目出错！", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("ProjectOpenError"), ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning); ;
                     });
                 }finally
                 {
@@ -243,7 +244,8 @@ namespace RPAStudio.ViewModel
                 try
                 {
                     string activity_config_xml = null;
-                    var activity_config_info = Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+                    //var activity_config_info = Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+                    var activity_config_info = Get_Localized_activity_config_info(dll_file_name_without_ext);
 
                     try
                     {
@@ -251,23 +253,36 @@ namespace RPAStudio.ViewModel
                         {
                             activity_config_xml = reader.ReadToEnd();
                             Logger.Debug($"开始挂载{dll_file}中的活动配置信息……", logger);
-
+                            // Start mounting Active configuration information in
                             ViewModelLocator.Instance.Activities.MountActivityConfig(activity_config_xml);
                         }
                     }
                     catch (Exception err)
                     {
                         SharedObject.Instance.Output(SharedObject.enOutputType.Error, $"挂载{dll_file}中的activity.config.xml信息出错", err);
+                        //Mount Error in activity.config.xml information
                     }
-                   
+
                 }
                 catch (Exception)
                 {
                     //dll中找不到activity.config.xml时会报错走到这里，无须打印错误日志
+                    //When activity.config.xml is not found in the dll, it will report an error and go here without printing the error log
                 }
             }
+        }
 
-
+        private System.Windows.Resources.StreamResourceInfo Get_Localized_activity_config_info(string dll_file_name_without_ext)
+        {
+            string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            try
+            {
+                return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config_{locale}.xml", UriKind.Absolute));
+            }
+            catch (Exception)
+            {
+                return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+            }
         }
 
         public ProjectJsonConfig ProcessProjectJsonConfig()
@@ -334,7 +349,8 @@ namespace RPAStudio.ViewModel
             var dependRootItem = new ProjectTreeItem(this);
             dependRootItem.IsDependRoot = true;
             dependRootItem.IsExpanded = true;
-            dependRootItem.Name = "依赖包";
+            //dependRootItem.Name = "依赖包";
+            dependRootItem.Name = ResxIF.GetString("DependencyText");
             dependRootItem.Icon = "pack://application:,,,/Resources/Image/Project/dependencies.png";
             projectItem.Children.Add(dependRootItem);
 
@@ -988,12 +1004,14 @@ namespace RPAStudio.ViewModel
 
                         if(RemoveUnusedScreenshotsCount == 0)
                         {
-                            MessageBox.Show(App.Current.MainWindow, "找不到需要清理的未使用的截图", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            // 找不到需要清理的未使用的截图
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("NoUnusedScreenshotsFound"), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                         }
                         else
                         {
                             RefreshCommand.Execute(null);
-                            MessageBox.Show(App.Current.MainWindow, string.Format("{0}个未使用的截图已经被成功移除", RemoveUnusedScreenshotsCount), "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            // {0}个未使用的截图已经被成功移除
+                            MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("UnusedScreenshotsSuccessfullyRemoved"), RemoveUnusedScreenshotsCount), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                         }
 
                     }));

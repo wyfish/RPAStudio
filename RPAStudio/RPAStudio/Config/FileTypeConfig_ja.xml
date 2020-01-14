@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FileTypeConfig>
+  <Sequence Title="新しいシーケンス" Description="新しいシーケンスワークフローを作成する" FileName="Sequence" />
+  <Flowchart Title="新しいフローチャート" Description="新しいフローチャートワークフローを作成する" FileName="Flowchart" />
+  <StateMachine Title="新しいステートマシン" Description="新しいステートマシンワークフローを作成する" FileName="StateMachine" />
+  <GlobalHandler Title="新しいグローバルプロセッサ" Description="新しい例外ハンドラーワークフローを作成する" FileName="GlobalHandler" />
+</FileTypeConfig>

@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" Loaded="ActivityDesigner_Loaded">
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -30,7 +31,7 @@
             </Grid.RowDefinitions>
             <Grid Name="grid1">
                 <TextBlock Name="navigateTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" >点击屏幕</Hyperlink>
+                    <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" ><Run Text="{x:Static lclz:Resources.TapScreen}"/></Hyperlink>
                 </TextBlock>
             </Grid>
             <Grid Name="grid" Visibility="{Binding Path=ModelItem.visibility}" >
@@ -43,7 +44,7 @@
                     </Button.Background>
                     <Button.ContextMenu>
                         <ContextMenu Name="contextMenu">
-                            <MenuItem Header="重新选取" Click="meauItemClickOne">
+                            <MenuItem Header="{x:Static lclz:Resources.ReselectIt}" Click="meauItemClickOne">
                                 <MenuItem.Icon>
                                     <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
                                 </MenuItem.Icon>

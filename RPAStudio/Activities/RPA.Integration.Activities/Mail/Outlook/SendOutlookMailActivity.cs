@@ -20,8 +20,8 @@ namespace RPA.Integration.Activities.Mail
     public sealed class SendOutlookMailActivity : AsyncCodeActivity
     {
         [Category("Receiver")]
-        [DisplayName("收件人")]
-        [Description("电子邮件的主要收件人")]
+        [Localize.LocalizedDisplayName("Category19")] //收件人 //Recipient //受取人
+        [Localize.LocalizedDescription("Description50")] //电子邮件的主要收件人 //Primary recipient of the email //電子メールの主要な受信者
         [RequiredArgument]
         public InArgument<string> To
         {
@@ -30,8 +30,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Receiver")]
-        [DisplayName("抄送")]
-        [Description("电子邮件的次要收件人")]
+        [Localize.LocalizedDisplayName("DisplayName85")] //抄送 //Cc //Cc
+        [Localize.LocalizedDescription("Description51")] //电子邮件的次要收件人 //Secondary recipient of the email //メールの二次受信者
         public InArgument<string> Cc
         {
             get;
@@ -39,8 +39,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Receiver")]
-        [DisplayName("密送")]
-        [Description("电子邮件的隐藏收件人")]
+        [Localize.LocalizedDisplayName("DisplayName107")] //密送 //Secret delivery //秘密の配達
+        [Localize.LocalizedDescription("Description52")] //电子邮件的隐藏收件人 //Hidden recipient of email //メールの隠された受信者
         public InArgument<string> Bcc
         {
             get;
@@ -48,8 +48,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Email")]
-        [DisplayName("主题")]
-        [Description("电子邮件的主题")]
+        [Localize.LocalizedDisplayName("DisplayName87")] //主题 //Theme //テーマ
+        [Localize.LocalizedDescription("Description53")] //电子邮件的主题 //Email subject //メールの件名
         public InArgument<string> Subject
         {
             get;
@@ -57,8 +57,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Email")]
-        [DisplayName("正文")]
-        [Description("电子邮件的正文")]
+        [Localize.LocalizedDisplayName("DisplayName88")] //正文 //Text //本体
+        [Localize.LocalizedDescription("Description54")] //电子邮件的正文 //The body of the email //メールの本文
         public InArgument<string> Body
         {
             get;
@@ -66,8 +66,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("HTML格式")]
-        [Description(" 指定邮件正文是否以HTML格式编写")]
+        [Localize.LocalizedDisplayName("DisplayName90")] //HTML格式 //HTML format //HTML形式
+        [Localize.LocalizedDescription("Description56")] // 指定邮件正文是否以HTML格式编写 //Specify whether the body of the message is written in HTML format //メッセージの本文をHTML形式で記述するかどうかを指定します
         public bool IsBodyHtml
         {
             get;
@@ -75,8 +75,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Common")]
-        [DisplayName("超时时间(毫秒)")]
-        [Description(" 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedDisplayName("DisplayName96")] //超时时间(毫秒) //Timeout (ms) //タイムアウト（ミリ秒）
+        [Localize.LocalizedDescription("Description62")] // 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です
         public InArgument<int> TimeoutMS
         {
             get;
@@ -85,7 +85,7 @@ namespace RPA.Integration.Activities.Mail
 
 
         [Category("Attachments")]
-        [DisplayName("附件")]
+        [Localize.LocalizedDisplayName("Category21")] //附件 //Attachments //添付ファイル
         public List<InArgument<string>> Files
         {
             get;
@@ -95,7 +95,7 @@ namespace RPA.Integration.Activities.Mail
 
         [Category("Attachments")]
         [DefaultValue(null)]
-        [DisplayName("附件列表")]
+        [Localize.LocalizedDisplayName("DisplayName82")] //附件列表 //Attachment list //添付リスト
         public InArgument<IEnumerable<string>> AttachmentsCollection
         {
             get;
@@ -103,9 +103,9 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Forward")]
-        [DisplayName("邮件对象")]
+        [Localize.LocalizedDisplayName("DisplayName95")] //邮件对象 //Mail object //メールオブジェクト
         [OverloadGroup("Forward")]
-        [Description("要转发的消息,该字段仅支持MailMessage对象")]
+        [Localize.LocalizedDescription("Description58")] //要转发的消息,该字段仅支持MailMessage对象 //For messages to be forwarded, this field only supports MailMessage objects. //転送されるメッセージの場合、このフィールドはMailMessageオブジェクトのみをサポートします。
         public InArgument<MailMessage> MailMessage
         {
             get;
@@ -115,7 +115,7 @@ namespace RPA.Integration.Activities.Mail
 
         [Browsable(false)]
         [DefaultValue(null)]
-        [DisplayName("附件")]
+        [Localize.LocalizedDisplayName("Category21")] //附件 //Attachments //添付ファイル
         public List<string> Attachments
         {
             get;
@@ -123,8 +123,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("账户")]
-        [Description("Outlook账户名")]
+        [Localize.LocalizedDisplayName("DisplayName100")] //账户 //Account //アカウント
+        [Localize.LocalizedDescription("Description60")] //Outlook账户名 //Outlook account name //Outlookアカウント名
         public InArgument<string> Account
         {
             get;
@@ -132,8 +132,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("显示名")]
-        [Description("预期的显示名称，邮件系统必须支持该功能才能使用")]
+        [Localize.LocalizedDisplayName("DisplayName108")] //显示名 //Display name //表示名
+        [Localize.LocalizedDescription("Description72")] //预期的显示名称，邮件系统必须支持该功能才能使用 //The expected display name that the messaging system must support in order to use //メッセージングシステムが使用するためにサポートする必要がある表示名
         [DefaultValue(null)]
         public InArgument<string> SentOnBehalfOfName
         {
@@ -142,7 +142,7 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("是否保存成草稿")]
+        [Localize.LocalizedDisplayName("DisplayName109")] //是否保存成草稿 //Whether to save as a draft //下書きとして保存するかどうか
         public bool IsDraft
         {
             get;

@@ -7,6 +7,7 @@
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
    >
 
@@ -32,14 +33,14 @@
 
     <pslc:CollapsableActivity>
         <Grid Height="60">
-            <Button Click="ConnSet" Margin="55,0,70,35"  Width="135" Height="25">配置数据库连接</Button>
+            <Button Click="ConnSet" Margin="55,0,70,35"  Width="135" Height="25" Content="{x:Static lclz:Resources.ConfigureDatabaseConnection}"/>
             <sapv:ExpressionTextBox
                     Expression="{Binding Path=ModelItem.SQLString,
                     Converter={StaticResource ArgumentToExpressionConverter}, Mode=TwoWay, ConverterParameter=In}"
                     Width="180"
                     OwnerActivity="{Binding Path=ModelItem}" ExpressionType="sys:String" Height="Auto"
                     DockPanel.Dock="Left" HintText="SQL 语句" Margin="0,35,80,0" />
-            <Button Click="SqlButton_Click" Content="SQL编辑"  DockPanel.Dock="Right" Margin="190,35,0,0" Width="70" />
+            <Button Click="SqlButton_Click" Content="{x:Static lclz:Resources.EditSQL}"  DockPanel.Dock="Right" Margin="190,35,0,0" Width="70" />
 
         </Grid>
     </pslc:CollapsableActivity>

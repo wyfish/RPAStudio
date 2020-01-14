@@ -9,15 +9,15 @@ namespace RPA.UIAutomation.Activities.Browser
     public sealed class CloseTab : AsyncCodeActivity
     {
         private string classID = Guid.NewGuid().ToString("N");
-        [Category("选项")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("浏览器Browser")]
-        [Description("要关闭的浏览器页面。该字段仅支持Browser变量")]
+        [Localize.LocalizedDisplayName("DisplayName16")] //浏览器Browser //Browser Browser //ブラウザブラウザ
+        [Localize.LocalizedDescription("Description18")] //要关闭的浏览器页面。该字段仅支持Browser变量 //The browser page to close.  This field only supports the Browser variable. //閉じるブラウザーページ。 このフィールドは、ブラウザ変数のみをサポートします。
         public InArgument<Browser> currBrowser { get; set; }
 
         [Browsable(false)]

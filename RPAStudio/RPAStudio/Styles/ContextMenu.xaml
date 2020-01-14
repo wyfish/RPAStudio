@@ -2,28 +2,29 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:cmd="http://www.galasoft.ch/mvvmlight"
                     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:lclz="clr-namespace:RPAStudio.Localization"
                     >
     <ContextMenu x:Key="ActivitiyContextMenu">
-        <MenuItem Header="添加到收藏夹"  Command="{Binding AddToFavoritesCommand}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.AddToFavorites}"  Command="{Binding AddToFavoritesCommand}" CommandParameter="{Binding}"/>
     </ContextMenu>
 
     <ContextMenu x:Key="FavoriteActivitiyContextMenu">
-        <MenuItem Header="从收藏夹移除"  Command="{Binding RemoveFromFavoritesCommand}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.RemoveFromFavorites}"  Command="{Binding RemoveFromFavoritesCommand}" CommandParameter="{Binding}"/>
     </ContextMenu>
 
     <ContextMenu x:Key="ActivitiesToolbarDropdownContextMenu">
-        <MenuItem Header="显示收藏" IsCheckable="True" IsChecked="{Binding IsShowFavoritesView}" CommandParameter="{Binding}"/>
-        <MenuItem Header="显示最近" IsCheckable="True" IsChecked="{Binding IsShowRecentView}" CommandParameter="{Binding}"/>
-        <MenuItem Header="显示可用" IsCheckable="True" IsChecked="{Binding IsShowAvailableView}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.ShowFavorites}" IsCheckable="True" IsChecked="{Binding IsShowFavoritesView}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.ShowRecent}" IsCheckable="True" IsChecked="{Binding IsShowRecentView}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.ShowAvailable}" IsCheckable="True" IsChecked="{Binding IsShowAvailableView}" CommandParameter="{Binding}"/>
     </ContextMenu>
 
     <ContextMenu x:Key="SnippetsUserAddContextMenu">
-        <MenuItem Header="打开" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/snippet-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="移除" Command="{Binding RemoveSnippetCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RemoveText}" Command="{Binding RemoveSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/menu-remove.png"/>
             </MenuItem.Icon>
@@ -31,7 +32,7 @@
     </ContextMenu>
 
     <ContextMenu x:Key="SnippetsContextMenu">
-        <MenuItem Header="打开" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/menu-open.png"/>
             </MenuItem.Icon>
@@ -40,24 +41,24 @@
 
     <!--项目根节点上右击-->
     <ContextMenu x:Key="ProjectRootContextMenu">
-        <MenuItem Header="打开项目文件夹" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenProjectFolder}" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="项目设置" Command="{Binding OpenProjectSettingsCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.ProjectSettingsTitle}" Command="{Binding OpenProjectSettingsCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/settings.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="新建文件夹..." Command="{Binding NewFolderCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.NewFolderDot}" Command="{Binding NewFolderCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/add-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="导入工作流..." Command="{Binding ImportWorkflowCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.ImportWorkflowDot}" Command="{Binding ImportWorkflowCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/workflow.png"/>
             </MenuItem.Icon>
@@ -67,29 +68,29 @@
 
     <!--项目目录上右击-->
     <ContextMenu x:Key="ProjectDirectoryContextMenu">
-        <MenuItem Header="打开" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="重命名" Command="{Binding RenameDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RenameTitle}" Command="{Binding RenameDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="删除" Command="{Binding DeleteDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.DeleteText}" Command="{Binding DeleteDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="新建文件夹..." Command="{Binding NewFolderCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.NewFolderDot}" Command="{Binding NewFolderCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/add-dir.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="导入工作流..." Command="{Binding ImportWorkflowCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.ImportWorkflowDot}" Command="{Binding ImportWorkflowCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/workflow.png"/>
             </MenuItem.Icon>
@@ -98,23 +99,23 @@
 
     <!--项目Main xaml上右击-->
     <ContextMenu x:Key="ProjectMainXamlContextMenu">
-        <MenuItem Header="打开" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="重命名" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RenameTitle}" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="删除" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.DeleteText}" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="运行" Command="{Binding RunCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RunText}" Command="{Binding RunCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/run.png"/>
             </MenuItem.Icon>
@@ -123,28 +124,28 @@
 
     <!--项目非Main的xaml上右击-->
     <ContextMenu x:Key="ProjectXamlContextMenu">
-        <MenuItem Header="打开" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="重命名" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RenameTitle}" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="删除" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.DeleteText}" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="运行" Command="{Binding RunCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RunText}" Command="{Binding RunCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/run.png" />
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="设置为主文件" Command="{Binding SetAsMainCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.SetAsMainFile}" Command="{Binding SetAsMainCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/main.png"/>
             </MenuItem.Icon>
@@ -153,12 +154,12 @@
 
     <!--项目非xaml的普通文件上右击-->
     <ContextMenu x:Key="ProjectFileContextMenu">
-        <MenuItem Header="重命名" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RenameTitle}" Command="{Binding RenameFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/rename.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="删除" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.DeleteText}" Command="{Binding DeleteFileCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/delete.png"/>
             </MenuItem.Icon>
@@ -166,18 +167,18 @@
     </ContextMenu>
 
     <ContextMenu x:Key="RecentProjectItemContextMenu">
-        <MenuItem Header="打开项目" Command="{Binding OpenProjectCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenProject}" Command="{Binding OpenProjectCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="打开项目所在目录" Command="{Binding OpenProjectDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.OpenProjectDir}" Command="{Binding OpenProjectDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/file-explorer.png"/>
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="从列表中移除" Command="{Binding RemoveFromListCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.RemoveFromList}" Command="{Binding RemoveFromListCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/remove.png"/>
             </MenuItem.Icon>
@@ -187,8 +188,8 @@
 
 
     <ContextMenu x:Key="OutputItemContextMenu">
-        <MenuItem Header="复制（Ctrl+C）"  Command="{Binding CopyItemMsgCommand}" CommandParameter="{Binding}"/>
-        <MenuItem Header="查看消息详情"  Command="{Binding ViewItemMsgDetailCommand}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.CopyCtrlC}"  Command="{Binding CopyItemMsgCommand}" CommandParameter="{Binding}"/>
+        <MenuItem Header="{x:Static lclz:Strings.ShowDetails}"  Command="{Binding ViewItemMsgDetailCommand}" CommandParameter="{Binding}"/>
     </ContextMenu>
 
 

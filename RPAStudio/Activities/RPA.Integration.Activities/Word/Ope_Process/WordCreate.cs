@@ -35,8 +35,8 @@ namespace RPA.Integration.Activities.WordPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Word/create.png"; } }
 
         InArgument<string> _PathUrl;
-        [Category("打开/新建文档选项")]
-        [DisplayName("文件路径")]
+        [Localize.LocalizedCategory("Category38")] //打开/新建文档选项 //Open / New Document option //[開く] / [新しいドキュメント]オプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [Browsable(true)]
         public InArgument<string> PathUrl
         {
@@ -51,16 +51,16 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
 
-        [Category("打开/新建文档选项")]
-        [DisplayName("是否创建新文档")]
+        [Localize.LocalizedCategory("Category38")] //打开/新建文档选项 //Open / New Document option //[開く] / [新しいドキュメント]オプション
+        [Localize.LocalizedDisplayName("DisplayName20")] //是否创建新文档 //Whether to create a new document //新しいドキュメントを作成するかどうか
         [Browsable(true)]
         public bool NewDoc
         {
             get;set;
         }
 
-        [Category("打开/新建文档选项")]
-        [DisplayName("流程是否可见")]
+        [Localize.LocalizedCategory("Category38")] //打开/新建文档选项 //Open / New Document option //[開く] / [新しいドキュメント]オプション
+        [Localize.LocalizedDisplayName("DisplayName21")] //流程是否可见 //Whether the process is visible //プロセスが見えるかどうか
         [Browsable(true)]
         public bool IsVisible
         {
@@ -70,8 +70,8 @@ namespace RPA.Integration.Activities.WordPlugins
 
 
         InArgument<string> _SavePathUrl;
-        [Category("保存选项")]
-        [DisplayName("文件路径")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [Browsable(true)]
         public InArgument<string> SavePathUrl
         {
@@ -87,8 +87,8 @@ namespace RPA.Integration.Activities.WordPlugins
 
 
         bool _Save = true;
-        [Category("保存选项")]
-        [DisplayName("保存")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName23")] //保存 //save //保存する
         [Browsable(true)]
         public bool Save
         {
@@ -103,8 +103,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _IsExit = true;
-        [Category("保存选项")]
-        [DisplayName("程序是否退出")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName22")] //程序是否退出 //Whether the program exits //プログラムが終了するかどうか
         [Browsable(true)]
         public bool IsExit
         {
@@ -119,8 +119,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         bool _SaveAs;
-        [Category("保存选项")]
-        [DisplayName("另存为")]
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [Localize.LocalizedDisplayName("DisplayName24")] //另存为 //Save as //名前を付けて保存
         [Browsable(true)]
         public bool SaveAs
         {

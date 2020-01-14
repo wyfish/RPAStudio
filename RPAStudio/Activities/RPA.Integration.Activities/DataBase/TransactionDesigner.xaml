@@ -4,6 +4,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library">
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -27,7 +28,7 @@
         <Grid Grid.Row="1">
             <StackPanel>
                 <Grid>
-                    <Button Click="ConnSet" Width="136" Height="20" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="配置数据库连接" Margin="62,0,62,5"/>
+                    <Button Click="ConnSet" Width="136" Height="20" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="{x:Static lclz:Resources.ConfigureDatabaseConnection}" Margin="62,0,62,5"/>
                 </Grid>
                 <Grid>
                     <sap:WorkflowItemPresenter

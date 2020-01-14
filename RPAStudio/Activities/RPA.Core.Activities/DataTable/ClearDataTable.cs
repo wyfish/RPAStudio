@@ -23,10 +23,10 @@ namespace RPA.Core.Activities.DataTableActivity
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [DisplayName("DataTable")]
-        [Description("要清除所有数据的DataTable对象")]
+        [Localize.LocalizedDescription("Description26")] //要清除所有数据的DataTable对象 //The DataTable object to clear all data //すべてのデータをクリアするDataTableオブジェクト
         public InArgument<DataTable> DataTable { get; set; }
 
 

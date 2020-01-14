@@ -7,8 +7,9 @@
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
-    Title="SQL编辑"
+    Title="{x:Static lclz:Resources.EditSQL}"
     >
     <sap:WorkflowElementDialog.Resources>
         <ResourceDictionary>
@@ -17,7 +18,7 @@
     </sap:WorkflowElementDialog.Resources>
 
     <DockPanel LastChildFill="True">
-        <Button Content="参数" HorizontalAlignment="Left" Margin="0, 6, 0, 0" Click="OnParametersButtonClicked" MinWidth="90" DockPanel.Dock="Bottom" ></Button>
+        <Button Content="{x:Static lclz:Resources.ParameterText}" HorizontalAlignment="Left" Margin="0, 6, 0, 0" Click="OnParametersButtonClicked" MinWidth="90" DockPanel.Dock="Bottom" ></Button>
         <sapv:ExpressionTextBox 
             Width="260"
             Expression="{Binding Path=ModelItem.SQLString, Converter={StaticResource ArgumentToExpressionConverter},

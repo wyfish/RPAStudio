@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPARobot.Windows"
+        xmlns:localization="clr-namespace:RPARobot.Localization"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         mc:Ignorable="d"
         DataContext="{Binding UserPreferences, Source={StaticResource Locator}}"
-        Title="用户设置" Height="300" Width="445" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="{x:Static localization:Strings.UserSettingsTitle}" Height="300" Width="445" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -26,10 +27,10 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Grid>
-            <GroupBox Header="系统设置" Margin="10" >
+            <GroupBox Header="{x:Static localization:Strings.SystemSettingsHeader}" Margin="10" >
                 <StackPanel Margin="10">
-                    <CheckBox IsChecked="{Binding IsAutoRun}">开机时自动启动</CheckBox>
-                    <CheckBox IsChecked="{Binding IsAutoOpenMainWindow}" Margin="0,10,0,0">启动后自动打开主窗口</CheckBox>
+                    <CheckBox IsChecked="{Binding IsAutoRun}" Content="{x:Static localization:Strings.AutomaticallyStartAtBootContent}"/>
+                    <CheckBox IsChecked="{Binding IsAutoOpenMainWindow}" Margin="0,10,0,0" Content="{x:Static localization:Strings.AutomaticallyOpenWindowContent}"/>
                 </StackPanel>
             </GroupBox>
         </Grid>
@@ -39,12 +40,12 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid HorizontalAlignment="Left" Margin="10,0,0,0">
-                <Button Width="100" Height="25" Command="{Binding ResetSettingsCommand}">重置设置</Button>
+                <Button Width="100" Height="25" Command="{Binding ResetSettingsCommand}" Content="{x:Static localization:Strings.ResetSettingsContent}"/>
             </Grid>
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Width="80" Height="25" Command="{Binding OkCommand}">确定</Button>
-                    <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CancelCommand}">取消</Button>
+                    <Button Width="80" Height="25" Command="{Binding OkCommand}" Content="{x:Static localization:Strings.OKContent}"/>
+                    <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CancelCommand}" Content="{x:Static localization:Strings.CancelContent}"/>
                 </StackPanel>
             </Grid>
         </Grid>

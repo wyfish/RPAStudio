@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProjectConfig>
+  <Process Title="新規プロセス" Description="空のプロジェクトから始まる自動プロセスを設計する" ProjectName="BlankProcess" ProjectDescription="ブランクプロセス"  />
+</ProjectConfig>

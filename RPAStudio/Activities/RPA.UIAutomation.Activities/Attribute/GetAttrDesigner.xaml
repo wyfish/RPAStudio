@@ -5,6 +5,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" 
     Loaded="ActivityDesigner_Loaded">
     <sap:ActivityDesigner.Resources>
@@ -35,7 +36,7 @@
             <Grid Grid.Row="0" Margin="0,0,0,35" Grid.RowSpan="2">
                 <Grid Name="grid1" >
                     <TextBlock Name="navigateTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" >点击屏幕</Hyperlink>
+                        <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" ><Run Text="{x:Static lclz:Resources.TapScreen}"/></Hyperlink>
                     </TextBlock>
                 </Grid>
                 <Grid Name="grid" Visibility="{Binding Path=ModelItem.visibility}" >
@@ -48,7 +49,7 @@
                         </Button.Background>
                         <Button.ContextMenu>
                             <ContextMenu Name="contextMenu">
-                                <MenuItem Header="重新选取" Click="meauItemClickOne">
+                                <MenuItem Header="{x:Static lclz:Resources.ReselectIt}" Click="meauItemClickOne">
                                     <MenuItem.Icon>
                                         <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
                                     </MenuItem.Icon>
@@ -58,7 +59,7 @@
                     </Button>
                 </Grid>
             </Grid>
-            <sapv:ExpressionTextBox
+            <sapv:ExpressionTextBox x:Uid="AttributeNameToGet"
                 x:Name="expressTextBox"
                 Expression="{Binding Path=ModelItem.AttrName, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"

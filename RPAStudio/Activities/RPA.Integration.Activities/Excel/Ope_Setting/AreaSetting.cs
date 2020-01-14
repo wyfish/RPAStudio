@@ -16,49 +16,49 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Browsable(false)]
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/setting.png"; } }
 
-        [Category("单元格起始")]
-        [DisplayName("行")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
             get; set;
         }
-        [Category("单元格起始")]
-        [DisplayName("列")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
             get;set;
         }
 
-        [Category("单元格起始")]
-        [Description("代表单元格名称的VB表达式，如A1")]
-        [DisplayName("单元格名称")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDescription("Description76")] //代表单元格名称的VB表达式，如A1 //VB expression representing the cell name, such as A1 //A1などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName141")] //单元格名称 //Cell Name //セル名
         [Browsable(true)]
         public InArgument<string> CellName_Begin
         {
             get; set;
         }
 
-        [Category("单元格终点")]
-        [DisplayName("行")]
+        [Localize.LocalizedCategory("Category34")] //单元格终点 //Cell end //セルエンド
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_End
         {
             get;set;
         }
 
-        [Category("单元格终点")]
-        [DisplayName("列")]
+        [Localize.LocalizedCategory("Category34")] //单元格终点 //Cell end //セルエンド
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_End
         {
             get;set;
         }
 
-        [Category("单元格终点")]
-        [Description("代表单元格名称的VB表达式，如B2")]
-        [DisplayName("单元格名称")]
+        [Localize.LocalizedCategory("Category34")] //单元格终点 //Cell end //セルエンド
+        [Localize.LocalizedDescription("Description78")] //代表单元格名称的VB表达式，如B2 //VB expression representing the cell name, such as B2 //B2などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName141")] //单元格名称 //Cell Name //セル名
         [Browsable(true)]
         public InArgument<string> CellName_End
         {
@@ -67,8 +67,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         ColorIndexEnum _CellColor = (ColorIndexEnum)0;
-        [Category("选项")]
-        [DisplayName("单元格填充色")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName29")] //单元格填充色 //Cell fill color //セルの塗りつぶし色
         [Browsable(true)]
         public ColorIndexEnum CellColor
         {
@@ -83,8 +83,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         AlignEnum _AlignStyle = (AlignEnum)0;
-        [Category("选项")]
-        [DisplayName("对齐方式")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName30")] //对齐方式 //Alignment //アライメント
         [Browsable(true)]
         public AlignEnum AlignStyle
         {
@@ -99,8 +99,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         ExcelFontEnum _Font = (ExcelFontEnum)0;
-        [Category("字体设置")]
-        [DisplayName("字体")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName31")] //字体 //Font //フォント
         [Browsable(true)]
         public ExcelFontEnum Font
         {
@@ -115,8 +115,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<Int32> _FontSize = 11;
-        [Category("字体设置")]
-        [DisplayName("字号")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName32")] //字号 //Font size //フォントサイズ
         [Browsable(true)]
         public InArgument<Int32> FontSize
         {
@@ -131,8 +131,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         ColorIndexEnum _FontColor = (ColorIndexEnum)0;
-        [Category("字体设置")]
-        [DisplayName("颜色")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName33")] //颜色 //Colour //色
         [Browsable(true)]
         public ColorIndexEnum FontColor
         {
@@ -147,8 +147,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         bool _isBold;
-        [Category("字体设置")]
-        [DisplayName("粗体")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName34")] //粗体 //Bold //太字
         [Browsable(true)]
         public bool isBold
         {
@@ -164,8 +164,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         bool _isItalic;
-        [Category("字体设置")]
-        [DisplayName("斜体")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName35")] //斜体 //Italic //斜体
         [Browsable(true)]
         public bool isItalic
         {
@@ -182,8 +182,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         bool _isUnderLine;
-        [Category("字体设置")]
-        [DisplayName("底线")]
+        [Localize.LocalizedCategory("Category10")] //字体设置 //Font setting //フォント設定
+        [Localize.LocalizedDisplayName("DisplayName36")] //底线 //Bottom line //ボトムライン
         [Browsable(true)]
         public bool isUnderLine
         {
@@ -198,8 +198,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<double> _RowHeight = 14.25;
-        [Category("行高列宽")]
-        [DisplayName("行高")]
+        [Localize.LocalizedCategory("Category11")] //行高列宽 //Row height column width //行の高さ、列の幅
+        [Localize.LocalizedDisplayName("DisplayName37")] //行高 //Row height //行の高さ
         [Browsable(true)]
         public InArgument<double> RowHeight
         {
@@ -214,8 +214,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<double> _ColWidth = 8.38;
-        [Category("行高列宽")]
-        [DisplayName("列宽")]
+        [Localize.LocalizedCategory("Category11")] //行高列宽 //Row height column width //行の高さ、列の幅
+        [Localize.LocalizedDisplayName("DisplayName38")] //列宽 //Column width //列幅
         [Browsable(true)]
         public InArgument<double> ColWidth
         {
@@ -230,8 +230,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         BorderType _BorderType = (BorderType)0;
-        [Category("边框")]
-        [DisplayName("边框选择")]
+        [Localize.LocalizedCategory("Category12")] //边框 //frame //ボーダー
+        [Localize.LocalizedDisplayName("DisplayName39")] //边框选择 //Border selection //ボーダー選択
         [Browsable(true)]
         public BorderType BorderType
         {
@@ -246,8 +246,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         BorderStyle _BorderStyle = (BorderStyle)(-4142);
-        [Category("边框")]
-        [DisplayName("边框选择")]
+        [Localize.LocalizedCategory("Category12")] //边框 //frame //ボーダー
+        [Localize.LocalizedDisplayName("DisplayName39")] //边框选择 //Border selection //ボーダー選択
         [Browsable(true)]
         public BorderStyle BorderStyle
         {
@@ -262,10 +262,10 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
-        [Description("为空代表当前活动工作表")]
+        [Localize.LocalizedDescription("Description77")] //为空代表当前活动工作表 //Blank represents the currently active worksheet //空白は現在アクティブなワークシートを表します
         public InArgument<string> SheetName
         {
             get;

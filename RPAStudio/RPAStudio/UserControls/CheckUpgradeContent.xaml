@@ -23,7 +23,7 @@
             </Grid.ColumnDefinitions>
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center" Foreground="Black" FontSize="13">当前版本</TextBlock>
+                    <TextBlock x:Uid="CurrentVersion" VerticalAlignment="Center" Foreground="Black" FontSize="13">当前版本</TextBlock>
                     <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" Foreground="Blue" Text="{Binding CurrentVersionName}" FontSize="13"/>
                     <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Margin="10,0" FontSize="13" Command="{Binding ShowCurrentVersionUpdateLogCommand}">查看日志</Button>
                 </StackPanel>
@@ -31,15 +31,15 @@
             <Grid Grid.Column="1" Visibility="{Binding IsCheckUpgradeSuccess,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
                 <Grid Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
                     <StackPanel Orientation="Horizontal" >
-                        <TextBlock VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
+                        <TextBlock x:Uid="LatestVersion" VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
                         <TextBlock VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="#FFEE581B" Text="{Binding LatestVersionName}" FontSize="13"/>
                         <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Margin="10,0" FontSize="13" Command="{Binding ShowLatestVersionUpdateLogCommand}">查看日志</Button>
                     </StackPanel>
                 </Grid>
                 <Grid Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
                     <StackPanel Orientation="Horizontal" >
-                        <TextBlock VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
-                        <TextBlock VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="Black" Text="未发现新版本" FontSize="13" FontWeight="Bold" />
+                        <TextBlock x:Uid="LatestVersion" VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
+                        <TextBlock x:Uid="NoNewVersionFound" VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="Black" Text="未发现新版本" FontSize="13" FontWeight="Bold" />
                     </StackPanel>
                 </Grid>
             </Grid>
@@ -67,7 +67,7 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" FontSize="13" Foreground="Black">最新版本更新日志</TextBlock>
+            <TextBlock x:Uid="LatestUpdateLog" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="13" Foreground="Black">最新版本更新日志</TextBlock>
             <TextBox Grid.Row="1" Margin="10,0" Padding="5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontSize="13" Text="{Binding LatestVersionUpdateLog}" />
         </Grid>
         <Grid Grid.Row="2" Margin="10,0" Visibility="{Binding IsShowProgressBar,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
@@ -76,7 +76,7 @@
         <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Style="{StaticResource ToolBarButtonStyle}"  Command="{Binding DoUpgradeCommand}" FontSize="13" Width="80" Height="25" Margin="10,0" Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">立即更新</Button>
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Command="{Binding CheckUpgradeCommand}" FontSize="13" Width="80" Height="25" Margin="10,0">检查更新</Button>
+                <Button x:Uid="CheckForUpdates" Style="{StaticResource ToolBarButtonStyle}"  Command="{Binding CheckUpgradeCommand}" FontSize="13" Width="80" Height="25" Margin="10,0">检查更新</Button>
             </StackPanel>
         </Grid>
     </Grid>

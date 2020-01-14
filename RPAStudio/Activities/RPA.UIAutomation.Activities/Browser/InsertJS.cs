@@ -25,51 +25,51 @@ namespace RPA.UIAutomation.Activities.Browser
         public string _DisplayName { get { return "InsertJS"; } }
 
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("公共")]
-        [DisplayName("延迟时间(结束)")]
-        [Description("执行活动后的延迟时间(以毫秒为单位),默认时间为3000毫秒")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName17")] //延迟时间(结束) //Delay time (end) //遅延時間（終了）
+        [Localize.LocalizedDescription("Description19")] //执行活动后的延迟时间(以毫秒为单位),默认时间为3000毫秒 //The delay (in milliseconds) after the activity is executed. The default time is 3000 milliseconds. //アクティビティが実行された後の遅延（ミリ秒）デフォルトの時間は3000ミリ秒です。
         public InArgument<Int32> DelayAfter { get; set; }
 
-        [Category("公共")]
-        [DisplayName("延迟时间(开始)")]
-        [Description("活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是3000毫秒。")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName18")] //延迟时间(开始) //Delay time (start) //遅延時間（開始）
+        [Localize.LocalizedDescription("Description20")] //活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是3000毫秒。 //The delay (in milliseconds) before the activity begins any operation, the default amount of time is 3000 milliseconds. //アクティビティが操作を開始するまでの遅延（ミリ秒）。デフォルトの時間は3000ミリ秒です。
         public InArgument<Int32> DelayBefore { get; set; }
 
-        [Category("公共")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
         [DisplayName("循环执行")]
         [Description("JS运行失败是否重复执行直到执行成功或超时")]
         public bool isCircle { get; set; }
 
 
-        [Category("公共")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
         [DisplayName("错误超时时间")]
         [Description("JS脚本循环执行直到执行成功或者超过超时时间.默认为10000毫秒")]
         public InArgument<Int32> TimeoutMS { get; set; }
 
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
 
         InArgument<string> _JSCode;
-        [Category("输入")]
-        [DisplayName("JavaScript代码")]
-        [Description("要运行的JavaScript代码。您可以在此处将其作为字符串写入，或添加包含要执行的代码的.js文件的完整路径")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName19")] //JavaScript代码 //JavaScript code //JavaScriptコード
+        [Localize.LocalizedDescription("Description21")] //要运行的JavaScript代码。您可以在此处将其作为字符串写入，或添加包含要执行的代码的.js文件的完整路径 //The JavaScript code to run.  You can write it here as a string or add the full path to the .js file containing the code to execute. //実行するJavaScriptコード。 ここに文字列として書き込むか、実行するコードを含む.jsファイルへのフルパスを追加できます。
         [RequiredArgument]
         [Browsable(true)]
         public InArgument<string> JSCode
@@ -85,9 +85,9 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
         InArgument<string> _JSPara;
-        [Category("输入")]
-        [DisplayName("JavaScript代码数据")]
-        [Description("输入JavaScript代码的数据，作为字符串或字符串变量")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName20")] //JavaScript代码数据 //JavaScript code data //JavaScriptコードデータ
+        [Localize.LocalizedDescription("Description22")] //输入JavaScript代码的数据，作为字符串或字符串变量 //Enter the data of the JavaScript code as a string or string variable //JavaScriptコードのデータを文字列または文字列変数として入力します
         [Browsable(true)]
         public InArgument<string> JSPara
         {
@@ -102,9 +102,9 @@ namespace RPA.UIAutomation.Activities.Browser
         }
 
         OutArgument<string> _JSOut;
-        [Category("输出")]
-        [DisplayName("JavaScript输出")]
-        [Description("从JavaScript代码返回的字符串结果")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName21")] //JavaScript输出 //JavaScript output //JavaScript出力
+        [Localize.LocalizedDescription("Description23")] //从JavaScript代码返回的字符串结果 //String result returned from JavaScript code //JavaScriptコードから返された文字列結果
         [Browsable(true)]
         public OutArgument<string> JSOut
         {

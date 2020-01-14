@@ -31,31 +31,31 @@ namespace RPA.UIAutomation.Activities.Window
             };
         }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [OverloadGroup("G2")]
         [Browsable(true)]
-        [DisplayName("窗口")]
-        [Description("要关闭的窗口。该字段仅接受Window变量")]
+        [Localize.LocalizedDisplayName("DisplayName62")] //窗口 //Window //窓
+        [Localize.LocalizedDescription("Description43")] //要关闭的窗口。该字段仅接受Window变量 //The window to close.  This field only accepts Window variables //閉じるウィンドウ。 このフィールドはウィンドウ変数のみを受け入れます
         public InArgument<Window> ActiveWindow { get; set; }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
-        [DisplayName("窗口")]
-        [Description("找到的活动窗口。该字段仅支持Window变量。指定Window变量时，将忽略SearchScope和Selector属性。")]
+        [Localize.LocalizedDisplayName("DisplayName62")] //窗口 //Window //窓
+        [Localize.LocalizedDescription("Description77")] //找到的活动窗口。该字段仅支持Window变量。指定Window变量时，将忽略SearchScope和Selector属性。 //The active window found.  This field only supports Window variables.  The SearchScope and Selector properties are ignored when the Window variable is specified. //アクティブなウィンドウが見つかりました。 このフィールドはウィンドウ変数のみをサポートします。  Window変数が指定されている場合、SearchScopeプロパティとSelectorプロパティは無視されます。
         public InArgument<Window> OutPutWindow { get; set; }
 
         [Browsable(false)]

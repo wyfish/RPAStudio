@@ -20,7 +20,7 @@ namespace RPA.Core.Activities.Workflow
 
         [Category("Input")]
         [RequiredArgument]
-        [Description("工作流文件路径，必须用双引号括起来")]
+        [Localize.LocalizedDescription("Description115")] //工作流文件路径，必须用双引号括起来 //Workflow file path, must be enclosed in double quotes //ワークフローファイルのパス。二重引用符で囲む必要があります
         public InArgument<string> WorkflowFilePath { get; set; }
 
         [Category("Input")]

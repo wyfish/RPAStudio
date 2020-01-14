@@ -7,6 +7,7 @@
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
    >
 
@@ -32,10 +33,10 @@
 
     <pslc:CollapsableActivity >
         <Grid  Height="125"  >
-            <TextBox BorderThickness="0" IsReadOnly="True" Margin="0,3,220,102" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Height="20" RenderTransformOrigin="0.5,0.6">收件人</TextBox>
-            <TextBox BorderThickness="0" IsReadOnly="True" Margin="0,33,220,72"  TextAlignment="Center" VerticalAlignment="Center" Height="20">主题</TextBox>
-            <TextBox BorderThickness="0" IsReadOnly="True" Margin="0,63,220,42"  TextAlignment="Center" VerticalAlignment="Center" Height="20">正文</TextBox>
-            <TextBox BorderThickness="0" IsReadOnly="True" Margin="0,93,220,12"  TextAlignment="Center" VerticalAlignment="Center" Height="20">附件</TextBox>
+            <TextBox Text="{x:Static lclz:Resources.Category19}" BorderThickness="0" IsReadOnly="True" Margin="0,3,220,102" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Height="20" RenderTransformOrigin="0.5,0.6"/>
+            <TextBox Text="{x:Static lclz:Resources.DisplayName87}" BorderThickness="0" IsReadOnly="True" Margin="0,33,220,72"  TextAlignment="Center" VerticalAlignment="Center" Height="20"/>
+            <TextBox Text="{x:Static lclz:Resources.DisplayName88}" BorderThickness="0" IsReadOnly="True" Margin="0,63,220,42"  TextAlignment="Center" VerticalAlignment="Center" Height="20"/>
+            <TextBox Text="{x:Static lclz:Resources.Category21}" BorderThickness="0" IsReadOnly="True" Margin="0,93,220,12"  TextAlignment="Center" VerticalAlignment="Center" Height="20"/>
 
             <sapv:ExpressionTextBox
                 x:Name="expressTextBox"

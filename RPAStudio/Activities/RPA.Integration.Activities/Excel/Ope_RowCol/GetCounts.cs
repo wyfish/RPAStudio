@@ -28,23 +28,23 @@ namespace RPA.Integration.Activities.ExcelPlugins
             列数 = 2
         }
 
-        [Category("行列数选项")]
-        [DisplayName("有效数据")]
+        [Localize.LocalizedCategory("Category37")] //行列数选项 //Row and column options //行と列のオプション
+        [Localize.LocalizedDisplayName("DisplayName168")] //有效数据 //Valid data //有効なデータ
         [Browsable(true)]
         public bool isValid
         { get; set; }
 
 
-        [Category("行列数选项")]
-        [DisplayName("活动区域")]
+        [Localize.LocalizedCategory("Category37")] //行列数选项 //Row and column options //行と列のオプション
+        [Localize.LocalizedDisplayName("DisplayName169")] //活动区域 //Active area //アクティブエリア
         [Browsable(true)]
         public bool isActive
         { get; set; }
 
 
         private bool _isSingleLine = true;
-        [Category("行列数选项")]
-        [DisplayName("A1单元格列/行截止")]
+        [Localize.LocalizedCategory("Category37")] //行列数选项 //Row and column options //行と列のオプション
+        [Localize.LocalizedDisplayName("DisplayName170")] //A1单元格列/行截止 //A1 cell column / row cutoff //A1セルの列/行のカットオフ
         [Browsable(true)]
         public bool isSingleLine
         {
@@ -61,7 +61,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         //InArgument<Int32> _CellRow = 1;
-        //[Category("行列数选项")]
+        //[Localize.LocalizedCategory("Category37")] //行列数选项 //Row and column options //行と列のオプション
         //[DisplayName("单元格列")]
         //[Browsable(true)]
         //public InArgument<Int32> CellRow
@@ -77,7 +77,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         //}
 
         //InArgument<Int32> _CellColumn = 1;
-        //[Category("行列数选项")]
+        //[Localize.LocalizedCategory("Category37")] //行列数选项 //Row and column options //行と列のオプション
         //[DisplayName("单元格行")]
         //[Browsable(true)]
         //public InArgument<Int32> CellColumn
@@ -93,7 +93,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         //}
 
 
-        //[Category("行列数选项")]
+        //[Localize.LocalizedCategory("Category37")] //行列数选项 //Row and column options //行と列のオプション
         //[Description("代表单元格名称的VB表达式，如A1")]
         //[DisplayName("单元格名称")]
         //[Browsable(true)]
@@ -102,10 +102,10 @@ namespace RPA.Integration.Activities.ExcelPlugins
         //    get; set;
         //}
 
-        [Category("工作表选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category31")] //工作表选项 //Sheet Options //シートオプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
-        [Description("为空代表当前活动工作表")]
+        [Localize.LocalizedDescription("Description77")] //为空代表当前活动工作表 //Blank represents the currently active worksheet //空白は現在アクティブなワークシートを表します
         public InArgument<string> SheetName
         {
             get;
@@ -113,10 +113,10 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("输出")]
-        [DisplayName("行数")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName171")] //行数 //Rows //行数
         [Browsable(true)]
-        [Description("工作表中有效行数")]
+        [Localize.LocalizedDescription("Description79")] //工作表中有效行数 //Number of valid rows in the worksheet //ワークシート内の有効な行の数
         public OutArgument<int> RowCounts
         {
             get;
@@ -124,10 +124,10 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("输出")]
-        [DisplayName("列数")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName172")] //列数 //Number of columns //列数
         [Browsable(true)]
-        [Description("工作表中有效行数")]
+        [Localize.LocalizedDescription("Description79")] //工作表中有效行数 //Number of valid rows in the worksheet //ワークシート内の有効な行の数
         public OutArgument<int> ColCounts
         {
             get;

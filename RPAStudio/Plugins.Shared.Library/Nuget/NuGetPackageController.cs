@@ -70,7 +70,12 @@ namespace Plugins.Shared.Library.Nuget
         {
             get
             {
-                var nugetConfigFile = "Nuget.Default.Config";
+                var nugetConfigFile = "NuGet.Default.Config";
+                string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+                if (locale.Equals("zh") || locale.Equals("ja"))
+                {
+                    nugetConfigFile = nugetConfigFile.Replace(".Config", "_" + locale + ".Config");
+                }
                 try
                 {
                     if (_settings == null) _settings = NuGet.Configuration.Settings.LoadSpecificSettings(System.Environment.CurrentDirectory, nugetConfigFile);

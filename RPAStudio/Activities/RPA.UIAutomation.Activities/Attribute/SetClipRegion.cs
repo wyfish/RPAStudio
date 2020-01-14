@@ -18,34 +18,34 @@ namespace RPA.UIAutomation.Activities.Attribute
             }
         }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("区域剪切方向")]
-        [Description("扩展剪切区域的方向")]
+        [Localize.LocalizedDisplayName("DisplayName7")] //区域剪切方向 //Area shear direction //面せん断方向
+        [Localize.LocalizedDescription("Description7")] //扩展剪切区域的方向 //Extend the direction of the clipping region //クリッピング領域の方向を拡張します
         public DirectionEnums Direction { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("使用另一个活动返回的UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description8")] //使用另一个活动返回的UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量 //Use the UiElement variable returned by another activity.  This property cannot be used with the Selector property.  This field only supports UiElement variables //別のアクティビティによって返されたUiElement変数を使用します。 このプロパティをSelectorプロパティと一緒に使用することはできません。 このフィールドはUiElement変数のみをサポートします
         public InArgument<UiElement> Element { get; set; }
 
 
-        [Category("UI元素剪切矩阵")]
+        [Localize.LocalizedCategory("Category6")] //UI元素剪切矩阵 //UI element clipping matrix //UI要素のクリッピング行列
         [Browsable(true)]
         public InArgument<Int32> Left { get; set; }
-        [Category("UI元素剪切矩阵")]
+        [Localize.LocalizedCategory("Category6")] //UI元素剪切矩阵 //UI element clipping matrix //UI要素のクリッピング行列
         [Browsable(true)]
         public InArgument<Int32> Right { get; set; }
-        [Category("UI元素剪切矩阵")]
+        [Localize.LocalizedCategory("Category6")] //UI元素剪切矩阵 //UI element clipping matrix //UI要素のクリッピング行列
         [Browsable(true)]
         public InArgument<Int32> Top { get; set; }
-        [Category("UI元素剪切矩阵")]
+        [Localize.LocalizedCategory("Category6")] //UI元素剪切矩阵 //UI element clipping matrix //UI要素のクリッピング行列
         [Browsable(true)]
         public InArgument<Int32> Bottom { get; set; }
 

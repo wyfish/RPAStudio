@@ -28,9 +28,9 @@ namespace RPA.Integration.Activities.Database
         }
 
         InArgument<Int32> _OverTime = 10 * 1000;
-        [Category("选项")]
-        [DisplayName("超时时间")]
-        [Description("指定浏览器响应超时时间(毫秒)")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName4")] //超时时间 //overtime time //タイムアウト
+        [Localize.LocalizedDescription("Description5")] //指定浏览器响应超时时间(毫秒) //Specify browser response timeout (ms) //ブラウザーの応答タイムアウト（ミリ秒）を指定する
         public InArgument<Int32> OverTime
         {
             get
@@ -43,15 +43,15 @@ namespace RPA.Integration.Activities.Database
             }
         }
 
-        [Category("选项")]
-        [DisplayName("错误继续执行")]
-        [Description("出现错误是否继续执行")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName5")] //错误继续执行 //Error continues to execute //エラーは引き続き実行されます
+        [Localize.LocalizedDescription("Description6")] //出现错误是否继续执行 //Whether an error occurs or not //エラーが発生するかどうか
         public InArgument<bool> ContinueOnError { get; set; }
 
         CommandType _CommandType = CommandType.Text;
-        [Category("选项")]
-        [DisplayName("命令类型")]
-        [Description("指定如何解释命令字符串")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName9")] //命令类型 //Command type //コマンドの種類
+        [Localize.LocalizedDescription("Description10")] //指定如何解释命令字符串 //Specify how to interpret the command string //コマンド文字列の解釈方法を指定する
         public CommandType CommandType
         {
             get
@@ -66,39 +66,39 @@ namespace RPA.Integration.Activities.Database
         }
 
 
-        [Category("连接配置")]
+        [Localize.LocalizedCategory("Category1")] //连接配置 //Connection configuration //接続構成
         [RequiredArgument]
         [OverloadGroup("ConnectionConfig")]
-        [Description("用于建立数据库连接的连接字符串")]
-        [DisplayName("连接字符串")]
+        [Localize.LocalizedDescription("Description1")] //用于建立数据库连接的连接字符串 //The connection string used to establish a database connection //データベース接続の確立に使用される接続文字列
+        [Localize.LocalizedDisplayName("DisplayName1")] //连接字符串 //Connection string //接続文字列
         public InArgument<string> ConnectionString { get; set; }
 
 
-        [Category("连接配置")]
+        [Localize.LocalizedCategory("Category1")] //连接配置 //Connection configuration //接続構成
         [RequiredArgument]
         [OverloadGroup("ConnectionConfig")]
-        [Description("用于访问数据库的数据库提供程序的名称")]
-        [DisplayName("程序名称")]
+        [Localize.LocalizedDescription("Description2")] //用于访问数据库的数据库提供程序的名称 //The name of the database provider used to access the database //データベースへのアクセスに使用されるデータベースプロバイダーの名前
+        [Localize.LocalizedDisplayName("DisplayName2")] //程序名称 //Program name //プログラム名
         public InArgument<string> ProviderName { get; set; }
 
-        [Category("连接配置")]
+        [Localize.LocalizedCategory("Category1")] //连接配置 //Connection configuration //接続構成
         [RequiredArgument]
         [OverloadGroup("DatabaseConnection")]
-        [Description("用于访问数据库的数据库提供程序的名称")]
-        [DisplayName("现有数据库连接")]
+        [Localize.LocalizedDescription("Description2")] //用于访问数据库的数据库提供程序的名称 //The name of the database provider used to access the database //データベースへのアクセスに使用されるデータベースプロバイダーの名前
+        [Localize.LocalizedDisplayName("DisplayName6")] //现有数据库连接 //Existing database connection //既存のデータベース接続
         public InArgument<DatabaseConnection> DBConnection { get; set; }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [Description("执行的SQL命令语句")]
+        [Localize.LocalizedDescription("Description11")] //执行的SQL命令语句 //Executed SQL command statement //実行されたSQLコマンドステートメント
         [DisplayName("SQL")]
         public InArgument<string> SQLString { get; set; }
 
         private Dictionary<string, Argument> parameters;
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("参数")]
+        [Localize.LocalizedDisplayName("DisplayName10")] //参数 //parameter //パラメータ
         public Dictionary<string, Argument> Parameters
         {
             get
@@ -115,9 +115,9 @@ namespace RPA.Integration.Activities.Database
             }
         }
 
-        [Category("输出")]
-        [Description("对于UPDATE，INSERT和DELETE语句，返回值是受命令影响的行数。对于所有其他类型的语句，返回值为-1")]
-        [DisplayName("执行结果")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description12")] //对于UPDATE，INSERT和DELETE语句，返回值是受命令影响的行数。对于所有其他类型的语句，返回值为-1 //For UPDATE, INSERT, and DELETE statements, the return value is the number of rows affected by the command.  For all other types of statements, the return value is -1 //UPDATE、INSERT、およびDELETEステートメントの場合、戻り値はコマンドの影響を受ける行の数です。 他のすべてのタイプのステートメントの場合、戻り値は-1です
+        [Localize.LocalizedDisplayName("DisplayName8")] //执行结果 //Results of the //実行結果
         public OutArgument<Int32> AffectedRecords { get; set; }
 
 

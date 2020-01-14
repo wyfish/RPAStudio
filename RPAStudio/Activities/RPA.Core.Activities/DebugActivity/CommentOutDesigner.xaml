@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
-    
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
     xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
@@ -12,7 +12,7 @@
      >
     <pslc:CollapsableActivity>
         <Border BorderThickness="1">
-            <sap:WorkflowItemPresenter AutomationProperties.AutomationId="Body" HorizontalAlignment="Center" HintText="拖放控件到这里" MinWidth="400" AllowedItemType="{x:Type sa:Activity}" Item="{Binding Path=ModelItem.Body, Mode=TwoWay}" />
+            <sap:WorkflowItemPresenter AutomationProperties.AutomationId="Body" HorizontalAlignment="Center" HintText="{x:Static lclz:Resources.DragControlHere}" MinWidth="400" AllowedItemType="{x:Type sa:Activity}" Item="{Binding Path=ModelItem.Body, Mode=TwoWay}" />
         </Border>
     </pslc:CollapsableActivity>
 </sap:ActivityDesigner>

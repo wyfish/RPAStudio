@@ -24,11 +24,11 @@ namespace RPA.Core.Activities.FileActivity
 
         [RequiredArgument]
         [Category("File")]
-        [Description("要读取的文件的路径。")]
+        [Localize.LocalizedDescription("Description99")] //要读取的文件的路径。 //The path to the file to be read. //読み込むファイルへのパス。
         public InArgument<string> FileName { get; set; }
 
-        [Category("输出")]
-        [Description("从存储在字符串变量中的文件中提取的文本。")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description100")] //从存储在字符串变量中的文件中提取的文本。 //The text extracted from the file stored in the string variable. //文字列変数に保存されているファイルから抽出されたテキスト。
         public OutArgument<string> Content { get; set; }
 
         protected override void Execute(CodeActivityContext context)

@@ -5,7 +5,8 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
-    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
     Loaded="IcoPath_Loaded"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     >
@@ -32,7 +33,7 @@
 
     <pslc:CollapsableActivity >
         <Grid Height="40">
-            <TextBox  Margin="20,10,176,10" BorderThickness="0" IsReadOnly="True" Text="特殊文件夹"  VerticalAlignment="Center" Foreground="Indigo" TabIndex="0" Height="20" HorizontalAlignment="Center">
+            <TextBox  Margin="20,10,176,10" BorderThickness="0" IsReadOnly="True" Text="{x:Static lclz:Resources.SpecialFolder}"  VerticalAlignment="Center" Foreground="Indigo" TabIndex="0" Height="20" HorizontalAlignment="Center">
             </TextBox>
             <ComboBox x:Name="comboBox"
                 IsEditable="True"

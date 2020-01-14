@@ -20,8 +20,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
         public InArgument<string> SheetName
         {
@@ -29,16 +29,16 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("单元格起始")]
-        [DisplayName("行")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
             get;set;
         }
 
-        [Category("单元格起始")]
-        [DisplayName("列")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -46,28 +46,28 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("单元格起始")]
-        [Description("代表单元格名称的VB表达式，如A1")]
-        [DisplayName("单元格名称")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDescription("Description76")] //代表单元格名称的VB表达式，如A1 //VB expression representing the cell name, such as A1 //A1などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName141")] //单元格名称 //Cell Name //セル名
         [Browsable(true)]
         public InArgument<string> CellName_Begin
         {
             get; set;
         }
 
-        [Category("选项")]
-        [DisplayName("表头")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName154")] //表头 //Header //ヘッダー
         [Browsable(true)]
         public bool isTitle
         {
             get;set;
         }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
         [DisplayName("DataTable")]
         [Browsable(true)]
-        [Description("写入数据的DataTable变量名")]
+        [Localize.LocalizedDescription("Description20")] //写入数据的DataTable变量名 //DataTable variable name to write data to //データを書き込むDataTable変数名
         public InArgument<System.Data.DataTable> DataTable
         {
             get;

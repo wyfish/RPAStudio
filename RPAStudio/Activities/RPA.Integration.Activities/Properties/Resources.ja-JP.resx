@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Category1" xml:space="preserve">
+    <value>接続構成</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>データベース接続の確立に使用される接続文字列</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>接続文字列</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>データベースへのアクセスに使用されるデータベースプロバイダーの名前</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>プログラム名</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>出力</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>データベース接続</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>データベース接続を保存するための変数（DatabaseConnectionのみ）</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>切断する</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>クローズするデータベース接続（DatabaseConnection変数）</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>タイムアウト</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>ブラウザーの応答タイムアウト（ミリ秒）を指定する</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>エラーは引き続き実行されます</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>エラーが発生するかどうか</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>既存のデータベース接続</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>入力</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>テーブルにDataTable変数を挿入します。  DataTable列の名前と説明は、データベーステーブルの名前と説明と一致する必要があります</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>データを挿入するSQLテーブル</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>テーブル名</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>実行結果</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>影響を受ける行の数をInt32変数に保存します</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>コマンドの種類</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>コマンド文字列の解釈方法を指定する</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>実行されたSQLコマンドステートメント</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>パラメータ</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>UPDATE、INSERT、およびDELETEステートメントの場合、戻り値はコマンドの影響を受ける行の数です。 他のすべてのタイプのステートメントの場合、戻り値は-1です</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>SQLクエリの出力をDataTable変数に保存します</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>取引</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>このアクティビティのデータベース操作をデータベーストランザクションでラップするかどうかを指定します</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>ファイルパス</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>セパレーター</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>文字エンコード</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>行</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>ワークシート名</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>セルコンテンツ</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>アクティビティが実行された後のミリ秒単位の遅延。 デフォルトの時間は3000ミリ秒です。</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は0ミリ秒です。</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>新規/開くドキュメントオプション</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>新しいドキュメントを作成するかどうか</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>プロセスが見えるかどうか</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>保存オプション</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>プログラムが終了するかどうか</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>保存する</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>貼り付けオプション</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>セル範囲の開始セルを貼り付けます</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>セル領域の作業領域名を貼り付けます</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>コピーオプション</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value>データを読み取るDataTableを保存する</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value>データを書き込むDataTable変数名</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>行操作</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>行選択</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>行番号/列番号（開始）</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>行番号/列番号（終了）</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>セルの塗りつぶし色</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>アライメント</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>フォント設定</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>フォント</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>フォントサイズ</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>色</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>太字</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>斜体</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>ボトムライン</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>行の高さ、列の幅</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>行の高さ</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>列幅</value>
+  </data>
+  <data name="Category12" xml:space="preserve">
+    <value>ボーダー</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>ボーダー選択</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>ワークシートの順序</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>機能オプション</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>ワークシートの新しい名前</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>VBA名</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>戻り値</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>パス</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>存在確認</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>ローカルパス</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>フォルダーを作成</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>サブフォルダーを含める</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>カバー</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>ファイルを列挙する</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>FTPパス</value>
+  </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>サーバー</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>ホスト</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="Category14" xml:space="preserve">
+    <value>クレデンシャル</value>
+  </data>
+  <data name="DisplayName56" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="DisplayName57" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="DisplayName58" xml:space="preserve">
+    <value>匿名ログイン</value>
+  </data>
+  <data name="Category15" xml:space="preserve">
+    <value>セキュリティ設定</value>
+  </data>
+  <data name="DisplayName59" xml:space="preserve">
+    <value>FTPSモード</value>
+  </data>
+  <data name="DisplayName60" xml:space="preserve">
+    <value>SFTPを使用する</value>
+  </data>
+  <data name="DisplayName61" xml:space="preserve">
+    <value>クライアント証明書のパス</value>
+  </data>
+  <data name="DisplayName62" xml:space="preserve">
+    <value>クライアント証明書のパスワード</value>
+  </data>
+  <data name="DisplayName63" xml:space="preserve">
+    <value>すべての証明書を受け入れます</value>
+  </data>
+  <data name="Category16" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="DisplayName64" xml:space="preserve">
+    <value>メールアカウント</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value>メールの送信に使用されるメールアカウント</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>メッセージの送信に使用される電子メールアカウントのパスワード</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>使用されているメールサーバーホスト</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>電子メールが通過するポート</value>
+  </data>
+  <data name="DisplayName65" xml:space="preserve">
+    <value>フォルダー</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>メッセージのメールフォルダーを取得する</value>
+  </data>
+  <data name="DisplayName66" xml:space="preserve">
+    <value>安全な接続</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>接続にSSLおよび/またはTLS暗号化を指定する</value>
+  </data>
+  <data name="DisplayName67" xml:space="preserve">
+    <value>メッセージの数を取得する</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>リストの先頭から取得されたメッセージの数</value>
+  </data>
+  <data name="DisplayName68" xml:space="preserve">
+    <value>タグメッセージの削除</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>読み取りメッセージに削除のマークを付けるかどうかを指定します</value>
+  </data>
+  <data name="DisplayName69" xml:space="preserve">
+    <value>既読にする</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>取得したメッセージに既読のマークを付けるかどうかを指定します</value>
+  </data>
+  <data name="DisplayName70" xml:space="preserve">
+    <value>未読メッセージのみを取得する</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>未読メッセージのみを取得するかどうかを指定します</value>
+  </data>
+  <data name="DisplayName71" xml:space="preserve">
+    <value>すべての未読メッセージを取得する</value>
+  </data>
+  <data name="Category17" xml:space="preserve">
+    <value>スクリーニング</value>
+  </data>
+  <data name="DisplayName72" xml:space="preserve">
+    <value>件名キーワード</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>メッセージの件名に基づいて、対応するメッセージをフィルタリングします</value>
+  </data>
+  <data name="DisplayName73" xml:space="preserve">
+    <value>送信者キーワード</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>送信者のアドレスに基づいて対応するメッセージをフィルタリングする</value>
+  </data>
+  <data name="DisplayName74" xml:space="preserve">
+    <value>コンテンツキーワード</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>メッセージのハイパーテキストコンテンツに基づいて対応するメッセージをフィルター処理する</value>
+  </data>
+  <data name="DisplayName75" xml:space="preserve">
+    <value>メッセージ</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>取得したメッセージをMailMessageオブジェクトのコレクションとして使用します</value>
+  </data>
+  <data name="DisplayName76" xml:space="preserve">
+    <value>メール</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>画像の抽出に使用されるメッセージ。このフィールドはMimeMessage変数のみをサポートします。</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>メール内のメールをローカルディレクトリに保存します。空の場合、保存されません。</value>
+  </data>
+  <data name="DisplayName77" xml:space="preserve">
+    <value>ピクチャーパスリスト</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>画像のローカル保存パスリスト</value>
+  </data>
+  <data name="DisplayName78" xml:space="preserve">
+    <value>イメージリソースリスト</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>アドレスとBase64コードに分割された画像情報を保存する</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>SSLを使用してメッセージを送信するかどうかを指定します</value>
+  </data>
+  <data name="DisplayName79" xml:space="preserve">
+    <value>対象フォルダ</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>メッセージの移動先のメールフォルダー</value>
+  </data>
+  <data name="DisplayName80" xml:space="preserve">
+    <value>ソースフォルダー</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>メールメッセージを検索できるフォルダー</value>
+  </data>
+  <data name="DisplayName81" xml:space="preserve">
+    <value>メールメッセージ</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>移動するMailMessageオブジェクト</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>MailMessageオブジェクトのフルパスを保存するには</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>保存するMailMessageオブジェクト</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>MimeMessage添付ファイルを保存するフルパス</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>保存するMimeMessage添付ファイル</value>
+  </data>
+  <data name="DisplayName82" xml:space="preserve">
+    <value>添付リスト</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>取得した添付ファイル</value>
+  </data>
+  <data name="Category18" xml:space="preserve">
+    <value>送信者</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>お名前</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>送信者の表示名</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>送信者</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>送信者のメールアドレス</value>
+  </data>
+  <data name="Category19" xml:space="preserve">
+    <value>受信者</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>電子メールの主要な受信者</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>Cc</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>メールの二次受信者</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>Bcc</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>メールの隠された受信者</value>
+  </data>
+  <data name="Category20" xml:space="preserve">
+    <value>メール</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>件名</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>メールの件名</value>
+  </data>
+  <data name="DisplayName88" xml:space="preserve">
+    <value>本文</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>メールの本文</value>
+  </data>
+  <data name="DisplayName89" xml:space="preserve">
+    <value>優先順位</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>メール優先フラグ</value>
+  </data>
+  <data name="DisplayName90" xml:space="preserve">
+    <value>HTML形式</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>メッセージの本文をHTML形式で記述するかどうかを指定します</value>
+  </data>
+  <data name="Category21" xml:space="preserve">
+    <value>添付ファイル</value>
+  </data>
+  <data name="DisplayName91" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>メールに追加する添付ファイル</value>
+  </data>
+  <data name="Category22" xml:space="preserve">
+    <value>進む</value>
+  </data>
+  <data name="DisplayName92" xml:space="preserve">
+    <value>メッセージ本文</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>転送されるメッセージの場合、このフィールドはMailMessageオブジェクトのみをサポートします。</value>
+  </data>
+  <data name="DisplayName93" xml:space="preserve">
+    <value>アーカイブパス（.pst）</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>Outlookデータファイルの保存パス</value>
+  </data>
+  <data name="DisplayName94" xml:space="preserve">
+    <value>アカウントをアーカイブする</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>Outlookアカウント名</value>
+  </data>
+  <data name="DisplayName95" xml:space="preserve">
+    <value>メールオブジェクト</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>メールオブジェクトを指定する</value>
+  </data>
+  <data name="DisplayName96" xml:space="preserve">
+    <value>タイムアウト（ミリ秒）</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です</value>
+  </data>
+  <data name="DisplayName97" xml:space="preserve">
+    <value>メッセージの数を取得する</value>
+  </data>
+  <data name="DisplayName98" xml:space="preserve">
+    <value>メーリングリストを出力する</value>
+  </data>
+  <data name="DisplayName99" xml:space="preserve">
+    <value>メールディレクトリ</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>どのメールディレクトリからメールを取得するか</value>
+  </data>
+  <data name="DisplayName100" xml:space="preserve">
+    <value>アカウント</value>
+  </data>
+  <data name="DisplayName101" xml:space="preserve">
+    <value>フィルター</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>フィルターに一致するメッセージのみが取得されます。</value>
+  </data>
+  <data name="DisplayName102" xml:space="preserve">
+    <value>添付ファイルを取得</value>
+  </data>
+  <data name="DisplayName103" xml:space="preserve">
+    <value>未読メッセージのみを取得する</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>未読メールのみを取得するかどうか、デフォルトでチェックする</value>
+  </data>
+  <data name="DisplayName104" xml:space="preserve">
+    <value>既読にする</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>受信したメッセージを自動的に既読にするかどうか</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>Outlookメールディレクトリ</value>
+  </data>
+  <data name="DisplayName105" xml:space="preserve">
+    <value>全員に返信</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>チェックしない場合は送信者に返信するだけで、チェックする場合は送信者だけでなくすべてのCCに返信します。</value>
+  </data>
+  <data name="DisplayName106" xml:space="preserve">
+    <value>保存パス</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>添付パス</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>出力添付リスト</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>正規表現フィルター、フィルターに一致する添付ファイル名のみが保存されます</value>
+  </data>
+  <data name="DisplayName107" xml:space="preserve">
+    <value>秘密の配達</value>
+  </data>
+  <data name="DisplayName108" xml:space="preserve">
+    <value>表示名</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>メッセージングシステムが使用するためにサポートする必要がある表示名</value>
+  </data>
+  <data name="DisplayName109" xml:space="preserve">
+    <value>下書きとして保存するかどうか</value>
+  </data>
+  <data name="DisplayName110" xml:space="preserve">
+    <value>カーソル移動距離</value>
+  </data>
+  <data name="DisplayName111" xml:space="preserve">
+    <value>選択するかどうか</value>
+  </data>
+  <data name="Category23" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="DisplayName112" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="DisplayName113" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="DisplayName114" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="DisplayName115" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="DisplayName116" xml:space="preserve">
+    <value>開始する</value>
+  </data>
+  <data name="DisplayName117" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="DisplayName118" xml:space="preserve">
+    <value>次のページ</value>
+  </data>
+  <data name="DisplayName119" xml:space="preserve">
+    <value>フォントサイズ</value>
+  </data>
+  <data name="DisplayName120" xml:space="preserve">
+    <value>フォントの色</value>
+  </data>
+  <data name="DisplayName121" xml:space="preserve">
+    <value>下線</value>
+  </data>
+  <data name="DisplayName122" xml:space="preserve">
+    <value>フォントの影</value>
+  </data>
+  <data name="Category24" xml:space="preserve">
+    <value>ページ属性</value>
+  </data>
+  <data name="Category25" xml:space="preserve">
+    <value>ページ余白</value>
+  </data>
+  <data name="DisplayName123" xml:space="preserve">
+    <value>左マージン</value>
+  </data>
+  <data name="DisplayName124" xml:space="preserve">
+    <value>右マージン</value>
+  </data>
+  <data name="DisplayName125" xml:space="preserve">
+    <value>上マージン</value>
+  </data>
+  <data name="DisplayName126" xml:space="preserve">
+    <value>下マージン</value>
+  </data>
+  <data name="DisplayName127" xml:space="preserve">
+    <value>バックスペース</value>
+  </data>
+  <data name="DisplayName128" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="DisplayName129" xml:space="preserve">
+    <value>貼り付け</value>
+  </data>
+  <data name="DisplayName130" xml:space="preserve">
+    <value>文書の内容</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>Word文書のすべてのコンテンツテキストを取得する</value>
+  </data>
+  <data name="Category26" xml:space="preserve">
+    <value>写真</value>
+  </data>
+  <data name="DisplayName131" xml:space="preserve">
+    <value>画像リンク</value>
+  </data>
+  <data name="Category27" xml:space="preserve">
+    <value>しおり</value>
+  </data>
+  <data name="DisplayName132" xml:space="preserve">
+    <value>ブックマーク名</value>
+  </data>
+  <data name="Category28" xml:space="preserve">
+    <value>ハイパーリンク</value>
+  </data>
+  <data name="DisplayName133" xml:space="preserve">
+    <value>ハイパーリンク名</value>
+  </data>
+  <data name="DisplayName134" xml:space="preserve">
+    <value>ハイパーリンクラベル</value>
+  </data>
+  <data name="DisplayName135" xml:space="preserve">
+    <value>ハイパーリンクアドレス</value>
+  </data>
+  <data name="DisplayName136" xml:space="preserve">
+    <value>ページネーション/ラインフィード</value>
+  </data>
+  <data name="DisplayName137" xml:space="preserve">
+    <value>ページネーション</value>
+  </data>
+  <data name="DisplayName138" xml:space="preserve">
+    <value>ラップ</value>
+  </data>
+  <data name="DisplayName139" xml:space="preserve">
+    <value>テキストコンテンツ</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>テキストを書き込む前に書き込まれた行数</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="ConfigureDatabaseConnection" xml:space="preserve">
+    <value>データベース接続設定</value>
+  </data>
+  <data name="ConnectionConfiguration" xml:space="preserve">
+    <value>接続構成</value>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>接続設定</value>
+  </data>
+  <data name="ConnectionWizard" xml:space="preserve">
+    <value>接続ウィザード</value>
+  </data>
+  <data name="ContentText" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="EditSQL" xml:space="preserve">
+    <value>SQL編集</value>
+  </data>
+  <data name="EndArea" xml:space="preserve">
+    <value>終了エリア</value>
+  </data>
+  <data name="HideText" xml:space="preserve">
+    <value>隠す</value>
+  </data>
+  <data name="MailFolder" xml:space="preserve">
+    <value>メールフォルダ</value>
+  </data>
+  <data name="MailMessage" xml:space="preserve">
+    <value>メールメッセージ</value>
+  </data>
+  <data name="NewDatabaseConnection" xml:space="preserve">
+    <value>新しいデータベース接続</value>
+  </data>
+  <data name="ParameterText" xml:space="preserve">
+    <value>パラメータ</value>
+  </data>
+  <data name="StartArea" xml:space="preserve">
+    <value>開始エリア</value>
+  </data>
+  <data name="Category30" xml:space="preserve">
+    <value>セルオプション</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>A1などのセル名を表すVB式</value>
+  </data>
+  <data name="DisplayName141" xml:space="preserve">
+    <value>セル名</value>
+  </data>
+  <data name="Category31" xml:space="preserve">
+    <value>シートオプション</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>空白は現在アクティブなワークシートを表します</value>
+  </data>
+  <data name="Category32" xml:space="preserve">
+    <value>開始セル</value>
+  </data>
+  <data name="Category33" xml:space="preserve">
+    <value>終了セル</value>
+  </data>
+  <data name="DisplayName142" xml:space="preserve">
+    <value>マージ/分割</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>B2などのセル名を表すVB式</value>
+  </data>
+  <data name="DisplayName143" xml:space="preserve">
+    <value>宛先ファイルのパス</value>
+  </data>
+  <data name="DisplayName144" xml:space="preserve">
+    <value>ターゲットセル行</value>
+  </data>
+  <data name="DisplayName145" xml:space="preserve">
+    <value>ターゲットセル列</value>
+  </data>
+  <data name="DisplayName146" xml:space="preserve">
+    <value>ターゲットセル名</value>
+  </data>
+  <data name="DisplayName147" xml:space="preserve">
+    <value>対象シート</value>
+  </data>
+  <data name="DisplayName148" xml:space="preserve">
+    <value>開始セル行</value>
+  </data>
+  <data name="DisplayName149" xml:space="preserve">
+    <value>開始セル列</value>
+  </data>
+  <data name="DisplayName150" xml:space="preserve">
+    <value>開始セル名</value>
+  </data>
+  <data name="DisplayName151" xml:space="preserve">
+    <value>終了セル行</value>
+  </data>
+  <data name="DisplayName152" xml:space="preserve">
+    <value>終了セル列</value>
+  </data>
+  <data name="DisplayName153" xml:space="preserve">
+    <value>終了セル名</value>
+  </data>
+  <data name="Category34" xml:space="preserve">
+    <value>セルエンド</value>
+  </data>
+  <data name="DisplayName154" xml:space="preserve">
+    <value>ヘッダー</value>
+  </data>
+  <data name="DisplayName155" xml:space="preserve">
+    <value>すべてのワークシート</value>
+  </data>
+  <data name="Category35" xml:space="preserve">
+    <value>地域オプション</value>
+  </data>
+  <data name="DisplayName156" xml:space="preserve">
+    <value>すべてのエリア</value>
+  </data>
+  <data name="DisplayName157" xml:space="preserve">
+    <value>セル開始行</value>
+  </data>
+  <data name="DisplayName158" xml:space="preserve">
+    <value>セル開始列</value>
+  </data>
+  <data name="DisplayName159" xml:space="preserve">
+    <value>セル開始名</value>
+  </data>
+  <data name="DisplayName160" xml:space="preserve">
+    <value>セル終了行</value>
+  </data>
+  <data name="DisplayName161" xml:space="preserve">
+    <value>セル終了列</value>
+  </data>
+  <data name="DisplayName162" xml:space="preserve">
+    <value>セル終了名</value>
+  </data>
+  <data name="Category36" xml:space="preserve">
+    <value>交換オプション</value>
+  </data>
+  <data name="DisplayName163" xml:space="preserve">
+    <value>コンテンツを見つける</value>
+  </data>
+  <data name="DisplayName164" xml:space="preserve">
+    <value>コンテンツを置き換える</value>
+  </data>
+  <data name="DisplayName165" xml:space="preserve">
+    <value>大文字と小文字を区別</value>
+  </data>
+  <data name="DisplayName166" xml:space="preserve">
+    <value>セル一致</value>
+  </data>
+  <data name="DisplayName167" xml:space="preserve">
+    <value>ハーフフルアングルを区別する</value>
+  </data>
+  <data name="Category37" xml:space="preserve">
+    <value>行と列のオプション</value>
+  </data>
+  <data name="DisplayName168" xml:space="preserve">
+    <value>有効なデータ</value>
+  </data>
+  <data name="DisplayName169" xml:space="preserve">
+    <value>アクティブエリア</value>
+  </data>
+  <data name="DisplayName170" xml:space="preserve">
+    <value>A1セルの列/行のカットオフ</value>
+  </data>
+  <data name="DisplayName171" xml:space="preserve">
+    <value>行数</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>ワークシート内の有効な行の数</value>
+  </data>
+  <data name="DisplayName172" xml:space="preserve">
+    <value>列数</value>
+  </data>
+  <data name="DisplayName173" xml:space="preserve">
+    <value>行/列番号</value>
+  </data>
+  <data name="DisplayName174" xml:space="preserve">
+    <value>行/列</value>
+  </data>
+  <data name="DisplayName175" xml:space="preserve">
+    <value>行/列データ</value>
+  </data>
+  <data name="DisplayName176" xml:space="preserve">
+    <value>ワークシート名のリスト</value>
+  </data>
+  <data name="Category38" xml:space="preserve">
+    <value>[開く] / [新しいドキュメント]オプション</value>
+  </data>
+  <data name="FilePathToOpen" xml:space="preserve">
+    <value>開くファイルのパス</value>
+  </data>
+  <data name="FilePathToSave" xml:space="preserve">
+    <value>ファイル保存パス</value>
+  </data>
+</root>

@@ -52,8 +52,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         Operations _Operation = (Operations)1;
-        [Category("选项")]
-        [DisplayName("行列操作")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName25")] //行列操作 //Row operation //行操作
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Operations Operation
@@ -75,8 +75,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         RowCols _RowColSel = (RowCols)1;
-        [Category("选项")]
-        [DisplayName("行列选择")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName26")] //行列选择 //Row selection //行選択
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public RowCols RowColSel
@@ -92,9 +92,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<Int32>  _RowColBegin;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("行号/列号(开始)")]
+        [Localize.LocalizedDisplayName("DisplayName27")] //行号/列号(开始) //Line number / column number (start) //行番号/列番号（開始）
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public InArgument<Int32> RowColBegin
@@ -111,9 +111,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
 
         InArgument<Int32> _RowColEnd;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("行号/列号(结束)")]
+        [Localize.LocalizedDisplayName("DisplayName28")] //行号/列号(结束) //Line number / column number (end) //行番号/列番号（終了）
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public InArgument<Int32> RowColEnd
@@ -128,10 +128,10 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
         }
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
-        [Description("为空代表当前活动工作表")]
+        [Localize.LocalizedDescription("Description77")] //为空代表当前活动工作表 //Blank represents the currently active worksheet //空白は現在アクティブなワークシートを表します
         public InArgument<string> SheetName
         {
             get;

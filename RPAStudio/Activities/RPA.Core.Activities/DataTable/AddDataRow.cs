@@ -24,24 +24,24 @@ namespace RPA.Core.Activities.DataTableActivity
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [OverloadGroup("DataRow")]
         [DisplayName("DataRow")]
-        [Description("要添加到DataTable的DataRow对象，如果设置了此属性，则忽略ArrayRow属性。")]
+        [Localize.LocalizedDescription("Description22")] //要添加到DataTable的DataRow对象，如果设置了此属性，则忽略ArrayRow属性。 //The DataRow object to be added to the DataTable. If this property is set, the ArrayRow property is ignored. //DataTableに追加されるDataRowオブジェクトこのプロパティが設定されている場合、ArrayRowプロパティは無視されます。
         public InArgument<DataRow> DataRow { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [OverloadGroup("ArrayRow")]
         [DisplayName("ArrayRow")]
-        [Description("要添加到DataTable的对象数组。每个对象的类型应映射到DataTable中其对应列的类型。")]
+        [Localize.LocalizedDescription("Description23")] //要添加到DataTable的对象数组。每个对象的类型应映射到DataTable中其对应列的类型。 //An array of objects to add to the DataTable.  The type of each object should be mapped to the type of its corresponding column in the DataTable. //DataTableに追加するオブジェクトの配列。 各オブジェクトのタイプは、DataTable内の対応する列のタイプにマップする必要があります。
         public InArgument<object[]> ArrayRow { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [DisplayName("DataTable")]
-        [Description("要添加行数据的DataTable对象")]
+        [Localize.LocalizedDescription("Description24")] //要添加行数据的DataTable对象 //The DataTable object to add row data to //行データを追加するDataTableオブジェクト
         public InArgument<DataTable> DataTable { get; set; }
 
 

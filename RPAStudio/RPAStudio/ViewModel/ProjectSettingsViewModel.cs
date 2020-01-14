@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System;
 using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -147,14 +148,16 @@ namespace RPAStudio.ViewModel
             if (string.IsNullOrEmpty(value))
             {
                 IsProjectNameCorrect = false;
-                ProjectNameValidatedWrongTip = "名称不能为空";
+                // 名称不能为空
+                ProjectNameValidatedWrongTip = ResxIF.GetString("NameIsRequired");
             }
             else
             {
                 if (value.Contains(@"\") || value.Contains(@"/"))
                 {
                     IsProjectNameCorrect = false;
-                    ProjectNameValidatedWrongTip = "名称不能有非法字符";
+                    // 名称不能有非法字符
+                    ProjectNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                 }
                 else
                 {
@@ -170,7 +173,8 @@ namespace RPAStudio.ViewModel
                     {
                         // file name is not valid
                         IsProjectNameCorrect = false;
-                        ProjectNameValidatedWrongTip = "名称不能有非法字符";
+                        // 名称不能有非法字符
+                        ProjectNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                     }
                     else
                     {

@@ -24,9 +24,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [Browsable(false)]
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/vba.png"; } }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("VBA名称")]
+        [Localize.LocalizedDisplayName("DisplayName43")] //VBA名称 //VBA name //VBA名
         [Browsable(true)]
         public InArgument<string> VBAName
         {
@@ -34,9 +34,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         private Dictionary<string, Argument> parameters;
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("参数")]
+        [Localize.LocalizedDisplayName("DisplayName10")] //参数 //parameter //パラメータ
         public Dictionary<string, Argument> Parameters
         {
             get
@@ -53,8 +53,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
         }
 
-        [Category("输出")]
-        [DisplayName("返回值")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName44")] //返回值 //return value //戻り値
         [Browsable(true)]
         public OutArgument<string> ReturnValue
         {

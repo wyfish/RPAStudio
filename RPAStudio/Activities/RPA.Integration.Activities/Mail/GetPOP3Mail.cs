@@ -45,48 +45,48 @@ namespace RPA.Integration.Activities.Mail
         public static string GetConfig { get { return "GetConfig"; } }
 
 
-        [Category("登录")]
+        [Localize.LocalizedCategory("Category16")] //登录 //Log in //ログイン
         [RequiredArgument]
-        [DisplayName("邮件账户")]
-        [Description("用于发送邮件的电子邮件帐户")]
+        [Localize.LocalizedDisplayName("DisplayName64")] //邮件账户 //Mail account //メールアカウント
+        [Localize.LocalizedDescription("Description21")] //用于发送邮件的电子邮件帐户 //Email account used to send mail //メールの送信に使用されるメールアカウント
         public InArgument<string> Email { get; set; }
-        [Category("登录")]
+        [Localize.LocalizedCategory("Category16")] //登录 //Log in //ログイン
         [RequiredArgument]
-        [DisplayName("密码")]
-        [Description("用于发送邮件的电子邮件帐户的密码")]
+        [Localize.LocalizedDisplayName("DisplayName57")] //密码 //password //パスワード
+        [Localize.LocalizedDescription("Description22")] //用于发送邮件的电子邮件帐户的密码 //The password for the email account used to send the message //メッセージの送信に使用される電子メールアカウントのパスワード
         public InArgument<string> Password { get; set; }
 
 
-        [Category("主机")]
+        [Localize.LocalizedCategory("DisplayName54")] //主机 //Host //ホスト
         [RequiredArgument]
-        [DisplayName("服务器")]
-        [Description("使用的电子邮件服务器主机")]
+        [Localize.LocalizedDisplayName("Category13")] //服务器 //server //サーバー
+        [Localize.LocalizedDescription("Description23")] //使用的电子邮件服务器主机 //Email server host used //使用されているメールサーバーホスト
         public InArgument<string> Server { get; set; }
-        [Category("主机")]
-        [DisplayName("端口")]
-        [Description("电子邮件将通过的端口")]
+        [Localize.LocalizedCategory("DisplayName54")] //主机 //Host //ホスト
+        [Localize.LocalizedDisplayName("DisplayName55")] //端口 //port //港
+        [Localize.LocalizedDescription("Description24")] //电子邮件将通过的端口 //The port that the email will pass through //電子メールが通過するポート
         public InArgument<Int32> Port { get; set; }
 
 
 
-        [Category("选项")]
-        [DisplayName("安全连接")]
-        [Description("指定用于连接的SSL和/或TLS加密")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName66")] //安全连接 //Secure connection //安全な接続
+        [Localize.LocalizedDescription("Description26")] //指定用于连接的SSL和/或TLS加密 //Specify SSL and/or TLS encryption for the connection //接続にSSLおよび/またはTLS暗号化を指定する
         public SecureSocketOptions SecureConnection { get; set; }
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("检索消息数")]
-        [Description("从列表顶部开始检索的消息数")]
+        [Localize.LocalizedDisplayName("DisplayName67")] //检索消息数 //Retrieve the number of messages //メッセージの数を取得する
+        [Localize.LocalizedDescription("Description27")] //从列表顶部开始检索的消息数 //Number of messages retrieved from the top of the list //リストの先頭から取得されたメッセージの数
         public InArgument<Int32> Counts { get; set; }
-        [Category("选项")]
-        [DisplayName("标记消息删除")]
-        [Description(" 指定是否应将读取的消息标记为删除")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName68")] //标记消息删除 //Tag message deletion //タグメッセージの削除
+        [Localize.LocalizedDescription("Description28")] // 指定是否应将读取的消息标记为删除 //Specifies whether the read message should be marked for deletion //読み取りメッセージに削除のマークを付けるかどうかを指定します
         public bool DeleteMessages { get; set; }
 
 
-        [Category("输出")]
-        [DisplayName("消息")]
-        [Description("将检索到的消息作为MailMessage对象的集合")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName75")] //消息 //Message //メッセージ
+        [Localize.LocalizedDescription("Description34")] //将检索到的消息作为MailMessage对象的集合 //Use the retrieved message as a collection of MailMessage objects //取得したメッセージをMailMessageオブジェクトのコレクションとして使用します
         public OutArgument<List<MimeMessage>> MailMsgList { get; set; }
 
 
@@ -100,20 +100,20 @@ namespace RPA.Integration.Activities.Mail
         }
 
 
-        [Category("筛选")]
-        [DisplayName("主题关键字")]
-        [Description("根据邮件主题筛选相应的邮件")]
+        [Localize.LocalizedCategory("Category17")] //筛选 //Filter //スクリーニング
+        [Localize.LocalizedDisplayName("DisplayName72")] //主题关键字 //Subject keyword //件名キーワード
+        [Localize.LocalizedDescription("Description31")] //根据邮件主题筛选相应的邮件 //Filter the corresponding message based on the subject of the message //メッセージの件名に基づいて、対応するメッセージをフィルタリングします
         public InArgument<String> MailTopicKey { get; set; }
 
 
-        [Category("筛选")]
-        [DisplayName("发件人关键字")]
-        [Description("根据发件人地址筛选相应的邮件")]
+        [Localize.LocalizedCategory("Category17")] //筛选 //Filter //スクリーニング
+        [Localize.LocalizedDisplayName("DisplayName73")] //发件人关键字 //Sender keyword //送信者キーワード
+        [Localize.LocalizedDescription("Description32")] //根据发件人地址筛选相应的邮件 //Filter the corresponding message based on the sender's address //送信者のアドレスに基づいて対応するメッセージをフィルタリングする
         public InArgument<String> MailSenderKey { get; set; }
 
-        [Category("筛选")]
-        [DisplayName("内容关键字")]
-        [Description("根据邮件超文本内容筛选相应的邮件")]
+        [Localize.LocalizedCategory("Category17")] //筛选 //Filter //スクリーニング
+        [Localize.LocalizedDisplayName("DisplayName74")] //内容关键字 //Content keyword //コンテンツキーワード
+        [Localize.LocalizedDescription("Description33")] //根据邮件超文本内容筛选相应的邮件 //Filter the corresponding message based on the message's hypertext content //メッセージのハイパーテキストコンテンツに基づいて対応するメッセージをフィルター処理する
         public InArgument<String> MailTextBodyKey { get; set; }
 
 

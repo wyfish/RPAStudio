@@ -4,6 +4,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library">
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -26,10 +27,10 @@
 
     <pslc:CollapsableActivity >
         <Grid>
-            <sapv:ExpressionTextBox
+            <sapv:ExpressionTextBox x:Uid="SpecifyTheURL"
                     Expression="{Binding Path=ModelItem.NevaUrl, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                     ExpressionType="sys:String"
-                    HintText="指定浏览器中打开的URL"
+                    HintText="{x:Static lclz:Resources.SpecifyTheURL_HintText}"
                     OwnerActivity="{Binding Path=ModelItem}"
                     Grid.Row="0"
                     MaxWidth="260"

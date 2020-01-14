@@ -15,10 +15,10 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
-        [DisplayName("文档内容")]
-        [Description("获取到Word文档中的全部内容文字")]
+        [Localize.LocalizedDisplayName("DisplayName130")] //文档内容 //Document content //文書の内容
+        [Localize.LocalizedDescription("Description73")] //获取到Word文档中的全部内容文字 //Get all the content text in a Word document //Word文書のすべてのコンテンツテキストを取得する
         [Browsable(true)]
         public OutArgument<string> WordContent { get; set; }
 

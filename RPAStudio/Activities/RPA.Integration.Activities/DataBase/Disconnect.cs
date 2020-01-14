@@ -16,10 +16,10 @@ namespace RPA.Integration.Activities.Database
             }
         }
 
-        [Category("断开连接")]
+        [Localize.LocalizedCategory("Category3")] //断开连接 //Disconnect //切断する
         [RequiredArgument]
-        [Description("要关闭的数据库连接(DatabaseConnection变量)")]
-        [DisplayName("数据库连接")]
+        [Localize.LocalizedDescription("Description4")] //要关闭的数据库连接(DatabaseConnection变量) //Database connection to close (DatabaseConnection variable) //クローズするデータベース接続（DatabaseConnection変数）
+        [Localize.LocalizedDisplayName("Description3")] //数据库连接 //Database Connectivity //データベース接続
         public InArgument<DatabaseConnection> DBConn { get; set; }
 
         [Browsable(false)]

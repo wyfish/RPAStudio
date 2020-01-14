@@ -14,8 +14,8 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<string> _TextContent;
-        [Category("选项")]
-        [DisplayName("文本内容")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName139")] //文本内容 //Text content //テキストコンテンツ
         [Browsable(true)]
         public InArgument<string> TextContent
         {
@@ -30,9 +30,9 @@ namespace RPA.Integration.Activities.WordPlugins
         }
 
         InArgument<Int32> _NewLine = 0;
-        [Category("选项")]
-        [DisplayName("换行")]
-        [Description("写入文本前写入的行数")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName138")] //换行 //Wrap //ラップ
+        [Localize.LocalizedDescription("Description74")] //写入文本前写入的行数 //The number of lines written before writing text //テキストを書き込む前に書き込まれた行数
         [Browsable(true)]
         public InArgument<Int32> NewLine
         {

@@ -17,23 +17,23 @@ namespace RPA.Integration.Activities.Database
             }
         }
 
-        [Category("连接配置")]
+        [Localize.LocalizedCategory("Category1")] //连接配置 //Connection configuration //接続構成
         [RequiredArgument]
-        [Description("用于建立数据库连接的连接字符串")]
-        [DisplayName("连接字符串")]
+        [Localize.LocalizedDescription("Description1")] //用于建立数据库连接的连接字符串 //The connection string used to establish a database connection //データベース接続の確立に使用される接続文字列
+        [Localize.LocalizedDisplayName("DisplayName1")] //连接字符串 //Connection string //接続文字列
         public InArgument<string> ConnectionString { get; set; }
 
 
-        [Category("连接配置")]
+        [Localize.LocalizedCategory("Category1")] //连接配置 //Connection configuration //接続構成
         [RequiredArgument]
-        [Description("用于访问数据库的数据库提供程序的名称")]
-        [DisplayName("程序名称")]
+        [Localize.LocalizedDescription("Description2")] //用于访问数据库的数据库提供程序的名称 //The name of the database provider used to access the database //データベースへのアクセスに使用されるデータベースプロバイダーの名前
+        [Localize.LocalizedDisplayName("DisplayName2")] //程序名称 //Program name //プログラム名
         public InArgument<string> ProviderName { get; set; }
 
 
-        [Category("输出")]
-        [Description("数据库连接")]
-        [DisplayName("用于保存数据库连接的变量(仅支持DatabaseConnection)")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDescription("Description3")] //数据库连接 //Database Connectivity //データベース接続
+        [Localize.LocalizedDisplayName("DisplayName3")] //用于保存数据库连接的变量(仅支持DatabaseConnection) //Variable for saving database connections (DatabaseConnection only) //データベース接続を保存するための変数（DatabaseConnectionのみ）
         public OutArgument<DatabaseConnection> DatabaseConnection { get; set; }
 
         [Browsable(false)]

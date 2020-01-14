@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
-    
+    xmlns:lclz="clr-namespace:RPA.Script.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     xmlns:psla="clr-namespace:Plugins.Shared.Library.Attached;assembly=Plugins.Shared.Library"
     psla:ActivityDesignerAttached.Icon="Resources/Python/python.png"
@@ -24,8 +24,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="EditCodeBtn" Width="100" Height="25" HorizontalAlignment="Center" Click="EditCodeBtn_Click" >编辑代码</Button>
-                <Button x:Name="EditArgumentsBtn"  Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="EditArgumentsBtn_Click" >编辑参数</Button>
+                <Button Content="{x:Static lclz:Resources.EditCode}" x:Name="EditCodeBtn" Width="100" Height="25" HorizontalAlignment="Center" Click="EditCodeBtn_Click"/>
+                <Button Content="{x:Static lclz:Resources.EditParameters}" x:Name="EditArgumentsBtn"  Width="100" Height="25" HorizontalAlignment="Center" Grid.Column="1" Click="EditArgumentsBtn_Click"/>
             </Grid>
         </Grid>
     </pslc:CollapsableActivity>

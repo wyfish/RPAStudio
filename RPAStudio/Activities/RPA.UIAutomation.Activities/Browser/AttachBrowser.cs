@@ -32,35 +32,35 @@ namespace RPA.UIAutomation.Activities.Browser
         public static string OpenBrowsersPropertyTag { get { return "AttachBrowser"; } }
 
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("浏览器")]
-        [Description("要附加的现有浏览器变量")]
+        [Localize.LocalizedDisplayName("DisplayName11")] //浏览器 //Browser //ブラウザ
+        [Localize.LocalizedDescription("Description14")] //要附加的现有浏览器变量 //Existing browser variables to attach //添付する既存のブラウザ変数
         public InArgument<Browser> currBrowser { get; set; }
 
-        [Category("输入")]
-        [DisplayName("超时时间")]
-        [Description("指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName12")] //超时时间 //overtime time //タイムアウト
+        [Localize.LocalizedDescription("Description15")] //指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です
         public InArgument<Int32> TimeoutMS { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [OverloadGroup("G2")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("UI选择器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName13")] //UI选择器 //UI selector //UIセレクター
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("输出")]
-        [DisplayName("UI浏览器")]
-        [Description("活动返回的Browser变量")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName14")] //UI浏览器 //UI browser //UIブラウザー
+        [Localize.LocalizedDescription("Description16")] //活动返回的Browser变量 //The Browser variable returned by the activity //アクティビティによって返されるブラウザ変数
         [Browsable(true)]
         public OutArgument<Browser> UiBrowser
         {
@@ -68,10 +68,10 @@ namespace RPA.UIAutomation.Activities.Browser
             set;
         }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("浏览器类型")]
-        [Description("选择要使用的浏览器类型。可以使用以下选项：IE，Firefox，Chrome")]
+        [Localize.LocalizedDisplayName("DisplayName15")] //浏览器类型 //Browser type //ブラウザの種類
+        [Localize.LocalizedDescription("Description17")] //选择要使用的浏览器类型。可以使用以下选项：IE，Firefox，Chrome //Choose the type of browser you want to use.  The following options are available: IE, Firefox, Chrome //使用するブラウザの種類を選択します。 次のオプションが利用可能です：IE、Firefox、Chrome
         public BrowserTypes BrowserType
         {
             get;

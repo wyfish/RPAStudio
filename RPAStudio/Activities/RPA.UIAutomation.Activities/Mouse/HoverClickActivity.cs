@@ -14,43 +14,43 @@ namespace RPA.UIAutomation.Activities.Mouse
         [Browsable(false)]
         public string _DisplayName { get { return "Hover Click"; } }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G2")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIAutomationInfo")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description58")] //输入UIAutomationInfo //Enter UIAutomationInfo //UIAutomationInfoを入力します
         public InArgument<UiElement> Element { get; set; }
 
-        [Category("UI元素矩阵")]
+        [Localize.LocalizedCategory("Category11")] //UI元素矩阵 //UI element matrix //UI要素のマトリックス
         [Browsable(true)]
         public InArgument<Int32> Left { get; set; }
-        [Category("UI元素矩阵")]
+        [Localize.LocalizedCategory("Category11")] //UI元素矩阵 //UI element matrix //UI要素のマトリックス
         [Browsable(true)]
         public InArgument<Int32> Right { get; set; }
-        [Category("UI元素矩阵")]
+        [Localize.LocalizedCategory("Category11")] //UI元素矩阵 //UI element matrix //UI要素のマトリックス
         [Browsable(true)]
         public InArgument<Int32> Top { get; set; }
-        [Category("UI元素矩阵")]
+        [Localize.LocalizedCategory("Category11")] //UI元素矩阵 //UI element matrix //UI要素のマトリックス
         [Browsable(true)]
         public InArgument<Int32> Bottom { get; set; }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description55")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [Category("Common")]
-        [Description("执行活动后的延迟时间(以毫秒为单位)。默认时间为300毫秒。")]
+        [Localize.LocalizedDescription("Description56")] //执行活动后的延迟时间(以毫秒为单位)。默认时间为300毫秒。 //The delay time, in milliseconds, after the activity is executed. The default time is 300 milliseconds. //アクティビティが実行された後のミリ秒単位の遅延。 デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayAfter { get; set;}
 
         [Category("Common")]
-        [Description("延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为300毫秒。")]
+        [Localize.LocalizedDescription("Description57")] //延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为300毫秒。 //The delay time, in milliseconds, before the deferred the activity is executed. The default time is 300 milliseconds. //遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayBefore { get; set; }
 
 
@@ -60,7 +60,7 @@ namespace RPA.UIAutomation.Activities.Mouse
         public InArgument<Int32> offsetY { get; set; }
 
         [Category("Input")]
-        [DisplayName("使用坐标点")]
+        [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
         public bool usePoint { get; set; }
 
         [Browsable(false)]

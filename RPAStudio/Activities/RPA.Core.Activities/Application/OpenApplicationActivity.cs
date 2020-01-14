@@ -17,25 +17,25 @@ namespace RPA.Core.Activities.ApplicationActivity
         public string _DisplayName { get { return "Open Application"; } }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description1")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
         [Category("Common")]
-        [Description("指定在抛出错误之前等待活动运行的时间(以毫秒为单位)。默认值为3000毫秒(3秒)。")]
+        [Localize.LocalizedDescription("Description7")] //指定在抛出错误之前等待活动运行的时间(以毫秒为单位)。默认值为3000毫秒(3秒)。 //Specifies the amount of time, in milliseconds, to wait for an activity to run before throwing an error.  The default is 3000 milliseconds (3 seconds). //エラーをスローする前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは3000ミリ秒（3秒）です。
         [DisplayNameAttribute("Timeout(milliseconds)")]
         public InArgument<Int32> Timeout { get; set; }
 
         [Category("Input")]
-        [Description("可以在启动时传递给应用程序的参数。")]
+        [Localize.LocalizedDescription("Description8")] //可以在启动时传递给应用程序的参数。 //Parameters that can be passed to the application at startup. //起動時にアプリケーションに渡すことができるパラメーター。
         public InArgument<string> Arguments { get; set; }
 
         [Category("Input")]
-        [Description("可以找到要打开的应用程序的可执行文件的完整文件路径。注意:所有字符串都必须放在引号之间。")]
+        [Localize.LocalizedDescription("Description9")] //可以找到要打开的应用程序的可执行文件的完整文件路径。注意:所有字符串都必须放在引号之间。 //You can find the full file path of the executable for the application you want to open.  Note: All strings must be placed between quotes. //開きたいアプリケーションの実行可能ファイルの完全なファイルパスを見つけることができます。 注：すべての文字列は引用符で囲む必要があります。
         [DisplayNameAttribute("FileName")]
         public InArgument<string> ProcessPath { get; set; }
 
         [Category("Options")]
-        [Description("当前工作目录的路径。这个字段只接受字符串变量。注意:所有字符串变量必须放在引号之间。")]
+        [Localize.LocalizedDescription("Description10")] //当前工作目录的路径。这个字段只接受字符串变量。注意:所有字符串变量必须放在引号之间。 //The path to the current working directory.  This field only accepts string variables.  Note: All string variables must be placed between quotes. //現在の作業ディレクトリへのパス。 このフィールドは文字列変数のみを受け入れます。 注：すべての文字列変数は引用符で囲む必要があります。
         public InArgument<string> WorkingDirectory { get; set; }
 
         protected override void CacheMetadata(NativeActivityMetadata metadata)
@@ -72,11 +72,11 @@ namespace RPA.Core.Activities.ApplicationActivity
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category1")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName1")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description3")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
         private System.Windows.Visibility visi = System.Windows.Visibility.Hidden;

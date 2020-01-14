@@ -11,8 +11,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
     public sealed class CellMerge : AsyncCodeActivity
     {
         InArgument<Int32> _CellRow_Begin = 1;
-        [Category("单元格起始")]
-        [DisplayName("行")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
@@ -27,8 +27,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<Int32> _CellColumn_Begin = 1;
-        [Category("单元格起始")]
-        [DisplayName("列")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -42,9 +42,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
         }
 
-        [Category("单元格起始")]
-        [Description("代表单元格名称的VB表达式，如A1")]
-        [DisplayName("单元格名称")]
+        [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
+        [Localize.LocalizedDescription("Description76")] //代表单元格名称的VB表达式，如A1 //VB expression representing the cell name, such as A1 //A1などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName141")] //单元格名称 //Cell Name //セル名
         [Browsable(true)]
         public InArgument<string> CellName_Begin
         {
@@ -52,8 +52,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<Int32> _CellRow_End = 1;
-        [Category("单元格结束")]
-        [DisplayName("行")]
+        [Localize.LocalizedCategory("Category33")] //单元格结束 //End Cell //終了セル
+        [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
         [Browsable(true)]
         public InArgument<Int32> CellRow_End
         {
@@ -73,8 +73,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
             拆分单元格
         }
 
-        [Category("选项")]
-        [DisplayName("合并/拆分")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName142")] //合并/拆分 //Merge / Split //マージ/分割
         [Browsable(true)]
         public CellMergeOrUnMerge cellMergeOrUnMerge
         {
@@ -82,8 +82,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         InArgument<Int32> _CellColumn_End = 1;
-        [Category("单元格结束")]
-        [DisplayName("列")]
+        [Localize.LocalizedCategory("Category33")] //单元格结束 //End Cell //終了セル
+        [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
         [Browsable(true)]
         public InArgument<Int32> CellColumn_End
         {
@@ -97,9 +97,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
         }
 
-        [Category("单元格结束")]
-        [Description("代表单元格名称的VB表达式，如B2")]
-        [DisplayName("单元格名称")]
+        [Localize.LocalizedCategory("Category33")] //单元格结束 //End Cell //終了セル
+        [Localize.LocalizedDescription("Description78")] //代表单元格名称的VB表达式，如B2 //VB expression representing the cell name, such as B2 //B2などのセル名を表すVB式
+        [Localize.LocalizedDisplayName("DisplayName141")] //单元格名称 //Cell Name //セル名
         [Browsable(true)]
         public InArgument<string> CellName_End
         {
@@ -107,10 +107,10 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
 
-        [Category("选项")]
-        [DisplayName("工作表名称")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
         [Browsable(true)]
-        [Description("为空代表当前活动工作表")]
+        [Localize.LocalizedDescription("Description77")] //为空代表当前活动工作表 //Blank represents the currently active worksheet //空白は現在アクティブなワークシートを表します
         public InArgument<string> SheetName
         {
             get;

@@ -19,8 +19,8 @@ namespace RPA.Core.Activities.EnvironmentActivity
         }
 
         Environment.SpecialFolder _selectedMyEnumType = Environment.SpecialFolder.AdminTools;
-        [Category("选项")]
-        [DisplayName("系统文件夹")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName41")] //系统文件夹 //System folder //システムフォルダ
         [Browsable(true)]
         public Environment.SpecialFolder FolderType
         {
@@ -38,9 +38,9 @@ namespace RPA.Core.Activities.EnvironmentActivity
             }
         }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
-        [DisplayName("文件夹路径")]
+        [Localize.LocalizedDisplayName("DisplayName42")] //文件夹路径 //Folder path //フォルダーパス
         [Browsable(true)]
         public OutArgument<string> FolderPath
         {

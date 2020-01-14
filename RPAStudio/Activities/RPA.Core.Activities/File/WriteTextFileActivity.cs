@@ -23,12 +23,12 @@ namespace RPA.Core.Activities.FileActivity
 
         [RequiredArgument]
         [Category("File")]
-        [Description("要写入的文件的路径。")]
+        [Localize.LocalizedDescription("Description101")] //要写入的文件的路径。 //The path to the file to be written. //書き込まれるファイルへのパス。
         public InArgument<string> FileName { get; set; }
 
         [RequiredArgument]
         [Category("Input")]
-        [Description("要写入文件的文本。")]
+        [Localize.LocalizedDescription("Description102")] //要写入文件的文本。 //The text to be written to the file. //ファイルに書き込まれるテキスト。
         public InArgument<string> Text { get; set; }
 
         [Browsable(false)]

@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActivityText" xml:space="preserve">
+    <value>アクティビティ</value>
+  </data>
+  <data name="AddToFavorites" xml:space="preserve">
+    <value>お気に入りに追加</value>
+  </data>
+  <data name="AllPackages" xml:space="preserve">
+    <value>すべてのパッケージ</value>
+  </data>
+  <data name="AllPackagesTip" xml:space="preserve">
+    <value>すべてのパケット送信元アドレスからのパケットの表示または検索</value>
+  </data>
+  <data name="AttributesText" xml:space="preserve">
+    <value>プロパティ</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="CloseContent" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="CodeSnippetText" xml:space="preserve">
+    <value>コードスニペット</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="CopyCtrlC" xml:space="preserve">
+    <value>コピー（Ctrl+C）</value>
+  </data>
+  <data name="CopyText" xml:space="preserve">
+    <value>コピー</value>
+  </data>
+  <data name="CreateText" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="CurrentVersionText" xml:space="preserve">
+    <value>現バージョン</value>
+  </data>
+  <data name="CustomContent" xml:space="preserve">
+    <value>カスタム</value>
+  </data>
+  <data name="CustomPathText" xml:space="preserve">
+    <value>カスタム URL</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DependencyText" xml:space="preserve">
+    <value>依存関係</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>説明</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Error_AlreadyRunning" xml:space="preserve">
+    <value>すでに実行されています。多重起動はできません。</value>
+  </data>
+  <data name="Error_CallDeveloper" xml:space="preserve">
+    <value>プログラム操作中に例外が発生しました。ソフトウェア開発者に連絡してください！</value>
+  </data>
+  <data name="Error_Critical_Exit" xml:space="preserve">
+    <value>プログラムの実行中に重大なエラーが発生し、終了しようとしています。ソフトウェア開発者に連絡してください。</value>
+  </data>
+  <data name="ImportWorkflowDot" xml:space="preserve">
+    <value>ワークフローのインポート…</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>インストール</value>
+  </data>
+  <data name="InstalledText" xml:space="preserve">
+    <value>インストール済み</value>
+  </data>
+  <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
+    <value>プレリリース版を含む</value>
+  </data>
+  <data name="jsonFormatError" xml:space="preserve">
+    <value>プロジェクト構成ファイルproject.jsonのコンテンツの形式が正しくありません</value>
+  </data>
+  <data name="LocalRobotContent" xml:space="preserve">
+    <value>ローカルロボット</value>
+  </data>
+  <data name="Message_SaveConfirm" xml:space="preserve">
+    <value>ファイルが変更されました。ファイル\"{0}\"を保存しますか？</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="NewFolderDot" xml:space="preserve">
+    <value>新しいフォルダー...</value>
+  </data>
+  <data name="NewFolderTitle" xml:space="preserve">
+    <value>新規フォルダ</value>
+  </data>
+  <data name="NewVersionText" xml:space="preserve">
+    <value>新バージョン</value>
+  </data>
+  <data name="OKText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>プロジェクトを開く</value>
+  </data>
+  <data name="OpenProjectDialog" xml:space="preserve">
+    <value>ワークフロープロジェクトファイル|project.json|ワークフローファイル|*.xaml</value>
+  </data>
+  <data name="OpenProjectDir" xml:space="preserve">
+    <value>プロジェクトディレクトリを開く</value>
+  </data>
+  <data name="OpenProjectFolder" xml:space="preserve">
+    <value>プロジェクトフォルダーを開く</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="OperatingRule" xml:space="preserve">
+    <value>運用ルール</value>
+  </data>
+  <data name="OriginalNameText" xml:space="preserve">
+    <value>変更前の名称：</value>
+  </data>
+  <data name="OutlineText" xml:space="preserve">
+    <value>概要</value>
+  </data>
+  <data name="OutputText" xml:space="preserve">
+    <value>出力</value>
+  </data>
+  <data name="PackageManagerTitle" xml:space="preserve">
+    <value>パッケージマネージャ</value>
+  </data>
+  <data name="PathText" xml:space="preserve">
+    <value>パス</value>
+  </data>
+  <data name="ProjectDependencies" xml:space="preserve">
+    <value>プロジェクトの依存関係</value>
+  </data>
+  <data name="ProjectOpenError" xml:space="preserve">
+    <value>プロジェクトオープンエラー！</value>
+  </data>
+  <data name="ProjectSettingsDesc" xml:space="preserve">
+    <value>名前や説明などのプロジェクト関連の構成を変更します</value>
+  </data>
+  <data name="ProjectSettingsTitle" xml:space="preserve">
+    <value>プロジェクト設定</value>
+  </data>
+  <data name="ProjectText" xml:space="preserve">
+    <value>プロジェクト</value>
+  </data>
+  <data name="PublishProjectTitle" xml:space="preserve">
+    <value>プロジェクトをパブリッシュ</value>
+  </data>
+  <data name="ReleaseContent" xml:space="preserve">
+    <value>パブリッシュ</value>
+  </data>
+  <data name="ReleaseLocationText" xml:space="preserve">
+    <value>リリース場所</value>
+  </data>
+  <data name="ReleaseNoteText" xml:space="preserve">
+    <value>リリースノート</value>
+  </data>
+  <data name="ReleaseToText" xml:space="preserve">
+    <value>リリース先</value>
+  </data>
+  <data name="RemoveFromFavorites" xml:space="preserve">
+    <value>お気に入りから削除</value>
+  </data>
+  <data name="RemoveFromList" xml:space="preserve">
+    <value>リストから削除</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="RenameTitle" xml:space="preserve">
+    <value>名前を変更</value>
+  </data>
+  <data name="RunText" xml:space="preserve">
+    <value>実行</value>
+  </data>
+  <data name="RuntimeError" xml:space="preserve">
+    <value>実行時エラー</value>
+  </data>
+  <data name="SearchTextWatermark" xml:space="preserve">
+    <value>検索文字列を入力してください</value>
+  </data>
+  <data name="SetAsMainFile" xml:space="preserve">
+    <value>メインファイルとして設定</value>
+  </data>
+  <data name="SetFromAddress" xml:space="preserve">
+    <value>設定パケットの送信元アドレス</value>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="ShowAvailable" xml:space="preserve">
+    <value>利用可能を表示</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>メッセージの詳細を表示する</value>
+  </data>
+  <data name="ShowFavorites" xml:space="preserve">
+    <value>お気に入りを表示</value>
+  </data>
+  <data name="ShowRecent" xml:space="preserve">
+    <value>最近を表示</value>
+  </data>
+  <data name="TargetNameText" xml:space="preserve">
+    <value>変更後の名称：</value>
+  </data>
+  <data name="UninstallText" xml:space="preserve">
+    <value>アンインストール</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="VersionOnly" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="ViewAllDependencies" xml:space="preserve">
+    <value>現在のプロジェクトのすべての依存関係を表示する</value>
+  </data>
+  <data name="WorkflowCheckError" xml:space="preserve">
+    <value>ワークフローチェックエラー。パラメータ設定を確認してください</value>
+  </data>
+  <data name="WorkflowVerificationOK" xml:space="preserve">
+    <value>ワークフローの検証は正常です</value>
+  </data>
+  <data name="ByText" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="DefaultSourceAddress" xml:space="preserve">
+    <value>デフォルトのパケット送信元アドレス</value>
+  </data>
+  <data name="UserDefinedSourceAddress" xml:space="preserve">
+    <value>ユーザー定義のパケット送信元アドレス</value>
+  </data>
+  <data name="NewPackageSource" xml:space="preserve">
+    <value>新しいパッケージソース</value>
+  </data>
+  <data name="DeletePackageSource" xml:space="preserve">
+    <value>パッケージソースを削除</value>
+  </data>
+  <data name="MoveUpPackageSource" xml:space="preserve">
+    <value>パケットソースを上に移動</value>
+  </data>
+  <data name="MoveDnPackageSource" xml:space="preserve">
+    <value>パケットソースを下に移動</value>
+  </data>
+  <data name="PackageSourceName" xml:space="preserve">
+    <value>パッケージソース名</value>
+  </data>
+  <data name="PacketSourceAddress" xml:space="preserve">
+    <value>パケット送信元アドレス</value>
+  </data>
+  <data name="ChooseLocalSourcePath" xml:space="preserve">
+    <value>ローカルソースパスを選択してください</value>
+  </data>
+  <data name="OperatingText" xml:space="preserve">
+    <value>動作中……</value>
+  </data>
+  <data name="EnterPackageSourceNameHere" xml:space="preserve">
+    <value>ここにパッケージソース名を入力してください</value>
+  </data>
+  <data name="EnterPacketSourceAddressHere" xml:space="preserve">
+    <value>ここにパケットの送信元アドレスを入力してください</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="AddToolTip" xml:space="preserve">
+    <value>ユーザーが設定したパケットソース名とアドレス情報をユーザー定義のパケットソースアドレスリストに保存します</value>
+  </data>
+  <data name="UpdateToolTip" xml:space="preserve">
+    <value>ユーザーが設定したパッケージソース名とアドレス情報を更新します</value>
+  </data>
+  <data name="AcceptLicenseConfirmation" xml:space="preserve">
+    <value>パッケージでは、インストールする前にライセンス条項に同意する必要があります。</value>
+  </data>
+  <data name="DescriptionWithColon" xml:space="preserve">
+    <value>説明：</value>
+  </data>
+  <data name="VersionWithColon" xml:space="preserve">
+    <value>バージョン：</value>
+  </data>
+  <data name="AuthorWithColon" xml:space="preserve">
+    <value>著者：</value>
+  </data>
+  <data name="LicenseWithColon" xml:space="preserve">
+    <value>ライセンス：</value>
+  </data>
+  <data name="ViewLicenseInformation" xml:space="preserve">
+    <value>ライセンス情報を表示する</value>
+  </data>
+  <data name="ReleaseDateWithColon" xml:space="preserve">
+    <value>リリース日：</value>
+  </data>
+  <data name="ProjectAddress" xml:space="preserve">
+    <value>プロジェクトアドレス：</value>
+  </data>
+  <data name="ViewProjectInformation" xml:space="preserve">
+    <value>プロジェクト情報を表示する</value>
+  </data>
+  <data name="TagWithColon" xml:space="preserve">
+    <value>タグ：</value>
+  </data>
+  <data name="DependenciesWithColon" xml:space="preserve">
+    <value>依存関係：</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>名前は空にできません</value>
+  </data>
+  <data name="NameHasIlligalCharacter" xml:space="preserve">
+    <value>名前に不正な文字を含めることはできません</value>
+  </data>
+  <data name="DeleteDirectoryConfirmation" xml:space="preserve">
+    <value>ディレクトリ\"{0} \"とそのすべての内容を削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteFileConfirmation" xml:space="preserve">
+    <value>ファイル\"{0} \"を削除してもよろしいですか？</value>
+  </data>
+  <data name="PronptText" xml:space="preserve">
+    <value>ヒント</value>
+  </data>
+  <data name="NoUnusedScreenshotsFound" xml:space="preserve">
+    <value>クリーニングする必要がある未使用のスクリーンショットが見つかりません</value>
+  </data>
+  <data name="UnusedScreenshotsSuccessfullyRemoved" xml:space="preserve">
+    <value>{0}使用されていないスクリーンショットは正常に削除されました</value>
+  </data>
+  <data name="MB_CannotOpenProjectConfigFile" xml:space="preserve">
+    <value>プロジェクト構成ファイル\"{0} \"を開けませんでした。最近のプロジェクトリストからこのエントリを削除しますか？</value>
+  </data>
+  <data name="SameNameDirectoryAlreadyExists" xml:space="preserve">
+    <value>同じ名前のディレクトリが既に存在します</value>
+  </data>
+  <data name="SameNameFileAlreadyExists" xml:space="preserve">
+    <value>同じ名前のファイルが既に存在します</value>
+  </data>
+  <data name="SelectDirectoryToAddCodeSnippet" xml:space="preserve">
+    <value>コードスニペットに追加するディレクトリを選択してください</value>
+  </data>
+  <data name="MessageDetails" xml:space="preserve">
+    <value>メッセージの詳細</value>
+  </data>
+  <data name="TheFileAlreadyExists" xml:space="preserve">
+    <value>指定されたファイルは既に存在します</value>
+  </data>
+  <data name="PathCannotBeEmpty" xml:space="preserve">
+    <value>パスは空にできません</value>
+  </data>
+  <data name="ThePathDoesNotExist" xml:space="preserve">
+    <value>指定されたパスは存在しません</value>
+  </data>
+  <data name="NotInSubDirectory" xml:space="preserve">
+    <value>指定された場所は、プロジェクトが配置されているディレクトリまたはそのサブディレクトリにある必要があります</value>
+  </data>
+  <data name="AttributeValue" xml:space="preserve">
+    <value>属性値</value>
+  </data>
+  <data name="MB_CloseWhileDebugging" xml:space="preserve">
+    <value>現在のドキュメントはデバッグ中です。デバッグを終了して\"{0} \"を閉じてもよろしいですか？</value>
+  </data>
+  <data name="VariableTracking" xml:space="preserve">
+    <value>変数トラッキング</value>
+  </data>
+  <data name="NameFieldCheckSucceeded" xml:space="preserve">
+    <value>名前フィールドのチェックに成功しました</value>
+  </data>
+  <data name="PathFieldCheckSucceeded" xml:space="preserve">
+    <value>パスフィールドのチェックに成功しました</value>
+  </data>
+  <data name="SameNameProjectAlreadyExists" xml:space="preserve">
+    <value>同じ名前のプロジェクトが既に存在します</value>
+  </data>
+  <data name="SelectPathToCreateNewProject" xml:space="preserve">
+    <value>新しいプロジェクトを作成する場所を選択してください</value>
+  </data>
+  <data name="MB_FailedToCreateProjectDirectory" xml:space="preserve">
+    <value>プロジェクトディレクトリの作成に失敗しました。確認してください</value>
+  </data>
+  <data name="NotSupportBelowV2" xml:space="preserve">
+    <value>現在のプログラムは、V2.0以下のプロジェクトの古いバージョンをサポートしていません！</value>
+  </data>
+  <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
+    <value>ソフトウェアは認証テストに失敗しました。製品を登録してください！</value>
+  </data>
+</root>

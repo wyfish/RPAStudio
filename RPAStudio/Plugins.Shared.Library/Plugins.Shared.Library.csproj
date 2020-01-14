@@ -244,6 +244,11 @@
     <Compile Include="Librarys\RSACommon.cs" />
     <Compile Include="Librarys\TableFormatter.cs" />
     <Compile Include="Librarys\TableOptions.cs" />
+    <Compile Include="Localization\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
     <Compile Include="Nuget\NuGetPackageController.cs" />
     <Compile Include="Nuget\NuGetPackageControllerLogger.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -321,6 +326,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Editors\Highlighting\Python-Mode.xshd" />
+    <None Include="Nuget\NuGet.Default_zh.Config" />
+    <None Include="Nuget\NuGet.Default_ja.Config" />
     <None Include="Nuget\NuGet.Default.Config" />
     <None Include="Nuget\NuGet.User.Config" />
     <None Include="packages.config">
@@ -329,6 +336,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CodeCompletion\ClassBrowserIcons\Icons.16x16.Event.png" />
+    <EmbeddedResource Include="Localization\Strings.ja-JP.resx" />
+    <EmbeddedResource Include="Localization\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Strings.zh-CN.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

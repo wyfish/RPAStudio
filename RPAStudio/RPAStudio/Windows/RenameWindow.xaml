@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPAStudio.Windows"
+        xmlns:lclz="clr-namespace:RPAStudio.Localization"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         DataContext="{Binding Rename, Source={StaticResource Locator}}"
         Icon="/Resources/Ico/RPAStudio.ico"
-        Title="重命名" Height="190" Width="415" ResizeMode="NoResize">
+        Title="{x:Static lclz:Strings.RenameTitle}" Height="190" Width="415" ResizeMode="NoResize">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -25,7 +26,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.Column="0">
-            <TextBlock FontSize="14" VerticalAlignment="Center">原始名：</TextBlock>
+            <TextBlock FontSize="14" VerticalAlignment="Center" Text="{x:Static lclz:Strings.OriginalNameText}" />
         </Grid>
         <Grid Grid.Row="0" Grid.Column="1">
             <Border Margin="0,5" BorderBrush="#ABABAB" BorderThickness="1">
@@ -34,11 +35,11 @@
             
         </Grid>
         <Grid Grid.Row="1" Grid.Column="0">
-            <TextBlock FontSize="14" VerticalAlignment="Center">目标名：</TextBlock>
+            <TextBlock FontSize="14" VerticalAlignment="Center" Text="{x:Static lclz:Strings.TargetNameText}"/>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
             <Border Margin="0,5" BorderBrush="#ABABAB" BorderThickness="1" Visibility="{Binding IsDstNameCorrect,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                <Image ToolTip="名称字段校验成功" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
+                <Image ToolTip="{x:Static lclz:Strings.NameFieldCheckSucceeded}" Width="32" Source="pack://application:,,,/Resources/Image/Windows/NewProject/correct.png" HorizontalAlignment="Right"></Image>
             </Border>
 
             <Border Margin="0,5" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsDstNameCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
@@ -57,8 +58,8 @@
         </Grid>
         <Grid Grid.Row="2" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25"  Content="确定" Command="{Binding OkCommand}" IsDefault="True" ></Button>
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25"  Content="取消" Command="{Binding CancelCommand}" Margin="15,0,10,0" ></Button>
+                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25"  Content="{x:Static lclz:Strings.OKText}" Command="{Binding OkCommand}" IsDefault="True" ></Button>
+                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25"  Content="{x:Static lclz:Strings.CancelText}" Command="{Binding CancelCommand}" Margin="15,0,10,0" ></Button>
             </StackPanel>
         </Grid>
     </Grid>

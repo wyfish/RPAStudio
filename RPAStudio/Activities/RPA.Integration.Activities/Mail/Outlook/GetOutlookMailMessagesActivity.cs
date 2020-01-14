@@ -15,8 +15,8 @@ namespace RPA.Integration.Activities.Mail
         private const int DefaultTimeoutMS = 30000;
 
         [Category("Common")]
-        [DisplayName("超时时间(毫秒)")]
-        [Description(" 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）")]
+        [Localize.LocalizedDisplayName("DisplayName96")] //超时时间(毫秒) //Timeout (ms) //タイムアウト（ミリ秒）
+        [Localize.LocalizedDescription("Description62")] // 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) //エラーが発生する前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは30000ミリ秒（30秒）です
         public InArgument<int> TimeoutMS
         {
             get;
@@ -24,7 +24,7 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("获取邮件个数")]
+        [Localize.LocalizedDisplayName("DisplayName97")] //获取邮件个数 //Get the number of messages //メッセージの数を取得する
         public InArgument<int> Top
         {
             get;
@@ -32,7 +32,7 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Output")]
-        [DisplayName("输出邮件列表")]
+        [Localize.LocalizedDisplayName("DisplayName98")] //输出邮件列表 //Output mailing list //メーリングリストを出力する
         public OutArgument<List<MailMessage>> Messages
         {
             get;
@@ -41,8 +41,8 @@ namespace RPA.Integration.Activities.Mail
 
 
         [Category("Input")]
-        [DisplayName("邮件目录")]
-        [Description("从哪个邮件目录去获取邮件")]
+        [Localize.LocalizedDisplayName("DisplayName99")] //邮件目录 //Mail directory //メールディレクトリ
+        [Localize.LocalizedDescription("Description63")] //从哪个邮件目录去获取邮件 //From which mail directory to get mail //どのメールディレクトリからメールを取得するか
         public InArgument<string> MailFolder
         {
             get;
@@ -50,8 +50,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("账户")]
-        [Description("Outlook账户名")]
+        [Localize.LocalizedDisplayName("DisplayName100")] //账户 //Account //アカウント
+        [Localize.LocalizedDescription("Description60")] //Outlook账户名 //Outlook account name //Outlookアカウント名
         public InArgument<string> Account
         {
             get;
@@ -59,8 +59,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("过滤器")]
-        [Description("只有符合过滤条件的邮件才会被获取")]
+        [Localize.LocalizedDisplayName("DisplayName101")] //过滤器 //filter //フィルター
+        [Localize.LocalizedDescription("Description64")] //只有符合过滤条件的邮件才会被获取 //Only messages that match the filter will be retrieved. //フィルターに一致するメッセージのみが取得されます。
         public InArgument<string> Filter
         {
             get;
@@ -68,7 +68,7 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("获取附件")]
+        [Localize.LocalizedDisplayName("DisplayName102")] //获取附件 //Get attachment //添付ファイルを取得
         [Browsable(false)]
         public bool GetAttachements
         {
@@ -77,8 +77,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("只获取未读邮件")]
-        [Description("是否只获取未读邮件，默认打勾")]
+        [Localize.LocalizedDisplayName("DisplayName103")] //只获取未读邮件 //Get only unread messages //未読メッセージのみを取得する
+        [Localize.LocalizedDescription("Description65")] //是否只获取未读邮件，默认打勾 //Whether to get only unread mail, check by default //未読メールのみを取得するかどうか、デフォルトでチェックする
         public bool OnlyUnreadMessages
         {
             get;
@@ -86,8 +86,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Options")]
-        [DisplayName("标记为已读")]
-        [Description("是否将接收到的邮件自动标记成已读")]
+        [Localize.LocalizedDisplayName("DisplayName104")] //标记为已读 //Mark as read //既読にする
+        [Localize.LocalizedDescription("Description66")] //是否将接收到的邮件自动标记成已读 //Whether to automatically mark received messages as read //受信したメッセージを自動的に既読にするかどうか
         public bool MarkAsRead
         {
             get;

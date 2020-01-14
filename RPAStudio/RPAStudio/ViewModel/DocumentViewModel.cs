@@ -1,14 +1,4 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
-using log4net;
-using Newtonsoft.Json.Linq;
-using Plugins.Shared.Library;
-using RPAStudio.DataManager;
-using RPAStudio.Executor;
-using RPAStudio.ExpressionEditor;
-using RPAStudio.Librarys;
-using System;
+﻿using System;
 using System.Activities;
 using System.Activities.Presentation;
 using System.Activities.Presentation.Hosting;
@@ -21,6 +11,17 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Windows;
 using System.Linq;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using log4net;
+using Newtonsoft.Json.Linq;
+using Plugins.Shared.Library;
+using RPAStudio.DataManager;
+using RPAStudio.Executor;
+using RPAStudio.ExpressionEditor;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -322,7 +323,8 @@ namespace RPAStudio.ViewModel
         {
             if (IsDebugging)
             {
-                var ret = MessageBox.Show(App.Current.MainWindow, string.Format("当前文档正在被调试，确定终止调试并关闭\"{0}\"吗？", XamlPath), "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
+                // 当前文档正在被调试，确定终止调试并关闭\"{0}\"吗？
+                var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("MB_CloseWhileDebugging"), XamlPath), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
                 if (ret == MessageBoxResult.Yes)
                 {
                     ViewModelLocator.Instance.Main.StopWorkflowCommand.Execute(null);
@@ -337,7 +339,8 @@ namespace RPAStudio.ViewModel
             bool isClose = true;
             if (IsDirty)
             {
-                var ret = MessageBox.Show(App.Current.MainWindow, string.Format("文件有修改，需要保存文件\"{0}\"吗？", XamlPath), "询问", MessageBoxButton.YesNoCancel, MessageBoxImage.Question, MessageBoxResult.Yes);
+                //var ret = MessageBox.Show(App.Current.MainWindow, string.Format("文件有修改，需要保存文件\"{0}\"吗？", XamlPath), "询问", MessageBoxButton.YesNoCancel, MessageBoxImage.Question, MessageBoxResult.Yes);
+                var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("Message_SaveConfirm"), XamlPath), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNoCancel, MessageBoxImage.Question, MessageBoxResult.Yes);
 
                 if (ret == MessageBoxResult.Yes)
                 {

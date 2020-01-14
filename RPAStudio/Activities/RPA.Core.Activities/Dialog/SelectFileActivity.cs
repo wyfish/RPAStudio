@@ -40,7 +40,7 @@ namespace RPA.Core.Activities.DialogActivity
             }
         }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [DisplayNameAttribute("SelectedFile")]
         public OutArgument<string> SelectedFile { get; set; }
 

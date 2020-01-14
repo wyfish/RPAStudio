@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+  <Group Name="系统" >
+    <Group Name="文件">
+      <Activity Name="增加行" Icon="Resources/File/appline.png" TypeOf="RPA.Core.Activities.FileActivity.AppendLineActivity,RPA.Core.Activities" ToolTip="将指定的字符串追加到文件中，如果该文件不存在，则创建该文件。" />
+      <Activity Name="复制文件" Icon="Resources/File/copyfile.png" TypeOf="RPA.Core.Activities.FileActivity.CopyFileActivity,RPA.Core.Activities" ToolTip="将文件从指定位置复制到另一个位置。" />
+      <Activity Name="创建文件夹" Icon="Resources/File/createdir.png" TypeOf="RPA.Core.Activities.FileActivity.CreateDirectoryActivity,RPA.Core.Activities" ToolTip="在指定位置创建目录。" />
+      <Activity Name="创建文件" Icon="Resources/File/newfile.png" TypeOf="RPA.Core.Activities.FileActivity.CreateFileActivity,RPA.Core.Activities" ToolTip="在指定位置创建文件。" />
+      <Activity Name="删除" Icon="Resources/File/delete.png" TypeOf="RPA.Core.Activities.FileActivity.DeleteActivity,RPA.Core.Activities" ToolTip="删除指定位置的文件或文件夹。" />
+      <Activity Name="移动文件" Icon="Resources/File/movefile.png" TypeOf="RPA.Core.Activities.FileActivity.MoveFileActivity,RPA.Core.Activities" ToolTip="将文件从指定位置移动到另一个位置。" />
+      <Activity Name="路径存在" Icon="Resources/File/fileexist.png" TypeOf="RPA.Core.Activities.FileActivity.PathExistsActivity,RPA.Core.Activities" ToolTip="检查指定的路径是否存在。该路径可以表示文件路径或目录路径。" />
+      <Activity Name="读取文本文件" Icon="Resources/File/read.png" TypeOf="RPA.Core.Activities.FileActivity.ReadTextFileActivity,RPA.Core.Activities" ToolTip="从指定文件中读取所有字符。" />
+      <Activity Name="写入文本文件" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.WriteTextFileActivity,RPA.Core.Activities" ToolTip="将指定的文本写入文件,已存在的文本被覆盖。" />
+      <Activity Name="文件改变事件" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.FileChangeTriggerActivity,RPA.Core.Activities" ToolTip="文件改变事件。" />
+    </Group>
+    <Group Name="剪贴板">
+      <Activity Name="拷贝选择的文本" Icon="Resources/Clipboard/copyselecttext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.CopySelectTextActivity,RPA.Core.Activities" ToolTip="使用剪贴板功能获取选定的文本。" />
+      <Activity Name="从剪贴板获取文本" Icon="Resources/Clipboard/gettext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.GetFromClipboardActivity,RPA.Core.Activities" ToolTip="从剪贴板中检索数据。" />
+      <Activity Name="设置剪贴板" Icon="Resources/Clipboard/setclipboard.png" TypeOf="RPA.Core.Activities.ClipboardActivity.SetToClipboardActivity,RPA.Core.Activities" ToolTip="将指定的文本/文件放在剪贴板上。" />
+    </Group>
+    <Group Name="应用程序">
+      <Activity Name="关闭应用程序" Icon="Resources/Application/close.png" TypeOf="RPA.Core.Activities.ApplicationActivity.CloseApplicationActivity,RPA.Core.Activities" ToolTip="关闭与指定UI元素对应的应用程序。" />
+      <Activity Name="获取进程" Icon="Resources/Application/process.png" TypeOf="RPA.Core.Activities.ApplicationActivity.GetProcessActivity,RPA.Core.Activities" ToolTip="获取所有正在运行的进程的列表。" />
+      <Activity Name="杀死进程" Icon="Resources/Application/killprocess.png" TypeOf="RPA.Core.Activities.ApplicationActivity.KillProcessActivity,RPA.Core.Activities" ToolTip="终止指定的进程。" />
+      <!--<Activity Name="打开应用程序" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.OpenApplicationActivity,RPA.Core.Activities" ToolTip="启动指定应用程序并在其中执行多个操作的容器。此外，它还可以将参数列表传递给应用程序。" />-->
+      <Activity Name="启动进程" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.StartProcessActivity,RPA.Core.Activities" ToolTip="启动指定的应用程序，并可以选择向其传递参数列表。" />
+    </Group>
+    <Group Name="对话框">
+      <Activity Name="标注" Icon="Resources/Dialog/callout.png" TypeOf="RPA.Core.Activities.DialogActivity.CalloutActivity,RPA.Core.Activities" ToolTip="在指定的UI元素上显示带有标题和文本的弹出窗口，持续一定时间。" />
+      <Activity Name="自定义输入" Icon="Resources/Dialog/custom_input.png" TypeOf="RPA.Core.Activities.DialogActivity.CustomInputActivity,RPA.Core.Activities" ToolTip="显示将数据发送回工作流的HTML文件。" />
+      <Activity Name="输入对话框" Icon="Resources/Dialog/inputdialog.png" TypeOf="RPA.Core.Activities.DialogActivity.InputDialogActivity,RPA.Core.Activities" ToolTip="显示一个对话框，用标签消息和输入字段提示用户。" />
+      <Activity Name="对话框" Icon="Resources/Dialog/messagebox.png" TypeOf="RPA.Core.Activities.DialogActivity.MessageBoxActivity,RPA.Core.Activities" ToolTip="显示带有带有按钮选项的给定文本的消息框。" />
+      <Activity Name="选择文件" Icon="Resources/Dialog/selectfile.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFileActivity,RPA.Core.Activities" ToolTip="打开对话框以选择文件。" />
+      <Activity Name="选择文件夹" Icon="Resources/Dialog/selectfolder.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFolderActivity,RPA.Core.Activities" ToolTip="打开对话框以选择文件夹。" />
+    </Group>
+    <Group Name="环境">
+      <Activity Name="系统提示音" Icon="Resources/Environment/beep.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.WinBeep,RPA.Core.Activities" ToolTip="蜂鸣器或系统提示音 哔哔哔或嘟嘟嘟等等" />
+      <Activity Name="获取系统路径" Icon="Resources/Environment/envfolder.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvPath,RPA.Core.Activities" ToolTip="获取指定系统特殊文件夹的路径" />
+      <Activity Name="获取系统变量" Icon="Resources/Environment/envvariable.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvVar,RPA.Core.Activities" ToolTip="获取指定环境变量的内容" />
+      <Activity Name="获取密码" Icon="Resources/Environment/password.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetPassword,RPA.Core.Activities" ToolTip="通过将密码与当前用户相关联来加密密码。只有在当前用户上下文下运行的工作流才能解密密码。" />
+    </Group>
+    <Group Name="命令行">
+      <Activity Name="PowerShell" Icon="Resources/PowerShell/powershell.png" TypeOf="RPA.Core.Activities.PowerShellActivity.ShellActivity,RPA.Core.Activities" ToolTip="执行命令行命令或脚本" />
+    </Group>
+    <Group Name="日期时间">
+      <Activity Name="获取当前日期/时间" Icon="Resources/DateTime/date.png" TypeOf="RPA.Core.Activities.DateTimeActivity.GetDateTimeActivity,RPA.Core.Activities" ToolTip="获取当前日期/时间" />
+      <Activity Name="日期时间转换" Icon="Resources/DateTime/convert.png" TypeOf="RPA.Core.Activities.DateTimeActivity.DateConvertActivity,RPA.Core.Activities" ToolTip="日期时间转换" />
+    </Group>
+  </Group>
+  <Group Name="协调器" >
+    <Group Name="数字资产">
+      <Activity Name="获取凭证" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.GetCredential,RPA.Core.Activities" ToolTip="使用提供的AssetName获取指定的凭据，并返回用户名和安全密码。" />
+      <Activity Name="设置凭证" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.SetCredential,RPA.Core.Activities" ToolTip="使您可以更新指示的凭据资产的值，该值在Windows凭据列表中已经可用，无论是全局资产还是个人计算机资产。" />
+    </Group>
+  </Group>
+  <Group Name="工作流">
+    <Group Name="执行" >
+      <Activity Name="执行代码" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="同步执行VB.Net代码，支持传递参数"/>
+      <Activity Name="执行工作流文件" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="同步执行一个工作流文件，支持传递参数"/>
+    </Group>
+  </Group>
+  <Group Name="用户事件" >
+    <Activity Name="监控事件" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="用户事件" />
+  </Group>
+  <Group Name="程序设计" >
+    <Group Name="调试">
+      <Activity Name="注释" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentActivity,RPA.Core.Activities" ToolTip="添加一个注释到工作流"/>
+      <Activity Name="注释活动" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentOutActivity,RPA.Core.Activities" ToolTip="一个容器，放入里面的活动将不被执行"/>
+      <Activity Name="输出日志" Icon="Resources/DebugActivity/log-message.png"  TypeOf="RPA.Core.Activities.DebugActivity.LogMessageActivity,RPA.Core.Activities" ToolTip="打印日志到输出窗口及日志文件中"/>
+    </Group>
+    <Group Name="DataTable">
+      <Activity Name="添加数据列" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataColumn,   RPA.Core.Activities" ToolTip="将DataColumn添加到指定的DataTable"/>
+      <Activity Name="添加数据行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataRow,      RPA.Core.Activities" ToolTip="将DataRow添加到指定的DataTable"/>
+      <Activity Name="构建数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.BuildDataTable,  RPA.Core.Activities" ToolTip="根据指定的模式创建DataTable"/>
+      <Activity Name="清除数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ClearDataTable,  RPA.Core.Activities" ToolTip="清除指定DataTable中的所有数据"/>
+      <Activity Name="过滤数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.FilterDataTable, RPA.Core.Activities" ToolTip="允许您DataTable通过在“ 过滤器向导”窗口中指定条件来过滤变量。活动可以根据向导中指定的逻辑条件保留或删除行或列。
+                活动正文包含“ 过滤器向导”按钮，以便您可以随时访问向导并自定义设置"/>
+      <!--<Activity Name="单行操作"   Icon="DataTable/datatable.png"  TypeOf="DataTableActivity.ForEachRow,      DataTableActivity" ToolTip="对指定DataTable变量中的每一行执行一次操作"/>-->
+      <Activity Name="生成数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GenerateDataTable,RPA.Core.Activities" ToolTip="从非结构化数据生成DataTable变量。通过此活动，您可以根据生成的表选择列和行分隔符。"/>
+      <Activity Name="获取行数据" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="根据指定的列从DataRow变量中获取值"/>
+      <Activity Name="附加数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.JoinDataTables,  RPA.Core.Activities" ToolTip="根据JoinType属性中指定的Join规则，使用彼此相同的值组合来自两个表的行"/>
+      <Activity Name="查找数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.LookupDataTable, RPA.Core.Activities" ToolTip="此活动使您可以搜索指定的提供值，DataTable并返回找到它的RowIndex。
+                此活动还可以帮助您返回在单元格中找到的值，该值具有在RowIndex属性中指定的行坐标和在“ 目标列”属性类别中指定的列坐标。"/>
+      <Activity Name="合并数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.MergeDataTable,  RPA.Core.Activities" ToolTip="将指定的DataTable与当前DataTable合并，
+                指示是否保留更改以及如何处理当前DataTable中缺少的模式"/>
+      <Activity Name="输出数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.OutputDataTable, RPA.Core.Activities" ToolTip="使用CSV格式将DataTable写入字符串"/>
+      <Activity Name="删除数据列" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataColumn,RPA.Core.Activities" ToolTip="从指定的DataTable中删除DataColumn"/>
+      <Activity Name="删除数据行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataRow,   RPA.Core.Activities" ToolTip="从指定的DataTable中删除DataColumn"/>
+      <Activity Name="删除重复行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="从指定的DataTable中删除重复的行数据"/>
+      <Activity Name="排序数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="DataTable根据指定列的值按升序或降序对整数进行排序"/>
+    </Group>
+  </Group>
+</activity.config>

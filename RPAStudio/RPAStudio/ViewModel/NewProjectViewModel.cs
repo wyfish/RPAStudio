@@ -1,18 +1,19 @@
 ﻿using System;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
 using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
-using RPAStudio.Librarys;
-using log4net;
 using System.Windows;
-using Newtonsoft.Json;
-using GalaSoft.MvvmLight.Messaging;
 using System.Windows.Controls;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using log4net;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NuGet;
 using NuGet.Versioning;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -275,14 +276,16 @@ namespace RPAStudio.ViewModel
             if(string.IsNullOrEmpty(value))
             {
                 IsProjectNameCorrect = false;
-                ProjectNameValidatedWrongTip = "名称不能为空";
+                // 名称不能为空
+                ProjectNameValidatedWrongTip = ResxIF.GetString("NameIsRequired");
             }
             else
             {
                 if (value.Contains(@"\") || value.Contains(@"/"))
                 {
                     IsProjectNameCorrect = false;
-                    ProjectNameValidatedWrongTip = "名称不能有非法字符";
+                    // 名称不能有非法字符
+                    ProjectNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                 }
                 else
                 {
@@ -298,7 +301,7 @@ namespace RPAStudio.ViewModel
                     {
                         // file name is not valid
                         IsProjectNameCorrect = false;
-                        ProjectNameValidatedWrongTip = "名称不能有非法字符";
+                        ProjectNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                     }
                     else
                     {
@@ -310,7 +313,7 @@ namespace RPAStudio.ViewModel
             if(Directory.Exists(ProjectPath+@"\"+ProjectName))
             {
                 IsProjectNameCorrect = false;
-                ProjectNameValidatedWrongTip = "已经存在同名称的项目";
+                ProjectNameValidatedWrongTip = ResxIF.GetString("SameNameProjectAlreadyExists");
             }
 
             CreateProjectCommand.RaiseCanExecuteChanged();
@@ -390,14 +393,16 @@ namespace RPAStudio.ViewModel
             if (string.IsNullOrEmpty(value))
             {
                 IsProjectPathCorrect = false;
-                ProjectPathValidatedWrongTip = "位置不能为空";
+                // 位置不能为空
+                ProjectPathValidatedWrongTip = ResxIF.GetString("PathCannotBeEmpty");
             }
             else
             {
                 if (!Directory.Exists(value))
                 {
                     IsProjectPathCorrect = false;
-                    ProjectPathValidatedWrongTip = "指定的位置不存在";
+                    // 指定的位置不存在
+                    ProjectPathValidatedWrongTip = ResxIF.GetString("ThePathDoesNotExist");
                 }
             }
 
@@ -452,7 +457,8 @@ namespace RPAStudio.ViewModel
                     () =>
                     {
                         string dst_dir = "";
-                        if (Common.ShowSelectDirDialog("请选择一个位置来新建项目", ref dst_dir))
+                        // 请选择一个位置来新建项目
+                        if (Common.ShowSelectDirDialog(ResxIF.GetString("SelectPathToCreateNewProject"), ref dst_dir))
                         {
                             ProjectPath = dst_dir;
                         }
@@ -524,8 +530,8 @@ namespace RPAStudio.ViewModel
                         {
                             //创建项目失败
                             Logger.Error(e, logger);
-
-                            MessageBox.Show(App.Current.MainWindow, "创建项目目录失败，请检查", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 创建项目目录失败，请检查
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("MB_FailedToCreateProjectDirectory"), ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                             return;
                         }
 
@@ -647,7 +653,8 @@ namespace RPAStudio.ViewModel
         private void initProjectConfig()
         {
             XmlDocument doc = new XmlDocument();
-            using (var ms = new MemoryStream(RPAStudio.Properties.Resources.ProjectConfig))
+            var resourceXML = RPAStudio.Properties.ResourceLocalizer.GetLocalizedResource("ProjectConfig");
+            using (var ms = new MemoryStream(resourceXML))
             {
                 ms.Flush();
                 ms.Position = 0;
@@ -687,13 +694,7 @@ namespace RPAStudio.ViewModel
             ProjectPath = defaultCreatePath;
 
         }
-
-
     }
-
-
-
-
 
 
     public class ProjectJsonConfig
@@ -756,7 +757,8 @@ namespace RPAStudio.ViewModel
             {
                 //提示用户不再支持老版本项目，后期考虑再自动升级项目并备份老项目
                 //TODO WJF 旧项目如何升级
-                var err = "当前程序不再支持V2.0版本以下的旧版本项目！";
+                // 当前程序不再支持V2.0版本以下的旧版本项目！
+                var err = ResxIF.GetString("NotSupportBelowV2");
                 MessageBox.Show(err);
                 throw new Exception(err);
             }

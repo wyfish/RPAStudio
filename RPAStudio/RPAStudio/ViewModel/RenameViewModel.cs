@@ -1,10 +1,11 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using System.Windows;
-using System;
+﻿using System;
 using System.IO;
-using GalaSoft.MvvmLight.Messaging;
+using System.Windows;
 using System.Windows.Controls;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -215,14 +216,16 @@ namespace RPAStudio.ViewModel
             if (string.IsNullOrEmpty(value))
             {
                 IsDstNameCorrect = false;
-                DstNameValidatedWrongTip = "名称不能为空";
+                // 名称不能为空
+                DstNameValidatedWrongTip = ResxIF.GetString("NameIsRequired");
             }
             else
             {
                 if (value.Contains(@"\") || value.Contains(@"/"))
                 {
                     IsDstNameCorrect = false;
-                    DstNameValidatedWrongTip = "名称不能有非法字符";
+                    // 名称不能有非法字符
+                    DstNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                 }
                 else
                 {
@@ -238,7 +241,7 @@ namespace RPAStudio.ViewModel
                     {
                         // file name is not valid
                         IsDstNameCorrect = false;
-                        DstNameValidatedWrongTip = "名称不能有非法字符";
+                        DstNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                     }
                     else
                     {
@@ -251,11 +254,14 @@ namespace RPAStudio.ViewModel
             if (Directory.Exists(dstFullPath))
             {
                 IsDstNameCorrect = false;
-                DstNameValidatedWrongTip = "相同名字的目录已存在";
-            }else if (File.Exists(dstFullPath))
+                // 相同名字的目录已存在
+                DstNameValidatedWrongTip = ResxIF.GetString("SameNameDirectoryAlreadyExists");
+            }
+            else if (File.Exists(dstFullPath))
             {
                 IsDstNameCorrect = false;
-                DstNameValidatedWrongTip = "相同名字的文件已存在";
+                // 相同名字的文件已存在
+                DstNameValidatedWrongTip = ResxIF.GetString("SameNameFileAlreadyExists");
             }
 
 

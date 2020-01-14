@@ -22,6 +22,7 @@ namespace RPARobot.Windows
         public MainWindow()
         {
             InitializeComponent();
+            Net.Surviveplus.Localization.WpfLocalization.ApplyResources(this, Properties.Resources.ResourceManager);
         }
     }
 }

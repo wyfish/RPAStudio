@@ -7,6 +7,7 @@ using System.Windows.Controls.Primitives;
 using System;
 using RPAStudio.Windows;
 using System.Text.RegularExpressions;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -620,17 +621,13 @@ namespace RPAStudio.ViewModel
                         window.Owner = Application.Current.MainWindow;
                         window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
                         var vm = window.DataContext as MessageDetailsViewModel;
-                        vm.Title = "消息详情";
+                        // 消息详情
+                        vm.Title = ResxIF.GetString("MessageDetails");
                         vm.MsgDetails = MsgDetails;
                         window.ShowDialog();
                     }));
             }
         }
-
-
-       
-
-
 
 
 

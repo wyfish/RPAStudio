@@ -21,9 +21,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
         public string icoPath { get { return "pack://application:,,,/RPA.Integration.Activities;Component/Resources/Excel/csv.png"; } }
 
         InArgument<string> _PathUrl;
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
         [RequiredArgument]
-        [DisplayName("文件路径")]
+        [Localize.LocalizedDisplayName("DisplayName12")] //文件路径 //File path //ファイルパス
         [Browsable(true)]
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public InArgument<string> PathUrl
@@ -51,8 +51,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
         }
 
         DelimiterEnums _Delimiter = DelimiterEnums.Comma逗号;
-        [Category("选项")]
-        [DisplayName("分隔符")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName13")] //分隔符 //Separator //セパレーター
         [Browsable(true)]
         public DelimiterEnums Delimiter
         {
@@ -60,19 +60,19 @@ namespace RPA.Integration.Activities.ExcelPlugins
             set { _Delimiter = value; }
         }
 
-        [Category("选项")]
-        [DisplayName("字符编码")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName14")] //字符编码 //Character Encoding //文字エンコード
         [Browsable(true)]
         public InArgument<string> EncodingType{ get; set;}
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
         [DisplayName("DataTable")]
         [Browsable(true)]
         public OutArgument<DataTable> OutDataTable{ get; set;}
 
-        [Category("选项")]
-        [DisplayName("列名")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName15")] //列名 //Column name //列名
         [Browsable(true)]
         public bool IncludeColumnNames { get; set; }
 

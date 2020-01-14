@@ -39,28 +39,28 @@ namespace RPA.Integration.Activities.Mail
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("邮件")]
-        [Description("用于提取图片的邮件，该字段仅支持MimeMessage变量")]
+        [Localize.LocalizedDisplayName("DisplayName76")] //邮件 //Mail //郵便
+        [Localize.LocalizedDescription("Description35")] //用于提取图片的邮件，该字段仅支持MimeMessage变量 //The message used to extract the image, this field only supports the MimeMessage variable. //画像の抽出に使用されるメッセージ。このフィールドはMimeMessage変数のみをサポートします。
         public InArgument<MimeMessage> MimeMessage { get; set; }
 
 
-        [Category("输入")]
-        [DisplayName("文件夹")]
-        [Description("将邮件中的邮件存储到本地目录,为空则不保存")]
+        [Localize.LocalizedCategory("Category5")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName65")] //文件夹 //Folder //フォルダー
+        [Localize.LocalizedDescription("Description36")] //将邮件中的邮件存储到本地目录,为空则不保存 //Store the mail in the mail to a local directory. If it is empty, it will not be saved. //メール内のメールをローカルディレクトリに保存します。空の場合、保存されません。
         public InArgument<string> ImgFolder { get; set; }
 
 
-        [Category("输出")]
-        [DisplayName("图片路径列表")]
-        [Description("图片本地保存路径列表")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName77")] //图片路径列表 //Picture path list //ピクチャーパスリスト
+        [Localize.LocalizedDescription("Description37")] //图片本地保存路径列表 //Picture local save path list //画像のローカル保存パスリスト
         public OutArgument<string[]> ImgList { get; set; }
 
 
-        [Category("输出")]
-        [DisplayName("图片资源列表")]
-        [Description("保存图片信息，分为地址和base64码两种方式")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName78")] //图片资源列表 //Image resource list //イメージリソースリスト
+        [Localize.LocalizedDescription("Description38")] //保存图片信息，分为地址和base64码两种方式 //Save image information, divided into address and base64 code //アドレスとBase64コードに分割された画像情報を保存する
         public OutArgument<string[]> ImgSourceList { get; set; }
         
 

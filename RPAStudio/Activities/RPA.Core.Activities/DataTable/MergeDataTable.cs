@@ -21,24 +21,24 @@ namespace RPA.Core.Activities.DataTableActivity
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("目标")]
-        [Description("合并源DataTable的DataTable对象")]
+        [Localize.LocalizedDisplayName("DisplayName29")] //目标 //aims //目標
+        [Localize.LocalizedDescription("Description58")] //合并源DataTable的DataTable对象 //Merge the DataTable object of the source DataTable //ソースDataTableのDataTableオブジェクトをマージします
         public InArgument<DataTable> Destination { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("源")]
-        [Description("要添加到目标DataTable的DataTable对象")]
+        [Localize.LocalizedDisplayName("DisplayName30")] //源 //source //出所
+        [Localize.LocalizedDescription("Description59")] //要添加到目标DataTable的DataTable对象 //The DataTable object to be added to the target DataTable //ターゲットDataTableに追加されるDataTableオブジェクト
         public InArgument<DataTable> Source { get; set; }
 
 
         public MissingSchemaAction _MergeType = MissingSchemaAction.Add;
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("合并操作")]
-        [Description("指定合并两个DataTable时要执行的操作")]
+        [Localize.LocalizedDisplayName("DisplayName31")] //合并操作 //Merge operation //マージ操作
+        [Localize.LocalizedDescription("Description60")] //指定合并两个DataTable时要执行的操作 //Specify what to do when merging two DataTables //2つのDataTableをマージするときの処理を指定します
         public MissingSchemaAction MergeType
         {
             get

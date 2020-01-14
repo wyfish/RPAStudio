@@ -25,14 +25,14 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <libs:ColorButtonThreeState Margin="5,0,0,0" Width="25" Height="25" ToolTip="展开所有" Command="{Binding ExpandAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-expand-all.png" />
-                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="折叠所有" Command="{Binding CollapseAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-collapse-all.png" />
-                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="刷新" Command="{Binding RefreshCommand}" def_img="pack://application:,,,/Resources/Image/Dock/refresh.png" />
-                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="添加文件夹" Command="{Binding AddFolderCommand}" def_img="pack://application:,,,/Resources/Image/Dock/add-dir.png" />
+                <libs:ColorButtonThreeState x:Uid="ExpandAll" Margin="5,0,0,0" Width="25" Height="25" ToolTip="展开所有" Command="{Binding ExpandAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-expand-all.png" />
+                <libs:ColorButtonThreeState x:Uid="CollapseAll" Margin="10,0,0,0" Width="25" Height="25" ToolTip="折叠所有" Command="{Binding CollapseAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-collapse-all.png" />
+                <libs:ColorButtonThreeState x:Uid="Refresh" Margin="10,0,0,0" Width="25" Height="25" ToolTip="刷新" Command="{Binding RefreshCommand}" def_img="pack://application:,,,/Resources/Image/Dock/refresh.png" />
+                <libs:ColorButtonThreeState x:Uid="AddFolder" Margin="10,0,0,0" Width="25" Height="25" ToolTip="添加文件夹" Command="{Binding AddFolderCommand}" def_img="pack://application:,,,/Resources/Image/Dock/add-dir.png" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" Focusable="True">
-            <uc:SearchTextBoxControl HintText="搜索代码片断" SearchText="{Binding SearchText}" />
+            <uc:SearchTextBoxControl x:Uid="SearchCodeSnippet" HintText="搜索代码片断" SearchText="{Binding SearchText}" />
         </Grid>
         <TreeView ItemsSource="{Binding SnippetsItems}" Grid.Row="2" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
             <TreeView.ItemContainerStyle>
@@ -100,7 +100,7 @@
             </TreeView.ItemTemplate>
         </TreeView>
         <Grid Grid.Row="2" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-            <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060">搜索结果为空</TextBlock>
+            <TextBlock x:Uid="SearchEmpty" FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060">搜索结果为空</TextBlock>
         </Grid>
     </Grid>
 </UserControl>

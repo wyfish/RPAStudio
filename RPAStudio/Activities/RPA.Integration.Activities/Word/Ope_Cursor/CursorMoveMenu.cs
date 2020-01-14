@@ -9,24 +9,24 @@ namespace RPA.Integration.Activities.WordPlugins
     [Designer(typeof(CursorMoveMenuDesigner))]
     public sealed class CursorMoveMenu : AsyncCodeActivity
     {
-        [Category("选项")]
-        [DisplayName("开头")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName116")] //开头 //beginning //開始する
         [Browsable(true)]
         public bool Head
         {
             get;set;
         }
 
-        [Category("选项")]
-        [DisplayName("结尾")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName117")] //结尾 //End //終了
         [Browsable(true)]
         public bool Tail
         {
             get; set;
         }
 
-        [Category("选项")]
-        [DisplayName("下一页")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName118")] //下一页 //Next page //次のページ
         [Browsable(true)]
         public bool NextPage
         {

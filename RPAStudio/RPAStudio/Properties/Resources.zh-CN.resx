@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Activity.Title" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="ActivityGroup.ToolTip" xml:space="preserve">
+    <value>显示活动分组</value>
+  </data>
+  <data name="AddFolder.ToolTip" xml:space="preserve">
+    <value>添加文件夹</value>
+  </data>
+  <data name="Attributes.Title" xml:space="preserve">
+    <value>属性</value>
+  </data>
+  <data name="Break.Header" xml:space="preserve">
+    <value>中断</value>
+  </data>
+  <data name="Break.ToolTip" xml:space="preserve">
+    <value>中断执行（暂停）</value>
+  </data>
+  <data name="BreakPoint.Header" xml:space="preserve">
+    <value>断点</value>
+  </data>
+  <data name="BreakPoint.ToolTip" xml:space="preserve">
+    <value>切换断点（F9）</value>
+  </data>
+  <data name="BreakPoint2.Header" xml:space="preserve">
+    <value>切换断点</value>
+  </data>
+  <data name="BrowseProjectFiles.ToolTip" xml:space="preserve">
+    <value>浏览项目文件</value>
+  </data>
+  <data name="Cancel.Content" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CheckForUpdates.Content" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="CheckUpdates.Text" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="ClearAll.ToolTip" xml:space="preserve">
+    <value>清空所有</value>
+  </data>
+  <data name="Close.Header" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="CodeSnippet.Title" xml:space="preserve">
+    <value>代码片断</value>
+  </data>
+  <data name="CollapseAll.ToolTip" xml:space="preserve">
+    <value>折叠所有</value>
+  </data>
+  <data name="Copy.Content" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Copy.Header" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="CrearAllBreakPoints.Header" xml:space="preserve">
+    <value>清除所有断点</value>
+  </data>
+  <data name="CrearAllBreakPoints.ToolTip" xml:space="preserve">
+    <value>清除所有断点（Shift+F9）</value>
+  </data>
+  <data name="Create.Content" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="CurrentUpdateLog.Text" xml:space="preserve">
+    <value>当前版本更新日志</value>
+  </data>
+  <data name="CurrentVersion.Text" xml:space="preserve">
+    <value>当前版本</value>
+  </data>
+  <data name="Customize.Content" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="CustomLocation.Text" xml:space="preserve">
+    <value>自定义位置</value>
+  </data>
+  <data name="Cut.Header" xml:space="preserve">
+    <value>剪切</value>
+  </data>
+  <data name="Debug.Header" xml:space="preserve">
+    <value>调试</value>
+  </data>
+  <data name="Depends.Header" xml:space="preserve">
+    <value>依赖</value>
+  </data>
+  <data name="Deploy.Header" xml:space="preserve">
+    <value>部署</value>
+  </data>
+  <data name="Description.Text" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Design.Header" xml:space="preserve">
+    <value>设计</value>
+  </data>
+  <data name="DirFieldCheck.ToolTip" xml:space="preserve">
+    <value>位置字段校验成功</value>
+  </data>
+  <data name="Edit.Header" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Error.ToolTip" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Execution.Header" xml:space="preserve">
+    <value>执行</value>
+  </data>
+  <data name="ExpandAll.ToolTip" xml:space="preserve">
+    <value>展开所有</value>
+  </data>
+  <data name="File.Header" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FlowChart.Header" xml:space="preserve">
+    <value>流程图</value>
+  </data>
+  <data name="FlowChart.ToolTip" xml:space="preserve">
+    <value>流程图</value>
+  </data>
+  <data name="Help.ToolTip" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="HighlightElement.Header" xml:space="preserve">
+    <value>高亮元素</value>
+  </data>
+  <data name="Information.ToolTip" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="InterruptOnException.Header" xml:space="preserve">
+    <value>异常时中断</value>
+  </data>
+  <data name="LatestUpdateLog.Text" xml:space="preserve">
+    <value>最新版本更新日志</value>
+  </data>
+  <data name="LatestVersion.Text" xml:space="preserve">
+    <value>最新版本</value>
+  </data>
+  <data name="Loading.Text" xml:space="preserve">
+    <value>正在加载……</value>
+  </data>
+  <data name="LocalRobot.Text" xml:space="preserve">
+    <value>本地机器人</value>
+  </data>
+  <data name="Log.Header" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="Name.Header" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="NameFieldCheck.ToolTip" xml:space="preserve">
+    <value>名称字段校验成功</value>
+  </data>
+  <data name="New.Header" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="NewProject.Text" xml:space="preserve">
+    <value>新建项目</value>
+  </data>
+  <data name="NewVersion.Text" xml:space="preserve">
+    <value>新版本</value>
+  </data>
+  <data name="NoFunction.Text" xml:space="preserve">
+    <value>暂无功能</value>
+  </data>
+  <data name="NoNewVersionFound.Text" xml:space="preserve">
+    <value>未发现新版本</value>
+  </data>
+  <data name="OK.Content" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Open.Header" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="OpenLog.Header" xml:space="preserve">
+    <value>打开日志</value>
+  </data>
+  <data name="OpenLog.ToolTip" xml:space="preserve">
+    <value>打开日志（Ctrl+L）</value>
+  </data>
+  <data name="Option.Header" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="Option.ToolTip" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="OriginalName.Text" xml:space="preserve">
+    <value>原始名</value>
+  </data>
+  <data name="Outline.Title" xml:space="preserve">
+    <value>大纲</value>
+  </data>
+  <data name="Output.Title" xml:space="preserve">
+    <value>输出</value>
+  </data>
+  <data name="PackageManager.Header" xml:space="preserve">
+    <value>包管理器</value>
+  </data>
+  <data name="PackageManager.ToolTip" xml:space="preserve">
+    <value>管理nupkg包，实现安装、卸载、更新包等操作（Ctrl+P）</value>
+  </data>
+  <data name="Paste.Header" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="Process.Text" xml:space="preserve">
+    <value>流程</value>
+  </data>
+  <data name="ProcessDescription.Text" xml:space="preserve">
+    <value>新建一个自动化的空白流程</value>
+  </data>
+  <data name="Project.Title" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="ProjectSettingDesc.Text" xml:space="preserve">
+    <value>修改项目相关配置如名称和描述</value>
+  </data>
+  <data name="ProjectSettings.Text" xml:space="preserve">
+    <value>项目设置</value>
+  </data>
+  <data name="ProjectSettings.Title" xml:space="preserve">
+    <value>项目设置</value>
+  </data>
+  <data name="ProjectSettings.ToolTip" xml:space="preserve">
+    <value>项目设置</value>
+  </data>
+  <data name="PublishTo.Text" xml:space="preserve">
+    <value>发布到</value>
+  </data>
+  <data name="Recent.Text" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="RecordActivity.Header" xml:space="preserve">
+    <value>记录活动</value>
+  </data>
+  <data name="Refresh.ToolTip" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Release.Content" xml:space="preserve">
+    <value>发布</value>
+  </data>
+  <data name="Release.Header" xml:space="preserve">
+    <value>发布</value>
+  </data>
+  <data name="Release.ToolTip" xml:space="preserve">
+    <value>打包发布</value>
+  </data>
+  <data name="RemoveScreenshots.ToolTip" xml:space="preserve">
+    <value>移除无用的截图</value>
+  </data>
+  <data name="Run.Header" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="Run.ToolTip" xml:space="preserve">
+    <value>运行（F5）</value>
+  </data>
+  <data name="Save.Header" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Save.ToolTip" xml:space="preserve">
+    <value>保存（Ctrl+S）</value>
+  </data>
+  <data name="SaveAll.Header" xml:space="preserve">
+    <value>全部保存</value>
+  </data>
+  <data name="SaveAs.Header" xml:space="preserve">
+    <value>另存为</value>
+  </data>
+  <data name="SaveDir.Text" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="Search1.HintText" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Search2.HintText" xml:space="preserve">
+    <value>搜索活动</value>
+  </data>
+  <data name="SearchCodeSnippet.HintText" xml:space="preserve">
+    <value>搜索代码片断</value>
+  </data>
+  <data name="SearchEmpty.Text" xml:space="preserve">
+    <value>搜索结果为空</value>
+  </data>
+  <data name="SearchProjectFiles.HintText" xml:space="preserve">
+    <value>搜索项目文件</value>
+  </data>
+  <data name="SearchResultsEmpty.Text" xml:space="preserve">
+    <value>搜索结果为空</value>
+  </data>
+  <data name="SequenceDiagram.Header" xml:space="preserve">
+    <value>序列图</value>
+  </data>
+  <data name="SequenceDiagram.ToolTip" xml:space="preserve">
+    <value>序列图（Ctrl+N）</value>
+  </data>
+  <data name="Settings.Header" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="ShowAllFiles.ToolTip" xml:space="preserve">
+    <value>显示所有文件</value>
+  </data>
+  <data name="ShowTimeStamp.ToolTip" xml:space="preserve">
+    <value>显示时间</value>
+  </data>
+  <data name="SlowDebug.Header" xml:space="preserve">
+    <value>慢速 调试</value>
+  </data>
+  <data name="SlowDebug.ToolTip" xml:space="preserve">
+    <value>以最慢的1x到最快4x进行不同速度的调试运行</value>
+  </data>
+  <data name="splashSub.Text" xml:space="preserve">
+    <value>机器人流程自动化平台</value>
+  </data>
+  <data name="Start.Header" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Start2.Header" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="StateMachine.Header" xml:space="preserve">
+    <value>状态机</value>
+  </data>
+  <data name="StateMachine.ToolTip" xml:space="preserve">
+    <value>状态机</value>
+  </data>
+  <data name="StepInto.Header" xml:space="preserve">
+    <value>逐语句</value>
+  </data>
+  <data name="StepInto.ToolTip" xml:space="preserve">
+    <value>逐语句（F11）</value>
+  </data>
+  <data name="StepOver.Header" xml:space="preserve">
+    <value>逐过程</value>
+  </data>
+  <data name="StepOver.ToolTip" xml:space="preserve">
+    <value>逐过程（Shift+F11）</value>
+  </data>
+  <data name="Stop.Header" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="Stop.ToolTip" xml:space="preserve">
+    <value>停止（F12）</value>
+  </data>
+  <data name="TargetName.Text" xml:space="preserve">
+    <value>目标名</value>
+  </data>
+  <data name="Track.ToolTip" xml:space="preserve">
+    <value>跟踪</value>
+  </data>
+  <data name="Value.Header" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="Varidate.Header" xml:space="preserve">
+    <value>校验</value>
+  </data>
+  <data name="Varidate.ToolTip" xml:space="preserve">
+    <value>检查错误（F8）</value>
+  </data>
+  <data name="ViewAttributeValues.ToolTip" xml:space="preserve">
+    <value>查看属性值</value>
+  </data>
+  <data name="ViewLogs.Content" xml:space="preserve">
+    <value>查看日志</value>
+  </data>
+  <data name="Warning.ToolTip" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="NewFolder.Title" xml:space="preserve">
+    <value>新建文件夹</value>
+  </data>
+</root>

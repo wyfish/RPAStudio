@@ -7,7 +7,9 @@
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
-    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:lclz="clr-namespace:RPA.Integration.Activities.Properties"
+
     Loaded="IcoPath_Loaded"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
     >
@@ -43,9 +45,9 @@
             </Grid.Resources>-->
         <!--<ComboBox SelectedValue="{Binding SelectedWeek}" ItemsSource="{Binding Source={StaticResource NameWeek}}" HorizontalAlignment="Left" Height="50" Margin="38,40,0,0" VerticalAlignment="Top" Width="150"/>-->
         <StackPanel  Orientation="Horizontal" Margin="50,-2,70,-6" RenderTransformOrigin="0.5,0.5">
-            <RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.删除}}" Margin="0,0,0,5" Width="45">删除</RadioButton>
-            <RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.隐藏}}" Margin="0,0,0,5" Width="45">隐藏</RadioButton>
-            <RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.添加}}" Margin="0,0,0,5" Width="45">添加</RadioButton>
+            <RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.删除}}" Margin="0,0,0,5" Width="45" Content="{x:Static lclz:Resources.DeleteText}"/>
+            <RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.隐藏}}" Margin="0,0,0,5" Width="45" Content="{x:Static lclz:Resources.HideText}"/>
+            <RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.添加}}" Margin="0,0,0,5" Width="45" Content="{x:Static lclz:Resources.AddText}"/>
             <!--<RadioButton  IsChecked="{Binding ModelItem.Operation, Converter={StaticResource EnumToBooleanConverter},ConverterParameter={x:Static local:Operations.获取}}" Margin="0,0,0,5" Width="45">获取</RadioButton>-->
         </StackPanel>
         <!--<ComboBox x:Name="cboxEnum"  

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AvailableActivities Name="利用可能" IsExpanded="true">
+  <Group Name="ワークフロー" IsSortable="True">
+    <!--<Group Name="检查点">
+      <Activity Name="Check False" IsSystem="true" TypeOf="FlowDecision" />
+      <Activity Name="Check True" IsSystem="true" TypeOf="FlowSwitch" />
+    </Group>-->
+    <Group Name="フローチャート">
+      <Activity Name="フロー条件分岐" IsSystem="true" TypeOf="FlowDecision" />
+      <Activity Name="フロースイッチ" IsSystem="true" TypeOf="FlowSwitch" />
+      <Activity Name="フローチャート" IsSystem="true" TypeOf="Flowchart" />
+    </Group>
+    <Group Name="ステート マシン" >
+      <Activity Name="最終ステート" IsSystem="true" TypeOf="FinalState" />
+      <Activity Name="ステート" IsSystem="true" TypeOf="State" />
+      <Activity Name="ステート マシン" IsSystem="true" TypeOf="StateMachine" />
+    </Group>
+    <Group Name="エラー処理" >
+      <Activity Name="再スロー" IsSystem="true" TypeOf="Rethrow" />
+      <Activity Name="ワークフローを終了" IsSystem="true" TypeOf="TerminateWorkflow" />
+      <Activity Name="スロー" IsSystem="true" TypeOf="Throw" />
+      <Activity Name="トライ キャッチ" IsSystem="true" TypeOf="TryCatch" />
+    </Group>
+    <Group Name="制御" >
+      <Activity Name="代入" IsSystem="true" TypeOf="Assign" />
+      <Activity Name="キャンセル スコープ" IsSystem="true" TypeOf="CancellationScope" />
+      <Activity Name="待機" IsSystem="true" TypeOf="Delay" />
+      <Activity Name="繰り返し(後判定)" IsSystem="true" TypeOf="DoWhile" />
+      <Activity Name="繰り返し(コレクションの各要素)" IsSystem="true" TypeOf="ForEach" />
+      <Activity Name="条件分岐" IsSystem="true" TypeOf="If" />
+      <Activity Name="並列" IsSystem="true" TypeOf="Parallel" />
+      <Activity Name="並列繰り返し(コレクションの各要素)" IsSystem="true" TypeOf="ParallelForEach" />
+      <Activity Name="分岐" IsSystem="true" TypeOf="Pick" />
+      <Activity Name="分岐を選択" IsSystem="true" TypeOf="PickBranch" />
+      <Activity Name="シーケンス" IsSystem="true" TypeOf="Sequence" />
+      <Activity Name="スイッチ" IsSystem="true" TypeOf="Switch" />
+      <Activity Name="繰り返し(前判定)" IsSystem="true" TypeOf="While" />
+    </Group>
+
+  </Group>
+  <Group Name="プログラミング" >
+    <Group Name="コレクション">
+      <Activity Name="コレクションに追加" IsSystem="true" TypeOf="AddToCollection" ToolTip="指定されたコレクションにアイテムを追加します。"/>
+      <Activity  Name="コレクションを消去" IsSystem="true" TypeOf="ClearCollection" ToolTip="指定されたアイテムコレクションをクリアします。" />
+      <Activity  Name="コレクション内での有無" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="特定のアイテムが特定のコレクションに存在するかどうかを示します。" />
+      <Activity  Name="コレクションから削除" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="指定されたコレクションからアイテムを削除します。" />
+    </Group>
+    <Group Name="デバッグ">
+      <Activity Name="１行を書き込み" IsSystem="true" TypeOf="WriteLine" />
+    </Group>
+  </Group>
+</AvailableActivities>

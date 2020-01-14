@@ -15,21 +15,21 @@ namespace RPA.Core.Activities.DialogActivity
         public string _DisplayName { get { return "Callout"; } }
 
         [Category("Common")]
-        [Description("指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。")]
+        [Localize.LocalizedDescription("Description1")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category1")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName1")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description3")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category1")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("输入UIElement")]
+        [Localize.LocalizedDisplayName("DisplayName39")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description74")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
 
         [Browsable(false)]
@@ -45,16 +45,16 @@ namespace RPA.Core.Activities.DialogActivity
         [Category("Input")]
         public InArgument<Int32> offsetY { get; set; }
         [Category("Input")]
-        [DisplayName("使用坐标点")]
+        [Localize.LocalizedDisplayName("DisplayName40")] //使用坐标点 //Use coordinate points //座標点を使用する
         public bool usePoint { get; set; }
         [RequiredArgument]
         [Category("Input")]
-        [Description("弹出窗口的文本。")]
+        [Localize.LocalizedDescription("Description75")] //弹出窗口的文本。 //The text of the popup window. //ポップアップウィンドウのテキスト。
         public InArgument<string> Content { get; set; }
 
         [RequiredArgument]
         [Category("Input")]
-        [Description("弹出窗口的标题。")]
+        [Localize.LocalizedDescription("Description76")] //弹出窗口的标题。 //The title of the popup window. //ポップアップウィンドウのタイトル。
         public InArgument<string> Title { get; set; }
 
         [Browsable(false)]
@@ -82,7 +82,7 @@ namespace RPA.Core.Activities.DialogActivity
         }
 
         [Category("Options")]
-        [Description("持续时间，直到弹出窗口自动关闭。默认情况下，弹出窗口不会关闭。")]
+        [Localize.LocalizedDescription("Description77")] //持续时间，直到弹出窗口自动关闭。默认情况下，弹出窗口不会关闭。 //Duration until the pop-up window closes automatically.  By default, pop-ups do not close. //ポップアップウィンドウが自動的に閉じるまでの時間。 デフォルトでは、ポップアップは閉じません。
         [DisplayNameAttribute("Timer")]
         public InArgument<Int32> Timers { get; set; }
 

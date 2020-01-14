@@ -1,13 +1,14 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using log4net;
+﻿using log4net;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System;
 using System.IO;
-using RPAStudio.Librarys;
 using System.Xml;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -267,7 +268,8 @@ namespace RPAStudio.ViewModel
                     {
                         //让用户选择欲添加代码片断的文件夹
                         string dst_dir = "";
-                        if (Common.ShowSelectDirDialog("请选择一个目录添加到代码片断中", ref dst_dir))
+                        // 请选择一个目录添加到代码片断中
+                        if (Common.ShowSelectDirDialog(ResxIF.GetString("SelectDirectoryToAddCodeSnippet"), ref dst_dir))
                         {
                             //添加目录到配置文件中
                             XmlDocument doc = new XmlDocument();

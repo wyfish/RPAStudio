@@ -16,9 +16,9 @@ namespace RPA.UIAutomation.Activities.Find
             }
         }
 
-        [Category("选项")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
         [Browsable(false)]
@@ -27,9 +27,9 @@ namespace RPA.UIAutomation.Activities.Find
         [Browsable(false)]
         public Activity ActivityBody { get; set; }
 
-        [Category("选项")]
+        [Localize.LocalizedCategory("Category5")] //选项 //Option //オプション
         [Browsable(true)]
-        [DisplayName("锚点位置")]
+        [Localize.LocalizedDisplayName("DisplayName35")] //锚点位置 //Anchor position //アンカー位置
         public AnchorPositionEnums AnchorPosition { get; set; }
 
         [Browsable(false)]

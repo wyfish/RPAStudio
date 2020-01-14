@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActivityText" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="AddToFavorites" xml:space="preserve">
+    <value>Add to Favorites</value>
+  </data>
+  <data name="AllPackages" xml:space="preserve">
+    <value>All Packages</value>
+  </data>
+  <data name="AllPackagesTip" xml:space="preserve">
+    <value>View or search packets from all packet source addresses</value>
+  </data>
+  <data name="AttributesText" xml:space="preserve">
+    <value>Property</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CloseContent" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CodeSnippetText" xml:space="preserve">
+    <value>CodeSnippet</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Ask</value>
+  </data>
+  <data name="CopyCtrlC" xml:space="preserve">
+    <value>Copy(Ctrl+C)</value>
+  </data>
+  <data name="CopyText" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="CreateText" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CurrentVersionText" xml:space="preserve">
+    <value>Current version</value>
+  </data>
+  <data name="CustomContent" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="CustomPathText" xml:space="preserve">
+    <value>Custom URL</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DependencyText" xml:space="preserve">
+    <value>Dependencies</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error_AlreadyRunning" xml:space="preserve">
+    <value>The program is already running</value>
+  </data>
+  <data name="Error_CallDeveloper" xml:space="preserve">
+    <value>An exception occurred during the program operation, please contact the software developer!</value>
+  </data>
+  <data name="Error_Critical_Exit" xml:space="preserve">
+    <value>A serious error occurred during the running of the program, and it is about to quit. Please contact the software developer!</value>
+  </data>
+  <data name="ImportWorkflowDot" xml:space="preserve">
+    <value>Import workflow…</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="InstalledText" xml:space="preserve">
+    <value>Installed</value>
+  </data>
+  <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
+    <value>Include pre-release versions</value>
+  </data>
+  <data name="jsonFormatError" xml:space="preserve">
+    <value>The content of the project configuration file project.json is incorrectly formatted</value>
+  </data>
+  <data name="LocalRobotContent" xml:space="preserve">
+    <value>Local Robot</value>
+  </data>
+  <data name="Message_SaveConfirm" xml:space="preserve">
+    <value>The file has been modified. Do you need to save the file \"{0}\"?</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewFolderDot" xml:space="preserve">
+    <value>New folder...</value>
+  </data>
+  <data name="NewFolderTitle" xml:space="preserve">
+    <value>New Folder</value>
+  </data>
+  <data name="NewVersionText" xml:space="preserve">
+    <value>New version</value>
+  </data>
+  <data name="OKText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>Open the project</value>
+  </data>
+  <data name="OpenProjectDialog" xml:space="preserve">
+    <value>WorkflowProjectFile|project.json|WorkflowFile|*.xaml</value>
+  </data>
+  <data name="OpenProjectDir" xml:space="preserve">
+    <value>Open the project directory</value>
+  </data>
+  <data name="OpenProjectFolder" xml:space="preserve">
+    <value>Open project folder</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OperatingRule" xml:space="preserve">
+    <value>Operating rules</value>
+  </data>
+  <data name="OriginalNameText" xml:space="preserve">
+    <value>Original name :</value>
+  </data>
+  <data name="OutlineText" xml:space="preserve">
+    <value>Outline</value>
+  </data>
+  <data name="OutputText" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="PackageManagerTitle" xml:space="preserve">
+    <value>Package Manager</value>
+  </data>
+  <data name="PathText" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="ProjectDependencies" xml:space="preserve">
+    <value>Project Dependencies</value>
+  </data>
+  <data name="ProjectOpenError" xml:space="preserve">
+    <value>Error opening project!</value>
+  </data>
+  <data name="ProjectSettingsDesc" xml:space="preserve">
+    <value>Modify project related configuration such as name and description</value>
+  </data>
+  <data name="ProjectSettingsTitle" xml:space="preserve">
+    <value>Project settings</value>
+  </data>
+  <data name="ProjectText" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="PublishProjectTitle" xml:space="preserve">
+    <value>Publish Project</value>
+  </data>
+  <data name="ReleaseContent" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="ReleaseLocationText" xml:space="preserve">
+    <value>Publish Location</value>
+  </data>
+  <data name="ReleaseNoteText" xml:space="preserve">
+    <value>Release Notes</value>
+  </data>
+  <data name="ReleaseToText" xml:space="preserve">
+    <value>Publish to</value>
+  </data>
+  <data name="RemoveFromFavorites" xml:space="preserve">
+    <value>Remove from favorites</value>
+  </data>
+  <data name="RemoveFromList" xml:space="preserve">
+    <value>Remove from list</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RenameTitle" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="RunText" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="RuntimeError" xml:space="preserve">
+    <value>Runtime error</value>
+  </data>
+  <data name="SearchTextWatermark" xml:space="preserve">
+    <value>Enter what to search for here</value>
+  </data>
+  <data name="SetAsMainFile" xml:space="preserve">
+    <value>Set as main file</value>
+  </data>
+  <data name="SetFromAddress" xml:space="preserve">
+    <value>Set the packet source address</value>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ShowAvailable" xml:space="preserve">
+    <value>Show available</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>Show details</value>
+  </data>
+  <data name="ShowFavorites" xml:space="preserve">
+    <value>Show favorites</value>
+  </data>
+  <data name="ShowRecent" xml:space="preserve">
+    <value>Show recent</value>
+  </data>
+  <data name="TargetNameText" xml:space="preserve">
+    <value>Target name :</value>
+  </data>
+  <data name="UninstallText" xml:space="preserve">
+    <value>Uninstall</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="VersionOnly" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="ViewAllDependencies" xml:space="preserve">
+    <value>View all dependencies of the current project</value>
+  </data>
+  <data name="WorkflowCheckError" xml:space="preserve">
+    <value>Workflow check error, please check parameter configuration</value>
+  </data>
+  <data name="WorkflowVerificationOK" xml:space="preserve">
+    <value>Workflow verification is correct</value>
+  </data>
+  <data name="ByText" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="DefaultSourceAddress" xml:space="preserve">
+    <value>Default packet source address</value>
+  </data>
+  <data name="UserDefinedSourceAddress" xml:space="preserve">
+    <value>User-defined packet source address</value>
+  </data>
+  <data name="NewPackageSource" xml:space="preserve">
+    <value>New package source</value>
+  </data>
+  <data name="DeletePackageSource" xml:space="preserve">
+    <value>Delete package source</value>
+  </data>
+  <data name="MoveUpPackageSource" xml:space="preserve">
+    <value>Move up the packet source</value>
+  </data>
+  <data name="MoveDnPackageSource" xml:space="preserve">
+    <value>Move down the packet source</value>
+  </data>
+  <data name="PackageSourceName" xml:space="preserve">
+    <value>Package source name</value>
+  </data>
+  <data name="PacketSourceAddress" xml:space="preserve">
+    <value>Packet source address</value>
+  </data>
+  <data name="ChooseLocalSourcePath" xml:space="preserve">
+    <value>Choose a local source path</value>
+  </data>
+  <data name="OperatingText" xml:space="preserve">
+    <value>Operating......</value>
+  </data>
+  <data name="EnterPackageSourceNameHere" xml:space="preserve">
+    <value>Enter package source name here</value>
+  </data>
+  <data name="EnterPacketSourceAddressHere" xml:space="preserve">
+    <value>Enter the packet source address here</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddToolTip" xml:space="preserve">
+    <value>Store the packet source name and address information set by the user into the user-defined packet source address list</value>
+  </data>
+  <data name="UpdateToolTip" xml:space="preserve">
+    <value>Update the package source name and address information set by the user</value>
+  </data>
+  <data name="AcceptLicenseConfirmation" xml:space="preserve">
+    <value>The package requires you to accept its license terms before installation. Are you sure?</value>
+  </data>
+  <data name="DescriptionWithColon" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="VersionWithColon" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="AuthorWithColon" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="LicenseWithColon" xml:space="preserve">
+    <value>License:</value>
+  </data>
+  <data name="ViewLicenseInformation" xml:space="preserve">
+    <value>View license information</value>
+  </data>
+  <data name="ReleaseDateWithColon" xml:space="preserve">
+    <value>Release date:</value>
+  </data>
+  <data name="ProjectAddress" xml:space="preserve">
+    <value>Project Address:</value>
+  </data>
+  <data name="ViewProjectInformation" xml:space="preserve">
+    <value>View project information</value>
+  </data>
+  <data name="TagWithColon" xml:space="preserve">
+    <value>Tag:</value>
+  </data>
+  <data name="DependenciesWithColon" xml:space="preserve">
+    <value>Dependencies:</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>Name is required</value>
+  </data>
+  <data name="NameHasIlligalCharacter" xml:space="preserve">
+    <value>Name must not have illegal characters</value>
+  </data>
+  <data name="DeleteDirectoryConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete the directory \"{0} \" and all its contents?</value>
+  </data>
+  <data name="DeleteFileConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete the file \"{0} \"?</value>
+  </data>
+  <data name="PronptText" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="NoUnusedScreenshotsFound" xml:space="preserve">
+    <value>Cannot find unused screenshots that need to be cleaned</value>
+  </data>
+  <data name="UnusedScreenshotsSuccessfullyRemoved" xml:space="preserve">
+    <value>{0} unused screenshots have been successfully removed</value>
+  </data>
+  <data name="MB_CannotOpenProjectConfigFile" xml:space="preserve">
+    <value>Could not open project configuration file \"{0} \", remove this entry from the recent project list?</value>
+  </data>
+  <data name="SameNameDirectoryAlreadyExists" xml:space="preserve">
+    <value>A directory with the same name already exists</value>
+  </data>
+  <data name="SameNameFileAlreadyExists" xml:space="preserve">
+    <value>A file with the same name already exists</value>
+  </data>
+  <data name="SelectDirectoryToAddCodeSnippet" xml:space="preserve">
+    <value>Please select a directory to add to the code snippet</value>
+  </data>
+  <data name="MessageDetails" xml:space="preserve">
+    <value>Message details</value>
+  </data>
+  <data name="TheFileAlreadyExists" xml:space="preserve">
+    <value>The specified file already exists</value>
+  </data>
+  <data name="PathCannotBeEmpty" xml:space="preserve">
+    <value>Path cannot be empty</value>
+  </data>
+  <data name="ThePathDoesNotExist" xml:space="preserve">
+    <value>The specified path does not exist</value>
+  </data>
+  <data name="NotInSubDirectory" xml:space="preserve">
+    <value>The specified location must be in the directory where the project is located or in its subdirectory</value>
+  </data>
+  <data name="AttributeValue" xml:space="preserve">
+    <value>Attribute value</value>
+  </data>
+  <data name="MB_CloseWhileDebugging" xml:space="preserve">
+    <value>The current document is being debugged. Are you sure you want to terminate debugging and close \"{0} \"?</value>
+  </data>
+  <data name="VariableTracking" xml:space="preserve">
+    <value>Variable Tracking</value>
+  </data>
+  <data name="NameFieldCheckSucceeded" xml:space="preserve">
+    <value>Name field check succeeded</value>
+  </data>
+  <data name="PathFieldCheckSucceeded" xml:space="preserve">
+    <value>Path field check succeeded</value>
+  </data>
+  <data name="SameNameProjectAlreadyExists" xml:space="preserve">
+    <value>A project with the same name already exists</value>
+  </data>
+  <data name="SelectPathToCreateNewProject" xml:space="preserve">
+    <value>Please select a location to create a new project</value>
+  </data>
+  <data name="MB_FailedToCreateProjectDirectory" xml:space="preserve">
+    <value>Failed to create project directory, please check</value>
+  </data>
+  <data name="NotSupportBelowV2" xml:space="preserve">
+    <value>The current program no longer supports older versions of projects below V2.0!</value>
+  </data>
+  <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
+    <value>The software failed the authorization test, please register the product!</value>
+  </data>
+</root>

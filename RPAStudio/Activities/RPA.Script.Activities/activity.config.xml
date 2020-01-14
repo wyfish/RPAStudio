@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--活动配置信息-->
 <activity.config>
-  <Group Name="应用程序集成">
+  <Group Name="App Integration">
     <Group Name="Python">
-      <Activity Name="执行脚本代码" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonScriptActivity,RPA.Script.Activities" ToolTip="同步执执行Python脚本代码，支持传递参数"/>
-      <Activity Name="执行脚本文件" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonFileActivity,RPA.Script.Activities" ToolTip="同步执执行Python脚本文件，支持传递参数"/>
+      <Activity Name="Invoke Script Code" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonScriptActivity,RPA.Script.Activities" ToolTip="Synchronous execution of Python script code, support for passing parameters"/>
+      <Activity Name="Invoke Script File" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonFileActivity,RPA.Script.Activities" ToolTip="Synchronous execution of Python script files, support for passing parameters"/>
     </Group>
   </Group>
 </activity.config>

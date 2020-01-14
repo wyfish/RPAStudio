@@ -35,33 +35,33 @@ namespace RPA.UIAutomation.Activities.Find
         public ActivityAction<object> Body { get; set; }
 
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("Selector")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("窗口指示器")]
-        [Description("用于在执行活动时查找特定UI元素的Text属性")]
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
 
-        [Category("UI对象")]
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G2")]
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description38")] //UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量 //UiElement variable.  This property cannot be used with the Selector property.  This field only supports UiElement variables //UiElement変数。 このプロパティをSelectorプロパティと一緒に使用することはできません。 このフィールドはUiElement変数のみをサポートします
         public InArgument<UiElement> Element { get; set; }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("在后续子活动中使用的UI元素")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description39")] //在后续子活动中使用的UI元素 //UI elements used in subsequent child activities //後続の子アクティビティで使用されるUI要素
         public OutArgument<UIElement> OutUiElement { get; set; }
 
 

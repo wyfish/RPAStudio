@@ -1,24 +1,25 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using System.Collections.ObjectModel;
-using System.Windows;
-using System;
-using Plugins.Shared.Library.Nuget;
-using RPAStudio.Librarys;
+﻿using System;
 using System.Collections.Generic;
-using NuGet.Configuration;
-using System.Windows.Controls;
+using System.Collections.ObjectModel;
 using System.Linq;
-using Newtonsoft.Json.Linq;
-using NuGet.Versioning;
-using NuGet.Packaging.Core;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Navigation;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using NuGet.Protocol.Core.Types;
+using System.Windows;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using NuGet.Configuration;
 using NuGet.Packaging;
+using NuGet.Packaging.Core;
+using NuGet.Protocol.Core.Types;
+using NuGet.Versioning;
+using Newtonsoft.Json.Linq;
+using Plugins.Shared.Library.Nuget;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -135,13 +136,13 @@ namespace RPAStudio.ViewModel
             //初始化
             SettingItems.Clear();
 
-            var itemSettings = new SettingItem(this,SettingItem.enSettingItemType.Settings,"设置","设置包源地址", "pack://application:,,,/Resources/Image/Windows/PackageManager/settings.png");
+            var itemSettings = new SettingItem(this,SettingItem.enSettingItemType.Settings, ResxIF.GetString("SettingsText"), ResxIF.GetString("SetFromAddress"), "pack://application:,,,/Resources/Image/Windows/PackageManager/settings.png");
             SettingItems.Add(itemSettings);
 
-            var itemProjectDependencies = new SettingItem(this, SettingItem.enSettingItemType.ProjectDependencies, "项目依赖包", "查看当前项目的所有依赖包", "pack://application:,,,/Resources/Image/Windows/PackageManager/project-dependencies.png");
+            var itemProjectDependencies = new SettingItem(this, SettingItem.enSettingItemType.ProjectDependencies, ResxIF.GetString("ProjectDependencies"), ResxIF.GetString("ViewAllDependencies"), "pack://application:,,,/Resources/Image/Windows/PackageManager/project-dependencies.png");
             SettingItems.Add(itemProjectDependencies);
 
-            var itemAllPackages = new SettingItem(this, SettingItem.enSettingItemType.AllPackages, "所有包", "从所有的包源地址来查看或搜索包", "pack://application:,,,/Resources/Image/Windows/PackageManager/all-packages.png");
+            var itemAllPackages = new SettingItem(this, SettingItem.enSettingItemType.AllPackages, ResxIF.GetString("AllPackages"), ResxIF.GetString("AllPackagesTip"), "pack://application:,,,/Resources/Image/Windows/PackageManager/all-packages.png");
             SettingItems.Add(itemAllPackages);
 
             if(selectType == SettingItem.enSettingItemType.Settings)
@@ -1840,7 +1841,8 @@ namespace RPAStudio.ViewModel
                         if (SelectedItemRequireLicenseAcceptance)
                         {
                             //确定接收许可证吗？
-                            var ret = MessageBox.Show(m_view, "该程序包要求你在安装前接受其许可证条款，确定接受吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                            // 该程序包要求你在安装前接受其许可证条款，确定接受吗？
+                            var ret = MessageBox.Show(m_view, "该程序包要求你在安装前接受其许可证条款，确定接受吗？", ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (ret != MessageBoxResult.Yes)
                             {
                                 return;
@@ -2006,29 +2008,32 @@ namespace RPAStudio.ViewModel
             
             m_richTextBox.Document.Blocks.Clear();
 
-            richTextBoxInsertRun(m_richTextBox, "描述：", item.Description, true);
-            richTextBoxInsertRun(m_richTextBox, "版本：", item.Identity.Version.OriginalVersion);
-            richTextBoxInsertRun(m_richTextBox, "作者：", item.Authors);
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("DescriptionWithColon"), item.Description, true); // 描述：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("VersionWithColon"), item.Identity.Version.OriginalVersion); // 版本：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("AuthorWithColon"), item.Authors); // 作者：
 
             if (!string.IsNullOrEmpty(item.LicenseUrl?.AbsoluteUri))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "许可证：", "查看许可证信息", item.LicenseUrl.AbsoluteUri);
+                // 许可证：, 查看许可证信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("LicenseWithColon"), ResxIF.GetString("ViewLicenseInformation"), item.LicenseUrl.AbsoluteUri);
             }
-
-            richTextBoxInsertRun(m_richTextBox, "发布日期：", item.Published?.ToLocalTime().ToString("G"));
+            // 发布日期：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("ReleaseDateWithColon"), item.Published?.ToLocalTime().ToString("G"));
 
             if (!string.IsNullOrEmpty(item.ProjectUrl?.AbsoluteUri))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "项目地址：", "查看项目信息", item.ProjectUrl.AbsoluteUri);
+                // 项目地址：, 查看项目信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("ProjectAddress"), ResxIF.GetString("ViewProjectInformation"), item.ProjectUrl.AbsoluteUri);
             }
 
             if (!string.IsNullOrEmpty(item.Tags))
             {
-                richTextBoxInsertRun(m_richTextBox, "标签：", item.Tags);
+                // 标签：
+                richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("TagWithColon"), item.Tags);
             }
 
             //显示依赖项
-            richTextBoxInsertDependencies(m_richTextBox, "依赖项：", item.DependencySets.ToList());
+            richTextBoxInsertDependencies(m_richTextBox, ResxIF.GetString("DependenciesWithColon"), item.DependencySets.ToList());
            
         }
 
@@ -2070,29 +2075,32 @@ namespace RPAStudio.ViewModel
             m_richTextBox.Document.Blocks.Clear();
             m_richTextBox.ScrollToHome();
 
-            richTextBoxInsertRun(m_richTextBox, "描述：", item.Description,true);
-            richTextBoxInsertRun(m_richTextBox, "版本：", item.InstalledVersion);
-            richTextBoxInsertRun(m_richTextBox, "作者：", item.Authors);
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("DescriptionWithColon"), item.Description,true); // 描述：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("VersionWithColon"), item.InstalledVersion); // 版本：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("AuthorWithColon"), item.Authors);   // 作者：
 
             if (!string.IsNullOrEmpty(item.LicenseUrl))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "许可证：", "查看许可证信息", item.LicenseUrl);
+                // 许可证：, 查看许可证信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("LicenseWithColon"), ResxIF.GetString("ViewLicenseInformation"), item.LicenseUrl);
             }
-
-            richTextBoxInsertRun(m_richTextBox, "发布日期：", item.PublishTime);
+            // 发布日期：
+            richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("ReleaseDateWithColon"), item.PublishTime);
 
             if (!string.IsNullOrEmpty(item.ProjectUrl))
             {
-                richTextBoxInsertHyperlinkRun(m_richTextBox, "项目地址：", "查看项目信息", item.ProjectUrl);
+                // 项目地址：, 查看项目信息
+                richTextBoxInsertHyperlinkRun(m_richTextBox, ResxIF.GetString("ProjectAddress"), ResxIF.GetString("ViewProjectInformation"), item.ProjectUrl);
             }
 
             if (!string.IsNullOrEmpty(item.Tags))
             {
-                richTextBoxInsertRun(m_richTextBox, "标签：", item.Tags);
+                // 标签：
+                richTextBoxInsertRun(m_richTextBox, ResxIF.GetString("TagWithColon"), item.Tags);
             }
 
             //显示依赖项
-            richTextBoxInsertDependencies(m_richTextBox, "依赖项：", item.Dependencies);
+            richTextBoxInsertDependencies(m_richTextBox, ResxIF.GetString("DependenciesWithColon"), item.Dependencies);
 
             //异步请求网络然后再刷新下这个包条目对应的信息（默认选择第一项，用户手动选择下拉列表项时也触发刷新）
             Task.Run(async () =>

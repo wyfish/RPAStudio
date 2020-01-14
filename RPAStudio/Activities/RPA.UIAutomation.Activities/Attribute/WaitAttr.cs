@@ -24,14 +24,14 @@ namespace RPA.UIAutomation.Activities.Attribute
             }
         }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
         InArgument<Int32> _TimeOut = 10000;
-        [Category("公共")]
-        [Description("指定等待活动运行的时间量（以毫秒为单位）。默认值为10000毫秒（10秒）")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDescription("Description11")] //指定等待活动运行的时间量（以毫秒为单位）。默认值为10000毫秒（10秒） //Specifies the amount of time, in milliseconds, to wait for an activity to run.  The default is 10000 milliseconds (10 seconds) //アクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは10000ミリ秒（10秒）です
         public InArgument<Int32> TimeOut
         {
             get
@@ -45,26 +45,26 @@ namespace RPA.UIAutomation.Activities.Attribute
         }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("UI元素")]
-        [Description("使用另一个活动返回的UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量")]
+        [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
+        [Localize.LocalizedDescription("Description8")] //使用另一个活动返回的UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量 //Use the UiElement variable returned by another activity.  This property cannot be used with the Selector property.  This field only supports UiElement variables //別のアクティビティによって返されたUiElement変数を使用します。 このプロパティをSelectorプロパティと一緒に使用することはできません。 このフィールドはUiElement変数のみをサポートします
         public InArgument<UiElement> Element { get; set; }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
         [Browsable(true)]
-        [DisplayName("属性")]
-        [Description(" 要等待的属性的名称。预定义的属性列表可用作活动中的下拉列表。该字段仅支持String变量")]
+        [Localize.LocalizedDisplayName("DisplayName4")] //属性 //Attributes //属性
+        [Localize.LocalizedDescription("Description12")] // 要等待的属性的名称。预定义的属性列表可用作活动中的下拉列表。该字段仅支持String变量 //The name of the property to wait for.  A predefined list of attributes can be used as a drop-down list in the activity.  This field only supports String variables. //待機するプロパティの名前。 定義済みの属性リストは、アクティビティのドロップダウンリストとして使用できます。 このフィールドは文字列変数のみをサポートします。
         public InArgument<string> AttrName { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
         [RequiredArgument]
-        [DisplayName("属性值")]
-        [Description("指定属性的预期值。该字段仅支持String变量")]
+        [Localize.LocalizedDisplayName("DisplayName10")] //属性值 //Attribute value //属性値
+        [Localize.LocalizedDescription("Description13")] //指定属性的预期值。该字段仅支持String变量 //Specifies the expected value of the attribute.  This field only supports String variables. //属性の期待値を指定します。 このフィールドは文字列変数のみをサポートします。
         public InArgument<object> AttrValue { get; set; }
 
 

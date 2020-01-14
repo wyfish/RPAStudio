@@ -11,8 +11,8 @@ namespace RPA.Integration.Activities.Mail
     public sealed class ArchiveOutlookMailsActivity : CodeActivity
     {
         [Category("Input")]
-        [DisplayName("存档路径(.pst)")]
-        [Description("Outlook数据文件的保存路径")]
+        [Localize.LocalizedDisplayName("DisplayName93")] //存档路径(.pst) //Archive path (.pst) //アーカイブパス（.pst）
+        [Localize.LocalizedDescription("Description59")] //Outlook数据文件的保存路径 //Outlook data file save path //Outlookデータファイルの保存パス
         [RequiredArgument]
         public InArgument<string> PstFilePath
         {
@@ -21,8 +21,8 @@ namespace RPA.Integration.Activities.Mail
         }
 
         [Category("Input")]
-        [DisplayName("待存档账户")]
-        [Description("Outlook账户名")]
+        [Localize.LocalizedDisplayName("DisplayName94")] //待存档账户 //To be archived account //アカウントをアーカイブする
+        [Localize.LocalizedDescription("Description60")] //Outlook账户名 //Outlook account name //Outlookアカウント名
         public InArgument<string> Account
         {
             get;

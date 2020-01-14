@@ -16,16 +16,16 @@ namespace RPA.Core.Activities.DateTimeActivity
         }
 
         DateTimeType _dateTimeType;
-        [Category("输入")]
-        [DisplayName("时间类型")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
+        [Localize.LocalizedDisplayName("DisplayName38")] //时间类型 //Time type //時間タイプ
         public DateTimeType DateType
         {
             get { return _dateTimeType; }
             set { _dateTimeType = value; }
         }
 
-        [Category("输出")]
-        [DisplayName("时间")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
+        [Localize.LocalizedDisplayName("DisplayName37")] //时间 //Time //時間
         public OutArgument<string> Date { get; set; }
        
 

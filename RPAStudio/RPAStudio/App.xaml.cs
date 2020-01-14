@@ -1,9 +1,4 @@
-﻿using GalaSoft.MvvmLight.Threading;
-using log4net;
-using Plugins.Shared.Library.Extensions;
-using Plugins.Shared.Library.UiAutomation;
-using RPAStudio.Librarys;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -12,7 +7,13 @@ using System.Windows;
 using System.Windows.Threading;
 using System.Xml;
 using System.Reflection;
+using GalaSoft.MvvmLight.Threading;
+using log4net;
+using Plugins.Shared.Library.Extensions;
 using Plugins.Shared.Library.Nuget;
+using Plugins.Shared.Library.UiAutomation;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio
 {
@@ -70,7 +71,8 @@ namespace RPAStudio
             }
             else
             {
-                MessageBox.Show("该程序已经运行，不能重复运行！");
+                //MessageBox.Show("该程序已经运行，不能重复运行！");
+                MessageBox.Show(ResxIF.GetString("Error_AlreadyRunning"));
                 Environment.Exit(0);
             }
 
@@ -142,38 +144,17 @@ namespace RPAStudio
                 System.IO.Directory.CreateDirectory(configDir);
             }
 
-
             //以下的XML是用户可能会修改的配置，升级时一般要保留旧数据
             //TODO WJF 后期需要根据XML里的版本号对配置文件数据进行迁移
-            if (!System.IO.File.Exists(configDir + @"\CodeSnippets.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.CodeSnippets;
-                System.IO.File.WriteAllBytes(configDir + @"\CodeSnippets.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\FavoriteActivities.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.FavoriteActivities;
-                System.IO.File.WriteAllBytes(configDir + @"\FavoriteActivities.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\ProjectUserConfig.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.ProjectConfig;
-                System.IO.File.WriteAllBytes(configDir + @"\ProjectUserConfig.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\RecentActivities.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.RecentActivities;
-                System.IO.File.WriteAllBytes(configDir + @"\RecentActivities.xml", data);
-            }
-
-            if (!System.IO.File.Exists(configDir + @"\RecentProjects.xml"))
-            {
-                byte[] data = RPAStudio.Properties.Resources.RecentProjects;
-                System.IO.File.WriteAllBytes(configDir + @"\RecentProjects.xml", data);
-            }
+            CopyResourceToConfig(configDir, "CodeSnippets");
+            CopyResourceToConfig(configDir, "FavoriteActivities");
+            CopyResourceToConfig(configDir, "FavoriteActivities_en");
+            CopyResourceToConfig(configDir, "FavoriteActivities_ja");
+            CopyResourceToConfig(configDir, "ProjectUserConfig");
+            CopyResourceToConfig(configDir, "RecentActivities");
+            CopyResourceToConfig(configDir, "RecentActivities_en");
+            CopyResourceToConfig(configDir, "RecentActivities_ja");
+            CopyResourceToConfig(configDir, "RecentProjects");
 
             if (!System.IO.File.Exists(configDir + @"\RPAStudio.settings"))
             {
@@ -186,6 +167,17 @@ namespace RPAStudio
                 {
                     Logger.Debug(string.Format("升级xml配置文件 {0} ……", App.LocalRPAStudioDir + @"\Config\RPAStudio.settings"), logger);
                 }
+            }
+        }
+
+        private void CopyResourceToConfig(string configDir, string resourceName)
+        {
+            string path = string.Format(@"{0}\{1}.xml", configDir, resourceName);
+            if (!System.IO.File.Exists(path))
+            {
+                //byte[] data = RPAStudio.Properties.Resources.FavoriteActivities;
+                byte[] data = RPAStudio.Properties.ResourceLocalizer.GetResourceByName(resourceName);
+                System.IO.File.WriteAllBytes(path, data);
             }
         }
 
@@ -315,7 +307,8 @@ namespace RPAStudio
                     {
                         Logger.Error("非UI线程全局异常", logger);
                         Logger.Error(exception, logger);
-                        MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                        //MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                        MessageBox.Show(ResxIF.GetString("Error_CallDeveloper"));
                     }
 
                     if(exception is System.OutOfMemoryException)
@@ -327,8 +320,8 @@ namespace RPAStudio
                 {
                     Logger.Fatal("不可恢复的非UI线程全局异常", logger);
                     Logger.Fatal(ex, logger);
-                    MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
-
+                    //MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
+                    MessageBox.Show(ResxIF.GetString("Error_Critical_Exit"));
                     Environment.Exit(0);
                 }
             });
@@ -343,7 +336,8 @@ namespace RPAStudio
                     Logger.Error("UI线程全局异常", logger);
                     Logger.Error(e.Exception, logger);
                     e.Handled = true;
-                    MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                    //MessageBox.Show("程序运行过程中出现了异常，请联系软件开发商！");
+                    MessageBox.Show(ResxIF.GetString("Error_CallDeveloper"));
 
                     if (e.Exception is System.OutOfMemoryException)
                     {
@@ -354,8 +348,8 @@ namespace RPAStudio
                 {
                     Logger.Fatal("不可恢复的UI线程全局异常", logger);
                     Logger.Fatal(ex, logger);
-                    MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
-
+                    //MessageBox.Show("程序运行过程中出现了严重错误，即将退出，请联系软件开发商！");
+                    MessageBox.Show(ResxIF.GetString("Error_Critical_Exit"));
                     Environment.Exit(0);
                 }
             });

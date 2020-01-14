@@ -1,9 +1,4 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
-using RPAStudio.Librarys;
-using RPAStudio.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -12,6 +7,12 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
+using RPAStudio.Windows;
 
 namespace RPAStudio.ViewModel
 {
@@ -873,7 +874,7 @@ namespace RPAStudio.ViewModel
                         window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
                         var vm = window.DataContext as NewFolderViewModel;
                         vm.Path = Path;
-                        vm.FolderName = Common.GetValidDirectoryName(Path, "新建文件夹");
+                        vm.FolderName = Common.GetValidDirectoryName(Path, ResxIF.GetString("NewFolderTitle"));
                         window.ShowDialog();
                     },
                     () => !ViewModelLocator.Instance.Main.IsWorkflowRunningOrDebugging));
@@ -964,7 +965,8 @@ namespace RPAStudio.ViewModel
                     () =>
                     {
                         //删除目录
-                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format("确认删除目录\"{0}\"和它的所有内容吗？",Path),"询问", MessageBoxButton.OKCancel, MessageBoxImage.Question,MessageBoxResult.Cancel);
+                        // 确认删除目录\"{0}\"和它的所有内容吗？
+                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("DeleteDirectoryConfirmation"), Path),ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question,MessageBoxResult.Cancel);
                         if(ret == MessageBoxResult.OK)
                         {
                             Common.DeleteDir(Path);
@@ -1026,7 +1028,8 @@ namespace RPAStudio.ViewModel
                     ?? (_deleteFileCommand = new RelayCommand(
                     () =>
                     {
-                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format("确认删除文件\"{0}\"吗？", Path), "询问", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                        // 确认删除文件\"{0}\"吗？
+                        var ret = MessageBox.Show(App.Current.MainWindow, string.Format(ResxIF.GetString("DeleteFileConfirmation"), Path), ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
                         if (ret == MessageBoxResult.OK)
                         {
                             Common.DeleteFile(Path);
@@ -1142,22 +1145,6 @@ namespace RPAStudio.ViewModel
             File.WriteAllText(m_projectViewModel.CurrentProjectJsonFile, output);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                    
     }
 }

@@ -25,26 +25,26 @@ namespace RPA.Core.Activities.DataTableActivity
             }
         }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("DataTable1")]
-        [Description("要在此操作中使用的第一个表，存储在DataTable变量中。该字段仅支持DataTable变量")]
+        [Localize.LocalizedDisplayName("DisplayName23")] //DataTable1 //DataTable1 //DataTable1
+        [Localize.LocalizedDescription("Description46")] //要在此操作中使用的第一个表，存储在DataTable变量中。该字段仅支持DataTable变量 //The first table to use in this operation is stored in the DataTable variable.  This field only supports DataTable variables //この操作で使用する最初のテーブルは、DataTable変数に格納されます。 このフィールドはDataTable変数のみをサポートします
         public InArgument<DataTable> DataTable1 { get; set; }
 
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [RequiredArgument]
-        [DisplayName("DataTable2")]
-        [Description("要在此操作中使用的第二个表，存储在DataTable变量中。该字段仅支持DataTable变量")]
+        [Localize.LocalizedDisplayName("DisplayName24")] //DataTable2 //DataTable2 //DataTable2
+        [Localize.LocalizedDescription("Description47")] //要在此操作中使用的第二个表，存储在DataTable变量中。该字段仅支持DataTable变量 //The second table to be used in this operation is stored in the DataTable variable.  This field only supports DataTable variables //この操作で使用される2番目のテーブルは、DataTable変数に格納されます。 このフィールドはDataTable変数のみをサポートします
         public InArgument<DataTable> DataTable2 { get; set; }
 
 
-        [Category("选项")]
-        [DisplayName("JoinType")]
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName25")] //JoinType //JoinType //JoinType
         public JoinType JoinType { get; set; }
 
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category2")] //输出 //Output //出力
         [RequiredArgument]
         [DisplayName("DataTable")]
         public OutArgument<DataTable> DataTable { get; set; }

@@ -25,32 +25,32 @@ namespace RPA.UIAutomation.Activities.Window
             }
         }
 
-        [Category("公共")]
-        [DisplayName("错误执行")]
-        [Description("指定即使活动引发错误，自动化是否仍应继续")]
+        [Localize.LocalizedCategory("Category1")] //公共 //Public //一般公開
+        [Localize.LocalizedDisplayName("DisplayName1")] //错误执行 //Error execution //エラー実行
+        [Localize.LocalizedDescription("Description1")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("窗口标题")]
-        [Description("输入窗口标题")]
+        [Localize.LocalizedDisplayName("DisplayName60")] //窗口标题 //Window title //ウィンドウタイトル
+        [Localize.LocalizedDescription("Description74")] //输入窗口标题 //Enter window title //Windowのタイトルを入力
         public InArgument<string> Title
         {
             get;
             set;
         }
 
-        [Category("输入")]
+        [Localize.LocalizedCategory("Category3")] //输入 //Enter //入力
         [Browsable(true)]
-        [DisplayName("窗口类名")]
-        [Description("输入窗口类名")]
+        [Localize.LocalizedDisplayName("DisplayName61")] //窗口类名 //Window class name //Windowのクラス名
+        [Localize.LocalizedDescription("Description75")] //输入窗口类名 //Enter window class name //Windowのクラス名を入力
         public InArgument<string> ClassName
         {
             get;
             set;
         }
 
-        [Category("输出")]
+        [Localize.LocalizedCategory("Category4")] //输出 //Output //出力
         [Browsable(true)]
         public OutArgument<IntPtr> Result{ get; set; }
 

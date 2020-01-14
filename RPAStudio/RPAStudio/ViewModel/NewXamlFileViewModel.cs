@@ -1,11 +1,12 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
+﻿using System;
+using System.Xml;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System;
-using System.Xml;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using RPAStudio.Librarys;
-using System.IO;
+using RPAStudio.Localization;
 
 namespace RPAStudio.ViewModel
 {
@@ -109,8 +110,8 @@ namespace RPAStudio.ViewModel
         {
             //从FileTypeConfig.xml中初始化信息
             XmlDocument doc = new XmlDocument();
-
-            using (var ms = new MemoryStream(RPAStudio.Properties.Resources.FileTypeConfig))
+            var resourceXML = Properties.ResourceLocalizer.GetLocalizedResource("FileTypeConfig");
+            using (var ms = new MemoryStream(resourceXML))
             {
                 ms.Flush();
                 ms.Position = 0;
@@ -308,14 +309,16 @@ namespace RPAStudio.ViewModel
             if (string.IsNullOrEmpty(value))
             {
                 IsFileNameCorrect = false;
-                FileNameValidatedWrongTip = "名称不能为空";
+                // 名称不能为空
+                FileNameValidatedWrongTip = ResxIF.GetString("NameIsRequired");
             }
             else
             {
                 if (value.Contains(@"\") || value.Contains(@"/"))
                 {
                     IsFileNameCorrect = false;
-                    FileNameValidatedWrongTip = "名称不能有非法字符";
+                    // 名称不能有非法字符
+                    FileNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                 }
                 else
                 {
@@ -331,7 +334,7 @@ namespace RPAStudio.ViewModel
                     {
                         // file name is not valid
                         IsFileNameCorrect = false;
-                        FileNameValidatedWrongTip = "名称不能有非法字符";
+                        FileNameValidatedWrongTip = ResxIF.GetString("NameHasIlligalCharacter");
                     }
                     else
                     {
@@ -343,7 +346,8 @@ namespace RPAStudio.ViewModel
             if(File.Exists(FilePath+@"\"+FileName+@".xaml"))
             {
                 IsFileNameCorrect = false;
-                FileNameValidatedWrongTip = "指定的文件已存在";
+                // 指定的文件已存在
+                FileNameValidatedWrongTip = ResxIF.GetString("TheFileAlreadyExists");
             }
 
             CreateFileCommand.RaiseCanExecuteChanged();
@@ -454,14 +458,16 @@ namespace RPAStudio.ViewModel
             if (string.IsNullOrEmpty(value))
             {
                 IsFilePathCorrect = false;
-                FilePathValidatedWrongTip = "位置不能为空";
+                // 位置不能为空
+                FilePathValidatedWrongTip = ResxIF.GetString("PathCannotBeEmpty");
             }
             else
             {
                 if (!Directory.Exists(value))
                 {
                     IsFilePathCorrect = false;
-                    FilePathValidatedWrongTip = "指定的位置不存在";
+                    // 指定的位置不存在
+                    FilePathValidatedWrongTip = ResxIF.GetString("ThePathDoesNotExist");
                 }
             }
 
@@ -469,7 +475,8 @@ namespace RPAStudio.ViewModel
             if(!value.IsSubPathOf(ProjectPath))
             {
                 IsFilePathCorrect = false;
-                FilePathValidatedWrongTip = "指定的位置必须是项目所在目录或其子目录中";
+                // 指定的位置必须是项目所在目录或其子目录中
+                FilePathValidatedWrongTip = ResxIF.GetString("NotInSubDirectory");
             }
 
             CreateFileCommand.RaiseCanExecuteChanged();

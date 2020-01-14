@@ -22,12 +22,12 @@ namespace RPA.Core.Activities.FileActivity
 
         [RequiredArgument]
         [Category("File")]
-        [Description("文件的路径。如果路径不完整，则在项目文件夹中创建文件。")]
+        [Localize.LocalizedDescription("Description87")] //文件的路径。如果路径不完整，则在项目文件夹中创建文件。 //The path to the file.  If the path is incomplete, create a file in the project folder. //ファイルへのパス。 パスが不完全な場合は、プロジェクトフォルダーにファイルを作成します。
         public InArgument<string> FileName { get; set; }
 
         [RequiredArgument]
         [Category("Input")]
-        [Description("要附加到文件中的文本。")]
+        [Localize.LocalizedDescription("Description88")] //要附加到文件中的文本。 //The text to be attached to the file. //ファイルに添付するテキスト。
         public InArgument<string> Text { get; set; }
 
         [Browsable(false)]

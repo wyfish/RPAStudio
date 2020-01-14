@@ -39,7 +39,7 @@
         <Grid Grid.Column="1" Grid.Row="1"  >
             <Grid>
                 <StackPanel>
-                    <TextBlock Text="新建项目" Foreground="#707070" FontSize="14" />
+                    <TextBlock x:Uid="NewProject" Text="新建项目" Foreground="#707070" FontSize="14" />
                     <Rectangle Height="1" StrokeDashArray="3" Stroke="#c7c8c9" Margin="0,2,0,0"/>
                 </StackPanel>
 
@@ -60,8 +60,8 @@
                             </Grid>
                             <Grid Grid.Column="1">
                                 <StackPanel Margin="10,0,0,0">
-                                    <TextBlock FontSize="13" Foreground="#383838" FontWeight="Bold">流程</TextBlock>
-                                    <TextBlock Foreground="#606060" Margin="0,5,0,0" >新建一个自动化的空白流程</TextBlock>
+                                    <TextBlock x:Uid="Process" FontSize="13" Foreground="#383838" FontWeight="Bold">流程</TextBlock>
+                                    <TextBlock x:Uid="ProcessDescription" Foreground="#606060" Margin="0,5,0,0" >新建一个自动化的空白流程</TextBlock>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -78,7 +78,7 @@
         <Grid Grid.Column="3" Grid.Row="1">
             <Grid>
                 <StackPanel>
-                    <TextBlock Text="最近" Foreground="#707070" FontSize="14" />
+                    <TextBlock x:Uid="Recent" Text="最近" Foreground="#707070" FontSize="14" />
                     <Rectangle Height="1" StrokeDashArray="3" Stroke="#c7c8c9" Margin="0,2,0,0"/>
                 </StackPanel>
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,25,0,0">

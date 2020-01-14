@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+  <Group Name="应用程序集成">
+    <Group Name="Python">
+      <Activity Name="执行脚本代码" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonScriptActivity,RPA.Script.Activities" ToolTip="同步执执行Python脚本代码，支持传递参数"/>
+      <Activity Name="执行脚本文件" Icon="Resources/Python/python.png"  TypeOf="RPA.Script.Activities.Python.InvokePythonFileActivity,RPA.Script.Activities" ToolTip="同步执执行Python脚本文件，支持传递参数"/>
+    </Group>
+  </Group>
+</activity.config>
