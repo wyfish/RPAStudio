@@ -6,7 +6,7 @@
     <a href="http://rpa.openserver.cn">
         <img src="https://img.shields.io/badge/Licence-GPL3.0-green.svg?style=flat" />
     </a>    
-     <a href="http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.1.exe">
+     <a href="http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.3.exe">
         <img src="https://img.shields.io/badge/download-80m-red.svg" />
     </a>
     </p>
@@ -24,7 +24,7 @@
 ## 安装
   * 环境：windows;.net4.5以上
   * 编译: 克隆源代码，VS2015编译运行二进制文件
-  * 下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.1.exe) 
+  * 下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v2.0.0.3.exe) 
   * 旧版本下载地址: [下载](http://rpa.openserver.cn/download/RPAStudioSetup-v1.0.8.6.exe)
   
 ## 支持
