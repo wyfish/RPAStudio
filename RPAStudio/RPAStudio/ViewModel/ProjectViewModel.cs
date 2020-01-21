@@ -249,12 +249,16 @@ namespace RPAStudio.ViewModel
 
                     try
                     {
-                        using (StreamReader reader = new StreamReader(activity_config_info.Stream))
+                        // An Activity must contains "activities" in its file name. (to avoid exception)
+                        if (dll_file_name_without_ext.ToLower().Contains("activities"))
                         {
-                            activity_config_xml = reader.ReadToEnd();
-                            Logger.Debug($"开始挂载{dll_file}中的活动配置信息……", logger);
-                            // Start mounting Active configuration information in
-                            ViewModelLocator.Instance.Activities.MountActivityConfig(activity_config_xml);
+                            using (StreamReader reader = new StreamReader(activity_config_info.Stream))
+                            {
+                                activity_config_xml = reader.ReadToEnd();
+                                Logger.Debug($"开始挂载{dll_file}中的活动配置信息……", logger);
+                                // Start mounting Active configuration information in
+                                ViewModelLocator.Instance.Activities.MountActivityConfig(activity_config_xml);
+                            }
                         }
                     }
                     catch (Exception err)
