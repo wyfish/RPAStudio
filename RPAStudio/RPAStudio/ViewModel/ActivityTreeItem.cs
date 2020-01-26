@@ -544,6 +544,21 @@ namespace RPAStudio.ViewModel
                             }
                             type = Type.GetType(string.Join(",", sArray));
                         }
+
+                        // To load custom activity into the ActivityTree.
+                        // "activity.config.xml" must have 'namespace.class' full name and its assembly name.
+                        // ex) TypeOf="User.Custom.Activities.InvokeUserCustomActivity,User.Custom.Activities"
+                        // As you can see below, custom activity must contains "activities" in its assembly name.
+                        if (type == null && TypeOf.ToLower().Contains("activities"))
+                        {
+                            string[] sArray = TypeOf.Split(',');
+                            if (sArray.Length == 2)
+                            {
+                                string targetDir = Plugins.Shared.Library.Nuget.NuGetPackageController.Instance.TargetFolder;
+                                var assembly = System.Reflection.Assembly.LoadFrom(targetDir + "\\" + sArray[1]);
+                                type = assembly.GetType(sArray[0]);
+                            }
+                        }
                     }
 
                     if (type != null)
