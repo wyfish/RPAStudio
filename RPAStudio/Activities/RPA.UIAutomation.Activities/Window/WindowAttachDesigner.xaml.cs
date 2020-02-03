@@ -26,7 +26,7 @@ namespace RPA.UIAutomation.Activities.Window
             var screenshotsPath = uiElement.CaptureInformativeScreenshotToFile();
             setPropertyValue("SourceImgPath", screenshotsPath);
             setPropertyValue("Selector", new InArgument<string>(uiElement.Selector));
-            grid1.Visibility = System.Windows.Visibility.Hidden;
+            navigateTextBlock.Visibility = System.Windows.Visibility.Hidden;
             setPropertyValue("visibility", System.Windows.Visibility.Visible);
             string displayName = getPropertyValue("_DisplayName") + " \"" + uiElement.ProcessName + " " + uiElement.Name + "\"";
             setPropertyValue("DisplayName", displayName);
@@ -82,7 +82,7 @@ namespace RPA.UIAutomation.Activities.Window
         {
             string src = getPropertyValue("SourceImgPath");
             if (src != "")
-                grid1.Visibility = System.Windows.Visibility.Hidden;
+                navigateTextBlock.Visibility = System.Windows.Visibility.Hidden;
         }
     }
 }
