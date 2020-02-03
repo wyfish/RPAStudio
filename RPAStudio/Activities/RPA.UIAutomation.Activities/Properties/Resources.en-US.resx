@@ -121,7 +121,7 @@
     <value>Public</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
-    <value>Error execution</value>
+    <value>Error Execution</value>
   </data>
   <data name="Description1" xml:space="preserve">
     <value>Specifies whether automation should continue even if the activity raises an error</value>
@@ -199,7 +199,7 @@
     <value>The name of the property to wait for.  A predefined list of attributes can be used as a drop-down list in the activity.  This field only supports String variables.</value>
   </data>
   <data name="DisplayName10" xml:space="preserve">
-    <value>Attribute value</value>
+    <value>Attribute Value</value>
   </data>
   <data name="Description13" xml:space="preserve">
     <value>Specifies the expected value of the attribute.  This field only supports String variables.</value>
@@ -238,13 +238,13 @@
     <value>The browser page to close.  This field only supports the Browser variable.</value>
   </data>
   <data name="DisplayName17" xml:space="preserve">
-    <value>Delay time (end)</value>
+    <value>Delay Time (End)</value>
   </data>
   <data name="Description19" xml:space="preserve">
     <value>The delay (in milliseconds) after the activity is executed. The default time is 3000 milliseconds.</value>
   </data>
   <data name="DisplayName18" xml:space="preserve">
-    <value>Delay time (start)</value>
+    <value>Delay Time (Start)</value>
   </data>
   <data name="Description20" xml:space="preserve">
     <value>The delay (in milliseconds) before the activity begins any operation, the default amount of time is 3000 milliseconds.</value>
@@ -289,7 +289,7 @@
     <value>Specify browser response timeout (ms)</value>
   </data>
   <data name="DisplayName24" xml:space="preserve">
-    <value>Private/no trace</value>
+    <value>Private/No Trace</value>
   </data>
   <data name="DisplayName25" xml:space="preserve">
     <value>Hide</value>
@@ -304,7 +304,7 @@
     <value>The delay (in milliseconds) before the activity begins any operation, the default amount of time is 200 milliseconds.</value>
   </data>
   <data name="DisplayName26" xml:space="preserve">
-    <value>HTML attribute</value>
+    <value>HTML Attribute</value>
   </data>
   <data name="Description32" xml:space="preserve">
     <value>The name of the HTML attribute to change</value>
@@ -346,7 +346,7 @@
     <value>a string to write the Text property of the UI element</value>
   </data>
   <data name="DisplayName35" xml:space="preserve">
-    <value>Anchor position</value>
+    <value>Anchor Position</value>
   </data>
   <data name="Category7" xml:space="preserve">
     <value>Anchor boundary box</value>
@@ -391,7 +391,7 @@
     <value>The xml string specifies the conditions that all UI Objects in the collection should satisfy.</value>
   </data>
   <data name="DisplayName40" xml:space="preserve">
-    <value>Child element</value>
+    <value>Child Element</value>
   </data>
   <data name="Description45" xml:space="preserve">
     <value>All ui child elements will follow the set filter and scope.  This field only supports IEnumerable&lt;UIElement&gt; variables</value>
@@ -415,7 +415,7 @@
     <value>Position</value>
   </data>
   <data name="DisplayName44" xml:space="preserve">
-    <value>Relative element</value>
+    <value>Relative Element</value>
   </data>
   <data name="Description49" xml:space="preserve">
     <value>The relative ui element you are looking for.  Only UIElement type variables are supported</value>
@@ -427,7 +427,7 @@
     <value>Specify which level of the ui hierarchy to find the parent node</value>
   </data>
   <data name="DisplayName46" xml:space="preserve">
-    <value>Parent node</value>
+    <value>Parent Node</value>
   </data>
   <data name="Description51" xml:space="preserve">
     <value>The parent of the element.  Only UIElement type variables are supported</value>
@@ -451,7 +451,7 @@
     <value>The delay time, in milliseconds, before the deferred the activity is executed. The default time is 300 milliseconds.</value>
   </data>
   <data name="Category9" xml:space="preserve">
-    <value>Key options</value>
+    <value>Key Options</value>
   </data>
   <data name="DisplayName47" xml:space="preserve">
     <value>Other buttons</value>
@@ -478,7 +478,7 @@
     <value>The time (in milliseconds) before the deferred activity begins any operation.  The default time is 200 milliseconds.</value>
   </data>
   <data name="DisplayName50" xml:space="preserve">
-    <value>Specified number</value>
+    <value>Specified Number</value>
   </data>
   <data name="Description61" xml:space="preserve">
     <value>If the string in the text field appears multiple times in the specified ui element, specify the number of occurrences here instead of the number of clicks</value>
@@ -490,7 +490,7 @@
     <value>The text to click</value>
   </data>
   <data name="DisplayName51" xml:space="preserve">
-    <value>Waiting time</value>
+    <value>Waiting Time</value>
   </data>
   <data name="Description64" xml:space="preserve">
     <value>The amount of time to wait for loading to the next page</value>
@@ -514,7 +514,7 @@
     <value>If checked, clicking the next link/ button for navigating to the next page will be performed by sending a specific message to the othe target application.  This input method works in the background and is compatible with most desktop applications, but it's not the fastest way</value>
   </data>
   <data name="DisplayName55" xml:space="preserve">
-    <value>Simulated click</value>
+    <value>Simulated Click</value>
   </data>
   <data name="Description68" xml:space="preserve">
     <value>If checked, it will use the technology simulation of the target application to click the next link/button used to navigate the next page.  This input method is the fastest of the three input methods and works in the background.</value>
@@ -547,13 +547,13 @@
     <value>Screen coordinates of each word found in the specified ui element</value>
   </data>
   <data name="DisplayName60" xml:space="preserve">
-    <value>Window title</value>
+    <value>Window Title</value>
   </data>
   <data name="Description74" xml:space="preserve">
     <value>Enter window title</value>
   </data>
   <data name="DisplayName61" xml:space="preserve">
-    <value>Window class name</value>
+    <value>Window Class Name</value>
   </data>
   <data name="Description75" xml:space="preserve">
     <value>Enter window class name</value>
@@ -568,7 +568,7 @@
     <value>The active window found.  This field only supports Window variables.  The SearchScope and Selector properties are ignored when the Window variable is specified.</value>
   </data>
   <data name="DisplayName63" xml:space="preserve">
-    <value>Window handle</value>
+    <value>Window Handle</value>
   </data>
   <data name="Description78" xml:space="preserve">
     <value>The window handle to close.</value>
