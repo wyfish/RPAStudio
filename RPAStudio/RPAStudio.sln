@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPAStudio", "RPAStudio\RPAStudio.csproj", "{F0E5495C-95E3-42F3-9553-43E6B492DA90}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.UIAutomation.Activities", "Activities\RPA.UIAutomation.Activities\RPA.UIAutomation.Activities.csproj", "{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.Integration.Activities", "Activities\RPA.Integration.Activities\RPA.Integration.Activities.csproj", "{09C40C47-F9ED-4156-B856-731D88871717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPA.OpenCV.Activities", "Activities\RPA.OpenCV.Activities\RPA.OpenCV.Activities.csproj", "{AF1CACF6-8CC0-42C0-90DB-C65A78F8B46B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{09C40C47-F9ED-4156-B856-731D88871717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C40C47-F9ED-4156-B856-731D88871717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C40C47-F9ED-4156-B856-731D88871717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1CACF6-8CC0-42C0-90DB-C65A78F8B46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1CACF6-8CC0-42C0-90DB-C65A78F8B46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1CACF6-8CC0-42C0-90DB-C65A78F8B46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1CACF6-8CC0-42C0-90DB-C65A78F8B46B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,9 @@ Global
 		{089464AC-7A2B-4BDC-BD6A-3C76005FFC35} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
 		{372C29CA-4BA7-4D2C-9E00-4C9163ECB6CD} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
 		{09C40C47-F9ED-4156-B856-731D88871717} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
+		{AF1CACF6-8CC0-42C0-90DB-C65A78F8B46B} = {C87147D8-967E-4F75-B08C-828E0CC6FC70}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E8BEFD7-1399-4135-923C-8F578B926D54}
 	EndGlobalSection
 EndGlobal
