@@ -15,6 +15,6 @@
     <tags>RPA OpenCV Activity</tags> 
   </metadata>
   <files>
-    <file src="bin\$configuration$\*.*" target="lib/net452" exclude="bin\$configuration$\*.pdb;bin\$configuration$\$id$.dll;bin\$configuration$\$id$.dll.config" />
+    <file src="bin\$configuration$\**" target="lib/net452" exclude="bin\$configuration$\*.pdb;bin\$configuration$\$id$.dll;bin\$configuration$\$id$.dll.config" />
   </files>
 </package>
