@@ -118,52 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DragScreen" xml:space="preserve">
-    <value>Drag on Screen</value>
+    <value>ドラッグで選択</value>
   </data>
   <data name="ReselectIt" xml:space="preserve">
-    <value>Re-Select</value>
+    <value>再選択</value>
   </data>
   <data name="Ctg_Public" xml:space="preserve">
-    <value>Public</value>
+    <value>一般公開</value>
   </data>
   <data name="DN_ErrorExecution" xml:space="preserve">
-    <value>Error execution</value>
+    <value>エラー実行</value>
   </data>
   <data name="DS_ErrorExecution" xml:space="preserve">
-    <value>Specifies whether automation should continue even if the activity raises an error</value>
+    <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します</value>
   </data>
   <data name="Ctg_Input" xml:space="preserve">
-    <value>Input</value>
+    <value>入力</value>
   </data>
   <data name="DN_WindowTitle" xml:space="preserve">
-    <value>Window Title</value>
+    <value>ウィンドウタイトル</value>
   </data>
   <data name="DS_WindowTitle" xml:space="preserve">
-    <value>By entering the window title, you can limit the image search range to within the window.</value>
+    <value>ウィンドウタイトルを入力すると、画像検索範囲をウィンドウ内に限定することができます。</value>
   </data>
   <data name="DN_MatchingThreshold" xml:space="preserve">
-    <value>Matching Threshold</value>
+    <value>マッチング閾値</value>
   </data>
   <data name="DS_MatchingThreshold" xml:space="preserve">
-    <value>Matching Threshold (default value = 91. Must 80 &lt;= x &lt;= 100)</value>
+    <value>マッチング閾値 (デフォルト値 = 91. Must 80 &lt;= x &lt;= 100)</value>
   </data>
   <data name="DN_MatchingInterval" xml:space="preserve">
-    <value>Matching Interval [ms]</value>
+    <value>マッチング間隔[ms]</value>
   </data>
   <data name="DS_MatchingInterval" xml:space="preserve">
-    <value>Matching Interval [ms] (default value = 2000 [ms]. Must 600 &lt;= x)</value>
+    <value>マッチング間隔[ms] (デフォルト値 = 2000[ms]. Must 600 &lt;= x)</value>
   </data>
   <data name="DN_Retry" xml:space="preserve">
-    <value>Number of Retries</value>
+    <value>リトライ回数</value>
   </data>
   <data name="DS_Retry" xml:space="preserve">
-    <value>Retry count (default value = 600 times)</value>
+    <value>リトライ回数 (デフォルト値 = 600回)</value>
   </data>
   <data name="Ctg_Output" xml:space="preserve">
-    <value>Output</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Flax_CV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Flax.CV.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>出力</value>
   </data>
 </root>

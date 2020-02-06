@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+  <Group Name="OpenCV">
+    <Group Name="Mouse">
+      <Activity Name="CV Click" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVClickActivity,RPA.OpenCV.Activities" ToolTip="OpenCVのテンプレートマッチングを行い、マッチングした個所をクリックします。"/>
+    </Group>
+  </Group>
+</activity.config>

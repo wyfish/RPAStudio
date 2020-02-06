@@ -31,7 +31,7 @@
             <Grid Name="grid1">
                 <TextBlock Name="navigateTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Hyperlink Name="Hyperlink" Click="HyperlinkClick" NavigateUri="www.baidu.com" AllowDrop="True" >
-                        <Run Text="{x:Static lclz:Resources.TapScreen}"/>
+                        <Run Text="{x:Static lclz:Resources.DragScreen}"/>
                     </Hyperlink>
                 </TextBlock>
             </Grid>

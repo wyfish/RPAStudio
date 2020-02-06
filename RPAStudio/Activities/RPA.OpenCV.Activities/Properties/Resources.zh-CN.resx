@@ -118,52 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DragScreen" xml:space="preserve">
-    <value>Drag on Screen</value>
+    <value>拖动选择</value>
   </data>
   <data name="ReselectIt" xml:space="preserve">
-    <value>Re-Select</value>
+    <value>重新选取</value>
   </data>
   <data name="Ctg_Public" xml:space="preserve">
-    <value>Public</value>
+    <value>公共</value>
   </data>
   <data name="DN_ErrorExecution" xml:space="preserve">
-    <value>Error execution</value>
+    <value>错误执行</value>
   </data>
   <data name="DS_ErrorExecution" xml:space="preserve">
-    <value>Specifies whether automation should continue even if the activity raises an error</value>
+    <value>指定即使活动引发错误，自动化是否仍应继续</value>
   </data>
   <data name="Ctg_Input" xml:space="preserve">
-    <value>Input</value>
+    <value>输入</value>
   </data>
   <data name="DN_WindowTitle" xml:space="preserve">
-    <value>Window Title</value>
+    <value>窗口标题</value>
   </data>
   <data name="DS_WindowTitle" xml:space="preserve">
-    <value>By entering the window title, you can limit the image search range to within the window.</value>
+    <value>通过输入窗口标题，可以将图像搜索范围限制在窗口内。</value>
   </data>
   <data name="DN_MatchingThreshold" xml:space="preserve">
-    <value>Matching Threshold</value>
+    <value>匹配阈值</value>
   </data>
   <data name="DS_MatchingThreshold" xml:space="preserve">
-    <value>Matching Threshold (default value = 91. Must 80 &lt;= x &lt;= 100)</value>
+    <value>匹配阈值（默认值=91。必须80 &lt;= x &lt;= 100）</value>
   </data>
   <data name="DN_MatchingInterval" xml:space="preserve">
-    <value>Matching Interval [ms]</value>
+    <value>匹配间隔[ms]</value>
   </data>
   <data name="DS_MatchingInterval" xml:space="preserve">
-    <value>Matching Interval [ms] (default value = 2000 [ms]. Must 600 &lt;= x)</value>
+    <value>匹配间隔[ms]（默认值= 2000 [ms]。必须为600 &lt;= x）</value>
   </data>
   <data name="DN_Retry" xml:space="preserve">
-    <value>Number of Retries</value>
+    <value>重试次数</value>
   </data>
   <data name="DS_Retry" xml:space="preserve">
-    <value>Retry count (default value = 600 times)</value>
+    <value>重试次数（默认值= 600次）</value>
   </data>
   <data name="Ctg_Output" xml:space="preserve">
-    <value>Output</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Flax_CV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Flax.CV.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>输出</value>
   </data>
 </root>

@@ -46,39 +46,39 @@ namespace RPA.OpenCV.Activities.Mouse
             }
         }
 
-        [Category("Public")] //公共 //Public //一般公開
-        [DisplayName("Error execution")] //错误执行 //Error execution //エラー実行
-        [Description("Specifies whether automation should continue even if the activity raises an error")] //指定即使活动引发错误，自动化是否仍应继续 //Specifies whether automation should continue even if the activity raises an error //アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します
+        [Localize.LocalizedCategory("Ctg_Public")]
+        [Localize.LocalizedDisplayName("DN_ErrorExecution")]
+        [Localize.LocalizedDescription("DS_ErrorExecution")]
         public InArgument<bool> ContinueOnError { get; set; }
 
-        [Category("Input")] //输入 //Input //入力
+        [Localize.LocalizedCategory("Ctg_Input")] //输入 //Input //入力
         [Browsable(true)]
-        [DisplayName("Window Title")] //窗口标题 //Window title //ウィンドウタイトル
-        [Description("Enter the Window Title")] //输入窗口标题 //Enter window title //Windowのタイトルを入力
+        [Localize.LocalizedDisplayName("DN_WindowTitle")] //窗口标题 //Window title //ウィンドウタイトル
+        [Localize.LocalizedDescription("DS_WindowTitle")]
         public InArgument<string> Title {
             get;
             set;
         }
 
-        [Category("入力")]
+        [Localize.LocalizedCategory("Ctg_Input")]
         [Browsable(true)]
-        [DisplayName("MatchingThreshold")]
-        [Description("マッチング閾値 (デフォルト値 = 91. Must 80 <= x <= 100)")]
+        [Localize.LocalizedDisplayName("DN_MatchingThreshold")]
+        [Localize.LocalizedDescription("DS_MatchingThreshold")]
         public InArgument<int> MatchingThreshold { get; set; } = 91;
 
-        [Category("入力")]
+        [Localize.LocalizedCategory("Ctg_Input")]
         [Browsable(true)]
-        [DisplayName("MatchingInterval")]
-        [Description("マッチング間隔[ms] (デフォルト値 = 2000[ms]. Must 600 <= x)")]
+        [Localize.LocalizedDisplayName("DN_MatchingInterval")]
+        [Localize.LocalizedDescription("DS_MatchingInterval")]
         public InArgument<int> MatchingInterval { get; set; } = 2000;
 
-        [Category("入力")]
+        [Localize.LocalizedCategory("Ctg_Input")]
         [Browsable(true)]
-        [DisplayName("Retry")]
-        [Description("リトライ回数 (デフォルト値 = 600回)")]
+        [Localize.LocalizedDisplayName("DN_Retry")]
+        [Localize.LocalizedDescription("DS_Retry")]
         public InArgument<int> Retry { get; set; } = 600;
 
-        [Category("出力")]
+        [Localize.LocalizedCategory("Ctg_Output")]
         [Browsable(true)]
         public OutArgument<bool> Result { get; set; }
 

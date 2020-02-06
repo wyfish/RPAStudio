@@ -3,7 +3,7 @@
 <activity.config>
   <Group Name="OpenCV">
     <Group Name="Mouse">
-      <Activity Name="CV Click" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVClickActivity,RPA.OpenCV.Activities" ToolTip="Synchronous execution of Python script code, support for passing parameters"/>
+      <Activity Name="CV Click" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVClickActivity,RPA.OpenCV.Activities" ToolTip="Perform OpenCV template matching and click on the matched location."/>
     </Group>
   </Group>
 </activity.config>

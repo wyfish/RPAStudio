@@ -61,6 +61,132 @@ namespace RPA.OpenCV.Activities.Properties {
         }
         
         /// <summary>
+        ///   Input に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Ctg_Input {
+            get {
+                return ResourceManager.GetString("Ctg_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Output に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Ctg_Output {
+            get {
+                return ResourceManager.GetString("Ctg_Output", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Public に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Ctg_Public {
+            get {
+                return ResourceManager.GetString("Ctg_Public", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Error execution に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DN_ErrorExecution {
+            get {
+                return ResourceManager.GetString("DN_ErrorExecution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Matching Interval [ms] に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DN_MatchingInterval {
+            get {
+                return ResourceManager.GetString("DN_MatchingInterval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Matching Threshold に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DN_MatchingThreshold {
+            get {
+                return ResourceManager.GetString("DN_MatchingThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Number of Retries に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DN_Retry {
+            get {
+                return ResourceManager.GetString("DN_Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Window Title に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DN_WindowTitle {
+            get {
+                return ResourceManager.GetString("DN_WindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Drag on Screen に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DragScreen {
+            get {
+                return ResourceManager.GetString("DragScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Specifies whether automation should continue even if the activity raises an error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DS_ErrorExecution {
+            get {
+                return ResourceManager.GetString("DS_ErrorExecution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Matching Interval [ms] (default value = 2000 [ms]. Must 600 &lt;= x) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DS_MatchingInterval {
+            get {
+                return ResourceManager.GetString("DS_MatchingInterval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Matching Threshold (default value = 91. Must 80 &lt;= x &lt;= 100) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DS_MatchingThreshold {
+            get {
+                return ResourceManager.GetString("DS_MatchingThreshold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Retry count (default value = 600 times) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DS_Retry {
+            get {
+                return ResourceManager.GetString("DS_Retry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   By entering the window title, you can limit the image search range to within the window. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DS_WindowTitle {
+            get {
+                return ResourceManager.GetString("DS_WindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   型 System.Byte[] のローカライズされたリソースを検索します。
         /// </summary>
         public static byte[] Flax_CV {
@@ -76,15 +202,6 @@ namespace RPA.OpenCV.Activities.Properties {
         public static string ReselectIt {
             get {
                 return ResourceManager.GetString("ReselectIt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Indicate on screen に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string TapScreen {
-            get {
-                return ResourceManager.GetString("TapScreen", resourceCulture);
             }
         }
     }

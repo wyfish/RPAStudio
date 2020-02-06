@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+  <Group Name="OpenCV">
+    <Group Name="Mouse">
+      <Activity Name="CV Click" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后单击匹配的位置。"/>
+    </Group>
+  </Group>
+</activity.config>
