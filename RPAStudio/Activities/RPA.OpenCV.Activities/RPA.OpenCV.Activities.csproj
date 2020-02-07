@@ -69,9 +69,14 @@
   <ItemGroup>
     <Compile Include="FlaxCV.cs" />
     <Compile Include="Localize.cs" />
+    <Compile Include="Mouse\Common.cs" />
+    <Compile Include="Mouse\CVWaitActivity.cs" />
+    <Compile Include="Mouse\CVHoverActivity.cs" />
+    <Compile Include="Mouse\CVRightClickActivity.cs" />
+    <Compile Include="Mouse\CVDoubleClickActivity.cs" />
     <Compile Include="Mouse\CVClickActivity.cs" />
-    <Compile Include="Mouse\CVClickActivityDesigner.xaml.cs">
-      <DependentUpon>CVClickActivityDesigner.xaml</DependentUpon>
+    <Compile Include="Mouse\CVActivityDesigner.xaml.cs">
+      <DependentUpon>CVActivityDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -97,7 +102,7 @@
     <Compile Include="SnippingTool\SnippingTool.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Mouse\CVClickActivityDesigner.xaml">
+    <Page Include="Mouse\CVActivityDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,6 +155,10 @@
     <Resource Include="activity.config_zh.xml">
       <SubType>Designer</SubType>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Mouse\hover.png" />
+    <Resource Include="Resources\Mouse\WaitAttr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

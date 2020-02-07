@@ -166,4 +166,10 @@
   <data name="Flax_CV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flax.CV.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>Image Matching Result</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>Capture Area : x={0}, y={1}, w={2}, h={3}, Matched : {4}, Matched Level : {5}</value>
+  </data>
 </root>

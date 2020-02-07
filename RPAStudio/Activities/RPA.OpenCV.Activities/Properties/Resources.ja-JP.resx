@@ -162,4 +162,10 @@
   <data name="Ctg_Output" xml:space="preserve">
     <value>出力</value>
   </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>画像マッチング結果</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>キャプチャ範囲 : x={0}, y={1}, w={2}, h={3}, 一致 : {4} 一致度 : {5}</value>
+  </data>
 </root>

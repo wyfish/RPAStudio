@@ -197,11 +197,29 @@ namespace RPA.OpenCV.Activities.Properties {
         }
         
         /// <summary>
+        ///   Image Matching Result に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ImageMatchingResult {
+            get {
+                return ResourceManager.GetString("ImageMatchingResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Re-Select に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReselectIt {
             get {
                 return ResourceManager.GetString("ReselectIt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Capture Area : x={0}, y={1}, w={2}, h={3}, Matched : {4}, Matched Level : {5} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ResultInformation {
+            get {
+                return ResourceManager.GetString("ResultInformation", resourceCulture);
             }
         }
     }

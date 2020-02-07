@@ -162,4 +162,10 @@
   <data name="Ctg_Output" xml:space="preserve">
     <value>输出</value>
   </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>图像匹配结果</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>捕获范围 : x={0}, y={1}, w={2}, h={3}, 搭配 : {4}, 重合度 : {5}</value>
+  </data>
 </root>

@@ -12,11 +12,11 @@ using Plugins.Shared.Library.Window;
 namespace RPA.OpenCV.Activities.Mouse
 {
     /// <summary>
-    /// CVClickActivityDesigner.xaml の相互作用ロジック
+    /// CVActivityDesigner.xaml の相互作用ロジック
     /// </summary>
-    public partial class CVClickActivityDesigner
+    public partial class CVActivityDesigner
     {
-        public CVClickActivityDesigner()
+        public CVActivityDesigner()
         {
             InitializeComponent();
         }
@@ -82,7 +82,6 @@ namespace RPA.OpenCV.Activities.Mouse
         {
             var screenshotsPath = uiElement.CaptureInformativeScreenshotToFile();
             setPropertyValue("SourceImgPath", screenshotsPath);
-            //   setPropertyValue("Selector", new InArgument<string>(uiElement.Selector));
             grid1.Visibility = System.Windows.Visibility.Hidden;
             setPropertyValue("visibility", System.Windows.Visibility.Visible);
             string displayName = getPropertyValue("_DisplayName") + " \"" + uiElement.ProcessName + " " + uiElement.Name + "\"";

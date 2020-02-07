@@ -92,6 +92,8 @@ namespace RPA.OpenCV.Activities.Snip
 
         public static Image Snip2()
         {
+            _SelectionCanceled = false;
+            _SelectionDone = false;
             var screens = ScreenHelper.GetMonitorsInfo();
             _forms = new SnippingTool[screens.Count];
             for (int i = 0; i < screens.Count; i++) {
