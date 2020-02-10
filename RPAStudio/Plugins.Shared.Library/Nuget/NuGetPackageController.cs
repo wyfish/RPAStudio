@@ -265,8 +265,6 @@ namespace Plugins.Shared.Library.Nuget
 
 
 
-
-
         public async Task GetPackageDependencies(PackageIdentity package, SourceCacheContext cacheContext, ISet<SourcePackageDependencyInfo> availablePackages)
         {
             if (availablePackages.Contains(package)) return;
@@ -274,11 +272,21 @@ namespace Plugins.Shared.Library.Nuget
             var repositories = SourceRepositoryProvider.GetRepositories();
             foreach (var sourceRepository in repositories)
             {
-                var dependencyInfoResource = await sourceRepository.GetResourceAsync<DependencyInfoResource>();
-                var dependencyInfo = await dependencyInfoResource.ResolvePackage(
-                    package, NuGetFramework, Logger, CancellationToken.None);
+                SourcePackageDependencyInfo dependencyInfo = null;
+                try
+                {
+                    var dependencyInfoResource = await sourceRepository.GetResourceAsync<DependencyInfoResource>();
+                    dependencyInfo = await dependencyInfoResource.ResolvePackage(
+                        package, NuGetFramework, Logger, CancellationToken.None);
+                    if (dependencyInfo == null) continue;
+                    availablePackages.Add(dependencyInfo);
+                }
+                catch (Exception)
+                {
+                    //string a = ex.Message;
+                }
                 if (dependencyInfo == null) continue;
-                availablePackages.Add(dependencyInfo);
+
                 foreach (var dependency in dependencyInfo.Dependencies)
                 {
                     var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);

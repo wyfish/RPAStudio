@@ -30,3 +30,7 @@ RPAStudio/*/GeneratedFiles
 /RPAStudio/Activities/RPA.Script.Activities/obj/Release
 /RPAStudio/Activities/RPA.UIAutomation.Activities/bin/Release
 /RPAStudio/Activities/nupkgs
+/RPAStudio/Activities/RPA.OpenCV.Activities/bin/Debug
+/RPAStudio/Activities/RPA.OpenCV.Activities/obj/Debug
+/RPAStudio/Activities/RPA.OpenCV.Activities/bin/Release
+/RPAStudio/Activities/RPA.OpenCV.Activities/obj/Release

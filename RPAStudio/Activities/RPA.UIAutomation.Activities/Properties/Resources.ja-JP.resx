@@ -367,13 +367,13 @@
     <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを、値（TrueまたはFalse）で指定します</value>
   </data>
   <data name="DisplayName36" xml:space="preserve">
-    <value>要素が停止するのを待っています</value>
+    <value>要素が停止するまで待つ</value>
   </data>
   <data name="Description41" xml:space="preserve">
     <value>このオプションを選択すると、アクティビティは指定されたイベントの終わりまで待機します</value>
   </data>
   <data name="DisplayName37" xml:space="preserve">
-    <value>要素が消えるのを待っています</value>
+    <value>要素が消えるまで待つ</value>
   </data>
   <data name="Description42" xml:space="preserve">
     <value>このオプションを選択すると、ui要素がまだアクティブであっても、アクティビティは画面からui要素が消えるまで待機するだけです。</value>
@@ -397,13 +397,13 @@
     <value>すべてのui子要素は、設定されたフィルターとスコープに従います。 このフィールドはIEnumerable &lt;UIElement&gt;変数のみをサポートします</value>
   </data>
   <data name="DisplayName41" xml:space="preserve">
-    <value>アクティビティを待っています</value>
+    <value>アクティビティを待つ</value>
   </data>
   <data name="Description46" xml:space="preserve">
     <value>このオプションを選択すると、アクティビティは指定されたui要素がアクティブになるのを待ちます。</value>
   </data>
   <data name="DisplayName42" xml:space="preserve">
-    <value>見えるまで待っています</value>
+    <value>見えるまで待つ</value>
   </data>
   <data name="Description47" xml:space="preserve">
     <value>このオプションを選択すると、アクティビティは指定されたui要素が表示されるまで待機します。</value>
@@ -469,7 +469,7 @@
     <value>UIAutomationInfoを入力します</value>
   </data>
   <data name="DisplayName49" xml:space="preserve">
-    <value>ひも</value>
+    <value>String</value>
   </data>
   <data name="Description59" xml:space="preserve">
     <value>クリックする文字列</value>
@@ -559,7 +559,7 @@
     <value>Windowのクラス名を入力</value>
   </data>
   <data name="DisplayName62" xml:space="preserve">
-    <value>窓</value>
+    <value>Window</value>
   </data>
   <data name="Description76" xml:space="preserve">
     <value>ウィンドウを格納する変数。 このフィールドはウィンドウ変数のみを受け入れます</value>
@@ -574,7 +574,7 @@
     <value>閉じるウィンドウハンドル。</value>
   </data>
   <data name="DisplayName64" xml:space="preserve">
-    <value>身長</value>
+    <value>高さ</value>
   </data>
   <data name="Description79" xml:space="preserve">
     <value>正および負の整数をサポートするウィンドウの新しい高さ</value>
@@ -586,7 +586,7 @@
     <value>正および負の整数をサポートするウィンドウの新しい幅</value>
   </data>
   <data name="DisplayName66" xml:space="preserve">
-    <value>座標X</value>
+    <value>X座標</value>
   </data>
   <data name="Description81" xml:space="preserve">
     <value>ウィンドウの新しい位置座標はX軸であり、正および負の整数をサポートします</value>
