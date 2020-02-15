@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--活动配置信息-->
 <activity.config>
-  <Group Name="OpenCV">
-    <Group Name="鼠标">
-      <Activity Name="CV 单击" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后单击与模板图像匹配的位置。"/>
-      <Activity Name="CV 双击" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVDoubleClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后双击与模板图像匹配的位置。"/>
-      <Activity Name="CV 右键点击" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVRightClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后右键单击与模板图像匹配的位置。"/>
-      <Activity Name="CV 悬浮" Icon="Resources/Mouse/hover.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVHoverActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后将鼠标移到与模板图像匹配的位置。"/>
-      <Activity Name="CV 等待" Icon="Resources/Mouse/WaitAttr.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVWaitActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后等待模板图像匹配。没有鼠标操作。"/>
+  <Group Name="UI 自动化" ToolTip="一些UI自动化的模拟组件">
+    <Group Name="Image">
+      <Group Name="鼠标">
+        <Activity Name="Image 单击" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后单击与模板图像匹配的位置。"/>
+        <Activity Name="Image 双击" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVDoubleClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后双击与模板图像匹配的位置。"/>
+        <Activity Name="Image 右键点击" Icon="Resources/Mouse/cvclick.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVRightClickActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后右键单击与模板图像匹配的位置。"/>
+        <Activity Name="Image 悬浮" Icon="Resources/Mouse/hover.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVHoverActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后将鼠标移到与模板图像匹配的位置。"/>
+        <Activity Name="Image 等待" Icon="Resources/Mouse/WaitAttr.png"  TypeOf="RPA.OpenCV.Activities.Mouse.CVWaitActivity,RPA.OpenCV.Activities" ToolTip="执行OpenCV模板匹配，然后等待模板图像匹配。没有鼠标操作。"/>
+      </Group>
     </Group>
   </Group>
 </activity.config>

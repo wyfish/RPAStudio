@@ -12,11 +12,11 @@ using Plugins.Shared.Library.Window;
 namespace RPA.OpenCV.Activities.Mouse
 {
     /// <summary>
-    /// CVActivityDesigner.xaml の相互作用ロジック
+    /// ImageActionActivityDesigner.xaml の相互作用ロジック
     /// </summary>
-    public partial class CVActivityDesigner
+    public partial class ImageActionActivityDesigner
     {
-        public CVActivityDesigner()
+        public ImageActionActivityDesigner()
         {
             InitializeComponent();
         }

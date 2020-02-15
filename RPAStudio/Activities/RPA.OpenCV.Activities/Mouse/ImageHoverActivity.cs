@@ -5,12 +5,12 @@ using Plugins.Shared.Library;
 
 namespace RPA.OpenCV.Activities.Mouse
 {
-    [Designer(typeof(CVActivityDesigner))]
-    public sealed class CVHoverActivity : CodeActivity
+    [Designer(typeof(ImageActionActivityDesigner))]
+    public sealed class ImageHoverActivity : CodeActivity
     {
         public new string DisplayName;
         [Browsable(false)]
-        public string _DisplayName { get { return "CV Hover"; } }
+        public string _DisplayName { get { return "Image Hover"; } }
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
@@ -83,7 +83,7 @@ namespace RPA.OpenCV.Activities.Mouse
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "Error on Executing CVHoverActivity()", e.Message);
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "Error on Executing ImageHoverActivity()", e.Message);
                 if (ContinueOnError.Get(context))
                 {
                 }
