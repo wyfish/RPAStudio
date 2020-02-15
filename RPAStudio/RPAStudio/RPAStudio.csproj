@@ -851,7 +851,7 @@
     <None Include="Config\ProjectConfig_ja.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
+    <Resource Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
