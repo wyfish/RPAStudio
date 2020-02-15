@@ -202,11 +202,13 @@ namespace RPA.Integration.Activities.ExcelPlugins
             base.CacheMetadata(metadata);
             if (this.NewDoc == false && this.PathUrl == null)
             {
-                metadata.AddValidationError("非创建新文档需要添加有效路径");
+                // 非创建新文档需要添加有效路径
+                metadata.AddValidationError(Localize.LocalizedResources.GetString("xRequireValidPath1"));
             }
             if (this.SaveAs == true && this.SavePathUrl == null)
             {
-                metadata.AddValidationError("另存为需要添加有效路径");
+                // 另存为需要添加有效路径
+                metadata.AddValidationError(Localize.LocalizedResources.GetString("xRequireValidPath1"));
             }
         }
 
@@ -230,7 +232,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
                 {
                     if (!File.Exists(filePath))
                     {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "文件不存在，请检查路径有效性");
+                        // 文件不存在，请检查路径有效性
+                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("xFileNotExist"));
                         new CommonVariable().realaseProcessExit(excelApp);
                         return;
                     }
@@ -245,7 +248,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "EXCEL执行过程出错", e.Message);
+                // EXCEL执行过程出错
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("xExcelExecError"), e.Message);
                 new CommonVariable().realaseProcessExit(excelApp);
             }
         }
@@ -261,8 +265,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
             {
                 if ((!isPathAvailable(saveFilePath)) && (_NewDoc))
                 {
-                    string messageBoxText = "此文档为新建文件,请输入正确保存路径!";
-                    string caption = "提示";
+                    // 此文档为新建文件,请输入正确保存路径!
+                    string messageBoxText = Localize.LocalizedResources.GetString("xRequireCorrectSavePath1");
+                    string caption = Localize.LocalizedResources.GetString("xPrompt"); // 提示
                     MessageBoxButton button = MessageBoxButton.OK;
                     MessageBoxImage icon = MessageBoxImage.Warning;
                     MessageBox.Show(messageBoxText, caption, button, icon);
@@ -280,8 +285,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
             {
                 if (!isPathAvailable(saveFilePath))
                 {
-                    string messageBoxText = "另存为应输入正确保存路径!";
-                    string caption = "提示";
+                    // 另存为应输入正确保存路径!
+                    string messageBoxText = Localize.LocalizedResources.GetString("xRequireCorrectSavePath2");
+                    string caption = Localize.LocalizedResources.GetString("xPrompt"); // 提示
                     MessageBoxButton button = MessageBoxButton.OK;
                     MessageBoxImage icon = MessageBoxImage.Warning;
                     MessageBox.Show(messageBoxText, caption, button, icon);

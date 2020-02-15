@@ -1,12 +1,12 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Windows;
+using System.Xml;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using log4net;
-using System.Collections.ObjectModel;
-using System.Windows;
-using System;
-using System.Xml;
 using NuGet;
-using System.IO;
 using RPAStudio.Librarys;
 using RPAStudio.Localization;
 
@@ -579,11 +579,6 @@ namespace RPAStudio.ViewModel
 
 
 
-
-
-
-
-
         private RelayCommand _okCommand;
 
         /// <summary>
@@ -647,14 +642,16 @@ namespace RPAStudio.ViewModel
                             //弹窗生成成功
                             if (System.IO.File.Exists(outputPath))
                             {
-                                var info = string.Format("项目发布成功。\n名称：{0}\n版本：{1}\n位置：{2}\n", ViewModelLocator.Instance.Project.ProjectName, publishVersion, m_nupkgLocation);
+                                // 项目发布成功。\n名称：{0}\n版本：{1}\n位置：{2}\n
+                                var info = string.Format(ResxIF.GetString("msgProjectSuccessflyReleased"), ViewModelLocator.Instance.Project.ProjectName, publishVersion, m_nupkgLocation, Environment.NewLine);
                                 MessageBox.Show(App.Current.MainWindow, info, ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                             }
                         }
                         catch (Exception err)
                         {
                             Logger.Debug(err, logger);
-                            MessageBox.Show(App.Current.MainWindow, "发布项目失败！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 发布项目失败！
+                            MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("msgPublishProjectFailed"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
 
                         m_view.Close();

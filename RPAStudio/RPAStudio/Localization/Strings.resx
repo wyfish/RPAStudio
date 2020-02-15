@@ -352,10 +352,10 @@
     <value>by</value>
   </data>
   <data name="DefaultSourceAddress" xml:space="preserve">
-    <value>Default packet source address</value>
+    <value>Default package sourcess</value>
   </data>
   <data name="UserDefinedSourceAddress" xml:space="preserve">
-    <value>User-defined packet source address</value>
+    <value>User defined package sources</value>
   </data>
   <data name="NewPackageSource" xml:space="preserve">
     <value>New package source</value>
@@ -370,10 +370,10 @@
     <value>Move down the packet source</value>
   </data>
   <data name="PackageSourceName" xml:space="preserve">
-    <value>Package source name</value>
+    <value>Name</value>
   </data>
   <data name="PacketSourceAddress" xml:space="preserve">
-    <value>Packet source address</value>
+    <value>Source</value>
   </data>
   <data name="ChooseLocalSourcePath" xml:space="preserve">
     <value>Choose a local source path</value>
@@ -382,10 +382,10 @@
     <value>Operating......</value>
   </data>
   <data name="EnterPackageSourceNameHere" xml:space="preserve">
-    <value>Enter package source name here</value>
+    <value>New package source</value>
   </data>
   <data name="EnterPacketSourceAddressHere" xml:space="preserve">
-    <value>Enter the packet source address here</value>
+    <value>http://newpackagesource</value>
   </data>
   <data name="AddText" xml:space="preserve">
     <value>Add</value>
@@ -506,5 +506,35 @@
   </data>
   <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
     <value>The software failed the authorization test, please register the product!</value>
+  </data>
+  <data name="logStarted" xml:space="preserve">
+    <value>{0} Start running</value>
+  </data>
+  <data name="logFinished" xml:space="preserve">
+    <value>{0} Finished running, Time-consuming: {1}</value>
+  </data>
+  <data name="logLaunchMainWindow" xml:space="preserve">
+    <value>+++++ Launch main window +++++</value>
+  </data>
+  <data name="msgPackageSourceNameEmpty" xml:space="preserve">
+    <value>Package source name cannot be empty!</value>
+  </data>
+  <data name="msgPackageSourcePathEmpty" xml:space="preserve">
+    <value>The package source path cannot be empty!</value>
+  </data>
+  <data name="msgPackageSourceNameNotUnique" xml:space="preserve">
+    <value>The package source name must be unique!</value>
+  </data>
+  <data name="msgPackageSourcePathInvalid" xml:space="preserve">
+    <value>The package source address is invalid!</value>
+  </data>
+  <data name="msgRequireAcceptLicense" xml:space="preserve">
+    <value>The package requires you to accept its license terms before installation. Are you sure?</value>
+  </data>
+  <data name="msgProjectSuccessflyReleased" xml:space="preserve">
+    <value>The project was successfully released.  {3}Name: {0}{3} Version: {1}{3} Location: {2}{3}</value>
+  </data>
+  <data name="msgPublishProjectFailed" xml:space="preserve">
+    <value>Project publishing is failed!</value>
   </data>
 </root>

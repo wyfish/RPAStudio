@@ -699,4 +699,124 @@
   <data name="InputText" xml:space="preserve">
     <value>Input</value>
   </data>
+  <data name="xBuildingDataTable" xml:space="preserve">
+    <value>Build DataTable</value>
+  </data>
+  <data name="xOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="xCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="xConfigurationWizard" xml:space="preserve">
+    <value>Filter Wizard</value>
+  </data>
+  <data name="xDataSheetInput" xml:space="preserve">
+    <value>Input DataTable</value>
+  </data>
+  <data name="xDataSheetOutput" xml:space="preserve">
+    <value>Output DataTable</value>
+  </data>
+  <data name="xFilterRows" xml:space="preserve">
+    <value>Filter Rows</value>
+  </data>
+  <data name="xRowFilteringMode" xml:space="preserve">
+    <value>Rows Filtering Mode</value>
+  </data>
+  <data name="xKeep" xml:space="preserve">
+    <value>Keep</value>
+  </data>
+  <data name="xDelete" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="xCol" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="xVal" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="xOutputCol" xml:space="preserve">
+    <value>Output column</value>
+  </data>
+  <data name="xColSelectMode" xml:space="preserve">
+    <value>Column selection mode</value>
+  </data>
+  <data name="xGenerateDataTable" xml:space="preserve">
+    <value>Generate data table</value>
+  </data>
+  <data name="xInputExample" xml:space="preserve">
+    <value>Sample Input</value>
+  </data>
+  <data name="xPreviewText" xml:space="preserve">
+    <value>Test Preview</value>
+  </data>
+  <data name="xDatasheetOption" xml:space="preserve">
+    <value>Datasheet options</value>
+  </data>
+  <data name="xAutoDetectColType" xml:space="preserve">
+    <value>AutoDetect Column Types</value>
+  </data>
+  <data name="xFirstLineAsHeader" xml:space="preserve">
+    <value>Use First Row as Column Headers</value>
+  </data>
+  <data name="xIgnoreFirstLine" xml:space="preserve">
+    <value>Ignore First Row</value>
+  </data>
+  <data name="xFormatOption" xml:space="preserve">
+    <value>Formatting Options</value>
+  </data>
+  <data name="xColDelimiter" xml:space="preserve">
+    <value>Column Separators</value>
+  </data>
+  <data name="xLineBreak" xml:space="preserve">
+    <value>NewLine Separator</value>
+  </data>
+  <data name="xFixedFormatOption" xml:space="preserve">
+    <value>Fixed formatting Options</value>
+  </data>
+  <data name="xPredefinedColumns" xml:space="preserve">
+    <value>Predefined Columns</value>
+  </data>
+  <data name="xPreview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="xInputTable1" xml:space="preserve">
+    <value>Input DataTable 1</value>
+  </data>
+  <data name="xInputTable2" xml:space="preserve">
+    <value>Input DataTable 2</value>
+  </data>
+  <data name="xInputTable" xml:space="preserve">
+    <value>Output DataTable</value>
+  </data>
+  <data name="xColEditWizard" xml:space="preserve">
+    <value>Column Editing Wizard</value>
+  </data>
+  <data name="xColName" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="xDataType" xml:space="preserve">
+    <value>type of data</value>
+  </data>
+  <data name="xEmptyAllowed" xml:space="preserve">
+    <value>Allowed to be empty</value>
+  </data>
+  <data name="xAutoIncrement" xml:space="preserve">
+    <value>Auto increment</value>
+  </data>
+  <data name="xDefaultVal" xml:space="preserve">
+    <value>Defaults</value>
+  </data>
+  <data name="xUniqueConstraint" xml:space="preserve">
+    <value>Unique constraint</value>
+  </data>
+  <data name="xMaxLength" xml:space="preserve">
+    <value>The maximum length</value>
+  </data>
+  <data name="xJoinTableTitle" xml:space="preserve">
+    <value>Join Wizard</value>
+  </data>
 </root>

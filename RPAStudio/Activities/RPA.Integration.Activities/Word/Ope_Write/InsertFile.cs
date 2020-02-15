@@ -54,7 +54,8 @@ namespace RPA.Integration.Activities.WordPlugins
                 string pathUrl = PathUrl.Get(context);
                 if (!File.Exists(pathUrl))
                 {
-                    SharedObject.Instance.Output(SharedObject.enOutputType.Error, "文件不存在，请检查路径有效性!");
+                    // 文件不存在，请检查路径有效性
+                    SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("xFileNotExist"));
                     CommonVariable.realaseProcessExit(wordApp);
                 }
                 wordApp.Selection.InsertFile(pathUrl);
