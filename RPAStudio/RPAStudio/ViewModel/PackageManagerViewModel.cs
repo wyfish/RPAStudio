@@ -1835,7 +1835,9 @@ namespace RPAStudio.ViewModel
                     () =>
                     {
                         //记录所选择的待安装的包
-                        var identity = SelectedItemIdentity;
+                        //var identity = SelectedItemIdentity; // SelectedItemIdentity always null
+                        var minver = VersionRange.Parse((string)SelectedItemVersionList.Min());
+                        var identity = new PackageIdentity(SelectedItemTitle, minver.MinVersion);
 
                         //确定是否需要用户接受许可证
                         if (SelectedItemRequireLicenseAcceptance)
