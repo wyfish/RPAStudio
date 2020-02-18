@@ -1,0 +1,79 @@
+﻿<!--录制窗体-->
+<fluent:RibbonWindow x:Class="RPAStudio.Windows.RecordingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RPAStudio.Windows"
+        xmlns:fluent="clr-namespace:Fluent;assembly=Fluent"
+        mc:Ignorable="d"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        Icon="/Resources/Ico/RPAStudio.ico"
+        DataContext="{Binding Recording, Source={StaticResource Locator}}"
+        Title="录制" Height="110" Width="200" TitleBackground="#FF1976D2" TitleForeground="White" ResizeMode="NoResize" >
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Closing">
+            <cmd:EventToCommand Command="{Binding ClosingCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Unloaded">
+            <cmd:EventToCommand Command="{Binding UnloadedCommand}"></cmd:EventToCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black" />
+        <StackPanel Orientation="Horizontal">
+            <fluent:RibbonGroupBox>
+                <fluent:Button Header="保存并退出" ToolTip="保存并退出录制功能"
+                                        Icon="pack://application:,,,/Resources/Image/Windows/Recording/save.png"
+                                        LargeIcon="pack://application:,,,/Resources/Image/Windows/Recording/save.png"
+                                        Command="{Binding SaveAndExitCommand}"
+                                        IsEnabled="{Binding IsRecorded}"
+                                        FocusManager.IsFocusScope="True" />
+            </fluent:RibbonGroupBox>
+            <fluent:RibbonGroupBox>
+                <fluent:DropDownButton Header="鼠标" ToolTip="鼠标相关的录制功能"
+                                        Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouse.png"
+                                        LargeIcon="pack://application:,,,/Resources/Image/Windows/Recording/mouse.png"
+                                        VerticalAlignment="Top"
+                                        FocusManager.IsFocusScope="True">
+                    <fluent:MenuItem Header="单击" 
+                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouseclick.png"
+                                         Command="{Binding MouseLeftClickCommand}"
+                                        />
+                    <fluent:MenuItem Header="右击"
+                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouseclick.png"
+                                         Command="{Binding MouseRightClickCommand}"
+                                        />
+                    <fluent:MenuItem Header="双击"
+                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouseclick.png"
+                                         Command="{Binding MouseDoubleLeftClickCommand}"
+                                        />
+                    <fluent:MenuItem Header="悬浮"
+                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/hover.png"
+                                         Command="{Binding MouseHoverCommand}"
+                                        />
+                </fluent:DropDownButton>
+                <fluent:DropDownButton Header="键盘" ToolTip="键盘相关的录制功能"
+                                        Icon="pack://application:,,,/Resources/Image/Windows/Recording/keyboard.png"
+                                        LargeIcon="pack://application:,,,/Resources/Image/Windows/Recording/keyboard.png"
+                                        VerticalAlignment="Top"
+                                        Margin="10,0,0,0"
+                                        FocusManager.IsFocusScope="True">
+                    <fluent:MenuItem Header="输入"
+                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/keyboard.png"
+                                         Command="{Binding KeyboardInputCommand}"
+                                        />
+                    <fluent:MenuItem Header="发送热键"
+                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/hotkey.png"
+                                         Command="{Binding KeyboardHotKeyCommand}"
+                                        />
+                </fluent:DropDownButton>
+            </fluent:RibbonGroupBox>
+        </StackPanel>
+
+    </Grid>
+</fluent:RibbonWindow>
