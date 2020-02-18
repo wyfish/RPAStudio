@@ -1,4 +1,4 @@
-using GalaSoft.MvvmLight;
+ï»¿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using NuGet;
@@ -45,32 +45,32 @@ namespace RPARobot.ViewModel
         public string InstalledPackagesDir { get; set; }
 
         /// <summary>
-        /// ffmpeg·şÎñÀà
+        /// ffmpegæœåŠ¡ç±»
         /// </summary>
         public FFmpegService FFmpegService { get; set; }
 
         /// <summary>
-        /// °ü·şÎñÀà
+        /// åŒ…æœåŠ¡ç±»
         /// </summary>
         public PackageService PackageService { get; set; }
 
         /// <summary>
-        /// ¿ØÖÆÖĞĞÄ·şÎñÀà
+        /// æ§åˆ¶ä¸­å¿ƒæœåŠ¡ç±»
         /// </summary>
         public ControlServerService ControlServerService { get; set; }
 
         /// <summary>
-        /// ×¢²á¶¨Ê±Æ÷
+        /// æ³¨å†Œå®šæ—¶å™¨
         /// </summary>
         private DispatcherTimer RegisterTimer { get; set; }
 
         /// <summary>
-        /// »ñÈ¡·ÖÅä¸ø±¾»úÆ÷µÄËùÓĞÁ÷³Ì¶¨Ê±Æ÷
+        /// è·å–åˆ†é…ç»™æœ¬æœºå™¨çš„æ‰€æœ‰æµç¨‹å®šæ—¶å™¨
         /// </summary>
         private DispatcherTimer GetProcessesTimer { get; set; }
 
         /// <summary>
-        /// »ñÈ¡µ±Ç°Ó¦¸ÃÔËĞĞµÄÁ÷³ÌµÄ¶¨Ê±Æ÷
+        /// è·å–å½“å‰åº”è¯¥è¿è¡Œçš„æµç¨‹çš„å®šæ—¶å™¨
         /// </summary>
         private DispatcherTimer GetRunProcesssTimer { get; set; }
 
@@ -89,9 +89,9 @@ namespace RPARobot.ViewModel
             ////}
 
             var commonApplicationData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData);
-            PackagesDir = commonApplicationData + @"\RPAStudio\Packages";//»úÆ÷ÈËÄ¬ÈÏ¶ÁÈ¡nupkg°üµÄÎ»ÖÃ
-            InstalledPackagesDir = commonApplicationData + @"\RPAStudio\InstalledPackages";//»úÆ÷ÈËÄ¬ÈÏ°²×°nupkg°üµÄÎ»ÖÃ
-            if(PackageService == null)
+            PackagesDir = commonApplicationData + @"\RPAStudio\Packages";//æœºå™¨äººé»˜è®¤è¯»å–nupkgåŒ…çš„ä½ç½®
+            InstalledPackagesDir = commonApplicationData + @"\RPAStudio\InstalledPackages";//æœºå™¨äººé»˜è®¤å®‰è£…nupkgåŒ…çš„ä½ç½®
+            if (PackageService == null)
             {
                 PackageService = new PackageService(this);
             }
@@ -101,7 +101,7 @@ namespace RPARobot.ViewModel
         }
 
         /// <summary>
-        /// ³õÊ¼»¯¿ØÖÆÖĞĞÄ
+        /// åˆå§‹åŒ–æ§åˆ¶ä¸­å¿ƒ
         /// </summary>
         public void InitControlServer()
         {
@@ -130,34 +130,34 @@ namespace RPARobot.ViewModel
             GetRunProcesssTimer_Tick(null, null);
 
             //TEST
-            //ControlServerService.UpdateRunStatus("²âÊÔÁ÷³Ì·¢²¼µÚ¶ş¸ö", "2.0.8", ControlServerService.enProcessStatus.Exception);
-            //ControlServerService.Log("test1","2.0.1","DEBUG","²âÊÔÈÕÖ¾22222");
+            //ControlServerService.UpdateRunStatus("æµ‹è¯•æµç¨‹å‘å¸ƒç¬¬äºŒä¸ª", "2.0.8", ControlServerService.enProcessStatus.Exception);
+            //ControlServerService.Log("test1","2.0.1","DEBUG","æµ‹è¯•æ—¥å¿—22222");
         }
 
-       /// <summary>
-       /// ×¢²á¶¨Ê±Æ÷´¦Àíº¯Êı
-       /// </summary>
-       /// <param name="sender">·¢ËÍÕß</param>
-       /// <param name="e">²ÎÊı</param>
+        /// <summary>
+        /// æ³¨å†Œå®šæ—¶å™¨å¤„ç†å‡½æ•°
+        /// </summary>
+        /// <param name="sender">å‘é€è€…</param>
+        /// <param name="e">å‚æ•°</param>
         private void RegisterTimer_Tick(object sender, EventArgs e)
         {
             ControlServerService.Register();
         }
 
         /// <summary>
-        /// »ñÈ¡Á÷³ÌÁĞ±í¶¨Ê±Æ÷´¦Àíº¯Êı
+        /// è·å–æµç¨‹åˆ—è¡¨å®šæ—¶å™¨å¤„ç†å‡½æ•°
         /// </summary>
-        /// <param name="sender">·¢ËÍÕß</param>
-        /// <param name="e">²ÎÊı</param>
+        /// <param name="sender">å‘é€è€…</param>
+        /// <param name="e">å‚æ•°</param>
         private void GetProcessesTimer_Tick(object sender, EventArgs e)
         {
             GetProcessesTimer.Stop();
 
-            Task.Run(async()=> {
+            Task.Run(async () => {
                 var jArr = await ControlServerService.GetProcesses();
 
-                //ÏÂÔØ°²×°°ü
-                if(jArr != null)
+                //ä¸‹è½½å®‰è£…åŒ…
+                if (jArr != null)
                 {
                     bool needRefresh = false;
                     for (int i = 0; i < jArr.Count; i++)
@@ -168,28 +168,28 @@ namespace RPARobot.ViewModel
                         var nupkgFileName = jObj["NUPKGFILENAME"].ToString();
                         var nupkgUrl = jObj["NUPKGURL"].ToString();
 
-                        //ÅĞ¶Ï±¾µØÊÇ·ñ´æÔÚ¸Ã°ü£¬²»´æÔÚÔòÏÂÔØÏÂÀ´
-                        if(!System.IO.File.Exists(System.IO.Path.Combine(PackagesDir, nupkgFileName)))
+                        //åˆ¤æ–­æœ¬åœ°æ˜¯å¦å­˜åœ¨è¯¥åŒ…ï¼Œä¸å­˜åœ¨åˆ™ä¸‹è½½ä¸‹æ¥
+                        if (!System.IO.File.Exists(System.IO.Path.Combine(PackagesDir, nupkgFileName)))
                         {
                             var downloadAndSavePath = await nupkgUrl.DownloadFileAsync(PackagesDir, nupkgFileName);
                             needRefresh = true;
                         }
 
-                        //±Èµ±Ç°°ü°æ±¾¸ßµÄÈ«É¾³ı£¨RobotÄ¬ÈÏÖ»ÄÜÔËĞĞ¸ß°æ±¾µÄ£¬ËùÒÔ²»É¾³ı»áµ¼ÖÂÉè¼ÆÀíÄî³åÍ»£©
+                        //æ¯”å½“å‰åŒ…ç‰ˆæœ¬é«˜çš„å…¨åˆ é™¤ï¼ˆRoboté»˜è®¤åªèƒ½è¿è¡Œé«˜ç‰ˆæœ¬çš„ï¼Œæ‰€ä»¥ä¸åˆ é™¤ä¼šå¯¼è‡´è®¾è®¡ç†å¿µå†²çªï¼‰
                         var repo = PackageRepositoryFactory.Default.CreateRepository(PackagesDir);
                         var pkgNameList = repo.FindPackagesById(nupkgName);
                         foreach (var item in pkgNameList)
                         {
-                            if(item.Version > new SemanticVersion(nupkgVersion))
+                            if (item.Version > new SemanticVersion(nupkgVersion))
                             {
-                                //É¾³ı¸Ã°ü
+                                //åˆ é™¤è¯¥åŒ…
                                 var file = PackagesDir + @"\" + nupkgName + @"." + item.Version.ToString() + ".nupkg";
                                 Common.DeleteFile(file);
                             }
                         }
                     }
 
-                    if(needRefresh)
+                    if (needRefresh)
                     {
                         Common.RunInUI(() =>
                         {
@@ -200,14 +200,14 @@ namespace RPARobot.ViewModel
 
                 GetProcessesTimer.Start();
             });
-            
+
         }
 
         /// <summary>
-        /// »ñÈ¡µ±Ç°Ó¦ÔËĞĞµÄÁ÷³Ì¶¨Ê±Æ÷´¥·¢º¯Êı
+        /// è·å–å½“å‰åº”è¿è¡Œçš„æµç¨‹å®šæ—¶å™¨è§¦å‘å‡½æ•°
         /// </summary>
-        /// <param name="sender">·¢ËÍÕß</param>
-        /// <param name="e">²ÎÊı</param>
+        /// <param name="sender">å‘é€è€…</param>
+        /// <param name="e">å‚æ•°</param>
         private void GetRunProcesssTimer_Tick(object sender, EventArgs e)
         {
             GetRunProcesssTimer.Stop();
@@ -215,12 +215,12 @@ namespace RPARobot.ViewModel
             Task.Run(async () =>
             {
                 var jObj = await ControlServerService.GetRunProcess();
-                if(jObj != null)
+                if (jObj != null)
                 {
                     var processName = jObj["PROCESSNAME"].ToString();
                     var processVersion = jObj["PROCESSVERSION"].ToString();
 
-                    //Í£Ö¹ËùÓĞÆäËüÕıÔÚÔËĞĞµÄÁ÷³Ì,Æô¶¯Õâ¸öÁ÷³Ì£¨Èç¹û¸ÃÁ÷³ÌÒÑ¾­Æô¶¯£¬Ôò²»²Ù×÷£©
+                    //åœæ­¢æ‰€æœ‰å…¶å®ƒæ­£åœ¨è¿è¡Œçš„æµç¨‹,å¯åŠ¨è¿™ä¸ªæµç¨‹ï¼ˆå¦‚æœè¯¥æµç¨‹å·²ç»å¯åŠ¨ï¼Œåˆ™ä¸æ“ä½œï¼‰
                     PackageService.Run(processName, processVersion);
                 }
 
@@ -230,14 +230,14 @@ namespace RPARobot.ViewModel
         }
 
         /// <summary>
-        /// ¿ªÊ¼Ö´ĞĞ¹¤×÷Á÷Ê±´¥·¢
+        /// å¼€å§‹æ‰§è¡Œå·¥ä½œæµæ—¶è§¦å‘
         /// </summary>
-        /// <param name="obj">¶ÔÏó</param>
+        /// <param name="obj">å¯¹è±¡</param>
         private void BeginRun(RunManager obj)
         {
-            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "Á÷³ÌÔËĞĞ¿ªÊ¼¡­¡­");
+            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "æµç¨‹è¿è¡Œå¼€å§‹â€¦â€¦");
 
-            //²»Ó¦¸Ã¸üĞÂ×´Ì¬ÎªSTART£¬²»È»ºÍÓÃ»§×Ô¼ºÉèÖÃµÄ±êÊ¶³åÍ»ÁË
+            //ä¸åº”è¯¥æ›´æ–°çŠ¶æ€ä¸ºSTARTï¼Œä¸ç„¶å’Œç”¨æˆ·è‡ªå·±è®¾ç½®çš„æ ‡è¯†å†²çªäº†
             //Task.Run(async()=> {
             //    await ControlServerService.UpdateRunStatus(obj.m_packageItem.Name, obj.m_packageItem.Version, ControlServerService.enProcessStatus.Start);
             //});
@@ -249,32 +249,32 @@ namespace RPARobot.ViewModel
                 FFmpegService = null;
             }
 
-            if(ViewModelLocator.Instance.UserPreferences.IsEnableScreenRecorder)
+            if (ViewModelLocator.Instance.UserPreferences.IsEnableScreenRecorder)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "ÆÁÄ»Â¼Ïñ¿ªÊ¼¡­¡­");
-                var screenRecorderFilePath = App.LocalRPAStudioDir + @"\ScreenRecorder\" + obj.m_packageItem.Name + @"(" + DateTime.Now.ToString("yyyyÄêMMÔÂddÈÕHHÊ±mm·ÖssÃë") + ").mp4";
-                FFmpegService = new FFmpegService(screenRecorderFilePath, ViewModelLocator.Instance.UserPreferences.FPS, ViewModelLocator.Instance.UserPreferences.Quality);//Ä¬ÈÏ´æµ½%localappdata%ÏÂRPASTUDIOÏÂµÄScreenRecorderÄ¿Â¼ÏÂ
+                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "å±å¹•å½•åƒå¼€å§‹â€¦â€¦");
+                var screenRecorderFilePath = App.LocalRPAStudioDir + @"\ScreenRecorder\" + obj.m_packageItem.Name + @"(" + DateTime.Now.ToString("yyyyå¹´MMæœˆddæ—¥HHæ—¶mmåˆ†ssç§’") + ").mp4";
+                FFmpegService = new FFmpegService(screenRecorderFilePath, ViewModelLocator.Instance.UserPreferences.FPS, ViewModelLocator.Instance.UserPreferences.Quality);//é»˜è®¤å­˜åˆ°%localappdata%ä¸‹RPASTUDIOä¸‹çš„ScreenRecorderç›®å½•ä¸‹
 
                 Task.Run(() =>
                 {
                     FFmpegService.StartCaptureScreen();
                 });
 
-                //µÈ´ıÆÁÄ»Â¼Ïñffmpeg½ø³ÌÆô¶¯
+                //ç­‰å¾…å±å¹•å½•åƒffmpegè¿›ç¨‹å¯åŠ¨
                 int wait_count = 0;
-                while(!FFmpegService.IsRunning())
+                while (!FFmpegService.IsRunning())
                 {
                     wait_count++;
                     Thread.Sleep(300);
-                    if(wait_count == 10)
+                    if (wait_count == 10)
                     {
                         break;
                     }
                 }
             }
-            
 
-            Common.RunInUI(()=> {
+
+            Common.RunInUI(() => {
                 m_view.Hide();
 
                 obj.m_packageItem.IsRunning = true;
@@ -282,17 +282,17 @@ namespace RPARobot.ViewModel
                 IsWorkflowRunning = true;
                 WorkflowRunningName = obj.m_packageItem.Name;
                 WorkflowRunningToolTip = obj.m_packageItem.ToolTip;
-                WorkflowRunningStatus = "ÕıÔÚÔËĞĞ";
+                WorkflowRunningStatus = "æ­£åœ¨è¿è¡Œ";
             });
         }
 
         private void EndRun(RunManager obj)
         {
-            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "Á÷³ÌÔËĞĞ½áÊø");
+            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "æµç¨‹è¿è¡Œç»“æŸ");
 
             Task.Run(async () =>
             {
-                if(obj.HasException)
+                if (obj.HasException)
                 {
                     await ControlServerService.UpdateRunStatus(obj.m_packageItem.Name, obj.m_packageItem.Version, ControlServerService.enProcessStatus.Exception);
                 }
@@ -300,12 +300,12 @@ namespace RPARobot.ViewModel
                 {
                     await ControlServerService.UpdateRunStatus(obj.m_packageItem.Name, obj.m_packageItem.Version, ControlServerService.enProcessStatus.Stop);
                 }
-                
+
             });
 
             if (ViewModelLocator.Instance.UserPreferences.IsEnableScreenRecorder)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "ÆÁÄ»Â¼Ïñ½áÊø");
+                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "å±å¹•å½•åƒç»“æŸ");
                 FFmpegService.StopCaptureScreen();
                 FFmpegService = null;
             }
@@ -316,7 +316,7 @@ namespace RPARobot.ViewModel
 
                 obj.m_packageItem.IsRunning = false;
 
-                //ÓÉÓÚÓĞ¿ÉÄÜÁĞ±íÒÑ¾­Ë¢ĞÂ£¬ËùÒÔĞèÒªÖØÖÃIsRunning×´Ì¬£¬ÎªÁË·½±ã£¬È«²¿ÖØÖÃ
+                //ç”±äºæœ‰å¯èƒ½åˆ—è¡¨å·²ç»åˆ·æ–°ï¼Œæ‰€ä»¥éœ€è¦é‡ç½®IsRunningçŠ¶æ€ï¼Œä¸ºäº†æ–¹ä¾¿ï¼Œå…¨éƒ¨é‡ç½®
                 foreach (var pkg in PackageItems)
                 {
                     pkg.IsRunning = false;
@@ -339,7 +339,7 @@ namespace RPARobot.ViewModel
             var pkgSet = new SortedSet<string>();
             foreach (var pkg in pkgList)
             {
-                //Í¨¹ısetÈ¥ÖØ
+                //é€šè¿‡setå»é‡
                 pkgSet.Add(pkg.Id);
             }
 
@@ -360,16 +360,16 @@ namespace RPARobot.ViewModel
                 item.Version = version.ToString();
 
                 var pkgNameList = repo.FindPackagesById(name);
-                foreach(var i in pkgNameList)
+                foreach (var i in pkgNameList)
                 {
                     item.VersionList.Add(i.Version.ToString());
                 }
 
                 bool isNeedUpdate = false;
-                if(installedPkgDict.ContainsKey(item.Name))
+                if (installedPkgDict.ContainsKey(item.Name))
                 {
                     var installedVer = installedPkgDict[item.Name].Version;
-                    if(version > installedVer)
+                    if (version > installedVer)
                     {
                         isNeedUpdate = true;
                     }
@@ -383,16 +383,16 @@ namespace RPARobot.ViewModel
                 var pkg = repo.FindPackage(name, version);
                 item.Package = pkg;
                 var publishedTime = pkg.Published.Value.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss");
-                item.ToolTip = string.Format("Ãû³Æ£º{0}\r\n°æ±¾£º{1}\r\n·¢²¼ËµÃ÷£º{2}\r\nÏîÄ¿ÃèÊö£º{3}\r\n·¢²¼Ê±¼ä£º{4}", item.Name, item.Version,pkg.ReleaseNotes,pkg.Description, (publishedTime == null? "Î´Öª": publishedTime));
+                item.ToolTip = string.Format("åç§°ï¼š{0}\r\nç‰ˆæœ¬ï¼š{1}\r\nå‘å¸ƒè¯´æ˜ï¼š{2}\r\né¡¹ç›®æè¿°ï¼š{3}\r\nå‘å¸ƒæ—¶é—´ï¼š{4}", item.Name, item.Version, pkg.ReleaseNotes, pkg.Description, (publishedTime == null ? "æœªçŸ¥" : publishedTime));
 
-                if(IsWorkflowRunning && item.Name == WorkflowRunningName)
+                if (IsWorkflowRunning && item.Name == WorkflowRunningName)
                 {
-                    item.IsRunning = true;//Èç¹ûµ±Ç°¸Ã°ü¹¤³ÌÒÑ¾­ÔÚÔËĞĞ£¬ÔòÒªÉèÖÃIsRunning
+                    item.IsRunning = true;//å¦‚æœå½“å‰è¯¥åŒ…å·¥ç¨‹å·²ç»åœ¨è¿è¡Œï¼Œåˆ™è¦è®¾ç½®IsRunning
                 }
 
                 PackageItems.Add(item);
             }
-            
+
 
             doSearch();
         }
@@ -402,10 +402,8 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the LoadedCommand.
         /// </summary>
-        public RelayCommand<RoutedEventArgs> LoadedCommand
-        {
-            get
-            {
+        public RelayCommand<RoutedEventArgs> LoadedCommand {
+            get {
                 return _loadedCommand
                     ?? (_loadedCommand = new RelayCommand<RoutedEventArgs>(
                     p =>
@@ -419,10 +417,8 @@ namespace RPARobot.ViewModel
 
 
 
-        public bool IsEnableAuthorizationCheck
-        {
-            get
-            {
+        public bool IsEnableAuthorizationCheck {
+            get {
 #if ENABLE_AUTHORIZATION_CHECK
                 return true;
 #else
@@ -438,15 +434,13 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the MouseLeftButtonDownCommand.
         /// </summary>
-        public RelayCommand MouseLeftButtonDownCommand
-        {
-            get
-            {
+        public RelayCommand MouseLeftButtonDownCommand {
+            get {
                 return _MouseLeftButtonDownCommand
                     ?? (_MouseLeftButtonDownCommand = new RelayCommand(
                     () =>
                     {
-                        //µã±êÌâÍâµÄ²¿·ÖÒ²ÄÜÍÏ¶¯£¬·½±ãÊ¹ÓÃ
+                        //ç‚¹æ ‡é¢˜å¤–çš„éƒ¨åˆ†ä¹Ÿèƒ½æ‹–åŠ¨ï¼Œæ–¹ä¾¿ä½¿ç”¨
                         m_view.DragMove();
                     }));
             }
@@ -457,10 +451,8 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the ActivatedCommand.
         /// </summary>
-        public RelayCommand ActivatedCommand
-        {
-            get
-            {
+        public RelayCommand ActivatedCommand {
+            get {
                 return _activatedCommand
                     ?? (_activatedCommand = new RelayCommand(
                     () =>
@@ -478,15 +470,13 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the ClosingCommand.
         /// </summary>
-        public RelayCommand<System.ComponentModel.CancelEventArgs> ClosingCommand
-        {
-            get
-            {
+        public RelayCommand<System.ComponentModel.CancelEventArgs> ClosingCommand {
+            get {
                 return _closingCommand
                     ?? (_closingCommand = new RelayCommand<System.ComponentModel.CancelEventArgs>(
                     e =>
                     {
-                        e.Cancel = true;//²»¹Ø±Õ´°¿Ú
+                        e.Cancel = true;//ä¸å…³é—­çª—å£
                         m_view.Hide();
                     }));
             }
@@ -500,10 +490,8 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the RefreshCommand.
         /// </summary>
-        public RelayCommand RefreshCommand
-        {
-            get
-            {
+        public RelayCommand RefreshCommand {
+            get {
                 return _refreshCommand
                     ?? (_refreshCommand = new RelayCommand(
                     () =>
@@ -523,15 +511,13 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the UserPreferencesCommand.
         /// </summary>
-        public RelayCommand UserPreferencesCommand
-        {
-            get
-            {
+        public RelayCommand UserPreferencesCommand {
+            get {
                 return _userPreferencesCommand
                     ?? (_userPreferencesCommand = new RelayCommand(
                     () =>
                     {
-                        if(!ViewModelLocator.Instance.Startup.UserPreferencesWindow.IsVisible)
+                        if (!ViewModelLocator.Instance.Startup.UserPreferencesWindow.IsVisible)
                         {
                             var vm = ViewModelLocator.Instance.Startup.UserPreferencesWindow.DataContext as UserPreferencesViewModel;
                             vm.LoadSettings();
@@ -550,15 +536,13 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the ViewLogsCommand.
         /// </summary>
-        public RelayCommand ViewLogsCommand
-        {
-            get
-            {
+        public RelayCommand ViewLogsCommand {
+            get {
                 return _viewLogsCommand
                     ?? (_viewLogsCommand = new RelayCommand(
                     () =>
                     {
-                        //´ò¿ªÈÕÖ¾ËùÔÚµÄÄ¿Â¼
+                        //æ‰“å¼€æ—¥å¿—æ‰€åœ¨çš„ç›®å½•
                         Common.LocateDirInExplorer(App.LocalRPAStudioDir + @"\Logs");
                     }));
             }
@@ -569,17 +553,15 @@ namespace RPARobot.ViewModel
         private RelayCommand _viewScreenRecordersCommand;
 
         /// <summary>
-        /// ²é¿´Â¼Ïñ
+        /// æŸ¥çœ‹å½•åƒ
         /// </summary>
-        public RelayCommand ViewScreenRecordersCommand
-        {
-            get
-            {
+        public RelayCommand ViewScreenRecordersCommand {
+            get {
                 return _viewScreenRecordersCommand
                     ?? (_viewScreenRecordersCommand = new RelayCommand(
                     () =>
                     {
-                        //´ò¿ªÆÁÄ»Â¼ÏñËùÔÚµÄÄ¿Â¼
+                        //æ‰“å¼€å±å¹•å½•åƒæ‰€åœ¨çš„ç›®å½•
                         Common.LocateDirInExplorer(App.LocalRPAStudioDir + @"\ScreenRecorder");
                     }));
             }
@@ -594,15 +576,13 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the RegisterProductCommand.
         /// </summary>
-        public RelayCommand RegisterProductCommand
-        {
-            get
-            {
+        public RelayCommand RegisterProductCommand {
+            get {
                 return _registerProductCommand
                     ?? (_registerProductCommand = new RelayCommand(
                     () =>
                     {
-                        //µ¯³ö×¢²á´°¿Ú
+                        //å¼¹å‡ºæ³¨å†Œçª—å£
                         if (!ViewModelLocator.Instance.Startup.RegisterWindow.IsVisible)
                         {
                             var vm = ViewModelLocator.Instance.Startup.RegisterWindow.DataContext as RegisterViewModel;
@@ -621,12 +601,10 @@ namespace RPARobot.ViewModel
         private RelayCommand _aboutProductCommand;
 
         /// <summary>
-        /// ¹ØÓÚ²úÆ·´°¿Ú
+        /// å…³äºäº§å“çª—å£
         /// </summary>
-        public RelayCommand AboutProductCommand
-        {
-            get
-            {
+        public RelayCommand AboutProductCommand {
+            get {
                 return _aboutProductCommand
                     ?? (_aboutProductCommand = new RelayCommand(
                     () =>
@@ -659,15 +637,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the PackageItems property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public ObservableCollection<PackageItem> PackageItems
-        {
-            get
-            {
+        public ObservableCollection<PackageItem> PackageItems {
+            get {
                 return _packageItemsProperty;
             }
 
-            set
-            {
+            set {
                 if (_packageItemsProperty == value)
                 {
                     return;
@@ -690,15 +665,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the IsSearchResultEmpty property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public bool IsSearchResultEmpty
-        {
-            get
-            {
+        public bool IsSearchResultEmpty {
+            get {
                 return _isSearchResultEmptyProperty;
             }
 
-            set
-            {
+            set {
                 if (_isSearchResultEmptyProperty == value)
                 {
                     return;
@@ -722,15 +694,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the SearchText property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public string SearchText
-        {
-            get
-            {
+        public string SearchText {
+            get {
                 return _searchTextProperty;
             }
 
-            set
-            {
+            set {
                 if (_searchTextProperty == value)
                 {
                     return;
@@ -748,7 +717,7 @@ namespace RPARobot.ViewModel
             var searchContent = SearchText.Trim();
             if (string.IsNullOrEmpty(searchContent))
             {
-                //»¹Ô­ÆğÊ¼ÏÔÊ¾
+                //è¿˜åŸèµ·å§‹æ˜¾ç¤º
                 foreach (var item in PackageItems)
                 {
                     item.IsSearching = false;
@@ -763,14 +732,14 @@ namespace RPARobot.ViewModel
             }
             else
             {
-                //¸ù¾İËÑË÷ÄÚÈİÏÔÊ¾
+                //æ ¹æ®æœç´¢å†…å®¹æ˜¾ç¤º
 
                 foreach (var item in PackageItems)
                 {
                     item.IsSearching = true;
                 }
 
-                //Ô¤ÏÈÈ«²¿ÖÃÎª²»Æ¥Åä
+                //é¢„å…ˆå…¨éƒ¨ç½®ä¸ºä¸åŒ¹é…
                 foreach (var item in PackageItems)
                 {
                     item.IsMatch = false;
@@ -810,15 +779,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the IsWorkflowRunning property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public bool IsWorkflowRunning
-        {
-            get
-            {
+        public bool IsWorkflowRunning {
+            get {
                 return _isWorkflowRunningProperty;
             }
 
-            set
-            {
+            set {
                 if (_isWorkflowRunningProperty == value)
                 {
                     return;
@@ -841,15 +807,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the WorkflowRunningToolTip property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public string WorkflowRunningToolTip
-        {
-            get
-            {
+        public string WorkflowRunningToolTip {
+            get {
                 return _workflowRunningToolTipProperty;
             }
 
-            set
-            {
+            set {
                 if (_workflowRunningToolTipProperty == value)
                 {
                     return;
@@ -872,15 +835,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the WorkflowRunningName property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public string WorkflowRunningName
-        {
-            get
-            {
+        public string WorkflowRunningName {
+            get {
                 return _workflowRunningNameProperty;
             }
 
-            set
-            {
+            set {
                 if (_workflowRunningNameProperty == value)
                 {
                     return;
@@ -906,15 +866,12 @@ namespace RPARobot.ViewModel
         /// Sets and gets the WorkflowRunningStatus property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
-        public string WorkflowRunningStatus
-        {
-            get
-            {
+        public string WorkflowRunningStatus {
+            get {
                 return _workflowRunningStatusProperty;
             }
 
-            set
-            {
+            set {
                 if (_workflowRunningStatusProperty == value)
                 {
                     return;
@@ -933,18 +890,16 @@ namespace RPARobot.ViewModel
         /// <summary>
         /// Gets the StopCommand.
         /// </summary>
-        public RelayCommand StopCommand
-        {
-            get
-            {
+        public RelayCommand StopCommand {
+            get {
                 return _stopCommand
                     ?? (_stopCommand = new RelayCommand(
                     () =>
                     {
-                        if(m_runManager!=null)
+                        if (m_runManager != null)
                         {
                             m_runManager.Stop();
-                        }  
+                        }
                     },
                     () => true));
             }
