@@ -54,6 +54,8 @@ namespace RPAStudio.ViewModel
             Messenger.Default.Register<DocumentViewModel>(this, "IsSelected", (doc) => {
                 WorkflowPropertyView = doc.WorkflowDesignerInstance.PropertyInspectorView;
                 WorkflowOutlineView = doc.WorkflowDesignerInstance.OutlineView;
+
+                ViewModelLocator.Instance.SourceCode.Connect(doc);
             });
 
 
@@ -63,8 +65,11 @@ namespace RPAStudio.ViewModel
 
                 if(Documents.Count == 0)
                 {
-                    //文档全关闭时，设置大纲视图为空
+                    //文档全关闭时，设置大纲视图为空，活动文档为空
                     WorkflowOutlineView = null;
+                    ActiveDocument = null;
+
+                    ViewModelLocator.Instance.SourceCode.Connect(null);
                 }
 
                 Messenger.Default.Send(this, "DocumentsCountChanged");
@@ -226,7 +231,7 @@ namespace RPAStudio.ViewModel
         /// <param name="xamlPath">文档xaml路径</param>
         /// <param name="isReadOnly">是否只读（程序运行完毕后会自动恢复为可编辑）</param>
         /// <param name="isAlwaysReadOnly">是否永远只读（代码片断文件打开时须设置该属性）</param>
-        public void NewSequenceDocument(string title= "未命名文档",string xamlPath="",bool isReadOnly = false, bool isAlwaysReadOnly = false)
+        public void NewProcessDocument(string title= "未命名文档",string xamlPath="",bool isReadOnly = false, bool isAlwaysReadOnly = false)
         {
             var doc = new DocumentViewModel(title, xamlPath,isReadOnly,isAlwaysReadOnly);
             ViewModelLocator.Instance.Dock.Documents.Add(doc);

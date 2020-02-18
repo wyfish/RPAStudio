@@ -6,6 +6,7 @@ using RPARobot.Windows;
 using System.Windows;
 using System.Xml;
 using System;
+using RPARobot.Services;
 
 namespace RPARobot.ViewModel
 {
@@ -25,6 +26,9 @@ namespace RPARobot.ViewModel
         public MainWindow MainWindow { get; set; }
         public UserPreferencesWindow UserPreferencesWindow { get; set; }
         public RegisterWindow RegisterWindow { get; set; }
+
+       
+        public AboutWindow AboutWindow { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the StartupViewModel class.
@@ -49,6 +53,12 @@ namespace RPARobot.ViewModel
                 RegisterWindow.Hide();
             }
 
+            if(AboutWindow == null)
+            {
+                AboutWindow = new AboutWindow();
+                AboutWindow.Hide();
+            }
+
             App.Current.MainWindow = MainWindow;
         }
 
@@ -69,19 +79,35 @@ namespace RPARobot.ViewModel
                     {
                         m_view = (Window)p.Source;
 
-                        Init();                       
+                        Init();
+
+                        (MainWindow.DataContext as MainViewModel).InitControlServer();//需要等待配置文件读取完成才初始化控制服务
                     }));
             }
         }
 
-        
+        public bool IsEnableAuthorizationCheck
+        {
+            get
+            {
+#if ENABLE_AUTHORIZATION_CHECK
+                return true;
+#else
+                return false;
+#endif
+            }
+        }
 
+      
         private void Init()
         {
             ProgramVersion = string.Format("RPARobot-{0}", Common.GetProgramVersion());
 
             var registerViewModel = RegisterWindow.DataContext as RegisterViewModel;
             registerViewModel.LoadRegisterInfo();
+
+            var aboutViewModel = AboutWindow.DataContext as AboutViewModel;
+            aboutViewModel.LoadAboutInfo();
 
             var userPreferencesViewModel = UserPreferencesWindow.DataContext as UserPreferencesViewModel;
             userPreferencesViewModel.LoadSettings();
@@ -94,8 +120,7 @@ namespace RPARobot.ViewModel
 
         }
 
-        private RelayCommand _showMainWindowCommand;
-
+        
         public void RefreshProgramStatus(bool isRegistered)
         {
             if (isRegistered)
@@ -107,6 +132,10 @@ namespace RPARobot.ViewModel
                 ProgramStatus = "未注册";
             }
         }
+
+
+
+        private RelayCommand _showMainWindowCommand;
 
         /// <summary>
         /// Gets the ShowMainWindowCommand.
@@ -142,7 +171,7 @@ namespace RPARobot.ViewModel
                         {
                             IsQuitAsking = true;
 
-                            var ret = MessageBox.Show(App.Current.MainWindow, "确定退出吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                            var ret = AutoCloseMessageBoxService.Show(App.Current.MainWindow, "确定退出吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (ret == MessageBoxResult.Yes)
                             {
                                 Application.Current.Shutdown();
@@ -195,6 +224,28 @@ namespace RPARobot.ViewModel
         }
 
 
+
+        private RelayCommand _viewScreenRecordersCommand;
+
+        /// <summary>
+        /// 打开屏幕录像
+        /// </summary>
+        public RelayCommand ViewScreenRecordersCommand
+        {
+            get
+            {
+                return _viewScreenRecordersCommand
+                    ?? (_viewScreenRecordersCommand = new RelayCommand(
+                    () =>
+                    {
+                        ViewModelLocator.Instance.Main.ViewScreenRecordersCommand.Execute(null);
+                    }));
+            }
+        }
+
+
+
+
         private RelayCommand _registerProductCommand;
 
         /// <summary>
@@ -209,6 +260,25 @@ namespace RPARobot.ViewModel
                     () =>
                     {
                         ViewModelLocator.Instance.Main.RegisterProductCommand.Execute(null);
+                    }));
+            }
+        }
+
+
+        private RelayCommand _aboutProductCommand;
+
+        /// <summary>
+        /// 关于产品
+        /// </summary>
+        public RelayCommand AboutProductCommand
+        {
+            get
+            {
+                return _aboutProductCommand
+                    ?? (_aboutProductCommand = new RelayCommand(
+                    () =>
+                    {
+                        ViewModelLocator.Instance.Main.AboutProductCommand.Execute(null);
                     }));
             }
         }

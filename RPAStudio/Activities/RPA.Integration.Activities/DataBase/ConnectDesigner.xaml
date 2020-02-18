@@ -33,6 +33,7 @@
 
     <pslc:CollapsableActivity>
         <Grid Height="30">
-            <Button x:Name="getUrlButton" Click="PathSelect" Margin="60,5,65,0" RenderTransformOrigin="-0.5,0.5" Width="135" Height="25" Content="{x:Static lclz:Resources.ConfigureDatabaseConnection}"/>        </Grid>
+            <Button x:Name="getUrlButton" Click="PathSelect" Margin="60,5,65,0" RenderTransformOrigin="-0.5,0.5" Width="135" Height="25" Content="{x:Static lclz:Resources.ConfigureDatabaseConnection}"/>        
+        </Grid>
     </pslc:CollapsableActivity>
 </sap:ActivityDesigner>

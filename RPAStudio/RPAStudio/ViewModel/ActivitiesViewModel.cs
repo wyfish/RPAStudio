@@ -281,8 +281,7 @@ namespace RPAStudio.ViewModel
         private void updateFavoriteActivitiesConfig()
         {
             //保存收藏夹内容到FavoriteActivities.xml
-            //var xmlPath = App.LocalRPAStudioDir + @"\Config\FavoriteActivities.xml";
-            var xmlPath = GetActivitiesXML("FavoriteActivities");
+            var xmlPath = App.LocalRPAStudioDir + @"\Config\FavoriteActivities.xml";
             XmlDocument doc = new XmlDocument();
             doc.Load(xmlPath);
             var rootNode = doc.DocumentElement;
@@ -298,21 +297,7 @@ namespace RPAStudio.ViewModel
             doc.Save(xmlPath);
         }
 
-        private string GetActivitiesXML(string activityName)
-        {
-            string culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            string resourceXML = App.LocalRPAStudioDir + @"\Config\" + activityName + "_en.xml";
-            if (culture.Equals("zh"))
-            {
-                return App.LocalRPAStudioDir + @"\Config\" + activityName + ".xml";
-            }
-            else if (culture.Equals("ja"))
-            {
-                return App.LocalRPAStudioDir + @"\Config\" + activityName + "_ja.xml";
-            }
-            return resourceXML;
-        }
-
+       
         public void MountActivityConfig(string activity_config_xml)
         {
             //将activity_config_xml挂载到当前的AvailableActivitiesXmlDocument中的相应位置
@@ -399,7 +384,30 @@ namespace RPAStudio.ViewModel
             foreach (XmlNode activityNodeMount in activitiesNodesMount)
             {
                 XmlNode tempNode = docCurrent.ImportNode(activityNodeMount, true);
-                nodeCurrent.AppendChild(tempNode);
+                //如果Name已经存在，则不要插入（避免插入重复数据）
+
+                bool isExist = false;
+                foreach(var childNode in nodeCurrent.ChildNodes)
+                {
+                    try
+                    {
+                        if ((childNode as XmlElement).GetAttribute("Name") == (tempNode as XmlElement).GetAttribute("Name"))
+                        {
+                            isExist = true;
+                            break;
+                        }
+                    }
+                    catch (Exception err)
+                    {
+                        //childNode可能为注释掉的节点
+                    }
+
+                }
+
+                if(!isExist)
+                {
+                    nodeCurrent.AppendChild(tempNode);
+                }
             }
         }
 
@@ -412,8 +420,7 @@ namespace RPAStudio.ViewModel
             ActivityItems.Add(ItemRecent);
 
             XmlDocument doc = new XmlDocument();
-            //doc.Load(App.LocalRPAStudioDir+ @"\Config\RecentActivities.xml");
-            doc.Load(GetActivitiesXML("RecentActivities"));
+            doc.Load(App.LocalRPAStudioDir+ @"\Config\RecentActivities.xml");
             var rootNode = doc.DocumentElement;
 
             ItemRecent.Name = (rootNode as XmlElement).GetAttribute("Name");
@@ -429,8 +436,7 @@ namespace RPAStudio.ViewModel
             ActivityItems.Add(ItemFavorites);
 
             XmlDocument doc = new XmlDocument();
-            //doc.Load(App.LocalRPAStudioDir+ @"\Config\FavoriteActivities.xml");
-            doc.Load(GetActivitiesXML("FavoriteActivities"));
+            doc.Load(App.LocalRPAStudioDir+ @"\Config\FavoriteActivities.xml");
             var rootNode = doc.DocumentElement;
 
             ItemFavorites.Name = (rootNode as XmlElement).GetAttribute("Name");
@@ -462,11 +468,11 @@ namespace RPAStudio.ViewModel
             return null;
         }
 
-        private void ActivityItemsRemove(ActivityTreeItem.enGroupType available)
+        private void ActivityItemsRemove(ActivityTreeItem.enGroupType groupType)
         {
             foreach(var item in ActivityItems)
             {
-                if(item.GroupType == available)
+                if(item.GroupType == groupType)
                 {
                     ActivityItems.Remove(item);
                     break;
@@ -485,8 +491,8 @@ namespace RPAStudio.ViewModel
             if(AvailableActivitiesXmlDocument == null)
             {
                 XmlDocument doc = new XmlDocument();
-                var resourceXML = Properties.ResourceLocalizer.GetLocalizedResource("AvailableActivities");
-                using (var ms = new MemoryStream(resourceXML))
+
+                using (var ms = new MemoryStream(RPAStudio.Properties.Resources.AvailableActivities))
                 {
                     ms.Flush();
                     ms.Position = 0;
@@ -594,25 +600,25 @@ namespace RPAStudio.ViewModel
             }
         }
 
-        private bool activityTreeItemIsSortable(ActivityTreeItem parent)
+        private bool activityTreeItemIsSortable(ActivityTreeItem item)
         {
-            if(parent == null)
+            if(item == null)
             {
                 return false;
             }
 
-            if(parent.IsSortable == null)
+            if(item.IsSortable == null)
             {
-                return activityTreeItemIsSortable(parent.Parent);
+                return activityTreeItemIsSortable(item.Parent);
             }else
             {
-                return parent.IsSortable.Value;
+                return item.IsSortable.Value;
             }
         }
 
-        private void activityItemSortChildrenByName(ActivityTreeItem parent)
+        private void activityItemSortChildrenByName(ActivityTreeItem item)
         {
-            parent.Children.Sort((x, y) => x.Name.CompareTo(y.Name));//子节点排序
+            item.Children.Sort((x, y) => x.Name.CompareTo(y.Name));//子节点排序
         }
 
         private void ActivityTreeItemSetAllIsExpanded(ActivityTreeItem item, bool IsExpanded)

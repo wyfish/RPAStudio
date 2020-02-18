@@ -117,7 +117,14 @@ namespace RPA.UIAutomation.Activities.Attribute
                         break;
                     }
                 }
-                Result.Set(context, attrValue);
+                if(attrValue == null)
+                {
+                    Result.Set(context, "");
+                }
+                else
+                {
+                    Result.Set(context, attrValue);
+                }
             }
             catch (Exception e)
             {

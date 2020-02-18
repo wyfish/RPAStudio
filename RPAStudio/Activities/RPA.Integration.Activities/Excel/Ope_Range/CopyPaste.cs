@@ -9,9 +9,9 @@ namespace RPA.Integration.Activities.ExcelPlugins
 {
 
     [Designer(typeof(CopyPasteDesigner))]
-    public sealed class CopyPaste : AsyncCodeActivity
+    public sealed class ExcelCopyPaste : AsyncCodeActivity
     {
-        public CopyPaste()
+        public ExcelCopyPaste()
         {
         }
 

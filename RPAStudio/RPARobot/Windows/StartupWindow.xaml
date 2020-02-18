@@ -36,8 +36,11 @@
                     <MenuItem Header="打开主面板" Command="{Binding ShowMainWindowCommand}" FontWeight="Bold" />
                     <MenuItem Header="用户设置" Command="{Binding UserPreferencesCommand}" />
                     <MenuItem Header="浏览日志" Command="{Binding ViewLogsCommand}" />
+                    <MenuItem Header="浏览录像" Command="{Binding ViewScreenRecordersCommand}" />
+                    <Separator Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" />
+                    <MenuItem Header="注册产品…" Command="{Binding RegisterProductCommand}" Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" />
                     <Separator />
-                    <MenuItem Header="注册产品…" Command="{Binding RegisterProductCommand}" />
+                    <MenuItem Header="关于" Command="{Binding AboutProductCommand}" />
                     <Separator />
                     <MenuItem Header="退出" Command="{Binding QuitMainWindowCommand}" />
                 </ContextMenu>

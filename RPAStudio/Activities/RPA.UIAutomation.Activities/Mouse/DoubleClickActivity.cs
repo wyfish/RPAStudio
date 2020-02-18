@@ -103,6 +103,12 @@ namespace RPA.UIAutomation.Activities.Mouse
             }
         }
 
+        public void SetMouseDoubleLeftClick()
+        {
+            ClickType = MouseClickType.CLICK_DOUBLE;
+            MouseButton = MouseButtonType.BTN_LEFT;
+        }
+
         static DoubleClickActivity()
         {
             AttributeTableBuilder builder = new AttributeTableBuilder();
@@ -186,10 +192,6 @@ namespace RPA.UIAutomation.Activities.Mouse
                     throw new NotImplementedException("查找不到元素");
                 }
             }
-        }
-        private void onComplete(NativeActivityContext context, ActivityInstance completedInstance)
-        {
-            
         }
     }
 }

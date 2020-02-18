@@ -47,6 +47,7 @@ namespace RPARobot.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<UserPreferencesViewModel>();
             SimpleIoc.Default.Register<RegisterViewModel>();
+            SimpleIoc.Default.Register<AboutViewModel>();
         }
 
         public StartupViewModel Startup
@@ -83,6 +84,13 @@ namespace RPARobot.ViewModel
             }
         }
 
+        public AboutViewModel About
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AboutViewModel>();
+            }
+        }
 
         public static void Cleanup()
         {

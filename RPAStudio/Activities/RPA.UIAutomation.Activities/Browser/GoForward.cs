@@ -80,35 +80,35 @@ namespace RPA.UIAutomation.Activities.Browser
                     return m_Delegate.BeginInvoke(callback, state);
                 }
                 Browser getBrowser = property.GetValue(context.DataContext) as Browser;
-                if (getBrowser.getCFBrowser() != null)
+                if (getBrowser.getICFBrowser() != null)
                 {
-                    getBrowser.getCFBrowser().Navigate().Forward();
+                    getBrowser.getICFBrowser().Navigate().Forward();
                 }
-                else if (getBrowser.getIEBrowser() != null)
-                {
-                    getBrowser.getIEBrowser().GoForward();
-                }
-                //确保页面是否已加载完成
-                while (getBrowser.getIEBrowser().ReadyState != SHDocVw.tagREADYSTATE.READYSTATE_COMPLETE)
-                {
-                    Thread.Sleep(500);
-                }
+                //else if (getBrowser.getIEBrowser() != null)
+                //{
+                //    getBrowser.getIEBrowser().GoForward();
+                //}
+                ////确保页面是否已加载完成
+                //while (getBrowser.getIEBrowser().ReadyState != SHDocVw.tagREADYSTATE.READYSTATE_COMPLETE)
+                //{
+                //    Thread.Sleep(500);
+                //}
             }
             else
             {
-                if (thisBrowser.getCFBrowser() != null)
+                if (thisBrowser.getICFBrowser() != null)
                 {
-                    thisBrowser.getCFBrowser().Navigate().Forward();
+                    thisBrowser.getICFBrowser().Navigate().Forward();
                 }
-                else if (thisBrowser.getIEBrowser() != null)
-                {
-                    thisBrowser.getIEBrowser().GoForward();
-                }
-                //确保页面是否已加载完成
-                while (thisBrowser.getIEBrowser().ReadyState != SHDocVw.tagREADYSTATE.READYSTATE_COMPLETE)
-                {
-                    Thread.Sleep(500);
-                }
+                //else if (thisBrowser.getIEBrowser() != null)
+                //{
+                //    thisBrowser.getIEBrowser().GoForward();
+                //}
+                ////确保页面是否已加载完成
+                //while (thisBrowser.getIEBrowser().ReadyState != SHDocVw.tagREADYSTATE.READYSTATE_COMPLETE)
+                //{
+                //    Thread.Sleep(500);
+                //}
             }
 
 

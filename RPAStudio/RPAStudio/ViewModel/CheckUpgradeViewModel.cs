@@ -3,6 +3,7 @@ using System.Xml;
 using System.IO;
 using System.Collections.Generic;
 using System.Threading;
+using GalaSoft.MvvmLight.Messaging;
 using System.Windows;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;

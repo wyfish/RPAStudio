@@ -9,6 +9,7 @@ using Plugins.Shared.Library.Extensions;
 using Plugins.Shared.Library;
 using log4net;
 using RPARobot.ViewModel;
+using RPARobot.Services;
 
 namespace RPARobot.Executor
 {
@@ -16,6 +17,11 @@ namespace RPARobot.Executor
     {
         private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        public bool HasException { get; set; }//判断运行过程中是否发生了异常
+
+        /// <summary>
+        /// 包条目视图模型
+        /// </summary>
         public PackageItem m_packageItem { get; set; }
 
         private WorkflowApplication m_app;
@@ -34,6 +40,8 @@ namespace RPARobot.Executor
         /// </summary>
         public void Run()
         {
+            HasException = false;
+
             Activity workflow = ActivityXamlServices.Load(m_xamlPath);
 
             var result = ActivityValidationServices.Validate(workflow);
@@ -63,12 +71,14 @@ namespace RPARobot.Executor
             }
             else
             {
-                MessageBox.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                AutoCloseMessageBoxService.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         private UnhandledExceptionAction WorkflowApplicationOnUnhandledException(WorkflowApplicationUnhandledExceptionEventArgs e)
         {
+            HasException = true;
+
             var name = e.ExceptionSource.DisplayName;
             SharedObject.Instance.Output(SharedObject.enOutputType.Error, string.Format("{0} 执行时出现异常", name), e.UnhandledException.ToString());
 
@@ -81,9 +91,11 @@ namespace RPARobot.Executor
             {
                 if(!string.IsNullOrEmpty(obj.TerminationException.Message))
                 {
+                    HasException = true;
+
                     Common.RunInUI(()=> {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "提示", obj.TerminationException.ToString());
-                        MessageBox.Show(App.Current.MainWindow, obj.TerminationException.Message, "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, obj.TerminationException.ToString());//TODO WJF 标题名先不输出，只输出详情
+                        AutoCloseMessageBoxService.Show(App.Current.MainWindow, obj.TerminationException.Message, "提示", MessageBoxButton.OK, MessageBoxImage.Error);
                     });
                 }
             }
@@ -98,11 +110,12 @@ namespace RPARobot.Executor
             {
                 try
                 {
-                    m_app.Terminate("执行已取消", new TimeSpan(0, 0, 0, 30));
+                    m_app.Terminate("执行由用户主动停止", new TimeSpan(0, 0, 0, 30));
                 }
-                catch (Exception )
+                catch (Exception err)
                 {
-                    MessageBox.Show(App.Current.MainWindow, "停止调试发生异常！", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    Logger.Debug(err, logger);
+                    AutoCloseMessageBoxService.Show(App.Current.MainWindow, "停止调试发生异常！", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }

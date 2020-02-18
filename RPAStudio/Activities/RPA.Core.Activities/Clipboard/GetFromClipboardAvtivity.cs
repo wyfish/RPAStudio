@@ -29,21 +29,6 @@ namespace RPA.Core.Activities.ClipboardActivity
         [Localize.LocalizedDescription("Description12")] //从剪贴板中检索的数据。 //The data retrieved from the clipboard. //クリップボードから取得したデータ。
         public OutArgument<string> Result { get; set; }
 
-        [Browsable(false)]
-        public string icoPath
-        {
-            get
-            {
-                return @"pack://application:,,,/RPA.Core.Activities;Component/Resources/Clipboard/gettext.png";
-            }
-        }
-
-        CountdownEvent latch;
-        private void refreshData(CountdownEvent latch)
-        {
-            latch.Signal();
-        }
-
         private InArgument<Int32> _Timeout = 3000;
         [Category("Options")]
         [Localize.LocalizedDescription("Description7")] //指定在抛出错误之前等待活动运行的时间(以毫秒为单位)。默认值为3000毫秒(3秒)。 //Specifies the amount of time, in milliseconds, to wait for an activity to run before throwing an error.  The default is 3000 milliseconds (3 seconds). //エラーをスローする前にアクティビティの実行を待機する時間をミリ秒単位で指定します。 デフォルトは3000ミリ秒（3秒）です。
@@ -60,6 +45,20 @@ namespace RPA.Core.Activities.ClipboardActivity
             }
         }
 
+        [Browsable(false)]
+        public string icoPath
+        {
+            get
+            {
+                return @"pack://application:,,,/RPA.Core.Activities;Component/Resources/Clipboard/gettext.png";
+            }
+        }
+
+        CountdownEvent latch;
+        private void refreshData(CountdownEvent latch)
+        {
+            latch.Signal();
+        }
         protected override void Execute(CodeActivityContext context)
         {
             try

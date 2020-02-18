@@ -7,6 +7,61 @@ using System.Windows.Controls;
 
 namespace RPA.Core.Activities.EnvironmentActivity
 {
+[Designer(typeof(GetPasswordDesigner))]
+    public sealed class GetPassword : CodeActivity
+    {
+        public new string DisplayName
+        {
+            get
+            {
+                return "Get Password";
+            }
+        }
+
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [Localize.LocalizedDisplayName("DisplayName45")] //密码 //password //パスワード
+        [Browsable(false)]
+        public string EnPassword
+        {
+            set;
+            get;
+        }
+
+        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
+        [RequiredArgument]
+        [Localize.LocalizedDisplayName("DisplayName46")] //结果 //result //結果
+        [Browsable(true)]
+        public OutArgument<string> Password
+        {
+            get;
+            set;
+        }
+
+        [Browsable(false)]
+        public string icoPath { get { return "pack://application:,,,/RPA.Core.Activities;Component/Resources/Environment/password.png"; } }
+
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            try
+            {
+                String Path = EnPassword;
+                System.Diagnostics.Debug.WriteLine("Path : " + Path);
+                Password.Set(context, Path);
+
+                // 使用一个IntPtr类型值来存储加密字符串的起始点  
+                //IntPtr p = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(EnPassword);
+
+                //// 使用.NET内部算法把IntPtr指向处的字符集合转换成字符串  
+                //string password = System.Runtime.InteropServices.Marshal.PtrToStringBSTR(p);
+            }
+            catch (Exception e)
+            {
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "获取系统文件夹执行过程出错", e.Message);
+                throw e;
+            }
+        }
+    }
     public class PasswordBoxHelper
     {
         public static readonly DependencyProperty PasswordProperty =
@@ -83,59 +138,4 @@ namespace RPA.Core.Activities.EnvironmentActivity
         }
     }
 
-    [Designer(typeof(GetPasswordDesigner))]
-    public sealed class GetPassword : CodeActivity
-    {
-        public new string DisplayName
-        {
-            get
-            {
-                return "Get Password";
-            }
-        }
-
-        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
-        [Localize.LocalizedDisplayName("DisplayName45")] //密码 //password //パスワード
-        [Browsable(false)]
-        public string EnPassword
-        {
-            set;
-            get;
-        }
-
-        [Localize.LocalizedCategory("Category4")] //选项 //Option //オプション
-        [RequiredArgument]
-        [Localize.LocalizedDisplayName("DisplayName46")] //结果 //result //結果
-        [Browsable(true)]
-        public OutArgument<string> Password
-        {
-            get;
-            set;
-        }
-
-        [Browsable(false)]
-        public string icoPath { get { return "pack://application:,,,/RPA.Core.Activities;Component/Resources/Environment/password.png"; } }
-
-
-        protected override void Execute(CodeActivityContext context)
-        {
-            try
-            {
-                String Path = EnPassword;
-                System.Diagnostics.Debug.WriteLine("Path : " + Path);
-                Password.Set(context, Path);
-
-                // 使用一个IntPtr类型值来存储加密字符串的起始点  
-                //IntPtr p = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(EnPassword);
-
-                //// 使用.NET内部算法把IntPtr指向处的字符集合转换成字符串  
-                //string password = System.Runtime.InteropServices.Marshal.PtrToStringBSTR(p);
-            }
-            catch (Exception e)
-            {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "获取系统文件夹执行过程出错", e.Message);
-                throw e;
-            }
-        }
-    }
 }

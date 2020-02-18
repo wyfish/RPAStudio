@@ -29,10 +29,6 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="181*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="32"/>
             <RowDefinition Height="25"/>
@@ -41,7 +37,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+        <Grid Grid.Row="0">
             <ToolBar>
                 <Button x:Uid="Refresh" ToolTip="刷新" Command="{Binding RefreshCommand}">
                     <Image Source="/Resources/Image/Main/Refresh.png" />
@@ -49,20 +45,28 @@
                 <Button x:Uid="UserSettings" ToolTip="用户设置" Command="{Binding UserPreferencesCommand}">
                     <Image Source="/Resources/Image/Main/settings.png" />
                 </Button>
+                <Button ToolTip="浏览录像" Command="{Binding ViewScreenRecordersCommand}">
+                    <Image Source="/Resources/Image/Main/screen-recorder.png" />
+                </Button>
                 <Button x:Uid="BrowseLogs" ToolTip="浏览日志" Command="{Binding ViewLogsCommand}">
                     <Image Source="/Resources/Image/Main/logs.png" />
                 </Button>
-                <Separator />
-                <Button x:Uid="RegisterYourProduct" ToolTip="注册产品" Command="{Binding RegisterProductCommand}">
+                <Separator Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" />
+                <Button x:Uid="RegisterYourProduct" ToolTip="注册产品" Command="{Binding RegisterProductCommand}" Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
                     <Image Source="/Resources/Image/Main/register.png" />
+                </Button>
+
+                <Separator />
+                <Button ToolTip="关于产品" Command="{Binding AboutProductCommand}">
+                    <Image Source="/Resources/Image/Main/about.png" />
                 </Button>
             </ToolBar>
         </Grid>
-        <Grid Grid.Row="1" Focusable="True" Grid.ColumnSpan="2" >
+        <Grid Grid.Row="1" Focusable="True" >
             <uc:SearchTextBoxControl x:Uid="Search" HintText="搜索" SearchText="{Binding SearchText}" />
         </Grid>
 
-        <Grid Grid.Row="2" Visibility="{Binding IsWorkflowRunning,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" Grid.ColumnSpan="2" Margin="0,0,0,25" Grid.RowSpan="2">
+        <Grid Grid.Row="2" Visibility="{Binding IsWorkflowRunning,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
             <Grid Height="40" Background="#e0ebf6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -81,11 +85,11 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Row="3" Background="White" Grid.ColumnSpan="2">
+        <Grid Grid.Row="3" Background="White">
             <TextBlock Text="{x:Static localization:Strings.AvailableProcessesListText}" FontSize="15" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" />
         </Grid>
 
-        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" Grid.ColumnSpan="2">
+        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
             <ListBox ItemsSource="{Binding PackageItems}" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionMode="Single" ScrollViewer.CanContentScroll="False" >
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
@@ -150,12 +154,12 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
-        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}" Grid.ColumnSpan="2">
+        <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
             <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060" Text="{x:Static localization:Strings.SearchResultEmptyText}"/>
         </Grid>
 
 
-        <Grid Grid.Row="5" Background="#eeeeee" Grid.ColumnSpan="2">
+        <Grid Grid.Row="5" Background="#eeeeee">
 
         </Grid>
     </Grid>

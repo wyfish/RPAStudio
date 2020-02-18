@@ -85,6 +85,21 @@ namespace RPA.Integration.Activities.WordPlugins
             }
         }
 
+        InOutArgument<string> _inOutSavePathUrl;
+        [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
+        [DisplayName("文件路径(变量)")]
+        [Browsable(true)]
+        public InOutArgument<string> InOutSavePathUrl
+        {
+            get
+            {
+                return _inOutSavePathUrl;
+            }
+            set
+            {
+                _inOutSavePathUrl = value;
+            }
+        }
 
         bool _Save = true;
         [Localize.LocalizedCategory("Category7")] //保存选项 //Save option //保存オプション
@@ -134,7 +149,7 @@ namespace RPA.Integration.Activities.WordPlugins
             }
         }
 
-        [Browsable(false)]
+
         private bool isPathAvailable(string path)
         {
             if (path == null)
@@ -206,6 +221,11 @@ namespace RPA.Integration.Activities.WordPlugins
             try
             {
                 string filePath = SavePathUrl.Get(context);
+                if(string.IsNullOrEmpty(filePath))
+                {
+                    filePath = InOutSavePathUrl.Get(context);
+                }
+
                 if (_Save)
                 {
                     if ((!isPathAvailable(filePath)) && (NewDoc))

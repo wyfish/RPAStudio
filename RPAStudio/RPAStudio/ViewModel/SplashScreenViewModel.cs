@@ -164,16 +164,7 @@ namespace RPAStudio.ViewModel
             return isNotExpired;
         }
 
-        public string SplashImagePath {
-            get {
-                return "pack://application:,,,/Resources/Image/Windows/SplashScreen/startup.png";
-                //if (System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName.Equals("zh"))
-                //{
-                //    return "pack://application:,,,/Resources/Image/Windows/SplashScreen/startup.png";
-                //}
-                //return "pack://application:,,,/Resources/Image/Windows/SplashScreen/startup_en.png";
-            }
-        }
+
 
 
 

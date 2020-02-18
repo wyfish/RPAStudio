@@ -4,6 +4,8 @@ using RPARobot.Librarys;
 using System.Windows;
 using System.Xml;
 using System;
+using System.ComponentModel;
+using RPARobot.Services;
 
 namespace RPARobot.ViewModel
 {
@@ -78,6 +80,37 @@ namespace RPARobot.ViewModel
                 this.IsAutoOpenMainWindow = false;
             }
 
+
+            var isEnableScreenRecorderElement = userSettingsElement.SelectSingleNode("IsEnableScreenRecorder") as XmlElement;
+            if (isEnableScreenRecorderElement.InnerText.ToLower().Trim() == "true")
+            {
+                this.IsEnableScreenRecorder = true;
+            }
+            else
+            {
+                this.IsEnableScreenRecorder = false;
+            }
+
+            var fpsElement = userSettingsElement.SelectSingleNode("FPS") as XmlElement;
+            this.FPS = fpsElement.InnerText.Trim();
+
+
+            var qualityElement = userSettingsElement.SelectSingleNode("Quality") as XmlElement;
+            this.Quality = qualityElement.InnerText.Trim();
+
+
+            var isEnableControlServerElement = userSettingsElement.SelectSingleNode("IsEnableControlServer") as XmlElement;
+            if (isEnableControlServerElement.InnerText.ToLower().Trim() == "true")
+            {
+                this.IsEnableControlServer = true;
+            }
+            else
+            {
+                this.IsEnableControlServer = false;
+            }
+
+            var controlServerUriElement = userSettingsElement.SelectSingleNode("ControlServerUri") as XmlElement;
+            this.ControlServerUri = controlServerUriElement.InnerText.Trim();
         }
 
         private RelayCommand _MouseLeftButtonDownCommand;
@@ -101,17 +134,17 @@ namespace RPARobot.ViewModel
 
 
 
-        private RelayCommand<System.ComponentModel.CancelEventArgs> _closingCommand;
+        private RelayCommand<CancelEventArgs> _closingCommand;
 
         /// <summary>
         /// Gets the ClosingCommand.
         /// </summary>
-        public RelayCommand<System.ComponentModel.CancelEventArgs> ClosingCommand
+        public RelayCommand<CancelEventArgs> ClosingCommand
         {
             get
             {
                 return _closingCommand
-                    ?? (_closingCommand = new RelayCommand<System.ComponentModel.CancelEventArgs>(
+                    ?? (_closingCommand = new RelayCommand<CancelEventArgs>(
                     e =>
                     {
                         e.Cancel = true;//不关闭窗口
@@ -182,6 +215,200 @@ namespace RPARobot.ViewModel
         }
 
 
+        /// <summary>
+        /// The <see cref="IsEnableScreenRecorder" /> property's name.
+        /// </summary>
+        public const string IsEnableScreenRecorderPropertyName = "IsEnableScreenRecorder";
+
+        private bool _isEnableScreenRecorderProperty = false;
+
+        /// <summary>
+        /// 是否启用屏幕录像
+        /// </summary>
+        public bool IsEnableScreenRecorder
+        {
+            get
+            {
+                return _isEnableScreenRecorderProperty;
+            }
+
+            set
+            {
+                if (_isEnableScreenRecorderProperty == value)
+                {
+                    return;
+                }
+
+                _isEnableScreenRecorderProperty = value;
+                RaisePropertyChanged(IsEnableScreenRecorderPropertyName);
+            }
+        }
+
+
+
+        /// <summary>
+        /// The <see cref="FPS" /> property's name.
+        /// </summary>
+        public const string FPSPropertyName = "FPS";
+
+        private string _fpsProperty = "0";
+
+        /// <summary>
+        /// 录像的FPS
+        /// </summary>
+        public string FPS
+        {
+            get
+            {
+                return _fpsProperty;
+            }
+
+            set
+            {
+                if (_fpsProperty == value)
+                {
+                    return;
+                }
+
+                _fpsProperty = value;
+                RaisePropertyChanged(FPSPropertyName);
+            }
+        }
+
+
+        /// <summary>
+        /// The <see cref="Quality" /> property's name.
+        /// </summary>
+        public const string QualityPropertyName = "Quality";
+
+        private string _qualityProperty = "0";
+
+        /// <summary>
+        /// 录像质量
+        /// </summary>
+        public string Quality
+        {
+            get
+            {
+                return _qualityProperty;
+            }
+
+            set
+            {
+                if (_qualityProperty == value)
+                {
+                    return;
+                }
+
+                _qualityProperty = value;
+                RaisePropertyChanged(QualityPropertyName);
+            }
+        }
+
+
+
+        /// <summary>
+        /// The <see cref="IsEnableControlServer" /> property's name.
+        /// </summary>
+        public const string IsEnableControlServerPropertyName = "IsEnableControlServer";
+
+        private bool _isEnableControlServerProperty = false;
+
+        /// <summary>
+        /// 是否启用控制中心
+        /// </summary>
+        public bool IsEnableControlServer
+        {
+            get
+            {
+                return _isEnableControlServerProperty;
+            }
+
+            set
+            {
+                if (_isEnableControlServerProperty == value)
+                {
+                    return;
+                }
+
+                _isEnableControlServerProperty = value;
+                RaisePropertyChanged(IsEnableControlServerPropertyName);
+            }
+        }
+
+
+        /// <summary>
+        /// The <see cref="ControlServerUri" /> property's name.
+        /// </summary>
+        public const string ControlServerUriPropertyName = "ControlServerUri";
+
+        private string _controlServerUriProperty = "";
+
+        /// <summary>
+        /// 控制中心地址
+        /// </summary>
+        public string ControlServerUri
+        {
+            get
+            {
+                return _controlServerUriProperty;
+            }
+
+            set
+            {
+                if (_controlServerUriProperty == value)
+                {
+                    return;
+                }
+
+                _controlServerUriProperty = value;
+                RaisePropertyChanged(ControlServerUriPropertyName);
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 升级配置文件
+        /// </summary>
+        private void UpdateSettings()
+        {
+            //写入到配置XML中，执行可能的相应的操作
+            XmlDocument doc = new XmlDocument();
+            var path = App.LocalRPAStudioDir + @"\Config\RPARobot.settings";
+            doc.Load(path);
+            var rootNode = doc.DocumentElement;
+            var userSettingsElement = rootNode.SelectSingleNode("UserSettings") as XmlElement;
+
+            //根据自启动项设置IsAutoRun值
+            var isAutoRunElement = userSettingsElement.SelectSingleNode("IsAutoRun") as XmlElement;
+            isAutoRunElement.InnerText = IsAutoRun ? "True" : "False";
+
+            var isAutoOpenMainWindowElement = userSettingsElement.SelectSingleNode("IsAutoOpenMainWindow") as XmlElement;
+            isAutoOpenMainWindowElement.InnerText = IsAutoOpenMainWindow ? "True" : "False";
+
+            var isEnableScreenRecorderElement = userSettingsElement.SelectSingleNode("IsEnableScreenRecorder") as XmlElement;
+            isEnableScreenRecorderElement.InnerText = IsEnableScreenRecorder ? "True" : "False";
+
+            var fpsElement = userSettingsElement.SelectSingleNode("FPS") as XmlElement;
+            fpsElement.InnerText = FPS;
+
+            var qualityElement = userSettingsElement.SelectSingleNode("Quality") as XmlElement;
+            qualityElement.InnerText = Quality;
+
+            var isEnableControlServerElement = userSettingsElement.SelectSingleNode("IsEnableControlServer") as XmlElement;
+            isEnableControlServerElement.InnerText = IsEnableControlServer ? "True" : "False";
+
+            var controlServerUriElement = userSettingsElement.SelectSingleNode("ControlServerUri") as XmlElement;
+            controlServerUriElement.InnerText = ControlServerUri;
+
+            doc.Save(path);
+
+            Common.SetAutoRun(IsAutoRun);
+        }
+
+
 
         private RelayCommand _resetSettingsCommand;
 
@@ -197,14 +424,21 @@ namespace RPARobot.ViewModel
                     () =>
                     {
                         //重置默认设置
-                        var ret = MessageBox.Show(m_view, "确认重置为默认设置吗？", "询问", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                        var ret = AutoCloseMessageBoxService.Show(m_view, "确认重置为默认设置吗？", "询问", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
                         if (ret == MessageBoxResult.OK)
                         {
                             IsAutoRun = false;
                             IsAutoOpenMainWindow = true;
 
+                            IsEnableScreenRecorder = false;
+                            FPS = "30";
+                            Quality = "50";
+
+                            IsEnableControlServer = false;
+                            ControlServerUri = "";
+
                             //立即生效
-                            OkCommand.Execute(null);
+                            UpdateSettings();
                         }
                         
                     }));
@@ -226,23 +460,7 @@ namespace RPARobot.ViewModel
                     ?? (_okCommand = new RelayCommand(
                     () =>
                     {
-                        //写入到配置XML中，执行可能的相应的操作
-                        XmlDocument doc = new XmlDocument();
-                        var path = App.LocalRPAStudioDir + @"\Config\RPARobot.settings";
-                        doc.Load(path);
-                        var rootNode = doc.DocumentElement;
-                        var userSettingsElement = rootNode.SelectSingleNode("UserSettings") as XmlElement;
-
-                        //根据自启动项设置IsAutoRun值
-                        var isAutoRunElement = userSettingsElement.SelectSingleNode("IsAutoRun") as XmlElement;
-                        isAutoRunElement.InnerText = IsAutoRun ? "True" : "False";
-
-                        var isAutoOpenMainWindowElement = userSettingsElement.SelectSingleNode("IsAutoOpenMainWindow") as XmlElement;
-                        isAutoOpenMainWindowElement.InnerText = IsAutoOpenMainWindow ? "True" : "False";
-
-                        doc.Save(path);
-
-                        Common.SetAutoRun(IsAutoRun);
+                        UpdateSettings();
 
                         m_view.Close();
                     }));

@@ -1,4 +1,4 @@
-﻿<Fluent:RibbonWindow x:Class="RPAStudio.Windows.MainWindow"
+﻿<fluent:RibbonWindow x:Class="RPAStudio.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,12 +7,12 @@
         xmlns:uc="clr-namespace:RPAStudio.UserControls"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-        xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+        xmlns:fluent="clr-namespace:Fluent;assembly=Fluent"
         mc:Ignorable="d"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         Title="{Binding Title}"  Width="800" Height="600" MinWidth="600" MinHeight="300" WindowStartupLocation="CenterScreen" Icon="/Resources/Ico/RPAStudio.ico" Loaded="RibbonWindow_Loaded" Unloaded="RibbonWindow_Unloaded">
     
-    <Fluent:RibbonWindow.InputBindings>
+    <fluent:RibbonWindow.InputBindings>
         <KeyBinding Command="{Binding SaveCommand}" Key="S" Modifiers="Ctrl" />
         <KeyBinding Command="{Binding SaveAllCommand}" Key="S" Modifiers="Ctrl+Shift" />
         <KeyBinding Command="{Binding NewSequenceDocumentCommand}" Key="N" Modifiers="Ctrl" />
@@ -28,7 +28,7 @@
         <KeyBinding Command="{Binding ToggleBreakpointCommand}" Key="F9" />
         <KeyBinding Command="{Binding RemoveAllBreakpointsCommand}" Key="F9" Modifiers="Shift" />
         <KeyBinding Command="{Binding OpenLogsCommand}" Key="L" Modifiers="Ctrl" />
-    </Fluent:RibbonWindow.InputBindings>
+    </fluent:RibbonWindow.InputBindings>
     
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -43,4 +43,4 @@
     </i:Interaction.Triggers>
     
     <uc:MainContent />
-</Fluent:RibbonWindow>
+</fluent:RibbonWindow>

@@ -50,12 +50,13 @@ namespace RPA.Core.Activities.DialogActivity
                     {
                         _path = dialog.SelectedPath;
 
+                        refreshData(latch);
+
                         if (string.IsNullOrEmpty(dialog.SelectedPath))
                         {
                             SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "文件夹路径不能为空!");
                             return;
-                        }
-                        refreshData(latch); 
+                        } 
                     }
                 });
                 td.TrySetApartmentState(ApartmentState.STA);

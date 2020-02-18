@@ -70,9 +70,9 @@
             </GroupBox>
         </Grid>
         <Grid Grid.Row="1" Margin="10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="330">
-                <Button Width="155" Height="25" x:Uid="ExportMachineCode" ToolTip="请将机器码文件导出并发送给授权方完成授权" Command="{Binding ExportMachineCodeFileCommand}" Content="{x:Static localization:Strings.ExportMachineCodeContent}" Margin="0,2"/>
-                <Button Width="141" Height="25" x:Uid="ImportMachineCode" ToolTip="选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口" Margin="20,2,10,2" Command="{Binding ImportAuthorizationFileCommand}" Content="{x:Static localization:Strings.ImportMachineCodeContent}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Width="100" Height="25" x:Uid="ExportMachineCode" ToolTip="请将机器码文件导出并发送给授权方完成授权" Command="{Binding ExportMachineCodeFileCommand}" Content="{x:Static localization:Strings.ExportMachineCodeContent}" Margin="0,2"/>
+                <Button Width="100" Height="25" x:Uid="ImportMachineCode" ToolTip="选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口" Margin="20,0,10,0" Command="{Binding ImportAuthorizationFileCommand}" Content="{x:Static localization:Strings.ImportMachineCodeContent}"/>
             </StackPanel>
         </Grid>
 

@@ -15,7 +15,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
     [Designer(typeof(TypeIntoDesigner))]
     public sealed class TypeIntoActivity : CodeActivity
     {
-        public new string DisplayName;
+        //public new string DisplayName;
         [Browsable(false)]
         public string _DisplayName { get { return "Type Into"; } }
 

@@ -41,14 +41,14 @@
           <Activity Name="Write Cell" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="Set the text content of the specified location cell"/>
         </Group>
         <Group Name="Row/Column">
-          <Activity Name="Read Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="Read a row or column of data"/>
-          <Activity Name="Copy Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="Copy a row or column of data at a specified position"/>
+          <Activity Name="Copy Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="Read a row or column of data"/>
+          <Activity Name="Paste Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="Copy a row or column of data at a specified position"/>
           <Activity Name="Row/Column Operation" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="Including hidden/add/delete operations on rows or columns"/>
           <Activity Name="Count Rows/Columns" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="Get the corresponding total number of corresponding workbook rows / columns."/>
         </Group>
         <Group Name="Range">
           <Activity Name="Delete Range"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="Specify a cell range to delete"/>
-          <Activity Name="Copy/Paste"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="The data of the selected area is copied to the pasteboard and written to other areas."/>
+          <Activity Name="Copy/Paste"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.ExcelCopyPaste,RPA.Integration.Activities" ToolTip="The data of the selected area is copied to the pasteboard and written to other areas."/>
           <Activity Name="Read Range" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="Copy the specified range of cells to the DataTable variable"/>
           <Activity Name="Write Range" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="Write data from the DataTable variable to the specified area"/>
         </Group>

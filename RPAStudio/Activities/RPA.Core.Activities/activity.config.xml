@@ -38,7 +38,7 @@
       <Activity Name="Beep" Icon="Resources/Environment/beep.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.WinBeep,RPA.Core.Activities" ToolTip="Buzzer or system beep, etc." />
       <Activity Name="Get Environment Folder" Icon="Resources/Environment/envfolder.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvPath,RPA.Core.Activities" ToolTip="Get the path to the specified system special folder" />
       <Activity Name="Get Environment Variable" Icon="Resources/Environment/envvariable.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvVar,RPA.Core.Activities" ToolTip="Get the contents of the specified environment variable" />
-      <Activity Name="Get Password" Icon="Resources/Environment/password.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetPassword,RPA.Core.Activities" ToolTip="Encrypt the password by associating it with the current user.  Only workflows running under the current user context can decrypt the password." />
+       <!--<Activity Name="Get Password" Icon="Resources/Environment/password.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetPassword,RPA.Core.Activities" ToolTip="Encrypt the password by associating it with the current user.  Only workflows running under the current user context can decrypt the password." />-->
     </Group>
     <Group Name="PowerShell">
       <Activity Name="Invoke PowerShell" Icon="Resources/PowerShell/powershell.png" TypeOf="RPA.Core.Activities.PowerShellActivity.ShellActivity,RPA.Core.Activities" ToolTip="Execute command line commands or scripts" />

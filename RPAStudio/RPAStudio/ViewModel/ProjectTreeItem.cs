@@ -1075,7 +1075,7 @@ namespace RPAStudio.ViewModel
                             var NameWithoutExt = System.IO.Path.GetFileNameWithoutExtension(Name);
 
                             bool isReadOnly = ViewModelLocator.Instance.Main.IsWorkflowRunningOrDebugging;//程序正在运行或调试时，新打开的XAML应为只读
-                            ViewModelLocator.Instance.Dock.NewSequenceDocument(NameWithoutExt, Path, isReadOnly);
+                            ViewModelLocator.Instance.Dock.NewProcessDocument(NameWithoutExt, Path, isReadOnly);
                         }
 
                     }));

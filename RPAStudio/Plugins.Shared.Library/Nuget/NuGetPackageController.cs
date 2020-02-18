@@ -70,12 +70,7 @@ namespace Plugins.Shared.Library.Nuget
         {
             get
             {
-                var nugetConfigFile = "NuGet.Default.Config";
-                string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-                if (locale.Equals("zh") || locale.Equals("ja"))
-                {
-                    nugetConfigFile = nugetConfigFile.Replace(".Config", "_" + locale + ".Config");
-                }
+                var nugetConfigFile = "Nuget.Default.Config";
                 try
                 {
                     if (_settings == null) _settings = NuGet.Configuration.Settings.LoadSpecificSettings(System.Environment.CurrentDirectory, nugetConfigFile);
@@ -272,28 +267,26 @@ namespace Plugins.Shared.Library.Nuget
             var repositories = SourceRepositoryProvider.GetRepositories();
             foreach (var sourceRepository in repositories)
             {
-                SourcePackageDependencyInfo dependencyInfo = null;
                 try
                 {
                     var dependencyInfoResource = await sourceRepository.GetResourceAsync<DependencyInfoResource>();
-                    dependencyInfo = await dependencyInfoResource.ResolvePackage(
+                    var dependencyInfo = await dependencyInfoResource.ResolvePackage(
                         package, NuGetFramework, Logger, CancellationToken.None);
                     if (dependencyInfo == null) continue;
                     availablePackages.Add(dependencyInfo);
-                }
-                catch (Exception)
-                {
-                    //string a = ex.Message;
-                }
-                if (dependencyInfo == null) continue;
+                    foreach (var dependency in dependencyInfo.Dependencies)
+                    {
+                        var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);
+                        await GetPackageDependencies(identity, cacheContext, availablePackages);
+                    }
 
-                foreach (var dependency in dependencyInfo.Dependencies)
-                {
-                    var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);
-                    await GetPackageDependencies(identity, cacheContext, availablePackages);
+                    break;//只要有一个源能搜索到就不再往下搜索了
                 }
+                catch (Exception err)
+                {
 
-                break;//只要有一个源能搜索到就不再往下搜索了
+                }
+                
             }
         }
 
@@ -360,6 +353,8 @@ namespace Plugins.Shared.Library.Nuget
 
         public bool InstallPackage(PackageIdentity identity)
         {
+            bool ret = true;
+
             var packagePathResolver = new NuGet.Packaging.PackagePathResolver(PackagesInstallFolder);
             var installedPath = packagePathResolver.GetInstalledPath(identity);
 
@@ -401,6 +396,7 @@ namespace Plugins.Shared.Library.Nuget
             }
             catch (Exception ex)
             {
+                ret = false;
                 SharedObject.Instance.Output(SharedObject.enOutputType.Error, "安装nupkg包出错", ex);
             }
 
@@ -417,7 +413,7 @@ namespace Plugins.Shared.Library.Nuget
                 }
             }
 
-            return true;
+            return ret;
         }
 
         public List<Lazy<INuGetResourceProvider>> CreateResourceProviders()
@@ -518,8 +514,7 @@ namespace Plugins.Shared.Library.Nuget
                 catch (Exception)
                 {
 
-                }
-                System.IO.File.Copy(source, target, true);
+                }             
             }
         }
 

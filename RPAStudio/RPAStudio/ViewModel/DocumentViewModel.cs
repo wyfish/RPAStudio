@@ -22,6 +22,10 @@ using RPAStudio.Executor;
 using RPAStudio.ExpressionEditor;
 using RPAStudio.Librarys;
 using RPAStudio.Localization;
+using System.Windows.Threading;
+using System.Xaml;
+using System.Xml;
+using System.Collections;
 
 namespace RPAStudio.ViewModel
 {
@@ -40,6 +44,10 @@ namespace RPAStudio.ViewModel
         public bool IsAlwaysReadOnly { get; set; }//记录是否一直保持只读状态，比如代码片断文件
 
         public string ActivityBuilderDisplayName = "";
+
+
+        private DispatcherTimer SourceCodeConnectTimer = new DispatcherTimer();
+
 
         /// <summary>
         /// The <see cref="WorkflowDesignerView" /> property's name.
@@ -141,7 +149,7 @@ namespace RPAStudio.ViewModel
                 }
                 else
                 {
-                    CompositeTitle = Title;
+                    CompositeTitle = IsDirty? Title + " *": Title;
                 }
             }
         }
@@ -468,110 +476,7 @@ namespace RPAStudio.ViewModel
             }
         }
 
-        //private void ParseCopyDataProc(string copyData)
-        //{
-        //    var modelService = this.WorkflowDesignerInstance.Context.Services.GetService<ModelService>();
-        //    var modelItem = modelService.Find(modelService.Root, typeof(Activity));
-
-        //    JsonData jsonData = JsonMapper.ToObject(copyData);
-        //    if (Equals(jsonData["cmd"].ToString(), "grab"))
-        //    {
-        //        foreach (ModelItem item in modelItem)
-        //        {
-        //            if (Equals(item.ItemType.Name, jsonData["className"].ToString()))
-        //            {
-        //                List<ModelProperty> PropertyList = item.Properties.ToList();
-        //                ModelProperty propertyInfo = PropertyList.Find((ModelProperty property) => property.Name.Equals("guid"));
-        //                if (Equals(propertyInfo.ComputedValue, jsonData["classID"].ToString()))
-        //                {
-        //                    ModelProperty imgProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("SourceImgPath"));
-
-        //                    var imgFilePath = jsonData["savePath"].ToString();
-        //                    if (imgFilePath.StartsWith(SharedObject.Instance.ProjectPath+@"\.screenshots\", System.StringComparison.CurrentCultureIgnoreCase))
-        //                    {
-        //                        //如果在项目目录下，则使用相对路径保存
-        //                        imgFilePath = Common.MakeRelativePath(SharedObject.Instance.ProjectPath + @"\.screenshots\", imgFilePath);
-        //                    }
-
-        //                    if (imgProperty != null) imgProperty.SetValue(imgFilePath);
-
-
-        //                    ModelProperty visiProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("visibility"));
-        //                    if (visiProperty != null) visiProperty.SetValue(System.Windows.Visibility.Visible);
-        //                    ModelProperty offsetXProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("offsetX"));
-        //                    if (offsetXProperty != null)
-        //                    {
-        //                        InArgument<Int32> offsetX = Convert.ToInt32(jsonData["offsetX"].ToString());
-        //                        offsetXProperty.SetValue(offsetX);
-        //                    }
-        //                    ModelProperty offsetYProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("offsetY"));
-        //                    if (offsetYProperty != null)
-        //                    {
-        //                        InArgument<Int32> offsetY = Convert.ToInt32(jsonData["offsetY"].ToString());
-        //                        offsetYProperty.SetValue(offsetY);
-        //                    }
-                            
-        //                    //暂定组织的SELECTOR字段
-        //                    if (jsonData["className"].ToString().Equals("WindowClose") || jsonData["className"].ToString().Equals("WindowAttach"))
-        //                    {
-        //                        Int32 offsetX = Convert.ToInt32(jsonData["offsetX"].ToString());
-        //                        Int32 offsetY = Convert.ToInt32(jsonData["offsetY"].ToString());
-
-        //                        int hwnd = WindowFromPoint(offsetX, offsetY);
-        //                        StringBuilder windowText = new StringBuilder(256);
-        //                        GetWindowText(hwnd, windowText, 256);
-        //                        StringBuilder className = new StringBuilder(256);
-        //                        GetClassName(hwnd, className, 256);
-
-        //                        System.Diagnostics.Debug.WriteLine("formHandle 窗口句柄 : " + hwnd);
-        //                        System.Diagnostics.Debug.WriteLine("windowText 窗口的标题: " + windowText);
-        //                        System.Diagnostics.Debug.WriteLine("className: " + className);
-
-        //                        ModelProperty SelectorProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("Selector"));
-        //                        InArgument<string> Selector = "<" + "Handle:" + hwnd
-        //                            + " WindowText:" + windowText + " ClassName:" + className + ">";
-        //                        SelectorProperty.SetValue(Selector);
-        //                        ModelProperty hwndProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("hwnd"));
-        //                        hwndProperty.SetValue(hwnd);
-        //                    }
-
-        //                    ModelProperty targetHwndProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("targetHwnd"));
-        //                    if (targetHwndProperty != null)
-        //                    {
-        //                        int targetHwnd = Convert.ToInt32(jsonData["targetHwnd"].ToString());
-        //                        targetHwndProperty.SetValue(targetHwnd);
-        //                    }
-        //                    ModelProperty displayProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("DisplayName"));
-        //                    if (displayProperty != null)
-        //                    {
-        //                        displayProperty.SetValue(jsonData["DisplayName"].ToString());
-        //                    }
-        //                    ModelProperty processPathProperty = PropertyList.Find((ModelProperty property) => property.Name.Equals("ProcessPath"));
-        //                    if (processPathProperty != null)
-        //                    {
-        //                        int targetHwnd = Convert.ToInt32(jsonData["targetHwnd"].ToString());
-        //                        uint psID;
-        //                        char[] buf = new char[65535];
-        //                        Win32Api.GetWindowThreadProcessId((IntPtr)targetHwnd, out psID);
-        //                        UInt32 len = 65535;
-        //                        int calcProcess;
-        //                        calcProcess = Win32Api.OpenProcess(Win32Api.PROCESS_QUERY_INFORMATION, false,(int) psID);
-        //                        Win32Api.QueryFullProcessImageName((IntPtr)calcProcess, 0, buf, ref len);
-        //                        string exeName = new string(buf, 0, (int)len);
-        //                        InArgument<string> _value = exeName;
-        //                        processPathProperty.SetValue(_value);
-        //                    }
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //    }
-        //    else if(Equals(jsonData["cmd"].ToString(), "grabErro"))
-        //    {
-        //        Application.Current.MainWindow.WindowState = WindowState.Normal;
-        //       // SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "UI Element Erro!");
-        //    }
-        //}
+        
 
         /// <summary>
         /// Initializes a new instance of the DocumentViewModel class.
@@ -581,30 +486,15 @@ namespace RPAStudio.ViewModel
             ActivityBuilderDisplayName = title;
             Title = title;
             XamlPath = xamlPath;
-            
-            initWorkflowDesigner();
 
-            IsReadOnly = isReadOnly;
-
-            IsAlwaysReadOnly = isAlwaysReadOnly;
-
-            Messenger.Default.Register<MessengerObjects.CopyData>(this, OnCopyData);
+            initWorkflowDesigner(isReadOnly, isAlwaysReadOnly);
 
             Messenger.Default.Register<RenameViewModel>(this, "Rename", Rename);
 
             Messenger.Default.Register<ProjectTreeItem>(this, "Delete", Delete);
         }
 
-        private void OnCopyData(MessengerObjects.CopyData obj)
-        {
-            //Console.WriteLine(obj.data);
-            //string json = Base64.DecodeBase64("utf-8", obj.data);
-
-            //Common.RunInUI(()=> {
-            //    ParseCopyDataProc(json);
-            //});
-        }
-
+       
         private void Delete(ProjectTreeItem obj)
         {
             //有文件被删除，检查下当前文档对应的xamlPath是否还存在，不存在的话强制关闭即可
@@ -637,11 +527,41 @@ namespace RPAStudio.ViewModel
             }
         }
 
-        private void initWorkflowDesigner()
+       
+        public void CommitWorkflowDesigner(string xamlText)
         {
-            if (_workflowDesignerViewProperty == null)
+            if(IsReadOnly || IsAlwaysReadOnly)
+            {
+                MessageBox.Show(App.Current.MainWindow, "当前文档状态为只读，不可修改！", "提示", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            //保存xamlText到XamlPath里去
+            WorkflowDesignerInstance.Text = xamlText;
+            SaveDocument();
+
+            IsDirty = false;
+
+            WorkflowDesignerView = null;
+            WorkflowDesignerInstance = null;
+
+            initWorkflowDesigner(IsReadOnly, IsAlwaysReadOnly);
+
+            //当前文档窗口激活（刷新属性和大纲视图）
+            Messenger.Default.Send(this, "IsSelected");
+
+            System.GC.Collect();//提醒系统回收内存，避免内存占用过高
+        }
+
+        
+        private void initWorkflowDesigner(bool isReadOnly,bool isAlwaysReadOnly)
+        {
+            if (WorkflowDesignerView == null)
             {
                 WorkflowDesignerInstance = new WorkflowDesigner();
+
+                //工作流相关样式设置
+                //WorkflowDesignerInstance.PropertyInspectorFontAndColorData = XamlServices.Save(GetThemeHashTable());
 
                 initExpressionEditor();
                
@@ -668,14 +588,32 @@ namespace RPAStudio.ViewModel
                     modelService.ModelChanged += ModelService_ModelChanged;
 
                     initBreakpointsInfo();
+
+                    IsReadOnly = isReadOnly;
+
+                    IsAlwaysReadOnly = isAlwaysReadOnly;
                 };
 
-
-                _workflowDesignerViewProperty = WorkflowDesignerInstance.View;
+                WorkflowDesignerView = WorkflowDesignerInstance.View;
             }
         }
 
-       
+        private object GetThemeHashTable()
+        {
+            var defaultColorResources = Application.GetResourceStream(new Uri("pack://application:,,,/Themes/WorkflowDesigner/DefaultColorResources.xaml", UriKind.Absolute));
+            ResourceDictionary fontAndColorDictionary = (ResourceDictionary)System.Windows.Markup.XamlReader.Load(defaultColorResources.Stream);
+            Hashtable hashTable = new Hashtable();
+            foreach (var key in fontAndColorDictionary.Keys)
+            {
+                hashTable.Add(key, fontAndColorDictionary[key]);
+            }
+
+            return hashTable;
+        }
+
+        /// <summary>
+        /// 初始化断点信息
+        /// </summary>
         private void initBreakpointsInfo()
         {
             //TODO WJF 根据保存的断点位置信息自动设置断点,无效的断点需要删除
@@ -700,7 +638,8 @@ namespace RPAStudio.ViewModel
 
         private void initExpressionEditor()
         {
-            WorkflowDesignerInstance.Context.Services.Publish<IExpressionEditorService>(new RoslynExpressionEditorService());
+            //临时屏蔽表达式编辑器
+            //WorkflowDesignerInstance.Context.Services.Publish<IExpressionEditorService>(new RoslynExpressionEditorService());
         }
 
 
@@ -785,7 +724,26 @@ namespace RPAStudio.ViewModel
                 Logger.Warn(err, logger);
             }
 
+            DoSourceCodeConnect();
+
             System.GC.Collect();//提醒系统回收内存，避免内存占用过高
+        }
+
+       
+        private void DoSourceCodeConnect()
+        {
+            //第一次执行时取到的XAML仍然过旧，改为延时Connect
+            SourceCodeConnectTimer.Interval = TimeSpan.FromMilliseconds(100);
+            SourceCodeConnectTimer.Tick += SourceCodeConnectTimer_Tick;
+            SourceCodeConnectTimer.Stop();
+            SourceCodeConnectTimer.Start();
+        }
+
+        private void SourceCodeConnectTimer_Tick(object sender, EventArgs e)
+        {
+            SourceCodeConnectTimer.Stop();
+
+            ViewModelLocator.Instance.SourceCode.Connect(this);
         }
     }
 }

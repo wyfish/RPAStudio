@@ -66,7 +66,7 @@ namespace RPAStudio.Librarys
         private static void UrlSourceChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var imgControl = d as ImageExt;
-            var url = e.NewValue?.ToString();
+            var url = e.NewValue.ToString();
 
             if (string.IsNullOrEmpty(url))
             {                

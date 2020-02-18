@@ -10,6 +10,8 @@ using RPARobot.Executor;
 using Plugins.Shared.Library;
 using log4net;
 using System.Collections.Generic;
+using RPARobot.Services;
+using System.Threading.Tasks;
 
 namespace RPARobot.ViewModel
 {
@@ -291,7 +293,7 @@ namespace RPARobot.ViewModel
                     ?? (_removeItemCommand = new RelayCommand(
                     () =>
                     {
-                        var ret = MessageBox.Show(App.Current.MainWindow, "确定移除当前包吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                        var ret = AutoCloseMessageBoxService.Show(App.Current.MainWindow, "确定移除当前包吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                         if (ret == MessageBoxResult.Yes)
                         {
                             //卸载已安装的包，删除nupkg包
@@ -616,20 +618,23 @@ namespace RPARobot.ViewModel
                     ?? (_startCommand = new RelayCommand(
                     () =>
                     {
+                        Log(SharedObject.enOutputType.Trace, "流程启动");
                         //授权判断，未授权不允许运行
                         var isRegistered = ViewModelLocator.Instance.Register.IsNotExpired();
                         ViewModelLocator.Instance.Startup.RefreshProgramStatus(isRegistered);
 
                         if (!isRegistered)
                         {
-                            MessageBox.Show(App.Current.MainWindow, "软件未通过授权检测，请注册产品！", "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                            Log(SharedObject.enOutputType.Warning, "软件未通过授权检测，请注册产品！");
+                            AutoCloseMessageBoxService.Show(App.Current.MainWindow, "软件未通过授权检测，请注册产品！", "提示", MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                         }
 
                         //如果已经有一个项目正在运行，则不允许再运行
                         if(ViewModelLocator.Instance.Main.IsWorkflowRunning)
                         {
-                            MessageBox.Show(App.Current.MainWindow, "已经有工作流正在运行，请等待它结束后再运行！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Log(SharedObject.enOutputType.Warning, "已经有工作流正在运行，请等待它结束后再运行！");
+                            AutoCloseMessageBoxService.Show(App.Current.MainWindow, "已经有工作流正在运行，请等待它结束后再运行！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
                             return;
                         }
 
@@ -638,16 +643,45 @@ namespace RPARobot.ViewModel
                         if (System.IO.File.Exists(projectJsonFile))
                         {
                             //项目配置文件存在
-                            //1.找到主XAML文件，然后运行它
-                            string json = System.IO.File.ReadAllText(projectJsonFile);
-                            JObject jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(json);
-                            var relativeMainXaml = jsonObj["main"].ToString();
-                            var absoluteMainXaml = System.IO.Path.Combine(projectDir, relativeMainXaml);
 
-                            if(System.IO.File.Exists(absoluteMainXaml))
+                            Task.Run(async () =>
                             {
-                                RunWorkflow(projectDir,absoluteMainXaml);
-                            }
+                                try
+                                {
+                                    //加载项目依赖项
+                                    Common.RunInUI(() => {
+                                        //隐藏运行按钮，其实这里并未实际执行，只是在加载依赖项
+                                        this.IsRunning = true;
+                                        ViewModelLocator.Instance.Main.IsWorkflowRunning = true;
+                                        ViewModelLocator.Instance.Main.WorkflowRunningName = Name;
+                                        ViewModelLocator.Instance.Main.WorkflowRunningToolTip = ToolTip;
+                                        ViewModelLocator.Instance.Main.WorkflowRunningStatus = "正在加载项目依赖项";
+                                    });
+                                    var serv = new LoadDependenciesService(projectJsonFile);
+                                    await serv.LoadDependencies();
+
+                                    //1.找到主XAML文件，然后运行它
+                                    string json = System.IO.File.ReadAllText(projectJsonFile);
+                                    JObject jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(json);
+                                    var relativeMainXaml = jsonObj["main"].ToString();
+                                    var absoluteMainXaml = System.IO.Path.Combine(projectDir, relativeMainXaml);
+
+                                    if (System.IO.File.Exists(absoluteMainXaml))
+                                    {
+                                        RunWorkflow(projectDir, absoluteMainXaml);
+                                    }
+                                }
+                                catch (Exception err)
+                                {
+                                    Logger.Error(err, logger);
+
+                                    Common.RunInUI(() => {
+                                        this.IsRunning = false;
+                                        Log(SharedObject.enOutputType.Warning, "加载项目依赖项出错！");
+                                        AutoCloseMessageBoxService.Show(App.Current.MainWindow, "加载项目依赖项出错！", "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                                    });
+                                }
+                            });
                         }
                         
                     },
@@ -666,12 +700,30 @@ namespace RPARobot.ViewModel
             ViewModelLocator.Instance.Main.m_runManager.Run();
         }
 
-
+      
         private void LogToOutputWindow(SharedObject.enOutputType type, string msg, string msgDetails)
         {
-            Logger.Info(string.Format("活动日志：type={0},msg={1},msgDetails={2}", type.ToString(), msg, msgDetails), logger);
+            Log(type, msg);
+            
+            Logger.Debug(string.Format("活动日志：type={0},msg={1},msgDetails={2}", type.ToString(), msg, msgDetails), logger);
         }
 
+       
+        private void Log(SharedObject.enOutputType type, string msg)
+        {
+            Task.Run(async () =>
+            {
+                //记录活动日志到服务器
+                const int limit = 150;
+                if (msg.Length > limit)
+                {
+                    msg = msg.Substring(0, limit);
+                }
+
+                await ViewModelLocator.Instance.Main.ControlServerService.Log(Name, Version, type.ToString(), msg);//有可能有中文，截短点以便数据库字段能存的上
+            });
+
+        }
 
         private RelayCommand _updateCommand;
 

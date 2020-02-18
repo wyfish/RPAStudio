@@ -28,7 +28,7 @@ namespace Plugins.Shared.Library
         public const int SW_SHOWNORMAL = 1;
 
 
-        [DllImport("user32", EntryPoint = "GetWindowThreadProcessId")]
+        [DllImport("User32.dll", EntryPoint = "GetWindowThreadProcessId")]
         public static extern int GetWindowThreadProcessId(IntPtr hwnd, out uint pid);
 
         [DllImport("User32.dll", EntryPoint = "PostMessage", CharSet = CharSet.Auto)]
@@ -82,17 +82,16 @@ namespace Plugins.Shared.Library
         public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         [DllImport("user32.dll")]
-        public static extern bool SetWindowPos(
-            IntPtr hWnd, IntPtr hwndAfter, int x, int y,
-            int width, int height, int flags);
+        public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hwndAfter, int x, int y,int width, int height, int flags);
 
+        //Windows API宏 该函数可获取指定窗口的有关信息，也可用于获取窗口内存中指定偏移的32位度整型值。
         [DllImport("user32.dll")]
         public static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 
         [DllImport("user32.dll")]
-        public static extern int SetWindowLong(IntPtr hWnd, int nIndex,
-            int dwNewLong);
+        public static extern int SetWindowLong(IntPtr hWnd, int nIndex,int dwNewLong);
 
+        
         [DllImport("user32.dll")]
         public static extern bool SetProcessDPIAware();
 

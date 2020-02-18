@@ -90,15 +90,19 @@ namespace RPA.Integration.Activities.ExcelPlugins
                     sheet = excelApp.ActiveWorkbook.Sheets[sheetName];
 
                 object data = new object();
-
+                Excel.Range xCopyFromRange = null;
                 Int32 rowColNum = RowColNum.Get(context);
                 if(CurrReadType == ReadType.读取行)
                 {
                     data = sheet.Rows[rowColNum].Value;
+                    xCopyFromRange = sheet.Rows[rowColNum] as Excel.Range;
+                    xCopyFromRange.Copy();
                 }
                 else
                 {
                     data = sheet.Columns[rowColNum].Value;
+                    xCopyFromRange = sheet.Columns[rowColNum] as Excel.Range;
+                    xCopyFromRange.Copy();
                 }
 
                 //Collection<object> _data = new Collection<object>();

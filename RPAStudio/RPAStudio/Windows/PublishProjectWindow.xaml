@@ -8,6 +8,7 @@
         mc:Ignorable="d ignore"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         DataContext="{Binding PublishProject, Source={StaticResource Locator}}"
         Icon="/Resources/Ico/RPAStudio.ico"
         Title="{x:Static lclz:Strings.PublishProjectTitle}" Height="400" Width="600" ResizeMode="NoResize">
@@ -17,96 +18,114 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="145"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="35"/>
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Row="0" Grid.Column="0" Background="#e8e8e8">
-            <Image Width="105" Height="105" Source="pack://application:,,,/Resources/Image/Windows/PublishProject/publish.png" VerticalAlignment="Top" Margin="0,15,0,0" />
-        </Grid>
-
-        <Grid Grid.Row="0" Grid.Column="1" Margin="15,0,15,15" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="145"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="35"/>
             </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="0" Background="#e8e8e8">
+                <Image Width="105" Height="105" Source="pack://application:,,,/Resources/Image/Windows/PublishProject/publish.png" VerticalAlignment="Top" Margin="0,15,0,0" />
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="15,0,15,15" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
             <GroupBox Height="100" Header="{x:Static lclz:Strings.ReleaseLocationText}" Grid.Row="0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="25"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0" Text="{x:Static lclz:Strings.ReleaseToText}" />
-                    </Grid>
-                    <Grid Grid.Column="1">
-                        <StackPanel Orientation="Horizontal">
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <StackPanel Orientation="Horizontal">
                             <RadioButton VerticalAlignment="Center" IsChecked="{Binding IsPublishToRobotDefault}" Content="{x:Static lclz:Strings.LocalRobotContent}"/>
                             <RadioButton VerticalAlignment="Center" Margin="79,0,0,0" Content="{x:Static lclz:Strings.CustomContent}"/>
-                        </StackPanel>
-                    </Grid>
-                    <Grid Grid.Row="1">
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="1">
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="19,0,0,0" Text="{x:Static lclz:Strings.CustomPathText}"/>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1" IsEnabled="{Binding IsPublishToRobotDefault,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
+                            <ComboBox ToolTip="{Binding CustomLocation}" ItemsSource="{Binding CustomLocations}" Text="{Binding CustomLocation}" Padding="{Binding CustomLocationPadding}" Height="25" Margin="0,0,28,0" IsEditable="True" VerticalContentAlignment="Center"></ComboBox>
+                            <Grid Visibility="{Binding IsPublishToRobotDefault,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" Margin="0,0,-4,0">
+                                <Border Height="25" Margin="0,0,30,0" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsCustomLocationCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
+                                    <Image ToolTip="{Binding CustomLocationValidatedWrongTip}" Width="16" Source="pack://application:,,,/Resources/Image/Windows/NewProject/wrong.png" HorizontalAlignment="Right" Margin="0,0,20,0"></Image>
+                                </Border>
+                            </Grid>
+
+                            <Button Command="{Binding BrowserFolderCommand}" Width="25" Height="25" HorizontalAlignment="Right">...</Button>
+                        </Grid>
                     </Grid>
-                    <Grid Grid.Row="1" Grid.Column="1" IsEnabled="{Binding IsPublishToRobotDefault,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
-                        <ComboBox ToolTip="{Binding CustomLocation}" ItemsSource="{Binding CustomLocations}" Text="{Binding CustomLocation}" Padding="{Binding CustomLocationPadding}" Height="25" Margin="0,0,28,0" IsEditable="True" VerticalContentAlignment="Center"></ComboBox>
-                        <Grid Visibility="{Binding IsPublishToRobotDefault,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" Margin="0,0,-4,0">
-                            <Border Height="25" Margin="0,0,30,0" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsCustomLocationCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
-                                <Image ToolTip="{Binding CustomLocationValidatedWrongTip}" Width="16" Source="pack://application:,,,/Resources/Image/Windows/NewProject/wrong.png" HorizontalAlignment="Right" Margin="0,0,20,0"></Image>
+                </GroupBox>
+            <GroupBox Height="100" Header="{x:Static lclz:Strings.ReleaseNoteText}" Grid.Row="1">
+                    <TextBox Text="{Binding ReleaseNotes}" AcceptsReturn="True" TextWrapping="Wrap" Margin="5" VerticalScrollBarVisibility="Auto" />
+                </GroupBox>
+            <GroupBox Height="100" Header="{x:Static lclz:Strings.VersionText}" Grid.Row="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                        <TextBlock VerticalAlignment="Center" Margin="20,0,0,0" Text="{x:Static lclz:Strings.CurrentVersionText}"/>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <TextBox BorderThickness="0" IsReadOnly="True" Height="25" VerticalAlignment="Center" Text="{Binding CurrentProjectVersion}" VerticalContentAlignment="Center" />
+                        </Grid>
+                        <Grid Grid.Row="1">
+                        <TextBlock VerticalAlignment="Center" Margin="20,0,0,0" Text="{x:Static lclz:Strings.NewVersionText}"/>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <TextBox Height="25" VerticalAlignment="Center" Text="{Binding NewProjectVersion,UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Padding="{Binding NewProjectVersionPadding}" />
+                            <Border Height="25" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsNewProjectVersionCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
+                                <Image ToolTip="{Binding NewProjectVersionValidatedWrongTip}" Width="16" Source="pack://application:,,,/Resources/Image/Windows/NewProject/wrong.png" HorizontalAlignment="Right" ></Image>
                             </Border>
                         </Grid>
+                    </Grid>
+                </GroupBox>
+            </Grid>
 
-                        <Button Command="{Binding BrowserFolderCommand}" Width="25" Height="25" HorizontalAlignment="Right">...</Button>
-                    </Grid>
-                </Grid>
-            </GroupBox>
-            <GroupBox Height="100" Header="{x:Static lclz:Strings.ReleaseNoteText}" Grid.Row="1">
-                <TextBox Text="{Binding ReleaseNotes}" AcceptsReturn="True" TextWrapping="Wrap" Margin="5" VerticalScrollBarVisibility="Auto" />
-            </GroupBox>
-            <GroupBox Height="100" Header="{x:Static lclz:Strings.VersionText}" Grid.Row="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="20"/>
-                    </Grid.RowDefinitions>
-                    <Grid>
-                        <TextBlock VerticalAlignment="Center" Margin="20,0,0,0" Text="{x:Static lclz:Strings.CurrentVersionText}"/>
-                    </Grid>
-                    <Grid Grid.Column="1">
-                        <TextBox BorderThickness="0" IsReadOnly="True" Height="25" VerticalAlignment="Center" Text="{Binding CurrentProjectVersion}" VerticalContentAlignment="Center" />
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <TextBlock VerticalAlignment="Center" Margin="20,0,0,0" Text="{x:Static lclz:Strings.NewVersionText}"/>
-                    </Grid>
-                    <Grid Grid.Row="1" Grid.Column="1">
-                        <TextBox Height="25" VerticalAlignment="Center" Text="{Binding NewProjectVersion,UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Padding="{Binding NewProjectVersionPadding}" />
-                        <Border Height="25" BorderBrush="#FFEA1F1F" BorderThickness="1" Visibility="{Binding IsNewProjectVersionCorrect,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
-                            <Image ToolTip="{Binding NewProjectVersionValidatedWrongTip}" Width="16" Source="pack://application:,,,/Resources/Image/Windows/NewProject/wrong.png" HorizontalAlignment="Right" ></Image>
-                        </Border>
-                    </Grid>
-                </Grid>
-            </GroupBox>
-        </Grid>
-
-        <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#f1f1f1">
-            <Border VerticalAlignment="Top" BorderThickness="0,1,0,0" BorderBrush="#b8b8b8"></Border>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#f1f1f1">
+                <Border VerticalAlignment="Top" BorderThickness="0,1,0,0" BorderBrush="#b8b8b8"></Border>
             <Button Width="80" Height="25" HorizontalAlignment="Right" Content="{x:Static lclz:Strings.ReleaseContent}" Command="{Binding OkCommand}" Margin="0,0,100,0" IsDefault="True"></Button>
             <Button Width="80" Height="25" HorizontalAlignment="Right" Content="{x:Static lclz:Strings.CancelText}" Command="{Binding CancelCommand}" Margin="0,0,10,0" ></Button>
+            </Grid>
+
         </Grid>
+
+        <!--遮罩层-->
+        <Grid Visibility="{Binding IsOperateBusy,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
+            <Grid Background="#FFCCCCCC" Opacity="0.5" Visibility="Visible">
+            </Grid>
+            <Border BorderBrush="#ababab" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="360" Height="120" Background="White" >
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Width="40" Height="40" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/Image/Ribbon/loading.gif"/>
+                    <TextBlock FontSize="15" Margin="0,10,0,0">正在操作……</TextBlock>
+                </StackPanel>
+
+            </Border>
+        </Grid>
+
+
     </Grid>
 </Window>

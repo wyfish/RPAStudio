@@ -14,8 +14,8 @@ using GalaSoft.MvvmLight.Command;
 using NuGet.Configuration;
 using NuGet.Packaging;
 using NuGet.Packaging.Core;
-using NuGet.Protocol.Core.Types;
 using NuGet.Versioning;
+using NuGet.Protocol.Core.Types;
 using Newtonsoft.Json.Linq;
 using Plugins.Shared.Library.Nuget;
 using RPAStudio.Librarys;
@@ -1486,6 +1486,11 @@ namespace RPAStudio.ViewModel
 
             set
             {
+                if(value == null)
+                {
+                    value = "";
+                }
+
                 if (_selectedItemIconUrlProperty == value)
                 {
                     return;

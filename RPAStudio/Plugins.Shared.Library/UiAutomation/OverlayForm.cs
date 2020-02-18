@@ -262,10 +262,12 @@ namespace Plugins.Shared.Library.UiAutomation
             this.Hide();
             panelBorderLeft.Size = panelBorderTop.Size = panelBorderRight.Size = panelBorderBottom.Size = panelInside.Size = new Size(0, 0);
 
-
-            if (isNeedShowMainWindow)
+            if (!UiElement.IsRecordingWindowOpened)
             {
-                System.Windows.Application.Current.MainWindow.WindowState = System.Windows.WindowState.Normal;
+                if (isNeedShowMainWindow)
+                {
+                    System.Windows.Application.Current.MainWindow.WindowState = System.Windows.WindowState.Normal;
+                }
             }
         }
 

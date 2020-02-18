@@ -19,7 +19,7 @@
         <fluent:Ribbon AutomaticStateManagement="True"  Visibility="{Binding IsOpenStartScreen,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
             <fluent:Ribbon.Menu>
                 <Grid>
-                    <fluent:Backstage x:Uid="Start" Header="打开" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" IsOpen="{Binding IsOpenStartScreen,Mode=TwoWay}" CloseOnEsc="{Binding IsBackButtonVisible}" AreAnimationsEnabled="{Binding IsBackButtonVisible}" >
+                    <fluent:Backstage x:Uid="Start" Header="开始" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" IsOpen="{Binding IsOpenStartScreen,Mode=TwoWay}" CloseOnEsc="{Binding IsBackButtonVisible}" AreAnimationsEnabled="{Binding IsBackButtonVisible}" >
                         <Grid>
                             <fluent:BackstageTabControl SelectedIndex="3" IsBackButtonVisible="{Binding IsBackButtonVisible}">
                                 <fluent:Button x:Uid="Open" Header="打开" Command="{Binding SelectProjectCommand}" IsDefinitive="False" />
@@ -155,7 +155,21 @@
                     <fluent:Button x:Uid="PackageManager(包管理器)" Header="{Binding P_PackageManager}" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/package-manager.png"
                                    Command="{Binding LaunchPackageManagerCommand}"
-                                   ToolTip="{Binding P_PackageManager_ToolTip}"
+                                   ToolTip="管理nupkg包，实现安装、卸载、更新包等操作（Ctrl+P）"
+                                   />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="操作">
+                    <fluent:Button Header="录制" 
+                                   LargeIcon="pack://application:,,,/Resources/Image/Ribbon/recording.png"
+                                   Command="{Binding RecordingCommand}"
+                                   ToolTip="一次性录制多个活动"
+                                   />
+                </fluent:RibbonGroupBox>
+                <fluent:RibbonGroupBox Header="能力中心">
+                    <fluent:Button Header="能力商店" 
+                                   LargeIcon="pack://application:,,,/Resources/Image/Ribbon/store.png"
+                                   Command="{Binding StoreCommand}"
+                                   ToolTip="打开能力商店"
                                    />
                 </fluent:RibbonGroupBox>
                 <fluent:RibbonGroupBox x:Uid="Deploy(部署)" Header="{Binding P_Deploy}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
@@ -261,8 +275,7 @@
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/open-logs.png"
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/open-logs.png"
                                    ToolTip="{Binding P_OpenLog_ToolTip}"
-                                   Command="{Binding OpenLogsCommand}"
-                                   />
+                                   Command="{Binding OpenLogsCommand}"/>
                 </fluent:RibbonGroupBox>
                 
             </fluent:RibbonTabItem>

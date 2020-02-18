@@ -5,6 +5,7 @@ using System;
 using RPARobot.Librarys;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
+using RPARobot.Services;
 
 namespace RPARobot.ViewModel
 {
@@ -234,7 +235,7 @@ namespace RPARobot.ViewModel
                                 //保存文件
                                 System.IO.File.WriteAllText(userSelPath, secretStr);
 
-                                var result = MessageBox.Show(m_view, "导出机器码成功，是否定位到该机器码文件？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
+                                var result = AutoCloseMessageBoxService.Show(m_view, "导出机器码成功，是否定位到该机器码文件？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes);
                                 if(result == MessageBoxResult.Yes)
                                 {
                                     Common.LocateFileInExplorer(userSelPath);
@@ -242,7 +243,7 @@ namespace RPARobot.ViewModel
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show(m_view, "导出机器码成功失败，请检查", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                AutoCloseMessageBoxService.Show(m_view, "导出机器码成功失败，请检查", "错误", MessageBoxButton.OK, MessageBoxImage.Warning);
                             }
                             
                         }
@@ -360,16 +361,16 @@ namespace RPARobot.ViewModel
 
                     LoadRegisterInfo();
 
-                    MessageBox.Show(m_view, "授权成功", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                    AutoCloseMessageBoxService.Show(m_view, "授权成功", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show(m_view, "授权文件操作失败，请检查！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                    AutoCloseMessageBoxService.Show(m_view, "授权文件操作失败，请检查！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show(m_view, "授权文件非法！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                AutoCloseMessageBoxService.Show(m_view, "授权文件非法！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

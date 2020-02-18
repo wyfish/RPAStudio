@@ -76,25 +76,17 @@ namespace RPA.UIAutomation.Activities.Browser
                     return m_Delegate.BeginInvoke(callback, state);
                 }
                 Browser getBrowser = property.GetValue(context.DataContext) as Browser;
-                if (getBrowser.getCFBrowser() != null)
+                if (getBrowser.getICFBrowser() != null)
                 {
-                    getBrowser.getCFBrowser().Quit();
-                }
-                else if (getBrowser.getIEBrowser() != null)
-                {
-                    getBrowser.getIEBrowser().Quit();
+                    getBrowser.getICFBrowser().Close();
                 }
             }
             else                                                                                        
             {
                 Browser thisBrowser = currBrowser.Get(context);
-                if (thisBrowser.getCFBrowser() != null)
+                if (thisBrowser.getICFBrowser() != null)
                 {
-                    thisBrowser.getCFBrowser().Quit();
-                }
-                else if (thisBrowser.getIEBrowser() != null)
-                {
-                    thisBrowser.getIEBrowser().Quit();
+                    thisBrowser.getICFBrowser().Close();
                 }
             }
 

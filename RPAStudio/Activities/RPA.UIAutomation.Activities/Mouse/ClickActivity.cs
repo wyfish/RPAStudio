@@ -12,7 +12,6 @@ namespace RPA.UIAutomation.Activities.Mouse
     [Designer(typeof(MouseDesigner))]
     public sealed class ClickActivity : CodeActivity
     {
-        public new string DisplayName;
         [Browsable(false)]
         public string _DisplayName { get { return "Click"; } }
 
@@ -94,6 +93,21 @@ namespace RPA.UIAutomation.Activities.Mouse
             }
         }
 
+       
+        public void SetMouseLeftClick()
+        {
+            ClickType = (int)MouseClickType.CLICK_SINGLE;
+            MouseButton = (int)MouseButtonType.BTN_LEFT;
+        }
+
+       
+        public void SetMouseRightClick()
+        {
+            ClickType = (int)MouseClickType.CLICK_SINGLE;
+            MouseButton = (int)MouseButtonType.BTN_RIGHT;
+        }
+
+       
         static ClickActivity()
         {
             AttributeTableBuilder builder = new AttributeTableBuilder();
@@ -177,10 +191,5 @@ namespace RPA.UIAutomation.Activities.Mouse
                 }
             }
         }
-        private void onComplete(NativeActivityContext context, ActivityInstance completedInstance)
-        {
-            
-        }
-
     }
 }

@@ -56,7 +56,6 @@ namespace RPAStudio.ViewModel
         Stopwatch workflowExecutorStopwatch = new Stopwatch();
 
         public static Dictionary<string, BitmapImage> SystemIconDic = new Dictionary<string, BitmapImage>();
-        private readonly string prefixTitle;
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
@@ -196,9 +195,6 @@ namespace RPAStudio.ViewModel
         }
 
 
-        /// <summary>
-        /// 是否起始页正忙（正忙则显示遮罩层）
-        /// </summary>
         public const string IsStartContentBusyPropertyName = "IsStartContentBusy";
 
         private bool _isStartContentBusyProperty = false;
@@ -980,7 +976,7 @@ namespace RPAStudio.ViewModel
         /// </summary>
         public const string TitlePropertyName = "Title";
 
-        //private readonly string prefixTitle = "RPA机器人流程自动化平台";
+        private readonly string prefixTitle = "RPA机器人流程自动化平台";
         private string _titleProperty = "";
 
         /// <summary>
@@ -1517,7 +1513,7 @@ namespace RPAStudio.ViewModel
         /// </summary>
         public const string DebugOrContinueWorkflowButtonToolTipPropertyName = "DebugOrContinueWorkflowButtonToolTip";
 
-        private string _debugOrContinueWorkflowButtonToolTipProperty = "";
+        private string _debugOrContinueWorkflowButtonToolTipProperty = "调试（F7）";
 
         /// <summary>
         /// Sets and gets the DebugOrContinueWorkflowButtonToolTip property.
@@ -1551,8 +1547,7 @@ namespace RPAStudio.ViewModel
         /// </summary>
         public const string DebugOrContinueWorkflowButtonHeaderPropertyName = "DebugOrContinueWorkflowButtonHeader";
 
-        //private string _debugOrContinueWorkflowButtonHeaderProperty = "调试";
-        private string _debugOrContinueWorkflowButtonHeaderProperty = "";
+        private string _debugOrContinueWorkflowButtonHeaderProperty = "调试";
 
         /// <summary>
         /// Sets and gets the DebugOrContinueWorkflowButtonHeader property.
@@ -2041,6 +2036,43 @@ namespace RPAStudio.ViewModel
         }
 
 
+        private RelayCommand _recordingCommand;
+
+        /// <summary>
+        /// 打开录制功能
+        /// </summary>
+        public RelayCommand RecordingCommand
+        {
+            get
+            {
+                return _recordingCommand
+                    ?? (_recordingCommand = new RelayCommand(
+                    () =>
+                    {
+                        if (ViewModelLocator.Instance.Dock.ActiveDocument != null && !ViewModelLocator.Instance.Dock.ActiveDocument.IsReadOnly)
+                        {
+                            m_view.WindowState = WindowState.Minimized;//最小化主窗口
+                            var window = new RecordingWindow();
+                            window.Owner = Application.Current.MainWindow;
+                            window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+                            window.Topmost = true;
+                            window.ShowDialog();
+
+                            m_view.WindowState = WindowState.Normal;
+                        }
+                        else
+                        {
+                            //提示用户打开序列
+                            MessageBox.Show(App.Current.MainWindow, "请新建或打开一个已有文档来保存录制的结果", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+
+                    }));
+            }
+        }
+
+
+
+
 
         private RelayCommand _publishCommand;
 
@@ -2068,6 +2100,27 @@ namespace RPAStudio.ViewModel
                     }));
             }
         }
+		
+		 private RelayCommand _storeCommand;
+
+        /// <summary>
+        /// Gets the StoreCommand.
+        /// </summary>
+        public RelayCommand StoreCommand
+        {
+            get
+            {
+                return _storeCommand
+                    ?? (_storeCommand = new RelayCommand(
+                    () =>
+                    {
+                        //打开能力商店
+                        System.Diagnostics.Process.Start("https://rpa.openserver.cn/rpastore/index.html");//跳转到实际的能力商店网址
+                    }));
+            }
+        }
+
+
 
         #region Binding from MainContent.xaml
         // 设置

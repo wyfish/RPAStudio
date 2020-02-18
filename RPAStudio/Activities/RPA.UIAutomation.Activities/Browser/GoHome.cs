@@ -82,7 +82,7 @@ namespace RPA.UIAutomation.Activities.Browser
                     return m_Delegate.BeginInvoke(callback, state);
                 }
                 Browser getBrowser = property.GetValue(context.DataContext) as Browser;
-                if (getBrowser.getCFBrowser() != null)
+                if (getBrowser.getICFBrowser() != null)
                 {
                     //getBrowser.getCFBrowser().Navigate().
                 }
@@ -98,7 +98,7 @@ namespace RPA.UIAutomation.Activities.Browser
             }
             else
             {
-                if (thisBrowser.getCFBrowser() != null)
+                if (thisBrowser.getICFBrowser() != null)
                 {
                     //thisBrowser.getCFBrowser().Navigate().Refresh();
                 }

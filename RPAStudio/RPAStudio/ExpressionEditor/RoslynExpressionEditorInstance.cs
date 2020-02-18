@@ -78,7 +78,7 @@ namespace RPAStudio.ExpressionEditor
                 {
                     var c = v.GetCurrentValue() as System.Activities.Variable;
                     //此处c可能为NULL
-                    return c.Name;
+                    return c?.Name;
                 }).ToList();
             }
             catch (Exception err)
@@ -93,7 +93,9 @@ namespace RPAStudio.ExpressionEditor
 
         private void TextArea_TextEntered(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
-            var completionDataList = new List<QueryCompletionData>();
+            try
+            {
+                var completionDataList = new List<QueryCompletionData>();
 
             if (e.Text == ".")
             {
@@ -131,18 +133,26 @@ End Module
 
                     var root = tree.GetRoot();
 
-                    //TODO WJF 动态加载组件后，此处运行是否还正常？
+                        //TODO WJF 动态加载组件后，此处运行是否还正常？
+                        Assembly[] references = AppDomain.CurrentDomain.GetAssemblies();
+                        var CustomIntellisense = VisualBasicCompilation.Create("CustomIntellisense");
 
-                    Assembly target = Assembly.GetExecutingAssembly();
-                    List<Assembly> references = (from assemblyName in target.GetReferencedAssemblies()
-                                                 select Assembly.Load(assemblyName)).ToList();
-
-                    var CustomIntellisense = VisualBasicCompilation.Create("CustomIntellisense");
-
-                    foreach (var assembly in references)
-                    {
-                        CustomIntellisense = CustomIntellisense.AddReferences(MetadataReference.CreateFromFile(assembly.Location));
-                    }
+                        foreach (var assembly in references)
+                        {
+                            try
+                            {
+                                //只加载系统自带的DLL，避免代码提示偶发的异常报错
+                                var name = assembly.GetName().Name;
+                                if (name.StartsWith("System.") || name == "mscorlib")
+                                {
+                                    CustomIntellisense = CustomIntellisense.AddReferences(MetadataReference.CreateFromFile(assembly.Location));
+                                }
+                            }
+                            catch (Exception err)
+                            {
+                               
+                            }
+                        }
 
                     CustomIntellisense = CustomIntellisense.AddSyntaxTrees(tree);
 
@@ -248,10 +258,14 @@ End Module
                     completionWindow.CompletionList.SelectItem(e.Text);
                 }
 
-                completionWindow.Show();
-                completionWindow.Closed += CompletionWindowClosed;
+                    completionWindow.Show();
+                    completionWindow.Closed += CompletionWindowClosed;
+                }
             }
-
+            catch (Exception)
+            {
+                
+            }
 
         }
 

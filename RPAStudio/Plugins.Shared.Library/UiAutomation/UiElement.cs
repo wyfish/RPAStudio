@@ -23,6 +23,7 @@ namespace Plugins.Shared.Library.UiAutomation
         public delegate void UiElementSelectedEventHandler(UiElement uiElement);
         public delegate void UiElementCancelededEventHandler();
 
+        public static bool IsRecordingWindowOpened { get; set; }//录制窗口是否已经打开
 
         public static UiElementSelectedEventHandler OnSelected;
         public static UiElementCancelededEventHandler OnCanceled;
@@ -698,7 +699,11 @@ namespace Plugins.Shared.Library.UiAutomation
 
         private static void StartHighlight(bool isWindowHighlight)
         {
-            System.Windows.Application.Current.MainWindow.WindowState = System.Windows.WindowState.Minimized;
+            if(!UiElement.IsRecordingWindowOpened)
+            {
+                System.Windows.Application.Current.MainWindow.WindowState = System.Windows.WindowState.Minimized;
+            }
+            
 
             overlayForm.IsWindowHighlight = isWindowHighlight;
             overlayForm.StartHighlight();

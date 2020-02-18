@@ -107,6 +107,7 @@ namespace RPAStudio.Executor
             {
                 try
                 {
+                    m_app.Unload();
                     m_app.Terminate("执行已取消", new TimeSpan(0, 0, 0, 30));
                 }
                 catch (Exception )

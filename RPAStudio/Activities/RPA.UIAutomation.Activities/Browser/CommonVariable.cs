@@ -102,7 +102,7 @@ namespace RPA.UIAutomation.Activities.Browser
     public class Browser
     {
         SHDocVw.InternetExplorer IEBrowser = null;
-        IWebDriver CFBrowser = null;
+        IWebDriver ICFBrowser = null;
 
         public Browser()
         {
@@ -112,9 +112,9 @@ namespace RPA.UIAutomation.Activities.Browser
         {
             this.IEBrowser = ie;
         }
-        public void SetCFBrowser(IWebDriver cf)
+        public void SetICFBrowser(IWebDriver icf)
         {
-            this.CFBrowser = cf;
+            this.ICFBrowser = icf;
         }
 
         public SHDocVw.InternetExplorer getIEBrowser()
@@ -122,9 +122,9 @@ namespace RPA.UIAutomation.Activities.Browser
             return this.IEBrowser;
         }
 
-        public IWebDriver getCFBrowser()
+        public IWebDriver getICFBrowser()
         {
-            return this.CFBrowser;
+            return this.ICFBrowser;
         }
     }
 

@@ -446,7 +446,7 @@ namespace RPAStudio.ViewModel
                                     {
                                         dag.Save();
                                     }
-                                    catch (Exception e)
+                                    catch (Exception )
                                     {
                                     }
 
@@ -635,7 +635,7 @@ namespace RPAStudio.ViewModel
                             if(!isExist)
                             {
                                 var NameWithoutExt = System.IO.Path.GetFileNameWithoutExtension(Name);
-                                ViewModelLocator.Instance.Dock.NewSequenceDocument(NameWithoutExt, Path, true,true);
+                                ViewModelLocator.Instance.Dock.NewProcessDocument(NameWithoutExt, Path, true,true);
                             }
                             
                         }

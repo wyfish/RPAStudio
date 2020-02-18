@@ -84,50 +84,16 @@ namespace RPA.UIAutomation.Activities.Browser
                     return m_Delegate.BeginInvoke(callback, state);
                 }
                 Browser getBrowser = property.GetValue(context.DataContext) as Browser;
-                if (getBrowser.getCFBrowser() != null)
+                if (getBrowser.getICFBrowser() != null)
                 {
-                    getBrowser.getCFBrowser().Navigate().Refresh();
-                }
-                else if (getBrowser.getIEBrowser() != null)
-                {
-                    while (getBrowser.getIEBrowser().ReadyState == SHDocVw.tagREADYSTATE.READYSTATE_UNINITIALIZED
-                        || getBrowser.getIEBrowser().ReadyState == SHDocVw.tagREADYSTATE.READYSTATE_LOADING
-                        || getBrowser.getIEBrowser().ReadyState == SHDocVw.tagREADYSTATE.READYSTATE_LOADED)
-                    {
-                        Thread.Sleep(250);
-                        System.Windows.Forms.Application.DoEvents();
-                    }
-                    getBrowser.getIEBrowser().Refresh();
-                }
-
-                //确保页面是否已加载完成
-                while (getBrowser.getIEBrowser().ReadyState != SHDocVw.tagREADYSTATE.READYSTATE_COMPLETE)
-                {
-                    Thread.Sleep(500);
+                    getBrowser.getICFBrowser().Navigate().Refresh();
                 }
             }
             else
             {
-                if (thisBrowser.getCFBrowser() != null)
+                if (thisBrowser.getICFBrowser() != null)
                 {
-                    thisBrowser.getCFBrowser().Navigate().Refresh();
-                }
-                else if (thisBrowser.getIEBrowser() != null)
-                {
-                    while (thisBrowser.getIEBrowser().ReadyState == SHDocVw.tagREADYSTATE.READYSTATE_UNINITIALIZED
-                        || thisBrowser.getIEBrowser().ReadyState == SHDocVw.tagREADYSTATE.READYSTATE_LOADING
-                        || thisBrowser.getIEBrowser().ReadyState == SHDocVw.tagREADYSTATE.READYSTATE_LOADED)
-                    {
-                        Thread.Sleep(250);
-                        System.Windows.Forms.Application.DoEvents();
-                    }
-                    thisBrowser.getIEBrowser().Refresh();
-                }
-
-                //确保页面是否已加载完成
-                while (thisBrowser.getIEBrowser().ReadyState != SHDocVw.tagREADYSTATE.READYSTATE_COMPLETE)
-                {
-                    Thread.Sleep(500);
+                    thisBrowser.getICFBrowser().Navigate().Refresh();
                 }
             }
 

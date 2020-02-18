@@ -9,7 +9,7 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         mc:Ignorable="d"
         DataContext="{Binding UserPreferences, Source={StaticResource Locator}}"
-        Title="{x:Static localization:Strings.UserSettingsTitle}" Height="300" Width="445" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="{x:Static localization:Strings.UserSettingsTitle}" Height="419.64" Width="445" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -26,14 +26,38 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Grid>
+        <StackPanel>
             <GroupBox Header="{x:Static localization:Strings.SystemSettingsHeader}" Margin="10" >
                 <StackPanel Margin="10">
                     <CheckBox IsChecked="{Binding IsAutoRun}" Content="{x:Static localization:Strings.AutomaticallyStartAtBootContent}"/>
                     <CheckBox IsChecked="{Binding IsAutoOpenMainWindow}" Margin="0,10,0,0" Content="{x:Static localization:Strings.AutomaticallyOpenWindowContent}"/>
                 </StackPanel>
             </GroupBox>
-        </Grid>
+            <GroupBox Header="录像设置" Margin="10" >
+                <StackPanel Margin="10">
+                    <CheckBox IsChecked="{Binding IsEnableScreenRecorder}">启用屏幕录像</CheckBox>
+                    <Grid Margin="0,10,0,0">
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">帧数：</TextBlock>
+                        <TextBlock Text="{Binding FPS}" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" />
+                        <Slider Width="315" Minimum="1" Maximum="100" IsSnapToTickEnabled="True"  Margin="55,0,0,0" Value="{Binding FPS}" SmallChange="1" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center">画质：</TextBlock>
+                        <TextBlock Text="{Binding Quality}" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" />
+                        <Slider Width="315" Minimum="1" Maximum="100" IsSnapToTickEnabled="True"  Margin="55,0,0,0" Value="{Binding Quality}" SmallChange="1" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="控制中心配置" Margin="10" >
+                <StackPanel Margin="10">
+                    <CheckBox IsChecked="{Binding IsEnableControlServer}">启用控制中心</CheckBox>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
+                        <TextBlock>控制中心地址：</TextBlock>
+                        <TextBox Width="290" Text="{Binding ControlServerUri}" />
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>

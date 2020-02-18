@@ -134,7 +134,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
             StreamWriter sw = new StreamWriter(fs, encodingType);
 
             string data = "";
-            //写出各行数据
+            //写入各行数据
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 data = "";

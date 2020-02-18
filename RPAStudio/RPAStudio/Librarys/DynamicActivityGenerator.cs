@@ -115,7 +115,7 @@ namespace RPAStudio.Librarys
                 activity = (DynamicActivity)System.Activities.XamlIntegration.ActivityXamlServices.Load(s);
                 return activity == null || activity.Implementation == null ? null : activity.Implementation();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Log.Error(ex.ToString());
                 throw;

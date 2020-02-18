@@ -4,8 +4,11 @@
   <RPAUpgradeServerConfig Url="http://rpa.openserver.cn/download/RPAUpgradeServerConfig.xml" />
   <!--更新日志-->
   <UpdateLog>
-    <Item>包管理器完善</Item>
-    <Item>设计器功能优化</Item>
+    <Item>机器人添加动态加载依赖组件功能</Item>
+    <Item>机器人添加屏幕录像功能</Item>
+    <Item>设计器添加录制功能</Item>
+    <Item>内存溢出问题优化</Item>
+    <Item>控制中心服务接口接入</Item>
     <Item>其它已知问题修复</Item>
   </UpdateLog>
 </RPAUpgradeClientConfig>

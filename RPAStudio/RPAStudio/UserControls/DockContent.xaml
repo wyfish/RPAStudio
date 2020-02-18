@@ -9,6 +9,7 @@
              xmlns:localization="clr-namespace:RPAStudio.Localization"
              xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
              xmlns:selectors="clr-namespace:RPAStudio.Selectors"
+             xmlns:vs2013themes ="clr-namespace:AvalonDock.Themes.VS2013;assembly=AvalonDock.Themes.VS2013"
              xmlns:s="clr-namespace:System;assembly=mscorlib"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cmd="http://www.galasoft.ch/mvvmlight"
@@ -26,7 +27,14 @@
                              ActiveContent="{Binding ActiveDocument, Mode=TwoWay, Converter={StaticResource ActiveDocumentConverter}}"
                              >
             <xcad:DockingManager.Theme>
+                <!--AvalonDock样式更改-->
                 <xcad:GenericTheme />
+                <!--<xcad:AeroTheme />-->
+                <!--<xcad:MetroTheme />-->
+                <!--<xcad:VS2010Theme />-->
+                <!--<vs2013themes:Vs2013BlueTheme />-->
+                <!--<vs2013themes:Vs2013DarkTheme />-->
+                <!--<vs2013themes:Vs2013LightTheme />-->
             </xcad:DockingManager.Theme>
             <xcad:DockingManager.AnchorableTitleTemplate>
                 <DataTemplate DataType="{x:Type xcad:LayoutContent}">
@@ -37,7 +45,7 @@
             </xcad:DockingManager.AnchorableTitleTemplate>
             <xcad:DockingManager.DocumentHeaderTemplate>
                 <DataTemplate>
-                    <!--注意此处绑定的名字，用的仍然是原始属性名而不是绑定的名（实际上用的绑定名），有点奇怪-->
+                    <!--注意此处绑定的名字，用的仍然是原始属性名而不是绑定的名（实际上用的绑定名）-->
                     <StackPanel Orientation="Horizontal" ToolTip="{Binding ToolTip}" Margin="5,0">
                         <TextBlock Text="{Binding Title}" VerticalAlignment="Center" />
                     </StackPanel>
@@ -115,6 +123,13 @@
                                        CanHide="False"
                                        CanClose="False">
                                 <ContentControl Content="{Binding WorkflowOutlineView}"/>
+                            </xcad:LayoutAnchorable>
+                            <xcad:LayoutAnchorable
+                                       Title="源码"
+                                       IconSource="pack://application:,,,/Resources/Image/Dock/source.png"
+                                       CanHide="False"
+                                       CanClose="False">
+                                <uc:SourceCodeContent />
                             </xcad:LayoutAnchorable>
                         </xcad:LayoutAnchorablePane>
                     </xcad:LayoutAnchorablePaneGroup>

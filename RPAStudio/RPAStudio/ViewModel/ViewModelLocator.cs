@@ -60,7 +60,9 @@ namespace RPAStudio.ViewModel
             SimpleIoc.Default.Register<LocalsViewModel>();
             SimpleIoc.Default.Register<CheckUpgradeViewModel>();
             SimpleIoc.Default.Register<PublishProjectViewModel>();
-            SimpleIoc.Default.Register<PackageManagerViewModel>(); 
+            SimpleIoc.Default.Register<PackageManagerViewModel>();
+            SimpleIoc.Default.Register<RecordingViewModel>();
+            SimpleIoc.Default.Register<SourceCodeViewModel>(); 
         }
 
         public SplashScreenViewModel SplashScreen
@@ -138,6 +140,13 @@ namespace RPAStudio.ViewModel
         }
 
 
+        public SourceCodeViewModel SourceCode
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<SourceCodeViewModel>();
+            }
+        }
 
         //注意，这些窗口非长久存在，每次打开后要重建DataContext，所以要传唯一KEY System.Guid.NewGuid().ToString(){{{{{
         public NewProjectViewModel NewProject
@@ -212,6 +221,13 @@ namespace RPAStudio.ViewModel
             }
         }
 
+        public RecordingViewModel Recording
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<RecordingViewModel>(System.Guid.NewGuid().ToString());
+            }
+        }
 
 
         ///}}}}}}}}}}

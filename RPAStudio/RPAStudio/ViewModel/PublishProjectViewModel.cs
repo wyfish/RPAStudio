@@ -9,6 +9,8 @@ using NuGet;
 using System.IO;
 using RPAStudio.Librarys;
 using RPAStudio.Localization;
+using RPAStudio.Services;
+using System.Threading.Tasks;
 
 namespace RPAStudio.ViewModel
 {
@@ -114,6 +116,33 @@ namespace RPAStudio.ViewModel
             NewProjectVersion = newVersion.ToString();
         }
 
+
+        /// <summary>
+        /// The <see cref="IsOperateBusy" /> property's name.
+        /// </summary>
+        public const string IsOperateBusyPropertyName = "IsOperateBusy";
+
+        private bool _isOperateBusyProperty = false;
+
+       
+        public bool IsOperateBusy
+        {
+            get
+            {
+                return _isOperateBusyProperty;
+            }
+
+            set
+            {
+                if (_isOperateBusyProperty == value)
+                {
+                    return;
+                }
+
+                _isOperateBusyProperty = value;
+                RaisePropertyChanged(IsOperateBusyPropertyName);
+            }
+        }
 
 
         /// <summary>
@@ -281,10 +310,17 @@ namespace RPAStudio.ViewModel
                 _customLocationProperty = value;
                 RaisePropertyChanged(CustomLocationPropertyName);
 
-                IsCustomLocationCorrect = System.IO.Directory.Exists(value);
-                if(!IsCustomLocationCorrect)
+                if(value.ToLower().StartsWith("http"))
                 {
-                    CustomLocationValidatedWrongTip = "指定的路径不存在";
+                    IsCustomLocationCorrect = true;
+                }
+                else
+                {
+                    IsCustomLocationCorrect = System.IO.Directory.Exists(value);
+                    if (!IsCustomLocationCorrect)
+                    {
+                        CustomLocationValidatedWrongTip = "指定的路径不存在";
+                    }
                 }
             }
         }
@@ -629,11 +665,44 @@ namespace RPAStudio.ViewModel
                             builder.PopulateFiles(projectPath, new[] { new ManifestFile() { Source = @"**", Target = @"lib/net452" } });
                             builder.Populate(metadata);
 
-                            var outputPath = System.IO.Path.Combine(m_nupkgLocation, ViewModelLocator.Instance.Project.ProjectName) + "." + publishVersion + ".nupkg";
-                            using (FileStream stream = File.Open(outputPath, FileMode.OpenOrCreate))
+                            if(m_nupkgLocation.ToLower().StartsWith("http"))
                             {
-                                builder.Save(stream);
+                                IsOperateBusy = true;
+                                Task.Run(async () =>
+                                {
+                                    //网络发布
+                                    var serv = new PublishService();
+                                    bool ret = await serv.Publish(builder, m_nupkgLocation, ViewModelLocator.Instance.Project.ProjectName, publishVersion, ReleaseNotes);
+
+                                    Common.RunInUI(()=> {
+                                        IsOperateBusy = false;
+
+                                        //更新当前项目的projectVersion为新版本号
+                                        updateProjectVersion();
+
+                                        updateSettings(CustomLocation);
+
+                                        //弹窗生成成功
+                                        if (ret)
+                                        {
+                                            var info = string.Format("项目发布成功。\n名称：{0}\n版本：{1}\n位置：{2}\n", ViewModelLocator.Instance.Project.ProjectName, publishVersion, m_nupkgLocation);
+                                            MessageBox.Show(App.Current.MainWindow, info, "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                                        }
+                                        else
+                                        {
+                                            var info = string.Format("项目发布失败！\n名称：{0}\n版本：{1}\n位置：{2}\n", ViewModelLocator.Instance.Project.ProjectName, publishVersion, m_nupkgLocation);
+                                            MessageBox.Show(App.Current.MainWindow, info, "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                                        }
+                                    });
+                                });
                             }
+                            else
+                            {
+                                var outputPath = System.IO.Path.Combine(m_nupkgLocation, ViewModelLocator.Instance.Project.ProjectName) + "." + publishVersion + ".nupkg";
+                                using (FileStream stream = File.Open(outputPath, FileMode.OpenOrCreate))
+                                {
+                                    builder.Save(stream);
+                                }
 
                             //更新当前项目的projectVersion为新版本号
                             updateProjectVersion();
@@ -649,7 +718,12 @@ namespace RPAStudio.ViewModel
                             {
                                 var info = string.Format("项目发布成功。\n名称：{0}\n版本：{1}\n位置：{2}\n", ViewModelLocator.Instance.Project.ProjectName, publishVersion, m_nupkgLocation);
                                 MessageBox.Show(App.Current.MainWindow, info, ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Information);
-                            }
+                                }
+                                else
+                                {
+                                    throw new Exception("找不到发布后的包");
+                                }
+                            } 
                         }
                         catch (Exception err)
                         {

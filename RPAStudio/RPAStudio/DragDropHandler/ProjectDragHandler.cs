@@ -51,7 +51,7 @@ namespace RPAStudio.DragDropHandler
                     {
                         dag.Save();
                     }
-                    catch (Exception e)
+                    catch (Exception )
                     {
                     }
 
@@ -99,7 +99,7 @@ namespace RPAStudio.DragDropHandler
                     {
                         dag.Save();
                     }
-                    catch (Exception e)
+                    catch (Exception )
                     {
                     }
 

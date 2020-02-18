@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -39,17 +39,17 @@
     <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE;ENABLE_AUTHORIZATION_CHECK--</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -75,6 +75,10 @@
     <ApplicationIcon>Resources\Ico\RPAStudio.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AvalonDock.Themes.VS2013, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonDock.Themes.VS2013.2.0.0.5\lib\AvalonDock.Themes.VS2013.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ChnCharInfo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18f031bd02e5e291, processorArchitecture=MSIL">
       <HintPath>..\packages\ChnCharInfo.1.0.0\lib\net\ChnCharInfo.dll</HintPath>
       <Private>True</Private>
@@ -88,6 +92,14 @@
     </Reference>
     <Reference Include="Fluent, Version=7.0.0.0, Culture=neutral, PublicKeyToken=3e436e32a8c5546f, processorArchitecture=MSIL">
       <HintPath>..\packages\Fluent.Ribbon.7.0.1\lib\net45\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.8.2\lib\net40\Flurl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.4.2\lib\net45\Flurl.Http.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -223,8 +235,9 @@
       <HintPath>..\packages\WpfAnimatedGif.1.4.18\lib\net\WpfAnimatedGif.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.3.7.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.9.15603.14400, Culture=neutral, PublicKeyToken=ba83ff368b7563c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonDock.Themes.VS2013.2.0.0.5\lib\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>..\packages\Extended.Wpf.Toolkit.3.7.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
@@ -268,6 +281,7 @@
     <Compile Include="Librarys\ImageExt.cs" />
     <Compile Include="Librarys\ListBoxBehavior.cs" />
     <Compile Include="Librarys\MessengerObjects.cs" />
+    <Compile Include="Librarys\ModelItemExtensions.cs" />
     <Compile Include="Librarys\ObservableExtension.cs" />
     <Compile Include="Librarys\WindowEx.cs" />
     <Compile Include="Localization\Images.Designer.cs">
@@ -292,16 +306,17 @@
     <Compile Include="Librarys\TreeViewHelper.cs" />
     <Compile Include="Librarys\UIExtend.cs" />
     <Compile Include="Selectors\DocumentTemplateSelector.cs" />
+    <Compile Include="Services\PublishService.cs" />
     <Compile Include="UserControls\CheckUpgradeContent.xaml.cs">
       <DependentUpon>CheckUpgradeContent.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ActivitiesContent.xaml.cs">
       <DependentUpon>ActivitiesContent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Librarys\Logger.cs" />
     <Compile Include="UserControls\DockContent.xaml.cs">
       <DependentUpon>DockContent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Librarys\Logger.cs" />
     <Compile Include="UserControls\LocalsContent.xaml.cs">
       <DependentUpon>LocalsContent.xaml</DependentUpon>
     </Compile>
@@ -319,6 +334,9 @@
     </Compile>
     <Compile Include="UserControls\SnippetsContent.xaml.cs">
       <DependentUpon>SnippetsContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SourceCodeContent.xaml.cs">
+      <DependentUpon>SourceCodeContent.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StartContent.xaml.cs">
       <DependentUpon>StartContent.xaml</DependentUpon>
@@ -346,10 +364,12 @@
     <Compile Include="ViewModel\ProjectViewModel.cs" />
     <Compile Include="ViewModel\PublishProjectViewModel.cs" />
     <Compile Include="ViewModel\RecentProjectItem.cs" />
+    <Compile Include="ViewModel\RecordingViewModel.cs" />
     <Compile Include="ViewModel\RenameViewModel.cs" />
     <Compile Include="ViewModel\SettingItem.cs" />
     <Compile Include="ViewModel\SnippetsViewModel.cs" />
     <Compile Include="ViewModel\SnippetTreeItem.cs" />
+    <Compile Include="ViewModel\SourceCodeViewModel.cs" />
     <Compile Include="ViewModel\SplashScreenViewModel.cs" />
     <Compile Include="ViewModel\StartViewModel.cs" />
     <Compile Include="ViewModel\CommonPackageSourceItem.cs" />
@@ -374,6 +394,9 @@
     </Compile>
     <Compile Include="Windows\PublishProjectWindow.xaml.cs">
       <DependentUpon>PublishProjectWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RecordingWindow.xaml.cs">
+      <DependentUpon>RecordingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\RenameWindow.xaml.cs">
       <DependentUpon>RenameWindow.xaml</DependentUpon>
@@ -400,6 +423,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\Global.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Styles\Main.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -410,6 +437,18 @@
     <None Include="Resources\FileTemplate\Sequence.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Include="Themes\Fluent.Ribbon\Accents\CustomAccent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Fluent.Ribbon\Colors\CustomAppTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WorkflowDesigner\DefaultColorResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\CheckUpgradeContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -419,8 +458,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\DockContent.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\LocalsContent.xaml">
       <SubType>Designer</SubType>
@@ -429,6 +468,10 @@
     <Page Include="UserControls\MainContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SourceCodeContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -493,6 +536,10 @@
     <Page Include="Windows\PublishProjectWindow.xaml">
       <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\RecordingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\RenameWindow.xaml">
       <SubType>Designer</SubType>
@@ -852,6 +899,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Dock\source.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Ribbon\recording.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Ribbon\store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Windows\Recording\hotkey.png" />
+    <Resource Include="Resources\Image\Windows\Recording\hover.png" />
+    <Resource Include="Resources\Image\Windows\Recording\keyboard.png" />
+    <Resource Include="Resources\Image\Windows\Recording\mouse.png" />
+    <Resource Include="Resources\Image\Windows\Recording\mouseclick.png" />
+    <Resource Include="Resources\Image\Windows\Recording\save.png" />
+    <Resource Include="Resources\Image\Windows\Recording\text.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

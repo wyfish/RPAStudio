@@ -75,8 +75,8 @@ namespace RPA.UIAutomation.Activities.Browser
             }
             Browser getBrowser = property.GetValue(context.DataContext) as Browser;
 
-            String winHandleBefore = getBrowser.getCFBrowser().CurrentWindowHandle;
-            if (getBrowser.getCFBrowser() != null)
+            String winHandleBefore = getBrowser.getICFBrowser().CurrentWindowHandle;
+            if (getBrowser.getICFBrowser() != null)
             {
                 //ReadOnlyCollection<string> chromeHandles =  getBrowser.getCFBrowser().WindowHandles;
                 //string chromeHandle = chromeHandles[chromeHandles.Count - 1];

@@ -193,4 +193,7 @@
   <data name="RecentActivities_ja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Config\RecentActivities_ja.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ProjectUserConfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Config\ProjectUserConfig.xml;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -14,6 +14,7 @@ using Plugins.Shared.Library.Nuget;
 using Plugins.Shared.Library.UiAutomation;
 using RPAStudio.Librarys;
 using RPAStudio.Localization;
+using Fluent;
 
 namespace RPAStudio
 {
@@ -35,6 +36,30 @@ namespace RPAStudio
         [DllImport("kernel32.dll")]
         public static extern bool FreeConsole();
 
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            ChangeAppTheme();
+
+            base.OnStartup(e);
+        }
+
+        /// <summary>
+        /// 改变程序Ribbon样式(Fluent.Ribbon样式)
+        /// </summary>
+        private void ChangeAppTheme()
+        {
+            //自定义样式设置
+            //ThemeManager.AddAccent("CustomAccent", new Uri("pack://application:,,,/Themes/Fluent.Ribbon/Accents/CustomAccent.xaml"));
+            //ThemeManager.AddAppTheme("CustomAppTheme", new Uri("pack://application:,,,/Themes/Fluent.Ribbon/Colors/CustomAppTheme.xaml"));
+
+            //设置样式
+            //ThemeManager.ChangeAppStyle(Application.Current,
+            //                            ThemeManager.GetAccent("Blue"),
+            //                            ThemeManager.GetAppTheme("BaseDark")
+            //                            );
+        }
+
+      
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             Instance = this;
@@ -146,15 +171,35 @@ namespace RPAStudio
 
             //以下的XML是用户可能会修改的配置，升级时一般要保留旧数据
             //TODO WJF 后期需要根据XML里的版本号对配置文件数据进行迁移
-            CopyResourceToConfig(configDir, "CodeSnippets");
-            CopyResourceToConfig(configDir, "FavoriteActivities");
-            CopyResourceToConfig(configDir, "FavoriteActivities_en");
-            CopyResourceToConfig(configDir, "FavoriteActivities_ja");
-            CopyResourceToConfig(configDir, "ProjectUserConfig");
-            CopyResourceToConfig(configDir, "RecentActivities");
-            CopyResourceToConfig(configDir, "RecentActivities_en");
-            CopyResourceToConfig(configDir, "RecentActivities_ja");
-            CopyResourceToConfig(configDir, "RecentProjects");
+            if (!System.IO.File.Exists(configDir + @"\CodeSnippets.xml"))
+            {
+                byte[] data = RPAStudio.Properties.Resources.CodeSnippets;
+                System.IO.File.WriteAllBytes(configDir + @"\CodeSnippets.xml", data);
+            }
+
+            if (!System.IO.File.Exists(configDir + @"\FavoriteActivities.xml"))
+            {
+                byte[] data = RPAStudio.Properties.Resources.FavoriteActivities;
+                System.IO.File.WriteAllBytes(configDir + @"\FavoriteActivities.xml", data);
+            }
+
+            if (!System.IO.File.Exists(configDir + @"\ProjectUserConfig.xml"))
+            {
+                byte[] data = RPAStudio.Properties.Resources.ProjectUserConfig;
+                System.IO.File.WriteAllBytes(configDir + @"\ProjectUserConfig.xml", data);
+            }
+
+            if (!System.IO.File.Exists(configDir + @"\RecentActivities.xml"))
+            {
+                byte[] data = RPAStudio.Properties.Resources.RecentActivities;
+                System.IO.File.WriteAllBytes(configDir + @"\RecentActivities.xml", data);
+            }
+
+            if (!System.IO.File.Exists(configDir + @"\RecentProjects.xml"))
+            {
+                byte[] data = RPAStudio.Properties.Resources.RecentProjects;
+                System.IO.File.WriteAllBytes(configDir + @"\RecentProjects.xml", data);
+            }
 
             if (!System.IO.File.Exists(configDir + @"\RPAStudio.settings"))
             {
@@ -170,17 +215,10 @@ namespace RPAStudio
             }
         }
 
-        private void CopyResourceToConfig(string configDir, string resourceName)
-        {
-            string path = string.Format(@"{0}\{1}.xml", configDir, resourceName);
-            if (!System.IO.File.Exists(path))
-            {
-                //byte[] data = RPAStudio.Properties.Resources.FavoriteActivities;
-                byte[] data = RPAStudio.Properties.ResourceLocalizer.GetResourceByName(resourceName);
-                System.IO.File.WriteAllBytes(path, data);
-            }
-        }
-
+        /// <summary>
+        /// 升级配置文件
+        /// </summary>
+        /// <returns>是否进行了配置升级</returns>
         private bool UpgradeSettings()
         {
             XmlDocument doc = new XmlDocument();
