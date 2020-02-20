@@ -699,6 +699,15 @@
   <data name="InputText" xml:space="preserve">
     <value>Input</value>
   </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>保存类型</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>默认文件名</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>另存为位置</value>
+  </data>
   <data name="xBuildingDataTable" xml:space="preserve">
     <value>构建数据表</value>
   </data>

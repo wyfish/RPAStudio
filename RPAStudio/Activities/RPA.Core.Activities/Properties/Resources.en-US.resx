@@ -699,6 +699,15 @@
   <data name="InputText" xml:space="preserve">
     <value>Input</value>
   </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>Save type</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>Default filename</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>Save as location</value>
+  </data>
   <data name="xBuildingDataTable" xml:space="preserve">
     <value>Build DataTable</value>
   </data>

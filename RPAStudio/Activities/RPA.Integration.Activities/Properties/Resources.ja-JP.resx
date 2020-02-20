@@ -1038,6 +1038,15 @@
   <data name="FilePathToSave" xml:space="preserve">
     <value>ファイル保存パス</value>
   </data>
+  <data name="Description80" xml:space="preserve">
+    <value>A1などのセル名を表すVB表現</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>B2などのセル名を表すVB表現</value>
+  </data>
+  <data name="DisplayName177" xml:space="preserve">
+    <value>セルのデータ</value>
+  </data>
   <data name="xPrompt" xml:space="preserve">
     <value>ヒント</value>
   </data>

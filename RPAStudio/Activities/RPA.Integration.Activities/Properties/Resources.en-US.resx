@@ -1038,6 +1038,15 @@
   <data name="FilePathToSave" xml:space="preserve">
     <value>File save path</value>
   </data>
+  <data name="Description80" xml:space="preserve">
+    <value>VB expression for cell name, such as A1</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>VB expression for cell name, such as B2</value>
+  </data>
+  <data name="DisplayName177" xml:space="preserve">
+    <value>Cell data</value>
+  </data>
   <data name="xPrompt" xml:space="preserve">
     <value>Prompt</value>
   </data>

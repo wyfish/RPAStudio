@@ -1038,6 +1038,15 @@
   <data name="FilePathToSave" xml:space="preserve">
     <value>文件保存路径</value>
   </data>
+  <data name="Description80" xml:space="preserve">
+    <value>代表单元格名称的VB表达式，如A1</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>代表单元格名称的VB表达式，如B2</value>
+  </data>
+  <data name="DisplayName177" xml:space="preserve">
+    <value>单元格数据</value>
+  </data>
   <data name="xPrompt" xml:space="preserve">
     <value>提示</value>
   </data>

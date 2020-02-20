@@ -621,7 +621,199 @@
   <data name="SpecifyTheURL.HintText" xml:space="preserve">
     <value>Specify the URL opened in the browser</value>
   </data>
-  <data name="SpecifyTheURL.HintText" xml:space="preserve">
-    <value>Specify the URL opened in the browser</value>
+  <data name="Category12" xml:space="preserve">
+    <value>Grayscale mode</value>
+  </data>
+  <data name="Description100" xml:space="preserve">
+    <value>Lexical analysis results</value>
+  </data>
+  <data name="Description101" xml:space="preserve">
+    <value>Word analysis results</value>
+  </data>
+  <data name="Description102" xml:space="preserve">
+    <value>Character string</value>
+  </data>
+  <data name="Description83" xml:space="preserve">
+    <value>The full path and name of the image.If this property is set, the image property in the input item is ignored.</value>
+  </data>
+  <data name="Description84" xml:space="preserve">
+    <value>Only image variables are supported for images to be processed. If this property is set, the filename property in the entry is ignored.</value>
+  </data>
+  <data name="Description85" xml:space="preserve">
+    <value>Process the finished image. Only image variables are supported.</value>
+  </data>
+  <data name="Description86" xml:space="preserve">
+    <value>The path to the file to read.</value>
+  </data>
+  <data name="Description87" xml:space="preserve">
+    <value>Output Base64.</value>
+  </data>
+  <data name="Description88" xml:space="preserve">
+    <value>The full path of the image to load.</value>
+  </data>
+  <data name="Description89" xml:space="preserve">
+    <value>The image to load. Only image variables are supported.</value>
+  </data>
+  <data name="Description90" xml:space="preserve">
+    <value>A suitable noise threshold can achieve better denoising effect.</value>
+  </data>
+  <data name="Description91" xml:space="preserve">
+    <value>Saves the full file path and name of the image.</value>
+  </data>
+  <data name="Description92" xml:space="preserve">
+    <value>Image to save. Only image variables are supported.</value>
+  </data>
+  <data name="Description93" xml:space="preserve">
+    <value>Your APIKey.</value>
+  </data>
+  <data name="Description94" xml:space="preserve">
+    <value>Your SecretKey.</value>
+  </data>
+  <data name="Description95" xml:space="preserve">
+    <value>Text content</value>
+  </data>
+  <data name="Description96" xml:space="preserve">
+    <value>Output the word segmentation results and give the probability value of each word in the sentence to judge whether a sentence conforms to the language expression habits.</value>
+  </data>
+  <data name="Description97" xml:space="preserve">
+    <value>Text content, up to 2048 bytes.</value>
+  </data>
+  <data name="Description98" xml:space="preserve">
+    <value>The result of emotional tendency analysis.</value>
+  </data>
+  <data name="Description99" xml:space="preserve">
+    <value>Text to be analyzed</value>
+  </data>
+  <data name="DisplayName68" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="DisplayName69" xml:space="preserve">
+    <value>Average method</value>
+  </data>
+  <data name="DisplayName70" xml:space="preserve">
+    <value>Maximum value method</value>
+  </data>
+  <data name="DisplayName71" xml:space="preserve">
+    <value>weighted mean</value>
+  </data>
+  <data name="DisplayName72" xml:space="preserve">
+    <value>Noise threshold</value>
+  </data>
+  <data name="Description103" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Description104" xml:space="preserve">
+    <value>The maximum length of the summary result.</value>
+  </data>
+  <data name="Description105" xml:space="preserve">
+    <value>Output a news summary of the specified length.</value>
+  </data>
+  <data name="Description106" xml:space="preserve">
+    <value>Comment content, up to 10240 bytes.</value>
+  </data>
+  <data name="Description107" xml:space="preserve">
+    <value>The similarity results of two texts.</value>
+  </data>
+  <data name="Description108" xml:space="preserve">
+    <value>1: Hotel; 2: KTV; 3: beauty; 4: Food and beverage; 5: tourism; 6: health; 7: education; 8: business; 9: real estate; 10: car; 11: life; 12: shopping; 13:3c, default is 4 (food and beverage).</value>
+  </data>
+  <data name="Description109" xml:space="preserve">
+    <value>Model selection, the default value is yes (web model); no is query model.</value>
+  </data>
+  <data name="Description110" xml:space="preserve">
+    <value>Dependency syntactic structure information in text.</value>
+  </data>
+  <data name="Description111" xml:space="preserve">
+    <value>Text to be corrected, input limit 511 bytes.</value>
+  </data>
+  <data name="Description112" xml:space="preserve">
+    <value>Prompt for errors and give correct text results.</value>
+  </data>
+  <data name="Description113" xml:space="preserve">
+    <value>Text to be compared, 512 bytes maximum.</value>
+  </data>
+  <data name="Description114" xml:space="preserve">
+    <value>The similarity results of two texts.</value>
+  </data>
+  <data name="Description115" xml:space="preserve">
+    <value>The default is bow.</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>Word vector query result representation.</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>Input word, 64 bytes maximum</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>The similarity results of two words.</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>Your AppCode.</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>Whether the confidence level of each row in the result needs to be recognized is false by default.</value>
+  </data>
+  <data name="Description121" xml:space="preserve">
+    <value>Image recognition results.</value>
+  </data>
+  <data name="Description122" xml:space="preserve">
+    <value>Whether to detect the image orientation is not detected by default. Orientation refers to whether the input image rotates 90 / 180 / 270 degrees in normal direction or anticlockwise.</value>
+  </data>
+  <data name="Description123" xml:space="preserve">
+    <value>Whether to return the confidence level of each line in the recognition result.</value>
+  </data>
+  <data name="Description124" xml:space="preserve">
+    <value>Identify the language type, the default is CHN_ENG.</value>
+  </data>
+  <data name="Description125" xml:space="preserve">
+    <value>Whether to locate the single character position. The default is big (not to locate the single character position).</value>
+  </data>
+  <data name="Description126" xml:space="preserve">
+    <value>Whether to detect the language. It is not detected by default. Currently supported (Chinese, English, Japanese, Korean)</value>
+  </data>
+  <data name="Description127" xml:space="preserve">
+    <value>Whether to return to the vertex position of the text external polygon. Single word position is not supported. The default is false.</value>
+  </data>
+  <data name="Description128" xml:space="preserve">
+    <value>This field only supports browser variables</value>
+  </data>
+  <data name="Description129" xml:space="preserve">
+    <value>Tab page order</value>
+  </data>
+  <data name="Description130" xml:space="preserve">
+    <value>Tab label/address key</value>
+  </data>
+  <data name="Description131" xml:space="preserve">
+    <value>Browser page to close. This field only supports browser variables</value>
+  </data>
+  <data name="DisplayName73" xml:space="preserve">
+    <value>Comment industry type</value>
+  </data>
+  <data name="DisplayName74" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="DisplayName75" xml:space="preserve">
+    <value>Detect image orientation</value>
+  </data>
+  <data name="DisplayName76" xml:space="preserve">
+    <value>Language type</value>
+  </data>
+  <data name="DisplayName77" xml:space="preserve">
+    <value>Locate single character position</value>
+  </data>
+  <data name="DisplayName78" xml:space="preserve">
+    <value>Detection language</value>
+  </data>
+  <data name="DisplayName79" xml:space="preserve">
+    <value>Return to vertex position</value>
+  </data>
+  <data name="DisplayName80" xml:space="preserve">
+    <value>New label address</value>
+  </data>
+  <data name="DisplayName81" xml:space="preserve">
+    <value>Tab page</value>
+  </data>
+  <data name="DisplayName82" xml:space="preserve">
+    <value>Keyword</value>
   </data>
 </root>
