@@ -1038,13 +1038,25 @@
   <data name="FilePathToSave" xml:space="preserve">
     <value>文件保存路径</value>
   </data>
-  <data name="Description80" xml:space="preserve">
-    <value>代表单元格名称的VB表达式，如A1</value>
+  <data name="xPrompt" xml:space="preserve">
+    <value>提示</value>
   </data>
-  <data name="Description81" xml:space="preserve">
-    <value>代表单元格名称的VB表达式，如B2</value>
+  <data name="xRequireValidPath1" xml:space="preserve">
+    <value>非创建新文档需要添加有效路径</value>
   </data>
-  <data name="DisplayName177" xml:space="preserve">
-    <value>单元格数据</value>
+  <data name="xRequireValidPath2" xml:space="preserve">
+    <value>另存为需要添加有效路径</value>
+  </data>
+  <data name="xFileNotExist" xml:space="preserve">
+    <value>文件不存在，请检查路径有效性</value>
+  </data>
+  <data name="xExcelExecError" xml:space="preserve">
+    <value>EXCEL执行过程出错</value>
+  </data>
+  <data name="xRequireCorrectSavePath1" xml:space="preserve">
+    <value>此文档为新建文件,请输入正确保存路径!</value>
+  </data>
+  <data name="xRequireCorrectSavePath2" xml:space="preserve">
+    <value>另存为应输入正确保存路径!</value>
   </data>
 </root>

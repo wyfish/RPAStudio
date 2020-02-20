@@ -5,12 +5,12 @@ using Plugins.Shared.Library;
 
 namespace RPA.OpenCV.Activities.Mouse
 {
-    [Designer(typeof(CVActivityDesigner))]
-    public sealed class CVRightClickActivity : CodeActivity
+    [Designer(typeof(ImageActionActivityDesigner))]
+    public sealed class ImageDoubleClickActivity : CodeActivity
     {
         public new string DisplayName;
         [Browsable(false)]
-        public string _DisplayName { get { return "CV RightClick"; } }
+        public string _DisplayName { get { return "Image DoubleClick"; } }
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
@@ -78,12 +78,12 @@ namespace RPA.OpenCV.Activities.Mouse
                 int matchingInterval = MatchingInterval.Get(context);
                 int retry = Retry.Get(context);
 
-                var ret = Common.CVMouseAction(SourceImgPath, FlaxCV.CvActionType.RightClick, title, matchingThreshold, matchingInterval, retry);
+                var ret = Common.CVMouseAction(SourceImgPath, FlaxCV.CvActionType.DoubleClick, title, matchingThreshold, matchingInterval, retry);
                 Result.Set(context, ret.IsMatched);
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "Error on Executing CVRightClickActivity()", e.Message);
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "Error on Executing ImageDoubleClickActivity()", e.Message);
                 if (ContinueOnError.Get(context))
                 {
                 }

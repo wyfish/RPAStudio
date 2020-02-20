@@ -405,8 +405,6 @@
     <Compile Include="Windows\SplashScreenWindow.xaml.cs">
       <DependentUpon>SplashScreenWindow.xaml</DependentUpon>
     </Compile>
-    <None Include="Localization\xUidStrings.xlsx" />
-    <None Include="Localization\xStaticStrings.xlsx" />
     <None Include="Resources\FileTemplate\Flowchart.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
@@ -899,7 +897,7 @@
     <None Include="Config\ProjectConfig_ja.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
+    <Resource Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Dock\source.png" />

@@ -352,10 +352,10 @@
     <value>by</value>
   </data>
   <data name="DefaultSourceAddress" xml:space="preserve">
-    <value>デフォルトのパケット送信元アドレス</value>
+    <value>既定のパッケージソース</value>
   </data>
   <data name="UserDefinedSourceAddress" xml:space="preserve">
-    <value>ユーザー定義のパケット送信元アドレス</value>
+    <value>ユーザーが定義したパッケージソース</value>
   </data>
   <data name="NewPackageSource" xml:space="preserve">
     <value>新しいパッケージソース</value>
@@ -370,10 +370,10 @@
     <value>パケットソースを下に移動</value>
   </data>
   <data name="PackageSourceName" xml:space="preserve">
-    <value>パッケージソース名</value>
+    <value>名前</value>
   </data>
   <data name="PacketSourceAddress" xml:space="preserve">
-    <value>パケット送信元アドレス</value>
+    <value>ソース</value>
   </data>
   <data name="ChooseLocalSourcePath" xml:space="preserve">
     <value>ローカルソースパスを選択してください</value>
@@ -382,10 +382,10 @@
     <value>動作中……</value>
   </data>
   <data name="EnterPackageSourceNameHere" xml:space="preserve">
-    <value>ここにパッケージソース名を入力してください</value>
+    <value>追加するパッケージソース名を入力</value>
   </data>
   <data name="EnterPacketSourceAddressHere" xml:space="preserve">
-    <value>ここにパケットの送信元アドレスを入力してください</value>
+    <value>追加するパッケージソースのアドレスを入力</value>
   </data>
   <data name="AddText" xml:space="preserve">
     <value>追加</value>
@@ -506,5 +506,35 @@
   </data>
   <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
     <value>ソフトウェアは認証テストに失敗しました。製品を登録してください！</value>
+  </data>
+  <data name="logStarted" xml:space="preserve">
+    <value>{0} 実行開始</value>
+  </data>
+  <data name="logFinished" xml:space="preserve">
+    <value>{0} 実行終了 経過時間：{1}</value>
+  </data>
+  <data name="logLaunchMainWindow" xml:space="preserve">
+    <value>+++++ メインウィンドウの起動 +++++</value>
+  </data>
+  <data name="msgPackageSourceNameEmpty" xml:space="preserve">
+    <value>パッケージソース名は空にできません！</value>
+  </data>
+  <data name="msgPackageSourcePathEmpty" xml:space="preserve">
+    <value>パッケージソースパスを空にすることはできません！</value>
+  </data>
+  <data name="msgPackageSourceNameNotUnique" xml:space="preserve">
+    <value>パッケージソース名は一意でなければなりません！</value>
+  </data>
+  <data name="msgPackageSourcePathInvalid" xml:space="preserve">
+    <value>パッケージソースアドレスが不正です！</value>
+  </data>
+  <data name="msgRequireAcceptLicense" xml:space="preserve">
+    <value>パッケージでは、インストールする前にライセンス条項に同意する必要があります。</value>
+  </data>
+  <data name="msgProjectSuccessflyReleased" xml:space="preserve">
+    <value>プロジェクトは正常にリリースされました。  {3}名前：{0}{3}バージョン：{1}{3}場所：{2}{3}</value>
+  </data>
+  <data name="msgPublishProjectFailed" xml:space="preserve">
+    <value>プロジェクトの公開が失敗しました！</value>
   </data>
 </root>

@@ -690,7 +690,8 @@ namespace RPAStudio.ViewModel
             ViewModelLocator.Instance.Output.ClearAllCommand.Execute(null);
 
             workflowExecutorStopwatch.Restart();
-            SharedObject.Instance.Output(SharedObject.enOutputType.Information, string.Format("{0} 开始运行", ViewModelLocator.Instance.Project.ProjectName));
+            // 开始运行
+            SharedObject.Instance.Output(SharedObject.enOutputType.Information, string.Format(ResxIF.GetString("logStarted"), ViewModelLocator.Instance.Project.ProjectName));
 
             IsWorkflowRunningOrDebugging = true;
 
@@ -738,8 +739,8 @@ namespace RPAStudio.ViewModel
                 {
                     elapsedTime = elapsedTimeSpan.ToString(@"hh\:mm\:ss");
                 }
-
-                SharedObject.Instance.Output(SharedObject.enOutputType.Information, string.Format("{0} 结束运行，耗时：{1}", ViewModelLocator.Instance.Project.ProjectName, elapsedTime));
+                // {0} 结束运行，耗时：{1}
+                SharedObject.Instance.Output(SharedObject.enOutputType.Information, string.Format(ResxIF.GetString("logFinished"), ViewModelLocator.Instance.Project.ProjectName, elapsedTime));
 
                 foreach (var doc in ViewModelLocator.Instance.Dock.Documents)
                 {
@@ -796,7 +797,8 @@ namespace RPAStudio.ViewModel
                     ?? (_loadedCommand = new RelayCommand<RoutedEventArgs>(
                     p =>
                     {
-                        Logger.Debug("+++++主窗口启动+++++", logger);
+                        // "+++++主窗口启动+++++"
+                        Logger.Debug(ResxIF.GetString("logLaunchMainWindow"), logger);
                         m_view = (Window)p.Source;
 
                         Init();

@@ -259,7 +259,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Default packet source address に類似しているローカライズされた文字列を検索します。
+        ///   Default package sourcess に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DefaultSourceAddress {
             get {
@@ -340,7 +340,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Enter package source name here に類似しているローカライズされた文字列を検索します。
+        ///   New package source に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EnterPackageSourceNameHere {
             get {
@@ -349,7 +349,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Enter the packet source address here に類似しているローカライズされた文字列を検索します。
+        ///   http://newpackagesource に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EnterPacketSourceAddressHere {
             get {
@@ -453,6 +453,33 @@ namespace RPAStudio.Localization {
         public static string LocalRobotContent {
             get {
                 return ResourceManager.GetString("LocalRobotContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0} Finished running, Time-consuming: {1} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string logFinished {
+            get {
+                return ResourceManager.GetString("logFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   +++++ Launch main window +++++ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string logLaunchMainWindow {
+            get {
+                return ResourceManager.GetString("logLaunchMainWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0} Start running に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string logStarted {
+            get {
+                return ResourceManager.GetString("logStarted", resourceCulture);
             }
         }
         
@@ -727,7 +754,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Package source name に類似しているローカライズされた文字列を検索します。
+        ///   Name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PackageSourceName {
             get {
@@ -736,7 +763,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Packet source address に類似しているローカライズされた文字列を検索します。
+        ///   Source に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PacketSourceAddress {
             get {
@@ -1096,6 +1123,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   The software failed the authorization test, please register the product! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TheSoftwareFailedAuthorizationTest {
+            get {
+                return ResourceManager.GetString("TheSoftwareFailedAuthorizationTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Uninstall に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string UninstallText {
@@ -1132,7 +1168,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   User-defined packet source address に類似しているローカライズされた文字列を検索します。
+        ///   User defined package sources に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string UserDefinedSourceAddress {
             get {

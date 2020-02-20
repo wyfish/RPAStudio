@@ -574,13 +574,15 @@ namespace RPAStudio.ViewModel
         {
             if (string.IsNullOrEmpty(PackageSourceName))
             {
-                MessageBox.Show(m_view, "包源名称不能为空！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                // 包源名称不能为空！
+                MessageBox.Show(m_view, ResxIF.GetString("msgPackageSourceNameEmpty"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }
 
             if (string.IsNullOrEmpty(PackageSourceUri))
             {
-                MessageBox.Show(m_view, "包源路径不能为空！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                // 包源路径不能为空！
+                MessageBox.Show(m_view, ResxIF.GetString("msgPackageSourcePathEmpty"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }
 
@@ -655,13 +657,15 @@ namespace RPAStudio.ViewModel
                         //新加的包源名称不允许和默认包源或自定义包源的名称重名
                         if (PackageSourceItemsContains(PackageSourceName))
                         {
-                            MessageBox.Show(m_view, "包源名称必须唯一！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 包源名称必须唯一！
+                            MessageBox.Show(m_view, ResxIF.GetString("msgPackageSourceNameNotUnique"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                             return;
                         }
 
                         if (!PackageSourceUriValid(PackageSourceUri))
                         {
-                            MessageBox.Show(m_view, "包源地址不合法！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 包源地址不合法！
+                            MessageBox.Show(m_view, ResxIF.GetString("msgPackageSourcePathInvalid"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                             return;
                         }
 
@@ -710,13 +714,15 @@ namespace RPAStudio.ViewModel
                         //更新后的名称必须唯一
                         if(PackageSourceItemsContains(PackageSourceName,true))
                         {
-                            MessageBox.Show(m_view, "包源名称必须唯一！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 包源名称必须唯一！
+                            MessageBox.Show(m_view, ResxIF.GetString("msgPackageSourceNameNotUnique"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                             return;
                         }
 
                         if (!PackageSourceUriValid(PackageSourceUri))
                         {
-                            MessageBox.Show(m_view, "包源地址不合法！", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            // 包源地址不合法！
+                            MessageBox.Show(m_view, ResxIF.GetString("msgPackageSourcePathInvalid"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
                             return;
                         }
 
@@ -1840,14 +1846,16 @@ namespace RPAStudio.ViewModel
                     () =>
                     {
                         //记录所选择的待安装的包
-                        var identity = SelectedItemIdentity;
+                        //var identity = SelectedItemIdentity; // SelectedItemIdentity always null
+                        var minver = VersionRange.Parse((string)SelectedItemVersionList.Min());
+                        var identity = new PackageIdentity(SelectedItemTitle, minver.MinVersion);
 
                         //确定是否需要用户接受许可证
                         if (SelectedItemRequireLicenseAcceptance)
                         {
                             //确定接收许可证吗？
                             // 该程序包要求你在安装前接受其许可证条款，确定接受吗？
-                            var ret = MessageBox.Show(m_view, "该程序包要求你在安装前接受其许可证条款，确定接受吗？", ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                            var ret = MessageBox.Show(m_view, ResxIF.GetString("msgRequireAcceptLicense"), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (ret != MessageBoxResult.Yes)
                             {
                                 return;

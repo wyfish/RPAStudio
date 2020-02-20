@@ -176,7 +176,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
                 {
                     if (!File.Exists(destDestFilePath))
                     {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "文件不存在，请检查路径有效性");
+                        // 文件不存在，请检查路径有效性
+                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("xFileNotExist"));
                         new CommonVariable().realaseProcessExit(excelApp);
                     }
                     else

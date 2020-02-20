@@ -48,7 +48,6 @@ namespace RPA.OpenCV.Activities.Mouse
                 _height = rect.bottom - rect.top;
             }
             var cvRet = _cv.DoCVAction(cvActionType, templateImagePath, matchingThreshold, matchingInterval, retry, new System.Drawing.Rectangle(x, y, _width, _height));
-            //string resultIfo = string.Format("Capture Area : x={0}, y={1}, w={2}, h={3}\nMatched = {4}\nMatched Level = {5}", x, y, _width, _height, cvRet.IsMatched, cvRet.MatchedLevel);
             string resultIfo = string.Format(Properties.Resources.ResultInformation, x, y, _width, _height, cvRet.IsMatched, cvRet.MatchedLevel);
             SharedObject.Instance.Output(SharedObject.enOutputType.Information, Properties.Resources.ImageMatchingResult, resultIfo);
             return cvRet;
