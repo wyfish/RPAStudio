@@ -1627,6 +1627,33 @@ namespace RPA.Core.Activities.Properties {
         }
         
         /// <summary>
+        ///   查找类似 保存类型 的本地化字符串。
+        /// </summary>
+        public static string DisplayName53 {
+            get {
+                return ResourceManager.GetString("DisplayName53", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 默认文件名 的本地化字符串。
+        /// </summary>
+        public static string DisplayName54 {
+            get {
+                return ResourceManager.GetString("DisplayName54", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 另存为位置 的本地化字符串。
+        /// </summary>
+        public static string DisplayName55 {
+            get {
+                return ResourceManager.GetString("DisplayName55", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 默认值 的本地化字符串。
         /// </summary>
         public static string DisplayName6 {

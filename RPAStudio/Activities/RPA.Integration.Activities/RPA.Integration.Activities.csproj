@@ -208,6 +208,10 @@
     <Compile Include="Excel\Ope_Range\CopyPasteDesigner.xaml.cs">
       <DependentUpon>CopyPasteDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Excel\Ope_Range\DataFill.cs" />
+    <Compile Include="Excel\Ope_Range\DataFillDesigner.xaml.cs">
+      <DependentUpon>DataFillDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Excel\Ope_Range\DeleteRange.cs" />
     <Compile Include="Excel\Ope_Range\DeleteRangeDesigner.xaml.cs">
       <DependentUpon>DeleteRangeDesigner.xaml</DependentUpon>
@@ -515,6 +519,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Excel\Ope_Range\CopyPasteDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Excel\Ope_Range\DataFillDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

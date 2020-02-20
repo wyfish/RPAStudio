@@ -699,4 +699,13 @@
   <data name="InputText" xml:space="preserve">
     <value>Input</value>
   </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>保存タイプ</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>デフォルトのファイル名</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
 </root>

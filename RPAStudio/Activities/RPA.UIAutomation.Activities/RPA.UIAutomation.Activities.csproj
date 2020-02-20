@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,6 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="AipSdk, Version=3.6.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Baidu.AI.3.6.14\lib\net45\AipSdk.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FlaUI.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FlaUI.Core.2.0.0-rc1\lib\net45\FlaUI.Core.dll</HintPath>
       <Private>False</Private>
@@ -74,6 +79,10 @@
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\..\packages\Microsoft.VisualStudio.OLE.Interop.7.10.6071\lib\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="PresentationCore" />
@@ -175,6 +184,10 @@
     <Compile Include="Browser\NewBrowserDesigner.xaml.cs">
       <DependentUpon>NewBrowserDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Browser\NewTab.cs" />
+    <Compile Include="Browser\NewTabDesigner.xaml.cs">
+      <DependentUpon>NewTabDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Browser\OpenBrowser.cs" />
     <Compile Include="Browser\OpenBrowserDesigner.xaml.cs">
       <DependentUpon>OpenBrowserDesigner.xaml</DependentUpon>
@@ -186,6 +199,10 @@
     <Compile Include="Browser\SetWebAttr.cs" />
     <Compile Include="Browser\SetWebAttrDesigner.xaml.cs">
       <DependentUpon>SetWebAttrDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\TabSwitch.cs" />
+    <Compile Include="Browser\TabSwitchDesigner.xaml.cs">
+      <DependentUpon>TabSwitchDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Control\Activate.cs" />
     <Compile Include="Control\ActivateDesigner.xaml.cs">
@@ -261,6 +278,35 @@
     <Compile Include="Find\IndicateScreenDesigner.xaml.cs">
       <DependentUpon>IndicateScreenDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Image\BinaryzationActivity.cs" />
+    <Compile Include="Image\BinaryzationDesigner.xaml.cs">
+      <DependentUpon>BinaryzationDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image\Common.cs" />
+    <Compile Include="Image\GrayActivity.cs" />
+    <Compile Include="Image\GrayDesigner.xaml.cs">
+      <DependentUpon>GrayDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image\ImageConvertBase64Activity.cs" />
+    <Compile Include="Image\ImageConvertBase64Designer.xaml.cs">
+      <DependentUpon>ImageConvertBase64Designer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image\LoadImageActivity.cs" />
+    <Compile Include="Image\LoadImageDesigner.xaml.cs">
+      <DependentUpon>LoadImageDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image\RemoveBackgroundActivity.cs" />
+    <Compile Include="Image\RemoveBackgroundActivityDesigner.xaml.cs">
+      <DependentUpon>RemoveBackgroundActivityDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image\RemoveNoiseActivity.cs" />
+    <Compile Include="Image\RemoveNoiseDesigner.xaml.cs">
+      <DependentUpon>RemoveNoiseDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Image\SaveImageActivity.cs" />
+    <Compile Include="Image\SaveImageDesigner.xaml.cs">
+      <DependentUpon>SaveImageDesigner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KeyBoard\HotKeyActivity.cs" />
     <Compile Include="KeyBoard\HotKeyDesigner.xaml.cs">
       <DependentUpon>HotKeyDesigner.xaml</DependentUpon>
@@ -295,6 +341,77 @@
       <DependentUpon>PropertyEditorResources.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mouse\UIExtend.cs" />
+    <Compile Include="NLP\BaiDuDNNActivity.cs" />
+    <Compile Include="NLP\BaiDuDNNDesigner.xaml.cs">
+      <DependentUpon>BaiDuDNNDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPEmotionActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPEmotionDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPEmotionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPLexicalAnalysisActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPLexicalAnalysisCustomActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPLexicalAnalysisCustomDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPLexicalAnalysisCustomDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPLexicalAnalysisDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPLexicalAnalysisDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPNewsActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPNewsDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPNewsDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPPointActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPPointDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPPointDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPSyntacticAnalysisActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPSyntacticAnalysisDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPSyntacticAnalysisDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPTextErrorActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPTextErrorDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPTextErrorDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPTextSimilarActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPTextSimilarDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPTextSimilarDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPWordActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPWordDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPWordDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NLP\BaiDuNLPWordSimilarActivity.cs" />
+    <Compile Include="NLP\BaiDuNLPWordSimilarDesigner.xaml.cs">
+      <DependentUpon>BaiDuNLPWordSimilarDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\AliOCRActivity.cs" />
+    <Compile Include="OCR\AliOCRDesigner.xaml.cs">
+      <DependentUpon>AliOCRDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\BaiDuOCRHighPrecisionActivity.cs" />
+    <Compile Include="OCR\BaiDuOCRHighPrecisionDesigner.xaml.cs">
+      <DependentUpon>BaiDuOCRHighPrecisionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\BaiDuOCRLocationActivity.cs" />
+    <Compile Include="OCR\BaiDuOCRLocationDesigner.xaml.cs">
+      <DependentUpon>BaiDuOCRLocationDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\BaiDuOCRLocationHighActivity.cs" />
+    <Compile Include="OCR\BaiDuOCRLocationHighDesigner.xaml.cs">
+      <DependentUpon>BaiDuOCRLocationHighDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\BaiDuOCRWebImageActivity.cs" />
+    <Compile Include="OCR\BaiDuOCRWebImageDesigner.xaml.cs">
+      <DependentUpon>BaiDuOCRWebImageDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\OcrActivity.cs" />
+    <Compile Include="OCR\OcrDesigner.xaml.cs">
+      <DependentUpon>OcrDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\OcrResult.cs" />
+    <Compile Include="OCR\Pos.cs" />
+    <Compile Include="OCR\Prism_Wordsinfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -477,6 +594,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Browser\NewTabDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Browser\OpenBrowserDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -486,6 +607,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Browser\SetWebAttrDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Browser\TabSwitchDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -561,6 +686,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Image\BinaryzationDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\GrayDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\ImageConvertBase64Designer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\LoadImageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\RemoveBackgroundActivityDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\RemoveNoiseDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\SaveImageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="KeyBoard\HotKeyDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -582,6 +735,74 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Mouse\PropertyEditorResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuDNNDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPEmotionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPLexicalAnalysisCustomDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPLexicalAnalysisDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPNewsDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPPointDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPSyntacticAnalysisDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPTextErrorDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPTextSimilarDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPWordDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NLP\BaiDuNLPWordSimilarDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OCR\AliOCRDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OCR\BaiDuOCRHighPrecisionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OCR\BaiDuOCRLocationDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OCR\BaiDuOCRLocationHighDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OCR\BaiDuOCRWebImageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OCR\OcrDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -659,6 +880,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Browser\TabSwitch.png" />
+    <Resource Include="Resources\Browser\NewTab.png" />
+    <Resource Include="Resources\OCR\ALiOCR.png" />
+    <Resource Include="Resources\OCR\OCR.png" />
+    <Resource Include="Resources\NLP\nlp.png" />
+    <Resource Include="Resources\Image\image.png" />
+    <Resource Include="Resources\Image\ImageConvertBase64.png" />
+    <Resource Include="Resources\Image\LoadImage.png" />
+    <Resource Include="Resources\Image\SaveImage.png" />
     <Resource Include="activity.config_ja.xml" />
     <Resource Include="activity.config_zh.xml" />
     <Content Include="Interop.SHDocVw.dll" />

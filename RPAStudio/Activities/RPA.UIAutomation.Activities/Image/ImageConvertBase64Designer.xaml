@@ -1,0 +1,37 @@
+﻿<sap:ActivityDesigner x:Class="ImageOperaActivity.ImageConvertBase64Designer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:local="clr-namespace:ImageOperaActivity"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"
+    xmlns:sadc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"/>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+    <pslc:CollapsableActivity >
+        <Grid  Height="30">
+            <sapv:ExpressionTextBox Name="FileNameTextBox" MaxLines="1" HintText="File name.Text must be quoted"
+                                    Expression="{Binding Path=ModelItem.FileName, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }" 
+                                    ExpressionType="sys:String"
+                                    OwnerActivity="{Binding Path=ModelItem}" Margin="0,0,25,0" />
+            <Button x:Name="button" Content="..." VerticalAlignment="Center" Width="20" Height="30" HorizontalAlignment="Right" Click="button_Click" />
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>

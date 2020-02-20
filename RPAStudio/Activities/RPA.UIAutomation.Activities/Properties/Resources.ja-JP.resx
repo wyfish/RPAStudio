@@ -621,4 +621,199 @@
   <data name="SpecifyTheURL.HintText" xml:space="preserve">
     <value>ブラウザで開かれたURLを指定します</value>
   </data>
+  <data name="Category12" xml:space="preserve">
+    <value>グレースケール</value>
+  </data>
+  <data name="Description100" xml:space="preserve">
+    <value>品詞分析の結果</value>
+  </data>
+  <data name="Description101" xml:space="preserve">
+    <value>語句分析の結果</value>
+  </data>
+  <data name="Description102" xml:space="preserve">
+    <value>文字列</value>
+  </data>
+  <data name="Description83" xml:space="preserve">
+    <value>画像のフルパスと名前。この属性を設定すると、入力項目のImage属性は無視されます。</value>
+  </data>
+  <data name="Description84" xml:space="preserve">
+    <value>処理する画像は、Image変数のみに対応します。この属性を設定すると、入力項目のFileName属性が無視されます。</value>
+  </data>
+  <data name="Description85" xml:space="preserve">
+    <value>処理が完了した画像。Image変数のみをサポートします。</value>
+  </data>
+  <data name="Description86" xml:space="preserve">
+    <value>読み込むファイルのパス。</value>
+  </data>
+  <data name="Description87" xml:space="preserve">
+    <value>Base 64を出力します。</value>
+  </data>
+  <data name="Description88" xml:space="preserve">
+    <value>読み込む画像のフルパス。</value>
+  </data>
+  <data name="Description89" xml:space="preserve">
+    <value>読み込む画像。Image変数のみをサポートします。</value>
+  </data>
+  <data name="Description90" xml:space="preserve">
+    <value>適切なノイズのしきい値は、より良いノイズ効果を達成することができます。</value>
+  </data>
+  <data name="Description91" xml:space="preserve">
+    <value>画像の完全なファイルパスと名前を保存します。</value>
+  </data>
+  <data name="Description92" xml:space="preserve">
+    <value>保存する画像。Image変数のみをサポートします。</value>
+  </data>
+  <data name="Description93" xml:space="preserve">
+    <value>あなたのAPIKey。</value>
+  </data>
+  <data name="Description94" xml:space="preserve">
+    <value>あなたのSecretKey。</value>
+  </data>
+  <data name="Description95" xml:space="preserve">
+    <value>テキストの内容</value>
+  </data>
+  <data name="Description96" xml:space="preserve">
+    <value>接辞の結果を出力して、各語の確率値を与えて、言葉の表現習慣に合っているかどうかを判断します。</value>
+  </data>
+  <data name="Description97" xml:space="preserve">
+    <value>テキストの内容は2048バイトまでです。</value>
+  </data>
+  <data name="Description98" xml:space="preserve">
+    <value>感情傾向分析結果。</value>
+  </data>
+  <data name="Description99" xml:space="preserve">
+    <value>分析対象テキスト</value>
+  </data>
+  <data name="DisplayName68" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="DisplayName69" xml:space="preserve">
+    <value>平均値法</value>
+  </data>
+  <data name="DisplayName70" xml:space="preserve">
+    <value>最大値法</value>
+  </data>
+  <data name="DisplayName71" xml:space="preserve">
+    <value>加重平均</value>
+  </data>
+  <data name="DisplayName72" xml:space="preserve">
+    <value>ノイズのしきい値</value>
+  </data>
+  <data name="Description103" xml:space="preserve">
+    <value>タイトル</value>
+  </data>
+  <data name="Description104" xml:space="preserve">
+    <value>要約結果の最大長さ。</value>
+  </data>
+  <data name="Description105" xml:space="preserve">
+    <value>指定された長さのニュースダイジェストを出力します。</value>
+  </data>
+  <data name="Description106" xml:space="preserve">
+    <value>コメントの内容は、最大10240バイトです。</value>
+  </data>
+  <data name="Description107" xml:space="preserve">
+    <value>二つのテキストの類似度の結果。</value>
+  </data>
+  <data name="Description108" xml:space="preserve">
+    <value>1:ホテル、2:KTV、3:麗人、4:グルメレストラン、5:旅行、6:健康、7:教育、8:ビジネス、9:不動産、10:自動車、11:生活、12:ショッピング、13:3 C、デフォルトは4(飲食グルメ)です。</value>
+  </data>
+  <data name="Description109" xml:space="preserve">
+    <value>モデルの選択は、デフォルト値はyes（webモデル）であり、noはqueryモデルである。</value>
+  </data>
+  <data name="Description110" xml:space="preserve">
+    <value>テキストの依存構文情報。</value>
+  </data>
+  <data name="Description111" xml:space="preserve">
+    <value>テキストを誤り訂正し、511バイトの制限を入力する。</value>
+  </data>
+  <data name="Description112" xml:space="preserve">
+    <value>エラーを提示し、正しいテキスト結果を提示します。</value>
+  </data>
+  <data name="Description113" xml:space="preserve">
+    <value>テキストの最大512バイトを比較します。</value>
+  </data>
+  <data name="Description114" xml:space="preserve">
+    <value>二つのテキストの類似度の結果。</value>
+  </data>
+  <data name="Description115" xml:space="preserve">
+    <value>デフォルトはBOWです。</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>ワードベクトルの検索結果を表示します。</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>入力ワード、最大64バイト</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>二つの語の類似度の結果。</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>あなたのAppCode。</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>結果の信頼度を確認する必要がありますか？デフォルトはfalseです。</value>
+  </data>
+  <data name="Description121" xml:space="preserve">
+    <value>画像認識結果。</value>
+  </data>
+  <data name="Description122" xml:space="preserve">
+    <value>画像の向きを検出するかどうかは、デフォルトでは検出されません。向きとは、入力画像が正常方向か反時計回りに90/180/270度回転することです。</value>
+  </data>
+  <data name="Description123" xml:space="preserve">
+    <value>識別結果の各行の信頼度を返しますか？</value>
+  </data>
+  <data name="Description124" xml:space="preserve">
+    <value>言語の種類を識別します。デフォルトはCHNuENGです。</value>
+  </data>
+  <data name="Description125" xml:space="preserve">
+    <value>単文字の位置を特定するかどうかは、デフォルトではbigです。</value>
+  </data>
+  <data name="Description126" xml:space="preserve">
+    <value>言語を検出するかどうかは、デフォルトでは検出されません。現在のサポート（中国語、英語、日本語、韓国語）</value>
+  </data>
+  <data name="Description127" xml:space="preserve">
+    <value>テキストの外側の多角形の頂点位置を返すかどうかは、単語の位置はサポートされていません。デフォルトはfalseです。</value>
+  </data>
+  <data name="Description128" xml:space="preserve">
+    <value>このフィールドはBrowser変数のみをサポートします。</value>
+  </data>
+  <data name="Description129" xml:space="preserve">
+    <value>タブページの順序</value>
+  </data>
+  <data name="Description130" xml:space="preserve">
+    <value>ラベルラベル/アドレスキー</value>
+  </data>
+  <data name="Description131" xml:space="preserve">
+    <value>閉じるブラウザページ。このフィールドはBrowser変数のみをサポートします。</value>
+  </data>
+  <data name="DisplayName73" xml:space="preserve">
+    <value>業界のタイプを評論します</value>
+  </data>
+  <data name="DisplayName74" xml:space="preserve">
+    <value>モデル</value>
+  </data>
+  <data name="DisplayName75" xml:space="preserve">
+    <value>画像の向きを検出</value>
+  </data>
+  <data name="DisplayName76" xml:space="preserve">
+    <value>言語の種類</value>
+  </data>
+  <data name="DisplayName77" xml:space="preserve">
+    <value>単文字の位置を指定</value>
+  </data>
+  <data name="DisplayName78" xml:space="preserve">
+    <value>検出言語</value>
+  </data>
+  <data name="DisplayName79" xml:space="preserve">
+    <value>頂点の位置に戻ります</value>
+  </data>
+  <data name="DisplayName80" xml:space="preserve">
+    <value>新しいラベルの住所</value>
+  </data>
+  <data name="DisplayName81" xml:space="preserve">
+    <value>タブページ</value>
+  </data>
+  <data name="DisplayName82" xml:space="preserve">
+    <value>キーワード</value>
+  </data>
 </root>

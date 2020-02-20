@@ -264,6 +264,7 @@
     </Compile>
     <Compile Include="Dialog\SelectFileActivity.cs" />
     <Compile Include="Dialog\SelectFolderActivity.cs" />
+    <Compile Include="Dialog\SelectSaveAsFileActivity.cs" />
     <Compile Include="Environment\CommonVariable.cs" />
     <Compile Include="Environment\GetEnvPath.cs" />
     <Compile Include="Environment\GetEnvPathDesigner.xaml.cs">
