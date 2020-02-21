@@ -136,7 +136,7 @@ namespace RPAStudio.ViewModel
             //初始化
             SettingItems.Clear();
 
-            var itemSettings = new SettingItem(this,SettingItem.enSettingItemType.Settings, ResxIF.GetString("SettingsText"), ResxIF.GetString("SetFromAddress"), "pack://application:,,,/Resources/Image/Windows/PackageManager/settings.png");
+            var itemSettings = new SettingItem(this,SettingItem.enSettingItemType.Settings, ResxIF.GetString("xSettings"), ResxIF.GetString("SetFromAddress"), "pack://application:,,,/Resources/Image/Windows/PackageManager/settings.png");
             SettingItems.Add(itemSettings);
 
             var itemProjectDependencies = new SettingItem(this, SettingItem.enSettingItemType.ProjectDependencies, ResxIF.GetString("ProjectDependencies"), ResxIF.GetString("ViewAllDependencies"), "pack://application:,,,/Resources/Image/Windows/PackageManager/project-dependencies.png");

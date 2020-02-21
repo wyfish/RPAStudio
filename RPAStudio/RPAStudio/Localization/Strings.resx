@@ -135,9 +135,6 @@
   <data name="CancelText" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="CloseContent" xml:space="preserve">
-    <value>Close</value>
-  </data>
   <data name="CodeSnippetText" xml:space="preserve">
     <value>CodeSnippet</value>
   </data>
@@ -231,9 +228,6 @@
   <data name="OpenProjectFolder" xml:space="preserve">
     <value>Open project folder</value>
   </data>
-  <data name="OpenText" xml:space="preserve">
-    <value>Open</value>
-  </data>
   <data name="OperatingRule" xml:space="preserve">
     <value>Operating rules</value>
   </data>
@@ -309,7 +303,7 @@
   <data name="SetFromAddress" xml:space="preserve">
     <value>Set the packet source address</value>
   </data>
-  <data name="SettingsText" xml:space="preserve">
+  <data name="xSettings" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="ShowAvailable" xml:space="preserve">
@@ -536,5 +530,89 @@
   </data>
   <data name="msgPublishProjectFailed" xml:space="preserve">
     <value>Project publishing is failed!</value>
+  </data>
+  <data name="xStart" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="xOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="xClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="xDesign" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="xFile" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="xNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="xPackageToolTip" xml:space="preserve">
+    <value>Manage nupkg packages, implement operations such as installing, uninstalling, and updating packages (Ctrl P)</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="xRecord" xml:space="preserve">
+    <value>Record</value>
+  </data>
+  <data name="xRecordTip" xml:space="preserve">
+    <value>Record multiple operations at once</value>
+  </data>
+  <data name="xActivityCenter" xml:space="preserve">
+    <value>Activity Center</value>
+  </data>
+  <data name="xActivityStore" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="xOpenActivityStore" xml:space="preserve">
+    <value>Open Activity Store</value>
+  </data>
+  <data name="xSourceCode" xml:space="preserve">
+    <value>Source Code</value>
+  </data>
+  <data name="xDump" xml:space="preserve">
+    <value>Dump</value>
+  </data>
+  <data name="xSubmit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="xSaveAndExit" xml:space="preserve">
+    <value>Save and exit</value>
+  </data>
+  <data name="xSaveAndExitTip" xml:space="preserve">
+    <value>Save and exit recording</value>
+  </data>
+  <data name="xMouse" xml:space="preserve">
+    <value>Mouse</value>
+  </data>
+  <data name="xMouseRecTip" xml:space="preserve">
+    <value>Mouse related recording functions</value>
+  </data>
+  <data name="xClick" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="xRightClick" xml:space="preserve">
+    <value>Right Click</value>
+  </data>
+  <data name="xDoubleClick" xml:space="preserve">
+    <value>Double Click</value>
+  </data>
+  <data name="xHover" xml:space="preserve">
+    <value>Hover</value>
+  </data>
+  <data name="xKeyboard" xml:space="preserve">
+    <value>Keyboard</value>
+  </data>
+  <data name="xKeyboardRecTip" xml:space="preserve">
+    <value>Keyboard-related recording functions</value>
+  </data>
+  <data name="xInput" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="xSendHotkey" xml:space="preserve">
+    <value>Send Hotkey</value>
   </data>
 </root>

@@ -5,13 +5,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPAStudio.Windows"
+        xmlns:lclz="clr-namespace:RPAStudio.Localization"
         xmlns:fluent="clr-namespace:Fluent;assembly=Fluent"
         mc:Ignorable="d"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         Icon="/Resources/Ico/RPAStudio.ico"
         DataContext="{Binding Recording, Source={StaticResource Locator}}"
-        Title="录制" Height="110" Width="200" TitleBackground="#FF1976D2" TitleForeground="White" ResizeMode="NoResize" >
+        Title="{x:Static lclz:Strings.xRecord}" Height="110" Width="200" TitleBackground="#FF1976D2" TitleForeground="White" ResizeMode="NoResize" >
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -27,7 +28,7 @@
         <Border BorderThickness="1" BorderBrush="Black" />
         <StackPanel Orientation="Horizontal">
             <fluent:RibbonGroupBox>
-                <fluent:Button Header="保存并退出" ToolTip="保存并退出录制功能"
+                <fluent:Button Header="{x:Static lclz:Strings.xSaveAndExit}" ToolTip="{x:Static lclz:Strings.xSaveAndExitTip}"
                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/save.png"
                                         LargeIcon="pack://application:,,,/Resources/Image/Windows/Recording/save.png"
                                         Command="{Binding SaveAndExitCommand}"
@@ -35,39 +36,39 @@
                                         FocusManager.IsFocusScope="True" />
             </fluent:RibbonGroupBox>
             <fluent:RibbonGroupBox>
-                <fluent:DropDownButton Header="鼠标" ToolTip="鼠标相关的录制功能"
+                <fluent:DropDownButton Header="{x:Static lclz:Strings.xMouse}" ToolTip="{x:Static lclz:Strings.xMouseRecTip}"
                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouse.png"
                                         LargeIcon="pack://application:,,,/Resources/Image/Windows/Recording/mouse.png"
                                         VerticalAlignment="Top"
                                         FocusManager.IsFocusScope="True">
-                    <fluent:MenuItem Header="单击" 
+                    <fluent:MenuItem Header="{x:Static lclz:Strings.xClick}" 
                                          Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouseclick.png"
                                          Command="{Binding MouseLeftClickCommand}"
                                         />
-                    <fluent:MenuItem Header="右击"
+                    <fluent:MenuItem Header="{x:Static lclz:Strings.xRightClick}"
                                          Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouseclick.png"
                                          Command="{Binding MouseRightClickCommand}"
                                         />
-                    <fluent:MenuItem Header="双击"
+                    <fluent:MenuItem Header="{x:Static lclz:Strings.xDoubleClick}"
                                          Icon="pack://application:,,,/Resources/Image/Windows/Recording/mouseclick.png"
                                          Command="{Binding MouseDoubleLeftClickCommand}"
                                         />
-                    <fluent:MenuItem Header="悬浮"
+                    <fluent:MenuItem Header="{x:Static lclz:Strings.xHover}"
                                          Icon="pack://application:,,,/Resources/Image/Windows/Recording/hover.png"
                                          Command="{Binding MouseHoverCommand}"
                                         />
                 </fluent:DropDownButton>
-                <fluent:DropDownButton Header="键盘" ToolTip="键盘相关的录制功能"
+                <fluent:DropDownButton Header="{x:Static lclz:Strings.xKeyboard}" ToolTip="{x:Static lclz:Strings.xKeyboardRecTip}"
                                         Icon="pack://application:,,,/Resources/Image/Windows/Recording/keyboard.png"
                                         LargeIcon="pack://application:,,,/Resources/Image/Windows/Recording/keyboard.png"
                                         VerticalAlignment="Top"
                                         Margin="10,0,0,0"
                                         FocusManager.IsFocusScope="True">
-                    <fluent:MenuItem Header="输入"
+                    <fluent:MenuItem Header="{x:Static lclz:Strings.xInput}"
                                          Icon="pack://application:,,,/Resources/Image/Windows/Recording/keyboard.png"
                                          Command="{Binding KeyboardInputCommand}"
                                         />
-                    <fluent:MenuItem Header="发送热键"
+                    <fluent:MenuItem Header="{x:Static lclz:Strings.xSendHotkey}"
                                          Icon="pack://application:,,,/Resources/Image/Windows/Recording/hotkey.png"
                                          Command="{Binding KeyboardHotKeyCommand}"
                                         />

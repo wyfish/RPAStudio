@@ -159,9 +159,6 @@
   <data name="ClearAll.ToolTip" xml:space="preserve">
     <value>すべてクリア</value>
   </data>
-  <data name="Close.Header" xml:space="preserve">
-    <value>閉じる</value>
-  </data>
   <data name="CodeSnippet.Title" xml:space="preserve">
     <value>コードスニペット</value>
   </data>
@@ -213,9 +210,6 @@
   <data name="Description.Text" xml:space="preserve">
     <value>説明</value>
   </data>
-  <data name="Design.Header" xml:space="preserve">
-    <value>デザイン</value>
-  </data>
   <data name="DirFieldCheck.ToolTip" xml:space="preserve">
     <value>保存先フィールドの検証に成功しました</value>
   </data>
@@ -230,9 +224,6 @@
   </data>
   <data name="ExpandAll.ToolTip" xml:space="preserve">
     <value>すべて展開</value>
-  </data>
-  <data name="File.Header" xml:space="preserve">
-    <value>ファイル</value>
   </data>
   <data name="FlowChart.Header" xml:space="preserve">
     <value>フローチャート</value>
@@ -275,9 +266,6 @@
   </data>
   <data name="NameFieldCheck.ToolTip" xml:space="preserve">
     <value>名前フィールドの検証に成功しました</value>
-  </data>
-  <data name="New.Header" xml:space="preserve">
-    <value>新規</value>
   </data>
   <data name="NewProject.Text" xml:space="preserve">
     <value>新規プロジェクト</value>
@@ -417,9 +405,6 @@
   <data name="SequenceDiagram.ToolTip" xml:space="preserve">
     <value>シーケンス（Ctrl+N）</value>
   </data>
-  <data name="Settings.Header" xml:space="preserve">
-    <value>設定</value>
-  </data>
   <data name="ShowAllFiles.ToolTip" xml:space="preserve">
     <value>すべてのファイルを表示</value>
   </data>
@@ -434,9 +419,6 @@
   </data>
   <data name="splashSub.Text" xml:space="preserve">
     <value>Robotic Process Automation Platform</value>
-  </data>
-  <data name="Start.Header" xml:space="preserve">
-    <value>スタート</value>
   </data>
   <data name="Start2.Header" xml:space="preserve">
     <value>開始</value>

@@ -135,9 +135,6 @@
   <data name="CancelText" xml:space="preserve">
     <value>キャンセル</value>
   </data>
-  <data name="CloseContent" xml:space="preserve">
-    <value>閉じる</value>
-  </data>
   <data name="CodeSnippetText" xml:space="preserve">
     <value>コードスニペット</value>
   </data>
@@ -231,9 +228,6 @@
   <data name="OpenProjectFolder" xml:space="preserve">
     <value>プロジェクトフォルダーを開く</value>
   </data>
-  <data name="OpenText" xml:space="preserve">
-    <value>開く</value>
-  </data>
   <data name="OperatingRule" xml:space="preserve">
     <value>運用ルール</value>
   </data>
@@ -309,7 +303,7 @@
   <data name="SetFromAddress" xml:space="preserve">
     <value>設定パケットの送信元アドレス</value>
   </data>
-  <data name="SettingsText" xml:space="preserve">
+  <data name="xSettings" xml:space="preserve">
     <value>設定</value>
   </data>
   <data name="ShowAvailable" xml:space="preserve">
@@ -536,5 +530,89 @@
   </data>
   <data name="msgPublishProjectFailed" xml:space="preserve">
     <value>プロジェクトの公開が失敗しました！</value>
+  </data>
+  <data name="xStart" xml:space="preserve">
+    <value>スタート</value>
+  </data>
+  <data name="xOpen" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="xClose" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="xDesign" xml:space="preserve">
+    <value>デザイン</value>
+  </data>
+  <data name="xFile" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="xNew" xml:space="preserve">
+    <value>新規</value>
+  </data>
+  <data name="xPackageToolTip" xml:space="preserve">
+    <value>nupkgパッケージの管理、パッケージのインストール、アンインストール、更新などの操作（Ctrl P）</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="xRecord" xml:space="preserve">
+    <value>記録</value>
+  </data>
+  <data name="xRecordTip" xml:space="preserve">
+    <value>一度に複数の操作を記録します</value>
+  </data>
+  <data name="xActivityCenter" xml:space="preserve">
+    <value>アクティビティセンター</value>
+  </data>
+  <data name="xActivityStore" xml:space="preserve">
+    <value>ストア</value>
+  </data>
+  <data name="xOpenActivityStore" xml:space="preserve">
+    <value>アクティビティストアを開きます</value>
+  </data>
+  <data name="xSourceCode" xml:space="preserve">
+    <value>ソースコード</value>
+  </data>
+  <data name="xDump" xml:space="preserve">
+    <value>Dump</value>
+  </data>
+  <data name="xSubmit" xml:space="preserve">
+    <value>提出</value>
+  </data>
+  <data name="xSaveAndExit" xml:space="preserve">
+    <value>保存して終了</value>
+  </data>
+  <data name="xSaveAndExitTip" xml:space="preserve">
+    <value>記録を保存して終了する</value>
+  </data>
+  <data name="xMouse" xml:space="preserve">
+    <value>マウス</value>
+  </data>
+  <data name="xMouseRecTip" xml:space="preserve">
+    <value>マウス関連の記録機能</value>
+  </data>
+  <data name="xClick" xml:space="preserve">
+    <value>クリック</value>
+  </data>
+  <data name="xRightClick" xml:space="preserve">
+    <value>右クリック</value>
+  </data>
+  <data name="xDoubleClick" xml:space="preserve">
+    <value>ダブルクリック</value>
+  </data>
+  <data name="xHover" xml:space="preserve">
+    <value>ホバー</value>
+  </data>
+  <data name="xKeyboard" xml:space="preserve">
+    <value>キーボード</value>
+  </data>
+  <data name="xKeyboardRecTip" xml:space="preserve">
+    <value>キーボード関連の記録機能</value>
+  </data>
+  <data name="xInput" xml:space="preserve">
+    <value>入力</value>
+  </data>
+  <data name="xSendHotkey" xml:space="preserve">
+    <value>ホットキーを送信</value>
   </data>
 </root>

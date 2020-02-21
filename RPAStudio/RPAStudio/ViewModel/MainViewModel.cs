@@ -2125,6 +2125,7 @@ namespace RPAStudio.ViewModel
 
 
         #region Binding from MainContent.xaml
+        // TODO: P_xxx should replace to {x.Static ...} in xaml.
         // 设置
         public string P_CheckUpdates {
             get { return GetResString("CheckUpdates.Text"); }
@@ -2141,14 +2142,14 @@ namespace RPAStudio.ViewModel
         }
 
         // 文件
-        public string P_File {
-            get { return GetResString("File.Header"); }
-        }
+        //public string P_File {
+        //    get { return GetStrings("xFile"); }
+        //}
 
-        // 新建
-        public string P_New {
-            get { return GetResString("New.Header"); }
-        }
+        //// 新建
+        //public string P_New {
+        //    get { return GetStrings("New.Header"); }
+        //}
 
         // 序列图
         public string P_SequenceDiagram {
@@ -2233,11 +2234,6 @@ namespace RPAStudio.ViewModel
         // 包管理器
         public string P_PackageManager {
             get { return GetResString("PackageManager.Header"); }
-        }
-
-        // 管理nupkg包，实现安装、卸载、更新包等操作（Ctrl+P）
-        public string P_PackageManager_ToolTip {
-            get { return GetResString("PackageManager.ToolTip"); }
         }
 
         // 部署
@@ -2398,15 +2394,6 @@ namespace RPAStudio.ViewModel
         private string GetResString(string key)
         {
             return Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
-
-            //string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            //// Only 'zh' and 'ja' localizations are available. Others will be shown in English.
-            //if (isoCulture.Equals("zh") || isoCulture.Equals("ja"))
-            //{
-            //    return Properties.Resources.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
-            //}
-            //var en = new System.Globalization.CultureInfo("en");
-            //return Properties.Resources.ResourceManager.GetString(key, en);
         }
 
         #endregion

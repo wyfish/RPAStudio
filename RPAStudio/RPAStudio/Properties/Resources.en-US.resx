@@ -159,9 +159,6 @@
   <data name="ClearAll.ToolTip" xml:space="preserve">
     <value>Crear all</value>
   </data>
-  <data name="Close.Header" xml:space="preserve">
-    <value>Close</value>
-  </data>
   <data name="CodeSnippet.Title" xml:space="preserve">
     <value>Code snippet</value>
   </data>
@@ -213,9 +210,6 @@
   <data name="Description.Text" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="Design.Header" xml:space="preserve">
-    <value>Design</value>
-  </data>
   <data name="DirFieldCheck.ToolTip" xml:space="preserve">
     <value>Dir Check successed</value>
   </data>
@@ -230,9 +224,6 @@
   </data>
   <data name="ExpandAll.ToolTip" xml:space="preserve">
     <value>Expand All</value>
-  </data>
-  <data name="File.Header" xml:space="preserve">
-    <value>File</value>
   </data>
   <data name="FlowChart.Header" xml:space="preserve">
     <value>Flow chart</value>
@@ -275,9 +266,6 @@
   </data>
   <data name="NameFieldCheck.ToolTip" xml:space="preserve">
     <value>Name check successed</value>
-  </data>
-  <data name="New.Header" xml:space="preserve">
-    <value>New</value>
   </data>
   <data name="NewProject.Text" xml:space="preserve">
     <value>New Project</value>
@@ -417,9 +405,6 @@
   <data name="SequenceDiagram.ToolTip" xml:space="preserve">
     <value>Sequence diagram（Ctrl+N）</value>
   </data>
-  <data name="Settings.Header" xml:space="preserve">
-    <value>Settings</value>
-  </data>
   <data name="ShowAllFiles.ToolTip" xml:space="preserve">
     <value>Show all files</value>
   </data>
@@ -434,9 +419,6 @@
   </data>
   <data name="splashSub.Text" xml:space="preserve">
     <value>Robotic Process Automation Platform</value>
-  </data>
-  <data name="Start.Header" xml:space="preserve">
-    <value>Start</value>
   </data>
   <data name="Start2.Header" xml:space="preserve">
     <value>Start</value>

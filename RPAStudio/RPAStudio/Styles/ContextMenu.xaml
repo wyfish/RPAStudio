@@ -19,7 +19,7 @@
     </ContextMenu>
 
     <ContextMenu x:Key="SnippetsUserAddContextMenu">
-        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.xOpen}" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/snippet-file.png"/>
             </MenuItem.Icon>
@@ -32,7 +32,7 @@
     </ContextMenu>
 
     <ContextMenu x:Key="SnippetsContextMenu">
-        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.xOpen}" Command="{Binding OpenSnippetCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Dock/menu-open.png"/>
             </MenuItem.Icon>
@@ -68,7 +68,7 @@
 
     <!--项目目录上右击-->
     <ContextMenu x:Key="ProjectDirectoryContextMenu">
-        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.xOpen}" Command="{Binding OpenDirCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-dir.png"/>
             </MenuItem.Icon>
@@ -99,7 +99,7 @@
 
     <!--项目Main xaml上右击-->
     <ContextMenu x:Key="ProjectMainXamlContextMenu">
-        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.xOpen}" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
@@ -124,7 +124,7 @@
 
     <!--项目非Main的xaml上右击-->
     <ContextMenu x:Key="ProjectXamlContextMenu">
-        <MenuItem Header="{x:Static lclz:Strings.OpenText}" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.xOpen}" Command="{Binding OpenXamlCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/open-file.png"/>
             </MenuItem.Icon>
