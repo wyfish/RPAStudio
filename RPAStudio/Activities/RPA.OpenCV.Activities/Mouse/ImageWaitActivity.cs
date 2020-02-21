@@ -5,12 +5,12 @@ using Plugins.Shared.Library;
 
 namespace RPA.OpenCV.Activities.Mouse
 {
-    [Designer(typeof(CVActivityDesigner))]
-    public sealed class CVWaitActivity : CodeActivity
+    [Designer(typeof(ImageActionActivityDesigner))]
+    public sealed class ImageWaitActivity : CodeActivity
     {
         public new string DisplayName;
         [Browsable(false)]
-        public string _DisplayName { get { return "CV Wait"; } }
+        public string _DisplayName { get { return "Image Wait"; } }
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
@@ -83,7 +83,7 @@ namespace RPA.OpenCV.Activities.Mouse
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "Error on Executing CVWaitActivity()", e.Message);
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "Error on Executing ImageWaitActivity()", e.Message);
                 if (ContinueOnError.Get(context))
                 {
                 }

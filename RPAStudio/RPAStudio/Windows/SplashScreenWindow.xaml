@@ -20,7 +20,8 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid Width="650" Height="440">
-        <Image Source="pack://application:,,,/Resources/Image/Windows/SplashScreen/startup.png" ></Image>
+        <!--<Image Source="pack://application:,,,/Resources/Image/Windows/SplashScreen/startup.png" ></Image>-->
+        <Image Source="{Binding SplashImagePath}" ></Image>
         <!--<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel>
                 <TextBlock FontSize="100" Foreground="White" FontWeight="Bold" >RPAStudio</TextBlock>

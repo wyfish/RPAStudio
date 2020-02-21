@@ -5,7 +5,8 @@
     xmlns:src="clr-namespace:Plugins.Shared.Library.Converters;assembly=Plugins.Shared.Library"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
-    Title="构建数据表" MinHeight="300" MinWidth="400" ResizeMode="CanResizeWithGrip" 
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
+    Title="{x:Static lclz:Resources.xBuildingDataTable}" MinHeight="300" MinWidth="400" ResizeMode="CanResizeWithGrip" 
     Height="350" Width="500"
     WindowStartupLocation ="CenterScreen"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
@@ -309,8 +310,8 @@
     <DockPanel LastChildFill="true" Margin="10">
         
         <DockPanel Margin="0,10,0,0" DockPanel.Dock="Bottom" HorizontalAlignment="Right" LastChildFill="true">
-            <Button Click="CancelButton_Click" Content="取消" DockPanel.Dock="Right" Width="65" />
-            <Button Click="OkButton_Click" Name="OKButton" Content="确定" DockPanel.Dock="Right" Width="65" Margin="10,0" />
+            <Button Click="CancelButton_Click" Content="{x:Static lclz:Resources.xCancel}" DockPanel.Dock="Right" Width="65" />
+            <Button Click="OkButton_Click" Name="OKButton" Content="{x:Static lclz:Resources.xOK}" DockPanel.Dock="Right" Width="65" Margin="10,0" />
         </DockPanel>
 
         <DataGrid Name="TableDataGrid" 

@@ -93,7 +93,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
             if (!File.Exists(filePath))
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "文件不存在，请检查路径有效性");
+                // 文件不存在，请检查路径有效性
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("xFileNotExist"));
                 return;
             }
 
@@ -118,7 +119,8 @@ namespace RPA.Integration.Activities.ExcelPlugins
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "EXCEL执行过程出错", e.Message);
+                // EXCEL执行过程出错
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("xExcelExecError"), e.Message);
                 throw e;
             }
         }

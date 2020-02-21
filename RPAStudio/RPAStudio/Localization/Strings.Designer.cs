@@ -178,15 +178,6 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Close に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string CloseContent {
-            get {
-                return ResourceManager.GetString("CloseContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   CodeSnippet に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string CodeSnippetText {
@@ -259,7 +250,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Default packet source address に類似しているローカライズされた文字列を検索します。
+        ///   Default package sourcess に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DefaultSourceAddress {
             get {
@@ -340,7 +331,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Enter package source name here に類似しているローカライズされた文字列を検索します。
+        ///   New package source に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EnterPackageSourceNameHere {
             get {
@@ -349,7 +340,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Enter the packet source address here に類似しているローカライズされた文字列を検索します。
+        ///   http://newpackagesource に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EnterPacketSourceAddressHere {
             get {
@@ -457,6 +448,33 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   {0} Finished running, Time-consuming: {1} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string logFinished {
+            get {
+                return ResourceManager.GetString("logFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   +++++ Launch main window +++++ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string logLaunchMainWindow {
+            get {
+                return ResourceManager.GetString("logLaunchMainWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0} Start running に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string logStarted {
+            get {
+                return ResourceManager.GetString("logStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Could not open project configuration file \&quot;{0} \&quot;, remove this entry from the recent project list? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MB_CannotOpenProjectConfigFile {
@@ -516,6 +534,69 @@ namespace RPAStudio.Localization {
         public static string MoveUpPackageSource {
             get {
                 return ResourceManager.GetString("MoveUpPackageSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Package source name cannot be empty! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgPackageSourceNameEmpty {
+            get {
+                return ResourceManager.GetString("msgPackageSourceNameEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The package source name must be unique! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgPackageSourceNameNotUnique {
+            get {
+                return ResourceManager.GetString("msgPackageSourceNameNotUnique", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The package source path cannot be empty! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgPackageSourcePathEmpty {
+            get {
+                return ResourceManager.GetString("msgPackageSourcePathEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The package source address is invalid! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgPackageSourcePathInvalid {
+            get {
+                return ResourceManager.GetString("msgPackageSourcePathInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The project was successfully released.  {3}Name: {0}{3} Version: {1}{3} Location: {2}{3} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgProjectSuccessflyReleased {
+            get {
+                return ResourceManager.GetString("msgProjectSuccessflyReleased", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Project publishing is failed! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgPublishProjectFailed {
+            get {
+                return ResourceManager.GetString("msgPublishProjectFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The package requires you to accept its license terms before installation. Are you sure? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgRequireAcceptLicense {
+            get {
+                return ResourceManager.GetString("msgRequireAcceptLicense", resourceCulture);
             }
         }
         
@@ -664,15 +745,6 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Open に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string OpenText {
-            get {
-                return ResourceManager.GetString("OpenText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Operating rules に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string OperatingRule {
@@ -727,7 +799,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Package source name に類似しているローカライズされた文字列を検索します。
+        ///   Name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PackageSourceName {
             get {
@@ -736,7 +808,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Packet source address に類似しているローカライズされた文字列を検索します。
+        ///   Source に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PacketSourceAddress {
             get {
@@ -1015,15 +1087,6 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   Settings に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingsText {
-            get {
-                return ResourceManager.GetString("SettingsText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Show available に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ShowAvailable {
@@ -1096,6 +1159,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   The software failed the authorization test, please register the product! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TheSoftwareFailedAuthorizationTest {
+            get {
+                return ResourceManager.GetString("TheSoftwareFailedAuthorizationTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Uninstall に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string UninstallText {
@@ -1132,7 +1204,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   User-defined packet source address に類似しているローカライズされた文字列を検索します。
+        ///   User defined package sources に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string UserDefinedSourceAddress {
             get {
@@ -1218,6 +1290,267 @@ namespace RPAStudio.Localization {
         public static string WorkflowVerificationOK {
             get {
                 return ResourceManager.GetString("WorkflowVerificationOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Activity Center に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xActivityCenter {
+            get {
+                return ResourceManager.GetString("xActivityCenter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Store に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xActivityStore {
+            get {
+                return ResourceManager.GetString("xActivityStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Click に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xClick {
+            get {
+                return ResourceManager.GetString("xClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Close に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xClose {
+            get {
+                return ResourceManager.GetString("xClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Design に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDesign {
+            get {
+                return ResourceManager.GetString("xDesign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Double Click に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDoubleClick {
+            get {
+                return ResourceManager.GetString("xDoubleClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dump に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDump {
+            get {
+                return ResourceManager.GetString("xDump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xFile {
+            get {
+                return ResourceManager.GetString("xFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Hover に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xHover {
+            get {
+                return ResourceManager.GetString("xHover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Input に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xInput {
+            get {
+                return ResourceManager.GetString("xInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Keyboard に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xKeyboard {
+            get {
+                return ResourceManager.GetString("xKeyboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Keyboard-related recording functions に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xKeyboardRecTip {
+            get {
+                return ResourceManager.GetString("xKeyboardRecTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Mouse に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xMouse {
+            get {
+                return ResourceManager.GetString("xMouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Mouse related recording functions に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xMouseRecTip {
+            get {
+                return ResourceManager.GetString("xMouseRecTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   New に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xNew {
+            get {
+                return ResourceManager.GetString("xNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xOpen {
+            get {
+                return ResourceManager.GetString("xOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open Activity Store に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xOpenActivityStore {
+            get {
+                return ResourceManager.GetString("xOpenActivityStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Operation に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xOperation {
+            get {
+                return ResourceManager.GetString("xOperation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Manage nupkg packages, implement operations such as installing, uninstalling, and updating packages (Ctrl P) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xPackageToolTip {
+            get {
+                return ResourceManager.GetString("xPackageToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Record に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xRecord {
+            get {
+                return ResourceManager.GetString("xRecord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Record multiple operations at once に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xRecordTip {
+            get {
+                return ResourceManager.GetString("xRecordTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Right Click に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xRightClick {
+            get {
+                return ResourceManager.GetString("xRightClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save and exit に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xSaveAndExit {
+            get {
+                return ResourceManager.GetString("xSaveAndExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save and exit recording に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xSaveAndExitTip {
+            get {
+                return ResourceManager.GetString("xSaveAndExitTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Send Hotkey に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xSendHotkey {
+            get {
+                return ResourceManager.GetString("xSendHotkey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xSettings {
+            get {
+                return ResourceManager.GetString("xSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Source Code に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xSourceCode {
+            get {
+                return ResourceManager.GetString("xSourceCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Start に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xStart {
+            get {
+                return ResourceManager.GetString("xStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Submit に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xSubmit {
+            get {
+                return ResourceManager.GetString("xSubmit", resourceCulture);
             }
         }
     }

@@ -7,6 +7,7 @@
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
     xmlns:sd="clr-namespace:System.Data;assembly=System.Data" 
     xmlns:local="clr-namespace:RPA.Core.Activities.DataTableActivity"
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
     xmlns:themes="http://schemas.actiprosoftware.com/winfx/xaml/themes" 
     xmlns:sys="clr-namespace:System;assembly=mscorlib" 
     xmlns:src="clr-namespace:Plugins.Shared.Library.Converters;assembly=Plugins.Shared.Library"
@@ -15,7 +16,7 @@
     Padding="0" 
     WindowResizeMode="CanResizeWithGrip" 
     WindowSizeToContent="Manual" MinWidth="540" MinHeight="380"
-    Title="配置向导" 
+    Title="{x:Static lclz:Resources.xConfigurationWizard}" 
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     >
 
@@ -59,26 +60,26 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <DockPanel Margin="1" LastChildFill="false">
-            <Label DockPanel.Dock="Left" Content="数据表(输入)" />
+            <Label DockPanel.Dock="Left" Content="{x:Static lclz:Resources.xDataSheetInput}" />
             
             <sapv:ExpressionTextBox DockPanel.Dock="Left" Width="120" MaxLines="1" 
-                                    HintText="数据表(输入)"
+                                    HintText="{x:Static lclz:Resources.xDataSheetInput}"
                                     ExpressionType="{x:Type sd:DataTable}" 
                                     Expression="{Binding Path=ModelItem.DataTable, 
                                         Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
                                     OwnerActivity="{Binding Path=ModelItem}" />
             
             <sapv:ExpressionTextBox DockPanel.Dock="Right" Width="120" UseLocationExpression="true" MaxLines="1"
-                                    HintText="数据表(输出)"
+                                    HintText="{x:Static lclz:Resources.xDataSheetOutput}"
                                     ExpressionType="{x:Type sd:DataTable}" 
                                     Expression="{Binding Path=ModelItem.OutputDataTable, 
                 Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out, Mode=TwoWay}"
                                     
                                     OwnerActivity="{Binding Path=ModelItem}" />
-            <Label DockPanel.Dock="Right" Content="数据表(输出)" />
+            <Label DockPanel.Dock="Right" Content="{x:Static lclz:Resources.xDataSheetOutput}" />
         </DockPanel>
         <TabControl Grid.Row="1" Margin="1,10,1,0">
-            <TabItem Header="过滤行">
+            <TabItem Header="{x:Static lclz:Resources.xFilterRows}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid IsSharedSizeScope="true" Margin="0,5,0,5">
                         <Grid.RowDefinitions>
@@ -90,10 +91,10 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Margin="1" Content="行过滤模式" />
+                        <Label Margin="1" Content="{x:Static lclz:Resources.xRowFilteringMode}" />
                         <StackPanel Grid.Row="1" Margin="1" Orientation="Horizontal" HorizontalAlignment="Stretch">
-                            <RadioButton x:Name="KeepRowsRadio" GroupName="RowSelection" Content="保留" IsChecked="True" Margin="6,2,2,2" />
-                            <RadioButton x:Name="RemoveRowsRadio" GroupName="RowSelection" Content="删除" Margin="10,2,2,2" />
+                            <RadioButton x:Name="KeepRowsRadio" GroupName="RowSelection" Content="{x:Static lclz:Resources.xKeep}" IsChecked="True" Margin="6,2,2,2" />
+                            <RadioButton x:Name="RemoveRowsRadio" GroupName="RowSelection" Content="{x:Static lclz:Resources.xDelete}" Margin="10,2,2,2" />
                         </StackPanel>
                         <Grid Row="2" Margin="1">
                             <Grid.ColumnDefinitions>
@@ -102,9 +103,9 @@
                                 <ColumnDefinition Width="150" SharedSizeGroup="Col3" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" Content="列" />
-                            <Label Grid.Column="2" Content="操作" />
-                            <Label Grid.Column="3" Content="值" />
+                            <Label Grid.Column="1" Content="{x:Static lclz:Resources.xCol}" />
+                            <Label Grid.Column="2" Content="{x:Static lclz:Resources.xOperation}" />
+                            <Label Grid.Column="3" Content="{x:Static lclz:Resources.xVal}" />
                         </Grid>
                         <ItemsControl Grid.Row="3" ItemsSource="{Binding Path=Filters, Mode=TwoWay}">
                             <ItemsControl.ItemTemplate>
@@ -144,12 +145,12 @@
                                                 </ToggleButton.Style>
                                             </ToggleButton>
                                         </DockPanel>
-                                        <sapv:ExpressionTextBox Grid.Column="1" HintText="列" Margin="1" Expression="{Binding Column , Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
+                                        <sapv:ExpressionTextBox Grid.Column="1" HintText="{x:Static lclz:Resources.xCol}" Margin="1" Expression="{Binding Column , Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}"
                                                                 OwnerActivity="{Binding Path=ModelItem, RelativeSource={RelativeSource AncestorType={x:Type sap:WorkflowElementDialog}}}" />
                                         <ComboBox Grid.Column="2" HorizontalContentAlignment="Center" Margin="1" 
                                                   ItemsSource="{Binding Source={StaticResource OperatorEnum}, Converter={StaticResource EnumsToDisplayNameConverter}}" 
                                                   SelectedItem="{Binding Operator , Converter={StaticResource EnumOperationConverter}}" />
-                                        <sapv:ExpressionTextBox Grid.Column="3" HintText="值" Margin="1"
+                                        <sapv:ExpressionTextBox Grid.Column="3" HintText="{x:Static lclz:Resources.xVal}" Margin="1"
                                                                 Expression="{Binding Operand , Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
                                                                 OwnerActivity="{Binding Path=ModelItem, RelativeSource={RelativeSource AncestorType={x:Type sap:WorkflowElementDialog}}}" 
                                                                 IsEnabled="{Binding Path=Operator, Converter={StaticResource EmptyFilterOperationToBooleanConverter}}" />
@@ -176,7 +177,7 @@
                     </Grid>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="输出列" VerticalAlignment="Top">
+            <TabItem Header="{x:Static lclz:Resources.xOutputCol}" VerticalAlignment="Top">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid IsSharedSizeScope="true" Margin="0,5,0,5">
                         <Grid.RowDefinitions>
@@ -188,10 +189,10 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Label Margin="1" Content="列选择模式" />
+                        <Label Margin="1" Content="{x:Static lclz:Resources.xColSelectMode}" />
                         <StackPanel Grid.Row="1" Margin="1" HorizontalAlignment="Stretch" Orientation="Horizontal">
-                            <RadioButton x:Name="KeepColumnsRadio" GroupName="ColSelection" Content="保留" IsChecked="True" Margin="6,2,2,2" />
-                            <RadioButton x:Name="RemoveColumnsRadio" GroupName="ColSelection" Content="删除" Margin="10,2,2,2" />
+                            <RadioButton x:Name="KeepColumnsRadio" GroupName="ColSelection" Content="{x:Static lclz:Resources.xKeep}" IsChecked="True" Margin="6,2,2,2" />
+                            <RadioButton x:Name="RemoveColumnsRadio" GroupName="ColSelection" Content="{x:Static lclz:Resources.xDelete}" Margin="10,2,2,2" />
                         </StackPanel>
                         <Grid Row="2" Margin="1">
                             <Grid.ColumnDefinitions>
@@ -199,7 +200,7 @@
                                 <ColumnDefinition Width="Auto" SharedSizeGroup="Col3" />
                                 <ColumnDefinition Width="Auto" SharedSizeGroup="Col4" />
                             </Grid.ColumnDefinitions>
-                            <Label Content="列" HorizontalAlignment="Center" />
+                            <Label Content="{x:Static lclz:Resources.xCol}" HorizontalAlignment="Center" />
                         </Grid>
                         <ItemsControl Grid.Row="3" ItemsSource="{Binding Path=SelectColumns}">
                             <ItemsControl.ItemTemplate>
@@ -210,7 +211,7 @@
                                             <ColumnDefinition Width="Auto" SharedSizeGroup="Col3" />
                                             <ColumnDefinition Width="Auto" SharedSizeGroup="Col4" />
                                         </Grid.ColumnDefinitions>
-                                        <sapv:ExpressionTextBox HintText="列" Margin="1" 
+                                        <sapv:ExpressionTextBox HintText="{x:Static lclz:Resources.xCol}" Margin="1" 
                                                                 IsEnabled="True"
                                                                 Expression="{Binding Column,
                                                                 Converter={StaticResource ArgumentToExpressionConverter}, 

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:RPAStudio"
              xmlns:uc="clr-namespace:RPAStudio.UserControls"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-             xmlns:localization="clr-namespace:RPAStudio.Localization"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
              xmlns:selectors="clr-namespace:RPAStudio.Selectors"
              xmlns:vs2013themes ="clr-namespace:AvalonDock.Themes.VS2013;assembly=AvalonDock.Themes.VS2013"
@@ -82,21 +82,21 @@
                     <xcad:LayoutAnchorablePaneGroup DockWidth="350" DockMinWidth="150">
                         <xcad:LayoutAnchorablePane x:Name="m_leftLayoutAnchorablePane">
                             <xcad:LayoutAnchorable
-                                       Title="{x:Static localization:Strings.ProjectText}"
+                                       Title="{x:Static lclz:Strings.ProjectText}"
                                        IconSource="pack://application:,,,/Resources/Image/Dock/project.png"
                                        CanHide="False"
                                        CanClose="False">
                                 <uc:ProjectContent />
                             </xcad:LayoutAnchorable>
                             <xcad:LayoutAnchorable
-                                       Title="{x:Static localization:Strings.ActivityText}"
+                                       Title="{x:Static lclz:Strings.ActivityText}"
                                        IconSource="pack://application:,,,/Resources/Image/Dock/activities.png"
                                        CanHide="False"
                                        CanClose="False">
                                 <uc:ActivitiesContent />
                             </xcad:LayoutAnchorable>
                             <xcad:LayoutAnchorable
-                                       Title="{x:Static localization:Strings.CodeSnippetText}"
+                                       Title="{x:Static lclz:Strings.CodeSnippetText}"
                                        IconSource="pack://application:,,,/Resources/Image/Dock/snippets.png"
                                        CanHide="False"
                                        CanClose="False">
@@ -111,21 +111,21 @@
                     <xcad:LayoutAnchorablePaneGroup DockWidth="300" DockMinWidth="150">
                         <xcad:LayoutAnchorablePane>
                             <xcad:LayoutAnchorable
-                                       Title="{x:Static localization:Strings.AttributesText}"
+                                       Title="{x:Static lclz:Strings.AttributesText}"
                                        IconSource="pack://application:,,,/Resources/Image/Dock/property.png"
                                        CanHide="False"
                                        CanClose="False">
                                 <ContentControl Content="{Binding WorkflowPropertyView}"/>
                             </xcad:LayoutAnchorable>
                             <xcad:LayoutAnchorable
-                                       Title="{x:Static localization:Strings.OutlineText}"
+                                       Title="{x:Static lclz:Strings.OutlineText}"
                                        IconSource="pack://application:,,,/Resources/Image/Dock/outline.png"
                                        CanHide="False"
                                        CanClose="False">
                                 <ContentControl Content="{Binding WorkflowOutlineView}"/>
                             </xcad:LayoutAnchorable>
                             <xcad:LayoutAnchorable
-                                       Title="源码"
+                                       Title="{x:Static lclz:Strings.xSourceCode}"
                                        IconSource="pack://application:,,,/Resources/Image/Dock/source.png"
                                        CanHide="False"
                                        CanClose="False">
@@ -138,7 +138,7 @@
                 <xcad:LayoutRoot.BottomSide >
                     <xcad:LayoutAnchorSide>
                         <xcad:LayoutAnchorGroup>
-                            <xcad:LayoutAnchorable Title="{x:Static localization:Strings.OutputText}"
+                            <xcad:LayoutAnchorable Title="{x:Static lclz:Strings.OutputText}"
                                      CanHide="False"
                                      CanClose="False"
                                      IconSource="pack://application:,,,/Resources/Image/Dock/output.png" AutoHideMinHeight="200" CanAutoHide="True">

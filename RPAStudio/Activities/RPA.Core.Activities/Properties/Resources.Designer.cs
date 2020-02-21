@@ -1832,5 +1832,365 @@ namespace RPA.Core.Activities.Properties {
                 return ResourceManager.GetString("WorkflowFilepathTip", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   自动检测列类型 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xAutoDetectColType {
+            get {
+                return ResourceManager.GetString("xAutoDetectColType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   自动递增 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xAutoIncrement {
+            get {
+                return ResourceManager.GetString("xAutoIncrement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   构建数据表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xBuildingDataTable {
+            get {
+                return ResourceManager.GetString("xBuildingDataTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   取消 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xCancel {
+            get {
+                return ResourceManager.GetString("xCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xCol {
+            get {
+                return ResourceManager.GetString("xCol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列分隔符 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xColDelimiter {
+            get {
+                return ResourceManager.GetString("xColDelimiter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列编辑向导 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xColEditWizard {
+            get {
+                return ResourceManager.GetString("xColEditWizard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列名 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xColName {
+            get {
+                return ResourceManager.GetString("xColName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   列选择模式 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xColSelectMode {
+            get {
+                return ResourceManager.GetString("xColSelectMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   配置向导 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xConfigurationWizard {
+            get {
+                return ResourceManager.GetString("xConfigurationWizard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   数据表(输入) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDataSheetInput {
+            get {
+                return ResourceManager.GetString("xDataSheetInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   数据表选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDatasheetOption {
+            get {
+                return ResourceManager.GetString("xDatasheetOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   数据表(输出) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDataSheetOutput {
+            get {
+                return ResourceManager.GetString("xDataSheetOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   数据类型 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDataType {
+            get {
+                return ResourceManager.GetString("xDataType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   默认值 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDefaultVal {
+            get {
+                return ResourceManager.GetString("xDefaultVal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   删除 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xDelete {
+            get {
+                return ResourceManager.GetString("xDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   允许为空 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xEmptyAllowed {
+            get {
+                return ResourceManager.GetString("xEmptyAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   过滤行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xFilterRows {
+            get {
+                return ResourceManager.GetString("xFilterRows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   首行作数据表头 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xFirstLineAsHeader {
+            get {
+                return ResourceManager.GetString("xFirstLineAsHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   固定格式选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xFixedFormatOption {
+            get {
+                return ResourceManager.GetString("xFixedFormatOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   格式选项 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xFormatOption {
+            get {
+                return ResourceManager.GetString("xFormatOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   生成数据表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xGenerateDataTable {
+            get {
+                return ResourceManager.GetString("xGenerateDataTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   忽略首行 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xIgnoreFirstLine {
+            get {
+                return ResourceManager.GetString("xIgnoreFirstLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   输入示例 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xInputExample {
+            get {
+                return ResourceManager.GetString("xInputExample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   输入数据表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xInputTable {
+            get {
+                return ResourceManager.GetString("xInputTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   输入数据表1 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xInputTable1 {
+            get {
+                return ResourceManager.GetString("xInputTable1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   输入数据表2 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xInputTable2 {
+            get {
+                return ResourceManager.GetString("xInputTable2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   附加数据表 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xJoinTableTitle {
+            get {
+                return ResourceManager.GetString("xJoinTableTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   保留 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xKeep {
+            get {
+                return ResourceManager.GetString("xKeep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   换行符 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xLineBreak {
+            get {
+                return ResourceManager.GetString("xLineBreak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   最大长度 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xMaxLength {
+            get {
+                return ResourceManager.GetString("xMaxLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   确定 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xOK {
+            get {
+                return ResourceManager.GetString("xOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   操作 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xOperation {
+            get {
+                return ResourceManager.GetString("xOperation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   输出列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xOutputCol {
+            get {
+                return ResourceManager.GetString("xOutputCol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   预定义列 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xPredefinedColumns {
+            get {
+                return ResourceManager.GetString("xPredefinedColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   预览 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xPreview {
+            get {
+                return ResourceManager.GetString("xPreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   预览测试 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xPreviewText {
+            get {
+                return ResourceManager.GetString("xPreviewText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行过滤模式 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xRowFilteringMode {
+            get {
+                return ResourceManager.GetString("xRowFilteringMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   唯一约束 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xUniqueConstraint {
+            get {
+                return ResourceManager.GetString("xUniqueConstraint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   值 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string xVal {
+            get {
+                return ResourceManager.GetString("xVal", resourceCulture);
+            }
+        }
     }
 }
