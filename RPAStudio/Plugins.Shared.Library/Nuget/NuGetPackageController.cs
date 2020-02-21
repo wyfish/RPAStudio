@@ -71,6 +71,11 @@ namespace Plugins.Shared.Library.Nuget
             get
             {
                 var nugetConfigFile = "Nuget.Default.Config";
+                string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+                if (locale.Equals("zh") || locale.Equals("ja"))
+                {
+                    nugetConfigFile = nugetConfigFile.Replace(".Config", "_" + locale + ".Config");
+                }
                 try
                 {
                     if (_settings == null) _settings = NuGet.Configuration.Settings.LoadSpecificSettings(System.Environment.CurrentDirectory, nugetConfigFile);
@@ -265,27 +270,41 @@ namespace Plugins.Shared.Library.Nuget
             if (availablePackages.Contains(package)) return;
 
             var repositories = SourceRepositoryProvider.GetRepositories();
-            foreach (var sourceRepository in repositories)
+            var repos = repositories.ToList();
+            List<SourceRepository> sortedRepositories = new List<SourceRepository>();
+            // 1.Local
+            var local = repos.Find(a => a.PackageSource.IsLocal);
+            if (local != null) sortedRepositories.Add(local);
+            // 2.nuget.org
+            var nugetorg = repos.Find(a => a.PackageSource.Name.Equals("nuget.org"));
+            if (nugetorg != null) sortedRepositories.Add(nugetorg);
+            // 3.Official
+            var official = repos.Find(a => a.PackageSource.IsOfficial);
+            if (official != null) sortedRepositories.Add(official);
+
+            foreach (var sourceRepository in sortedRepositories)
             {
+                SourcePackageDependencyInfo dependencyInfo = null;
+                // #11 Tighten the try-catch scope due to localization probrem.
                 try
                 {
                     var dependencyInfoResource = await sourceRepository.GetResourceAsync<DependencyInfoResource>();
-                    var dependencyInfo = await dependencyInfoResource.ResolvePackage(
+                    dependencyInfo = await dependencyInfoResource.ResolvePackage(
                         package, NuGetFramework, Logger, CancellationToken.None);
                     if (dependencyInfo == null) continue;
                     availablePackages.Add(dependencyInfo);
-                    foreach (var dependency in dependencyInfo.Dependencies)
-                    {
-                        var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);
-                        await GetPackageDependencies(identity, cacheContext, availablePackages);
-                    }
-
-                    break;//只要有一个源能搜索到就不再往下搜索了
                 }
                 catch (Exception err)
                 {
 
                 }
+                foreach (var dependency in dependencyInfo.Dependencies)
+                {
+                    var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);
+                    await GetPackageDependencies(identity, cacheContext, availablePackages);
+                }
+
+                break;//只要有一个源能搜索到就不再往下搜索了
                 
             }
         }
