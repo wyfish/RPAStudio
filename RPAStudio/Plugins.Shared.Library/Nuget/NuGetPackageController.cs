@@ -261,28 +261,49 @@ namespace Plugins.Shared.Library.Nuget
             return ret;
         }
 
+        private List<SourceRepository> GetSortedRepositories()
+        {
+            var tempRepos = SourceRepositoryProvider.GetRepositories().ToList();
+            var sortedRepositories = new List<SourceRepository>();
 
-
+            // 1.Local
+            int idx = tempRepos.FindIndex(a => a.PackageSource.IsLocal);
+            if (idx >= 0)
+            {
+                sortedRepositories.Add(tempRepos[idx]);
+                tempRepos.RemoveAt(idx);
+            }
+            // 2.nuget.org
+            idx = tempRepos.FindIndex(a => a.PackageSource.Name.Equals("nuget.org"));
+            if (idx >= 0)
+            {
+                sortedRepositories.Add(tempRepos[idx]);
+                tempRepos.RemoveAt(idx);
+            }
+            // 3.Official
+            idx = tempRepos.FindIndex(a => a.PackageSource.IsOfficial);
+            if (idx >= 0)
+            {
+                sortedRepositories.Add(tempRepos[idx]);
+                tempRepos.RemoveAt(idx);
+            }
+            // 4.others
+            foreach (var r in tempRepos)
+            {
+                sortedRepositories.Add(r);
+            }
+            return sortedRepositories;
+        }
 
 
         public async Task GetPackageDependencies(PackageIdentity package, SourceCacheContext cacheContext, ISet<SourcePackageDependencyInfo> availablePackages)
         {
             if (availablePackages.Contains(package)) return;
 
-            var repositories = SourceRepositoryProvider.GetRepositories();
-            var repos = repositories.ToList();
-            List<SourceRepository> sortedRepositories = new List<SourceRepository>();
-            // 1.Local
-            var local = repos.Find(a => a.PackageSource.IsLocal);
-            if (local != null) sortedRepositories.Add(local);
-            // 2.nuget.org
-            var nugetorg = repos.Find(a => a.PackageSource.Name.Equals("nuget.org"));
-            if (nugetorg != null) sortedRepositories.Add(nugetorg);
-            // 3.Official
-            var official = repos.Find(a => a.PackageSource.IsOfficial);
-            if (official != null) sortedRepositories.Add(official);
+            //var repositories = SourceRepositoryProvider.GetRepositories();
+            var repositories = GetSortedRepositories();
 
-            foreach (var sourceRepository in sortedRepositories)
+            foreach (var sourceRepository in repositories)
             {
                 SourcePackageDependencyInfo dependencyInfo = null;
                 // #11 Tighten the try-catch scope due to localization probrem.
