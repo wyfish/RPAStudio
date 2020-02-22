@@ -6,10 +6,5 @@
         {
             InitializeComponent();
         }
-
-        private void DataTableBuild(object sender, System.Windows.RoutedEventArgs e)
-        {
-
-        }
     }
 }

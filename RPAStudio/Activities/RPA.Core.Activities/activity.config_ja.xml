@@ -86,7 +86,7 @@
       <Activity Name="データ列を追加" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataColumn,   RPA.Core.Activities" ToolTip="指定されたDataTableにDataColumnを追加します"/>
       <Activity Name="データ行を削除" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataRow,   RPA.Core.Activities" ToolTip="指定されたDataTableからDataColumnを削除します"/>
       <Activity Name="データ行を追加" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataRow,      RPA.Core.Activities" ToolTip="指定したDataTableにDataRowを追加します"/>
-      <!--<Activity Name="单行操作"   Icon="DataTable/datatable.png"  TypeOf="DataTableActivity.ForEachRow,      DataTableActivity" ToolTip="对指定DataTable变量中的每一行执行一次操作"/>-->
+      <Activity Name="繰り返し(各行)" Icon="Resources/DataTable/datatable.png" TypeOf="RPA.Core.Activities.DataTableActivity.ForEachRow,      RPA.Core.Activities" ToolTip="指定されたDataTable変数の各行で操作を実行します"/>
       <Activity Name="行項目を取得" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="指定された列に基づいてDataRow変数から値を取得します"/>
       <Activity Name="重複行を削除" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="指定したDataTableから重複行データを削除します"/>
     </Group>

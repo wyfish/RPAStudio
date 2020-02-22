@@ -76,7 +76,7 @@
       <Activity Name="清除数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ClearDataTable,  RPA.Core.Activities" ToolTip="清除指定DataTable中的所有数据"/>
       <Activity Name="过滤数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.FilterDataTable, RPA.Core.Activities" ToolTip="允许您DataTable通过在“ 过滤器向导”窗口中指定条件来过滤变量。活动可以根据向导中指定的逻辑条件保留或删除行或列。
                 活动正文包含“ 过滤器向导”按钮，以便您可以随时访问向导并自定义设置"/>
-      <!--<Activity Name="单行操作"   Icon="DataTable/datatable.png"  TypeOf="DataTableActivity.ForEachRow,      DataTableActivity" ToolTip="对指定DataTable变量中的每一行执行一次操作"/>-->
+      <Activity Name="单行操作"   Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ForEachRow,      RPA.Core.Activities" ToolTip="对指定DataTable变量中的每一行执行一次操作"/>
       <Activity Name="生成数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GenerateDataTable,RPA.Core.Activities" ToolTip="从非结构化数据生成DataTable变量。通过此活动，您可以根据生成的表选择列和行分隔符。"/>
       <Activity Name="获取行数据" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="根据指定的列从DataRow变量中获取值"/>
       <Activity Name="附加数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.JoinDataTables,  RPA.Core.Activities" ToolTip="根据JoinType属性中指定的Join规则，使用彼此相同的值组合来自两个表的行"/>

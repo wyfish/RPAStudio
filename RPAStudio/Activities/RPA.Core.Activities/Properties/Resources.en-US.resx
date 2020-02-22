@@ -828,4 +828,16 @@
   <data name="xJoinTableTitle" xml:space="preserve">
     <value>Join Wizard</value>
   </data>
+  <data name="xForEach" xml:space="preserve">
+    <value>ForEach</value>
+  </data>
+  <data name="xIn" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="xDataTableFieldHint" xml:space="preserve">
+    <value>DataTable Variable</value>
+  </data>
+  <data name="xDataTableFieldHint" xml:space="preserve">
+    <value>DataTable Variable</value>
+  </data>
 </root>
