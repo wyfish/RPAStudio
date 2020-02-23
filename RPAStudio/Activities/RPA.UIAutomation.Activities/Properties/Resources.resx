@@ -816,4 +816,34 @@
   <data name="DisplayName82" xml:space="preserve">
     <value>关键字</value>
   </data>
+  <data name="DragScreen" xml:space="preserve">
+    <value>拖动选择</value>
+  </data>
+  <data name="DS_WindowTitle" xml:space="preserve">
+    <value>通过输入窗口标题，可以将图像搜索范围限制在窗口内。</value>
+  </data>
+  <data name="DN_MatchingThreshold" xml:space="preserve">
+    <value>匹配阈值</value>
+  </data>
+  <data name="DS_MatchingThreshold" xml:space="preserve">
+    <value>匹配阈值（默认值=91。必须80 &lt;= x &lt;= 100）</value>
+  </data>
+  <data name="DN_MatchingInterval" xml:space="preserve">
+    <value>匹配间隔[ms]</value>
+  </data>
+  <data name="DS_MatchingInterval" xml:space="preserve">
+    <value>匹配间隔[ms]（默认值= 2000 [ms]。必须为600 &lt;= x）</value>
+  </data>
+  <data name="DN_Retry" xml:space="preserve">
+    <value>重试次数</value>
+  </data>
+  <data name="DS_Retry" xml:space="preserve">
+    <value>重试次数（默认值= 600次）</value>
+  </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>图像匹配结果</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>捕获范围 : x={0}, y={1}, w={2}, h={3}, 搭配 : {4}, 重合度 : {5}</value>
+  </data>
 </root>

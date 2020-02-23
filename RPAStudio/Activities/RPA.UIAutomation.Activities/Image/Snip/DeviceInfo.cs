@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace RPA.OpenCV.Activities.Snip
+namespace RPA.UIAutomation.Activities.Image.Snip
 {
     public class DeviceInfo
     {

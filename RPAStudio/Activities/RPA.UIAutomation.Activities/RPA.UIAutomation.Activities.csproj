@@ -283,14 +283,22 @@
       <DependentUpon>BinaryzationDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Image\Common.cs" />
+    <Compile Include="Image\FlaxCV.cs" />
     <Compile Include="Image\GrayActivity.cs" />
     <Compile Include="Image\GrayDesigner.xaml.cs">
       <DependentUpon>GrayDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Image\ImageActionActivityDesigner.xaml.cs" />
+    <Compile Include="Image\ImageActionCommon.cs" />
+    <Compile Include="Image\ImageClickActivity.cs" />
     <Compile Include="Image\ImageConvertBase64Activity.cs" />
     <Compile Include="Image\ImageConvertBase64Designer.xaml.cs">
       <DependentUpon>ImageConvertBase64Designer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Image\ImageDoubleClickActivity.cs" />
+    <Compile Include="Image\ImageHoverActivity.cs" />
+    <Compile Include="Image\ImageRightClickActivity.cs" />
+    <Compile Include="Image\ImageWaitActivity.cs" />
     <Compile Include="Image\LoadImageActivity.cs" />
     <Compile Include="Image\LoadImageDesigner.xaml.cs">
       <DependentUpon>LoadImageDesigner.xaml</DependentUpon>
@@ -307,6 +315,12 @@
     <Compile Include="Image\SaveImageDesigner.xaml.cs">
       <DependentUpon>SaveImageDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Image\Snip\DeviceInfo.cs" />
+    <Compile Include="Image\Snip\ScreenHelper.cs" />
+    <Compile Include="Image\Snip\SnippingTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image\Snip\SnippingTool.Designer.cs" />
     <Compile Include="KeyBoard\HotKeyActivity.cs" />
     <Compile Include="KeyBoard\HotKeyDesigner.xaml.cs">
       <DependentUpon>HotKeyDesigner.xaml</DependentUpon>
@@ -509,6 +523,7 @@
     <Compile Include="Window\WindowShowDesigner.xaml.cs">
       <DependentUpon>WindowShowDesigner.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Image\Snip\SnippingTool.resx" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
@@ -693,6 +708,10 @@
     <Page Include="Image\GrayDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Image\ImageActionActivityDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="Image\ImageConvertBase64Designer.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -891,6 +910,9 @@
     <Resource Include="Resources\Image\SaveImage.png" />
     <Resource Include="activity.config_ja.xml" />
     <Resource Include="activity.config_zh.xml" />
+    <Content Include="Flax.CV.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Interop.SHDocVw.dll" />
     <Resource Include="Resources\Window\findwindow.png" />
     <Resource Include="Resources\Window\WindowActive.png" />

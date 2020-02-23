@@ -69,6 +69,24 @@
       <Activity Name="ウィンドウにアタッチ" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="開いているウィンドウにアタッチして、その中で複数のアクションを実行できるコンテナー。これは、デスクトップロガーの使用時に自動的に生成されます"/>
       <Activity Name="検索ウィンドウ" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="指定されたウィンドウを見つける"/>
     </Group>
+    <Group Name="画像">
+      <Group Name="ファイル">
+        <Activity Name="画像を読み込み" Icon="Resources/Image/LoadImage.png" TypeOf="RPA.UIAutomation.Activities.Image.LoadImageActivity,RPA.UIAutomation.Activities" ToolTip="画像を読み込み、画像変数に保存します"/>
+        <Activity Name="画像を保存" Icon="Resources/Image/SaveImage.png" TypeOf="RPA.UIAutomation.Activities.Image.SaveImageActivity,RPA.UIAutomation.Activities" ToolTip="指定したファイルに画像を保存します"/>
+        <Activity Name="画像を変換" Icon="Resources/Image/ImageConvertBase64.png" TypeOf="ImageOperaActivity.ImageConvertBase64Activity,RPA.UIAutomation.Activities" ToolTip="画像をBase64形式に変換します"/>
+        <Activity Name="グレースケール" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.GrayActivity,RPA.UIAutomation.Activities" ToolTip="画像をグレースケール処理します"/>
+        <Activity Name="背景を除去" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.RemoveBackgroundActivity,RPA.UIAutomation.Activities" ToolTip="画像から背景を除去します"/>
+        <Activity Name="ノイズを除去" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.RemoveNoiseActivity,RPA.UIAutomation.Activities" ToolTip="画像のノイズを除去します"/>
+        <Activity Name="二值化" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.BinaryzationActivity,RPA.UIAutomation.Activities" ToolTip="画像を二値化処理します"/>
+      </Group>
+      <Group Name="マウス">
+        <Activity Name="画像をクリック" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageClickActivity,RPA.UIAutomation.Activities" ToolTip="OpenCVのテンプレートマッチングを行い、テンプレート画像にマッチした個所をクリックします。"/>
+        <Activity Name="画像をダブルクリック" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageDoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="OpenCVのテンプレートマッチングを行い、テンプレート画像にマッチした個所をダブルクリックします。"/>
+        <Activity Name="画像を右クリック" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageRightClickActivity,RPA.UIAutomation.Activities" ToolTip="OpenCVのテンプレートマッチングを行い、テンプレート画像にマッチした個所を右クリックします。"/>
+        <Activity Name="画像上でホバー" Icon="Resources/Mouse/hover.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageHoverActivity,RPA.UIAutomation.Activities" ToolTip="OpenCVのテンプレートマッチングを行い、テンプレート画像にマッチした個所上にマウスを移動します。"/>
+        <Activity Name="画像を待つ" Icon="Resources/Attribute/WaitAttr.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageWaitActivity,RPA.UIAutomation.Activities" ToolTip="OpenCVのテンプレートマッチングを行い、テンプレート画像がマッチするまで待ちます。マウス操作は行いません。"/>
+      </Group>
+    </Group>
     <Group Name="ブラウザ">
       <Activity Name="ブラウザーを開く" Icon="Resources/Browser/OpenBrowser.png"   TypeOf="RPA.UIAutomation.Activities.Browser.OpenBrowser,RPA.UIAutomation.Activities" ToolTip="指定されたURLでブラウザを開き、その中で複数のアクティビティを実行します"/>
       <Activity Name="ブラウザーにアタッチ" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.AttachBrowser,RPA.UIAutomation.Activities" ToolTip="開いているブラウザに接続し、その中で複数のアクションを実行します"/>

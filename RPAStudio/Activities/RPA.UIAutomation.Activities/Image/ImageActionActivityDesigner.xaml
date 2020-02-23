@@ -1,9 +1,9 @@
-﻿<sap:ActivityDesigner x:Class="RPA.OpenCV.Activities.Mouse.ImageActionActivityDesigner"
+﻿<sap:ActivityDesigner x:Class="RPA.UIAutomation.Activities.Image.ImageActionActivityDesigner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
-    xmlns:lclz="clr-namespace:RPA.OpenCV.Activities.Properties"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" Loaded="ActivityDesigner_Loaded">
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>

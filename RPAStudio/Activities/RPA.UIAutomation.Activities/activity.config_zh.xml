@@ -69,6 +69,36 @@
       <Activity Name="附加窗口" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="可以附加到已打开的窗口并在其中执行多个操作的容器，使用Desktop记录器时也会自动生成此活动"/>
       <Activity Name="查找窗口" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="查找指定的窗口"/>
     </Group>
+    <Group Name="OCR">
+      <Group Name="百度云OCR">
+        <Activity Name="通用文字识别" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.OcrActivity,RPA.UIAutomation.Activities" ToolTip="通用文字识别"/>
+        <Activity Name="通用文字识别（高精度版）" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.BaiDuOCRHighPrecisionActivity,RPA.UIAutomation.Activities" ToolTip="通用文字识别（高精度版）"/>
+        <Activity Name="通用文字识别（含位置信息版）" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.BaiDuOCRLocationActivity,RPA.UIAutomation.Activities" ToolTip="通用文字识别（含位置信息版）"/>
+        <Activity Name="通用文字识别（含位置高精度版）" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.BaiDuOCRLocationHighActivity,RPA.UIAutomation.Activities" ToolTip="通用文字识别（含位置高精度版）"/>
+        <Activity Name="网络图片文字识别" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.BaiDuOCRWebImageActivity,RPA.UIAutomation.Activities" ToolTip="网络图片文字识别"/>
+      </Group>
+      <Group Name="阿里云OCR">
+        <Activity Name="印刷文字识别" Icon="Resources/OCR/ALiOCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.AliOCRActivity,RPA.UIAutomation.Activities" ToolTip="印刷文字识别"/>
+      </Group>
+    </Group>
+    <Group Name="Image">
+      <Group Name="文件">
+        <Activity Name="载入图像" Icon="Resources/Image/LoadImage.png" TypeOf="RPA.UIAutomation.Activities.Image.LoadImageActivity,RPA.UIAutomation.Activities" ToolTip="载入图像并将其保存到Image变量"/>
+        <Activity Name="保存图像" Icon="Resources/Image/SaveImage.png" TypeOf="RPA.UIAutomation.Activities.Image.SaveImageActivity,RPA.UIAutomation.Activities" ToolTip="使图像保存到指定的文件"/>
+        <Activity Name="图像转换" Icon="Resources/Image/ImageConvertBase64.png" TypeOf="ImageOperaActivity.ImageConvertBase64Activity,RPA.UIAutomation.Activities" ToolTip="将图像转换为Base64格式"/>
+        <Activity Name="灰度" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.GrayActivity,RPA.UIAutomation.Activities" ToolTip="图像进行灰度处理"/>
+        <Activity Name="去背景" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.RemoveBackgroundActivity,RPA.UIAutomation.Activities" ToolTip="使图像去除背景"/>
+        <Activity Name="去噪点" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.RemoveNoiseActivity,RPA.UIAutomation.Activities" ToolTip="使图像去除噪点"/>
+        <Activity Name="二值化" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.BinaryzationActivity,RPA.UIAutomation.Activities" ToolTip="图像二值化处理"/>
+      </Group>
+      <Group Name="鼠标">
+        <Activity Name="图像单击" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageClickActivity,RPA.UIAutomation.Activities" ToolTip="执行OpenCV模板匹配，然后单击与模板图像匹配的位置。"/>
+        <Activity Name="图像双击" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageDoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="执行OpenCV模板匹配，然后双击与模板图像匹配的位置。"/>
+        <Activity Name="图像右键点击" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageRightClickActivity,RPA.UIAutomation.Activities" ToolTip="执行OpenCV模板匹配，然后右键单击与模板图像匹配的位置。"/>
+        <Activity Name="图像悬浮" Icon="Resources/Mouse/hover.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageHoverActivity,RPA.UIAutomation.Activities" ToolTip="执行OpenCV模板匹配，然后将鼠标移到与模板图像匹配的位置。"/>
+        <Activity Name="图像等待" Icon="Resources/Attribute/WaitAttr.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageWaitActivity,RPA.UIAutomation.Activities" ToolTip="执行OpenCV模板匹配，然后等待模板图像匹配。没有鼠标操作。"/>
+      </Group>
+    </Group>
     <Group Name="浏览器">
       <Activity Name="打开浏览器" Icon="Resources/Browser/OpenBrowser.png"   TypeOf="RPA.UIAutomation.Activities.Browser.OpenBrowser,RPA.UIAutomation.Activities" ToolTip="在指定的URL上打开浏览器并在其中执行多个活动"/>
       <Activity Name="附加浏览器" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.AttachBrowser,RPA.UIAutomation.Activities" ToolTip="附加到已打开的浏览器并在其中执行多个操作"/>
@@ -82,6 +112,21 @@
       <Activity Name="关闭页面"   Icon="Resources/Browser/CloseTab.png"      TypeOf="RPA.UIAutomation.Activities.Browser.CloseTab,RPA.UIAutomation.Activities" ToolTip="关闭浏览器页面"/>
       <Activity Name="注入JS脚本" Icon="Resources/Browser/InsertJS.png"      TypeOf="RPA.UIAutomation.Activities.Browser.InsertJS,RPA.UIAutomation.Activities" ToolTip="在与UiElement对应的网页的上下文中执行JavaScript代码"/>
       <Activity Name="设置Web属性" Icon="Resources/Browser/SetWebAttr.png"   TypeOf="RPA.UIAutomation.Activities.Browser.SetWebAttr,RPA.UIAutomation.Activities" ToolTip="设置Input的值"/>
+    </Group>
+    <Group Name="NLP">
+      <Group Name="百度云NLP">
+        <Activity Name="词法分析" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPLexicalAnalysisActivity,RPA.UIAutomation.Activities" ToolTip="分词、词性标注、专名识别"/>
+        <Activity Name="词法分析（定制版）" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPLexicalAnalysisCustomActivity,RPA.UIAutomation.Activities" ToolTip="分词、词性标注、专名识别"/>
+        <Activity Name="依存句法分析" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPSyntacticAnalysisActivity,RPA.UIAutomation.Activities" ToolTip="自动分析文本中的依存句法结构信息"/>
+        <Activity Name="词向量表示" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPWordActivity,RPA.UIAutomation.Activities" ToolTip="查询词汇的词向量，实现文本的可计算"/>
+        <Activity Name="DNN语言模型" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuDNNActivity,RPA.UIAutomation.Activities" ToolTip="判断一句话是否符合语言表达习惯，输出分词结果并给出每个词在句子中的概率值"/>
+        <Activity Name="词义相似度" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPWordSimilarActivity,RPA.UIAutomation.Activities" ToolTip="计算两个给定词语的语义相似度"/>
+        <Activity Name="短文本相似度" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPTextSimilarActivity,RPA.UIAutomation.Activities" ToolTip="判断两个文本的相似度"/>
+        <Activity Name="评论观点抽取" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPPointActivity,RPA.UIAutomation.Activities" ToolTip="提取一个句子观点评论的情感属性"/>
+        <Activity Name="情感倾向分析" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPEmotionActivity,RPA.UIAutomation.Activities" ToolTip="对包含主观观点信息的文本进行情感极性类别（积极、消极、中性）的判断，并给出相应的置信度"/>
+        <Activity Name="文本纠错" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPTextErrorActivity,RPA.UIAutomation.Activities" ToolTip="提示错误并给出正确的文本结果"/>
+        <Activity Name="新闻摘要" Icon="Resources/NLP/nlp.png" TypeOf="RPA.UIAutomation.Activities.NLP.BaiDuNLPNewsActivity,RPA.UIAutomation.Activities" ToolTip="自动抽取新闻文本中的关键信息，进而生成指定长度的新闻摘要"/>
+      </Group>
     </Group>
   </Group>
 </activity.config>
