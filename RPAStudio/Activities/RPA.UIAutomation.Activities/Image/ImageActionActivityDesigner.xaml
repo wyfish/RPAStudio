@@ -41,13 +41,13 @@
                 </Button>
                 <Button Name="navigateButton" Click="NavigateButtonClick" Initialized="NavigateButtonInitialized" Visibility="Visible" Margin="240,0,0,60" Style="{StaticResource ButtonNoHover}">
                     <Button.Background>
-                        <ImageBrush ImageSource="pack://application:,,,/RPA.OpenCV.Activities;Component/Resources/Mouse/menu.png" Stretch="Fill"/>
+                        <ImageBrush ImageSource="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/menu.png" Stretch="Fill"/>
                     </Button.Background>
                     <Button.ContextMenu>
                         <ContextMenu Name="contextMenu">
                             <MenuItem Header="{x:Static lclz:Resources.ReselectIt}" Click="meauItemClickOne">
                                 <MenuItem.Icon>
-                                    <Image Source="pack://application:,,,/RPA.OpenCV.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
+                                    <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
                                 </MenuItem.Icon>
                             </MenuItem>
                         </ContextMenu>

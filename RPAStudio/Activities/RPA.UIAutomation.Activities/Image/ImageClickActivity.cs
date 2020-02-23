@@ -18,7 +18,7 @@ namespace RPA.UIAutomation.Activities.Image
         [Browsable(false)]
         public string icoPath {
             get {
-                return @"pack://application:,,,/RPA.OpenCV.Activities;Component/Resources/Mouse/mouseclick.png";
+                return @"pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png";
             }
         }
 
