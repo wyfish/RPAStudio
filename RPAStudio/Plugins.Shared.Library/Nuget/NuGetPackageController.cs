@@ -563,6 +563,7 @@ namespace Plugins.Shared.Library.Nuget
         {
             var packagePathResolver = new NuGet.Packaging.PackagePathResolver(PackagesInstallFolder);
             var installedPath = packagePathResolver.GetInstalledPath(identity);
+            if (installedPath == null) return null;
 
             PackageReaderBase packageReader;
             packageReader = new PackageFolderReader(installedPath);
