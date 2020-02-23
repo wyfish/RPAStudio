@@ -828,4 +828,13 @@
   <data name="xJoinTableTitle" xml:space="preserve">
     <value>附加数据表</value>
   </data>
+  <data name="xForEach" xml:space="preserve">
+    <value>ForEach</value>
+  </data>
+  <data name="xIn" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="xDataTableFieldHint" xml:space="preserve">
+    <value>DataTable变量</value>
+  </data>
 </root>

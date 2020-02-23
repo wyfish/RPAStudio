@@ -142,7 +142,7 @@
     <value>Enter UI Element</value>
   </data>
   <data name="Category3" xml:space="preserve">
-    <value>Enter</value>
+    <value>Input</value>
   </data>
   <data name="DisplayName4" xml:space="preserve">
     <value>Attributes</value>
@@ -815,5 +815,35 @@
   </data>
   <data name="DisplayName82" xml:space="preserve">
     <value>Keyword</value>
+  </data>
+  <data name="DragScreen" xml:space="preserve">
+    <value>Drag on Screen</value>
+  </data>
+  <data name="DS_WindowTitle" xml:space="preserve">
+    <value>By entering the window title, you can limit the image search range to within the window.</value>
+  </data>
+  <data name="DN_MatchingThreshold" xml:space="preserve">
+    <value>Matching Threshold</value>
+  </data>
+  <data name="DS_MatchingThreshold" xml:space="preserve">
+    <value>Matching Threshold (default value = 91. Must 80 &lt;= x &lt;= 100)</value>
+  </data>
+  <data name="DN_MatchingInterval" xml:space="preserve">
+    <value>Matching Interval [ms]</value>
+  </data>
+  <data name="DS_MatchingInterval" xml:space="preserve">
+    <value>Matching Interval [ms] (default value = 2000 [ms]. Must 600 &lt;= x)</value>
+  </data>
+  <data name="DN_Retry" xml:space="preserve">
+    <value>Number of Retries</value>
+  </data>
+  <data name="DS_Retry" xml:space="preserve">
+    <value>Retry count (default value = 600 times)</value>
+  </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>Image Matching Result</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>Capture Area : x={0}, y={1}, w={2}, h={3}, Matched : {4}, Matched Level : {5}</value>
   </data>
 </root>

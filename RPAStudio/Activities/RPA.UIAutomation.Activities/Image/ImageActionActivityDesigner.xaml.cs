@@ -9,7 +9,7 @@ using System.Windows.Controls.Primitives;
 using Plugins.Shared.Library.UiAutomation;
 using Plugins.Shared.Library.Window;
 
-namespace RPA.OpenCV.Activities.Mouse
+namespace RPA.UIAutomation.Activities.Image
 {
     /// <summary>
     /// ImageActionActivityDesigner.xaml の相互作用ロジック
@@ -22,8 +22,6 @@ namespace RPA.OpenCV.Activities.Mouse
         }
         private void HyperlinkClick(object sender, RoutedEventArgs e)
         {
-            //UiElement.OnSelected = UiElement_OnSelected;
-            //UiElement.StartWindowHighlight();
             SnipTemplateImage();
         }
 
@@ -55,7 +53,7 @@ namespace RPA.OpenCV.Activities.Mouse
             return screenshotsDir + @"\" + fileName;
         }
 
-        private void SaveByFileStream(Image img, string savePath)
+        private void SaveByFileStream(System.Drawing.Image img, string savePath)
         {
             if (img == null) return;
             
@@ -125,8 +123,6 @@ namespace RPA.OpenCV.Activities.Mouse
         //菜单项点击测试
         private void meauItemClickOne(object sender, RoutedEventArgs e)
         {
-            //UiElement.OnSelected = UiElement_OnSelected;
-            //UiElement.StartWindowHighlight();
             SnipTemplateImage();
         }
 

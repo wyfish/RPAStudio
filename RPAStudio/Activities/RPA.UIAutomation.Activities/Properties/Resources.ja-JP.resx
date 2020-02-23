@@ -816,4 +816,34 @@
   <data name="DisplayName82" xml:space="preserve">
     <value>キーワード</value>
   </data>
+  <data name="DragScreen" xml:space="preserve">
+    <value>ドラッグで選択</value>
+  </data>
+  <data name="DS_WindowTitle" xml:space="preserve">
+    <value>ウィンドウタイトルを入力すると、画像検索範囲をウィンドウ内に限定することができます。</value>
+  </data>
+  <data name="DN_MatchingThreshold" xml:space="preserve">
+    <value>マッチング閾値</value>
+  </data>
+  <data name="DS_MatchingThreshold" xml:space="preserve">
+    <value>マッチング閾値 (デフォルト値 = 91. Must 80 &lt;= x &lt;= 100)</value>
+  </data>
+  <data name="DN_MatchingInterval" xml:space="preserve">
+    <value>マッチング間隔[ms]</value>
+  </data>
+  <data name="DS_MatchingInterval" xml:space="preserve">
+    <value>マッチング間隔[ms] (デフォルト値 = 2000[ms]. Must 600 &lt;= x)</value>
+  </data>
+  <data name="DN_Retry" xml:space="preserve">
+    <value>リトライ回数</value>
+  </data>
+  <data name="DS_Retry" xml:space="preserve">
+    <value>リトライ回数 (デフォルト値 = 600回)</value>
+  </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>画像マッチング結果</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>キャプチャ範囲 : x={0}, y={1}, w={2}, h={3}, 一致 : {4} 一致度 : {5}</value>
+  </data>
 </root>

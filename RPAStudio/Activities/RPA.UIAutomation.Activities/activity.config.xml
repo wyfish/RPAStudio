@@ -69,6 +69,24 @@
       <Activity Name="Attach Window" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="A container that can be attached to an open window and perform multiple actions in it, which is also automatically generated when using the Desktop logger"/>
       <Activity Name="Search Window" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="Find the specified window"/>
     </Group>
+    <Group Name="Image">
+      <Group Name="File">
+        <Activity Name="Load Image" Icon="Resources/Image/LoadImage.png" TypeOf="RPA.UIAutomation.Activities.Image.LoadImageActivity,RPA.UIAutomation.Activities" ToolTip="Load image and save it to Image variable"/>
+        <Activity Name="Save Image" Icon="Resources/Image/SaveImage.png" TypeOf="RPA.UIAutomation.Activities.Image.SaveImageActivity,RPA.UIAutomation.Activities" ToolTip="Save the image to the specified file"/>
+        <Activity Name="Convert Image" Icon="Resources/Image/ImageConvertBase64.png" TypeOf="ImageOperaActivity.ImageConvertBase64Activity,RPA.UIAutomation.Activities" ToolTip="Convert images to Base64 format"/>
+        <Activity Name="Grayscale" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.GrayActivity,RPA.UIAutomation.Activities" ToolTip="Image grayscale processing"/>
+        <Activity Name="Remove Background" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.RemoveBackgroundActivity,RPA.UIAutomation.Activities" ToolTip="Remove background from image"/>
+        <Activity Name="Remove Noise" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.RemoveNoiseActivity,RPA.UIAutomation.Activities" ToolTip="Denoising the image"/>
+        <Activity Name="Binaryzation" Icon="Resources/Image/image.png" TypeOf="RPA.UIAutomation.Activities.Image.BinaryzationActivity,RPA.UIAutomation.Activities" ToolTip="Image binarization"/>
+      </Group>
+      <Group Name="Mouse">
+        <Activity Name="Image Click" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageClickActivity,RPA.UIAutomation.Activities" ToolTip="Perform OpenCV template matching and click on the location that matches the template image."/>
+        <Activity Name="Image DoubleClick" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageDoubleClickActivity,RPA.UIAutomation.Activities" ToolTip="Perform OpenCV template matching and double-click the location that matches the template image."/>
+        <Activity Name="Image RightClick" Icon="Resources/Mouse/mouseclick.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageRightClickActivity,RPA.UIAutomation.Activities" ToolTip="Perform OpenCV template matching, and right-click the location that matches the template image."/>
+        <Activity Name="Image Hover" Icon="Resources/Mouse/hover.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageHoverActivity,RPA.UIAutomation.Activities" ToolTip="Perform OpenCV template matching and move the mouse over the location that matches the template image."/>
+        <Activity Name="Image Wait" Icon="Resources/Attribute/WaitAttr.png"  TypeOf="RPA.UIAutomation.Activities.Image.ImageWaitActivity,RPA.UIAutomation.Activities" ToolTip="Perform OpenCV template matching and wait until the template image matches. No mouse operation."/>
+      </Group>
+    </Group>
     <Group Name="Browser">
       <Activity Name="Open Browser" Icon="Resources/Browser/OpenBrowser.png"   TypeOf="RPA.UIAutomation.Activities.Browser.OpenBrowser,RPA.UIAutomation.Activities" ToolTip="Open a browser on the specified URL and execute multiple activities in it"/>
       <Activity Name="Attach Browser" Icon="Resources/Browser/OpenBrowser.png" TypeOf="RPA.UIAutomation.Activities.Browser.AttachBrowser,RPA.UIAutomation.Activities" ToolTip="Attach to an open browser and perform multiple actions in it"/>

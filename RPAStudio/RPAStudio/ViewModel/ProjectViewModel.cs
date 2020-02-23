@@ -276,6 +276,13 @@ namespace RPAStudio.ViewModel
                     //When activity.config.xml is not found in the dll, it will report an error and go here without printing the error log
                 }
             }
+
+            //加载依赖的Exe (FlaxCV.exe)
+            string[] exe_files = Directory.GetFiles(targetDir, "*.exe", SearchOption.TopDirectoryOnly);//搜索TargetDir最外层目录下的exe文件
+            foreach (var exe_file in exe_files)
+            {
+                File.Copy(exe_file, Environment.CurrentDirectory + "\\" + Path.GetFileName(exe_file), true);
+            }
         }
 
         private System.Windows.Resources.StreamResourceInfo Get_Localized_activity_config_info(string dll_file_name_without_ext)

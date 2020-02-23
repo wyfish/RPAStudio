@@ -1262,6 +1262,7 @@ namespace RPAStudio.ViewModel
                         var identity = new PackageIdentity(jp.Name, ver_range.MinVersion);
 
                         var nuspec = NuGetPackageController.Instance.GetNuspecReaderInPackagesInstallFolder(identity);
+                        if (nuspec == null) continue;
 
                         var id = nuspec.GetId();
                         var title = nuspec.GetTitle();

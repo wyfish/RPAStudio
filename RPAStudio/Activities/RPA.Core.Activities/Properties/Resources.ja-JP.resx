@@ -828,4 +828,13 @@
   <data name="xJoinTableTitle" xml:space="preserve">
     <value>結合ウィザード</value>
   </data>
+  <data name="xForEach" xml:space="preserve">
+    <value>要素：</value>
+  </data>
+  <data name="xIn" xml:space="preserve">
+    <value>コレクション</value>
+  </data>
+  <data name="xDataTableFieldHint" xml:space="preserve">
+    <value>DataTable変数</value>
+  </data>
 </root>

@@ -3,9 +3,9 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Plugins.Shared.Library;
 
-namespace RPA.OpenCV.Activities.Mouse
+namespace RPA.UIAutomation.Activities.Image
 {
-    internal static class Common
+    internal static class ImageActionCommon
     {
         [DllImport("user32.dll")]
         private static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
@@ -23,12 +23,12 @@ namespace RPA.OpenCV.Activities.Mouse
         private static int _height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
         private static FlaxCV _cv;
 
-        static Common()
+        static ImageActionCommon()
         {
-            using (FileStream fs = new FileStream(FlaxCV._FlaxCV_exe, FileMode.Create))
-            {
-                fs.Write(Properties.Resources.Flax_CV, 0, Properties.Resources.Flax_CV.Length);
-            }
+            //using (FileStream fs = new FileStream(FlaxCV._FlaxCV_exe, FileMode.Create))
+            //{
+            //    fs.Write(Properties.Resources.Flax_CV, 0, Properties.Resources.Flax_CV.Length);
+            //}
             _cv = new FlaxCV();
         }
 
