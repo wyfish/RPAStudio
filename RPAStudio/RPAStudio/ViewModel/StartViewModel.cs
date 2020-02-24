@@ -17,8 +17,10 @@ namespace RPAStudio.ViewModel
     /// See http://www.galasoft.ch/mvvm
     /// </para>
     /// </summary>
+	// 开始页的视图模型
     public class StartViewModel : ViewModelBase
     {
+        // 对应的视图
         public UserControl m_view { get; set; }
 
         private RelayCommand<RoutedEventArgs> _loadedCommand;
@@ -26,6 +28,7 @@ namespace RPAStudio.ViewModel
         /// <summary>
         /// Gets the LoadedCommand.
         /// </summary>
+		// 窗体加载完成后触发
         public RelayCommand<RoutedEventArgs> LoadedCommand
         {
             get
@@ -49,6 +52,7 @@ namespace RPAStudio.ViewModel
 
             InitRecentProjects();
 
+            //注册事件
             Messenger.Default.Register<MessengerObjects.RecentProjectsModify> (this, (obj)=> {
                 Common.RunInUI(()=> {
                     InitRecentProjects();
@@ -64,6 +68,10 @@ namespace RPAStudio.ViewModel
             });
         }
 
+        /// <summary>
+        /// 项目设置修改后触发
+        /// </summary>
+        /// <param name="obj">参数对象</param>
         private void ProjectSettingsModify(ProjectSettingsViewModel obj)
         {
             XmlDocument doc = new XmlDocument();
@@ -94,6 +102,9 @@ namespace RPAStudio.ViewModel
             }
         }
 
+        /// <summary>
+        /// 初始化最近项目
+        /// </summary>
         private void InitRecentProjects()
         {
             RecentProjects.Clear();
@@ -138,6 +149,7 @@ namespace RPAStudio.ViewModel
         /// Sets and gets the RecentProjects property.
         /// Changes to that property's value raise the PropertyChanged event. 
         /// </summary>
+		// 最近项目列表
         public ObservableCollection<RecentProjectItem> RecentProjects
         {
             get
@@ -165,6 +177,7 @@ namespace RPAStudio.ViewModel
         /// <summary>
         /// Gets the NewProcessCommand.
         /// </summary>
+		// 新建序列
         public RelayCommand NewProcessCommand
         {
             get

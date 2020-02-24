@@ -62,7 +62,9 @@ namespace RPAStudio.ViewModel
             SimpleIoc.Default.Register<PublishProjectViewModel>();
             SimpleIoc.Default.Register<PackageManagerViewModel>();
             SimpleIoc.Default.Register<RecordingViewModel>();
-            SimpleIoc.Default.Register<SourceCodeViewModel>(); 
+            SimpleIoc.Default.Register<SourceCodeViewModel>();
+            SimpleIoc.Default.Register<SetUpViewModel>();
+
         }
 
         public SplashScreenViewModel SplashScreen
@@ -112,6 +114,14 @@ namespace RPAStudio.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<StartViewModel>();
+            }
+        }
+
+        public SetUpViewModel SetUp
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<SetUpViewModel>();
             }
         }
 

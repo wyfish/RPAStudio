@@ -30,9 +30,7 @@
                                     <uc:StartContent/>
                                 </fluent:BackstageTabItem>
                                 <fluent:BackstageTabItem x:Uid="Settings" Header="设置" >
-                                    <Grid>
-                                        <TextBlock x:Uid="NoFunction" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black">暂无功能</TextBlock>
-                                    </Grid>
+                                    <uc:SetUpContent/>
                                 </fluent:BackstageTabItem>
                                 <fluent:BackstageTabItem >
                                     <fluent:BackstageTabItem.Header>

@@ -333,6 +333,9 @@
     <Compile Include="UserControls\SearchTextBoxControl.xaml.cs">
       <DependentUpon>SearchTextBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SetUpContent.xaml.cs">
+      <DependentUpon>SetUpContent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SnippetsContent.xaml.cs">
       <DependentUpon>SnippetsContent.xaml</DependentUpon>
     </Compile>
@@ -368,6 +371,7 @@
     <Compile Include="ViewModel\RecordingViewModel.cs" />
     <Compile Include="ViewModel\RenameViewModel.cs" />
     <Compile Include="ViewModel\SettingItem.cs" />
+    <Compile Include="ViewModel\SetUpViewModel.cs" />
     <Compile Include="ViewModel\SnippetsViewModel.cs" />
     <Compile Include="ViewModel\SnippetTreeItem.cs" />
     <Compile Include="ViewModel\SourceCodeViewModel.cs" />
@@ -468,6 +472,10 @@
     </Page>
     <Page Include="UserControls\MainContent.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SetUpContent.xaml">
+      <SubType>Form</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SourceCodeContent.xaml">
@@ -918,6 +926,9 @@
     <Resource Include="Resources\Image\Windows\Recording\mouseclick.png" />
     <Resource Include="Resources\Image\Windows\Recording\save.png" />
     <Resource Include="Resources\Image\Windows\Recording\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image\Windows\SetUp\SetUp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
