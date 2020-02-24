@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPAStudio.UserControls"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
              mc:Ignorable="d" 
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
@@ -18,8 +19,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
-            <Button Command="{Binding RevertCommand}" Style="{StaticResource ToolBarButtonStyle}" Width="80" Height="25" Margin="5,0,0,0">丢弃</Button>
-            <Button Command="{Binding CommitCommand}" Style="{StaticResource ToolBarButtonStyle}" Width="80" Height="25" Margin="5,0,0,0">提交</Button>
+            <!--丢弃-->
+            <Button Content="{x:Static lclz:Strings.xDump}" Command="{Binding RevertCommand}" Style="{StaticResource ToolBarButtonStyle}" Width="80" Height="25" Margin="5,0,0,0"/>
+            <!--提交-->
+            <Button Content="{x:Static lclz:Strings.xSubmit}" Command="{Binding CommitCommand}" Style="{StaticResource ToolBarButtonStyle}" Width="80" Height="25" Margin="5,0,0,0"/>
         </StackPanel>
 
         <Border Grid.Row="1" BorderBrush="#FFC0C0C0" BorderThickness="1" Margin="1">

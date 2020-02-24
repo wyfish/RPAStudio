@@ -3,9 +3,9 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Plugins.Shared.Library;
 
-namespace RPA.OpenCV.Activities.Mouse
+namespace RPA.UIAutomation.Activities.Image
 {
-    internal static class Common
+    internal static class ImageActionCommon
     {
         [DllImport("user32.dll")]
         private static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
@@ -23,12 +23,12 @@ namespace RPA.OpenCV.Activities.Mouse
         private static int _height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
         private static FlaxCV _cv;
 
-        static Common()
+        static ImageActionCommon()
         {
-            using (FileStream fs = new FileStream(FlaxCV._FlaxCV_exe, FileMode.Create))
-            {
-                fs.Write(Properties.Resources.Flax_CV, 0, Properties.Resources.Flax_CV.Length);
-            }
+            //using (FileStream fs = new FileStream(FlaxCV._FlaxCV_exe, FileMode.Create))
+            //{
+            //    fs.Write(Properties.Resources.Flax_CV, 0, Properties.Resources.Flax_CV.Length);
+            //}
             _cv = new FlaxCV();
         }
 
@@ -48,7 +48,6 @@ namespace RPA.OpenCV.Activities.Mouse
                 _height = rect.bottom - rect.top;
             }
             var cvRet = _cv.DoCVAction(cvActionType, templateImagePath, matchingThreshold, matchingInterval, retry, new System.Drawing.Rectangle(x, y, _width, _height));
-            //string resultIfo = string.Format("Capture Area : x={0}, y={1}, w={2}, h={3}\nMatched = {4}\nMatched Level = {5}", x, y, _width, _height, cvRet.IsMatched, cvRet.MatchedLevel);
             string resultIfo = string.Format(Properties.Resources.ResultInformation, x, y, _width, _height, cvRet.IsMatched, cvRet.MatchedLevel);
             SharedObject.Instance.Output(SharedObject.enOutputType.Information, Properties.Resources.ImageMatchingResult, resultIfo);
             return cvRet;

@@ -159,9 +159,6 @@
   <data name="ClearAll.ToolTip" xml:space="preserve">
     <value>清空所有</value>
   </data>
-  <data name="Close.Header" xml:space="preserve">
-    <value>关闭</value>
-  </data>
   <data name="CodeSnippet.Title" xml:space="preserve">
     <value>代码片断</value>
   </data>
@@ -213,9 +210,6 @@
   <data name="Description.Text" xml:space="preserve">
     <value>描述</value>
   </data>
-  <data name="Design.Header" xml:space="preserve">
-    <value>设计</value>
-  </data>
   <data name="DirFieldCheck.ToolTip" xml:space="preserve">
     <value>位置字段校验成功</value>
   </data>
@@ -230,9 +224,6 @@
   </data>
   <data name="ExpandAll.ToolTip" xml:space="preserve">
     <value>展开所有</value>
-  </data>
-  <data name="File.Header" xml:space="preserve">
-    <value>文件</value>
   </data>
   <data name="FlowChart.Header" xml:space="preserve">
     <value>流程图</value>
@@ -275,9 +266,6 @@
   </data>
   <data name="NameFieldCheck.ToolTip" xml:space="preserve">
     <value>名称字段校验成功</value>
-  </data>
-  <data name="New.Header" xml:space="preserve">
-    <value>新建</value>
   </data>
   <data name="NewProject.Text" xml:space="preserve">
     <value>新建项目</value>
@@ -417,9 +405,6 @@
   <data name="SequenceDiagram.ToolTip" xml:space="preserve">
     <value>序列图（Ctrl+N）</value>
   </data>
-  <data name="Settings.Header" xml:space="preserve">
-    <value>设置</value>
-  </data>
   <data name="ShowAllFiles.ToolTip" xml:space="preserve">
     <value>显示所有文件</value>
   </data>
@@ -434,9 +419,6 @@
   </data>
   <data name="splashSub.Text" xml:space="preserve">
     <value>机器人流程自动化平台</value>
-  </data>
-  <data name="Start.Header" xml:space="preserve">
-    <value>开始</value>
   </data>
   <data name="Start2.Header" xml:space="preserve">
     <value>启动</value>

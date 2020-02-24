@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Category1" xml:space="preserve">
-    <value>一般公開</value>
+    <value>共通</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
-    <value>エラー実行</value>
+    <value>エラー時の実行</value>
   </data>
   <data name="Description1" xml:space="preserve">
     <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを指定します</value>
@@ -130,13 +130,13 @@
     <value>UIオブジェクト</value>
   </data>
   <data name="DisplayName2" xml:space="preserve">
-    <value>ウィンドウインジケータ</value>
+    <value>セレクター</value>
   </data>
   <data name="Description2" xml:space="preserve">
     <value>アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ</value>
   </data>
   <data name="DisplayName3" xml:space="preserve">
-    <value>UI要素</value>
+    <value>要素</value>
   </data>
   <data name="Description3" xml:space="preserve">
     <value>UIElementを入力</value>
@@ -160,7 +160,7 @@
     <value>属性の値を指定します</value>
   </data>
   <data name="DisplayName6" xml:space="preserve">
-    <value>マトリックス座標</value>
+    <value>矩形座標</value>
   </data>
   <data name="Description6" xml:space="preserve">
     <value>画面座標で指定されたUiElementの結果境界長方形</value>
@@ -169,7 +169,7 @@
     <value>オプション</value>
   </data>
   <data name="DisplayName7" xml:space="preserve">
-    <value>面せん断方向</value>
+    <value>方向</value>
   </data>
   <data name="Description7" xml:space="preserve">
     <value>クリッピング領域の方向を拡張します</value>
@@ -232,7 +232,7 @@
     <value>使用するブラウザの種類を選択します。 次のオプションが利用可能です：IE、Firefox、Chrome</value>
   </data>
   <data name="DisplayName16" xml:space="preserve">
-    <value>ブラウザブラウザ</value>
+    <value>ブラウザ</value>
   </data>
   <data name="Description18" xml:space="preserve">
     <value>閉じるブラウザーページ。 このフィールドは、ブラウザ変数のみをサポートします。</value>
@@ -310,7 +310,7 @@
     <value>変更するHTML属性の名前</value>
   </data>
   <data name="DisplayName27" xml:space="preserve">
-    <value>価値</value>
+    <value>値</value>
   </data>
   <data name="Description33" xml:space="preserve">
     <value>指定したプロパティに設定する値。 文字列変数のみがサポートされています</value>
@@ -361,7 +361,7 @@
     <value>UiElement変数。 このプロパティをSelectorプロパティと一緒に使用することはできません。 このフィールドはUiElement変数のみをサポートします</value>
   </data>
   <data name="Description39" xml:space="preserve">
-    <value>後続の子アクティビティで使用されるUI要素</value>
+    <value>後続の子アクティビティで使用される要素</value>
   </data>
   <data name="Description40" xml:space="preserve">
     <value>アクティビティでエラーが発生した場合でも自動化を続行するかどうかを、値（TrueまたはFalse）で指定します</value>
@@ -409,16 +409,16 @@
     <value>このオプションを選択すると、アクティビティは指定されたui要素が表示されるまで待機します。</value>
   </data>
   <data name="Description48" xml:space="preserve">
-    <value>見つかったui要素。 このフィールドはUIElementタイプの変数のみをサポートします</value>
+    <value>見つかった要素。 このフィールドはUIElementタイプの変数のみをサポートします</value>
   </data>
   <data name="DisplayName43" xml:space="preserve">
-    <value>場所</value>
+    <value>位置</value>
   </data>
   <data name="DisplayName44" xml:space="preserve">
     <value>相対要素</value>
   </data>
   <data name="Description49" xml:space="preserve">
-    <value>探している相対的なui要素。  UIElementタイプの変数のみがサポートされています</value>
+    <value>探している相対的な要素。  UIElementタイプの変数のみがサポートされています</value>
   </data>
   <data name="DisplayName45" xml:space="preserve">
     <value>親ノードレベル</value>
@@ -463,7 +463,7 @@
     <value>座標点を使用する</value>
   </data>
   <data name="Category11" xml:space="preserve">
-    <value>UI要素のマトリックス</value>
+    <value>UI要素の矩形</value>
   </data>
   <data name="Description58" xml:space="preserve">
     <value>UIAutomationInfoを入力します</value>
@@ -815,5 +815,35 @@
   </data>
   <data name="DisplayName82" xml:space="preserve">
     <value>キーワード</value>
+  </data>
+  <data name="DragScreen" xml:space="preserve">
+    <value>ドラッグで選択</value>
+  </data>
+  <data name="DS_WindowTitle" xml:space="preserve">
+    <value>ウィンドウタイトルを入力すると、画像検索範囲をウィンドウ内に限定することができます。</value>
+  </data>
+  <data name="DN_MatchingThreshold" xml:space="preserve">
+    <value>マッチング閾値</value>
+  </data>
+  <data name="DS_MatchingThreshold" xml:space="preserve">
+    <value>マッチング閾値 (デフォルト値 = 91. Must 80 &lt;= x &lt;= 100)</value>
+  </data>
+  <data name="DN_MatchingInterval" xml:space="preserve">
+    <value>マッチング間隔[ms]</value>
+  </data>
+  <data name="DS_MatchingInterval" xml:space="preserve">
+    <value>マッチング間隔[ms] (デフォルト値 = 2000[ms]. Must 600 &lt;= x)</value>
+  </data>
+  <data name="DN_Retry" xml:space="preserve">
+    <value>リトライ回数</value>
+  </data>
+  <data name="DS_Retry" xml:space="preserve">
+    <value>リトライ回数 (デフォルト値 = 600回)</value>
+  </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>画像マッチング結果</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>キャプチャ範囲 : x={0}, y={1}, w={2}, h={3}, 一致 : {4} 一致度 : {5}</value>
   </data>
 </root>

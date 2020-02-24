@@ -22,6 +22,7 @@ namespace RPAStudio.UserControls
         public MainContent()
         {
             InitializeComponent();
+            Net.Surviveplus.Localization.WpfLocalization.ApplyResources(this, Properties.Resources.ResourceManager);
         }
     }
 }

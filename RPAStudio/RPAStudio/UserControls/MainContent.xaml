@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPAStudio"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:uc="clr-namespace:RPAStudio.UserControls"
              xmlns:fluent= "urn:fluent-ribbon"
              xmlns:gif="http://wpfanimatedgif.codeplex.com"
@@ -19,18 +20,22 @@
         <fluent:Ribbon AutomaticStateManagement="True"  Visibility="{Binding IsOpenStartScreen,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
             <fluent:Ribbon.Menu>
                 <Grid>
-                    <fluent:Backstage x:Uid="Start" Header="开始" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" IsOpen="{Binding IsOpenStartScreen,Mode=TwoWay}" CloseOnEsc="{Binding IsBackButtonVisible}" AreAnimationsEnabled="{Binding IsBackButtonVisible}" >
+                    <!--开始-->
+                    <fluent:Backstage Header="{x:Static lclz:Strings.xStart}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}" IsOpen="{Binding IsOpenStartScreen,Mode=TwoWay}" CloseOnEsc="{Binding IsBackButtonVisible}" AreAnimationsEnabled="{Binding IsBackButtonVisible}" >
                         <Grid>
                             <fluent:BackstageTabControl SelectedIndex="3" IsBackButtonVisible="{Binding IsBackButtonVisible}">
-                                <fluent:Button x:Uid="Open" Header="打开" Command="{Binding SelectProjectCommand}" IsDefinitive="False" />
-                                <fluent:Button x:Uid="Close" Header="关闭" Command="{Binding CloseProjectCommand}" IsDefinitive="False" />
+                                <!--打开-->
+                                <fluent:Button Header="{x:Static lclz:Strings.xOpen}" Command="{Binding SelectProjectCommand}" IsDefinitive="False" />
+                                <!--关闭-->
+                                <fluent:Button Header="{x:Static lclz:Strings.xClose}" Command="{Binding CloseProjectCommand}" IsDefinitive="False" />
                                 <fluent:SeparatorTabItem />
 
-                                <fluent:BackstageTabItem x:Uid="Start" Header="开始">
+                                <fluent:BackstageTabItem Header="{x:Static lclz:Strings.xStart}">
                                     <uc:StartContent/>
                                 </fluent:BackstageTabItem>
+
                                 <fluent:BackstageTabItem x:Uid="Settings" Header="设置" >
-                                    <uc:SetUpContent/>
+                                    <uc:SetUpContent/>                              
                                 </fluent:BackstageTabItem>
                                 <fluent:BackstageTabItem >
                                     <fluent:BackstageTabItem.Header>
@@ -71,9 +76,12 @@
                 <fluent:QuickAccessMenuItem Target="{Binding Source={x:Reference stopButton}}"
                                             IsChecked="True" />
             </fluent:Ribbon.QuickAccessItems>
-            <fluent:RibbonTabItem x:Uid="Design(设计)" Header="{Binding P_Design}">
-                <fluent:RibbonGroupBox x:Uid="File(文件)" Header="{Binding P_File}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
-                    <fluent:DropDownButton x:Uid="New(新建)" Header="{Binding P_New}"
+            <!--设计-->
+            <fluent:RibbonTabItem Header="{x:Static lclz:Strings.xDesign}">
+                <!--文件-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.xFile}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
+                    <!--新建-->
+                    <fluent:DropDownButton Header="{x:Static lclz:Strings.xNew}"
                                            LargeIcon="pack://application:,,,/Resources/Image/Ribbon/new.png"
                                            IsEnabled="True"
                                            VerticalAlignment="Top">
@@ -153,21 +161,24 @@
                     <fluent:Button x:Uid="PackageManager(包管理器)" Header="{Binding P_PackageManager}" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/package-manager.png"
                                    Command="{Binding LaunchPackageManagerCommand}"
-                                   ToolTip="管理nupkg包，实现安装、卸载、更新包等操作（Ctrl+P）"
+                                   ToolTip="{x:Static lclz:Strings.xPackageToolTip}"
                                    />
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox Header="操作">
-                    <fluent:Button Header="录制" 
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.xOperation}">
+                    <!--录制-->
+                    <fluent:Button Header="{x:Static lclz:Strings.xRecord}" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/recording.png"
                                    Command="{Binding RecordingCommand}"
-                                   ToolTip="一次性录制多个活动"
+                                   ToolTip="{x:Static lclz:Strings.xRecordTip}"
                                    />
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox Header="能力中心">
-                    <fluent:Button Header="能力商店" 
+                <!--能力中心-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.xActivityCenter}">
+                    <!--能力商店-->
+                    <fluent:Button Header="{x:Static lclz:Strings.xActivityStore}" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/store.png"
                                    Command="{Binding StoreCommand}"
-                                   ToolTip="打开能力商店"
+                                   ToolTip="{x:Static lclz:Strings.xOpenActivityStore}"
                                    />
                 </fluent:RibbonGroupBox>
                 <fluent:RibbonGroupBox x:Uid="Deploy(部署)" Header="{Binding P_Deploy}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">

@@ -1,9 +1,10 @@
-﻿using GongSolutions.Wpf.DragDrop;
-using RPAStudio.ViewModel;
+﻿using System;
 using System.Windows;
-using System;
-using RPAStudio.Librarys;
+using GongSolutions.Wpf.DragDrop;
 using log4net;
+using RPAStudio.ViewModel;
+using RPAStudio.Librarys;
+using RPAStudio.Localization;
 
 namespace RPAStudio.DragDropHandler
 {
@@ -89,13 +90,12 @@ namespace RPAStudio.DragDropHandler
 
             if (System.IO.Directory.Exists(dstPathCombine))
             {
-                MessageBox.Show(App.Current.MainWindow, "目标目录有重名目录，无法移动目录", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                // 目标目录有重名目录，无法移动目录
+                MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("msgDirectoryAlredyExists"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
                 System.IO.Directory.Move(srcPath, dstPathCombine);
-
-                
 
                 //遍历目录所有文件
                 foreach (var file in System.IO.Directory.GetFiles(dstPathCombine, "*.*"))
@@ -112,17 +112,12 @@ namespace RPAStudio.DragDropHandler
                         }
                     }
                 }
-
-
                 //刷新工程树视图
 
                 ViewModelLocator.Instance.Project.RefreshCommand.Execute(null);
 
                 return true;
             }
-
-            
-
             return false;
         }
 
@@ -135,7 +130,8 @@ namespace RPAStudio.DragDropHandler
             var dstFile = System.IO.Path.Combine(dstPath, sourceItem.Name);
             if (System.IO.File.Exists(dstFile))
             {
-                MessageBox.Show(App.Current.MainWindow, "目标目录有重名文件，无法移动文件", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+                // 目标目录有重名文件，无法移动文件
+                MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("msgFileAlredyExists"), ResxIF.GetString("msgWarning"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -161,9 +157,6 @@ namespace RPAStudio.DragDropHandler
 
             return false;
         }
-
-
-
 
 
     }

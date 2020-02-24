@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace RPA.OpenCV.Activities.Snip
+namespace RPA.UIAutomation.Activities.Image.Snip
 {
     public static class ScreenHelper
     {

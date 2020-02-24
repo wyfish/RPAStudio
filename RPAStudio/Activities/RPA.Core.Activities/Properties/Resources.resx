@@ -708,4 +708,133 @@
   <data name="DisplayName55" xml:space="preserve">
     <value>另存为位置</value>
   </data>
+  <data name="xBuildingDataTable" xml:space="preserve">
+    <value>构建数据表</value>
+  </data>
+  <data name="xOK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="xCancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="xConfigurationWizard" xml:space="preserve">
+    <value>配置向导</value>
+  </data>
+  <data name="xDataSheetInput" xml:space="preserve">
+    <value>数据表(输入)</value>
+  </data>
+  <data name="xDataSheetOutput" xml:space="preserve">
+    <value>数据表(输出)</value>
+  </data>
+  <data name="xFilterRows" xml:space="preserve">
+    <value>过滤行</value>
+  </data>
+  <data name="xRowFilteringMode" xml:space="preserve">
+    <value>行过滤模式</value>
+  </data>
+  <data name="xKeep" xml:space="preserve">
+    <value>保留</value>
+  </data>
+  <data name="xDelete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="xCol" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="xVal" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="xOutputCol" xml:space="preserve">
+    <value>输出列</value>
+  </data>
+  <data name="xColSelectMode" xml:space="preserve">
+    <value>列选择模式</value>
+  </data>
+  <data name="xGenerateDataTable" xml:space="preserve">
+    <value>生成数据表</value>
+  </data>
+  <data name="xInputExample" xml:space="preserve">
+    <value>输入示例</value>
+  </data>
+  <data name="xPreviewText" xml:space="preserve">
+    <value>预览测试</value>
+  </data>
+  <data name="xDatasheetOption" xml:space="preserve">
+    <value>数据表选项</value>
+  </data>
+  <data name="xAutoDetectColType" xml:space="preserve">
+    <value>自动检测列类型</value>
+  </data>
+  <data name="xFirstLineAsHeader" xml:space="preserve">
+    <value>首行作数据表头</value>
+  </data>
+  <data name="xIgnoreFirstLine" xml:space="preserve">
+    <value>忽略首行</value>
+  </data>
+  <data name="xFormatOption" xml:space="preserve">
+    <value>格式选项</value>
+  </data>
+  <data name="xColDelimiter" xml:space="preserve">
+    <value>列分隔符</value>
+  </data>
+  <data name="xLineBreak" xml:space="preserve">
+    <value>换行符</value>
+  </data>
+  <data name="xFixedFormatOption" xml:space="preserve">
+    <value>固定格式选项</value>
+  </data>
+  <data name="xPredefinedColumns" xml:space="preserve">
+    <value>预定义列</value>
+  </data>
+  <data name="xPreview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="xInputTable1" xml:space="preserve">
+    <value>输入数据表1</value>
+  </data>
+  <data name="xInputTable2" xml:space="preserve">
+    <value>输入数据表2</value>
+  </data>
+  <data name="xInputTable" xml:space="preserve">
+    <value>输入数据表</value>
+  </data>
+  <data name="xColEditWizard" xml:space="preserve">
+    <value>列编辑向导</value>
+  </data>
+  <data name="xColName" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="xDataType" xml:space="preserve">
+    <value>数据类型</value>
+  </data>
+  <data name="xEmptyAllowed" xml:space="preserve">
+    <value>允许为空</value>
+  </data>
+  <data name="xAutoIncrement" xml:space="preserve">
+    <value>自动递增</value>
+  </data>
+  <data name="xDefaultVal" xml:space="preserve">
+    <value>默认值</value>
+  </data>
+  <data name="xUniqueConstraint" xml:space="preserve">
+    <value>唯一约束</value>
+  </data>
+  <data name="xMaxLength" xml:space="preserve">
+    <value>最大长度</value>
+  </data>
+  <data name="xJoinTableTitle" xml:space="preserve">
+    <value>附加数据表</value>
+  </data>
+  <data name="xForEach" xml:space="preserve">
+    <value>ForEach</value>
+  </data>
+  <data name="xIn" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="xDataTableFieldHint" xml:space="preserve">
+    <value>DataTable变量</value>
+  </data>
 </root>

@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPA.OpenCV.Activities
+namespace RPA.UIAutomation.Activities.Image
 {
     public class FlaxCV
     {
@@ -170,22 +170,12 @@ namespace RPA.OpenCV.Activities
                         // Get 1 to 12bit value + offset y = detected y cordinate
                         posY = (exitCode & 0xFFF) + rect.Y;
                     }
-                    else
-                    {
-                        string cuexeName = Path.GetFileNameWithoutExtension(_FlaxCV_exe);
-                        if (exitCode == -4)
-                        {
-                            //SysLog.MyWarning(string.Format("{0} : Timeout", cuexeName));
-                        }
-                    }
                 }
-                //SysLog.DebugPrint(String.Format("Matched={0} at ({1},{2})", iMatched.ToString(), iPosX.ToString(), iPosY.ToString()));
                 p.Close();
                 p.Dispose();
                 bool isMatched = matchedLevel >= _matchingThreshold;
                 return new CvResult(matchedLevel, posX, posY, isMatched);
             }
-            //SysLog.MyError("IfFileExistsThenDoAction", "Template file does not exist. " + templateFileFullPath);
             return new CvResult();
         }
 

@@ -135,9 +135,6 @@
   <data name="CancelText" xml:space="preserve">
     <value>取消</value>
   </data>
-  <data name="CloseContent" xml:space="preserve">
-    <value>关闭</value>
-  </data>
   <data name="CodeSnippetText" xml:space="preserve">
     <value>代码片断</value>
   </data>
@@ -231,9 +228,6 @@
   <data name="OpenProjectFolder" xml:space="preserve">
     <value>打开项目文件夹</value>
   </data>
-  <data name="OpenText" xml:space="preserve">
-    <value>打开</value>
-  </data>
   <data name="OperatingRule" xml:space="preserve">
     <value>运行规则</value>
   </data>
@@ -309,7 +303,7 @@
   <data name="SetFromAddress" xml:space="preserve">
     <value>设置包源地址</value>
   </data>
-  <data name="SettingsText" xml:space="preserve">
+  <data name="xSettings" xml:space="preserve">
     <value>设置</value>
   </data>
   <data name="ShowAvailable" xml:space="preserve">
@@ -506,5 +500,119 @@
   </data>
   <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
     <value>软件未通过授权检测，请注册产品！</value>
+  </data>
+  <data name="logStarted" xml:space="preserve">
+    <value>{0} 开始运行</value>
+  </data>
+  <data name="logFinished" xml:space="preserve">
+    <value>{0} 结束运行，耗时：{1}</value>
+  </data>
+  <data name="logLaunchMainWindow" xml:space="preserve">
+    <value>+++++主窗口启动+++++</value>
+  </data>
+  <data name="msgPackageSourceNameEmpty" xml:space="preserve">
+    <value>包源名称不能为空！</value>
+  </data>
+  <data name="msgPackageSourcePathEmpty" xml:space="preserve">
+    <value>包源路径不能为空！</value>
+  </data>
+  <data name="msgPackageSourceNameNotUnique" xml:space="preserve">
+    <value>包源名称必须唯一！</value>
+  </data>
+  <data name="msgPackageSourcePathInvalid" xml:space="preserve">
+    <value>包源地址不合法！</value>
+  </data>
+  <data name="msgRequireAcceptLicense" xml:space="preserve">
+    <value>该程序包要求你在安装前接受其许可证条款，确定接受吗？</value>
+  </data>
+  <data name="msgProjectSuccessflyReleased" xml:space="preserve">
+    <value>项目发布成功。{3}名称：{0}{3}版本：{1}{3}位置：{2}{3}</value>
+  </data>
+  <data name="msgPublishProjectFailed" xml:space="preserve">
+    <value>项目发布项目失败！</value>
+  </data>
+  <data name="xStart" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="xOpen" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="xClose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="xDesign" xml:space="preserve">
+    <value>设计</value>
+  </data>
+  <data name="xFile" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="xNew" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="xPackageToolTip" xml:space="preserve">
+    <value>管理nupkg包，实现安装、卸载、更新包等操作（Ctrl+P）</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="xRecord" xml:space="preserve">
+    <value>录制</value>
+  </data>
+  <data name="xRecordTip" xml:space="preserve">
+    <value>一次性录制多个活动</value>
+  </data>
+  <data name="xActivityCenter" xml:space="preserve">
+    <value>能力中心</value>
+  </data>
+  <data name="xActivityStore" xml:space="preserve">
+    <value>能力商店</value>
+  </data>
+  <data name="xOpenActivityStore" xml:space="preserve">
+    <value>打开能力商店</value>
+  </data>
+  <data name="xSourceCode" xml:space="preserve">
+    <value>源码</value>
+  </data>
+  <data name="xDump" xml:space="preserve">
+    <value>丢弃</value>
+  </data>
+  <data name="xSubmit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="xSaveAndExit" xml:space="preserve">
+    <value>保存并退出</value>
+  </data>
+  <data name="xSaveAndExitTip" xml:space="preserve">
+    <value>保存并退出录制功能</value>
+  </data>
+  <data name="xMouse" xml:space="preserve">
+    <value>鼠标</value>
+  </data>
+  <data name="xMouseRecTip" xml:space="preserve">
+    <value>鼠标相关的录制功能</value>
+  </data>
+  <data name="xClick" xml:space="preserve">
+    <value>单击</value>
+  </data>
+  <data name="xRightClick" xml:space="preserve">
+    <value>右击</value>
+  </data>
+  <data name="xDoubleClick" xml:space="preserve">
+    <value>双击</value>
+  </data>
+  <data name="xHover" xml:space="preserve">
+    <value>悬浮</value>
+  </data>
+  <data name="xKeyboard" xml:space="preserve">
+    <value>键盘</value>
+  </data>
+  <data name="xKeyboardRecTip" xml:space="preserve">
+    <value>键盘相关的录制功能</value>
+  </data>
+  <data name="xInput" xml:space="preserve">
+    <value>输入</value>
+  </data>
+  <data name="xSendHotkey" xml:space="preserve">
+    <value>发送热键</value>
   </data>
 </root>

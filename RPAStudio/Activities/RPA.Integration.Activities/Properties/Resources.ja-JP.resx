@@ -202,7 +202,7 @@
     <value>SQLクエリの出力をDataTable変数に保存します</value>
   </data>
   <data name="DisplayName11" xml:space="preserve">
-    <value>取引</value>
+    <value>トランザクション</value>
   </data>
   <data name="Description14" xml:space="preserve">
     <value>このアクティビティのデータベース操作をデータベーストランザクションでラップするかどうかを指定します</value>
@@ -226,7 +226,7 @@
     <value>列</value>
   </data>
   <data name="DisplayName18" xml:space="preserve">
-    <value>ワークシート名</value>
+    <value>シート名</value>
   </data>
   <data name="DisplayName19" xml:space="preserve">
     <value>セルコンテンツ</value>
@@ -241,19 +241,19 @@
     <value>新規/開くドキュメントオプション</value>
   </data>
   <data name="DisplayName20" xml:space="preserve">
-    <value>新しいドキュメントを作成するかどうか</value>
+    <value>新しいファイルの作成</value>
   </data>
   <data name="DisplayName21" xml:space="preserve">
-    <value>プロセスが見えるかどうか</value>
+    <value>可視</value>
   </data>
   <data name="Category7" xml:space="preserve">
     <value>保存オプション</value>
   </data>
   <data name="DisplayName22" xml:space="preserve">
-    <value>プログラムが終了するかどうか</value>
+    <value>プログラムを終了する</value>
   </data>
   <data name="DisplayName23" xml:space="preserve">
-    <value>保存する</value>
+    <value>保存</value>
   </data>
   <data name="DisplayName24" xml:space="preserve">
     <value>名前を付けて保存</value>
@@ -559,7 +559,7 @@
     <value>送信者</value>
   </data>
   <data name="DisplayName83" xml:space="preserve">
-    <value>お名前</value>
+    <value>名前</value>
   </data>
   <data name="Description48" xml:space="preserve">
     <value>送信者の表示名</value>
@@ -724,13 +724,13 @@
     <value>メッセージングシステムが使用するためにサポートする必要がある表示名</value>
   </data>
   <data name="DisplayName109" xml:space="preserve">
-    <value>下書きとして保存するかどうか</value>
+    <value>下書きとして保存</value>
   </data>
   <data name="DisplayName110" xml:space="preserve">
     <value>カーソル移動距離</value>
   </data>
   <data name="DisplayName111" xml:space="preserve">
-    <value>選択するかどうか</value>
+    <value>選択する</value>
   </data>
   <data name="Category23" xml:space="preserve">
     <value>方向</value>
@@ -946,7 +946,7 @@
     <value>終了セル名</value>
   </data>
   <data name="Category34" xml:space="preserve">
-    <value>セルエンド</value>
+    <value>終了セル</value>
   </data>
   <data name="DisplayName154" xml:space="preserve">
     <value>ヘッダー</value>
@@ -955,10 +955,10 @@
     <value>すべてのワークシート</value>
   </data>
   <data name="Category35" xml:space="preserve">
-    <value>地域オプション</value>
+    <value>範囲オプション</value>
   </data>
   <data name="DisplayName156" xml:space="preserve">
-    <value>すべてのエリア</value>
+    <value>すべての範囲</value>
   </data>
   <data name="DisplayName157" xml:space="preserve">
     <value>セル開始行</value>
@@ -979,7 +979,7 @@
     <value>セル終了名</value>
   </data>
   <data name="Category36" xml:space="preserve">
-    <value>交換オプション</value>
+    <value>置換オプション</value>
   </data>
   <data name="DisplayName163" xml:space="preserve">
     <value>コンテンツを見つける</value>
@@ -1027,7 +1027,7 @@
     <value>行/列データ</value>
   </data>
   <data name="DisplayName176" xml:space="preserve">
-    <value>ワークシート名のリスト</value>
+    <value>シート名のリスト</value>
   </data>
   <data name="Category38" xml:space="preserve">
     <value>[開く] / [新しいドキュメント]オプション</value>
@@ -1039,12 +1039,33 @@
     <value>ファイル保存パス</value>
   </data>
   <data name="Description80" xml:space="preserve">
-    <value>A 1などのセル名を表すVB表現</value>
+    <value>A1などのセル名を表すVB表現</value>
   </data>
   <data name="Description81" xml:space="preserve">
     <value>B2などのセル名を表すVB表現</value>
   </data>
   <data name="DisplayName177" xml:space="preserve">
     <value>セルのデータ</value>
+  </data>
+  <data name="xPrompt" xml:space="preserve">
+    <value>ヒント</value>
+  </data>
+  <data name="xRequireValidPath1" xml:space="preserve">
+    <value>新しいドキュメントを作成しない場合は、有効なパスを追加する必要があります</value>
+  </data>
+  <data name="xRequireValidPath2" xml:space="preserve">
+    <value>名前を付けて保存するには、有効なパスを追加する必要があります</value>
+  </data>
+  <data name="xFileNotExist" xml:space="preserve">
+    <value>ファイルが存在しません。パスの有効性を確認してください</value>
+  </data>
+  <data name="xExcelExecError" xml:space="preserve">
+    <value>EXCEL実行プロセスエラー</value>
+  </data>
+  <data name="xRequireCorrectSavePath1" xml:space="preserve">
+    <value>このドキュメントは新しいファイルです。正しい保存パスを入力してください！</value>
+  </data>
+  <data name="xRequireCorrectSavePath2" xml:space="preserve">
+    <value>正しい保存パスを入力してください。</value>
   </data>
 </root>

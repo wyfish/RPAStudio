@@ -1,9 +1,9 @@
-﻿<sap:ActivityDesigner x:Class="RPA.OpenCV.Activities.Mouse.CVActivityDesigner"
+﻿<sap:ActivityDesigner x:Class="RPA.UIAutomation.Activities.Image.ImageActionActivityDesigner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
-    xmlns:lclz="clr-namespace:RPA.OpenCV.Activities.Properties"
+    xmlns:lclz="clr-namespace:RPA.UIAutomation.Activities.Properties"
     xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library" Loaded="ActivityDesigner_Loaded">
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
@@ -41,13 +41,13 @@
                 </Button>
                 <Button Name="navigateButton" Click="NavigateButtonClick" Initialized="NavigateButtonInitialized" Visibility="Visible" Margin="240,0,0,60" Style="{StaticResource ButtonNoHover}">
                     <Button.Background>
-                        <ImageBrush ImageSource="pack://application:,,,/RPA.OpenCV.Activities;Component/Resources/Mouse/menu.png" Stretch="Fill"/>
+                        <ImageBrush ImageSource="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/menu.png" Stretch="Fill"/>
                     </Button.Background>
                     <Button.ContextMenu>
                         <ContextMenu Name="contextMenu">
                             <MenuItem Header="{x:Static lclz:Resources.ReselectIt}" Click="meauItemClickOne">
                                 <MenuItem.Icon>
-                                    <Image Source="pack://application:,,,/RPA.OpenCV.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
+                                    <Image Source="pack://application:,,,/RPA.UIAutomation.Activities;Component/Resources/Mouse/mouseclick.png" Stretch="Fill"/>
                                 </MenuItem.Icon>
                             </MenuItem>
                         </ContextMenu>

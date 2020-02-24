@@ -71,6 +71,11 @@ namespace Plugins.Shared.Library.Nuget
             get
             {
                 var nugetConfigFile = "Nuget.Default.Config";
+                string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+                if (locale.Equals("zh") || locale.Equals("ja"))
+                {
+                    nugetConfigFile = nugetConfigFile.Replace(".Config", "_" + locale + ".Config");
+                }
                 try
                 {
                     if (_settings == null) _settings = NuGet.Configuration.Settings.LoadSpecificSettings(System.Environment.CurrentDirectory, nugetConfigFile);
@@ -256,36 +261,71 @@ namespace Plugins.Shared.Library.Nuget
             return ret;
         }
 
+        private List<SourceRepository> GetSortedRepositories()
+        {
+            var tempRepos = SourceRepositoryProvider.GetRepositories().ToList();
+            var sortedRepositories = new List<SourceRepository>();
 
-
+            // 1.Local
+            int idx = tempRepos.FindIndex(a => a.PackageSource.IsLocal);
+            if (idx >= 0)
+            {
+                sortedRepositories.Add(tempRepos[idx]);
+                tempRepos.RemoveAt(idx);
+            }
+            // 2.nuget.org
+            idx = tempRepos.FindIndex(a => a.PackageSource.Name.Equals("nuget.org"));
+            if (idx >= 0)
+            {
+                sortedRepositories.Add(tempRepos[idx]);
+                tempRepos.RemoveAt(idx);
+            }
+            // 3.Official
+            idx = tempRepos.FindIndex(a => a.PackageSource.IsOfficial);
+            if (idx >= 0)
+            {
+                sortedRepositories.Add(tempRepos[idx]);
+                tempRepos.RemoveAt(idx);
+            }
+            // 4.others
+            foreach (var r in tempRepos)
+            {
+                sortedRepositories.Add(r);
+            }
+            return sortedRepositories;
+        }
 
 
         public async Task GetPackageDependencies(PackageIdentity package, SourceCacheContext cacheContext, ISet<SourcePackageDependencyInfo> availablePackages)
         {
             if (availablePackages.Contains(package)) return;
 
-            var repositories = SourceRepositoryProvider.GetRepositories();
+            //var repositories = SourceRepositoryProvider.GetRepositories();
+            var repositories = GetSortedRepositories();
+
             foreach (var sourceRepository in repositories)
             {
+                SourcePackageDependencyInfo dependencyInfo = null;
+                // #11 Tighten the try-catch scope due to localization probrem.
                 try
                 {
                     var dependencyInfoResource = await sourceRepository.GetResourceAsync<DependencyInfoResource>();
-                    var dependencyInfo = await dependencyInfoResource.ResolvePackage(
+                    dependencyInfo = await dependencyInfoResource.ResolvePackage(
                         package, NuGetFramework, Logger, CancellationToken.None);
                     if (dependencyInfo == null) continue;
                     availablePackages.Add(dependencyInfo);
-                    foreach (var dependency in dependencyInfo.Dependencies)
-                    {
-                        var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);
-                        await GetPackageDependencies(identity, cacheContext, availablePackages);
-                    }
-
-                    break;//只要有一个源能搜索到就不再往下搜索了
                 }
                 catch (Exception err)
                 {
 
                 }
+                foreach (var dependency in dependencyInfo.Dependencies)
+                {
+                    var identity = new PackageIdentity(dependency.Id, dependency.VersionRange.MinVersion);
+                    await GetPackageDependencies(identity, cacheContext, availablePackages);
+                }
+
+                break;//只要有一个源能搜索到就不再往下搜索了
                 
             }
         }
@@ -523,6 +563,7 @@ namespace Plugins.Shared.Library.Nuget
         {
             var packagePathResolver = new NuGet.Packaging.PackagePathResolver(PackagesInstallFolder);
             var installedPath = packagePathResolver.GetInstalledPath(identity);
+            if (installedPath == null) return null;
 
             PackageReaderBase packageReader;
             packageReader = new PackageFolderReader(installedPath);

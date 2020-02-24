@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Category1" xml:space="preserve">
-    <value>Public</value>
+    <value>Common</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
     <value>Error Execution</value>
@@ -130,7 +130,7 @@
     <value>UI Object</value>
   </data>
   <data name="DisplayName2" xml:space="preserve">
-    <value>Window selector</value>
+    <value>Selector</value>
   </data>
   <data name="Description2" xml:space="preserve">
     <value>The Text property used to find specific UI elements when performing activities</value>
@@ -142,7 +142,7 @@
     <value>Enter UI Element</value>
   </data>
   <data name="Category3" xml:space="preserve">
-    <value>Enter</value>
+    <value>Input</value>
   </data>
   <data name="DisplayName4" xml:space="preserve">
     <value>Attributes</value>
@@ -358,7 +358,7 @@
     <value>Indicates if the element exists.  This field only supports Boolean variables</value>
   </data>
   <data name="Description38" xml:space="preserve">
-    <value>UI Element variable.  This property cannot be used with the Selector property.  This field only supports UI Element variables</value>
+    <value>UiElement variable.  This property cannot be used with the Selector property.  This field only supports UI Element variables</value>
   </data>
   <data name="Description39" xml:space="preserve">
     <value>UI Elements used in subsequent child activities</value>
@@ -418,7 +418,7 @@
     <value>Relative Element</value>
   </data>
   <data name="Description49" xml:space="preserve">
-    <value>The relative ui element you are looking for.  Only UIElement type variables are supported</value>
+    <value>The relative UI Element you are looking for.  Only UIElement type variables are supported</value>
   </data>
   <data name="DisplayName45" xml:space="preserve">
     <value>Parent node level</value>
@@ -463,7 +463,7 @@
     <value>Use coordinate points</value>
   </data>
   <data name="Category11" xml:space="preserve">
-    <value>UI Element matrix</value>
+    <value>UI Element Rectangle</value>
   </data>
   <data name="Description58" xml:space="preserve">
     <value>Enter UIAutomationInfo</value>
@@ -586,13 +586,13 @@
     <value>The new width of the window, supporting positive and negative integers</value>
   </data>
   <data name="DisplayName66" xml:space="preserve">
-    <value>Coordinate X</value>
+    <value>X Coordinate</value>
   </data>
   <data name="Description81" xml:space="preserve">
     <value>The new position coordinate of the window is X-axis, supporting positive and negative integers</value>
   </data>
   <data name="DisplayName67" xml:space="preserve">
-    <value>Coordinate Y</value>
+    <value>Y Coordinate</value>
   </data>
   <data name="Description82" xml:space="preserve">
     <value>The new coordinate position of the window is Y-axis, supporting positive and negative integers</value>
@@ -815,5 +815,35 @@
   </data>
   <data name="DisplayName82" xml:space="preserve">
     <value>Keyword</value>
+  </data>
+  <data name="DragScreen" xml:space="preserve">
+    <value>Drag on Screen</value>
+  </data>
+  <data name="DS_WindowTitle" xml:space="preserve">
+    <value>By entering the window title, you can limit the image search range to within the window.</value>
+  </data>
+  <data name="DN_MatchingThreshold" xml:space="preserve">
+    <value>Matching Threshold</value>
+  </data>
+  <data name="DS_MatchingThreshold" xml:space="preserve">
+    <value>Matching Threshold (default value = 91. Must 80 &lt;= x &lt;= 100)</value>
+  </data>
+  <data name="DN_MatchingInterval" xml:space="preserve">
+    <value>Matching Interval [ms]</value>
+  </data>
+  <data name="DS_MatchingInterval" xml:space="preserve">
+    <value>Matching Interval [ms] (default value = 2000 [ms]. Must 600 &lt;= x)</value>
+  </data>
+  <data name="DN_Retry" xml:space="preserve">
+    <value>Number of Retries</value>
+  </data>
+  <data name="DS_Retry" xml:space="preserve">
+    <value>Retry count (default value = 600 times)</value>
+  </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>Image Matching Result</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>Capture Area : x={0}, y={1}, w={2}, h={3}, Matched : {4}, Matched Level : {5}</value>
   </data>
 </root>

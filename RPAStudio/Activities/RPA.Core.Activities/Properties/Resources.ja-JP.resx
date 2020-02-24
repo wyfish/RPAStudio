@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Do" xml:space="preserve">
-    <value>Do</value>
+    <value>実行</value>
   </data>
   <data name="DropActivityHere" xml:space="preserve">
     <value>Drop activity here</value>
@@ -133,7 +133,7 @@
     <value>UIオブジェクト</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
-    <value>ウィンドウインジケータ</value>
+    <value>セレクター</value>
   </data>
   <data name="Description3" xml:space="preserve">
     <value>アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ</value>
@@ -319,7 +319,7 @@
     <value>値を取得するDataRowオブジェクト</value>
   </data>
   <data name="DisplayName19" xml:space="preserve">
-    <value>コラム</value>
+    <value>列</value>
   </data>
   <data name="Description42" xml:space="preserve">
     <value>値がDataRowから取得されるDataColumnオブジェクト。 このプロパティが設定されている場合、ColumnNameプロパティとColumnIndexプロパティは無視されます。</value>
@@ -337,7 +337,7 @@
     <value>値がDataRowから取得される列の名前。 このプロパティが設定されている場合、ColumnIndexプロパティは無視されます</value>
   </data>
   <data name="DisplayName22" xml:space="preserve">
-    <value>価値</value>
+    <value>値</value>
   </data>
   <data name="Description45" xml:space="preserve">
     <value>DataRowの列値を指定します</value>
@@ -361,7 +361,7 @@
     <value>ルックアップを実行するDataTable変数</value>
   </data>
   <data name="DisplayName26" xml:space="preserve">
-    <value>価値を見つける</value>
+    <value>値を検索</value>
   </data>
   <data name="Description49" xml:space="preserve">
     <value>指定されたDataTable変数で検索する値</value>
@@ -403,13 +403,13 @@
     <value>セルの行インデックス</value>
   </data>
   <data name="DisplayName29" xml:space="preserve">
-    <value>目標</value>
+    <value>ターゲット</value>
   </data>
   <data name="Description58" xml:space="preserve">
     <value>ソースDataTableのDataTableオブジェクトをマージします</value>
   </data>
   <data name="DisplayName30" xml:space="preserve">
-    <value>出所</value>
+    <value>ソース</value>
   </data>
   <data name="Description59" xml:space="preserve">
     <value>ターゲットDataTableに追加されるDataTableオブジェクト</value>
@@ -463,7 +463,7 @@
     <value>ソートされた列の変数。 このフィールドは、DataColumn変数のみをサポートします。 このプロパティフィールドで変数を設定すると、他の2つのプロパティが無効になります</value>
   </data>
   <data name="DisplayName33" xml:space="preserve">
-    <value>お名前</value>
+    <value>名称</value>
   </data>
   <data name="DisplayName34" xml:space="preserve">
     <value>並べ替え</value>
@@ -484,7 +484,7 @@
     <value>時間タイプ</value>
   </data>
   <data name="DisplayName39" xml:space="preserve">
-    <value>UI要素</value>
+    <value>要素</value>
   </data>
   <data name="Description74" xml:space="preserve">
     <value>UIElementを入力</value>
@@ -707,5 +707,134 @@
   </data>
   <data name="DisplayName55" xml:space="preserve">
     <value>名前を付けて保存</value>
+  </data>
+  <data name="xBuildingDataTable" xml:space="preserve">
+    <value>データテーブルを構築</value>
+  </data>
+  <data name="xOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="xCancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="xConfigurationWizard" xml:space="preserve">
+    <value>フィルターウィザード</value>
+  </data>
+  <data name="xDataSheetInput" xml:space="preserve">
+    <value>入力データテーブル</value>
+  </data>
+  <data name="xDataSheetOutput" xml:space="preserve">
+    <value>出力データテーブル</value>
+  </data>
+  <data name="xFilterRows" xml:space="preserve">
+    <value>フィルター行</value>
+  </data>
+  <data name="xRowFilteringMode" xml:space="preserve">
+    <value>行フィルターモード</value>
+  </data>
+  <data name="xKeep" xml:space="preserve">
+    <value>保持</value>
+  </data>
+  <data name="xDelete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="xCol" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="xVal" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="xOutputCol" xml:space="preserve">
+    <value>出力列</value>
+  </data>
+  <data name="xColSelectMode" xml:space="preserve">
+    <value>列選択モード</value>
+  </data>
+  <data name="xGenerateDataTable" xml:space="preserve">
+    <value>データテーブルを生成</value>
+  </data>
+  <data name="xInputExample" xml:space="preserve">
+    <value>サンプル入力</value>
+  </data>
+  <data name="xPreviewText" xml:space="preserve">
+    <value>テスト プレビュー</value>
+  </data>
+  <data name="xDatasheetOption" xml:space="preserve">
+    <value>データシートオプション</value>
+  </data>
+  <data name="xAutoDetectColType" xml:space="preserve">
+    <value>列型の自動検出</value>
+  </data>
+  <data name="xFirstLineAsHeader" xml:space="preserve">
+    <value>先頭行をヘッダーとする</value>
+  </data>
+  <data name="xIgnoreFirstLine" xml:space="preserve">
+    <value>先頭行を無視</value>
+  </data>
+  <data name="xFormatOption" xml:space="preserve">
+    <value>フォーマット オプション</value>
+  </data>
+  <data name="xColDelimiter" xml:space="preserve">
+    <value>列区切り文字</value>
+  </data>
+  <data name="xLineBreak" xml:space="preserve">
+    <value>改行文字</value>
+  </data>
+  <data name="xFixedFormatOption" xml:space="preserve">
+    <value>固定フォーマットオプション</value>
+  </data>
+  <data name="xPredefinedColumns" xml:space="preserve">
+    <value>既定の列</value>
+  </data>
+  <data name="xPreview" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="xInputTable1" xml:space="preserve">
+    <value>入力データテーブル 1</value>
+  </data>
+  <data name="xInputTable2" xml:space="preserve">
+    <value>入力データテーブル 2</value>
+  </data>
+  <data name="xInputTable" xml:space="preserve">
+    <value>出力データテーブル</value>
+  </data>
+  <data name="xColEditWizard" xml:space="preserve">
+    <value>列編集ウィザード</value>
+  </data>
+  <data name="xColName" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="xDataType" xml:space="preserve">
+    <value>データ型</value>
+  </data>
+  <data name="xEmptyAllowed" xml:space="preserve">
+    <value>空を許可</value>
+  </data>
+  <data name="xAutoIncrement" xml:space="preserve">
+    <value>自動インクリメント</value>
+  </data>
+  <data name="xDefaultVal" xml:space="preserve">
+    <value>デフォルト値</value>
+  </data>
+  <data name="xUniqueConstraint" xml:space="preserve">
+    <value>ユニーク制約</value>
+  </data>
+  <data name="xMaxLength" xml:space="preserve">
+    <value>最大長</value>
+  </data>
+  <data name="xJoinTableTitle" xml:space="preserve">
+    <value>結合ウィザード</value>
+  </data>
+  <data name="xForEach" xml:space="preserve">
+    <value>要素：</value>
+  </data>
+  <data name="xIn" xml:space="preserve">
+    <value>コレクション</value>
+  </data>
+  <data name="xDataTableFieldHint" xml:space="preserve">
+    <value>DataTable変数</value>
   </data>
 </root>

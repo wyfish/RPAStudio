@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace RPA.OpenCV.Activities.Snip
+namespace RPA.UIAutomation.Activities.Image.Snip
 {
     // http://stackoverflow.com/questions/3123776/net-equivalent-of-snipping-tool
     // https://github.com/thepirat000/Snipping-Ocr/tree/master/Snipping%20OCR/SnippingTool
@@ -18,14 +18,14 @@ namespace RPA.OpenCV.Activities.Snip
         #endregion
 
         #region Private members
-        private Image Image { get; set; }
+        private System.Drawing.Image Image { get; set; }
         private static bool _SelectionDone = false, _SelectionCanceled = false;
         private static SnippingTool[] _forms;
         private Point _pointStart;
         private int _Margine = 0;
         #endregion
 
-        public SnippingTool(Image screenShot, Rectangle limitedRect, int margine)
+        public SnippingTool(System.Drawing.Image screenShot, Rectangle limitedRect, int margine)
         {
             InitializeComponent();
             BackgroundImage = screenShot;
@@ -70,7 +70,7 @@ namespace RPA.OpenCV.Activities.Snip
         //}
         #endregion
 
-        public static Image Snip()
+        public static System.Drawing.Image Snip()
         {
             var rc = Screen.PrimaryScreen.Bounds;
             using (Bitmap bmp = new Bitmap(rc.Width, rc.Height, PixelFormat.Format24bppRgb))
@@ -90,7 +90,7 @@ namespace RPA.OpenCV.Activities.Snip
             }
         }
 
-        public static Image Snip2()
+        public static System.Drawing.Image Snip2()
         {
             _SelectionCanceled = false;
             _SelectionDone = false;
@@ -119,7 +119,7 @@ namespace RPA.OpenCV.Activities.Snip
                     return null;
                 }
                 if (_SelectionDone) {
-                    Image img = null;
+                    System.Drawing.Image img = null;
                     for (int i = 0; i < screens.Count; i++) {
                         //if (_forms[i].Image != null) return _forms[i].Image;
                         if (_forms[i].Image != null) img = _forms[i].Image;
@@ -130,7 +130,7 @@ namespace RPA.OpenCV.Activities.Snip
             }
         }
 
-        public static Image SnipRect(Rectangle limitedRect, int margine, ref Rectangle margineRect, ref Rectangle snipedRect)
+        public static System.Drawing.Image SnipRect(Rectangle limitedRect, int margine, ref Rectangle margineRect, ref Rectangle snipedRect)
         {
             using (Bitmap bmp = new Bitmap(limitedRect.Width, limitedRect.Height, System.Drawing.Imaging.PixelFormat.Format24bppRgb))
             {

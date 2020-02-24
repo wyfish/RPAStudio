@@ -246,16 +246,21 @@ namespace RPAStudio.ViewModel
                 try
                 {
                     string activity_config_xml = null;
-                    var activity_config_info = Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+                    //var activity_config_info = Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+                    var activity_config_info = Get_Localized_activity_config_info(dll_file_name_without_ext);
 
                     try
                     {
-                        using (StreamReader reader = new StreamReader(activity_config_info.Stream))
+                        // #9 An Activity must contains "activities" in its file name. (to avoid exception)
+                        if (dll_file_name_without_ext.ToLower().Contains("activities"))
                         {
-                            activity_config_xml = reader.ReadToEnd();
-                            Logger.Debug($"开始挂载{dll_file}中的活动配置信息……", logger);
+                            using (StreamReader reader = new StreamReader(activity_config_info.Stream))
+                            {
+                                activity_config_xml = reader.ReadToEnd();
+                                Logger.Debug($"开始挂载{dll_file}中的活动配置信息……", logger);
 
-                            ViewModelLocator.Instance.Activities.MountActivityConfig(activity_config_xml);
+                                ViewModelLocator.Instance.Activities.MountActivityConfig(activity_config_xml);
+                            }
                         }
                     }
                     catch (Exception err)
@@ -272,10 +277,27 @@ namespace RPAStudio.ViewModel
                 }
             }
 
-
+            //加载依赖的Exe (FlaxCV.exe)
+            string[] exe_files = Directory.GetFiles(targetDir, "*.exe", SearchOption.TopDirectoryOnly);//搜索TargetDir最外层目录下的exe文件
+            foreach (var exe_file in exe_files)
+            {
+                File.Copy(exe_file, Environment.CurrentDirectory + "\\" + Path.GetFileName(exe_file), true);
+            }
         }
 
-        
+        private System.Windows.Resources.StreamResourceInfo Get_Localized_activity_config_info(string dll_file_name_without_ext)
+        {
+            string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            try
+            {
+                return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config_{locale}.xml", UriKind.Absolute));
+            }
+            catch (Exception)
+            {
+                return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config.xml", UriKind.Absolute));
+            }
+        }
+
         public ProjectJsonConfig ProcessProjectJsonConfig()
         {
             var json_str = File.ReadAllText(CurrentProjectJsonFile);

@@ -226,7 +226,7 @@
     <value>Column</value>
   </data>
   <data name="DisplayName18" xml:space="preserve">
-    <value>Worksheet name</value>
+    <value>Sheet Name</value>
   </data>
   <data name="DisplayName19" xml:space="preserve">
     <value>Cell content</value>
@@ -244,7 +244,7 @@
     <value>Whether to create a new document</value>
   </data>
   <data name="DisplayName21" xml:space="preserve">
-    <value>Whether the process is visible</value>
+    <value>Visible</value>
   </data>
   <data name="Category7" xml:space="preserve">
     <value>Save option</value>
@@ -901,10 +901,10 @@
     <value>Blank represents the currently active worksheet</value>
   </data>
   <data name="Category32" xml:space="preserve">
-    <value>Start Cell</value>
+    <value>StartingCell</value>
   </data>
   <data name="Category33" xml:space="preserve">
-    <value>End Cell</value>
+    <value>EndingCell</value>
   </data>
   <data name="DisplayName142" xml:space="preserve">
     <value>Merge / Split</value>
@@ -928,55 +928,55 @@
     <value>Target sheet</value>
   </data>
   <data name="DisplayName148" xml:space="preserve">
-    <value>Starting cell row</value>
+    <value>StartingCell row</value>
   </data>
   <data name="DisplayName149" xml:space="preserve">
-    <value>Starting cell column</value>
+    <value>StartingCell column</value>
   </data>
   <data name="DisplayName150" xml:space="preserve">
-    <value>Starting cell name</value>
+    <value>StartingCell name</value>
   </data>
   <data name="DisplayName151" xml:space="preserve">
-    <value>End cell row</value>
+    <value>EndingCell row</value>
   </data>
   <data name="DisplayName152" xml:space="preserve">
-    <value>End cell column</value>
+    <value>EndingCell column</value>
   </data>
   <data name="DisplayName153" xml:space="preserve">
-    <value>End cell name</value>
+    <value>EndingCell name</value>
   </data>
   <data name="Category34" xml:space="preserve">
-    <value>Cell end</value>
+    <value>EndingCell</value>
   </data>
   <data name="DisplayName154" xml:space="preserve">
     <value>Header</value>
   </data>
   <data name="DisplayName155" xml:space="preserve">
-    <value>All worksheets</value>
+    <value>All Sheets</value>
   </data>
   <data name="Category35" xml:space="preserve">
     <value>Regional options</value>
   </data>
   <data name="DisplayName156" xml:space="preserve">
-    <value>All areas</value>
+    <value>All Ranges</value>
   </data>
   <data name="DisplayName157" xml:space="preserve">
-    <value>Cell start row</value>
+    <value>StartingCell row</value>
   </data>
   <data name="DisplayName158" xml:space="preserve">
-    <value>Cell start column</value>
+    <value>StartingCell column</value>
   </data>
   <data name="DisplayName159" xml:space="preserve">
-    <value>Cell start name</value>
+    <value>StartingCell name</value>
   </data>
   <data name="DisplayName160" xml:space="preserve">
-    <value>Cell end row</value>
+    <value>EndingCell row</value>
   </data>
   <data name="DisplayName161" xml:space="preserve">
-    <value>Cell end column</value>
+    <value>EndingCell column</value>
   </data>
   <data name="DisplayName162" xml:space="preserve">
-    <value>Cell end name</value>
+    <value>EndingCell name</value>
   </data>
   <data name="Category36" xml:space="preserve">
     <value>Replace option</value>
@@ -1027,7 +1027,7 @@
     <value>Row / Column data</value>
   </data>
   <data name="DisplayName176" xml:space="preserve">
-    <value>List of worksheet names</value>
+    <value>List of sheet names</value>
   </data>
   <data name="Category38" xml:space="preserve">
     <value>Open / New Document option</value>
@@ -1046,5 +1046,29 @@
   </data>
   <data name="DisplayName177" xml:space="preserve">
     <value>Cell data</value>
+  </data>
+  <data name="xPrompt" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="xRequireValidPath1" xml:space="preserve">
+    <value>Non-creating a new document requires adding a valid path</value>
+  </data>
+  <data name="xRequireValidPath2" xml:space="preserve">
+    <value>Save as requires adding a valid path</value>
+  </data>
+  <data name="xFileNotExist" xml:space="preserve">
+    <value>File does not exist, please check the validity of the path</value>
+  </data>
+  <data name="xExcelExecError" xml:space="preserve">
+    <value>EXCEL execution process error</value>
+  </data>
+  <data name="xRequireCorrectSavePath1" xml:space="preserve">
+    <value>This document is a new file, please enter the correct save path!</value>
+  </data>
+  <data name="xRequireCorrectSavePath2" xml:space="preserve">
+    <value>Save as should enter the correct save path!</value>
+  </data>
+  <data name="xRequireCorrectSavePath2" xml:space="preserve">
+    <value>Save as should enter the correct save path!</value>
   </data>
 </root>

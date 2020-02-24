@@ -7,11 +7,12 @@
     xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
     xmlns:sd="clr-namespace:System.Data;assembly=System.Data" 
     xmlns:local="clr-namespace:RPA.Core.Activities.DataTableActivity"
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
     xmlns:themes="http://schemas.actiprosoftware.com/winfx/xaml/themes" 
     xmlns:sys="clr-namespace:System;assembly=mscorlib" 
     xmlns:src="clr-namespace:Plugins.Shared.Library.Converters;assembly=Plugins.Shared.Library"
     Padding="0" WindowResizeMode="CanResizeWithGrip" WindowSizeToContent="Manual" MinWidth="540" MinHeight="380" 
-    Title="附加数据表" 
+    Title="{x:Static lclz:Resources.xJoinTableTitle}" 
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     >
     <sap:WorkflowElementDialog.Resources>
@@ -65,11 +66,11 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Label Content="输入数据表1" Grid.Column="0" Grid.Row="0" />
+                <Label Content="{x:Static lclz:Resources.xInputTable1}" Grid.Column="0" Grid.Row="0" />
                 <sapv:ExpressionTextBox Grid.Column="1" Grid.Row="0" Width="120" MaxLines="1" ExpressionType="{x:Type sd:DataTable}" 
                                         HintText="InputDataTable" Expression="{Binding Path=ModelItem.DataTable1, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
                                         OwnerActivity="{Binding Path=ModelItem}" />
-                <Label Content="输入数据表2" Grid.Column="0" Grid.Row="1" />
+                <Label Content="{x:Static lclz:Resources.xInputTable2}" Grid.Column="0" Grid.Row="1" />
                 <sapv:ExpressionTextBox Grid.Column="1" Grid.Row="1" Width="120" MaxLines="1" ExpressionType="{x:Type sd:DataTable}" 
                                         HintText="InputDataTable" Expression="{Binding Path=ModelItem.DataTable2, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In, Mode=TwoWay}" 
                                         OwnerActivity="{Binding Path=ModelItem}" />
@@ -77,7 +78,7 @@
             <sapv:ExpressionTextBox DockPanel.Dock="Right" Width="120" UseLocationExpression="true" MaxLines="1" ExpressionType="{x:Type sd:DataTable}" 
                                     HintText="OutputDataTable" Expression="{Binding Path=ModelItem.OutputDataTable, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=Out, Mode=TwoWay}" 
                                     OwnerActivity="{Binding Path=ModelItem}" />
-            <Label VerticalAlignment="Center" DockPanel.Dock="Right" Content="输出数据表" />
+            <Label VerticalAlignment="Center" DockPanel.Dock="Right" Content="{x:Static lclz:Resources.xInputTable}" />
         </DockPanel>
         <DockPanel Grid.Row="1" LastChildFill="false">
             <Label Content="Static JoinType" Grid.Column="0" Grid.Row="1" />
@@ -106,7 +107,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="DataTable1" />
-                        <Label Grid.Column="1" Content="操作" />
+                        <Label Grid.Column="1" Content="{x:Static lclz:Resources.xOperation}" />
                         <Label Grid.Column="2" Content="DataTable2" />
                     </Grid>
                     <ItemsControl Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding Path=Arguments, Mode=TwoWay}">

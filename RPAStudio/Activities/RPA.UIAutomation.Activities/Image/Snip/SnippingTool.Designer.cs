@@ -1,4 +1,4 @@
-﻿namespace RPA.OpenCV.Activities.Snip
+﻿namespace RPA.UIAutomation.Activities.Image.Snip
 {
     partial class SnippingTool
     {

@@ -296,6 +296,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Localization\Strings.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Strings.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.zh-CN.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\ResourceLocalizer.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -409,8 +419,6 @@
     <Compile Include="Windows\SplashScreenWindow.xaml.cs">
       <DependentUpon>SplashScreenWindow.xaml</DependentUpon>
     </Compile>
-    <None Include="Localization\xUidStrings.xlsx" />
-    <None Include="Localization\xStaticStrings.xlsx" />
     <None Include="Resources\FileTemplate\Flowchart.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
@@ -573,13 +581,18 @@
       <LastGenOutput>Images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Images.zh-CN.resx" />
-    <EmbeddedResource Include="Localization\Strings.ja-JP.resx" />
+    <EmbeddedResource Include="Localization\Strings.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localization\Strings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Strings.zh-CN.resx">
       <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.zh-CN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.en-US.resx">
       <SubType>Designer</SubType>
@@ -907,7 +920,7 @@
     <None Include="Config\ProjectConfig_ja.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
+    <Resource Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Dock\source.png" />
