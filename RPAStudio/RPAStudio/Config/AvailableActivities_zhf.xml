@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<AvailableActivities Name="Available" IsExpanded="true">
-  <Group Name="Workflow" IsSortable="True">
-    <!--<Group Name="Checkpoint">
+<AvailableActivities Name="可用" IsExpanded="true">
+  <Group Name="工作流" IsSortable="True">
+    <!--<Group Name="檢查點">
       <Activity Name="Check False" IsSystem="true" TypeOf="FlowDecision" />
       <Activity Name="Check True" IsSystem="true" TypeOf="FlowSwitch" />
     </Group>-->
-    <Group Name="Flowchart">
+    <Group Name="流程圖">
       <Activity Name="Flow Decision" IsSystem="true" TypeOf="FlowDecision" />
       <Activity Name="Flow Switch" IsSystem="true" TypeOf="FlowSwitch" />
       <Activity Name="Flowchart" IsSystem="true" TypeOf="Flowchart" />
     </Group>
-    <Group Name="State Machine" >
+    <Group Name="狀態機" >
       <Activity Name="Final State" IsSystem="true" TypeOf="FinalState" />
       <Activity Name="State" IsSystem="true" TypeOf="State" />
-      <Activity Name="State Machine" IsSystem="true" TypeOf="StateMachine" />
+      <Activity Name="StateMachine" IsSystem="true" TypeOf="StateMachine" />
     </Group>
-    <Group Name="Error Handling" >
+    <Group Name="異常處理" >
       <Activity Name="Rethrow" IsSystem="true" TypeOf="Rethrow" />
       <Activity Name="Terminate Workflow" IsSystem="true" TypeOf="TerminateWorkflow" />
       <Activity Name="Throw" IsSystem="true" TypeOf="Throw" />
       <Activity Name="Try Catch" IsSystem="true" TypeOf="TryCatch" />
     </Group>
-    <Group Name="Control" >
+    <Group Name="控制" >
       <Activity Name="Assign" IsSystem="true" TypeOf="Assign" />
       <Activity Name="Cancellation Scope" IsSystem="true" TypeOf="CancellationScope" />
       <Activity Name="Delay" IsSystem="true" TypeOf="Delay" />
@@ -38,14 +38,14 @@
     </Group>
 
   </Group>
-  <Group Name="Programming" >
-    <Group Name="Collection">
-      <Activity Name="Add To Collection" IsSystem="true" TypeOf="AddToCollection" ToolTip="Add items to the specified collection."/>
-      <Activity  Name="Clear Collection" IsSystem="true" TypeOf="ClearCollection" ToolTip="Clear the specified item collection." />
-      <Activity  Name="Exists In Collection" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="Indicates whether a given item exists in a given collection." />
-      <Activity  Name="Remove From Collection" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="Remove an item from the specified collection." />
+  <Group Name="程式設計" >
+    <Group Name="資料獲取">
+      <Activity Name="添加" IsSystem="true" TypeOf="AddToCollection" ToolTip="將項添加到指定的集合。"/>
+      <Activity  Name="清除" IsSystem="true" TypeOf="ClearCollection" ToolTip="清除指定的項集合。" />
+      <Activity  Name="存在" IsSystem="true" TypeOf="ExistsInCollection" ToolTip="訓示給定集合中是否存在給定項。" />
+      <Activity  Name="移除" IsSystem="true" TypeOf="RemoveFromCollection" ToolTip="從指定集合中移除項。" />
     </Group>
-    <Group Name="Debug">
+    <Group Name="調試">
       <Activity Name="Write Line" IsSystem="true" TypeOf="WriteLine" />
     </Group>
   </Group>

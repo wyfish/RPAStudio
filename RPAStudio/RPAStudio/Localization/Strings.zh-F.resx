@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActivityText" xml:space="preserve">
+    <value>活動</value>
+  </data>
+  <data name="AddToFavorites" xml:space="preserve">
+    <value>添加到我的最愛</value>
+  </data>
+  <data name="AllPackages" xml:space="preserve">
+    <value>所有包</value>
+  </data>
+  <data name="AllPackagesTip" xml:space="preserve">
+    <value>從所有的包源地址來查看或蒐索包</value>
+  </data>
+  <data name="AttributesText" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CodeSnippetText" xml:space="preserve">
+    <value>程式碼片斷</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>詢問</value>
+  </data>
+  <data name="CopyCtrlC" xml:space="preserve">
+    <value>複製（Ctrl+C）</value>
+  </data>
+  <data name="CopyText" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="CreateText" xml:space="preserve">
+    <value>創建</value>
+  </data>
+  <data name="CurrentVersionText" xml:space="preserve">
+    <value>當前版本</value>
+  </data>
+  <data name="CustomContent" xml:space="preserve">
+    <value>自定義</value>
+  </data>
+  <data name="CustomPathText" xml:space="preserve">
+    <value>自定義位置</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DependencyText" xml:space="preserve">
+    <value>依賴包</value>
+  </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="Error_AlreadyRunning" xml:space="preserve">
+    <value>該程式已經運行，不能重複運行！</value>
+  </data>
+  <data name="Error_CallDeveloper" xml:space="preserve">
+    <value>程式運行過程中出現了异常，請聯系軟件開發商！</value>
+  </data>
+  <data name="Error_Critical_Exit" xml:space="preserve">
+    <value>程式運行過程中出現了嚴重錯誤，即將退出，請聯系軟件開發商！</value>
+  </data>
+  <data name="ImportWorkflowDot" xml:space="preserve">
+    <value>導入工作流…</value>
+  </data>
+  <data name="InstallationText" xml:space="preserve">
+    <value>安裝</value>
+  </data>
+  <data name="InstalledText" xml:space="preserve">
+    <value>已安裝</value>
+  </data>
+  <data name="IsIncludePrereleaseCheckBox" xml:space="preserve">
+    <value>包含預發佈版本</value>
+  </data>
+  <data name="jsonFormatError" xml:space="preserve">
+    <value>項目設定檔project.json的內容格式不正確</value>
+  </data>
+  <data name="LocalRobotContent" xml:space="preserve">
+    <value>本地機器人</value>
+  </data>
+  <data name="Message_SaveConfirm" xml:space="preserve">
+    <value>檔案有修改，需要保存檔案\“{0}\”嗎？</value>
+  </data>
+  <data name="NameText" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="NewFolderDot" xml:space="preserve">
+    <value>新建資料夾…</value>
+  </data>
+  <data name="NewFolderTitle" xml:space="preserve">
+    <value>新建資料夾</value>
+  </data>
+  <data name="NewVersionText" xml:space="preserve">
+    <value>新版本</value>
+  </data>
+  <data name="OKText" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>打開項目</value>
+  </data>
+  <data name="OpenProjectDialog" xml:space="preserve">
+    <value>工作流項目檔案|project.json|工作流檔案|*.xaml</value>
+  </data>
+  <data name="OpenProjectDir" xml:space="preserve">
+    <value>打開項目所在目錄</value>
+  </data>
+  <data name="OpenProjectFolder" xml:space="preserve">
+    <value>打開項目資料夾</value>
+  </data>
+  <data name="OperatingRule" xml:space="preserve">
+    <value>運行規則</value>
+  </data>
+  <data name="OriginalNameText" xml:space="preserve">
+    <value>原始名：</value>
+  </data>
+  <data name="OutlineText" xml:space="preserve">
+    <value>大綱</value>
+  </data>
+  <data name="OutputText" xml:space="preserve">
+    <value>輸出</value>
+  </data>
+  <data name="PackageManagerTitle" xml:space="preserve">
+    <value>包管理器</value>
+  </data>
+  <data name="PathText" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="ProjectDependencies" xml:space="preserve">
+    <value>項目依賴包</value>
+  </data>
+  <data name="ProjectOpenError" xml:space="preserve">
+    <value>打開項目出錯！</value>
+  </data>
+  <data name="ProjectSettingsDesc" xml:space="preserve">
+    <value>修改項目相關配寘如名稱和描述</value>
+  </data>
+  <data name="ProjectSettingsTitle" xml:space="preserve">
+    <value>項目設定</value>
+  </data>
+  <data name="ProjectText" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="PublishProjectTitle" xml:space="preserve">
+    <value>發佈項目</value>
+  </data>
+  <data name="ReleaseContent" xml:space="preserve">
+    <value>發佈</value>
+  </data>
+  <data name="ReleaseLocationText" xml:space="preserve">
+    <value>發佈位置</value>
+  </data>
+  <data name="ReleaseNoteText" xml:space="preserve">
+    <value>發佈說明</value>
+  </data>
+  <data name="ReleaseToText" xml:space="preserve">
+    <value>發佈到</value>
+  </data>
+  <data name="RemoveFromFavorites" xml:space="preserve">
+    <value>從我的最愛移除</value>
+  </data>
+  <data name="RemoveFromList" xml:space="preserve">
+    <value>從清單中移除</value>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="RenameTitle" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="RunText" xml:space="preserve">
+    <value>運行</value>
+  </data>
+  <data name="RuntimeError" xml:space="preserve">
+    <value>運行時執行錯誤</value>
+  </data>
+  <data name="SearchTextWatermark" xml:space="preserve">
+    <value>此處輸入要蒐索的內容</value>
+  </data>
+  <data name="SetAsMainFile" xml:space="preserve">
+    <value>設定為主檔案</value>
+  </data>
+  <data name="SetFromAddress" xml:space="preserve">
+    <value>設定包源地址</value>
+  </data>
+  <data name="xSettings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="ShowAvailable" xml:space="preserve">
+    <value>顯示可用</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>查看消息詳情</value>
+  </data>
+  <data name="ShowFavorites" xml:space="preserve">
+    <value>顯示收藏</value>
+  </data>
+  <data name="ShowRecent" xml:space="preserve">
+    <value>顯示最近</value>
+  </data>
+  <data name="TargetNameText" xml:space="preserve">
+    <value>目標名：</value>
+  </data>
+  <data name="UninstallText" xml:space="preserve">
+    <value>卸載</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="VersionOnly" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本號</value>
+  </data>
+  <data name="ViewAllDependencies" xml:space="preserve">
+    <value>查看當前項目的所有依賴包</value>
+  </data>
+  <data name="WorkflowCheckError" xml:space="preserve">
+    <value>工作流校驗錯誤，請檢查參數配寘</value>
+  </data>
+  <data name="WorkflowVerificationOK" xml:space="preserve">
+    <value>工作流校驗正確</value>
+  </data>
+  <data name="ByText" xml:space="preserve">
+    <value>由</value>
+  </data>
+  <data name="DefaultSourceAddress" xml:space="preserve">
+    <value>默認包源地址</value>
+  </data>
+  <data name="UserDefinedSourceAddress" xml:space="preserve">
+    <value>用戶自定義包源地址</value>
+  </data>
+  <data name="NewPackageSource" xml:space="preserve">
+    <value>新建包源</value>
+  </data>
+  <data name="DeletePackageSource" xml:space="preserve">
+    <value>删除包源</value>
+  </data>
+  <data name="MoveUpPackageSource" xml:space="preserve">
+    <value>上移包源</value>
+  </data>
+  <data name="MoveDnPackageSource" xml:space="preserve">
+    <value>下移包源</value>
+  </data>
+  <data name="PackageSourceName" xml:space="preserve">
+    <value>包源名稱</value>
+  </data>
+  <data name="PacketSourceAddress" xml:space="preserve">
+    <value>包源地址</value>
+  </data>
+  <data name="ChooseLocalSourcePath" xml:space="preserve">
+    <value>選擇一個本地源路徑</value>
+  </data>
+  <data name="OperatingText" xml:space="preserve">
+    <value>正在操作……</value>
+  </data>
+  <data name="EnterPackageSourceNameHere" xml:space="preserve">
+    <value>此處輸入包源名稱</value>
+  </data>
+  <data name="EnterPacketSourceAddressHere" xml:space="preserve">
+    <value>此處輸入包源地址</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="AddToolTip" xml:space="preserve">
+    <value>將用戶設置的包源名稱和地址資訊存到用戶自定義包源地址清單中</value>
+  </data>
+  <data name="UpdateToolTip" xml:space="preserve">
+    <value>更新用戶設置的包源名稱和地址資訊</value>
+  </data>
+  <data name="AcceptLicenseConfirmation" xml:space="preserve">
+    <value>該套裝程式要求你在安裝前接受其許可證條款，確定接受嗎？</value>
+  </data>
+  <data name="DescriptionWithColon" xml:space="preserve">
+    <value>描述：</value>
+  </data>
+  <data name="VersionWithColon" xml:space="preserve">
+    <value>版本：</value>
+  </data>
+  <data name="AuthorWithColon" xml:space="preserve">
+    <value>作者：</value>
+  </data>
+  <data name="LicenseWithColon" xml:space="preserve">
+    <value>許可證：</value>
+  </data>
+  <data name="ViewLicenseInformation" xml:space="preserve">
+    <value>查看許可證資訊</value>
+  </data>
+  <data name="ReleaseDateWithColon" xml:space="preserve">
+    <value>發佈日期：</value>
+  </data>
+  <data name="ProjectAddress" xml:space="preserve">
+    <value>項目地址：</value>
+  </data>
+  <data name="ViewProjectInformation" xml:space="preserve">
+    <value>查看項目資訊</value>
+  </data>
+  <data name="TagWithColon" xml:space="preserve">
+    <value>標籤：</value>
+  </data>
+  <data name="DependenciesWithColon" xml:space="preserve">
+    <value>依賴項：</value>
+  </data>
+  <data name="NameIsRequired" xml:space="preserve">
+    <value>名稱不能為空</value>
+  </data>
+  <data name="NameHasIlligalCharacter" xml:space="preserve">
+    <value>名稱不能有非法字元</value>
+  </data>
+  <data name="DeleteDirectoryConfirmation" xml:space="preserve">
+    <value>確認删除目錄\“{0}\”和它的所有內容嗎？</value>
+  </data>
+  <data name="DeleteFileConfirmation" xml:space="preserve">
+    <value>確認刪除檔\“{0}\”嗎？</value>
+  </data>
+  <data name="PronptText" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="NoUnusedScreenshotsFound" xml:space="preserve">
+    <value>找不到需要清理的未使用的截圖</value>
+  </data>
+  <data name="UnusedScreenshotsSuccessfullyRemoved" xml:space="preserve">
+    <value>{0}個未使用的截圖已經被成功移除</value>
+  </data>
+  <data name="MB_CannotOpenProjectConfigFile" xml:space="preserve">
+    <value>無法打開項目設定檔\“{0}\”，是否從最近項目清單中移除該條目？</value>
+  </data>
+  <data name="SameNameDirectoryAlreadyExists" xml:space="preserve">
+    <value>相同名字的目錄已存在</value>
+  </data>
+  <data name="SameNameFileAlreadyExists" xml:space="preserve">
+    <value>相同名字的檔案已存在</value>
+  </data>
+  <data name="SelectDirectoryToAddCodeSnippet" xml:space="preserve">
+    <value>請選擇一個目錄添加到程式碼片斷中</value>
+  </data>
+  <data name="MessageDetails" xml:space="preserve">
+    <value>消息詳情</value>
+  </data>
+  <data name="TheFileAlreadyExists" xml:space="preserve">
+    <value>指定的檔案已存在</value>
+  </data>
+  <data name="PathCannotBeEmpty" xml:space="preserve">
+    <value>位置不能為空</value>
+  </data>
+  <data name="ThePathDoesNotExist" xml:space="preserve">
+    <value>指定的位置不存在</value>
+  </data>
+  <data name="NotInSubDirectory" xml:space="preserve">
+    <value>指定的位置必須是項目所在目錄或其子目錄中</value>
+  </data>
+  <data name="AttributeValue" xml:space="preserve">
+    <value>屬性值</value>
+  </data>
+  <data name="MB_CloseWhileDebugging" xml:space="preserve">
+    <value>當前檔案正在被調試，確定終止調試並關閉\“{0}\”嗎？</value>
+  </data>
+  <data name="VariableTracking" xml:space="preserve">
+    <value>變數跟踪</value>
+  </data>
+  <data name="NameFieldCheckSucceeded" xml:space="preserve">
+    <value>名稱欄位校驗成功</value>
+  </data>
+  <data name="PathFieldCheckSucceeded" xml:space="preserve">
+    <value>位置欄位校驗成功</value>
+  </data>
+  <data name="SameNameProjectAlreadyExists" xml:space="preserve">
+    <value>已經存在同名稱的項目</value>
+  </data>
+  <data name="SelectPathToCreateNewProject" xml:space="preserve">
+    <value>請選擇一個位置來新建項目</value>
+  </data>
+  <data name="MB_FailedToCreateProjectDirectory" xml:space="preserve">
+    <value>創建項目目錄失敗，請檢查</value>
+  </data>
+  <data name="NotSupportBelowV2" xml:space="preserve">
+    <value>當前程式不再支持V2.0版本以下的舊版本項目！</value>
+  </data>
+  <data name="TheSoftwareFailedAuthorizationTest" xml:space="preserve">
+    <value>軟件未通過授權檢測，請註冊產品！</value>
+  </data>
+  <data name="logStarted" xml:space="preserve">
+    <value>{0}開始運行</value>
+  </data>
+  <data name="logFinished" xml:space="preserve">
+    <value>{0}結束運行，耗時：{1}</value>
+  </data>
+  <data name="logLaunchMainWindow" xml:space="preserve">
+    <value>+++++主視窗啟動+++++</value>
+  </data>
+  <data name="msgPackageSourceNameEmpty" xml:space="preserve">
+    <value>包源名稱不能為空！</value>
+  </data>
+  <data name="msgPackageSourcePathEmpty" xml:space="preserve">
+    <value>包源路徑不能為空！</value>
+  </data>
+  <data name="msgPackageSourceNameNotUnique" xml:space="preserve">
+    <value>包源名稱必須唯一！</value>
+  </data>
+  <data name="msgPackageSourcePathInvalid" xml:space="preserve">
+    <value>包源地址不合法！</value>
+  </data>
+  <data name="msgRequireAcceptLicense" xml:space="preserve">
+    <value>該套裝程式要求你在安裝前接受其許可證條款，確定接受嗎？</value>
+  </data>
+  <data name="msgProjectSuccessflyReleased" xml:space="preserve">
+    <value>項目發佈成功。{3}名稱：{0}{3}版本：{1}{3}位置：{2}{3}</value>
+  </data>
+  <data name="msgPublishProjectFailed" xml:space="preserve">
+    <value>項目發佈項目失敗！</value>
+  </data>
+  <data name="xStart" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="xOpen" xml:space="preserve">
+    <value>打開</value>
+  </data>
+  <data name="xClose" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="xDesign" xml:space="preserve">
+    <value>設計</value>
+  </data>
+  <data name="xFile" xml:space="preserve">
+    <value>檔案</value>
+  </data>
+  <data name="xNew" xml:space="preserve">
+    <value>新建</value>
+  </data>
+  <data name="xPackageToolTip" xml:space="preserve">
+    <value>管理nupkg包，實現安裝、卸載、更新包等操作（Ctrl+P）</value>
+  </data>
+  <data name="xOperation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="xRecord" xml:space="preserve">
+    <value>錄製</value>
+  </data>
+  <data name="xRecordTip" xml:space="preserve">
+    <value>一次性錄製多個活動</value>
+  </data>
+  <data name="xActivityCenter" xml:space="preserve">
+    <value>能力中心</value>
+  </data>
+  <data name="xActivityStore" xml:space="preserve">
+    <value>能力商店</value>
+  </data>
+  <data name="xOpenActivityStore" xml:space="preserve">
+    <value>打開能力商店</value>
+  </data>
+  <data name="xSourceCode" xml:space="preserve">
+    <value>源碼</value>
+  </data>
+  <data name="xDump" xml:space="preserve">
+    <value>丟棄</value>
+  </data>
+  <data name="xSubmit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="xSaveAndExit" xml:space="preserve">
+    <value>保存並退出</value>
+  </data>
+  <data name="xSaveAndExitTip" xml:space="preserve">
+    <value>保存並退出錄製功能</value>
+  </data>
+  <data name="xMouse" xml:space="preserve">
+    <value>滑鼠</value>
+  </data>
+  <data name="xMouseRecTip" xml:space="preserve">
+    <value>滑鼠相關的錄製功能</value>
+  </data>
+  <data name="xClick" xml:space="preserve">
+    <value>按一下</value>
+  </data>
+  <data name="xRightClick" xml:space="preserve">
+    <value>右擊</value>
+  </data>
+  <data name="xDoubleClick" xml:space="preserve">
+    <value>按兩下</value>
+  </data>
+  <data name="xHover" xml:space="preserve">
+    <value>懸浮</value>
+  </data>
+  <data name="xKeyboard" xml:space="preserve">
+    <value>鍵盤</value>
+  </data>
+  <data name="xKeyboardRecTip" xml:space="preserve">
+    <value>鍵盤相關的錄製功能</value>
+  </data>
+  <data name="xInput" xml:space="preserve">
+    <value>輸入</value>
+  </data>
+  <data name="xSendHotkey" xml:space="preserve">
+    <value>發送熱鍵</value>
+  </data>
+</root>

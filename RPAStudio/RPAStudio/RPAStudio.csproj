@@ -258,6 +258,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Config\RPAStudio.cs" />
     <Compile Include="Config\RPAStudio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -594,6 +595,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.zh-CN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Strings.zh-F.resx" />
     <EmbeddedResource Include="Properties\Resources.en-US.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -942,6 +944,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Windows\SetUp\SetUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Config\AvailableActivities_zhf.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Config\FileTypeConfig_zhf.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Config\ProjectConfig_zhf.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

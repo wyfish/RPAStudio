@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProjectConfig>
+  <Process Title="新建空白流程" Description="從一個空白項目開始來設計自動化的流程" ProjectName="BlankProcess" ProjectDescription="空白流程"  />
+</ProjectConfig>

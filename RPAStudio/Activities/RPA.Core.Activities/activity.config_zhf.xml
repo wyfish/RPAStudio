@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+  <Group Name="系統" >
+    <Group Name="檔案">
+      <Activity Name="新增行" Icon="Resources/File/appline.png" TypeOf="RPA.Core.Activities.FileActivity.AppendLineActivity,RPA.Core.Activities" ToolTip="將指定的字串追加到檔案中，如果該檔案不存在，則創建該檔案。" />
+      <Activity Name="複製檔案" Icon="Resources/File/copyfile.png" TypeOf="RPA.Core.Activities.FileActivity.CopyFileActivity,RPA.Core.Activities" ToolTip="將檔案從指定位置複製到另一個位置。" />
+      <Activity Name="創建資料夾" Icon="Resources/File/createdir.png" TypeOf="RPA.Core.Activities.FileActivity.CreateDirectoryActivity,RPA.Core.Activities" ToolTip="在指定位置創建目錄。" />
+      <Activity Name="創建檔案" Icon="Resources/File/newfile.png" TypeOf="RPA.Core.Activities.FileActivity.CreateFileActivity,RPA.Core.Activities" ToolTip="在指定位置創建檔案。" />
+      <Activity Name="删除" Icon="Resources/File/delete.png" TypeOf="RPA.Core.Activities.FileActivity.DeleteActivity,RPA.Core.Activities" ToolTip="删除指定位置的檔案或資料夾。" />
+      <Activity Name="移動檔案" Icon="Resources/File/movefile.png" TypeOf="RPA.Core.Activities.FileActivity.MoveFileActivity,RPA.Core.Activities" ToolTip="將檔案從指定位置移動到另一個位置。" />
+      <Activity Name="路徑存在" Icon="Resources/File/fileexist.png" TypeOf="RPA.Core.Activities.FileActivity.PathExistsActivity,RPA.Core.Activities" ToolTip="檢查指定的路徑是否存在。該路徑可以表示檔案路徑或目錄路徑。" />
+      <Activity Name="讀取文字檔" Icon="Resources/File/read.png" TypeOf="RPA.Core.Activities.FileActivity.ReadTextFileActivity,RPA.Core.Activities" ToolTip="從指定檔案中讀取所有字元。" />
+      <Activity Name="寫入文字檔" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.WriteTextFileActivity,RPA.Core.Activities" ToolTip="將指定的文字寫入檔案，已存在的文字被覆蓋。" />
+      <Activity Name="檔案改變事件" Icon="Resources/File/write.png" TypeOf="RPA.Core.Activities.FileActivity.FileChangeTriggerActivity,RPA.Core.Activities" ToolTip="檔案改變事件。" />
+    </Group>
+    <Group Name="剪貼板">
+      <Activity Name="拷貝選擇的文字" Icon="Resources/Clipboard/copyselecttext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.CopySelectTextActivity,RPA.Core.Activities" ToolTip="使用剪貼板功能獲取選定的文字。" />
+      <Activity Name="從剪貼板獲取文字" Icon="Resources/Clipboard/gettext.png" TypeOf="RPA.Core.Activities.ClipboardActivity.GetFromClipboardActivity,RPA.Core.Activities" ToolTip="從剪貼板中檢索數據。" />
+      <Activity Name="設定剪貼板" Icon="Resources/Clipboard/setclipboard.png" TypeOf="RPA.Core.Activities.ClipboardActivity.SetToClipboardActivity,RPA.Core.Activities" ToolTip="將指定的文字/檔案放在剪貼板上。" />
+    </Group>
+    <Group Name="應用程序">
+      <Activity Name="關閉應用程序" Icon="Resources/Application/close.png" TypeOf="RPA.Core.Activities.ApplicationActivity.CloseApplicationActivity,RPA.Core.Activities" ToolTip="關閉與指定UI元素對應的應用程序。" />
+      <Activity Name="獲取行程" Icon="Resources/Application/process.png" TypeOf="RPA.Core.Activities.ApplicationActivity.GetProcessActivity,RPA.Core.Activities" ToolTip="獲取所有正在運行的行程的清單。" />
+      <Activity Name="殺死行程" Icon="Resources/Application/killprocess.png" TypeOf="RPA.Core.Activities.ApplicationActivity.KillProcessActivity,RPA.Core.Activities" ToolTip="終止指定的行程。" />
+      <!--<Activity Name="打開應用程序" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.OpenApplicationActivity,RPA.Core.Activities" ToolTip="啟動指定應用程序並在其中執行多個操作的容器。此外，它還可以將參數列表傳遞給應用程序。" />-->
+      <Activity Name="啟動行程" Icon="Resources/Application/openApplication.png" TypeOf="RPA.Core.Activities.ApplicationActivity.StartProcessActivity,RPA.Core.Activities" ToolTip="啟動指定的應用程序，並可以選擇向其傳遞參數列表。" />
+    </Group>
+    <Group Name="對話方塊">
+      <Activity Name="標注" Icon="Resources/Dialog/callout.png" TypeOf="RPA.Core.Activities.DialogActivity.CalloutActivity,RPA.Core.Activities" ToolTip="在指定的UI元素上顯示帶有標題和文字的快顯視窗，持續一定時間。" />
+      <Activity Name="自定義輸入" Icon="Resources/Dialog/custom_input.png" TypeOf="RPA.Core.Activities.DialogActivity.CustomInputActivity,RPA.Core.Activities" ToolTip="顯示將數據發送回工作流的HTML檔案。" />
+      <Activity Name="輸入對話方塊" Icon="Resources/Dialog/inputdialog.png" TypeOf="RPA.Core.Activities.DialogActivity.InputDialogActivity,RPA.Core.Activities" ToolTip="顯示一個對話方塊，用標籤消息和輸入欄位提示用戶。" />
+      <Activity Name="對話方塊" Icon="Resources/Dialog/messagebox.png" TypeOf="RPA.Core.Activities.DialogActivity.MessageBoxActivity,RPA.Core.Activities" ToolTip="顯示帶有帶有按鈕選項的給定文字的訊息方塊。" />
+      <Activity Name="選擇檔案" Icon="Resources/Dialog/selectfile.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFileActivity,RPA.Core.Activities" ToolTip="打開對話方塊以選擇檔案。" />
+      <Activity Name="選擇資料夾" Icon="Resources/Dialog/selectfolder.png" TypeOf="RPA.Core.Activities.DialogActivity.SelectFolderActivity,RPA.Core.Activities" ToolTip="打開對話方塊以選擇資料夾。" />
+    </Group>
+    <Group Name="環境">
+      <Activity Name="系統提示音" Icon="Resources/Environment/beep.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.WinBeep,RPA.Core.Activities" ToolTip="蜂鳴器或系統提示音嗶嗶嗶或嘟嘟嘟等等" />
+      <Activity Name="獲取系統路徑" Icon="Resources/Environment/envfolder.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvPath,RPA.Core.Activities" ToolTip="獲取指定系統特殊資料夾的路徑" />
+      <Activity Name="獲取系統變數" Icon="Resources/Environment/envvariable.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetEnvVar,RPA.Core.Activities" ToolTip="獲取指定環境變數的內容" />
+      <Activity Name="獲取密碼" Icon="Resources/Environment/password.png" TypeOf="RPA.Core.Activities.EnvironmentActivity.GetPassword,RPA.Core.Activities" ToolTip="通過將密碼與當前用戶相關聯來加密密碼。只有在當前用戶上下文下運行的工作流才能解密密碼。" />
+    </Group>
+    <Group Name="命令列">
+      <Activity Name="PowerShell" Icon="Resources/PowerShell/powershell.png" TypeOf="RPA.Core.Activities.PowerShellActivity.ShellActivity,RPA.Core.Activities" ToolTip="執行命令列命令或腳本" />
+    </Group>
+    <Group Name="日期時間">
+      <Activity Name="獲取當前日期/時間" Icon="Resources/DateTime/date.png" TypeOf="RPA.Core.Activities.DateTimeActivity.GetDateTimeActivity,RPA.Core.Activities" ToolTip="獲取當前日期/時間" />
+      <Activity Name="日期時間轉換" Icon="Resources/DateTime/convert.png" TypeOf="RPA.Core.Activities.DateTimeActivity.DateConvertActivity,RPA.Core.Activities" ToolTip="日期時間轉換" />
+    </Group>
+  </Group>
+  <Group Name="協調器" >
+    <Group Name="數位資產">
+      <Activity Name="獲取憑證" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.GetCredential,RPA.Core.Activities" ToolTip="使用提供的AssetName獲取指定的憑據，並返回用戶名和安全密碼。" />
+      <Activity Name="設定憑證" Icon="Resources/Orchestrator/Credential.png" TypeOf="RPA.Core.Activities.OrchestratorActivity.SetCredential,RPA.Core.Activities" ToolTip="使您可以更新訓示的憑據資產的值，該值在Windows憑據清單中已經可用，無論是全域資產還是個人電腦資產。" />
+    </Group>
+  </Group>
+  <Group Name="工作流">
+    <Group Name="執行" >
+      <Activity Name="執行程式碼" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="同步執行VB.Net程式碼，支持傳遞參數"/>
+      <Activity Name="執行工作流檔案" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="同步執行一個工作流檔案，支持傳遞參數"/>
+    </Group>
+  </Group>
+  <Group Name="用戶事件" >
+    <Activity Name="監控事件" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="用戶事件" />
+  </Group>
+  <Group Name="程式設計" >
+    <Group Name="調試">
+      <Activity Name="注釋" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentActivity,RPA.Core.Activities" ToolTip="添加一個注釋到工作流"/>
+      <Activity Name="注釋活動" Icon="Resources/DebugActivity/comment.png"  TypeOf="RPA.Core.Activities.DebugActivity.CommentOutActivity,RPA.Core.Activities" ToolTip="一個容器，放入裡面的活動將不被執行"/>
+      <Activity Name="輸出日誌" Icon="Resources/DebugActivity/log-message.png"  TypeOf="RPA.Core.Activities.DebugActivity.LogMessageActivity,RPA.Core.Activities" ToolTip="列印日誌到輸出視窗及日誌檔中"/>
+    </Group>
+    <Group Name="DataTable">
+      <Activity Name="添加數據列" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataColumn,   RPA.Core.Activities" ToolTip="將DataColumn添加到指定的DataTable"/>
+      <Activity Name="添加數據行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.AddDataRow,      RPA.Core.Activities" ToolTip="將DataRow添加到指定的DataTable"/>
+      <Activity Name="構建資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.BuildDataTable,  RPA.Core.Activities" ToolTip="根據指定的模式創建DataTable"/>
+      <Activity Name="清除資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ClearDataTable,  RPA.Core.Activities" ToolTip="清除指定DataTable中的所有數據"/>
+      <Activity Name="過濾資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.FilterDataTable, RPA.Core.Activities" ToolTip="允許您DataTable通過在“篩檢程式嚮導”視窗中指定條件來過濾變數。活動可以根據嚮導中指定的邏輯條件保留或删除行或列。
+                活動正文包含“篩檢程式嚮導”按鈕，以便您可以隨時訪問嚮導並自定義設定"/>
+      <Activity Name="單行操作"   Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.ForEachRow,      RPA.Core.Activities" ToolTip="對指定DataTable變數中的每一行執行一次操作"/>
+      <Activity Name="生成資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GenerateDataTable,RPA.Core.Activities" ToolTip="從非結構化數據生成DataTable變數。通過此活動，您可以根據生成的錶選擇列和行分隔符號。"/>
+      <Activity Name="獲取行數據" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="根據指定的列從DataRow變數中獲取值"/>
+      <Activity Name="附加資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.JoinDataTables,  RPA.Core.Activities" ToolTip="根據JoinType内容中指定的Join規則，使用彼此相同的值組合來自兩個錶的行"/>
+      <Activity Name="查找資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.LookupDataTable, RPA.Core.Activities" ToolTip="此活動使您可以蒐索指定的提供值，DataTable並返回找到它的RowIndex。
+                此活動還可以幫助您返回在儲存格中找到的值，該值具有在RowIndex内容中指定的行座標和在“目標列”内容類別中指定的列座標。"/>
+      <Activity Name="合併資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.MergeDataTable,  RPA.Core.Activities" ToolTip="將指定的DataTable與當前DataTable合併，
+                訓示是否保留更改以及如何處理當前DataTable中缺少的模式"/>
+      <Activity Name="輸出資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.OutputDataTable, RPA.Core.Activities" ToolTip="使用CSV格式將DataTable寫入字串"/>
+      <Activity Name="删除數據列" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataColumn,RPA.Core.Activities" ToolTip="從指定的DataTable中删除DataColumn"/>
+      <Activity Name="删除數據行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataRow,   RPA.Core.Activities" ToolTip="從指定的DataTable中删除DataColumn"/>
+      <Activity Name="删除重複行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="從指定的DataTable中删除重複的行數據"/>
+      <Activity Name="排序資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="DataTable根據指定列的值按昇冪或降序對整數進行排序"/>
+    </Group>
+  </Group>
+</activity.config>

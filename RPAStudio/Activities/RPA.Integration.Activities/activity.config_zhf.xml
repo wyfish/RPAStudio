@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--活动配置信息-->
+<activity.config>
+  <Group Name="應用程序集成">
+    <Group Name="Word">
+      <Group Name="過程">
+        <Activity Name="檔案打開/保存檔案"  Icon="Resources/Word/create.png" TypeOf="RPA.Integration.Activities.WordPlugins.WordCreate,RPA.Integration.Activities" ToolTip="打開本地Word檔案/新建Word新檔案以及保存/另存為"/>
+      </Group>
+      <Group Name="寫入">
+        <Activity Name="寫入文字"       Icon="Resources/Word/text.png"  TypeOf="RPA.Integration.Activities.WordPlugins.WriteText,RPA.Integration.Activities" ToolTip="在當前Word檔案光標位置寫入文字"/>
+        <Activity Name="換行/分頁"      Icon="Resources/Word/newline.png" TypeOf="RPA.Integration.Activities.WordPlugins.PageAndNewline,RPA.Integration.Activities" ToolTip="在當前Word檔案光標位置回車換行/新頁面"/>
+        <Activity Name="寫入檔案"       Icon="Resources/Word/writefile.png" TypeOf="RPA.Integration.Activities.WordPlugins.InsertFile,RPA.Integration.Activities" ToolTip="將已存在的本地Word檔案全部內容寫入當前Word檔案光標處"/>
+        <Activity Name="書簽/超連結/圖片" Icon="Resources/Word/mark.png" TypeOf="RPA.Integration.Activities.WordPlugins.MarkLink,RPA.Integration.Activities" ToolTip="當前Word檔案光標位置插入書簽/超連結/圖片"/>
+        <Activity Name="退格删除"       Icon="Resources/Word/backspace.png" TypeOf="RPA.Integration.Activities.WordPlugins.Backspace,RPA.Integration.Activities" ToolTip="在當前Word檔案光標位置退格删除N次"/>
+        <Activity Name="複製/粘貼"      Icon="Resources/Word/copy.png" TypeOf="RPA.Integration.Activities.WordPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="複製：將選定內容複製到粘貼板，通常配合'光標移動'功能使用粘貼：將粘貼板內容寫入當前Word檔案光標位置"/>
+        <Activity Name="全選"           Icon="Resources/Word/wholestory.png" TypeOf="RPA.Integration.Activities.WordPlugins.WholeStory,RPA.Integration.Activities" ToolTip="將Word檔案全部內容設定為選取狀態"/>
+        <Activity Name="獲取檔案內容"   Icon="Resources/Word/getcontent.png" TypeOf="RPA.Integration.Activities.WordPlugins.GetContent,RPA.Integration.Activities" ToolTip="獲取Word檔案中全部文字"/>
+      </Group>
+      <Group Name="光標">
+        <Activity Name="上下左右移動" Icon="Resources/Word/move1.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMove,RPA.Integration.Activities" ToolTip="當前Word檔案光標上下移動並可選擇內容是否選中"/>
+        <Activity Name="移動列項"     Icon="Resources/Word/move2.png" TypeOf="RPA.Integration.Activities.WordPlugins.CursorMoveMenu,RPA.Integration.Activities" ToolTip="包含光標移動到檔案開頭/結尾/下一頁功能"/>
+      </Group>
+      <Group Name="設定">
+        <Activity Name="字體與頁面内容" Icon="Resources/Word/property.png" TypeOf="RPA.Integration.Activities.WordPlugins.Settings,RPA.Integration.Activities" ToolTip="設定當前檔案選中文字的字體格式/頁面邊距/頁面對齊管道"/>
+      </Group>
+    </Group>
+
+    <Group Name="Excel">
+      <Group Name="過程">
+        <Activity Name="打開/保存" Icon="Resources/Excel/create.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ExcelCreate,RPA.Integration.Activities" ToolTip="打開本地Excel檔案或新建Excel新檔案並保存/另存為新路徑"/>
+      </Group>
+      <Group Name="工作表">
+        <Activity Name="打開/删除工作表" Icon="Resources/Excel/opensheet.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.OpenDelSheet,RPA.Integration.Activities" ToolTip="打開當前活動Excel檔案中的工作簿"/>
+        <Activity Name="新建工作表" Icon="Resources/Excel/newsheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.NewSheet,RPA.Integration.Activities" ToolTip="在當前Excel檔案中新建工作簿"/>
+        <Activity Name="工作表重命名" Icon="Resources/Excel/renamesheet.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RenameSheet,RPA.Integration.Activities" ToolTip="當前Excel檔案中對已存在的工作簿進行重命名"/>
+        <Activity Name="工作表名稱清單" Icon="Resources/Excel/sheetnames.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetAllSheets,RPA.Integration.Activities" ToolTip="獲取所有工作表名稱清單"/>
+      </Group>
+      <Group Name="儲存格">
+        <Activity Name="合併儲存格" Icon="Resources/Excel/cellmerge.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellMerge,RPA.Integration.Activities" ToolTip="指定儲存格區域進行儲存格合併操作"/>
+        <Activity Name="獲取儲存格內容" Icon="Resources/Excel/getcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellGet,RPA.Integration.Activities" ToolTip="獲取指定位置儲存格的文字內容"/>
+        <Activity Name="設定儲存格內容" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="設定指定位置儲存格的文字內容"/>
+      </Group>
+      <Group Name="行/列">
+        <Activity Name="讀取行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="讀取一行或一列數據"/>
+        <Activity Name="複製行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="在指定位置複製一行或一列數據"/>
+        <Activity Name="行/列操作" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="包括對行或列的隱藏/新增/删除操作"/>
+        <Activity Name="獲取行/列數" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="獲取相應相應工作簿行/列總數，遇空行/列截止"/>
+      </Group>
+      <Group Name="區域">
+        <Activity Name="删除區域"     Icon="Resources/Excel/rangedelete.png"  TypeOf="RPA.Integration.Activities.ExcelPlugins.DeleteRange,RPA.Integration.Activities" ToolTip="指定儲存格區域進行删除操作"/>
+        <Activity Name="粘貼/複製"    Icon="Resources/Excel/copy.png"         TypeOf="RPA.Integration.Activities.ExcelPlugins.CopyPaste,RPA.Integration.Activities" ToolTip="選定區域的數據複製到粘貼板寫入到其它區域中"/>
+        <Activity Name="讀取區域內容" Icon="Resources/Excel/rangeread.png"    TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRange,RPA.Integration.Activities" ToolTip="指定儲存格區域複製到DataTable變數中"/>
+        <Activity Name="區域寫入內容" Icon="Resources/Excel/rangewrite.png"   TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteRange,RPA.Integration.Activities" ToolTip="將DataTable變數中的數據寫入到指定區域"/>
+      </Group>
+      <Group Name="替換">
+        <Activity Name="查找替換" Icon="Resources/Excel/replace.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.Replace,RPA.Integration.Activities" ToolTip="查找工作表相應內容並替換為指定內容"/>
+      </Group>
+      <Group Name="VBA">
+        <Activity Name="執行VBA" Icon="Resources/Excel/vba.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RunVBA,RPA.Integration.Activities"  ToolTip="指定EXCEL中存在的VBA腳本賦於參數運行並可取得返回值"/>
+      </Group>
+      <Group Name="設定">
+        <Activity Name="區域設置" Icon="Resources/Excel/setting.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AreaSetting,RPA.Integration.Activities"  ToolTip="對選定儲存格區域進行文字格式/行高列寬/邊框/內容對齊管道設定"/>
+      </Group>
+    </Group>
+    <Group Name="CSV">
+      <Activity Name="CSV讀取" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadCSV, RPA.Integration.Activities" ToolTip="將CVS檔案內容讀取到DataTable變數中"/>
+      <Activity Name="CSV寫入" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.WriteCSV, RPA.Integration.Activities" ToolTip="DataTable變數中內容寫入到指定CVS檔案中"/>
+      <Activity Name="CSV追加" Icon="Resources/Excel/csv.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.AppendCSV, RPA.Integration.Activities" ToolTip="DataTable變數中內容追加到指定CVS檔案末尾"/>
+    </Group>
+    <Group Name="Mail">
+      <Group Name="SMTP">
+        <Activity Name="發送SMTP郵件" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendMail, RPA.Integration.Activities" ToolTip="使用SMTP協定發送電子郵件"/>
+      </Group>
+      <Group Name="POP3">
+        <Activity Name="獲取POP3郵件消息" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetPOP3Mail, RPA.Integration.Activities" ToolTip="從指定的服務器檢索POP3電子郵件。"/>
+      </Group>
+      <Group Name="IMAP">
+        <Activity Name="獲取IMAP郵件" Icon="Resources/Mail/GetMail.png" TypeOf="RPA.Integration.Activities.Mail.GetIMAPMail, RPA.Integration.Activities" ToolTip="從指定的服務器檢索IMAP電子郵件"/>
+        <Activity Name="移動IMAP郵件" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveIMAPMail, RPA.Integration.Activities" ToolTip="將IMAP電子郵件移動到指定的資料夾"/>
+      </Group>
+      <Activity Name="保存郵件" Icon="Resources/Mail/SaveMail.png" TypeOf="RPA.Integration.Activities.Mail.SaveMail, RPA.Integration.Activities" ToolTip="將電子郵件保存到指定的資料夾。如果該資料夾不存在，則創建該資料夾。如果未指定資料夾，則下載將保存在項目資料夾中。將覆蓋指定資料夾中與郵件同名的檔案"/>
+      <Activity Name="保存附件" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveMailAttachments, RPA.Integration.Activities" ToolTip="將郵件附件保存到指定的資料夾。如果該資料夾不存在，則創建該資料夾。如果未指定資料夾，則下載將保存在項目資料夾中。將覆蓋指定資料夾中與附件同名的檔案"/>
+      <Activity Name="保存圖片" Icon="Resources/Mail/GetImgs.png" TypeOf="RPA.Integration.Activities.Mail.GetMailImgs, RPA.Integration.Activities" ToolTip="將郵件圖片保存到指定的資料夾。如果該資料夾不存在，則創建該資料夾。將覆蓋指定資料夾中與附件同名的圖片"/>
+      <Group Name="OutLook">
+        <Activity Name="獲取Outlook郵件" Icon="Resources/Mail/outlook.png" TypeOf="RPA.Integration.Activities.Mail.GetOutlookMailMessagesActivity, RPA.Integration.Activities" ToolTip="從Outlook獲取電子郵件"/>
+        <Activity Name="移動Outlook郵件" Icon="Resources/Mail/MoveMail.png" TypeOf="RPA.Integration.Activities.Mail.MoveOutlookMessageActivity, RPA.Integration.Activities" ToolTip="將Outlook電子郵件移動到指定的資料夾"/>
+        <Activity Name="回復Outlook郵件" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.ReplyToOutlookMailMessageActivity, RPA.Integration.Activities" ToolTip="從Outlook回復電子郵件"/>
+        <Activity Name="發送Outlook郵件" Icon="Resources/Mail/SendMail.png" TypeOf="RPA.Integration.Activities.Mail.SendOutlookMailActivity, RPA.Integration.Activities" ToolTip="從Outlook發送電子郵件"/>
+        <Activity Name="保存Outlook附件" Icon="Resources/Mail/SaveMailAttachments.png" TypeOf="RPA.Integration.Activities.Mail.SaveOutlookAttachementsActivity, RPA.Integration.Activities" ToolTip="保存Outlook電子郵件的附件"/>
+        <Activity Name="删除Outlook郵件" Icon="Resources/Mail/delete-mail.png" TypeOf="RPA.Integration.Activities.Mail.DeleteOutlookMailItemActivity, RPA.Integration.Activities" ToolTip="删除指定的Outlook電子郵件，將其放入已删除郵件目錄中，若是已經在已删除郵件目錄中，則徹底删除"/>
+        <Activity Name="歸檔Outlook郵件" Icon="Resources/Mail/archive-mail.png" TypeOf="RPA.Integration.Activities.Mail.ArchiveOutlookMailsActivity, RPA.Integration.Activities" ToolTip="歸檔Outlook電子郵件"/>
+        <Activity Name="清空Outlook緩存" Icon="Resources/Mail/clear-mail-cache.png" TypeOf="RPA.Integration.Activities.Mail.ClearOutlookCacheActivity, RPA.Integration.Activities" ToolTip="清空Outlook電子郵件的緩存資訊"/>
+      </Group>
+    </Group>
+    <Group Name="資料庫">
+      <Activity Name="連接"     Icon="Resources/Database/connect.png" TypeOf="RPA.Integration.Activities.Database.Connect, RPA.Integration.Activities" ToolTip="使用標準連接字串連接到資料庫"/>
+      <Activity Name="關閉連接" Icon="Resources/Database/disconnect.png" TypeOf="RPA.Integration.Activities.Database.Disconnect, RPA.Integration.Activities" ToolTip="關閉與資料庫的連接"/>
+      <Activity Name="執行無結果集査詢(Execute Non Qurery)" Icon="Resources/Database/noquery.png" TypeOf="RPA.Integration.Activities.Database.ExecNoQuery, RPA.Integration.Activities" ToolTip="在資料庫上執行非査詢語句。對於UPDATE，INSERT和DELETE語句，返回值是受命令影響的行數。對於所有其他類型的語句，返回值為-1"/>
+      <Activity Name="執行査詢(Execute Query)"        Icon="Resources/Database/query.png" TypeOf="RPA.Integration.Activities.Database.ExecQuery, RPA.Integration.Activities" ToolTip="對資料庫執行査詢並返回查詢結果"/>
+      <Activity Name="插入語句(Insert)"       Icon="Resources/Database/insert.png" TypeOf="RPA.Integration.Activities.Database.ExecInsert, RPA.Integration.Activities" ToolTip="對資料庫執行査詢並返回查詢結果"/>
+      <Activity Name="執行事務(Transaction)"  Icon="Resources/Database/transaction.png" TypeOf="RPA.Integration.Activities.Database.Transaction, RPA.Integration.Activities" ToolTip="連接到資料庫並具有可以與資料庫執行多個事務的Sequence。如果UseTransaction設定為true，則包含的操作將在單個事務中執行，如果沒有任何失敗，則在最後應用。
+               如果UseTransaction設定為false，則單獨提交所有操作。此活動結束時，將關閉與資料庫的連接。此活動返回DatabaseConnection變數"/>
+    </Group>
+    <Group Name="FTP">
+      <Activity Name="FTP會話"      Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.WithFtpSession, RPA.Integration.Activities" ToolTip="實現FTP連接以及流程運行的父視窗"/>
+      <Activity Name="目錄是否存在" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DirectoryExists, RPA.Integration.Activities" ToolTip="檢查FTP伺服器上是否存在某個目錄"/>
+      <Activity Name="檔案是否存在" Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.FileExists, RPA.Integration.Activities" ToolTip="檢查FTP伺服器上是否存在指定檔案"/>
+      <Activity Name="删除"         Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.Delete, RPA.Integration.Activities" ToolTip="删除指定位置的檔案或資料夾"/>
+      <Activity Name="文件下載"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.DownloadFiles, RPA.Integration.Activities" ToolTip="FTP伺服器指定目錄上下載檔案"/>
+      <Activity Name="上傳文件"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.UploadFiles, RPA.Integration.Activities" ToolTip="將本地文件上傳到FTP伺服器"/>
+      <Activity Name="枚舉對象"     Icon="Resources/FTP/FTP.png" TypeOf="RPA.Integration.Activities.FTP.EnumerateObjects, RPA.Integration.Activities" ToolTip="枚舉對象"/>
+    </Group>
+  </Group>
+</activity.config>

@@ -707,6 +707,7 @@
     <Resource Include="activity.config_ja.xml">
       <SubType>Designer</SubType>
     </Resource>
+    <Resource Include="activity.config_zhf.xml" />
     <Content Include="Microsoft.Data.ConnectionUI.Dialog.dll" />
     <Content Include="Microsoft.Data.ConnectionUI.dll" />
     <Resource Include="Resources\Excel\csv.png" />

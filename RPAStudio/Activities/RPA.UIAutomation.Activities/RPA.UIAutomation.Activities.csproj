@@ -909,7 +909,10 @@
     <Resource Include="Resources\Image\LoadImage.png" />
     <Resource Include="Resources\Image\SaveImage.png" />
     <Resource Include="activity.config_ja.xml" />
-    <Resource Include="activity.config_zh.xml" />
+    <Resource Include="activity.config_zh.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="activity.config_zhf.xml" />
     <Content Include="Flax.CV.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

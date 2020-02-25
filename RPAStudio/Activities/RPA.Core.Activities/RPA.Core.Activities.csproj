@@ -728,6 +728,11 @@
   <ItemGroup>
     <Resource Include="Resources\Dialog\selectsaveasfile.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="activity.config_zhf.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Debug (
