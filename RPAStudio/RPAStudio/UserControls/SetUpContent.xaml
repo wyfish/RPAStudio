@@ -82,7 +82,7 @@
                         <Grid Grid.Row="0" Margin="0,4,0,597.6" Grid.RowSpan="2"  >
                             <StackPanel Margin="-8,-11,8.4,-34" >
                                 <TextBlock x:Uid="Language" FontSize="15" Foreground="#383838" FontWeight="Bold">语言</TextBlock>
-                                <TextBlock x:Uid="Describe" FontSize="15" Foreground="#383838">使用此选项可更改Studio和机器人中的界面语言。</TextBlock>
+                                <TextBlock x:Uid="LanguageDescribe" FontSize="15" Foreground="#383838">使用此选项可更改Studio和机器人中的界面语言。</TextBlock>
                                 <ComboBox Width="110" Height="27" HorizontalAlignment="Left" SelectedIndex="0">
                                     <TextBlock FontSize="15">中文(简体)</TextBlock>
                                     <TextBlock FontSize="15">English</TextBlock>
@@ -93,8 +93,8 @@
                         </Grid>
                         <Grid Margin="0,28,0,51.6" Grid.RowSpan="2">
                             <StackPanel Margin="-8,43,6.4,9.6">
-                                <TextBlock x:Uid="Th8me" FontSize="15" Foreground="#383838" FontWeight="Bold">主题</TextBlock>
-                                <TextBlock FontSize="15" Foreground="#383838">使用此选项可更改Studio中的界面主题。</TextBlock>
+                                <TextBlock x:Uid="Theme" FontSize="15" Foreground="#383838" FontWeight="Bold">主题</TextBlock>
+                                <TextBlock x:Uid="ThemeDescribe" FontSize="15" Foreground="#383838">使用此选项可更改Studio中的界面主题。</TextBlock>
                                 <ComboBox Width="110" Height="27" HorizontalAlignment="Left" SelectedIndex="0">
                                     <TextBlock FontSize="15">浅色</TextBlock>
                                     <TextBlock FontSize="15">深色</TextBlock>
