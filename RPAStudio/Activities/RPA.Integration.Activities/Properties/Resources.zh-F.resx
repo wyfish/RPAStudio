@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Category1" xml:space="preserve">
+    <value>連接配寘</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>用於建立資料庫連接的連接字串</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>連接字串</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>用於訪問資料庫的資料庫提供程式的名稱</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>程式名稱</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>輸出</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>資料庫連接</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>用於保存資料庫連接的變數（僅支持DatabaseConnection）</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>斷開連接</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>要關閉的資料庫連接（DatabaseConnection變數）</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>超時時間</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>指定瀏覽器響應超時時間（毫秒）</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>錯誤繼續執行</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>出現錯誤是否繼續執行</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>現有資料庫連接</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>輸入</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>插入錶中的DataTable變數。DataTable列的名稱和描述必須與資料庫錶中的名稱和描述相匹配</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>要在其中插入數據的SQL錶</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>錶名</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>執行結果</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>將受影響的行數存儲到Int32變數中</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>命令類型</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>指定如何解釋命令字串</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>執行的SQL命令語句</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>參數</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>對於UPDATE，INSERT和DELETE語句，返回值是受命令影響的行數。對於所有其他類型的語句，返回值為-1</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>將SQL査詢的輸出存儲在DataTable變數中</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>事務</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>指定此活動中的資料庫操作是否應包裝在資料庫事務中</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>檔案路徑</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>分隔符號</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>字元編碼</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>行</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>列</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>工作表名稱</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>儲存格內容</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>執行活動後的延遲時間（以毫秒為組織）。默認時間為3000毫秒。</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>延遲活動開始執行任何操作之前的時間（以毫秒為組織）。默認時間為0毫秒。</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>新建/打開檔案選項</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>是否創建新檔案</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>流程是否可見</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>保存選項</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>程式是否退出</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>另存為</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>粘貼選項</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>粘貼儲存格區域的起始儲存格</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>粘貼儲存格區域的工作薄名稱</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>複製選項</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value>存儲讀取數據的DataTable</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value>寫入數據的DataTable變數名</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>行列操作</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>行列選擇</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>行號/列號（開始）</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>行號/列號（結束）</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>儲存格填充色</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>對齊管道</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>字體設置</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>字體</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>字型大小</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>顏色</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>粗體</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>斜體</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>底線</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>行高列寬</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>行高</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>列寬</value>
+  </data>
+  <data name="Category12" xml:space="preserve">
+    <value>邊框</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>邊框選擇</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>工作表次序</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>功能選項</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>工作表新名稱</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>VBA名稱</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>返回值</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>路徑</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>是否存在</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>本地路徑</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>創建資料夾</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>包含子資料夾</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>覆蓋</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>枚舉檔案</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>FTP路徑</value>
+  </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>創建</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>服務器</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>主機</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>埠</value>
+  </data>
+  <data name="Category14" xml:space="preserve">
+    <value>憑據</value>
+  </data>
+  <data name="DisplayName56" xml:space="preserve">
+    <value>用戶名</value>
+  </data>
+  <data name="DisplayName57" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="DisplayName58" xml:space="preserve">
+    <value>匿名登入</value>
+  </data>
+  <data name="Category15" xml:space="preserve">
+    <value>安全設置</value>
+  </data>
+  <data name="DisplayName59" xml:space="preserve">
+    <value>FTPS模式</value>
+  </data>
+  <data name="DisplayName60" xml:space="preserve">
+    <value>使用SFTP</value>
+  </data>
+  <data name="DisplayName61" xml:space="preserve">
+    <value>用戶端證書路徑</value>
+  </data>
+  <data name="DisplayName62" xml:space="preserve">
+    <value>用戶端證書密碼</value>
+  </data>
+  <data name="DisplayName63" xml:space="preserve">
+    <value>接受所有證書</value>
+  </data>
+  <data name="Category16" xml:space="preserve">
+    <value>登錄</value>
+  </data>
+  <data name="DisplayName64" xml:space="preserve">
+    <value>郵件帳戶</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value>用於發送郵件的電子郵件帳戶</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>用於發送郵件的電子郵件帳戶的密碼</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>使用的電子郵件服務器主機</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>電子郵件將通過的埠</value>
+  </data>
+  <data name="DisplayName65" xml:space="preserve">
+    <value>資料夾</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>檢索消息的郵件資料夾</value>
+  </data>
+  <data name="DisplayName66" xml:space="preserve">
+    <value>安全連接</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>指定用於連接的SSL和/或TLS加密</value>
+  </data>
+  <data name="DisplayName67" xml:space="preserve">
+    <value>檢索消息數</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>從清單頂部開始檢索的消息數</value>
+  </data>
+  <data name="DisplayName68" xml:space="preserve">
+    <value>標記消息删除</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>指定是否應將讀取的消息標記為删除</value>
+  </data>
+  <data name="DisplayName69" xml:space="preserve">
+    <value>標為已讀</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>指定是否將檢索到的消息標記為已讀</value>
+  </data>
+  <data name="DisplayName70" xml:space="preserve">
+    <value>僅檢索未讀消息</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>指定是否僅檢索未讀消息</value>
+  </data>
+  <data name="DisplayName71" xml:space="preserve">
+    <value>檢索所有未讀消息</value>
+  </data>
+  <data name="Category17" xml:space="preserve">
+    <value>篩選</value>
+  </data>
+  <data name="DisplayName72" xml:space="preserve">
+    <value>主題關鍵字</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>根據郵件主題篩選相應的郵件</value>
+  </data>
+  <data name="DisplayName73" xml:space="preserve">
+    <value>發件人關鍵字</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>根據發件人地址篩選相應的郵件</value>
+  </data>
+  <data name="DisplayName74" xml:space="preserve">
+    <value>內容關鍵字</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>根據郵件超文字內容篩選相應的郵件</value>
+  </data>
+  <data name="DisplayName75" xml:space="preserve">
+    <value>消息</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>將檢索到的消息作為MailMessage對象的集合</value>
+  </data>
+  <data name="DisplayName76" xml:space="preserve">
+    <value>郵件</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>用於選取圖片的郵件，該欄位僅支持MimeMessage變數</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>將郵件中的郵件存儲到本地目錄，為空則不保存</value>
+  </data>
+  <data name="DisplayName77" xml:space="preserve">
+    <value>圖片路徑清單</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>圖片本地保存路徑清單</value>
+  </data>
+  <data name="DisplayName78" xml:space="preserve">
+    <value>圖片資源清單</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>保存圖片資訊，分為地址和base64碼兩種方式</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>指定是否應使用SSL發送消息</value>
+  </data>
+  <data name="DisplayName79" xml:space="preserve">
+    <value>目標資料夾</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>要將消息移動到的郵件資料夾</value>
+  </data>
+  <data name="DisplayName80" xml:space="preserve">
+    <value>源資料夾</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>可以找到郵件消息的資料夾</value>
+  </data>
+  <data name="DisplayName81" xml:space="preserve">
+    <value>郵件消息</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>要移動的MailMessage對象</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>要保存MailMessage對象的完整路徑</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>要保存的MailMessage對象</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>要保存MimeMessage附件的完整路徑</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>要保存的MimeMessage附件</value>
+  </data>
+  <data name="DisplayName82" xml:space="preserve">
+    <value>附件清單</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>檢索到的附件</value>
+  </data>
+  <data name="Category18" xml:space="preserve">
+    <value>寄件人</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>發件人的顯示名稱</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>發件人</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>發件人的電子郵寄地址</value>
+  </data>
+  <data name="Category19" xml:space="preserve">
+    <value>收件人</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>電子郵件的主要收件人</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>抄送</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>電子郵件的次要收件人</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>密件抄送</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>電子郵件的隱藏收件人</value>
+  </data>
+  <data name="Category20" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>主題</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>電子郵件的主題</value>
+  </data>
+  <data name="DisplayName88" xml:space="preserve">
+    <value>正文</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>電子郵件的正文</value>
+  </data>
+  <data name="DisplayName89" xml:space="preserve">
+    <value>優先順序</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>郵件的優先順序標誌</value>
+  </data>
+  <data name="DisplayName90" xml:space="preserve">
+    <value>HTML格式</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>指定郵件正文是否以HTML格式編寫</value>
+  </data>
+  <data name="Category21" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="DisplayName91" xml:space="preserve">
+    <value>檔案</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>要添加到電子郵件中的附件</value>
+  </data>
+  <data name="Category22" xml:space="preserve">
+    <value>轉發</value>
+  </data>
+  <data name="DisplayName92" xml:space="preserve">
+    <value>消息體</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>要轉發的消息，該欄位僅支持MailMessage對象</value>
+  </data>
+  <data name="DisplayName93" xml:space="preserve">
+    <value>存檔路徑（.pst）</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>Outlook資料檔案的保存路徑</value>
+  </data>
+  <data name="DisplayName94" xml:space="preserve">
+    <value>待存檔帳戶</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>Outlook帳戶名</value>
+  </data>
+  <data name="DisplayName95" xml:space="preserve">
+    <value>郵件對象</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>指定郵件對象</value>
+  </data>
+  <data name="DisplayName96" xml:space="preserve">
+    <value>超時時間（毫秒）</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>指定在引發錯誤之前等待活動運行的時間量（以毫秒為組織）。預設值為30000毫秒（30秒）</value>
+  </data>
+  <data name="DisplayName97" xml:space="preserve">
+    <value>獲取郵件個數</value>
+  </data>
+  <data name="DisplayName98" xml:space="preserve">
+    <value>輸出郵寄清單</value>
+  </data>
+  <data name="DisplayName99" xml:space="preserve">
+    <value>郵件目錄</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>從哪個郵件目錄去獲取郵件</value>
+  </data>
+  <data name="DisplayName100" xml:space="preserve">
+    <value>帳戶</value>
+  </data>
+  <data name="DisplayName101" xml:space="preserve">
+    <value>篩檢程式</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>只有符合過濾條件的郵件才會被獲取</value>
+  </data>
+  <data name="DisplayName102" xml:space="preserve">
+    <value>獲取附件</value>
+  </data>
+  <data name="DisplayName103" xml:space="preserve">
+    <value>只獲取未讀郵件</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>是否只獲取未讀郵件，默認打勾</value>
+  </data>
+  <data name="DisplayName104" xml:space="preserve">
+    <value>標記為已讀</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>是否將接收到的郵件自動標記成已讀</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>Outlook郵件目錄</value>
+  </data>
+  <data name="DisplayName105" xml:space="preserve">
+    <value>回復所有人</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>不勾選的話只回復給發送者，勾選的話不僅給發送者，還會給所有抄送者回復郵件</value>
+  </data>
+  <data name="DisplayName106" xml:space="preserve">
+    <value>保存路徑</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>附件的保存路徑</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>輸出附件清單</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>規則運算式篩檢程式，只有符合過濾條件的附件名才會被保存</value>
+  </data>
+  <data name="DisplayName107" xml:space="preserve">
+    <value>密送</value>
+  </data>
+  <data name="DisplayName108" xml:space="preserve">
+    <value>顯示名</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>預期的顯示名稱，郵件系統必須支持該功能才能使用</value>
+  </data>
+  <data name="DisplayName109" xml:space="preserve">
+    <value>是否保存成草稿</value>
+  </data>
+  <data name="DisplayName110" xml:space="preserve">
+    <value>遊標移動距離</value>
+  </data>
+  <data name="DisplayName111" xml:space="preserve">
+    <value>是否選中</value>
+  </data>
+  <data name="Category23" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="DisplayName112" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="DisplayName113" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="DisplayName114" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="DisplayName115" xml:space="preserve">
+    <value>下</value>
+  </data>
+  <data name="DisplayName116" xml:space="preserve">
+    <value>開頭</value>
+  </data>
+  <data name="DisplayName117" xml:space="preserve">
+    <value>結尾</value>
+  </data>
+  <data name="DisplayName118" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
+  <data name="DisplayName119" xml:space="preserve">
+    <value>字體大小</value>
+  </data>
+  <data name="DisplayName120" xml:space="preserve">
+    <value>字體顏色</value>
+  </data>
+  <data name="DisplayName121" xml:space="preserve">
+    <value>底線</value>
+  </data>
+  <data name="DisplayName122" xml:space="preserve">
+    <value>字體陰影</value>
+  </data>
+  <data name="Category24" xml:space="preserve">
+    <value>頁面内容</value>
+  </data>
+  <data name="Category25" xml:space="preserve">
+    <value>頁面邊距</value>
+  </data>
+  <data name="DisplayName123" xml:space="preserve">
+    <value>左邊距</value>
+  </data>
+  <data name="DisplayName124" xml:space="preserve">
+    <value>右邊距</value>
+  </data>
+  <data name="DisplayName125" xml:space="preserve">
+    <value>上邊距</value>
+  </data>
+  <data name="DisplayName126" xml:space="preserve">
+    <value>下邊距</value>
+  </data>
+  <data name="DisplayName127" xml:space="preserve">
+    <value>退格次數</value>
+  </data>
+  <data name="DisplayName128" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="DisplayName129" xml:space="preserve">
+    <value>粘貼</value>
+  </data>
+  <data name="DisplayName130" xml:space="preserve">
+    <value>檔案內容</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>獲取到Word檔案中的全部內容文字</value>
+  </data>
+  <data name="Category26" xml:space="preserve">
+    <value>圖片</value>
+  </data>
+  <data name="DisplayName131" xml:space="preserve">
+    <value>圖片連結</value>
+  </data>
+  <data name="Category27" xml:space="preserve">
+    <value>書簽</value>
+  </data>
+  <data name="DisplayName132" xml:space="preserve">
+    <value>書簽名稱</value>
+  </data>
+  <data name="Category28" xml:space="preserve">
+    <value>超連結</value>
+  </data>
+  <data name="DisplayName133" xml:space="preserve">
+    <value>超連結名稱</value>
+  </data>
+  <data name="DisplayName134" xml:space="preserve">
+    <value>超連結標籤</value>
+  </data>
+  <data name="DisplayName135" xml:space="preserve">
+    <value>超連結地址</value>
+  </data>
+  <data name="DisplayName136" xml:space="preserve">
+    <value>分頁/換行次數</value>
+  </data>
+  <data name="DisplayName137" xml:space="preserve">
+    <value>分頁</value>
+  </data>
+  <data name="DisplayName138" xml:space="preserve">
+    <value>換行</value>
+  </data>
+  <data name="DisplayName139" xml:space="preserve">
+    <value>文字內容</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>寫入文字前寫入的行數</value>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="ConfigureDatabaseConnection" xml:space="preserve">
+    <value>配寘資料庫連接</value>
+  </data>
+  <data name="ConnectionConfiguration" xml:space="preserve">
+    <value>連接配寘</value>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>連接設定</value>
+  </data>
+  <data name="ConnectionWizard" xml:space="preserve">
+    <value>連接嚮導</value>
+  </data>
+  <data name="ContentText" xml:space="preserve">
+    <value>內容</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="EditSQL" xml:space="preserve">
+    <value>SQL編輯</value>
+  </data>
+  <data name="EndArea" xml:space="preserve">
+    <value>結束區域</value>
+  </data>
+  <data name="HideText" xml:space="preserve">
+    <value>隱藏</value>
+  </data>
+  <data name="MailFolder" xml:space="preserve">
+    <value>郵件資料夾</value>
+  </data>
+  <data name="MailMessage" xml:space="preserve">
+    <value>郵件消息</value>
+  </data>
+  <data name="NewDatabaseConnection" xml:space="preserve">
+    <value>新建資料庫連接</value>
+  </data>
+  <data name="ParameterText" xml:space="preserve">
+    <value>參數</value>
+  </data>
+  <data name="StartArea" xml:space="preserve">
+    <value>開始區域</value>
+  </data>
+  <data name="Category30" xml:space="preserve">
+    <value>儲存格選項</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>代表儲存格名稱的VB運算式，如A1</value>
+  </data>
+  <data name="DisplayName141" xml:space="preserve">
+    <value>儲存格名稱</value>
+  </data>
+  <data name="Category31" xml:space="preserve">
+    <value>工作表選項</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>為空代表當前活動工作表</value>
+  </data>
+  <data name="Category32" xml:space="preserve">
+    <value>儲存格起始</value>
+  </data>
+  <data name="Category33" xml:space="preserve">
+    <value>儲存格結束</value>
+  </data>
+  <data name="DisplayName142" xml:space="preserve">
+    <value>合併/折開</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>代表儲存格名稱的VB運算式，如B2</value>
+  </data>
+  <data name="DisplayName143" xml:space="preserve">
+    <value>目標檔案路徑</value>
+  </data>
+  <data name="DisplayName144" xml:space="preserve">
+    <value>目標儲存格行</value>
+  </data>
+  <data name="DisplayName145" xml:space="preserve">
+    <value>目標儲存格列</value>
+  </data>
+  <data name="DisplayName146" xml:space="preserve">
+    <value>目標儲存格名稱</value>
+  </data>
+  <data name="DisplayName147" xml:space="preserve">
+    <value>目標工作表</value>
+  </data>
+  <data name="DisplayName148" xml:space="preserve">
+    <value>起始儲存格行</value>
+  </data>
+  <data name="DisplayName149" xml:space="preserve">
+    <value>起始儲存格列</value>
+  </data>
+  <data name="DisplayName150" xml:space="preserve">
+    <value>起始儲存格名稱</value>
+  </data>
+  <data name="DisplayName151" xml:space="preserve">
+    <value>終點儲存格行</value>
+  </data>
+  <data name="DisplayName152" xml:space="preserve">
+    <value>終點儲存格列</value>
+  </data>
+  <data name="DisplayName153" xml:space="preserve">
+    <value>終點儲存格名稱</value>
+  </data>
+  <data name="Category34" xml:space="preserve">
+    <value>儲存格終點</value>
+  </data>
+  <data name="DisplayName154" xml:space="preserve">
+    <value>表頭</value>
+  </data>
+  <data name="DisplayName155" xml:space="preserve">
+    <value>所有工作表</value>
+  </data>
+  <data name="Category35" xml:space="preserve">
+    <value>區域選項</value>
+  </data>
+  <data name="DisplayName156" xml:space="preserve">
+    <value>所有區域</value>
+  </data>
+  <data name="DisplayName157" xml:space="preserve">
+    <value>儲存格起始行</value>
+  </data>
+  <data name="DisplayName158" xml:space="preserve">
+    <value>儲存格起始列</value>
+  </data>
+  <data name="DisplayName159" xml:space="preserve">
+    <value>儲存格起始名稱</value>
+  </data>
+  <data name="DisplayName160" xml:space="preserve">
+    <value>儲存格終點行</value>
+  </data>
+  <data name="DisplayName161" xml:space="preserve">
+    <value>儲存格終點列</value>
+  </data>
+  <data name="DisplayName162" xml:space="preserve">
+    <value>儲存格終點名稱</value>
+  </data>
+  <data name="Category36" xml:space="preserve">
+    <value>替換選項</value>
+  </data>
+  <data name="DisplayName163" xml:space="preserve">
+    <value>查找內容</value>
+  </data>
+  <data name="DisplayName164" xml:space="preserve">
+    <value>替換內容</value>
+  </data>
+  <data name="DisplayName165" xml:space="preserve">
+    <value>區分大小寫</value>
+  </data>
+  <data name="DisplayName166" xml:space="preserve">
+    <value>儲存格匹配</value>
+  </data>
+  <data name="DisplayName167" xml:space="preserve">
+    <value>區分半全型</value>
+  </data>
+  <data name="Category37" xml:space="preserve">
+    <value>行列數選項</value>
+  </data>
+  <data name="DisplayName168" xml:space="preserve">
+    <value>有效數據</value>
+  </data>
+  <data name="DisplayName169" xml:space="preserve">
+    <value>活動區域</value>
+  </data>
+  <data name="DisplayName170" xml:space="preserve">
+    <value>A1儲存格列/行截止</value>
+  </data>
+  <data name="DisplayName171" xml:space="preserve">
+    <value>行數</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>工作表中有效行數</value>
+  </data>
+  <data name="DisplayName172" xml:space="preserve">
+    <value>列數</value>
+  </data>
+  <data name="DisplayName173" xml:space="preserve">
+    <value>行號/列號</value>
+  </data>
+  <data name="DisplayName174" xml:space="preserve">
+    <value>行/列</value>
+  </data>
+  <data name="DisplayName175" xml:space="preserve">
+    <value>行/列數據</value>
+  </data>
+  <data name="DisplayName176" xml:space="preserve">
+    <value>工作表名稱清單</value>
+  </data>
+  <data name="Category38" xml:space="preserve">
+    <value>打開/新建檔案選項</value>
+  </data>
+  <data name="FilePathToOpen" xml:space="preserve">
+    <value>打開文件路徑</value>
+  </data>
+  <data name="FilePathToSave" xml:space="preserve">
+    <value>檔案保存路徑</value>
+  </data>
+  <data name="Description80" xml:space="preserve">
+    <value>代表儲存格名稱的VB運算式，如A1</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>代表儲存格名稱的VB運算式，如B2</value>
+  </data>
+  <data name="DisplayName177" xml:space="preserve">
+    <value>儲存格數據</value>
+  </data>
+  <data name="xPrompt" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="xRequireValidPath1" xml:space="preserve">
+    <value>非創建新檔案需要添加有效路徑</value>
+  </data>
+  <data name="xRequireValidPath2" xml:space="preserve">
+    <value>另存為需要添加有效路徑</value>
+  </data>
+  <data name="xFileNotExist" xml:space="preserve">
+    <value>檔案不存在，請檢查路徑有效性</value>
+  </data>
+  <data name="xExcelExecError" xml:space="preserve">
+    <value>EXCEL執行過程出錯</value>
+  </data>
+  <data name="xRequireCorrectSavePath1" xml:space="preserve">
+    <value>此檔案為新建檔案，請輸入正確保存路徑！</value>
+  </data>
+  <data name="xRequireCorrectSavePath2" xml:space="preserve">
+    <value>另存為應輸入正確保存路徑！</value>
+  </data>
+</root>

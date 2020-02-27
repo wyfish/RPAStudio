@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Category1" xml:space="preserve">
+    <value>公共</value>
+  </data>
+  <data name="DisplayName1" xml:space="preserve">
+    <value>錯誤執行</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>指定即使活動引發錯誤，自動化是否仍應繼續</value>
+  </data>
+  <data name="Category2" xml:space="preserve">
+    <value>UI對象</value>
+  </data>
+  <data name="DisplayName2" xml:space="preserve">
+    <value>視窗指示器</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>用於在執行活動時查找特定UI元素的Text内容</value>
+  </data>
+  <data name="DisplayName3" xml:space="preserve">
+    <value>UI元素</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>輸入UIElement</value>
+  </data>
+  <data name="Category3" xml:space="preserve">
+    <value>輸入</value>
+  </data>
+  <data name="DisplayName4" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>要檢索的内容的名稱。該欄位僅支持字串</value>
+  </data>
+  <data name="Category4" xml:space="preserve">
+    <value>輸出</value>
+  </data>
+  <data name="DisplayName5" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="Description5" xml:space="preserve">
+    <value>指定内容的值</value>
+  </data>
+  <data name="DisplayName6" xml:space="preserve">
+    <value>矩陣座標</value>
+  </data>
+  <data name="Description6" xml:space="preserve">
+    <value>荧幕座標中指定的UiElement的結果邊界矩形</value>
+  </data>
+  <data name="Category5" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="DisplayName7" xml:space="preserve">
+    <value>區域剪切方向</value>
+  </data>
+  <data name="Description7" xml:space="preserve">
+    <value>擴展剪切區域的方向</value>
+  </data>
+  <data name="Description8" xml:space="preserve">
+    <value>使用另一個活動返回的UiElement變數。此内容不能與Selector内容一起使用。該欄位僅支持UiElement變數</value>
+  </data>
+  <data name="Category6" xml:space="preserve">
+    <value>UI元素剪切矩陣</value>
+  </data>
+  <data name="DisplayName8" xml:space="preserve">
+    <value>執行等待</value>
+  </data>
+  <data name="Description9" xml:space="preserve">
+    <value>獲取指定UI元素的螢幕截圖之前的延遲時間（以毫秒為組織）。默認時間為300毫秒。</value>
+  </data>
+  <data name="DisplayName9" xml:space="preserve">
+    <value>截圖</value>
+  </data>
+  <data name="Description10" xml:space="preserve">
+    <value>結果截圖。該欄位僅支持影像變數</value>
+  </data>
+  <data name="Description11" xml:space="preserve">
+    <value>指定等待活動運行的時間量（以毫秒為組織）。預設值為10000毫秒（10秒）</value>
+  </data>
+  <data name="Description12" xml:space="preserve">
+    <value>要等待的内容的名稱。預定義的内容清單可用作活動中的下拉清單。該欄位僅支持String變數</value>
+  </data>
+  <data name="DisplayName10" xml:space="preserve">
+    <value>屬性值</value>
+  </data>
+  <data name="Description13" xml:space="preserve">
+    <value>指定内容的預期值。該欄位僅支持String變數</value>
+  </data>
+  <data name="DisplayName11" xml:space="preserve">
+    <value>瀏覽器</value>
+  </data>
+  <data name="Description14" xml:space="preserve">
+    <value>要附加的現有瀏覽器變數</value>
+  </data>
+  <data name="DisplayName12" xml:space="preserve">
+    <value>超時時間</value>
+  </data>
+  <data name="Description15" xml:space="preserve">
+    <value>指定在引發錯誤之前等待活動運行的時間量（以毫秒為組織）。預設值為30000毫秒（30秒）</value>
+  </data>
+  <data name="DisplayName13" xml:space="preserve">
+    <value>UI選擇器</value>
+  </data>
+  <data name="DisplayName14" xml:space="preserve">
+    <value>UI瀏覽器</value>
+  </data>
+  <data name="Description16" xml:space="preserve">
+    <value>活動返回的Browser變數</value>
+  </data>
+  <data name="DisplayName15" xml:space="preserve">
+    <value>瀏覽器類型</value>
+  </data>
+  <data name="Description17" xml:space="preserve">
+    <value>選擇要使用的瀏覽器類型。可以使用以下選項：IE，Firefox，Chrome</value>
+  </data>
+  <data name="DisplayName16" xml:space="preserve">
+    <value>瀏覽器Browser</value>
+  </data>
+  <data name="Description18" xml:space="preserve">
+    <value>要關閉的瀏覽器頁面。該欄位僅支持Browser變數</value>
+  </data>
+  <data name="DisplayName17" xml:space="preserve">
+    <value>延遲時間（結束）</value>
+  </data>
+  <data name="Description19" xml:space="preserve">
+    <value>執行活動後的延遲時間（以毫秒為組織），默認時間為3000毫秒</value>
+  </data>
+  <data name="DisplayName18" xml:space="preserve">
+    <value>延遲時間（開始）</value>
+  </data>
+  <data name="Description20" xml:space="preserve">
+    <value>活動開始執行任何操作之前的延遲時間（以毫秒為組織），默認的時間量是3000毫秒。</value>
+  </data>
+  <data name="DisplayName19" xml:space="preserve">
+    <value>JavaScript程式碼</value>
+  </data>
+  <data name="Description21" xml:space="preserve">
+    <value>要運行的JavaScript程式碼。您可以在此處將其作為字串寫入，或添加包含要執行的程式碼的.js檔案的完整路徑</value>
+  </data>
+  <data name="DisplayName20" xml:space="preserve">
+    <value>JavaScript程式碼數據</value>
+  </data>
+  <data name="Description22" xml:space="preserve">
+    <value>輸入JavaScript程式碼的數據，作為字串或字串變數23</value>
+  </data>
+  <data name="DisplayName21" xml:space="preserve">
+    <value>JavaScript輸出</value>
+  </data>
+  <data name="Description23" xml:space="preserve">
+    <value>從JavaScript程式碼返回的字串結果</value>
+  </data>
+  <data name="Description24" xml:space="preserve">
+    <value>要導航的瀏覽器頁面。該欄位僅支持Browser變數</value>
+  </data>
+  <data name="DisplayName22" xml:space="preserve">
+    <value>導航網址</value>
+  </data>
+  <data name="Description25" xml:space="preserve">
+    <value>要顯示的網頁的位置</value>
+  </data>
+  <data name="Description26" xml:space="preserve">
+    <value>新瀏覽器標籤頁面。該欄位僅支持Browser變數</value>
+  </data>
+  <data name="DisplayName23" xml:space="preserve">
+    <value>網址URL</value>
+  </data>
+  <data name="Description27" xml:space="preserve">
+    <value>要在指定瀏覽器中打開的URL</value>
+  </data>
+  <data name="Description28" xml:space="preserve">
+    <value>指定瀏覽器響應超時時間（毫秒）</value>
+  </data>
+  <data name="DisplayName24" xml:space="preserve">
+    <value>私密/無痕</value>
+  </data>
+  <data name="DisplayName25" xml:space="preserve">
+    <value>隱藏</value>
+  </data>
+  <data name="Description29" xml:space="preserve">
+    <value>存儲瀏覽器的變數。該欄位僅接受Browser變數</value>
+  </data>
+  <data name="Description30" xml:space="preserve">
+    <value>執行活動後的延遲時間（以毫秒為組織），默認時間為300毫秒</value>
+  </data>
+  <data name="Description31" xml:space="preserve">
+    <value>活動開始執行任何操作之前的延遲時間（以毫秒為組織），默認的時間量是200毫秒。</value>
+  </data>
+  <data name="DisplayName26" xml:space="preserve">
+    <value>HTML内容</value>
+  </data>
+  <data name="Description32" xml:space="preserve">
+    <value>要更改的HTML内容的名稱</value>
+  </data>
+  <data name="DisplayName27" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="Description33" xml:space="preserve">
+    <value>要設定為指定内容的值。僅支持字串變數</value>
+  </data>
+  <data name="Description34" xml:space="preserve">
+    <value>活動開始執行任何操作之前的延遲時間（以毫秒為組織），默認的時間量是300毫秒。</value>
+  </data>
+  <data name="DisplayName28" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="DisplayName29" xml:space="preserve">
+    <value>顏色</value>
+  </data>
+  <data name="DisplayName30" xml:space="preserve">
+    <value>高亮時間（秒）</value>
+  </data>
+  <data name="DisplayName31" xml:space="preserve">
+    <value>項目</value>
+  </data>
+  <data name="DisplayName32" xml:space="preserve">
+    <value>添加到現有選擇</value>
+  </data>
+  <data name="DisplayName33" xml:space="preserve">
+    <value>項目組</value>
+  </data>
+  <data name="Description35" xml:space="preserve">
+    <value>活動開始執行任何操作之前的延遲時間（以毫秒為組織），默認的時間量是2000毫秒。</value>
+  </data>
+  <data name="DisplayName34" xml:space="preserve">
+    <value>文字</value>
+  </data>
+  <data name="Description36" xml:space="preserve">
+    <value>要寫入UI元素的Text内容的字串</value>
+  </data>
+  <data name="DisplayName35" xml:space="preserve">
+    <value>錨點位置</value>
+  </data>
+  <data name="Category7" xml:space="preserve">
+    <value>錨點邊界框</value>
+  </data>
+  <data name="Category8" xml:space="preserve">
+    <value>目標邊界框</value>
+  </data>
+  <data name="Description37" xml:space="preserve">
+    <value>訓示元素是否存在。該欄位只支持布林變數</value>
+  </data>
+  <data name="Description38" xml:space="preserve">
+    <value>UiElement變數。此内容不能與Selector内容一起使用。該欄位僅支持UiElement變數</value>
+  </data>
+  <data name="Description39" xml:space="preserve">
+    <value>在後續子活動中使用的UI元素</value>
+  </data>
+  <data name="Description40" xml:space="preserve">
+    <value>指定即使活動引發錯誤，自動化是否仍應繼續，取值為（True或False）</value>
+  </data>
+  <data name="DisplayName36" xml:space="preserve">
+    <value>等待元素停止</value>
+  </data>
+  <data name="Description41" xml:space="preserve">
+    <value>當此選項被選中，該活動將在指定活動結束前一直等待</value>
+  </data>
+  <data name="DisplayName37" xml:space="preserve">
+    <value>等待元素消失</value>
+  </data>
+  <data name="Description42" xml:space="preserve">
+    <value>當此選項被選中，即使ui元素仍然是活動的，該活動也只會等到ui元素從荧幕上消失</value>
+  </data>
+  <data name="Description43" xml:space="preserve">
+    <value>要關閉的視窗。該欄位僅接受Window變數</value>
+  </data>
+  <data name="DisplayName38" xml:space="preserve">
+    <value>範圍</value>
+  </data>
+  <data name="DisplayName39" xml:space="preserve">
+    <value>篩檢程式</value>
+  </data>
+  <data name="Description44" xml:space="preserve">
+    <value>xml字串指定集合中的所有UI對象應該滿足的條件</value>
+  </data>
+  <data name="DisplayName40" xml:space="preserve">
+    <value>子元素</value>
+  </data>
+  <data name="Description45" xml:space="preserve">
+    <value>所有ui子元素都將按照設定的篩檢程式和範圍。此欄位只支持IEnumerable&lt;UIElement&gt;變數</value>
+  </data>
+  <data name="DisplayName41" xml:space="preserve">
+    <value>等待活動</value>
+  </data>
+  <data name="Description46" xml:space="preserve">
+    <value>當此選項被選中，該活動將等待指定的ui元素成為活動</value>
+  </data>
+  <data name="DisplayName42" xml:space="preserve">
+    <value>等待可見</value>
+  </data>
+  <data name="Description47" xml:space="preserve">
+    <value>當此選項被選中，該活動將等待指定的ui元素成為可見</value>
+  </data>
+  <data name="Description48" xml:space="preserve">
+    <value>找到的ui元素。此欄位僅支持UIElement類型變數</value>
+  </data>
+  <data name="DisplayName43" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="DisplayName44" xml:space="preserve">
+    <value>相對元素</value>
+  </data>
+  <data name="Description49" xml:space="preserve">
+    <value>您正在尋找的相對ui元素。僅支持UIElement類型變數</value>
+  </data>
+  <data name="DisplayName45" xml:space="preserve">
+    <value>父節點層次</value>
+  </data>
+  <data name="Description50" xml:space="preserve">
+    <value>指定要在ui層次結構的哪個級別查找父節點</value>
+  </data>
+  <data name="DisplayName46" xml:space="preserve">
+    <value>父節點</value>
+  </data>
+  <data name="Description51" xml:space="preserve">
+    <value>元素的父節點。僅支持UIElement類型變數</value>
+  </data>
+  <data name="Description52" xml:space="preserve">
+    <value>當選中一個ui元素的時候，隱藏前一個視窗</value>
+  </data>
+  <data name="Description53" xml:space="preserve">
+    <value>此選項允許在荧幕選中一塊區域</value>
+  </data>
+  <data name="Description54" xml:space="preserve">
+    <value>選擇指定ui元素</value>
+  </data>
+  <data name="Description55" xml:space="preserve">
+    <value>指定即使當前活動失敗，也要繼續執行其餘的活動。只支持布林值（True，False）。</value>
+  </data>
+  <data name="Description56" xml:space="preserve">
+    <value>執行活動後的延遲時間（以毫秒為組織）。默認時間為300毫秒。</value>
+  </data>
+  <data name="Description57" xml:space="preserve">
+    <value>延遲活動開始執行任何操作之前的時間（以毫秒為組織）。默認時間為300毫秒。</value>
+  </data>
+  <data name="Category9" xml:space="preserve">
+    <value>按鍵選項</value>
+  </data>
+  <data name="DisplayName47" xml:space="preserve">
+    <value>其它按鍵</value>
+  </data>
+  <data name="Category10" xml:space="preserve">
+    <value>滑鼠選項</value>
+  </data>
+  <data name="DisplayName48" xml:space="preserve">
+    <value>使用座標點</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>UI元素矩陣</value>
+  </data>
+  <data name="Description58" xml:space="preserve">
+    <value>輸入UIAutomationInfo</value>
+  </data>
+  <data name="DisplayName49" xml:space="preserve">
+    <value>字串</value>
+  </data>
+  <data name="Description59" xml:space="preserve">
+    <value>要按一下的字串</value>
+  </data>
+  <data name="Description60" xml:space="preserve">
+    <value>延遲活動開始執行任何操作之前的時間（以毫秒為組織）。默認時間為200毫秒。</value>
+  </data>
+  <data name="DisplayName50" xml:space="preserve">
+    <value>指定次數</value>
+  </data>
+  <data name="Description61" xml:space="preserve">
+    <value>如果文字欄位中的字串在指定的ui元素中出現多次，請在這裡指定出現次數，而不是按一下次數</value>
+  </data>
+  <data name="Description62" xml:space="preserve">
+    <value>如果此選項被選中，所選文字的荧幕佈局將保持不變</value>
+  </data>
+  <data name="Description63" xml:space="preserve">
+    <value>要按一下的文字</value>
+  </data>
+  <data name="DisplayName51" xml:space="preserve">
+    <value>等待時間</value>
+  </data>
+  <data name="Description64" xml:space="preserve">
+    <value>等待加載到下一頁的時間量</value>
+  </data>
+  <data name="DisplayName52" xml:space="preserve">
+    <value>抽取最大值</value>
+  </data>
+  <data name="Description65" xml:space="preserve">
+    <value>可以抽取數據的最大值</value>
+  </data>
+  <data name="DisplayName53" xml:space="preserve">
+    <value>下一個連接器</value>
+  </data>
+  <data name="Description66" xml:space="preserve">
+    <value>選擇器標識用於導航到下一頁的連結/按鈕。應該相對於現有的uielement内容</value>
+  </data>
+  <data name="DisplayName54" xml:space="preserve">
+    <value>發送表單消息</value>
+  </data>
+  <data name="Description67" xml:space="preserve">
+    <value>如果選中，按一下用於導航到下一頁的next link/按鈕將通過向othe目標應用程序發送特定消息來執行。這種輸入方法可以在後臺工作，與大多數案頭應用程序相容，但它不是最快的方法</value>
+  </data>
+  <data name="DisplayName55" xml:space="preserve">
+    <value>類比點擊</value>
+  </data>
+  <data name="Description68" xml:space="preserve">
+    <value>如果選中，它將使用目標應用程序的科技類比按一下用於導航下一頁的next連結/按鈕。這種輸入法是三種輸入法中速度最快的一種，可以在後臺工作</value>
+  </data>
+  <data name="DisplayName56" xml:space="preserve">
+    <value>抽取目標數據</value>
+  </data>
+  <data name="Description69" xml:space="preserve">
+    <value>允許您定義要從指定的web頁面選取哪些數據的xml字串</value>
+  </data>
+  <data name="Description70" xml:space="preserve">
+    <value>您要查找的字串所在的ui元素。</value>
+  </data>
+  <data name="DisplayName57" xml:space="preserve">
+    <value>忽略隱藏</value>
+  </data>
+  <data name="Description71" xml:space="preserve">
+    <value>如果選中此核取方塊，則不選取指定ui元素上的字串資訊，默認情况下不選中此核取方塊</value>
+  </data>
+  <data name="DisplayName58" xml:space="preserve">
+    <value>分隔符號</value>
+  </data>
+  <data name="Description72" xml:space="preserve">
+    <value>指定用作字串先鋒的字元。如果欄位為空，則使用所有已知的文字分隔符號（空格、句號、逗號等）</value>
+  </data>
+  <data name="DisplayName59" xml:space="preserve">
+    <value>單詞資訊</value>
+  </data>
+  <data name="Description73" xml:space="preserve">
+    <value>在指定的ui元素中找到的每個單詞的荧幕座標</value>
+  </data>
+  <data name="DisplayName60" xml:space="preserve">
+    <value>視窗標題</value>
+  </data>
+  <data name="Description74" xml:space="preserve">
+    <value>輸入視窗標題</value>
+  </data>
+  <data name="DisplayName61" xml:space="preserve">
+    <value>視窗類名</value>
+  </data>
+  <data name="Description75" xml:space="preserve">
+    <value>輸入視窗類名</value>
+  </data>
+  <data name="DisplayName62" xml:space="preserve">
+    <value>視窗</value>
+  </data>
+  <data name="Description76" xml:space="preserve">
+    <value>存儲視窗的變數。該欄位僅接受Window變數</value>
+  </data>
+  <data name="Description77" xml:space="preserve">
+    <value>找到的活動視窗。該欄位僅支持Window變數。指定Window變數時，將忽略SearchScope和Selector内容。</value>
+  </data>
+  <data name="DisplayName63" xml:space="preserve">
+    <value>視窗控制碼</value>
+  </data>
+  <data name="Description78" xml:space="preserve">
+    <value>要關閉的視窗控制碼。</value>
+  </data>
+  <data name="DisplayName64" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="Description79" xml:space="preserve">
+    <value>視窗的新高度，支持正負整數</value>
+  </data>
+  <data name="DisplayName65" xml:space="preserve">
+    <value>寬度</value>
+  </data>
+  <data name="Description80" xml:space="preserve">
+    <value>視窗的新寬度，支持正負整數</value>
+  </data>
+  <data name="DisplayName66" xml:space="preserve">
+    <value>座標X</value>
+  </data>
+  <data name="Description81" xml:space="preserve">
+    <value>視窗的新位置座標X軸，支持正負整數</value>
+  </data>
+  <data name="DisplayName67" xml:space="preserve">
+    <value>座標Y</value>
+  </data>
+  <data name="Description82" xml:space="preserve">
+    <value>視窗的新座標位置Y軸，支持正負整數</value>
+  </data>
+  <data name="ReselectIt" xml:space="preserve">
+    <value>重新選取</value>
+  </data>
+  <data name="TapScreen" xml:space="preserve">
+    <value>點擊荧幕</value>
+  </data>
+  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+    <value>要檢索的内容的名稱</value>
+  </data>
+  <data name="AttributeToExpect.HintText" xml:space="preserve">
+    <value>指定内容的預期值</value>
+  </data>
+  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+    <value>要更改的HTML内容的名稱</value>
+  </data>
+  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+    <value>要等待的内容的名稱</value>
+  </data>
+  <data name="SetAttributeValue.HintText" xml:space="preserve">
+    <value>要設定為指定内容的值。僅支持字串變數</value>
+  </data>
+  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+    <value>指定瀏覽器中打開的URL</value>
+  </data>
+  <data name="Category12" xml:space="preserve">
+    <value>灰度管道</value>
+  </data>
+  <data name="Description100" xml:space="preserve">
+    <value>詞法分析結果</value>
+  </data>
+  <data name="Description101" xml:space="preserve">
+    <value>詞語分析結果</value>
+  </data>
+  <data name="Description102" xml:space="preserve">
+    <value>字串</value>
+  </data>
+  <data name="Description83" xml:space="preserve">
+    <value>影像的完整路徑以及名稱。如果設定了此内容，則忽略輸入項中Image内容。</value>
+  </data>
+  <data name="Description84" xml:space="preserve">
+    <value>要進行處理的影像，僅支持Image變數。如果設定了此内容，則忽略輸入項中FileName内容。</value>
+  </data>
+  <data name="Description85" xml:space="preserve">
+    <value>處理完成的影像。僅支持Image變數。</value>
+  </data>
+  <data name="Description86" xml:space="preserve">
+    <value>要讀取的檔案的路徑。</value>
+  </data>
+  <data name="Description87" xml:space="preserve">
+    <value>輸出Base64。</value>
+  </data>
+  <data name="Description88" xml:space="preserve">
+    <value>要載入的影像的完整路徑。</value>
+  </data>
+  <data name="Description89" xml:space="preserve">
+    <value>要載入的影像。僅支持Image變數。</value>
+  </data>
+  <data name="Description90" xml:space="preserve">
+    <value>合適的噪點閾值可達到更好的去噪點效果。</value>
+  </data>
+  <data name="Description91" xml:space="preserve">
+    <value>保存影像的完整檔案路徑及其名稱。</value>
+  </data>
+  <data name="Description92" xml:space="preserve">
+    <value>要保存的影像。僅支持Image變數。</value>
+  </data>
+  <data name="Description93" xml:space="preserve">
+    <value>您的APIKey。</value>
+  </data>
+  <data name="Description94" xml:space="preserve">
+    <value>您的SecretKey。</value>
+  </data>
+  <data name="Description95" xml:space="preserve">
+    <value>文字內容</value>
+  </data>
+  <data name="Description96" xml:space="preserve">
+    <value>輸出切詞結果並給出每個詞在句子中的概率值，判斷一句話是否符合語言表達習慣。</value>
+  </data>
+  <data name="Description97" xml:space="preserve">
+    <value>文字內容，最大2048位元組。</value>
+  </data>
+  <data name="Description98" xml:space="preserve">
+    <value>情感傾向分析結果。</value>
+  </data>
+  <data name="Description99" xml:space="preserve">
+    <value>待分析文字</value>
+  </data>
+  <data name="DisplayName68" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="DisplayName69" xml:space="preserve">
+    <value>平均值法</value>
+  </data>
+  <data name="DisplayName70" xml:space="preserve">
+    <value>最大值法</value>
+  </data>
+  <data name="DisplayName71" xml:space="preserve">
+    <value>加權平均</value>
+  </data>
+  <data name="DisplayName72" xml:space="preserve">
+    <value>噪點閾值</value>
+  </data>
+  <data name="Description103" xml:space="preserve">
+    <value>標題</value>
+  </data>
+  <data name="Description104" xml:space="preserve">
+    <value>摘要結果的最大長度。</value>
+  </data>
+  <data name="Description105" xml:space="preserve">
+    <value>輸出指定長度的新聞摘要。</value>
+  </data>
+  <data name="Description106" xml:space="preserve">
+    <value>評論內容，最大10240位元組。</value>
+  </data>
+  <data name="Description107" xml:space="preserve">
+    <value>兩個文字的相似度結果。</value>
+  </data>
+  <data name="Description108" xml:space="preserve">
+    <value>1:飯店；2:KTV；3:麗人；4:美食餐飲；5:旅遊；6:健康；7:教育；8:商業；9:房產；10:汽車；11:生活；12:購物；13:3C，默認為4（餐飲美食）。</value>
+  </data>
+  <data name="Description109" xml:space="preserve">
+    <value>模型選擇，預設值為yes（web模型）；no為query模型。</value>
+  </data>
+  <data name="Description110" xml:space="preserve">
+    <value>文字中的依存句法結構資訊。</value>
+  </data>
+  <data name="Description111" xml:space="preserve">
+    <value>待糾錯文字，輸入限制511位元組。</value>
+  </data>
+  <data name="Description112" xml:space="preserve">
+    <value>提示錯誤並給出正確的文字結果。</value>
+  </data>
+  <data name="Description113" xml:space="preserve">
+    <value>待比較文字，最大512位元組。</value>
+  </data>
+  <data name="Description114" xml:space="preserve">
+    <value>兩個文字的相似度結果。</value>
+  </data>
+  <data name="Description115" xml:space="preserve">
+    <value>默認為BOW。</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>詞向量查詢結果表示。</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>輸入詞，最大64位元組</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>兩個詞的相似度結果。</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>您的AppCode。</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>是否需要識別結果中每一行的置信度，默認為false。</value>
+  </data>
+  <data name="Description121" xml:space="preserve">
+    <value>圖片識別結果。</value>
+  </data>
+  <data name="Description122" xml:space="preserve">
+    <value>是否檢測影像朝向，默認不檢測。朝向是指輸入影像是正常方向還是逆時針旋轉90/180/270度。</value>
+  </data>
+  <data name="Description123" xml:space="preserve">
+    <value>是否返回識別結果中每一行的置信度。</value>
+  </data>
+  <data name="Description124" xml:space="preserve">
+    <value>識別語言類型，默認為CHN_ENG。</value>
+  </data>
+  <data name="Description125" xml:space="preserve">
+    <value>是否定位單字元位置，默認為big（不定位單字元位置）。</value>
+  </data>
+  <data name="Description126" xml:space="preserve">
+    <value>是否檢測語言，默認不檢測。當前支持（中文、英語、日語、韓語）</value>
+  </data>
+  <data name="Description127" xml:space="preserve">
+    <value>是否返回文字外接多邊形頂點位置，不支持單字位置，默認為false。</value>
+  </data>
+  <data name="Description128" xml:space="preserve">
+    <value>該欄位僅支持Browser變數</value>
+  </data>
+  <data name="Description129" xml:space="preserve">
+    <value>標籤頁頁面順序</value>
+  </data>
+  <data name="Description130" xml:space="preserve">
+    <value>標籤頁標籤/地址關鍵字</value>
+  </data>
+  <data name="Description131" xml:space="preserve">
+    <value>要關閉的瀏覽器頁面。該欄位僅支持Browser變數</value>
+  </data>
+  <data name="DisplayName73" xml:space="preserve">
+    <value>評論行業類型</value>
+  </data>
+  <data name="DisplayName74" xml:space="preserve">
+    <value>模型</value>
+  </data>
+  <data name="DisplayName75" xml:space="preserve">
+    <value>檢測影像朝向</value>
+  </data>
+  <data name="DisplayName76" xml:space="preserve">
+    <value>語言類型</value>
+  </data>
+  <data name="DisplayName77" xml:space="preserve">
+    <value>定位單字元位置</value>
+  </data>
+  <data name="DisplayName78" xml:space="preserve">
+    <value>檢測語言</value>
+  </data>
+  <data name="DisplayName79" xml:space="preserve">
+    <value>返回頂點位置</value>
+  </data>
+  <data name="DisplayName80" xml:space="preserve">
+    <value>新標籤地址</value>
+  </data>
+  <data name="DisplayName81" xml:space="preserve">
+    <value>標籤頁</value>
+  </data>
+  <data name="DisplayName82" xml:space="preserve">
+    <value>關鍵字</value>
+  </data>
+  <data name="DragScreen" xml:space="preserve">
+    <value>拖動選擇</value>
+  </data>
+  <data name="DS_WindowTitle" xml:space="preserve">
+    <value>通過輸入視窗標題，可以將影像搜索範圍限制在視窗內。</value>
+  </data>
+  <data name="DN_MatchingThreshold" xml:space="preserve">
+    <value>匹配閾值</value>
+  </data>
+  <data name="DS_MatchingThreshold" xml:space="preserve">
+    <value>匹配閾值（預設值=91。必須80 &lt;= x &lt;= 100）</value>
+  </data>
+  <data name="DN_MatchingInterval" xml:space="preserve">
+    <value>匹配間隔[ms]</value>
+  </data>
+  <data name="DS_MatchingInterval" xml:space="preserve">
+    <value>匹配間隔[ms]（預設值= 2000 [ms]。必須為600 &lt;= x）</value>
+  </data>
+  <data name="DN_Retry" xml:space="preserve">
+    <value>重試次數</value>
+  </data>
+  <data name="DS_Retry" xml:space="preserve">
+    <value>重試次數（預設值= 600次）</value>
+  </data>
+  <data name="ImageMatchingResult" xml:space="preserve">
+    <value>影像匹配結果</value>
+  </data>
+  <data name="ResultInformation" xml:space="preserve">
+    <value>捕獲範圍：x={0}，y={1}，w={2}，h={3}，搭配：{4}，重合度：{5}</value>
+  </data>
+</root>

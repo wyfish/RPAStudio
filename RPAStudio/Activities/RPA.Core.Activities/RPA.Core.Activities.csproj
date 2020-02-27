@@ -378,6 +378,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-F.resx" />
     <Resource Include="Resources\Workflow\invoke.png" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
       <SubType>Designer</SubType>

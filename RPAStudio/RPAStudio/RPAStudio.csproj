@@ -606,6 +606,7 @@
     <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-F.resx" />
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>

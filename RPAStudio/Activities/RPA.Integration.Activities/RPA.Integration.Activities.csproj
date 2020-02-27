@@ -438,6 +438,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-F.resx" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
