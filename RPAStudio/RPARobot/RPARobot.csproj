@@ -267,7 +267,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.zh-CN.resx" />
-    <EmbeddedResource Include="Properties\Resources.zh-F.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-TW.resx" />
     <None Include="Config\RPARobot.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>RPARobot.Designer.cs</LastGenOutput>

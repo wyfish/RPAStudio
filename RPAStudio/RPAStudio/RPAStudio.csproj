@@ -282,11 +282,6 @@
     <Compile Include="Librarys\ModelItemExtensions.cs" />
     <Compile Include="Librarys\ObservableExtension.cs" />
     <Compile Include="Librarys\WindowEx.cs" />
-    <Compile Include="Localization\Images.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Images.resx</DependentUpon>
-    </Compile>
     <Compile Include="Localization\ResxIF.cs" />
     <Compile Include="Localization\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -573,11 +568,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Localization\Images.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Images.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Localization\Images.zh-CN.resx" />
     <EmbeddedResource Include="Localization\Strings.ja-JP.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.ja-JP.Designer.cs</LastGenOutput>
@@ -591,7 +581,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.zh-CN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localization\Strings.zh-F.resx" />
+    <EmbeddedResource Include="Localization\Strings.zh-TW.resx" />
     <EmbeddedResource Include="Properties\Resources.en-US.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -606,7 +596,7 @@
     <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.zh-F.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-TW.resx" />
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
@@ -891,34 +881,34 @@
     <Resource Include="Resources\Image\Dock\null.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\AvailableActivities_en.xml" />
+    <None Include="Config\AvailableActivities_en-US.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\AvailableActivities_ja.xml" />
+    <None Include="Config\AvailableActivities_ja-JP.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\FavoriteActivities_en.xml" />
+    <None Include="Config\FavoriteActivities_en-US.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\FavoriteActivities_ja.xml" />
+    <None Include="Config\FavoriteActivities_ja-JP.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\FileTypeConfig_en.xml" />
+    <None Include="Config\FileTypeConfig_en-US.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\FileTypeConfig_ja.xml" />
+    <None Include="Config\FileTypeConfig_ja-JP.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\RecentActivities_en.xml" />
+    <None Include="Config\RecentActivities_en-US.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\RecentActivities_ja.xml" />
+    <None Include="Config\RecentActivities_ja-JP.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\ProjectConfig_en.xml" />
+    <None Include="Config\ProjectConfig_en-US.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\ProjectConfig_ja.xml" />
+    <None Include="Config\ProjectConfig_ja-JP.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image\Windows\SplashScreen\startup_en.png" />
@@ -945,13 +935,23 @@
     <Resource Include="Resources\Image\Windows\SetUp\SetUp.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Config\AvailableActivities_zhf.xml" />
+    <Resource Include="Config\AvailableActivities_zh-TW.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Config\FileTypeConfig_zhf.xml" />
+    <Resource Include="Config\FileTypeConfig_zh-TW.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Config\ProjectConfig_zhf.xml" />
+    <Resource Include="Config\ProjectConfig_zh-TW.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Config\RecentActivities_zh-TW.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Config\FavoriteActivities_zh-TW.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

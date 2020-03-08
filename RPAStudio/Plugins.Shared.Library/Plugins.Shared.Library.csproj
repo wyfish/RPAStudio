@@ -245,6 +245,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Localization\Strings.zh-TW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.zh-TW.resx</DependentUpon>
+    </Compile>
     <Compile Include="Nuget\NuGetPackageController.cs" />
     <Compile Include="Nuget\NuGetPackageControllerLogger.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -338,9 +343,9 @@
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\Strings.zh-CN.resx" />
-    <EmbeddedResource Include="Localization\Strings.zh-F.resx">
+    <EmbeddedResource Include="Localization\Strings.zh-TW.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.zh-F.Designer.cs</LastGenOutput>
+      <LastGenOutput>Strings.zh-TW.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

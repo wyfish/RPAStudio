@@ -12,7 +12,7 @@ namespace RPAStudio.Localization
         {
             string isoCulture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
             // Only 'zh' and 'ja' localizations are available. Others will be shown in English.
-            if (isoCulture.Equals("zh") || isoCulture.Equals("ja")) {
+            if (isoCulture.StartsWith("zh") || isoCulture.Equals("ja")) {
                 return Strings.ResourceManager.GetString(key, System.Globalization.CultureInfo.CurrentCulture);
             }
             var en = new System.Globalization.CultureInfo("en");

@@ -350,6 +350,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.zh-TW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.zh-TW.resx</DependentUpon>
+    </Compile>
     <Compile Include="Workflow\CompilerRunner.cs" />
     <Compile Include="Workflow\InvokeCodeActivity.cs" />
     <Compile Include="Workflow\InvokeCodeDesigner.xaml.cs">
@@ -364,11 +374,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.en-US.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.en-US.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -378,17 +383,19 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.zh-F.resx" />
+    <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-TW.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-TW.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <Resource Include="Resources\Workflow\invoke.png" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
       <SubType>Designer</SubType>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.en-US.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Resource Include="activity.config.xml">
       <SubType>Designer</SubType>
@@ -717,12 +724,12 @@
     <Resource Include="Resources\Event\monitor.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="activity.config_zh.xml">
+    <Resource Include="activity.config_zh-CN.xml">
       <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="activity.config_ja.xml">
+    <Resource Include="activity.config_ja-JP.xml">
       <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>
@@ -730,7 +737,7 @@
     <Resource Include="Resources\Dialog\selectsaveasfile.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="activity.config_zhf.xml">
+    <Resource Include="activity.config_zh-TW.xml">
       <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>

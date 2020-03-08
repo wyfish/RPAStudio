@@ -61,7 +61,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   Python脚本文件路径，必须用双引号括起来 に類似しているローカライズされた文字列を検索します。
+        ///   Python script file path, must be enclosed in double quotes に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description1 {
             get {
@@ -70,7 +70,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   Python脚本文件执行时的工作目录，默认为当前项目目录 に類似しているローカライズされた文字列を検索します。
+        ///   The working directory when the Python script file is executed. The default is the current project directory. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description2 {
             get {
@@ -79,7 +79,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 に類似しているローカライズされた文字列を検索します。
+        ///   Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description3 {
             get {
@@ -88,7 +88,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   Python脚本代码执行时的工作目录，默认为当前项目目录 に類似しているローカライズされた文字列を検索します。
+        ///   The working directory when the Python script code is executed. The default is the current project directory. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description4 {
             get {
@@ -97,7 +97,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   编辑代码 に類似しているローカライズされた文字列を検索します。
+        ///   Edit Code に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EditCode {
             get {
@@ -106,7 +106,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   编辑参数 に類似しているローカライズされた文字列を検索します。
+        ///   Edit Parameters に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string EditParameters {
             get {
@@ -115,7 +115,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   Python脚本文件路径，必须用双引号括起来 に類似しているローカライズされた文字列を検索します。
+        ///   Python script file path, must be enclosed in double quotes に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PythonPathHintText {
             get {
@@ -124,7 +124,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   设置工作目录 に類似しているローカライズされた文字列を検索します。
+        ///   Set Working Directory に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SetWorkingDirectory {
             get {
@@ -133,7 +133,7 @@ namespace RPA.Script.Activities.Properties {
         }
         
         /// <summary>
-        ///   默认工作目录为当前项目目录 に類似しているローカライズされた文字列を検索します。
+        ///   The default working directory is the current project directory に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SetWorkingDirectoryTip {
             get {

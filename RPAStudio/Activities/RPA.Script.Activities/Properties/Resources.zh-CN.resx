@@ -117,8 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="startup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Image\Windows\SplashScreen\startup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Description1" xml:space="preserve">
+    <value>Python脚本文件路径，必须用双引号括起来</value>
+  </data>
+  <data name="Description2" xml:space="preserve">
+    <value>Python脚本文件执行时的工作目录，默认为当前项目目录</value>
+  </data>
+  <data name="Description3" xml:space="preserve">
+    <value>指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。</value>
+  </data>
+  <data name="Description4" xml:space="preserve">
+    <value>Python脚本代码执行时的工作目录，默认为当前项目目录</value>
+  </data>
+  <data name="SetWorkingDirectory" xml:space="preserve">
+    <value>设置工作目录</value>
+  </data>
+  <data name="EditParameters" xml:space="preserve">
+    <value>编辑参数</value>
+  </data>
+  <data name="SetWorkingDirectoryTip" xml:space="preserve">
+    <value>默认工作目录为当前项目目录</value>
+  </data>
+  <data name="EditCode" xml:space="preserve">
+    <value>编辑代码</value>
+  </data>
+  <data name="PythonPathHintText" xml:space="preserve">
+    <value>Python脚本文件路径，必须用双引号括起来</value>
   </data>
 </root>

@@ -300,15 +300,16 @@ namespace RPAStudio.ViewModel
 
         private string GetActivitiesXML(string activityName)
         {
-            string culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            string resourceXML = App.LocalRPAStudioDir + @"\Config\" + activityName + "_en.xml";
-            if (culture.Equals("zh"))
+            //string culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            string culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+            string resourceXML = App.LocalRPAStudioDir + @"\Config\" + activityName + "_en-US.xml";
+            if (culture.Equals("ja-JP") || culture.Equals("zh-TW"))
+            {
+                return App.LocalRPAStudioDir + @"\Config\" + activityName + $"_{culture}.xml";
+            }
+            else if (culture.Equals("zh-CN"))
             {
                 return App.LocalRPAStudioDir + @"\Config\" + activityName + ".xml";
-            }
-            else if (culture.Equals("ja"))
-            {
-                return App.LocalRPAStudioDir + @"\Config\" + activityName + "_ja.xml";
             }
             return resourceXML;
         }

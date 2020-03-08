@@ -287,7 +287,8 @@ namespace RPAStudio.ViewModel
 
         private System.Windows.Resources.StreamResourceInfo Get_Localized_activity_config_info(string dll_file_name_without_ext)
         {
-            string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            //string locale = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            string locale = System.Globalization.CultureInfo.CurrentCulture.Name;
             try
             {
                 return Application.GetResourceStream(new Uri($"pack://application:,,,/{dll_file_name_without_ext};Component/activity.config_{locale}.xml", UriKind.Absolute));
