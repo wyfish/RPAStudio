@@ -861,7 +861,7 @@ namespace Plugins.Shared.Library.UiAutomation
 
         public static void MouseDrag(MouseButton mouseButton, Point startingPoint, Point endingPoint)
         {
-            Mouse.Drag((FlaUI.Core.Input.MouseButton)mouseButton, startingPoint, endingPoint.X-startingPoint.X,endingPoint.Y-startingPoint.Y);
+            Mouse.Drag(startingPoint, endingPoint.X-startingPoint.X,endingPoint.Y-startingPoint.Y, (FlaUI.Core.Input.MouseButton)mouseButton);
         }
 
         public static void MouseUp(MouseButton mouseButton)

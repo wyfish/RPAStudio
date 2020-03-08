@@ -37,17 +37,14 @@
     <Reference Include="CSharp-easy-RSA-PEM">
       <HintPath>.\CSharp-easy-RSA-PEM.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.Core.2.0.0-rc1\lib\net45\FlaUI.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="FlaUI.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5b28cd3eabb9203e, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.Core.Signed.3.0.0\lib\net45\FlaUI.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.UIA2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.UIA2.2.0.0-rc1\lib\net45\FlaUI.UIA2.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="FlaUI.UIA2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5b28cd3eabb9203e, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.UIA2.Signed.3.0.0\lib\net45\FlaUI.UIA2.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.UIA3, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\FlaUI.UIA3.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="FlaUI.UIA3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5b28cd3eabb9203e, processorArchitecture=MSIL">
+      <HintPath>..\packages\FlaUI.UIA3.Signed.3.0.0\lib\net45\FlaUI.UIA3.dll</HintPath>
     </Reference>
     <Reference Include="Gma.UserActivityMonitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -57,9 +54,8 @@
       <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Interop.UIAutomationClient, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\Interop.UIAutomationClient.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Interop.UIAutomationClient, Version=10.0.18362.0, Culture=neutral, PublicKeyToken=0f06aa439ea1c622, processorArchitecture=MSIL">
+      <HintPath>..\packages\Interop.UIAutomationClient.Signed.10.18362.0\lib\net45\Interop.UIAutomationClient.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

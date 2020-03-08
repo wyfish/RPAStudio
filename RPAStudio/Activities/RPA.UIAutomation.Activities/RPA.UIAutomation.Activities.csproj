@@ -39,26 +39,22 @@
       <HintPath>..\..\packages\Baidu.AI.3.6.14\lib\net45\AipSdk.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FlaUI.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FlaUI.Core.2.0.0-rc1\lib\net45\FlaUI.Core.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="FlaUI.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5b28cd3eabb9203e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.Core.Signed.3.0.0\lib\net45\FlaUI.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.UIA2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FlaUI.UIA2.2.0.0-rc1\lib\net45\FlaUI.UIA2.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="FlaUI.UIA2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5b28cd3eabb9203e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.UIA2.Signed.3.0.0\lib\net45\FlaUI.UIA2.dll</HintPath>
     </Reference>
-    <Reference Include="FlaUI.UIA3, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\FlaUI.UIA3.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="FlaUI.UIA3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5b28cd3eabb9203e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FlaUI.UIA3.Signed.3.0.0\lib\net45\FlaUI.UIA3.dll</HintPath>
     </Reference>
     <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>Browser\Interop.SHDocVw.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.UIAutomationClient, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FlaUI.UIA3.2.0.0-rc1\lib\net45\Interop.UIAutomationClient.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Interop.UIAutomationClient, Version=10.0.18362.0, Culture=neutral, PublicKeyToken=0f06aa439ea1c622, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Interop.UIAutomationClient.Signed.10.18362.0\lib\net45\Interop.UIAutomationClient.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
