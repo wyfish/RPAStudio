@@ -137,38 +137,37 @@ namespace RPA.UIAutomation.Activities.Keyboard
                     element = UiElement.FromSelector(selStr);
                 }
             
-                Int32 pointX = 0;
-                Int32 pointY = 0;
-                if (usePoint)
+                //Int32 pointX = 0;
+                //Int32 pointY = 0;
+                //if (usePoint)
+                //{
+                //    pointX = offsetX.Get(context);
+                //    pointY = offsetY.Get(context);
+                //}
+                //else
+                //{
+                //    if (element != null)
+                //    {
+                //        pointX = element.GetClickablePoint().X;
+                //        pointY = element.GetClickablePoint().Y;
+                //        element.SetForeground();
+                //    }
+                //    else
+                //    {
+                //        UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                //        return;
+                //    }
+                //}
+                var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element);
+                if (point.X == -1 && point.Y == -1)
                 {
-                    pointX = offsetX.Get(context);
-                    pointY = offsetY.Get(context);
-                }
-                else
-                {
-                    if (element != null)
-                    {
-                        pointX = element.GetClickablePoint().X;
-                        pointY = element.GetClickablePoint().Y;
-                        element.SetForeground();
-                    }
-                    else
-                    {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "查找不到元素");
-                        if (ContinueOnError.Get(context))
-                        {
-                            return;
-                        }
-                        else
-                        {
-                            throw new NotImplementedException("查找不到元素");
-                        }
-                    }
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                    return;
                 }
                 /*执行鼠标点击事件*/
                 if (isRunClick)
                 {
-                    UiElement.MouseMoveTo(pointX, pointY);
+                    UiElement.MouseMoveTo(point);
                     UiElement.MouseAction((Plugins.Shared.Library.UiAutomation.ClickType)ClickType, (Plugins.Shared.Library.UiAutomation.MouseButton)MouseButton);
                 }
                 else if(true)
@@ -177,15 +176,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
                 }
                 else
                 {
-                    SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "找不到键值");
-                    if (ContinueOnError.Get(context))
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        throw new NotImplementedException("找不到键值");
-                    }
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "找不到键值");
                 }
             }
             catch (Exception e)

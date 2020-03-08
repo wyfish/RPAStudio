@@ -25,12 +25,35 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
+        
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
         [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
         [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
+
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("Window Title")]
+        [Description("Parent Window Title")]
+        public InArgument<string> WindowTitle { get; set; }
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("Name")]
+        [Description("Name Property")]
+        public InArgument<string> Name { get; set; }
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("AutomationId")]
+        [Description("AutomationId Property")]
+        public InArgument<string> AutomationId { get; set; }
 
         [Category("Common")]
         [Localize.LocalizedDescription("Description55")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
@@ -164,6 +187,15 @@ namespace RPA.UIAutomation.Activities.Keyboard
 
             try
             {
+                // Prioritize to use the AutomationId or Name property to get faster.
+                var nativeElement = UIAutomationCommon.GetNativeElement(context, WindowTitle, AutomationId, Name);
+                if (nativeElement != null)
+                {
+                    nativeElement.Click();
+                    Thread.Sleep(_delayAfter);
+                    return;
+                }
+
                 var selStr = Selector.Get(context);
                 UiElement element = Common.GetValueOrDefault(context, this.Element, null);
                 if (element == null && selStr != null)
@@ -171,28 +203,35 @@ namespace RPA.UIAutomation.Activities.Keyboard
                     element = UiElement.FromSelector(selStr);
                 }
                
-                Int32 pointX = 0;
-                Int32 pointY = 0;
-                if (usePoint)
+                //Int32 pointX = 0;
+                //Int32 pointY = 0;
+                //if (usePoint)
+                //{
+                //    pointX = offsetX.Get(context);
+                //    pointY = offsetY.Get(context);
+                //}
+                //else
+                //{
+                //    if (element != null)
+                //    {
+                //        pointX = element.GetClickablePoint().X;
+                //        pointY = element.GetClickablePoint().Y;
+                //        //element.SetForeground();//输入框置前窗口会导致焦点跳出，去除
+                //    }
+                //}
+                var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element, false);
+                if (point.X == -1 && point.Y == -1)
                 {
-                    pointX = offsetX.Get(context);
-                    pointY = offsetY.Get(context);
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                    return;
                 }
-                else
-                {
-                    if (element != null)
-                    {
-                        pointX = element.GetClickablePoint().X;
-                        pointY = element.GetClickablePoint().Y;
-                        //element.SetForeground();//输入框置前窗口会导致焦点跳出，去除
-                    }
-                }
+
                 string expValue = Text.Get(context);
                 List<string> strList = new List<string>();
                 ParseStringToList(ref expValue, ref strList);
                 if (isRunClick)
                 {
-                    UiElement.MouseMoveTo(pointX, pointY);
+                    UiElement.MouseMoveTo(point);
                     UiElement.MouseAction((Plugins.Shared.Library.UiAutomation.ClickType)ClickType, (Plugins.Shared.Library.UiAutomation.MouseButton)MouseButton);
                 }
                 foreach (string _strValue in strList)
@@ -209,15 +248,8 @@ namespace RPA.UIAutomation.Activities.Keyboard
                         }
                         else
                         {
-                            SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "找不到键值");
-                            if (ContinueOnError.Get(context))
-                            {
-                                return;
-                            }
-                            else
-                            {
-                                throw new NotImplementedException("找不到键值");
-                            }
+                            UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "找不到键值");
+                            return;
                         }
                     }
                     else if (strValue != null && strValue != "")
@@ -230,15 +262,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", e.Message);
-                if (ContinueOnError.Get(context))
-                {
-                    return;
-                }
-                else
-                {
-                    throw new NotImplementedException(e.Message);
-                }
+                UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, e.Message);
             }
         }
     }

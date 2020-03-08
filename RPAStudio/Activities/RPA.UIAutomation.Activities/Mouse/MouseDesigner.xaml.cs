@@ -27,9 +27,15 @@ namespace RPA.UIAutomation.Activities.Mouse
         }
 
         private void UiElement_OnSelected(UiElement uiElement)
-        { 
+        {
+            // Get the window title to identify the element from Name/AutomationId
+            string title = UIAutomationCommon.GetRootWindowTitle(UiCommon.GetForegroundWindow());
+            setPropertyValue("WindowTitle", new InArgument<string>(title));
+
             var screenshotsPath = uiElement.CaptureInformativeScreenshotToFile();
             setPropertyValue("SourceImgPath", screenshotsPath);
+            setPropertyValue("Name", new InArgument<string>(uiElement.Name));
+            setPropertyValue("AutomationId", new InArgument<string>(uiElement.AutomationId));
             setPropertyValue("Selector", new InArgument<string>(uiElement.Selector));
             grid1.Visibility = System.Windows.Visibility.Hidden;
             setPropertyValue("visibility", System.Windows.Visibility.Visible);

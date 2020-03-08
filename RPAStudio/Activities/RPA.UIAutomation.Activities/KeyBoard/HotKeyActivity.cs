@@ -165,25 +165,31 @@ namespace RPA.UIAutomation.Activities.Keyboard
                     element = UiElement.FromSelector(selStr);
                 }
 
-                Int32 pointX = 0;
-                Int32 pointY = 0;
-                if (usePoint)
+                //Int32 pointX = 0;
+                //Int32 pointY = 0;
+                //if (usePoint)
+                //{
+                //    pointX = offsetX.Get(context);
+                //    pointY = offsetY.Get(context);
+                //}
+                //else
+                //{
+                //    if (element != null)
+                //    {
+                //        pointX = element.GetClickablePoint().X;
+                //        pointY = element.GetClickablePoint().Y;
+                //        element.SetForeground();
+                //    }
+                //}
+                var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element);
+                if (point.X == -1 && point.Y == -1)
                 {
-                    pointX = offsetX.Get(context);
-                    pointY = offsetY.Get(context);
-                }
-                else
-                {
-                    if (element != null)
-                    {
-                        pointX = element.GetClickablePoint().X;
-                        pointY = element.GetClickablePoint().Y;
-                        element.SetForeground();
-                    }
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                    return;
                 }
                 if (isRunClick)
                 {
-                    UiElement.MouseMoveTo(pointX, pointY);
+                    UiElement.MouseMoveTo(point);
                     UiElement.MouseAction((Plugins.Shared.Library.UiAutomation.ClickType)ClickType, (Plugins.Shared.Library.UiAutomation.MouseButton)MouseButton);
                 }
                 DealBaseKeyBordPress();
@@ -196,15 +202,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", e.Message);
-                if (ContinueOnError.Get(context))
-                {
-                    return;
-                }
-                else
-                {
-                    throw new NotImplementedException(e.Message);
-                }
+                UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, e.Message);
             }
         } 
     }

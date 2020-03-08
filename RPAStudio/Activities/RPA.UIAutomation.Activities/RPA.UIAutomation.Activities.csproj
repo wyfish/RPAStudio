@@ -196,6 +196,7 @@
     <Compile Include="Browser\TabSwitchDesigner.xaml.cs">
       <DependentUpon>TabSwitchDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UIAutomationCommon.cs" />
     <Compile Include="Control\Activate.cs" />
     <Compile Include="Control\ActivateDesigner.xaml.cs">
       <DependentUpon>ActivateDesigner.xaml</DependentUpon>

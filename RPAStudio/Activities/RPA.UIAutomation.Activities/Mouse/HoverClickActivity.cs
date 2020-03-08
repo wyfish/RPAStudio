@@ -21,6 +21,28 @@ namespace RPA.UIAutomation.Activities.Mouse
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("Window Title")]
+        [Description("Parent Window Title")]
+        public InArgument<string> WindowTitle { get; set; }
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("Name")]
+        [Description("Name Property")]
+        public InArgument<string> Name { get; set; }
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("AutomationId")]
+        [Description("AutomationId Property")]
+        public InArgument<string> AutomationId { get; set; }
+
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G2")]
         [Browsable(true)]
@@ -86,9 +108,21 @@ namespace RPA.UIAutomation.Activities.Mouse
         {
             Int32 _delayAfter = Common.GetValueOrDefault(context, this.DelayAfter, 300);
             Int32 _delayBefore = Common.GetValueOrDefault(context, this.DelayBefore, 300);
+            Thread.Sleep(_delayBefore);
             try
             {
-                Thread.Sleep(_delayBefore);
+                // // Prioritize to use the AutomationId or Name property to get faster.
+                var nativeElement = UIAutomationCommon.GetNativeElement(context, WindowTitle, AutomationId, Name);
+                if (nativeElement != null)
+                {
+                    int x = nativeElement.BoundingRectangle.X + nativeElement.BoundingRectangle.Width / 2;
+                    int y = nativeElement.BoundingRectangle.Y + nativeElement.BoundingRectangle.Height / 2;
+                    var centerPoint = new System.Drawing.Point(x, y);
+                    FlaUI.Core.Input.Mouse.MoveTo(centerPoint);
+                    Thread.Sleep(_delayAfter);
+                    return;
+                }
+
                 var selStr = Selector.Get(context);
                 UiElement element = Common.GetValueOrDefault(context, this.Element, null);
                 if (element == null && selStr != null)
@@ -96,47 +130,40 @@ namespace RPA.UIAutomation.Activities.Mouse
                     element = UiElement.FromSelector(selStr);
                 }
 
-                Int32 pointX = 0;
-                Int32 pointY = 0;
-                if (usePoint)
+                //Int32 pointX = 0;
+                //Int32 pointY = 0;
+                //if (usePoint)
+                //{
+                //    pointX = offsetX.Get(context);
+                //    pointY = offsetY.Get(context);
+                //}
+                //else
+                //{
+                //    if (element != null)
+                //    {
+                //        pointX = element.GetClickablePoint().X;
+                //        pointY = element.GetClickablePoint().Y;
+                //        element.SetForeground();
+                //    }
+                //    else
+                //    {
+                //        UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                //        return;
+                //    }
+                //}
+                var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element);
+                if (point.X == -1 && point.Y == -1)
                 {
-                    pointX = offsetX.Get(context);
-                    pointY = offsetY.Get(context);
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                    return;
                 }
-                else
-                {
-                    if (element != null)
-                    {
-                        pointX = element.GetClickablePoint().X;
-                        pointY = element.GetClickablePoint().Y;
-                        element.SetForeground();
-                    }
-                    else
-                    {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "查找不到元素");
-                        if (ContinueOnError.Get(context))
-                        {
-                            return;
-                        }
-                        else
-                        {
-                            throw new NotImplementedException("查找不到元素");
-                        }
-                    }
-                }
-                UiElement.MouseMoveTo(pointX, pointY);
+
+                UiElement.MouseMoveTo(point);
                 Thread.Sleep(_delayAfter);
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", e.Message);
-                if (ContinueOnError.Get(context))
-                {
-                }
-                else
-                {
-                    throw new NotImplementedException("查找不到元素");
-                }
+                UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, e.Message);
             }
         }
         private void onComplete(NativeActivityContext context, ActivityInstance completedInstance)
