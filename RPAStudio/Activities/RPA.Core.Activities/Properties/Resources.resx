@@ -837,7 +837,10 @@
   <data name="xDataTableFieldHint" xml:space="preserve">
     <value>DataTable Variable</value>
   </data>
-  <data name="xDataTableFieldHint" xml:space="preserve">
-    <value>DataTable Variable</value>
+  <data name="IgnoredActivity" xml:space="preserve">
+    <value>Ignored activity</value>
+  </data>
+  <data name="WriteCommentInTextProperty" xml:space="preserve">
+    <value>Please write a comment in the Text property</value>
   </data>
 </root>

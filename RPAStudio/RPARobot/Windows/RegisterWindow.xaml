@@ -4,12 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPARobot.Windows"
-        xmlns:localization="clr-namespace:RPARobot.Localization"
+        xmlns:lclz="clr-namespace:RPARobot.Localization"
         mc:Ignorable="d"
         DataContext="{Binding Register, Source={StaticResource Locator}}"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-        Title="{x:Static localization:Strings.RegisterYourProductTitle}" Height="300" Width="400" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowDrop="True">
+        Title="{x:Static lclz:Strings.RegisterYourProduct}" Height="300" Width="400" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowDrop="True">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -32,7 +32,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid>
-            <GroupBox Header="{x:Static localization:Strings.RegistrationInformationHeader}" Margin="10">
+            <GroupBox Header="{x:Static lclz:Strings.RegistrationInformationHeader}" Margin="10">
                 <Grid Margin="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
@@ -44,24 +44,24 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
-                        <TextBlock HorizontalAlignment="Right" Text="{x:Static localization:Strings.StatusText}" />
+                        <TextBlock HorizontalAlignment="Right" Text="{x:Static lclz:Strings.StatusText}" />
                     </Grid>
 
                     <Grid Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                        <TextBlock HorizontalAlignment="Right" Text="{x:Static localization:Strings.ValidityPeriodText}"/>
+                        <TextBlock HorizontalAlignment="Right" Text="{x:Static lclz:Strings.ValidityPeriodText}"/>
                     </Grid>
 
                     <Grid Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-                        <TextBlock Text="{x:Static localization:Strings.NotRegisteredText}" Foreground="Red" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}"></TextBlock>
-                        <TextBlock Text="{x:Static localization:Strings.RegisteredText}" Foreground="Green" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="{x:Static lclz:Strings.NotRegisteredText}" Foreground="Red" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="{x:Static lclz:Strings.RegisteredText}" Foreground="Green" HorizontalAlignment="Left" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
                     </Grid>
 
                     <Grid Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Visibility="{Binding IsRegistered,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
-                            <TextBlock Text="{x:Static localization:Strings.TillText}"></TextBlock>
+                            <TextBlock Text="{x:Static lclz:Strings.TillText}"></TextBlock>
                             <TextBlock Text="{Binding ExpiresDate}" Foreground="Blue"></TextBlock>
                         </StackPanel>
-                        <TextBlock Text="{x:Static localization:Strings.PermanentText}" Foreground="Blue" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="{x:Static lclz:Strings.PermanentText}" Foreground="Blue" Visibility="{Binding IsNeverExpires,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}"></TextBlock>
                     </Grid>
 
 
@@ -71,14 +71,14 @@
         </Grid>
         <Grid Grid.Row="1" Margin="10">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Width="100" Height="25" x:Uid="ExportMachineCode" ToolTip="请将机器码文件导出并发送给授权方完成授权" Command="{Binding ExportMachineCodeFileCommand}" Content="{x:Static localization:Strings.ExportMachineCodeContent}" Margin="0,2"/>
-                <Button Width="100" Height="25" x:Uid="ImportMachineCode" ToolTip="选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口" Margin="20,0,10,0" Command="{Binding ImportAuthorizationFileCommand}" Content="{x:Static localization:Strings.ImportMachineCodeContent}"/>
+                <Button Width="100" Height="25" ToolTip="{x:Static lclz:Strings.ExportMachineCodeToolTip}" Command="{Binding ExportMachineCodeFileCommand}" Content="{x:Static lclz:Strings.ExportMachineCodeContent}" Margin="0,2"/>
+                <Button Width="100" Height="25" ToolTip="{x:Static lclz:Strings.ImportMachineCodeToolTip}" Margin="20,0,10,0" Command="{Binding ImportAuthorizationFileCommand}" Content="{x:Static lclz:Strings.ImportMachineCodeContent}"/>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CloseCommand}" Content="{x:Static localization:Strings.CloseContent}"/>
+                <Button Width="80" Height="25" Margin="10,0,10,0" Command="{Binding CloseCommand}" Content="{x:Static lclz:Strings.CloseContent}"/>
             </StackPanel>
         </Grid>
 

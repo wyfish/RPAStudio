@@ -603,22 +603,22 @@
   <data name="TapScreen" xml:space="preserve">
     <value>點擊荧幕</value>
   </data>
-  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+  <data name="AttributeNameToGet" xml:space="preserve">
     <value>要檢索的内容的名稱</value>
   </data>
-  <data name="AttributeToExpect.HintText" xml:space="preserve">
+  <data name="AttributeToExpect" xml:space="preserve">
     <value>指定内容的預期值</value>
   </data>
-  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+  <data name="ChangeHTMLAttribute" xml:space="preserve">
     <value>要更改的HTML内容的名稱</value>
   </data>
-  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+  <data name="PropertyNameToWait" xml:space="preserve">
     <value>要等待的内容的名稱</value>
   </data>
-  <data name="SetAttributeValue.HintText" xml:space="preserve">
+  <data name="SetAttributeValue" xml:space="preserve">
     <value>要設定為指定内容的值。僅支持字串變數</value>
   </data>
-  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+  <data name="SpecifyTheURL" xml:space="preserve">
     <value>指定瀏覽器中打開的URL</value>
   </data>
   <data name="Category12" xml:space="preserve">
@@ -845,5 +845,59 @@
   </data>
   <data name="ResultInformation" xml:space="preserve">
     <value>捕獲範圍：x={0}，y={1}，w={2}，h={3}，搭配：{4}，重合度：{5}</value>
+  </data>
+  <data name="msgNoElementFound" xml:space="preserve">
+    <value>查找不到元素</value>
+  </data>
+  <data name="msgErrorOccurred" xml:space="preserve">
+    <value>有一個錯誤產生</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>輸入項</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>運行時的鼠標操作</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>輸入前單擊偏移</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>運動偏移 X</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>運動偏移 Y</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>點擊偏移位置</value>
+  </data>
+  <data name="Description132" xml:space="preserve">
+    <value>輸入視窗標題以通過AutomationId或Name識別元素。  *前後是通配符。</value>
+  </data>
+  <data name="Description133" xml:space="preserve">
+    <value>元素的AutomationId屬性</value>
+  </data>
+  <data name="Description134" xml:space="preserve">
+    <value>元素的Name屬性</value>
+  </data>
+  <data name="Description135" xml:space="preserve">
+    <value>當執行時的鼠標操作為True時，在單擊X / Y坐標後執行鍵盤操作。</value>
+  </data>
+  <data name="Description136" xml:space="preserve">
+    <value>如果使用坐標點但為True，則X坐標用於鼠標操作</value>
+  </data>
+  <data name="Description137" xml:space="preserve">
+    <value>如果使用坐標點但為True，則Y坐標用於鼠標操作</value>
+  </data>
+  <data name="Description138" xml:space="preserve">
+    <value>指定是否在鍵盤輸入之前執行指定的鼠標操作</value>
+  </data>
+  <data name="Description139" xml:space="preserve">
+    <value>通過移動元素中心的偏移量來執行鼠標操作</value>
+  </data>
+  <data name="Description140" xml:space="preserve">
+    <value>X軸上要從元素中心偏移的像素數</value>
+  </data>
+  <data name="Description141" xml:space="preserve">
+    <value>Y軸上要從元素中心偏移的像素數</value>
   </data>
 </root>

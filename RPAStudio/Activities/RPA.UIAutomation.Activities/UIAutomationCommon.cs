@@ -55,12 +55,7 @@ namespace RPA.UIAutomation.Activities
             return null;
         }
 
-        internal static string GetRootWindowTitle(IntPtr hwnd)
-        {
-            return GetWindowTextHelper(hwnd);
-        }
-
-        private static string GetWindowTextHelper(IntPtr hWnd)
+        internal static string GetRootWindowTitle(IntPtr hWnd)
         {
             string title = "";
             StringBuilder sb = new StringBuilder(0x1024);
@@ -133,7 +128,7 @@ namespace RPA.UIAutomation.Activities
 
         internal static void HandleContinueOnError(CodeActivityContext context, InArgument<bool> continueOnError, string errMsg)
         {
-            SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", errMsg);
+            SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("msgErrorOccurred"), errMsg);
             if (continueOnError.Get(context))
             {
                 return;
@@ -141,5 +136,23 @@ namespace RPA.UIAutomation.Activities
             throw new NotImplementedException(errMsg);
         }
 
+        internal static void ClickNativeElement(AutomationElement element, int offsetX = 0, int offsetY = 0)
+        {
+            MoveTo(element, offsetX, offsetY);
+            FlaUI.Core.Input.Mouse.Click();
+        }
+
+        internal static void MoveOnNativeElement(AutomationElement element, int offsetX = 0, int offsetY = 0)
+        {
+            MoveTo(element, offsetX, offsetY);
+        }
+
+        private static void MoveTo(AutomationElement element, int offsetX = 0, int offsetY = 0)
+        {
+            int x = element.BoundingRectangle.X + element.BoundingRectangle.Width / 2 + offsetX;
+            int y = element.BoundingRectangle.Y + element.BoundingRectangle.Height / 2 + offsetY;
+            var pointToMove = new System.Drawing.Point(x, y);
+            FlaUI.Core.Input.Mouse.MoveTo(pointToMove);
+        }
     }
 }

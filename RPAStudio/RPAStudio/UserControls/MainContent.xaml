@@ -34,7 +34,7 @@
                                     <uc:StartContent/>
                                 </fluent:BackstageTabItem>
 
-                                <fluent:BackstageTabItem x:Uid="Settings" Header="设置" >
+                                <fluent:BackstageTabItem Header="{x:Static lclz:Strings.xSettings}">
                                     <uc:SetUpContent/>                              
                                 </fluent:BackstageTabItem>
                                 <fluent:BackstageTabItem >

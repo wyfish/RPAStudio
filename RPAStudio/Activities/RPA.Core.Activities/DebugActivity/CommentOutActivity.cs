@@ -22,7 +22,7 @@ namespace RPA.Core.Activities.DebugActivity
         {
             Body = new Sequence
             {
-                DisplayName = "忽略的活动"
+                DisplayName = Localize.LocalizedResources.GetString("IgnoredActivity") // "忽略的活动"
             };
         }
 

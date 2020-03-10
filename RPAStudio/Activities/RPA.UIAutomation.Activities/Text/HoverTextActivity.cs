@@ -15,7 +15,7 @@ namespace RPA.UIAutomation.Activities.Text
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //セレクター
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 

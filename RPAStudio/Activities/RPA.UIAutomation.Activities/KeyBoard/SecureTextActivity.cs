@@ -34,7 +34,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //セレクター
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
@@ -73,7 +73,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
 
 
         [RequiredArgument]
-        [Category("输入项")]
+        [Localize.LocalizedCategory("Category13")] //输入项
         [Browsable(true)]
         [DisplayName("Secure Text")]
         public InArgument<SecureString> SecureText
@@ -83,6 +83,8 @@ namespace RPA.UIAutomation.Activities.Keyboard
         }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName83")] //运行时的鼠标操作 //Mouse operation at runtime //実行時のマウス操作
+        [Localize.LocalizedDescription("Description138")] //キーボード入力の前に、指定のマウス操作を行うかどうかを指定します
         public bool isRunClick { get; set; }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
@@ -91,12 +93,19 @@ namespace RPA.UIAutomation.Activities.Keyboard
         public Int32 MouseButton { get; set; }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public InArgument<Int32> offsetX { get; set; }
-        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public InArgument<Int32> offsetY { get; set; }
-        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
+        [Localize.LocalizedDescription("Description135")] //実行時のマウス操作がTrueの場合、要素の座標ではなく入力された座標をクリック後に入力します。
         public bool usePoint { get; set; }
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName66")] // X Coordinate
+        [Localize.LocalizedDescription("Description136")] //座標点を使用するがTrueの場合、マウス操作を行うX座標
+        public InArgument<Int32> offsetX { get; set; }
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName67")] // Y Coordinate
+        [Localize.LocalizedDescription("Description137")] //座標点を使用するがTrueの場合、マウス操作を行うY座標
+        public InArgument<Int32> offsetY { get; set; }
 
 
         //[Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
@@ -161,7 +170,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
                 var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element);
                 if (point.X == -1 && point.Y == -1)
                 {
-                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, Localize.LocalizedResources.GetString("msgNoElementFound"));
                     return;
                 }
                 /*执行鼠标点击事件*/

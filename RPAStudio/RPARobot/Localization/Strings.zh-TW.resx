@@ -117,32 +117,133 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BrowseLogs.ToolTip" xml:space="preserve">
-    <value>ログを表示</value>
+  <data name="AutomaticallyOpenWindowContent" xml:space="preserve">
+    <value>啟動後自動打開主視窗</value>
   </data>
-  <data name="ExportMachineCode.ToolTip" xml:space="preserve">
-    <value>マシンコードファイルをエクスポートし、許可された関係者に送信して許可を完了してください</value>
+  <data name="AutomaticallyStartAtBootContent" xml:space="preserve">
+    <value>開機時自動啟動</value>
   </data>
-  <data name="ImportMachineCode.ToolTip" xml:space="preserve">
-    <value>認証コードファイルを選択してインポートを完了するか、認証コードファイルを現在のウィンドウに直接ドラッグします</value>
+  <data name="AvailableProcessesListText" xml:space="preserve">
+    <value>可用流程清單</value>
   </data>
-  <data name="Refresh.ToolTip" xml:space="preserve">
-    <value>更新</value>
+  <data name="CancelContent" xml:space="preserve">
+    <value>取消</value>
   </data>
-  <data name="RegisterYourProduct.ToolTip" xml:space="preserve">
-    <value>製品を登録する</value>
+  <data name="CloseContent" xml:space="preserve">
+    <value>關閉</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RPARobot_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Config\RPARobot.settings;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ExportMachineCodeContent" xml:space="preserve">
+    <value>匯出機器碼檔案…</value>
   </data>
-  <data name="Search.HintText" xml:space="preserve">
-    <value>検索</value>
+  <data name="ImportMachineCodeContent" xml:space="preserve">
+    <value>導入授權碼檔案…</value>
   </data>
-  <data name="UserSettings.ToolTip" xml:space="preserve">
-    <value>ユーザー設定</value>
+  <data name="NotRegisteredText" xml:space="preserve">
+    <value>程式未注册</value>
   </data>
-  <data name="verify.public.rsa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key\verify.public.rsa.pem;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="OKContent" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="PermanentText" xml:space="preserve">
+    <value>永久有效</value>
+  </data>
+  <data name="RegisteredText" xml:space="preserve">
+    <value>程式已注册</value>
+  </data>
+  <data name="RegisterYourProduct" xml:space="preserve">
+    <value>注册產品</value>
+  </data>
+  <data name="RegistrationInformationHeader" xml:space="preserve">
+    <value>注册資訊</value>
+  </data>
+  <data name="ResetSettingsContent" xml:space="preserve">
+    <value>重置設定</value>
+  </data>
+  <data name="RPARobotTitle" xml:space="preserve">
+    <value>RPA機器人</value>
+  </data>
+  <data name="SearchResultEmptyText" xml:space="preserve">
+    <value>搜索結果為空</value>
+  </data>
+  <data name="StatusText" xml:space="preserve">
+    <value>狀態：</value>
+  </data>
+  <data name="SystemSettingsHeader" xml:space="preserve">
+    <value>系統設置</value>
+  </data>
+  <data name="TillText" xml:space="preserve">
+    <value>截止到</value>
+  </data>
+  <data name="UserSettings" xml:space="preserve">
+    <value>用戶設置</value>
+  </data>
+  <data name="ValidityPeriodText" xml:space="preserve">
+    <value>有效期：</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="ComputerName" xml:space="preserve">
+    <value>機器名：</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>Ip地址：</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本號：</value>
+  </data>
+  <data name="CopyInformation" xml:space="preserve">
+    <value>複製信息</value>
+  </data>
+  <data name="LocateCurrentPackage" xml:space="preserve">
+    <value>定位當前包</value>
+  </data>
+  <data name="RemoveCurrentPackage" xml:space="preserve">
+    <value>移除當前包</value>
+  </data>
+  <data name="RecordingSettings" xml:space="preserve">
+    <value>錄像設置</value>
+  </data>
+  <data name="EnableScreenRecording" xml:space="preserve">
+    <value>啟用屏幕錄像</value>
+  </data>
+  <data name="FramesText" xml:space="preserve">
+    <value>幀數：</value>
+  </data>
+  <data name="QualityText" xml:space="preserve">
+    <value>畫質：</value>
+  </data>
+  <data name="ControlCenterConfiguration" xml:space="preserve">
+    <value>控制中心配置</value>
+  </data>
+  <data name="EnableControlCenter" xml:space="preserve">
+    <value>啟用控制中心</value>
+  </data>
+  <data name="ControlCenterAddress" xml:space="preserve">
+    <value>控制中心地址：</value>
+  </data>
+  <data name="BrowseLogsToolTip" xml:space="preserve">
+    <value>瀏覽日誌</value>
+  </data>
+  <data name="ExportMachineCodeToolTip" xml:space="preserve">
+    <value>請將機器碼檔案匯出並發送給授權方完成授權</value>
+  </data>
+  <data name="ImportMachineCodeToolTip" xml:space="preserve">
+    <value>選擇授權碼檔案來完成導入，也可直接拖拽授權碼檔案到當前視窗</value>
+  </data>
+  <data name="RefreshToolTip" xml:space="preserve">
+    <value>重繪</value>
+  </data>
+  <data name="SearchHintText" xml:space="preserve">
+    <value>蒐索</value>
+  </data>
+  <data name="BrowseVideos" xml:space="preserve">
+    <value>瀏覽錄像</value>
+  </data>
+  <data name="AboutProducts" xml:space="preserve">
+    <value>關於產品</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>停止</value>
   </data>
 </root>

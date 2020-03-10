@@ -301,13 +301,14 @@ namespace RPAStudio.ViewModel
         private string GetActivitiesXML(string activityName)
         {
             //string culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            string culture = System.Globalization.CultureInfo.CurrentCulture.Name;
-            string resourceXML = App.LocalRPAStudioDir + @"\Config\" + activityName + "_en-US.xml";
-            if (culture.Equals("ja-JP") || culture.Equals("zh-TW"))
+            string cultureName = System.Globalization.CultureInfo.CurrentCulture.Name;
+            string resourceXML = App.LocalRPAStudioDir + @"\Config\" + activityName + "_en_US.xml";
+            if (cultureName.Equals("ja-JP") || cultureName.Equals("zh-TW"))
             {
-                return App.LocalRPAStudioDir + @"\Config\" + activityName + $"_{culture}.xml";
+                string copiedCultureName = cultureName.Replace("-", "_");
+                return App.LocalRPAStudioDir + @"\Config\" + activityName + $"_{copiedCultureName}.xml";
             }
-            else if (culture.Equals("zh-CN"))
+            else if (cultureName.Equals("zh-CN"))
             {
                 return App.LocalRPAStudioDir + @"\Config\" + activityName + ".xml";
             }
@@ -509,7 +510,7 @@ namespace RPAStudio.ViewModel
             if(AvailableActivitiesXmlDocument == null)
             {
                 XmlDocument doc = new XmlDocument();
-                var resourceXML = Properties.ResourceLocalizer.GetLocalizedResource("AvailableActivities");
+                var resourceXML = Properties.ResourceLocalizer.GetConfigXML("AvailableActivities");
                 using (var ms = new MemoryStream(resourceXML))
                 {
                     ms.Flush();

@@ -36,8 +36,8 @@ namespace RPA.UIAutomation.Activities.Keyboard
             var screenshotsPath = uiElement.CaptureInformativeScreenshotToFile();
             navigateTextBlock.Visibility = System.Windows.Visibility.Hidden;
             setPropertyValue("SourceImgPath", screenshotsPath);
-            setPropertyValue("Name", new InArgument<string>(uiElement.Name));
             setPropertyValue("AutomationId", new InArgument<string>(uiElement.AutomationId));
+            setPropertyValue("Name", new InArgument<string>(uiElement.Name));
             setPropertyValue("Selector", new InArgument<string>(uiElement.Selector));
             setPropertyValue("visibility", System.Windows.Visibility.Visible);
             InArgument<Int32> _offsetX = uiElement.GetClickablePoint().X;

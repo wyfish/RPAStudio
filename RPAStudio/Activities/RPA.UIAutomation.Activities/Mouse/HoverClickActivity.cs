@@ -17,7 +17,7 @@ namespace RPA.UIAutomation.Activities.Mouse
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //セレクター
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
@@ -25,23 +25,23 @@ namespace RPA.UIAutomation.Activities.Mouse
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("Window Title")]
-        [Description("Parent Window Title")]
+        [Localize.LocalizedDisplayName("DisplayName60")] //窗口标题 //Window Title
+        [Localize.LocalizedDescription("Description132")] //输入屏幕标题以通过AutomationId或Name识别元素。  *前后是通配符。
         public InArgument<string> WindowTitle { get; set; }
 
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("Name")]
-        [Description("Name Property")]
-        public InArgument<string> Name { get; set; }
+        [DisplayName("AutomationId")]
+        [Localize.LocalizedDescription("Description133")] //元素的AutomationId属性
+        public InArgument<string> AutomationId { get; set; }
 
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [DisplayName("AutomationId")]
-        [Description("AutomationId Property")]
-        public InArgument<string> AutomationId { get; set; }
+        [DisplayName("Name")]
+        [Localize.LocalizedDescription("Description134")] //元素的AutomationId属性
+        public InArgument<string> Name { get; set; }
 
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G2")]
@@ -75,15 +75,19 @@ namespace RPA.UIAutomation.Activities.Mouse
         [Localize.LocalizedDescription("Description57")] //延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为300毫秒。 //The delay time, in milliseconds, before the deferred the activity is executed. The default time is 300 milliseconds. //遅延アクティビティが操作を開始するまでの時間（ミリ秒）。 デフォルトの時間は300ミリ秒です。
         public InArgument<Int32> DelayBefore { get; set; }
 
-
-        [Category("Input")]
-        public InArgument<Int32> offsetX { get; set; }
-        [Category("Input")]
-        public InArgument<Int32> offsetY { get; set; }
-
         [Category("Input")]
         [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
         public bool usePoint { get; set; }
+
+        [Category("Input")]
+        [Localize.LocalizedDisplayName("DisplayName66")] // X Coordinate
+        [Localize.LocalizedDescription("Description136")] //座標点を使用するがTrueの場合、マウス操作を行うX座標
+        public InArgument<Int32> offsetX { get; set; }
+
+        [Category("Input")]
+        [Localize.LocalizedDisplayName("DisplayName67")] // Y Coordinate
+        [Localize.LocalizedDescription("Description137")] //座標点を使用するがTrueの場合、マウス操作を行うY座標
+        public InArgument<Int32> offsetY { get; set; }
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
@@ -111,14 +115,11 @@ namespace RPA.UIAutomation.Activities.Mouse
             Thread.Sleep(_delayBefore);
             try
             {
-                // // Prioritize to use the AutomationId or Name property to get faster.
+                // Prioritize to use the AutomationId or Name property to get faster.
                 var nativeElement = UIAutomationCommon.GetNativeElement(context, WindowTitle, AutomationId, Name);
                 if (nativeElement != null)
                 {
-                    int x = nativeElement.BoundingRectangle.X + nativeElement.BoundingRectangle.Width / 2;
-                    int y = nativeElement.BoundingRectangle.Y + nativeElement.BoundingRectangle.Height / 2;
-                    var centerPoint = new System.Drawing.Point(x, y);
-                    FlaUI.Core.Input.Mouse.MoveTo(centerPoint);
+                    UIAutomationCommon.MoveOnNativeElement(nativeElement);
                     Thread.Sleep(_delayAfter);
                     return;
                 }
@@ -154,7 +155,7 @@ namespace RPA.UIAutomation.Activities.Mouse
                 var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element);
                 if (point.X == -1 && point.Y == -1)
                 {
-                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "查找不到元素");
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, Localize.LocalizedResources.GetString("msgNoElementFound"));
                     return;
                 }
 

@@ -199,19 +199,19 @@
     <value>自动递增</value>
   </data>
   <data name="Description19" xml:space="preserve">
-    <value> 指定在添加新行时列的值是否自动递增</value>
+    <value>指定在添加新行时列的值是否自动递增</value>
   </data>
   <data name="DisplayName4" xml:space="preserve">
     <value>唯一约束</value>
   </data>
   <data name="Description20" xml:space="preserve">
-    <value> 指定新列的每一行中的值必须是唯一的</value>
+    <value>指定新列的每一行中的值必须是唯一的</value>
   </data>
   <data name="DisplayName5" xml:space="preserve">
     <value>最大长度</value>
   </data>
   <data name="Description21" xml:space="preserve">
-    <value> 指定新列的值的最大长度</value>
+    <value>指定新列的值的最大长度</value>
   </data>
   <data name="DisplayName6" xml:space="preserve">
     <value>默认值</value>
@@ -601,46 +601,46 @@
     <value>凭据名称</value>
   </data>
   <data name="Description103" xml:space="preserve">
-    <value> 系统中获取的凭据名称</value>
+    <value>系统中获取的凭据名称</value>
   </data>
   <data name="DisplayName49" xml:space="preserve">
     <value>超时时间(毫秒)</value>
   </data>
   <data name="Description104" xml:space="preserve">
-    <value> 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）</value>
+    <value>指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）</value>
   </data>
   <data name="Description105" xml:space="preserve">
-    <value> 检索到的凭证的安全密码</value>
+    <value>检索到的凭证的安全密码</value>
   </data>
   <data name="DisplayName50" xml:space="preserve">
     <value>用户名</value>
   </data>
   <data name="Description106" xml:space="preserve">
-    <value> 检索到的凭证的用户名</value>
+    <value>检索到的凭证的用户名</value>
   </data>
   <data name="Description107" xml:space="preserve">
-    <value> 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）,默认值为30000毫秒（30秒）</value>
+    <value>指定在引发错误之前等待活动运行的时间量（以毫秒为单位）,默认值为30000毫秒（30秒）</value>
   </data>
   <data name="DisplayName51" xml:space="preserve">
     <value>错误继续执行</value>
   </data>
   <data name="Description108" xml:space="preserve">
-    <value> 指定即使活动引发错误, 自动化是否仍应继续</value>
+    <value>指定即使活动引发错误, 自动化是否仍应继续</value>
   </data>
   <data name="Category10" xml:space="preserve">
     <value>凭证选项</value>
   </data>
   <data name="Description109" xml:space="preserve">
-    <value> 设置凭证的用户名</value>
+    <value>设置凭证的用户名</value>
   </data>
   <data name="Description110" xml:space="preserve">
-    <value> 设置凭证的密码</value>
+    <value>设置凭证的密码</value>
   </data>
   <data name="DisplayName52" xml:space="preserve">
     <value>凭证名称</value>
   </data>
   <data name="Description111" xml:space="preserve">
-    <value> 要更新的凭据名称</value>
+    <value>要更新的凭据名称</value>
   </data>
   <data name="Description112" xml:space="preserve">
     <value>要执行的PowerShell命令。</value>
@@ -836,5 +836,11 @@
   </data>
   <data name="xDataTableFieldHint" xml:space="preserve">
     <value>DataTable变量</value>
+  </data>
+  <data name="IgnoredActivity" xml:space="preserve">
+    <value>忽略的活动</value>
+  </data>
+  <data name="WriteCommentInTextProperty" xml:space="preserve">
+    <value>请在Text属性中写下注释内容</value>
   </data>
 </root>

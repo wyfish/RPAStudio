@@ -145,12 +145,12 @@
     <value>OK</value>
   </data>
   <data name="PermanentText" xml:space="preserve">
-    <value>無期限　</value>
+    <value>無期限</value>
   </data>
   <data name="RegisteredText" xml:space="preserve">
     <value>プログラムが登録されています</value>
   </data>
-  <data name="RegisterYourProductTitle" xml:space="preserve">
+  <data name="RegisterYourProduct" xml:space="preserve">
     <value>製品を登録する</value>
   </data>
   <data name="RegistrationInformationHeader" xml:space="preserve">
@@ -172,12 +172,78 @@
     <value>システム設定</value>
   </data>
   <data name="TillText" xml:space="preserve">
-    <value>まで　</value>
+    <value>まで</value>
   </data>
-  <data name="UserSettingsTitle" xml:space="preserve">
+  <data name="UserSettings" xml:space="preserve">
     <value>ユーザー設定</value>
   </data>
   <data name="ValidityPeriodText" xml:space="preserve">
     <value>有効期限：</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ComputerName" xml:space="preserve">
+    <value>コンピュータ名：</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IPアドレス：</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>バージョン：</value>
+  </data>
+  <data name="CopyInformation" xml:space="preserve">
+    <value>情報をコピー</value>
+  </data>
+  <data name="LocateCurrentPackage" xml:space="preserve">
+    <value>現在のパッケージを見つける</value>
+  </data>
+  <data name="RemoveCurrentPackage" xml:space="preserve">
+    <value>現在のパッケージを削除</value>
+  </data>
+  <data name="RecordingSettings" xml:space="preserve">
+    <value>レコーディング設定</value>
+  </data>
+  <data name="EnableScreenRecording" xml:space="preserve">
+    <value>画面記録を有効にする</value>
+  </data>
+  <data name="FramesText" xml:space="preserve">
+    <value>フレーム：</value>
+  </data>
+  <data name="QualityText" xml:space="preserve">
+    <value>画質：</value>
+  </data>
+  <data name="ControlCenterConfiguration" xml:space="preserve">
+    <value>コントロールセンターの構成</value>
+  </data>
+  <data name="EnableControlCenter" xml:space="preserve">
+    <value>コントロールセンターを有効にする</value>
+  </data>
+  <data name="ControlCenterAddress" xml:space="preserve">
+    <value>コントロールセンターのアドレス：</value>
+  </data>
+  <data name="BrowseLogsToolTip" xml:space="preserve">
+    <value>ログを表示</value>
+  </data>
+  <data name="ExportMachineCodeToolTip" xml:space="preserve">
+    <value>マシンコードファイルをエクスポートし、許可された関係者に送信して許可を完了してください</value>
+  </data>
+  <data name="ImportMachineCodeToolTip" xml:space="preserve">
+    <value>認証コードファイルを選択してインポートを完了するか、認証コードファイルを現在のウィンドウに直接ドラッグします</value>
+  </data>
+  <data name="RefreshToolTip" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="SearchHintText" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="BrowseVideos" xml:space="preserve">
+    <value>動画を閲覧</value>
+  </data>
+  <data name="AboutProducts" xml:space="preserve">
+    <value>製品について</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>停止</value>
   </data>
 </root>

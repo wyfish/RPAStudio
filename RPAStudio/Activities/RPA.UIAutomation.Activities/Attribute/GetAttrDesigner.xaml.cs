@@ -16,7 +16,6 @@ namespace RPA.UIAutomation.Activities.Attribute
         public GetAttrDesigner()
         {
             InitializeComponent();
-            Net.Surviveplus.Localization.WpfLocalization.ApplyResources(this, Properties.Resources.ResourceManager);
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -110,7 +110,7 @@ namespace RPAStudio.ViewModel
         {
             //从FileTypeConfig.xml中初始化信息
             XmlDocument doc = new XmlDocument();
-            var resourceXML = Properties.ResourceLocalizer.GetLocalizedResource("FileTypeConfig");
+            var resourceXML = Properties.ResourceLocalizer.GetConfigXML("FileTypeConfig");
             using (var ms = new MemoryStream(resourceXML))
             {
                 ms.Flush();

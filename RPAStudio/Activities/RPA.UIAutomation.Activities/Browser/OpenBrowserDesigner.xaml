@@ -28,10 +28,10 @@
         <Grid Name="grid12"  Grid.Row="1" >
             <StackPanel>
                 <Grid Height="30">
-                    <sapv:ExpressionTextBox x:Uid="SpecifyTheURL"
+                    <sapv:ExpressionTextBox
                     Expression="{Binding Path=ModelItem.Url, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                     ExpressionType="sys:String"
-                    HintText="{x:Static lclz:Resources.SpecifyTheURL_HintText}"
+                    HintText="{x:Static lclz:Resources.SpecifyTheURL}"
                     OwnerActivity="{Binding Path=ModelItem}"
                     Grid.Row="0"
                     MaxWidth="260"

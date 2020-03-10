@@ -653,7 +653,7 @@ namespace RPAStudio.ViewModel
         private void initProjectConfig()
         {
             XmlDocument doc = new XmlDocument();
-            var resourceXML = RPAStudio.Properties.ResourceLocalizer.GetLocalizedResource("ProjectConfig");
+            var resourceXML = RPAStudio.Properties.ResourceLocalizer.GetConfigXML("ProjectConfig");
             using (var ms = new MemoryStream(resourceXML))
             {
                 ms.Flush();

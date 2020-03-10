@@ -603,22 +603,22 @@
   <data name="TapScreen" xml:space="preserve">
     <value>画面上で指定</value>
   </data>
-  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+  <data name="AttributeNameToGet" xml:space="preserve">
     <value>取得する属性の名前</value>
   </data>
-  <data name="AttributeToExpect.HintText" xml:space="preserve">
+  <data name="AttributeToExpect" xml:space="preserve">
     <value>指定された属性の期待値</value>
   </data>
-  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+  <data name="ChangeHTMLAttribute" xml:space="preserve">
     <value>変更するHTML属性の名前</value>
   </data>
-  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+  <data name="PropertyNameToWait" xml:space="preserve">
     <value>待機するプロパティの名前</value>
   </data>
-  <data name="SetAttributeValue.HintText" xml:space="preserve">
+  <data name="SetAttributeValue" xml:space="preserve">
     <value>指定された属性に設定される値。文字列変数のみがサポートされています</value>
   </data>
-  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+  <data name="SpecifyTheURL" xml:space="preserve">
     <value>ブラウザで開かれたURLを指定します</value>
   </data>
   <data name="Category12" xml:space="preserve">
@@ -845,5 +845,59 @@
   </data>
   <data name="ResultInformation" xml:space="preserve">
     <value>キャプチャ範囲 : x={0}, y={1}, w={2}, h={3}, 一致 : {4} 一致度 : {5}</value>
+  </data>
+  <data name="msgNoElementFound" xml:space="preserve">
+    <value>要素が見つかりません</value>
+  </data>
+  <data name="msgErrorOccurred" xml:space="preserve">
+    <value>エラー発生</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>入力オプション</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>実行時のマウス操作</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>入力前にオフセット位置をクリック</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>移動オフセット X</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>移動オフセット Y</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>オフセット位置をクリック</value>
+  </data>
+  <data name="Description132" xml:space="preserve">
+    <value>AutomationIdまたはNameで要素を認識するには、ウィンドウタイトルを入力してください。前後の*はワイルドカードとなります。</value>
+  </data>
+  <data name="Description133" xml:space="preserve">
+    <value>要素のAutomationIdプロパティ</value>
+  </data>
+  <data name="Description134" xml:space="preserve">
+    <value>要素のNameプロパティ</value>
+  </data>
+  <data name="Description135" xml:space="preserve">
+    <value>実行時のマウス操作がTrueの場合、X/Y座標をクリック後にキーボード操作を行います。</value>
+  </data>
+  <data name="Description136" xml:space="preserve">
+    <value>座標点を使用するがTrueの場合、マウス操作を行うX座標</value>
+  </data>
+  <data name="Description137" xml:space="preserve">
+    <value>座標点を使用するがTrueの場合、マウス操作を行うY座標</value>
+  </data>
+  <data name="Description138" xml:space="preserve">
+    <value>キーボード入力の前に、指定のマウス操作を行うかどうかを指定します</value>
+  </data>
+  <data name="Description139" xml:space="preserve">
+    <value>要素の中心から移動オフセット分ずらしてマウス操作を行います</value>
+  </data>
+  <data name="Description140" xml:space="preserve">
+    <value>要素の中心からずらすX軸のピクセル数</value>
+  </data>
+  <data name="Description141" xml:space="preserve">
+    <value>要素の中心からずらすY軸のピクセル数</value>
   </data>
 </root>

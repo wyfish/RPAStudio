@@ -837,4 +837,10 @@
   <data name="xDataTableFieldHint" xml:space="preserve">
     <value>DataTable變數</value>
   </data>
+  <data name="IgnoredActivity" xml:space="preserve">
+    <value>忽略的活動</value>
+  </data>
+  <data name="WriteCommentInTextProperty" xml:space="preserve">
+    <value>請在Text屬性中寫下註釋內容</value>
+  </data>
 </root>

@@ -148,7 +148,7 @@
     <value>属性</value>
   </data>
   <data name="Description4" xml:space="preserve">
-    <value> 要检索的属性的名称。该字段仅支持字符串</value>
+    <value>要检索的属性的名称。该字段仅支持字符串</value>
   </data>
   <data name="Category4" xml:space="preserve">
     <value>输出</value>
@@ -196,7 +196,7 @@
     <value>指定等待活动运行的时间量（以毫秒为单位）。默认值为10000毫秒（10秒）</value>
   </data>
   <data name="Description12" xml:space="preserve">
-    <value> 要等待的属性的名称。预定义的属性列表可用作活动中的下拉列表。该字段仅支持String变量</value>
+    <value>要等待的属性的名称。预定义的属性列表可用作活动中的下拉列表。该字段仅支持String变量</value>
   </data>
   <data name="DisplayName10" xml:space="preserve">
     <value>属性值</value>
@@ -577,7 +577,7 @@
     <value>高度</value>
   </data>
   <data name="Description79" xml:space="preserve">
-    <value> 窗口的新高度，支持正负整数</value>
+    <value>窗口的新高度，支持正负整数</value>
   </data>
   <data name="DisplayName65" xml:space="preserve">
     <value>宽度</value>
@@ -603,22 +603,22 @@
   <data name="TapScreen" xml:space="preserve">
     <value>点击屏幕</value>
   </data>
-  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+  <data name="AttributeNameToGet" xml:space="preserve">
     <value>要检索的属性的名称</value>
   </data>
-  <data name="AttributeToExpect.HintText" xml:space="preserve">
+  <data name="AttributeToExpect" xml:space="preserve">
     <value>指定属性的预期值</value>
   </data>
-  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+  <data name="ChangeHTMLAttribute" xml:space="preserve">
     <value>要更改的HTML属性的名称</value>
   </data>
-  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+  <data name="PropertyNameToWait" xml:space="preserve">
     <value>要等待的属性的名称</value>
   </data>
-  <data name="SetAttributeValue.HintText" xml:space="preserve">
+  <data name="SetAttributeValue" xml:space="preserve">
     <value>要设置为指定属性的值。仅支持字符串变量</value>
   </data>
-  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+  <data name="SpecifyTheURL" xml:space="preserve">
     <value>指定浏览器中打开的URL</value>
   </data>
   <data name="Category12" xml:space="preserve">
@@ -845,5 +845,59 @@
   </data>
   <data name="ResultInformation" xml:space="preserve">
     <value>捕获范围 : x={0}, y={1}, w={2}, h={3}, 搭配 : {4}, 重合度 : {5}</value>
+  </data>
+  <data name="msgNoElementFound" xml:space="preserve">
+    <value>查找不到元素</value>
+  </data>
+  <data name="msgErrorOccurred" xml:space="preserve">
+    <value>有一个错误产生</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>输入项</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>运行时的鼠标操作</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>输入前单击偏移</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>运动偏移 X</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>运动偏移 Y</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>点击偏移位置</value>
+  </data>
+  <data name="Description132" xml:space="preserve">
+    <value>输入窗口标题以通过AutomationId或Name识别元素。  *前后是通配符。</value>
+  </data>
+  <data name="Description133" xml:space="preserve">
+    <value>元素的AutomationId属性</value>
+  </data>
+  <data name="Description134" xml:space="preserve">
+    <value>元素的Name属性</value>
+  </data>
+  <data name="Description135" xml:space="preserve">
+    <value>当执行时的鼠标操作为True时，在单击X / Y坐标后执行键盘操作。</value>
+  </data>
+  <data name="Description136" xml:space="preserve">
+    <value>如果使用坐标点但为True，则X坐标用于鼠标操作</value>
+  </data>
+  <data name="Description137" xml:space="preserve">
+    <value>如果使用坐标点但为True，则Y坐标用于鼠标操作</value>
+  </data>
+  <data name="Description138" xml:space="preserve">
+    <value>指定是否在键盘输入之前执行指定的鼠标操作</value>
+  </data>
+  <data name="Description139" xml:space="preserve">
+    <value>通过移动元素中心的偏移量来执行鼠标操作</value>
+  </data>
+  <data name="Description140" xml:space="preserve">
+    <value>X轴上要从元素中心偏移的像素数</value>
+  </data>
+  <data name="Description141" xml:space="preserve">
+    <value>Y轴上要从元素中心偏移的像素数</value>
   </data>
 </root>

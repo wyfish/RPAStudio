@@ -117,30 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BrowseLogs.ToolTip" xml:space="preserve">
-    <value>View logs</value>
-  </data>
-  <data name="ExportMachineCode.ToolTip" xml:space="preserve">
-    <value>Please export the machine code file and send it to the authorized party to complete the authorization</value>
-  </data>
-  <data name="ImportMachineCode.ToolTip" xml:space="preserve">
-    <value>Select the authorization code file to complete the import, or directly drag the authorization code file to the current window</value>
-  </data>
-  <data name="Refresh.ToolTip" xml:space="preserve">
-    <value>Refresh</value>
-  </data>
-  <data name="RegisterYourProduct.ToolTip" xml:space="preserve">
-    <value>Register your product</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RPARobot_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Config\RPARobot.settings;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Search.HintText" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="UserSettings.ToolTip" xml:space="preserve">
-    <value>User settings</value>
   </data>
   <data name="verify_public_rsa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key\verify.public.rsa.pem;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

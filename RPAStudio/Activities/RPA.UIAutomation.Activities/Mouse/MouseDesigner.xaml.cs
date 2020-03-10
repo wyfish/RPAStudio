@@ -34,8 +34,8 @@ namespace RPA.UIAutomation.Activities.Mouse
 
             var screenshotsPath = uiElement.CaptureInformativeScreenshotToFile();
             setPropertyValue("SourceImgPath", screenshotsPath);
-            setPropertyValue("Name", new InArgument<string>(uiElement.Name));
             setPropertyValue("AutomationId", new InArgument<string>(uiElement.AutomationId));
+            setPropertyValue("Name", new InArgument<string>(uiElement.Name));
             setPropertyValue("Selector", new InArgument<string>(uiElement.Selector));
             grid1.Visibility = System.Windows.Visibility.Hidden;
             setPropertyValue("visibility", System.Windows.Visibility.Visible);

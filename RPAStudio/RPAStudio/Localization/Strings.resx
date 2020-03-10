@@ -172,7 +172,7 @@
     <value>Error</value>
   </data>
   <data name="Error_AlreadyRunning" xml:space="preserve">
-    <value>The program is already running</value>
+    <value>The program is already running!</value>
   </data>
   <data name="Error_CallDeveloper" xml:space="preserve">
     <value>An exception occurred during the program operation, please contact the software developer!</value>
@@ -521,9 +521,6 @@
   </data>
   <data name="msgPackageSourcePathInvalid" xml:space="preserve">
     <value>The package source address is invalid!</value>
-  </data>
-  <data name="msgRequireAcceptLicense" xml:space="preserve">
-    <value>The package requires you to accept its license terms before installation. Are you sure?</value>
   </data>
   <data name="msgProjectSuccessflyReleased" xml:space="preserve">
     <value>The project was successfully released.  {3}Name: {0}{3} Version: {1}{3} Location: {2}{3}</value>

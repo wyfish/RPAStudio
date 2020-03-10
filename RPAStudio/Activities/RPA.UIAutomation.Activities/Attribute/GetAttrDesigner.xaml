@@ -59,11 +59,12 @@
                     </Button>
                 </Grid>
             </Grid>
-            <sapv:ExpressionTextBox x:Uid="AttributeNameToGet"
+            <!--要检索的属性的名称-->
+            <sapv:ExpressionTextBox
                 x:Name="expressTextBox"
                 Expression="{Binding Path=ModelItem.AttrName, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"
-                HintText="要检索的属性的名称"
+                HintText="{x:Static lclz:Resources.AttributeNameToGet}"
                 OwnerActivity="{Binding Path=ModelItem}"
                 Margin="0,25,19,0"
                 Grid.Row="1"

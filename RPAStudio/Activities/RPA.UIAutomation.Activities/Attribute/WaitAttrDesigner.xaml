@@ -27,11 +27,12 @@
 
     <pslc:CollapsableActivity >
         <Grid Height="80" >
-            <sapv:ExpressionTextBox x:Uid="PropertyNameToWait"
+            <!--要等待的属性的名称-->
+            <sapv:ExpressionTextBox
                 x:Name="expressTextBox"
                 Expression="{Binding Path=ModelItem.Item, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"
-                HintText="要等待的属性的名称"
+                HintText="{x:Static lclz:Resources.PropertyNameToWait}"
                 OwnerActivity="{Binding Path=ModelItem}"
                 Margin="0,10,25,40"
                 MaxLines="1" RenderTransformOrigin="0.5,0.5" Height="Auto" HorizontalAlignment="Right" Width="240" />
@@ -43,10 +44,11 @@
                       SelectionChanged="comboBox_SelectionChanged"
                       HorizontalAlignment="Left" Margin="245,10,0,0"
                       VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.27,0" Height="30"/>
-            <sapv:ExpressionTextBox x:Uid="AttributeToExpect"
+            <!--指定属性的预期值-->
+            <sapv:ExpressionTextBox
                 Expression="{Binding Path=ModelItem.Value, Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}, ConverterParameter=In }"
                 ExpressionType="sys:String"
-                HintText="指定属性的预期值"
+                HintText="{x:Static lclz:Resources.AttributeToExpect}"
                 OwnerActivity="{Binding Path=ModelItem}"
                 Margin="0,50,0,0"
                 Grid.Row="0"

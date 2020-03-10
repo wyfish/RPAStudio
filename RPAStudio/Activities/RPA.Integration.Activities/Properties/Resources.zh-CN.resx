@@ -613,7 +613,7 @@
     <value>HTML格式</value>
   </data>
   <data name="Description56" xml:space="preserve">
-    <value> 指定邮件正文是否以HTML格式编写</value>
+    <value>指定邮件正文是否以HTML格式编写</value>
   </data>
   <data name="Category21" xml:space="preserve">
     <value>附件</value>
@@ -655,7 +655,7 @@
     <value>超时时间(毫秒)</value>
   </data>
   <data name="Description62" xml:space="preserve">
-    <value> 指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）</value>
+    <value>指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）</value>
   </data>
   <data name="DisplayName97" xml:space="preserve">
     <value>获取邮件个数</value>

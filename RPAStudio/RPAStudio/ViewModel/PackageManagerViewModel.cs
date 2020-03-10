@@ -1856,7 +1856,7 @@ namespace RPAStudio.ViewModel
                         {
                             //确定接收许可证吗？
                             // 该程序包要求你在安装前接受其许可证条款，确定接受吗？
-                            var ret = MessageBox.Show(m_view, ResxIF.GetString("msgRequireAcceptLicense"), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                            var ret = MessageBox.Show(m_view, ResxIF.GetString("AcceptLicenseConfirmation"), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                             if (ret != MessageBoxResult.Yes)
                             {
                                 return;

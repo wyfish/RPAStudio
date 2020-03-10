@@ -603,22 +603,22 @@
   <data name="TapScreen" xml:space="preserve">
     <value>Indicate on screen</value>
   </data>
-  <data name="AttributeNameToGet.HintText" xml:space="preserve">
+  <data name="AttributeNameToGet" xml:space="preserve">
     <value>The name of the attribute to retrieve</value>
   </data>
-  <data name="AttributeToExpect.HintText" xml:space="preserve">
+  <data name="AttributeToExpect" xml:space="preserve">
     <value>Expected value of the specified attribute</value>
   </data>
-  <data name="ChangeHTMLAttribute.HintText" xml:space="preserve">
+  <data name="ChangeHTMLAttribute" xml:space="preserve">
     <value>The name of the HTML attribute to change</value>
   </data>
-  <data name="PropertyNameToWait.HintText" xml:space="preserve">
+  <data name="PropertyNameToWait" xml:space="preserve">
     <value>The name of the property to wait for</value>
   </data>
-  <data name="SetAttributeValue.HintText" xml:space="preserve">
+  <data name="SetAttributeValue" xml:space="preserve">
     <value>The value to be set to the specified attribute. Only string variables are supported</value>
   </data>
-  <data name="SpecifyTheURL.HintText" xml:space="preserve">
+  <data name="SpecifyTheURL" xml:space="preserve">
     <value>Specify the URL opened in the browser</value>
   </data>
   <data name="Category12" xml:space="preserve">
@@ -845,5 +845,59 @@
   </data>
   <data name="ResultInformation" xml:space="preserve">
     <value>Capture Area : x={0}, y={1}, w={2}, h={3}, Matched : {4}, Matched Level : {5}</value>
+  </data>
+  <data name="msgNoElementFound" xml:space="preserve">
+    <value>No element found</value>
+  </data>
+  <data name="msgErrorOccurred" xml:space="preserve">
+    <value>Error Occurred</value>
+  </data>
+  <data name="Category13" xml:space="preserve">
+    <value>Input Option</value>
+  </data>
+  <data name="DisplayName83" xml:space="preserve">
+    <value>Mouse operation at runtime</value>
+  </data>
+  <data name="DisplayName84" xml:space="preserve">
+    <value>Click offset before input</value>
+  </data>
+  <data name="DisplayName85" xml:space="preserve">
+    <value>Move Offset X</value>
+  </data>
+  <data name="DisplayName86" xml:space="preserve">
+    <value>Move Offset Y</value>
+  </data>
+  <data name="DisplayName87" xml:space="preserve">
+    <value>Click Offset Point</value>
+  </data>
+  <data name="Description132" xml:space="preserve">
+    <value>Enter the Window Title to recognize the element by AutomationId or Name.  * Before and after is a wildcard.</value>
+  </data>
+  <data name="Description133" xml:space="preserve">
+    <value>AutomationId property of the element</value>
+  </data>
+  <data name="Description134" xml:space="preserve">
+    <value>Name property of the element</value>
+  </data>
+  <data name="Description135" xml:space="preserve">
+    <value>When the mouse operation at the time of execution is True, the keyboard operation is performed after clicking the X / Y coordinates.</value>
+  </data>
+  <data name="Description136" xml:space="preserve">
+    <value>If coordinate point is used but True, X coordinate for mouse operation</value>
+  </data>
+  <data name="Description137" xml:space="preserve">
+    <value>If coordinate point is used but True, Y coordinate for mouse operation</value>
+  </data>
+  <data name="Description138" xml:space="preserve">
+    <value>Specify whether to perform the specified mouse operation before keyboard input</value>
+  </data>
+  <data name="Description139" xml:space="preserve">
+    <value>Perform mouse operation by moving the offset from the center of the element</value>
+  </data>
+  <data name="Description140" xml:space="preserve">
+    <value>The number of pixels on the X axis to shift from the center of the element</value>
+  </data>
+  <data name="Description141" xml:space="preserve">
+    <value>The number of pixels on the Y axis to shift from the center of the element</value>
   </data>
 </root>

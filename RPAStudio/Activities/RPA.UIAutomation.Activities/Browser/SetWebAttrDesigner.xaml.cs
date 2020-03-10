@@ -16,7 +16,6 @@ namespace RPA.UIAutomation.Activities.Browser
         public SetWebAttrDesigner()
         {
             InitializeComponent();
-            Net.Surviveplus.Localization.WpfLocalization.ApplyResources(this, Properties.Resources.ResourceManager);
         }
 
         private void meauItemClickOne(object sender, RoutedEventArgs e)
