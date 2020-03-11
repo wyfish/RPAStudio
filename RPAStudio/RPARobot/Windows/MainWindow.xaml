@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPARobot.Windows"
-        xmlns:localization="clr-namespace:RPARobot.Localization"
+        xmlns:lclz="clr-namespace:RPARobot.Localization"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:controls="clr-namespace:HighlightableTextBlock;assembly=HighlightableTextBlock"
@@ -13,7 +13,7 @@
         mc:Ignorable="d"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         MinWidth="300" MinHeight="400"
-        Title="{x:Static localization:Strings.RPARobotTitle}" Height="600" Width="800" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+        Title="{x:Static lclz:Strings.RPARobotTitle}" Height="600" Width="800" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -39,31 +39,38 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <ToolBar>
-                <Button x:Uid="Refresh" ToolTip="刷新" Command="{Binding RefreshCommand}">
+                <!--刷新-->
+                <Button ToolTip="{x:Static lclz:Strings.RefreshToolTip}" Command="{Binding RefreshCommand}">
                     <Image Source="/Resources/Image/Main/Refresh.png" />
                 </Button>
-                <Button x:Uid="UserSettings" ToolTip="用户设置" Command="{Binding UserPreferencesCommand}">
+                <!--用户设置-->
+                <Button ToolTip="{x:Static lclz:Strings.UserSettings}" Command="{Binding UserPreferencesCommand}">
                     <Image Source="/Resources/Image/Main/settings.png" />
                 </Button>
-                <Button ToolTip="浏览录像" Command="{Binding ViewScreenRecordersCommand}">
+                <!--浏览录像-->
+                <Button ToolTip="{x:Static lclz:Strings.BrowseVideos}" Command="{Binding ViewScreenRecordersCommand}">
                     <Image Source="/Resources/Image/Main/screen-recorder.png" />
                 </Button>
-                <Button x:Uid="BrowseLogs" ToolTip="浏览日志" Command="{Binding ViewLogsCommand}">
+                <!--浏览日志-->
+                <Button ToolTip="{x:Static lclz:Strings.BrowseLogsToolTip}" Command="{Binding ViewLogsCommand}">
                     <Image Source="/Resources/Image/Main/logs.png" />
                 </Button>
                 <Separator Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" />
-                <Button x:Uid="RegisterYourProduct" ToolTip="注册产品" Command="{Binding RegisterProductCommand}" Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
+                <!--注册产品-->
+                <Button ToolTip="{x:Static lclz:Strings.RegisterYourProduct}" Command="{Binding RegisterProductCommand}" Visibility="{Binding IsEnableAuthorizationCheck,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
                     <Image Source="/Resources/Image/Main/register.png" />
                 </Button>
 
                 <Separator />
-                <Button ToolTip="关于产品" Command="{Binding AboutProductCommand}">
+                <!--关于产品-->
+                <Button ToolTip="{x:Static lclz:Strings.AboutProducts}" Command="{Binding AboutProductCommand}">
                     <Image Source="/Resources/Image/Main/about.png" />
                 </Button>
             </ToolBar>
         </Grid>
         <Grid Grid.Row="1" Focusable="True" >
-            <uc:SearchTextBoxControl x:Uid="Search" HintText="搜索" SearchText="{Binding SearchText}" />
+            <!--搜索-->
+            <uc:SearchTextBoxControl HintText="{x:Static lclz:Strings.SearchHintText}" SearchText="{Binding SearchText}" />
         </Grid>
 
         <Grid Grid.Row="2" Visibility="{Binding IsWorkflowRunning,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
@@ -80,13 +87,13 @@
                     <TextBlock ToolTip="{Binding WorkflowRunningStatus}"  Text="{Binding WorkflowRunningStatus}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="10,0" Foreground="#ff5c17" />
                 </Grid>
                 <Grid Grid.Column="2">
-                    <libs:ColorButtonThreeState Width="25" Height="25" ToolTip="停止" ToolTipService.InitialShowDelay="500" Command="{Binding StopCommand}" def_img="pack://application:,,,/Resources/Image/Main/stop.png" />
+                    <libs:ColorButtonThreeState Width="25" Height="25" ToolTip="{x:Static lclz:Strings.StopText}" ToolTipService.InitialShowDelay="500" Command="{Binding StopCommand}" def_img="pack://application:,,,/Resources/Image/Main/stop.png" />
                 </Grid>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="3" Background="White">
-            <TextBlock Text="{x:Static localization:Strings.AvailableProcessesListText}" FontSize="15" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" />
+            <TextBlock Text="{x:Static lclz:Strings.AvailableProcessesListText}" FontSize="15" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" />
         </Grid>
 
         <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
@@ -155,7 +162,7 @@
             </ListBox>
         </Grid>
         <Grid Grid.Row="4" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-            <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060" Text="{x:Static localization:Strings.SearchResultEmptyText}"/>
+            <TextBlock FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060" Text="{x:Static lclz:Strings.SearchResultEmptyText}"/>
         </Grid>
 
 

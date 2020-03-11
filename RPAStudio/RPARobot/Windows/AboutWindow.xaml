@@ -5,11 +5,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPARobot.Windows"
+        xmlns:lclz="clr-namespace:RPARobot.Localization"
         mc:Ignorable="d"
         DataContext="{Binding About, Source={StaticResource Locator}}"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
-        Title="关于" Height="133.851" Width="294.4" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="{x:Static lclz:Strings.AboutText}" Height="133.851" Width="294.4" Icon="/Resources/Ico/RPARobot.ico" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -24,15 +25,18 @@
     <Grid>
         <StackPanel Margin="10">
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontWeight="Bold">机器名：</TextBlock>
+                <!--机器名：-->
+                <TextBlock FontWeight="Bold" Text="{x:Static lclz:Strings.ComputerName}"/>
                 <TextBlock Text="{Binding MachineName}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock FontWeight="Bold">Ip地址：</TextBlock>
+                <!--Ip地址：-->
+                <TextBlock FontWeight="Bold" Text="{x:Static lclz:Strings.IPAddress}"/>
                 <TextBlock Text="{Binding IpAddress}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBlock FontWeight="Bold">版本号：</TextBlock>
+                <!--版本号：-->
+                <TextBlock FontWeight="Bold" Text="{x:Static lclz:Strings.VersionText}"/>
                 <TextBlock Text="{Binding ProgramVersion}" />
             </StackPanel>
         </StackPanel>

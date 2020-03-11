@@ -21,7 +21,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //セレクター
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
@@ -79,21 +79,31 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [DisplayName("Win")]
         public bool Win { get; set; }
 
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName83")] //运行时的鼠标操作 //Mouse operation at runtime //実行時のマウス操作
+        [Localize.LocalizedDescription("Description138")] //キーボード入力の前に、指定のマウス操作を行うかどうかを指定します
+        public bool isRunClick { get; set; }
+
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public Int32 ClickType { get; set; }
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public Int32 MouseButton { get; set; }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public InArgument<Int32> offsetX { get; set; }
-        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public InArgument<Int32> offsetY { get; set; }
+        [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
+        [Localize.LocalizedDescription("Description135")] //実行時のマウス操作がTrueの場合、要素の座標ではなく入力された座標をクリック後に入力します。
+        public bool usePoint { get; set; }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
-        public bool usePoint { get; set; }
+        [Localize.LocalizedDisplayName("DisplayName66")] // X Coordinate
+        [Localize.LocalizedDescription("Description136")] //座標点を使用するがTrueの場合、マウス操作を行うX座標
+        public InArgument<Int32> offsetX { get; set; }
+
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public bool isRunClick { get; set; }
+        [Localize.LocalizedDisplayName("DisplayName67")] // Y Coordinate
+        [Localize.LocalizedDescription("Description137")] //座標点を使用するがTrueの場合、マウス操作を行うY座標
+        public InArgument<Int32> offsetY { get; set; }
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
@@ -165,25 +175,31 @@ namespace RPA.UIAutomation.Activities.Keyboard
                     element = UiElement.FromSelector(selStr);
                 }
 
-                Int32 pointX = 0;
-                Int32 pointY = 0;
-                if (usePoint)
+                //Int32 pointX = 0;
+                //Int32 pointY = 0;
+                //if (usePoint)
+                //{
+                //    pointX = offsetX.Get(context);
+                //    pointY = offsetY.Get(context);
+                //}
+                //else
+                //{
+                //    if (element != null)
+                //    {
+                //        pointX = element.GetClickablePoint().X;
+                //        pointY = element.GetClickablePoint().Y;
+                //        element.SetForeground();
+                //    }
+                //}
+                var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element);
+                if (point.X == -1 && point.Y == -1)
                 {
-                    pointX = offsetX.Get(context);
-                    pointY = offsetY.Get(context);
-                }
-                else
-                {
-                    if (element != null)
-                    {
-                        pointX = element.GetClickablePoint().X;
-                        pointY = element.GetClickablePoint().Y;
-                        element.SetForeground();
-                    }
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, Localize.LocalizedResources.GetString("msgNoElementFound"));
+                    return;
                 }
                 if (isRunClick)
                 {
-                    UiElement.MouseMoveTo(pointX, pointY);
+                    UiElement.MouseMoveTo(point);
                     UiElement.MouseAction((Plugins.Shared.Library.UiAutomation.ClickType)ClickType, (Plugins.Shared.Library.UiAutomation.MouseButton)MouseButton);
                 }
                 DealBaseKeyBordPress();
@@ -196,15 +212,7 @@ namespace RPA.UIAutomation.Activities.Keyboard
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", e.Message);
-                if (ContinueOnError.Get(context))
-                {
-                    return;
-                }
-                else
-                {
-                    throw new NotImplementedException(e.Message);
-                }
+                UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, e.Message);
             }
         } 
     }

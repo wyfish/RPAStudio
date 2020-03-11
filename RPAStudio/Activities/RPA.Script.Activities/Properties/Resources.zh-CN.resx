@@ -117,32 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BrowseLogs.ToolTip" xml:space="preserve">
-    <value>ログを表示</value>
+  <data name="Description1" xml:space="preserve">
+    <value>Python脚本文件路径，必须用双引号括起来</value>
   </data>
-  <data name="ExportMachineCode.ToolTip" xml:space="preserve">
-    <value>マシンコードファイルをエクスポートし、許可された関係者に送信して許可を完了してください</value>
+  <data name="Description2" xml:space="preserve">
+    <value>Python脚本文件执行时的工作目录，默认为当前项目目录</value>
   </data>
-  <data name="ImportMachineCode.ToolTip" xml:space="preserve">
-    <value>認証コードファイルを選択してインポートを完了するか、認証コードファイルを現在のウィンドウに直接ドラッグします</value>
+  <data name="Description3" xml:space="preserve">
+    <value>指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。</value>
   </data>
-  <data name="Refresh.ToolTip" xml:space="preserve">
-    <value>更新</value>
+  <data name="Description4" xml:space="preserve">
+    <value>Python脚本代码执行时的工作目录，默认为当前项目目录</value>
   </data>
-  <data name="RegisterYourProduct.ToolTip" xml:space="preserve">
-    <value>製品を登録する</value>
+  <data name="SetWorkingDirectory" xml:space="preserve">
+    <value>设置工作目录</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RPARobot_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Config\RPARobot.settings;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="EditParameters" xml:space="preserve">
+    <value>编辑参数</value>
   </data>
-  <data name="Search.HintText" xml:space="preserve">
-    <value>検索</value>
+  <data name="SetWorkingDirectoryTip" xml:space="preserve">
+    <value>默认工作目录为当前项目目录</value>
   </data>
-  <data name="UserSettings.ToolTip" xml:space="preserve">
-    <value>ユーザー設定</value>
+  <data name="EditCode" xml:space="preserve">
+    <value>编辑代码</value>
   </data>
-  <data name="verify.public.rsa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key\verify.public.rsa.pem;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="PythonPathHintText" xml:space="preserve">
+    <value>Python脚本文件路径，必须用双引号括起来</value>
   </data>
 </root>

@@ -24,7 +24,7 @@ namespace RPA.UIAutomation.Activities.Control
         [OverloadGroup("G1")]
         [RequiredArgument]
         [Browsable(true)]
-        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //セレクター
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
 
@@ -100,15 +100,7 @@ namespace RPA.UIAutomation.Activities.Control
                 }
                 else
                 {
-                    SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "查找不到元素");
-                    if (ContinueOnError.Get(context))
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        throw new NotImplementedException("查找不到元素");
-                    }
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, Localize.LocalizedResources.GetString("msgNoElementFound"));
                 }
             }
             catch (Exception e)

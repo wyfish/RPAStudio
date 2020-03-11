@@ -61,25 +61,25 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要检索的属性的名称 に類似しているローカライズされた文字列を検索します。
+        ///   The name of the attribute to retrieve に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string AttributeNameToGet_HintText {
+        public static string AttributeNameToGet {
             get {
-                return ResourceManager.GetString("AttributeNameToGet.HintText", resourceCulture);
+                return ResourceManager.GetString("AttributeNameToGet", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   指定属性的预期值 に類似しているローカライズされた文字列を検索します。
+        ///   Expected value of the specified attribute に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string AttributeToExpect_HintText {
+        public static string AttributeToExpect {
             get {
-                return ResourceManager.GetString("AttributeToExpect.HintText", resourceCulture);
+                return ResourceManager.GetString("AttributeToExpect", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   公共 に類似しているローカライズされた文字列を検索します。
+        ///   Common に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category1 {
             get {
@@ -88,7 +88,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   鼠标选项 に類似しているローカライズされた文字列を検索します。
+        ///   Mouse options に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category10 {
             get {
@@ -97,7 +97,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI元素矩阵 に類似しているローカライズされた文字列を検索します。
+        ///   UI Element Rectangle に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category11 {
             get {
@@ -106,7 +106,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   灰度方式 に類似しているローカライズされた文字列を検索します。
+        ///   Grayscale mode に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category12 {
             get {
@@ -115,7 +115,16 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI对象 に類似しているローカライズされた文字列を検索します。
+        ///   Input Option に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Category13 {
+            get {
+                return ResourceManager.GetString("Category13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   UI Object に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category2 {
             get {
@@ -124,7 +133,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入 に類似しているローカライズされた文字列を検索します。
+        ///   Input に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category3 {
             get {
@@ -133,7 +142,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输出 に類似しているローカライズされた文字列を検索します。
+        ///   Output に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category4 {
             get {
@@ -142,7 +151,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   选项 に類似しているローカライズされた文字列を検索します。
+        ///   Option に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category5 {
             get {
@@ -151,7 +160,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI元素剪切矩阵 に類似しているローカライズされた文字列を検索します。
+        ///   UI Element clipping matrix に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category6 {
             get {
@@ -160,7 +169,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   锚点边界框 に類似しているローカライズされた文字列を検索します。
+        ///   Anchor boundary box に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category7 {
             get {
@@ -169,7 +178,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   目标边界框 に類似しているローカライズされた文字列を検索します。
+        ///   Target bounding box に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category8 {
             get {
@@ -178,7 +187,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   按键选项 に類似しているローカライズされた文字列を検索します。
+        ///   Key Options に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Category9 {
             get {
@@ -187,16 +196,16 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要更改的HTML属性的名称 に類似しているローカライズされた文字列を検索します。
+        ///   The name of the HTML attribute to change に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string ChangeHTMLAttribute_HintText {
+        public static string ChangeHTMLAttribute {
             get {
-                return ResourceManager.GetString("ChangeHTMLAttribute.HintText", resourceCulture);
+                return ResourceManager.GetString("ChangeHTMLAttribute", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   指定即使活动引发错误，自动化是否仍应继续 に類似しているローカライズされた文字列を検索します。
+        ///   Specifies whether automation should continue even if the activity raises an error に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description1 {
             get {
@@ -205,7 +214,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   结果截图。该字段仅支持图像变量 に類似しているローカライズされた文字列を検索します。
+        ///   Screenshot of the results.  This field only supports image variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description10 {
             get {
@@ -214,7 +223,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   词法分析结果 に類似しているローカライズされた文字列を検索します。
+        ///   Lexical analysis results に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description100 {
             get {
@@ -223,7 +232,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   词语分析结果 に類似しているローカライズされた文字列を検索します。
+        ///   Word analysis results に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description101 {
             get {
@@ -232,7 +241,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   字符串 に類似しているローカライズされた文字列を検索します。
+        ///   Character string に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description102 {
             get {
@@ -241,7 +250,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   标题 に類似しているローカライズされた文字列を検索します。
+        ///   Title に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description103 {
             get {
@@ -250,7 +259,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   摘要结果的最大长度。 に類似しているローカライズされた文字列を検索します。
+        ///   The maximum length of the summary result. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description104 {
             get {
@@ -259,7 +268,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输出指定长度的新闻摘要。 に類似しているローカライズされた文字列を検索します。
+        ///   Output a news summary of the specified length. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description105 {
             get {
@@ -268,7 +277,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   评论内容，最大10240字节。 に類似しているローカライズされた文字列を検索します。
+        ///   Comment content, up to 10240 bytes. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description106 {
             get {
@@ -277,7 +286,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   两个文本的相似度结果。 に類似しているローカライズされた文字列を検索します。
+        ///   The similarity results of two texts. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description107 {
             get {
@@ -286,7 +295,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   1:酒店;2:KTV;3:丽人;4:美食餐饮;5:旅游;6:健康;7:教育;8:商业;9:房产;10:汽车;11:生活;12:购物;13:3C，默认为4（餐饮美食）。 に類似しているローカライズされた文字列を検索します。
+        ///   1: Hotel; 2: KTV; 3: beauty; 4: Food and beverage; 5: tourism; 6: health; 7: education; 8: business; 9: real estate; 10: car; 11: life; 12: shopping; 13:3c, default is 4 (food and beverage). に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description108 {
             get {
@@ -295,7 +304,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   模型选择,默认值为yes(web模型)；no为query模型。 に類似しているローカライズされた文字列を検索します。
+        ///   Model selection, the default value is yes (web model); no is query model. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description109 {
             get {
@@ -304,7 +313,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定等待活动运行的时间量（以毫秒为单位）。默认值为10000毫秒（10秒） に類似しているローカライズされた文字列を検索します。
+        ///   Specifies the amount of time, in milliseconds, to wait for an activity to run.  The default is 10000 milliseconds (10 seconds) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description11 {
             get {
@@ -313,7 +322,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   文本中的依存句法结构信息。 に類似しているローカライズされた文字列を検索します。
+        ///   Dependency syntactic structure information in text. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description110 {
             get {
@@ -322,7 +331,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   待纠错文本，输入限制511字节。 に類似しているローカライズされた文字列を検索します。
+        ///   Text to be corrected, input limit 511 bytes. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description111 {
             get {
@@ -331,7 +340,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   提示错误并给出正确的文本结果。 に類似しているローカライズされた文字列を検索します。
+        ///   Prompt for errors and give correct text results. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description112 {
             get {
@@ -340,7 +349,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   待比较文本，最大512字节。 に類似しているローカライズされた文字列を検索します。
+        ///   Text to be compared, 512 bytes maximum. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description113 {
             get {
@@ -349,7 +358,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   两个文本的相似度结果。 に類似しているローカライズされた文字列を検索します。
+        ///   The similarity results of two texts. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description114 {
             get {
@@ -358,7 +367,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   默认为BOW。 に類似しているローカライズされた文字列を検索します。
+        ///   The default is bow. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description115 {
             get {
@@ -367,7 +376,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   词向量查询结果表示。 に類似しているローカライズされた文字列を検索します。
+        ///   Word vector query result representation. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description116 {
             get {
@@ -376,7 +385,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入词，最大64字节 に類似しているローカライズされた文字列を検索します。
+        ///   Input word, 64 bytes maximum に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description117 {
             get {
@@ -385,7 +394,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   两个词的相似度结果。 に類似しているローカライズされた文字列を検索します。
+        ///   The similarity results of two words. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description118 {
             get {
@@ -394,7 +403,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   您的AppCode。 に類似しているローカライズされた文字列を検索します。
+        ///   Your AppCode. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description119 {
             get {
@@ -403,7 +412,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///    要等待的属性的名称。预定义的属性列表可用作活动中的下拉列表。该字段仅支持String变量 に類似しているローカライズされた文字列を検索します。
+        ///   The name of the property to wait for.  A predefined list of attributes can be used as a drop-down list in the activity.  This field only supports String variables. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description12 {
             get {
@@ -412,7 +421,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   是否需要识别结果中每一行的置信度，默认为false。 に類似しているローカライズされた文字列を検索します。
+        ///   Whether the confidence level of each row in the result needs to be recognized is false by default. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description120 {
             get {
@@ -421,7 +430,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   图片识别结果。 に類似しているローカライズされた文字列を検索します。
+        ///   Image recognition results. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description121 {
             get {
@@ -430,7 +439,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   是否检测图像朝向，默认不检测。朝向是指输入图像是正常方向还是逆时针旋转90/180/270度。 に類似しているローカライズされた文字列を検索します。
+        ///   Whether to detect the image orientation is not detected by default. Orientation refers to whether the input image rotates 90 / 180 / 270 degrees in normal direction or anticlockwise. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description122 {
             get {
@@ -439,7 +448,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   是否返回识别结果中每一行的置信度。 に類似しているローカライズされた文字列を検索します。
+        ///   Whether to return the confidence level of each line in the recognition result. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description123 {
             get {
@@ -448,7 +457,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   识别语言类型，默认为CHN_ENG。 に類似しているローカライズされた文字列を検索します。
+        ///   Identify the language type, the default is CHN_ENG. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description124 {
             get {
@@ -457,7 +466,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   是否定位单字符位置，默认为big（不定位单字符位置）。 に類似しているローカライズされた文字列を検索します。
+        ///   Whether to locate the single character position. The default is big (not to locate the single character position). に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description125 {
             get {
@@ -466,7 +475,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   是否检测语言，默认不检测。当前支持（中文、英语、日语、韩语） に類似しているローカライズされた文字列を検索します。
+        ///   Whether to detect the language. It is not detected by default. Currently supported (Chinese, English, Japanese, Korean) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description126 {
             get {
@@ -475,7 +484,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   是否返回文字外接多边形顶点位置，不支持单字位置，默认为false。 に類似しているローカライズされた文字列を検索します。
+        ///   Whether to return to the vertex position of the text external polygon. Single word position is not supported. The default is false. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description127 {
             get {
@@ -484,7 +493,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   该字段仅支持Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   This field only supports browser variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description128 {
             get {
@@ -493,7 +502,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   标签页页面顺序 に類似しているローカライズされた文字列を検索します。
+        ///   Tab page order に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description129 {
             get {
@@ -502,7 +511,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定属性的预期值。该字段仅支持String变量 に類似しているローカライズされた文字列を検索します。
+        ///   Specifies the expected value of the attribute.  This field only supports String variables. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description13 {
             get {
@@ -511,7 +520,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   标签页标签/地址关键字 に類似しているローカライズされた文字列を検索します。
+        ///   Tab label/address key に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description130 {
             get {
@@ -520,7 +529,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要关闭的浏览器页面。该字段仅支持Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   Browser page to close. This field only supports browser variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description131 {
             get {
@@ -529,7 +538,79 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要附加的现有浏览器变量 に類似しているローカライズされた文字列を検索します。
+        ///   Enter the Window Title to recognize the element by AutomationId or Name.  * Before and after is a wildcard. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description132 {
+            get {
+                return ResourceManager.GetString("Description132", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   AutomationId property of the element に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description133 {
+            get {
+                return ResourceManager.GetString("Description133", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Name property of the element に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description134 {
+            get {
+                return ResourceManager.GetString("Description134", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   When the mouse operation at the time of execution is True, the keyboard operation is performed after clicking the X / Y coordinates. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description135 {
+            get {
+                return ResourceManager.GetString("Description135", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If coordinate point is used but True, X coordinate for mouse operation に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description136 {
+            get {
+                return ResourceManager.GetString("Description136", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If coordinate point is used but True, Y coordinate for mouse operation に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description137 {
+            get {
+                return ResourceManager.GetString("Description137", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Specify whether to perform the specified mouse operation before keyboard input に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description138 {
+            get {
+                return ResourceManager.GetString("Description138", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Perform mouse operation by moving the offset from the center of the element に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description139 {
+            get {
+                return ResourceManager.GetString("Description139", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Existing browser variables to attach に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description14 {
             get {
@@ -538,7 +619,25 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒） に類似しているローカライズされた文字列を検索します。
+        ///   The number of pixels on the X axis to shift from the center of the element に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description140 {
+            get {
+                return ResourceManager.GetString("Description140", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The number of pixels on the Y axis to shift from the center of the element に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Description141 {
+            get {
+                return ResourceManager.GetString("Description141", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description15 {
             get {
@@ -547,7 +646,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   活动返回的Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   The Browser variable returned by the activity に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description16 {
             get {
@@ -556,7 +655,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   选择要使用的浏览器类型。可以使用以下选项：IE，Firefox，Chrome に類似しているローカライズされた文字列を検索します。
+        ///   Choose the type of browser you want to use.  The following options are available: IE, Firefox, Chrome に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description17 {
             get {
@@ -565,7 +664,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要关闭的浏览器页面。该字段仅支持Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   The browser page to close.  This field only supports the Browser variable. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description18 {
             get {
@@ -574,7 +673,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   执行活动后的延迟时间(以毫秒为单位),默认时间为3000毫秒 に類似しているローカライズされた文字列を検索します。
+        ///   The delay (in milliseconds) after the activity is executed. The default time is 3000 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description19 {
             get {
@@ -583,7 +682,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   用于在执行活动时查找特定UI元素的Text属性 に類似しているローカライズされた文字列を検索します。
+        ///   The Text property used to find specific UI elements when performing activities に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description2 {
             get {
@@ -592,7 +691,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是3000毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay (in milliseconds) before the activity begins any operation, the default amount of time is 3000 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description20 {
             get {
@@ -601,7 +700,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要运行的JavaScript代码。您可以在此处将其作为字符串写入，或添加包含要执行的代码的.js文件的完整路径 に類似しているローカライズされた文字列を検索します。
+        ///   The JavaScript code to run.  You can write it here as a string or add the full path to the .js file containing the code to execute. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description21 {
             get {
@@ -610,7 +709,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入JavaScript代码的数据，作为字符串或字符串变量 に類似しているローカライズされた文字列を検索します。
+        ///   Enter the data of the JavaScript code as a string or string variable に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description22 {
             get {
@@ -619,7 +718,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   从JavaScript代码返回的字符串结果 に類似しているローカライズされた文字列を検索します。
+        ///   String result returned from JavaScript code に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description23 {
             get {
@@ -628,7 +727,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要导航的浏览器页面。该字段仅支持Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   The browser page to navigate.  This field only supports the Browser variable. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description24 {
             get {
@@ -637,7 +736,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要显示的网页的位置 に類似しているローカライズされた文字列を検索します。
+        ///   The location of the page to display に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description25 {
             get {
@@ -646,7 +745,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   新浏览器标签页面。该字段仅支持Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   New browser tab page.  This field only supports the Browser variable. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description26 {
             get {
@@ -655,7 +754,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要在指定浏览器中打开的URL に類似しているローカライズされた文字列を検索します。
+        ///   The URL to open in the specified browser に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description27 {
             get {
@@ -664,7 +763,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定浏览器响应超时时间(毫秒) に類似しているローカライズされた文字列を検索します。
+        ///   Specify browser response timeout (ms) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description28 {
             get {
@@ -673,7 +772,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   存储浏览器的变量。该字段仅接受Browser变量 に類似しているローカライズされた文字列を検索します。
+        ///   Store the variables of the browser.  This field only accepts the Browser variable に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description29 {
             get {
@@ -682,7 +781,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入UIElement に類似しているローカライズされた文字列を検索します。
+        ///   Enter UI Element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description3 {
             get {
@@ -691,7 +790,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   执行活动后的延迟时间(以毫秒为单位),默认时间为300毫秒 に類似しているローカライズされた文字列を検索します。
+        ///   The delay in milliseconds after the activity is executed. The default time is 300 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description30 {
             get {
@@ -700,7 +799,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是200毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay (in milliseconds) before the activity begins any operation, the default amount of time is 200 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description31 {
             get {
@@ -709,7 +808,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要更改的HTML属性的名称 に類似しているローカライズされた文字列を検索します。
+        ///   The name of the HTML attribute to change に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description32 {
             get {
@@ -718,7 +817,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要设置为指定属性的值。仅支持字符串变量 に類似しているローカライズされた文字列を検索します。
+        ///   The value to be set to the specified property.  Only string variables are supported に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description33 {
             get {
@@ -727,7 +826,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是300毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay (in milliseconds) before the activity begins any operation, the default amount of time is 300 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description34 {
             get {
@@ -736,7 +835,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   活动开始执行任何操作之前的延迟时间(以毫秒为单位),默认的时间量是2000毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay (in milliseconds) before the activity begins any operation, the default amount of time is 2000 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description35 {
             get {
@@ -745,7 +844,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要写入UI元素的Text属性的字符串 に類似しているローカライズされた文字列を検索します。
+        ///   a string to write the Text property of the UI element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description36 {
             get {
@@ -754,7 +853,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指示元素是否存在。该字段只支持布尔变量 に類似しているローカライズされた文字列を検索します。
+        ///   Indicates if the element exists.  This field only supports Boolean variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description37 {
             get {
@@ -763,7 +862,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量 に類似しているローカライズされた文字列を検索します。
+        ///   UiElement variable.  This property cannot be used with the Selector property.  This field only supports UI Element variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description38 {
             get {
@@ -772,7 +871,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   在后续子活动中使用的UI元素 に類似しているローカライズされた文字列を検索します。
+        ///   UI Elements used in subsequent child activities に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description39 {
             get {
@@ -781,7 +880,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///    要检索的属性的名称。该字段仅支持字符串 に類似しているローカライズされた文字列を検索します。
+        ///   The name of the property to retrieve.  This field only supports strings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description4 {
             get {
@@ -790,7 +889,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定即使活动引发错误，自动化是否仍应继续,取值为（True或False） に類似しているローカライズされた文字列を検索します。
+        ///   Specifies whether automation should continue even if the activity raises an error, with a value of (True or False) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description40 {
             get {
@@ -799,7 +898,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   当此选项被选中，该活动将在指定活动结束前一直等待 に類似しているローカライズされた文字列を検索します。
+        ///   When this option is selected, the activity will wait until the end of the specified event に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description41 {
             get {
@@ -808,7 +907,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   当此选项被选中，即使ui元素仍然是活动的，该活动也只会等到ui元素从屏幕上消失 に類似しているローカライズされた文字列を検索します。
+        ///   When this option is selected, even if the ui element is still active, the activity will only wait until the ui element disappears from the screen. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description42 {
             get {
@@ -817,7 +916,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要关闭的窗口。该字段仅接受Window变量 に類似しているローカライズされた文字列を検索します。
+        ///   The window to close.  This field only accepts Window variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description43 {
             get {
@@ -826,7 +925,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   xml字符串指定集合中的所有UI对象应该满足的条件 に類似しているローカライズされた文字列を検索します。
+        ///   The xml string specifies the conditions that all UI Objects in the collection should satisfy. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description44 {
             get {
@@ -835,7 +934,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   所有ui子元素都将按照设置的过滤器和范围。此字段只支持IEnumerable&lt;UIElement&gt;变量 に類似しているローカライズされた文字列を検索します。
+        ///   All ui child elements will follow the set filter and scope.  This field only supports IEnumerable&lt;UIElement&gt; variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description45 {
             get {
@@ -844,7 +943,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   当此选项被选中，该活动将等待指定的ui元素成为活动 に類似しているローカライズされた文字列を検索します。
+        ///   When this option is selected, the activity will wait for the specified ui element to become active. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description46 {
             get {
@@ -853,7 +952,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   当此选项被选中，该活动将等待指定的ui元素成为可见 に類似しているローカライズされた文字列を検索します。
+        ///   When this option is selected, the activity will wait for the specified ui element to become visible. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description47 {
             get {
@@ -862,7 +961,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   找到的ui元素。此字段仅支持UIElement类型变量 に類似しているローカライズされた文字列を検索します。
+        ///   The UI Element found.  This field only supports UIElement type variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description48 {
             get {
@@ -871,7 +970,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   您正在寻找的相对ui元素。仅支持UIElement类型变量 に類似しているローカライズされた文字列を検索します。
+        ///   The relative UI Element you are looking for.  Only UIElement type variables are supported に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description49 {
             get {
@@ -880,7 +979,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定属性的值 に類似しているローカライズされた文字列を検索します。
+        ///   Specify the value of the attribute に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description5 {
             get {
@@ -889,7 +988,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定要在ui层次结构的哪个级别查找父节点 に類似しているローカライズされた文字列を検索します。
+        ///   Specify which level of the ui hierarchy to find the parent node に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description50 {
             get {
@@ -898,7 +997,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   元素的父节点。仅支持UIElement类型变量 に類似しているローカライズされた文字列を検索します。
+        ///   The parent of the element.  Only UIElement type variables are supported に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description51 {
             get {
@@ -907,7 +1006,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   当选中一个ui元素的时候，隐藏前一个窗口 に類似しているローカライズされた文字列を検索します。
+        ///   Hide the previous window when a ui element is selected に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description52 {
             get {
@@ -916,7 +1015,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   此选项允许在屏幕选中一块区域 に類似しているローカライズされた文字列を検索します。
+        ///   This option allows an area to be selected on the screen. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description53 {
             get {
@@ -925,7 +1024,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   选择指定ui元素 に類似しているローカライズされた文字列を検索します。
+        ///   Select the specified ui element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description54 {
             get {
@@ -934,7 +1033,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 に類似しているローカライズされた文字列を検索します。
+        ///   Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description55 {
             get {
@@ -943,7 +1042,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   执行活动后的延迟时间(以毫秒为单位)。默认时间为300毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay time, in milliseconds, after the activity is executed. The default time is 300 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description56 {
             get {
@@ -952,7 +1051,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为300毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay time, in milliseconds, before the deferred the activity is executed. The default time is 300 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description57 {
             get {
@@ -961,7 +1060,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入UIAutomationInfo に類似しているローカライズされた文字列を検索します。
+        ///   Enter UIAutomationInfo に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description58 {
             get {
@@ -970,7 +1069,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要单击的字符串 に類似しているローカライズされた文字列を検索します。
+        ///   The string to click に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description59 {
             get {
@@ -979,7 +1078,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   屏幕坐标中指定的UiElement的结果边界矩形 に類似しているローカライズされた文字列を検索します。
+        ///   Result boundary rectangle of UiElement specified in screen coordinates に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description6 {
             get {
@@ -988,7 +1087,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为200毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The time (in milliseconds) before the deferred activity begins any operation.  The default time is 200 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description60 {
             get {
@@ -997,7 +1096,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   如果文本字段中的字符串在指定的ui元素中出现多次，请在这里指定出现次数，而不是单击次数 に類似しているローカライズされた文字列を検索します。
+        ///   If the string in the text field appears multiple times in the specified ui element, specify the number of occurrences here instead of the number of clicks に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description61 {
             get {
@@ -1006,7 +1105,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   如果此选项被选中,所选文本的屏幕布局将保持不变 に類似しているローカライズされた文字列を検索します。
+        ///   If this option is checked, the screen layout of the selected text will remain unchanged に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description62 {
             get {
@@ -1015,7 +1114,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要单击的文本 に類似しているローカライズされた文字列を検索します。
+        ///   The text to click に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description63 {
             get {
@@ -1024,7 +1123,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   等待加载到下一页的时间量 に類似しているローカライズされた文字列を検索します。
+        ///   The amount of time to wait for loading to the next page に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description64 {
             get {
@@ -1033,7 +1132,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   可以抽取数据的最大值 に類似しているローカライズされた文字列を検索します。
+        ///   The maximum value of the data that can be extracted に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description65 {
             get {
@@ -1042,7 +1141,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   选择器标识用于导航到下一页的链接/按钮。应该相对于现有的uielement属性 に類似しているローカライズされた文字列を検索します。
+        ///   The selector identifies the link/button used to navigate to the next page.  Should be relative to the existing uielement attribute に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description66 {
             get {
@@ -1051,7 +1150,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   如果选中，单击用于导航到下一页的next link/按钮将通过向othe目标应用程序发送特定消息来执行。这种输入方法可以在后台工作，与大多数桌面应用程序兼容，但它不是最快的方法 に類似しているローカライズされた文字列を検索します。
+        ///   If checked, clicking the next link/ button for navigating to the next page will be performed by sending a specific message to the othe target application.  This input method works in the background and is compatible with most desktop applications, but it&apos;s not the fastest way に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description67 {
             get {
@@ -1060,7 +1159,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   如果选中，它将使用目标应用程序的技术模拟单击用于导航下一页的next链接/按钮。这种输入法是三种输入法中速度最快的一种，可以在后台工作 に類似しているローカライズされた文字列を検索します。
+        ///   If checked, it will use the technology simulation of the target application to click the next link/button used to navigate the next page.  This input method is the fastest of the three input methods and works in the background. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description68 {
             get {
@@ -1069,7 +1168,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   允许您定义要从指定的web页面提取哪些数据的xml字符串 に類似しているローカライズされた文字列を検索します。
+        ///   An xml string that allows you to define which data to extract from the specified web page に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description69 {
             get {
@@ -1078,7 +1177,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   扩展剪切区域的方向 に類似しているローカライズされた文字列を検索します。
+        ///   Extend the direction of the clipping region に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description7 {
             get {
@@ -1087,7 +1186,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   您要查找的字符串所在的ui元素。 に類似しているローカライズされた文字列を検索します。
+        ///   The ui element where the string you are looking for is located. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description70 {
             get {
@@ -1096,7 +1195,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   如果选中此复选框，则不提取指定ui元素上的字符串信息，默认情况下不选中此复选框 に類似しているローカライズされた文字列を検索します。
+        ///   If this check box is selected, the string information on the specified ui element is not extracted, and this check box is not selected by default. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description71 {
             get {
@@ -1105,7 +1204,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定用作字符串先锋的字符。如果字段为空，则使用所有已知的文本分隔符(空格、句号、逗号等) に類似しているローカライズされた文字列を検索します。
+        ///   Specifies the character to use as a string pioneer.  If the field is empty, all known text separators (spaces, periods, commas, etc.) are used に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description72 {
             get {
@@ -1114,7 +1213,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   在指定的ui元素中找到的每个单词的屏幕坐标 に類似しているローカライズされた文字列を検索します。
+        ///   Screen coordinates of each word found in the specified ui element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description73 {
             get {
@@ -1123,7 +1222,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入窗口标题 に類似しているローカライズされた文字列を検索します。
+        ///   Enter window title に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description74 {
             get {
@@ -1132,7 +1231,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输入窗口类名 に類似しているローカライズされた文字列を検索します。
+        ///   Enter window class name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description75 {
             get {
@@ -1141,7 +1240,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   存储窗口的变量。该字段仅接受Window变量 に類似しているローカライズされた文字列を検索します。
+        ///   The variable that stores the window.  This field only accepts Window variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description76 {
             get {
@@ -1150,7 +1249,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   找到的活动窗口。该字段仅支持Window变量。指定Window变量时，将忽略SearchScope和Selector属性。 に類似しているローカライズされた文字列を検索します。
+        ///   The active window found.  This field only supports Window variables.  The SearchScope and Selector properties are ignored when the Window variable is specified. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description77 {
             get {
@@ -1159,7 +1258,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要关闭的窗口句柄。 に類似しているローカライズされた文字列を検索します。
+        ///   The window handle to close. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description78 {
             get {
@@ -1168,7 +1267,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///    窗口的新高度，支持正负整数 に類似しているローカライズされた文字列を検索します。
+        ///   The new height of the window, supporting positive and negative integers に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description79 {
             get {
@@ -1177,7 +1276,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   使用另一个活动返回的UiElement变量。此属性不能与Selector属性一起使用。该字段仅支持UiElement变量 に類似しているローカライズされた文字列を検索します。
+        ///   Use the UiElement variable returned by another activity.  This property cannot be used with the Selector property.  This field only supports UiElement variables に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description8 {
             get {
@@ -1186,7 +1285,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口的新宽度，支持正负整数 に類似しているローカライズされた文字列を検索します。
+        ///   The new width of the window, supporting positive and negative integers に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description80 {
             get {
@@ -1195,7 +1294,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口的新位置坐标X轴，支持正负整数 に類似しているローカライズされた文字列を検索します。
+        ///   The new position coordinate of the window is X-axis, supporting positive and negative integers に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description81 {
             get {
@@ -1204,7 +1303,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口的新坐标位置Y轴，支持正负整数 に類似しているローカライズされた文字列を検索します。
+        ///   The new coordinate position of the window is Y-axis, supporting positive and negative integers に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description82 {
             get {
@@ -1213,7 +1312,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   图像的完整路径以及名称。如果设置了此属性，则忽略输入项中Image属性。 に類似しているローカライズされた文字列を検索します。
+        ///   The full path and name of the image.If this property is set, the image property in the input item is ignored. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description83 {
             get {
@@ -1222,7 +1321,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要进行处理的图像，仅支持Image变量。如果设置了此属性，则忽略输入项中FileName属性。 に類似しているローカライズされた文字列を検索します。
+        ///   Only image variables are supported for images to be processed. If this property is set, the filename property in the entry is ignored. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description84 {
             get {
@@ -1231,7 +1330,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   处理完成的图像。仅支持Image变量。 に類似しているローカライズされた文字列を検索します。
+        ///   Process the finished image. Only image variables are supported. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description85 {
             get {
@@ -1240,7 +1339,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要读取的文件的路径。 に類似しているローカライズされた文字列を検索します。
+        ///   The path to the file to read. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description86 {
             get {
@@ -1249,7 +1348,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输出Base64。 に類似しているローカライズされた文字列を検索します。
+        ///   Output Base64. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description87 {
             get {
@@ -1258,7 +1357,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要载入的图像的完整路径。 に類似しているローカライズされた文字列を検索します。
+        ///   The full path of the image to load. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description88 {
             get {
@@ -1267,7 +1366,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要载入的图像。仅支持Image变量。 に類似しているローカライズされた文字列を検索します。
+        ///   The image to load. Only image variables are supported. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description89 {
             get {
@@ -1276,7 +1375,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   获取指定UI元素的屏幕截图之前的延迟时间（以毫秒为单位）。默认时间为300毫秒。 に類似しているローカライズされた文字列を検索します。
+        ///   The delay (in milliseconds) before the screenshot of the specified UI element is taken.  The default time is 300 milliseconds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description9 {
             get {
@@ -1285,7 +1384,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   合适的噪点阈值可达到更好的去噪点效果。 に類似しているローカライズされた文字列を検索します。
+        ///   A suitable noise threshold can achieve better denoising effect. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description90 {
             get {
@@ -1294,7 +1393,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   保存图像的完整文件路径及其名称。 に類似しているローカライズされた文字列を検索します。
+        ///   Saves the full file path and name of the image. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description91 {
             get {
@@ -1303,7 +1402,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要保存的图像。仅支持Image变量。 に類似しているローカライズされた文字列を検索します。
+        ///   Image to save. Only image variables are supported. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description92 {
             get {
@@ -1312,7 +1411,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   您的APIKey。 に類似しているローカライズされた文字列を検索します。
+        ///   Your APIKey. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description93 {
             get {
@@ -1321,7 +1420,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   您的SecretKey。 に類似しているローカライズされた文字列を検索します。
+        ///   Your SecretKey. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description94 {
             get {
@@ -1330,7 +1429,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   文本内容 に類似しているローカライズされた文字列を検索します。
+        ///   Text content に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description95 {
             get {
@@ -1339,7 +1438,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   输出切词结果并给出每个词在句子中的概率值,判断一句话是否符合语言表达习惯。 に類似しているローカライズされた文字列を検索します。
+        ///   Output the word segmentation results and give the probability value of each word in the sentence to judge whether a sentence conforms to the language expression habits. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description96 {
             get {
@@ -1348,7 +1447,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   文本内容，最大2048字节。 に類似しているローカライズされた文字列を検索します。
+        ///   Text content, up to 2048 bytes. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description97 {
             get {
@@ -1357,7 +1456,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   情感倾向分析结果。 に類似しているローカライズされた文字列を検索します。
+        ///   The result of emotional tendency analysis. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description98 {
             get {
@@ -1366,7 +1465,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   待分析文本 に類似しているローカライズされた文字列を検索します。
+        ///   Text to be analyzed に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description99 {
             get {
@@ -1375,7 +1474,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   错误执行 に類似しているローカライズされた文字列を検索します。
+        ///   Error Execution に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName1 {
             get {
@@ -1384,7 +1483,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   属性值 に類似しているローカライズされた文字列を検索します。
+        ///   Attribute Value に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName10 {
             get {
@@ -1393,7 +1492,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   浏览器 に類似しているローカライズされた文字列を検索します。
+        ///   Browser に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName11 {
             get {
@@ -1402,7 +1501,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   超时时间 に類似しているローカライズされた文字列を検索します。
+        ///   Timeout に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName12 {
             get {
@@ -1411,7 +1510,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI选择器 に類似しているローカライズされた文字列を検索します。
+        ///   UI Selector に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName13 {
             get {
@@ -1420,7 +1519,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI浏览器 に類似しているローカライズされた文字列を検索します。
+        ///   UI Browser に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName14 {
             get {
@@ -1429,7 +1528,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   浏览器类型 に類似しているローカライズされた文字列を検索します。
+        ///   Browser Type に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName15 {
             get {
@@ -1438,7 +1537,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   浏览器Browser に類似しているローカライズされた文字列を検索します。
+        ///   Browser Browser に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName16 {
             get {
@@ -1447,7 +1546,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   延迟时间(结束) に類似しているローカライズされた文字列を検索します。
+        ///   Delay Time (End) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName17 {
             get {
@@ -1456,7 +1555,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   延迟时间(开始) に類似しているローカライズされた文字列を検索します。
+        ///   Delay Time (Start) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName18 {
             get {
@@ -1465,7 +1564,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   JavaScript代码 に類似しているローカライズされた文字列を検索します。
+        ///   JavaScript code に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName19 {
             get {
@@ -1474,7 +1573,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口指示器 に類似しているローカライズされた文字列を検索します。
+        ///   Selector に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName2 {
             get {
@@ -1483,7 +1582,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   JavaScript代码数据 に類似しているローカライズされた文字列を検索します。
+        ///   JavaScript code data に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName20 {
             get {
@@ -1492,7 +1591,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   JavaScript输出 に類似しているローカライズされた文字列を検索します。
+        ///   JavaScript output に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName21 {
             get {
@@ -1501,7 +1600,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   导航网址 に類似しているローカライズされた文字列を検索します。
+        ///   Navigation URL に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName22 {
             get {
@@ -1510,7 +1609,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   网址URL に類似しているローカライズされた文字列を検索します。
+        ///   URL に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName23 {
             get {
@@ -1519,7 +1618,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   私密/无痕 に類似しているローカライズされた文字列を検索します。
+        ///   Private/No Trace に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName24 {
             get {
@@ -1528,7 +1627,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   隐藏 に類似しているローカライズされた文字列を検索します。
+        ///   Hide に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName25 {
             get {
@@ -1537,7 +1636,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   HTML属性 に類似しているローカライズされた文字列を検索します。
+        ///   HTML Attribute に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName26 {
             get {
@@ -1546,7 +1645,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   值 に類似しているローカライズされた文字列を検索します。
+        ///   Value に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName27 {
             get {
@@ -1555,7 +1654,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   操作 に類似しているローカライズされた文字列を検索します。
+        ///   Operating に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName28 {
             get {
@@ -1564,7 +1663,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   颜色 に類似しているローカライズされた文字列を検索します。
+        ///   Colour に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName29 {
             get {
@@ -1573,7 +1672,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   UI元素 に類似しているローカライズされた文字列を検索します。
+        ///   UI Element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName3 {
             get {
@@ -1582,7 +1681,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   高亮时间(秒) に類似しているローカライズされた文字列を検索します。
+        ///   Highlight time (seconds) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName30 {
             get {
@@ -1591,7 +1690,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   项目 に類似しているローカライズされた文字列を検索します。
+        ///   Project に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName31 {
             get {
@@ -1600,7 +1699,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   添加到现有选择 に類似しているローカライズされた文字列を検索します。
+        ///   Add to existing selection に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName32 {
             get {
@@ -1609,7 +1708,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   项目组 に類似しているローカライズされた文字列を検索します。
+        ///   Project Team に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName33 {
             get {
@@ -1618,7 +1717,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   文本 に類似しているローカライズされた文字列を検索します。
+        ///   Text に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName34 {
             get {
@@ -1627,7 +1726,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   锚点位置 に類似しているローカライズされた文字列を検索します。
+        ///   Anchor Position に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName35 {
             get {
@@ -1636,7 +1735,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   等待元素停止 に類似しているローカライズされた文字列を検索します。
+        ///   Waiting for element to stop に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName36 {
             get {
@@ -1645,7 +1744,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   等待元素消失 に類似しているローカライズされた文字列を検索します。
+        ///   Waiting for element to disappear に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName37 {
             get {
@@ -1654,7 +1753,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   范围 に類似しているローカライズされた文字列を検索します。
+        ///   Range に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName38 {
             get {
@@ -1663,7 +1762,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   过滤器 に類似しているローカライズされた文字列を検索します。
+        ///   Filter に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName39 {
             get {
@@ -1672,7 +1771,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   属性 に類似しているローカライズされた文字列を検索します。
+        ///   Attributes に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName4 {
             get {
@@ -1681,7 +1780,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   子元素 に類似しているローカライズされた文字列を検索します。
+        ///   Child Element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName40 {
             get {
@@ -1690,7 +1789,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   等待活动 に類似しているローカライズされた文字列を検索します。
+        ///   Waiting for activity に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName41 {
             get {
@@ -1699,7 +1798,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   等待可见 に類似しているローカライズされた文字列を検索します。
+        ///   Waiting for visible に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName42 {
             get {
@@ -1708,7 +1807,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   位置 に類似しているローカライズされた文字列を検索します。
+        ///   Position に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName43 {
             get {
@@ -1717,7 +1816,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   相对元素 に類似しているローカライズされた文字列を検索します。
+        ///   Relative Element に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName44 {
             get {
@@ -1726,7 +1825,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   父节点层次 に類似しているローカライズされた文字列を検索します。
+        ///   Parent node level に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName45 {
             get {
@@ -1735,7 +1834,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   父节点 に類似しているローカライズされた文字列を検索します。
+        ///   Parent Node に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName46 {
             get {
@@ -1744,7 +1843,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   其它按键 に類似しているローカライズされた文字列を検索します。
+        ///   Other buttons に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName47 {
             get {
@@ -1753,7 +1852,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   使用坐标点 に類似しているローカライズされた文字列を検索します。
+        ///   Use coordinate points に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName48 {
             get {
@@ -1762,7 +1861,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   字符串 に類似しているローカライズされた文字列を検索します。
+        ///   String に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName49 {
             get {
@@ -1771,7 +1870,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   结果 に類似しているローカライズされた文字列を検索します。
+        ///   Result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName5 {
             get {
@@ -1780,7 +1879,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   指定次数 に類似しているローカライズされた文字列を検索します。
+        ///   Specified Number に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName50 {
             get {
@@ -1789,7 +1888,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   等待时间 に類似しているローカライズされた文字列を検索します。
+        ///   Waiting Time に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName51 {
             get {
@@ -1798,7 +1897,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   抽取最大值 に類似しているローカライズされた文字列を検索します。
+        ///   Extract maximum に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName52 {
             get {
@@ -1807,7 +1906,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   下一个连接器 に類似しているローカライズされた文字列を検索します。
+        ///   Next connector に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName53 {
             get {
@@ -1816,7 +1915,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   发送窗体消息 に類似しているローカライズされた文字列を検索します。
+        ///   Send a form message に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName54 {
             get {
@@ -1825,7 +1924,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   模拟点击 に類似しているローカライズされた文字列を検索します。
+        ///   Simulated Click に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName55 {
             get {
@@ -1834,7 +1933,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   抽取目标数据 に類似しているローカライズされた文字列を検索します。
+        ///   Extract target data に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName56 {
             get {
@@ -1843,7 +1942,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   忽略隐藏 に類似しているローカライズされた文字列を検索します。
+        ///   Ignore hiding に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName57 {
             get {
@@ -1852,7 +1951,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   分隔符 に類似しているローカライズされた文字列を検索します。
+        ///   Separator に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName58 {
             get {
@@ -1861,7 +1960,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   单词信息 に類似しているローカライズされた文字列を検索します。
+        ///   Word information に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName59 {
             get {
@@ -1870,7 +1969,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   矩阵坐标 に類似しているローカライズされた文字列を検索します。
+        ///   Matrix coordinates に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName6 {
             get {
@@ -1879,7 +1978,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口标题 に類似しているローカライズされた文字列を検索します。
+        ///   Window Title に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName60 {
             get {
@@ -1888,7 +1987,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口类名 に類似しているローカライズされた文字列を検索します。
+        ///   Window Class Name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName61 {
             get {
@@ -1897,7 +1996,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口 に類似しているローカライズされた文字列を検索します。
+        ///   Window に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName62 {
             get {
@@ -1906,7 +2005,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   窗口句柄 に類似しているローカライズされた文字列を検索します。
+        ///   Window Handle に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName63 {
             get {
@@ -1915,7 +2014,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   高度 に類似しているローカライズされた文字列を検索します。
+        ///   Height に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName64 {
             get {
@@ -1924,7 +2023,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   宽度 に類似しているローカライズされた文字列を検索します。
+        ///   Width に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName65 {
             get {
@@ -1933,7 +2032,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   坐标X に類似しているローカライズされた文字列を検索します。
+        ///   X Coordinate に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName66 {
             get {
@@ -1942,7 +2041,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   坐标Y に類似しているローカライズされた文字列を検索します。
+        ///   Y Coordinate に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName67 {
             get {
@@ -1960,7 +2059,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   平均值法 に類似しているローカライズされた文字列を検索します。
+        ///   Average method に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName69 {
             get {
@@ -1969,7 +2068,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   区域剪切方向 に類似しているローカライズされた文字列を検索します。
+        ///   Area shear direction に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName7 {
             get {
@@ -1978,7 +2077,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   最大值法 に類似しているローカライズされた文字列を検索します。
+        ///   Maximum value method に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName70 {
             get {
@@ -1987,7 +2086,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   加权平均 に類似しているローカライズされた文字列を検索します。
+        ///   weighted mean に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName71 {
             get {
@@ -1996,7 +2095,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   噪点阈值 に類似しているローカライズされた文字列を検索します。
+        ///   Noise threshold に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName72 {
             get {
@@ -2005,7 +2104,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   评论行业类型 に類似しているローカライズされた文字列を検索します。
+        ///   Comment industry type に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName73 {
             get {
@@ -2014,7 +2113,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   模型 に類似しているローカライズされた文字列を検索します。
+        ///   Model に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName74 {
             get {
@@ -2023,7 +2122,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   检测图像朝向 に類似しているローカライズされた文字列を検索します。
+        ///   Detect image orientation に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName75 {
             get {
@@ -2032,7 +2131,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   语言类型 に類似しているローカライズされた文字列を検索します。
+        ///   Language type に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName76 {
             get {
@@ -2041,7 +2140,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   定位单字符位置 に類似しているローカライズされた文字列を検索します。
+        ///   Locate single character position に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName77 {
             get {
@@ -2050,7 +2149,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   检测语言 に類似しているローカライズされた文字列を検索します。
+        ///   Detection language に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName78 {
             get {
@@ -2059,7 +2158,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   返回顶点位置 に類似しているローカライズされた文字列を検索します。
+        ///   Return to vertex position に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName79 {
             get {
@@ -2068,7 +2167,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   执行等待 に類似しているローカライズされた文字列を検索します。
+        ///   Execution wait に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName8 {
             get {
@@ -2077,7 +2176,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   新标签地址 に類似しているローカライズされた文字列を検索します。
+        ///   New label address に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName80 {
             get {
@@ -2086,7 +2185,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   标签页 に類似しているローカライズされた文字列を検索します。
+        ///   Tab page に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName81 {
             get {
@@ -2095,7 +2194,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   关键字 に類似しているローカライズされた文字列を検索します。
+        ///   Keyword に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName82 {
             get {
@@ -2104,7 +2203,52 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   截图 に類似しているローカライズされた文字列を検索します。
+        ///   Mouse operation at runtime に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName83 {
+            get {
+                return ResourceManager.GetString("DisplayName83", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Click offset before input に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName84 {
+            get {
+                return ResourceManager.GetString("DisplayName84", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Move Offset X に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName85 {
+            get {
+                return ResourceManager.GetString("DisplayName85", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Move Offset Y に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName86 {
+            get {
+                return ResourceManager.GetString("DisplayName86", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Click Offset Point に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DisplayName87 {
+            get {
+                return ResourceManager.GetString("DisplayName87", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Screenshot に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DisplayName9 {
             get {
@@ -2113,7 +2257,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   匹配间隔[ms] に類似しているローカライズされた文字列を検索します。
+        ///   Matching Interval [ms] に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DN_MatchingInterval {
             get {
@@ -2122,7 +2266,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   匹配阈值 に類似しているローカライズされた文字列を検索します。
+        ///   Matching Threshold に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DN_MatchingThreshold {
             get {
@@ -2131,7 +2275,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   重试次数 に類似しているローカライズされた文字列を検索します。
+        ///   Number of Retries に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DN_Retry {
             get {
@@ -2140,7 +2284,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   拖动选择 に類似しているローカライズされた文字列を検索します。
+        ///   Drag on Screen に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DragScreen {
             get {
@@ -2149,7 +2293,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   匹配间隔[ms]（默认值= 2000 [ms]。必须为600 &lt;= x） に類似しているローカライズされた文字列を検索します。
+        ///   Matching Interval [ms] (default value = 2000 [ms]. Must 600 &lt;= x) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DS_MatchingInterval {
             get {
@@ -2158,7 +2302,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   匹配阈值（默认值=91。必须80 &lt;= x &lt;= 100） に類似しているローカライズされた文字列を検索します。
+        ///   Matching Threshold (default value = 91. Must 80 &lt;= x &lt;= 100) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DS_MatchingThreshold {
             get {
@@ -2167,7 +2311,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   重试次数（默认值= 600次） に類似しているローカライズされた文字列を検索します。
+        ///   Retry count (default value = 600 times) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DS_Retry {
             get {
@@ -2176,7 +2320,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   通过输入窗口标题，可以将图像搜索范围限制在窗口内。 に類似しているローカライズされた文字列を検索します。
+        ///   By entering the window title, you can limit the image search range to within the window. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DS_WindowTitle {
             get {
@@ -2185,7 +2329,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   图像匹配结果 に類似しているローカライズされた文字列を検索します。
+        ///   Image Matching Result に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ImageMatchingResult {
             get {
@@ -2194,16 +2338,34 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要等待的属性的名称 に類似しているローカライズされた文字列を検索します。
+        ///   Error Occurred に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string PropertyNameToWait_HintText {
+        public static string msgErrorOccurred {
             get {
-                return ResourceManager.GetString("PropertyNameToWait.HintText", resourceCulture);
+                return ResourceManager.GetString("msgErrorOccurred", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   重新选取 に類似しているローカライズされた文字列を検索します。
+        ///   No element found に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string msgNoElementFound {
+            get {
+                return ResourceManager.GetString("msgNoElementFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The name of the property to wait for に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PropertyNameToWait {
+            get {
+                return ResourceManager.GetString("PropertyNameToWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Reselect に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReselectIt {
             get {
@@ -2212,7 +2374,7 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   捕获范围 : x={0}, y={1}, w={2}, h={3}, 搭配 : {4}, 重合度 : {5} に類似しているローカライズされた文字列を検索します。
+        ///   Capture Area : x={0}, y={1}, w={2}, h={3}, Matched : {4}, Matched Level : {5} に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ResultInformation {
             get {
@@ -2221,25 +2383,25 @@ namespace RPA.UIAutomation.Activities.Properties {
         }
         
         /// <summary>
-        ///   要设置为指定属性的值。仅支持字符串变量 に類似しているローカライズされた文字列を検索します。
+        ///   The value to be set to the specified attribute. Only string variables are supported に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string SetAttributeValue_HintText {
+        public static string SetAttributeValue {
             get {
-                return ResourceManager.GetString("SetAttributeValue.HintText", resourceCulture);
+                return ResourceManager.GetString("SetAttributeValue", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   指定浏览器中打开的URL に類似しているローカライズされた文字列を検索します。
+        ///   Specify the URL opened in the browser に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string SpecifyTheURL_HintText {
+        public static string SpecifyTheURL {
             get {
-                return ResourceManager.GetString("SpecifyTheURL.HintText", resourceCulture);
+                return ResourceManager.GetString("SpecifyTheURL", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   点击屏幕 に類似しているローカライズされた文字列を検索します。
+        ///   Indicate on screen に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TapScreen {
             get {

@@ -188,7 +188,7 @@ namespace RPA.UIAutomation.Activities.Image
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", e.Message);
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, Localize.LocalizedResources.GetString("msgErrorOccurred"), e.Message);
             }     
         }
     }

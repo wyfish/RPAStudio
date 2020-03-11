@@ -349,7 +349,7 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
-        ///   The program is already running に類似しているローカライズされた文字列を検索します。
+        ///   The program is already running! に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Error_AlreadyRunning {
             get {
@@ -588,15 +588,6 @@ namespace RPAStudio.Localization {
         public static string msgPublishProjectFailed {
             get {
                 return ResourceManager.GetString("msgPublishProjectFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   The package requires you to accept its license terms before installation. Are you sure? に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string msgRequireAcceptLicense {
-            get {
-                return ResourceManager.GetString("msgRequireAcceptLicense", resourceCulture);
             }
         }
         

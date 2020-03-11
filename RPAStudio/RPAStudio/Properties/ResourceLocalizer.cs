@@ -9,12 +9,13 @@ namespace RPAStudio.Properties
 {
     static class ResourceLocalizer
     {
-        internal static byte[] GetLocalizedResource(string resourceName)
+        internal static byte[] GetConfigXML(string resourceName)
         {
-            string isoCulture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
-            if (!isoCulture.Equals("zh"))
+            //string isoCulture = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            string cultureName = CultureInfo.CurrentCulture.Name;
+            if (!cultureName.Equals("zh-CN"))
             {
-                resourceName += "_" + isoCulture;
+                resourceName += "_" + cultureName.Replace("-", "_");
             }
 
             return GetResourceByName(resourceName);

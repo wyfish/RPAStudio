@@ -262,7 +262,7 @@
     <value>場所</value>
   </data>
   <data name="Description33" xml:space="preserve">
-    <value>フェッチにOCRを使用し、[単語情報の取得]チェックボックスがオンになっている場合、このフィールドにはWordsInfo値を持つIEnumerable &lt;KeyValuePair &lt;Rectangle、String &gt;&gt;変数が含まれます。</value>
+    <value>フェッチにOCRを使用し、[単語情報の取得]チェックボックスがオンになっている場合、このフィールドにはWordsInfo値を持つIEnumerable &lt;KeyValuePair &lt;Rectangle、String &gt;&gt;変数が含まれます</value>
   </data>
   <data name="Category5" xml:space="preserve">
     <value>固定形式オプション</value>
@@ -836,5 +836,11 @@
   </data>
   <data name="xDataTableFieldHint" xml:space="preserve">
     <value>DataTable変数</value>
+  </data>
+  <data name="IgnoredActivity" xml:space="preserve">
+    <value>無視されたアクティビティ</value>
+  </data>
+  <data name="WriteCommentInTextProperty" xml:space="preserve">
+    <value>Textプロパティにコメントを書いてください</value>
   </data>
 </root>

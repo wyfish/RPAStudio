@@ -145,12 +145,12 @@
     <value>OK</value>
   </data>
   <data name="PermanentText" xml:space="preserve">
-    <value>Permanent </value>
+    <value>Permanent</value>
   </data>
   <data name="RegisteredText" xml:space="preserve">
     <value>Program is registered</value>
   </data>
-  <data name="RegisterYourProductTitle" xml:space="preserve">
+  <data name="RegisterYourProduct" xml:space="preserve">
     <value>Register your product</value>
   </data>
   <data name="RegistrationInformationHeader" xml:space="preserve">
@@ -172,12 +172,78 @@
     <value>System settings</value>
   </data>
   <data name="TillText" xml:space="preserve">
-    <value>till </value>
+    <value>till</value>
   </data>
-  <data name="UserSettingsTitle" xml:space="preserve">
+  <data name="UserSettings" xml:space="preserve">
     <value>User settings</value>
   </data>
   <data name="ValidityPeriodText" xml:space="preserve">
     <value>Validity period:</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ComputerName" xml:space="preserve">
+    <value>Computer Name:</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP address:</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="CopyInformation" xml:space="preserve">
+    <value>Copy information</value>
+  </data>
+  <data name="LocateCurrentPackage" xml:space="preserve">
+    <value>Locate the current package</value>
+  </data>
+  <data name="RemoveCurrentPackage" xml:space="preserve">
+    <value>Remove the current package</value>
+  </data>
+  <data name="RecordingSettings" xml:space="preserve">
+    <value>Recording settings</value>
+  </data>
+  <data name="EnableScreenRecording" xml:space="preserve">
+    <value>Enable screen recording</value>
+  </data>
+  <data name="FramesText" xml:space="preserve">
+    <value>Frames:</value>
+  </data>
+  <data name="QualityText" xml:space="preserve">
+    <value>Quality:</value>
+  </data>
+  <data name="ControlCenterConfiguration" xml:space="preserve">
+    <value>Control Center Configuration</value>
+  </data>
+  <data name="EnableControlCenter" xml:space="preserve">
+    <value>Enable Control Center</value>
+  </data>
+  <data name="ControlCenterAddress" xml:space="preserve">
+    <value>Control Center Address:</value>
+  </data>
+  <data name="BrowseLogsToolTip" xml:space="preserve">
+    <value>View logs</value>
+  </data>
+  <data name="ExportMachineCodeToolTip" xml:space="preserve">
+    <value>Please export the machine code file and send it to the authorized party to complete the authorization</value>
+  </data>
+  <data name="ImportMachineCodeToolTip" xml:space="preserve">
+    <value>Select the authorization code file to complete the import, or directly drag the authorization code file to the current window</value>
+  </data>
+  <data name="RefreshToolTip" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="SearchHintText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="BrowseVideos" xml:space="preserve">
+    <value>Browse videos</value>
+  </data>
+  <data name="AboutProducts" xml:space="preserve">
+    <value>About Products</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>Stop</value>
   </data>
 </root>

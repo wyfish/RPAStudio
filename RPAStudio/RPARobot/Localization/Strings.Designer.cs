@@ -61,6 +61,24 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   About Products に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AboutProducts {
+            get {
+                return ResourceManager.GetString("AboutProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   About に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AboutText {
+            get {
+                return ResourceManager.GetString("AboutText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Automatically open the main window after startup に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string AutomaticallyOpenWindowContent {
@@ -88,6 +106,24 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   View logs に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BrowseLogsToolTip {
+            get {
+                return ResourceManager.GetString("BrowseLogsToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Browse videos に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BrowseVideos {
+            get {
+                return ResourceManager.GetString("BrowseVideos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cancel に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string CancelContent {
@@ -106,6 +142,60 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Computer Name: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComputerName {
+            get {
+                return ResourceManager.GetString("ComputerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Control Center Address: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ControlCenterAddress {
+            get {
+                return ResourceManager.GetString("ControlCenterAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Control Center Configuration に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ControlCenterConfiguration {
+            get {
+                return ResourceManager.GetString("ControlCenterConfiguration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Copy information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CopyInformation {
+            get {
+                return ResourceManager.GetString("CopyInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enable Control Center に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string EnableControlCenter {
+            get {
+                return ResourceManager.GetString("EnableControlCenter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Enable screen recording に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string EnableScreenRecording {
+            get {
+                return ResourceManager.GetString("EnableScreenRecording", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Export the machine code file に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ExportMachineCodeContent {
@@ -115,11 +205,56 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Please export the machine code file and send it to the authorized party to complete the authorization に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ExportMachineCodeToolTip {
+            get {
+                return ResourceManager.GetString("ExportMachineCodeToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Frames: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FramesText {
+            get {
+                return ResourceManager.GetString("FramesText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Import authorization code file に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ImportMachineCodeContent {
             get {
                 return ResourceManager.GetString("ImportMachineCodeContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Select the authorization code file to complete the import, or directly drag the authorization code file to the current window に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ImportMachineCodeToolTip {
+            get {
+                return ResourceManager.GetString("ImportMachineCodeToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   IP address: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string IPAddress {
+            get {
+                return ResourceManager.GetString("IPAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Locate the current package に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LocateCurrentPackage {
+            get {
+                return ResourceManager.GetString("LocateCurrentPackage", resourceCulture);
             }
         }
         
@@ -142,11 +277,38 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
-        ///   Permanent  に類似しているローカライズされた文字列を検索します。
+        ///   Permanent に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string PermanentText {
             get {
                 return ResourceManager.GetString("PermanentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Quality: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string QualityText {
+            get {
+                return ResourceManager.GetString("QualityText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recording settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RecordingSettings {
+            get {
+                return ResourceManager.GetString("RecordingSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Refresh に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RefreshToolTip {
+            get {
+                return ResourceManager.GetString("RefreshToolTip", resourceCulture);
             }
         }
         
@@ -162,9 +324,9 @@ namespace RPARobot.Localization {
         /// <summary>
         ///   Register your product に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string RegisterYourProductTitle {
+        public static string RegisterYourProduct {
             get {
-                return ResourceManager.GetString("RegisterYourProductTitle", resourceCulture);
+                return ResourceManager.GetString("RegisterYourProduct", resourceCulture);
             }
         }
         
@@ -174,6 +336,15 @@ namespace RPARobot.Localization {
         public static string RegistrationInformationHeader {
             get {
                 return ResourceManager.GetString("RegistrationInformationHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Remove the current package に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RemoveCurrentPackage {
+            get {
+                return ResourceManager.GetString("RemoveCurrentPackage", resourceCulture);
             }
         }
         
@@ -196,6 +367,15 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Search に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SearchHintText {
+            get {
+                return ResourceManager.GetString("SearchHintText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Search results are empty に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SearchResultEmptyText {
@@ -214,6 +394,15 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Stop に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StopText {
+            get {
+                return ResourceManager.GetString("StopText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SystemSettingsHeader {
@@ -223,7 +412,7 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
-        ///   till  に類似しているローカライズされた文字列を検索します。
+        ///   till に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TillText {
             get {
@@ -234,9 +423,9 @@ namespace RPARobot.Localization {
         /// <summary>
         ///   User settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string UserSettingsTitle {
+        public static string UserSettings {
             get {
-                return ResourceManager.GetString("UserSettingsTitle", resourceCulture);
+                return ResourceManager.GetString("UserSettings", resourceCulture);
             }
         }
         
@@ -246,6 +435,15 @@ namespace RPARobot.Localization {
         public static string ValidityPeriodText {
             get {
                 return ResourceManager.GetString("ValidityPeriodText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Version: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string VersionText {
+            get {
+                return ResourceManager.GetString("VersionText", resourceCulture);
             }
         }
     }

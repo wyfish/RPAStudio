@@ -124,574 +124,574 @@
     <value>Drop activity here</value>
   </data>
   <data name="Description1" xml:space="preserve">
-    <value>Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported.</value>
+    <value>指定即使當前活動失敗，也要繼續執行其餘的活動。只支持布林值（True，False）。</value>
   </data>
   <data name="Description2" xml:space="preserve">
-    <value>Process name</value>
+    <value>行程名稱</value>
   </data>
   <data name="Category1" xml:space="preserve">
-    <value>UI Object</value>
+    <value>UI對象</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
-    <value>Window selector</value>
+    <value>視窗指示器</value>
   </data>
   <data name="Description3" xml:space="preserve">
-    <value>The Text property used to find specific UI elements when performing activities</value>
+    <value>用於在執行活動時查找特定UI元素的Text内容</value>
   </data>
   <data name="Category2" xml:space="preserve">
-    <value>Output</value>
+    <value>輸出</value>
   </data>
   <data name="Description4" xml:space="preserve">
-    <value>A collection of process objects representing the processes that are running in the current Windows session.</value>
+    <value>表示當前Windows會話中正在運行的行程的行程對象的集合。</value>
   </data>
   <data name="Description5" xml:space="preserve">
-    <value>A process type object that describes the process to be closed.</value>
+    <value>描述要關閉的流程的流程類型對象。</value>
   </data>
   <data name="Description6" xml:space="preserve">
-    <value>The name of the process to close.</value>
+    <value>要關閉的行程的名稱。</value>
   </data>
   <data name="Description7" xml:space="preserve">
-    <value>Specifies the amount of time, in milliseconds, to wait for an activity to run before throwing an error.  The default is 3000 milliseconds (3 seconds).</value>
+    <value>指定在拋出錯誤之前等待活動運行的時間（以毫秒為組織）。預設值為3000毫秒（3秒）。</value>
   </data>
   <data name="Description8" xml:space="preserve">
-    <value>Parameters that can be passed to the application at startup.</value>
+    <value>可以在啟動時傳遞給應用程序的參數。</value>
   </data>
   <data name="Description9" xml:space="preserve">
-    <value>You can find the full file path of the executable for the application you want to open.  Note: All strings must be placed between quotes.</value>
+    <value>可以找到要打開的應用程序的可執行文件的完整檔案路徑。注意：所有字串都必須放在引號之間。</value>
   </data>
   <data name="Description10" xml:space="preserve">
-    <value>The path to the current working directory.  This field only accepts string variables.  Note: All string variables must be placed between quotes.</value>
+    <value>當前工作目錄的路徑。這個欄位只接受字串變數。注意：所有字串變數必須放在引號之間。</value>
   </data>
   <data name="Description11" xml:space="preserve">
-    <value>You can find the full path to the executabel file of the application you want to open.  Note: All strings must be placed between quotes.</value>
+    <value>可以找到要打開的應用程序的executabel檔案的完整路徑。注意：所有字串都必須放在引號之間。</value>
   </data>
   <data name="Description12" xml:space="preserve">
-    <value>The data retrieved from the clipboard.</value>
+    <value>從剪貼板中檢索的數據。</value>
   </data>
   <data name="Description13" xml:space="preserve">
-    <value>The text to be copied to the clipboard.</value>
+    <value>要複製到剪貼板的文字。</value>
   </data>
   <data name="Description14" xml:space="preserve">
-    <value>Copy files or folders</value>
+    <value>拷貝檔案或資料夾</value>
   </data>
   <data name="Category3" xml:space="preserve">
-    <value>Enter</value>
+    <value>輸入</value>
   </data>
   <data name="Description15" xml:space="preserve">
-    <value>The DataColumn object to be attached to the column set of the DataTable.  If this property is set, all properties under the Options category are ignored</value>
+    <value>要附加到DataTable的列集合的DataColumn對象。如果設定了此内容，則會忽略“選項”類別下的所有内容</value>
   </data>
   <data name="Description16" xml:space="preserve">
-    <value>The name of the new column</value>
+    <value>新列的名稱</value>
   </data>
   <data name="Description17" xml:space="preserve">
-    <value>The DataTable object to add the column to</value>
+    <value>要添加列的DataTable對象</value>
   </data>
   <data name="Category4" xml:space="preserve">
-    <value>Option</value>
+    <value>選項</value>
   </data>
   <data name="DisplayName2" xml:space="preserve">
-    <value>Allowed to be empty</value>
+    <value>允許為空</value>
   </data>
   <data name="Description18" xml:space="preserve">
-    <value>Specify whether the fields in the new column are allowed to be empty</value>
+    <value>指定新列中欄位是否允許為空</value>
   </data>
   <data name="DisplayName3" xml:space="preserve">
-    <value>Auto increment</value>
+    <value>自動遞增</value>
   </data>
   <data name="Description19" xml:space="preserve">
-    <value>Specifies whether the value of the column is automatically incremented when a new row is added</value>
+    <value>指定在添加新行時列的值是否自動遞增</value>
   </data>
   <data name="DisplayName4" xml:space="preserve">
-    <value>Unique constraint</value>
+    <value>唯一約束</value>
   </data>
   <data name="Description20" xml:space="preserve">
-    <value>Specify the value in each row of the new column must be unique</value>
+    <value>指定新列的每一行中的值必須是唯一的</value>
   </data>
   <data name="DisplayName5" xml:space="preserve">
-    <value>The maximum length</value>
+    <value>最大長度</value>
   </data>
   <data name="Description21" xml:space="preserve">
-    <value>Specify the maximum length of the value of the new column</value>
+    <value>指定新列的值的最大長度</value>
   </data>
   <data name="DisplayName6" xml:space="preserve">
-    <value>Defaults</value>
+    <value>預設值</value>
   </data>
   <data name="Description22" xml:space="preserve">
-    <value>The DataRow object to be added to the DataTable. If this property is set, the ArrayRow property is ignored.</value>
+    <value>要添加到DataTable的DataRow對象，如果設定了此内容，則忽略ArrayRow内容。</value>
   </data>
   <data name="Description23" xml:space="preserve">
-    <value>An array of objects to add to the DataTable.  The type of each object should be mapped to the type of its corresponding column in the DataTable.</value>
+    <value>要添加到DataTable的對象數組。每個對象的類型應映射到DataTable中其對應列的類型。</value>
   </data>
   <data name="Description24" xml:space="preserve">
-    <value>The DataTable object to add row data to</value>
+    <value>要添加行數據的DataTable對象</value>
   </data>
   <data name="Description25" xml:space="preserve">
-    <value>a DataTable generated from row and column information</value>
+    <value>根據行列資訊生成的DataTable錶</value>
   </data>
   <data name="Description26" xml:space="preserve">
-    <value>The DataTable object to clear all data</value>
+    <value>要清除所有數據的DataTable對象</value>
   </data>
   <data name="Description27" xml:space="preserve">
-    <value>The DataTable variable to filter.  This field only supports DataTable variables</value>
+    <value>要篩選的DataTable變數。該欄位僅支持DataTable變數</value>
   </data>
   <data name="DisplayName7" xml:space="preserve">
-    <value>Line filtering mode</value>
+    <value>行過濾模式</value>
   </data>
   <data name="Description28" xml:space="preserve">
-    <value>Specifies whether to filter the table by keeping or deleting the target row</value>
+    <value>指定是否通過保留或删除目標行來過濾錶</value>
   </data>
   <data name="DisplayName8" xml:space="preserve">
-    <value>Column filtering mode</value>
+    <value>列過濾模式</value>
   </data>
   <data name="Description29" xml:space="preserve">
-    <value>Specify whether to filter the table by retaining or deleting the target column</value>
+    <value>指定是通過保留還是删除目標列來過濾錶</value>
   </data>
   <data name="Description30" xml:space="preserve">
-    <value>Filter the result DataTable</value>
+    <value>過濾結果DataTable</value>
   </data>
   <data name="Description31" xml:space="preserve">
-    <value>a single-row operation of the DataTable variable</value>
+    <value>執行單行操作的DataTable變數</value>
   </data>
   <data name="DisplayName9" xml:space="preserve">
-    <value>index</value>
+    <value>索引</value>
   </data>
   <data name="Description32" xml:space="preserve">
-    <value>Specifies the source of unstructured data to be converted to a table.  This field only supports String variables.</value>
+    <value>指定要轉換為錶的非結構化數據的來源。該欄位僅支持String變數</value>
   </data>
   <data name="DisplayName10" xml:space="preserve">
-    <value>position</value>
+    <value>位置</value>
   </data>
   <data name="Description33" xml:space="preserve">
-    <value>If you use OCR for fetching and the Get Word Information check box is selected, this field contains IEnumerable&lt;KeyValuePair&lt;Rectangle,String&gt;&gt; variables with WordsInfo values</value>
+    <value>如果使用OCR進行抓取，並且選中了“獲取單詞資訊”核取方塊，則此欄位包含IEnumerable&lt;KeyValuePair&lt;Rectangle，String&gt;&gt;具有WordsInfo值的變數</value>
   </data>
   <data name="Category5" xml:space="preserve">
-    <value>Fixed format option</value>
+    <value>固定格式選項</value>
   </data>
   <data name="DisplayName11" xml:space="preserve">
-    <value>Column width</value>
+    <value>列寬</value>
   </data>
   <data name="Description34" xml:space="preserve">
-    <value>Specifies the size of the column to be created in the table.  This field only supports the IEnumerable &lt;Int32&gt; variable.</value>
+    <value>指定要在錶中創建的列的大小。該欄位僅支持IEnumerable &lt;Int32&gt;變數。</value>
   </data>
   <data name="Category6" xml:space="preserve">
-    <value>Formatting options</value>
+    <value>格式化選項</value>
   </data>
   <data name="DisplayName12" xml:space="preserve">
-    <value>Column separator</value>
+    <value>列分隔符號</value>
   </data>
   <data name="Description35" xml:space="preserve">
-    <value>Specifies the character to use as the column separator.  This field only supports String variables.</value>
+    <value>指定要用作列分隔符號的字元。該欄位僅支持String變數</value>
   </data>
   <data name="DisplayName13" xml:space="preserve">
-    <value>Line separator</value>
+    <value>行分隔符號</value>
   </data>
   <data name="Description36" xml:space="preserve">
-    <value>Specifies the character to be used as a newline separator.  This field only supports String variables.</value>
+    <value>指定要用作分行符號分隔符號的字元。該欄位僅支持String變數</value>
   </data>
   <data name="DisplayName14" xml:space="preserve">
-    <value>CSV parsing</value>
+    <value>CSV解析</value>
   </data>
   <data name="DisplayName15" xml:space="preserve">
-    <value>Type automatic detection</value>
+    <value>類型自動檢測</value>
   </data>
   <data name="Description37" xml:space="preserve">
-    <value>When selected, the column or row type is automatically detected, whether it is String, Int32, etc.</value>
+    <value>選中後，自動檢測列或行類型，無論是String，Int32等。</value>
   </data>
   <data name="DisplayName16" xml:space="preserve">
-    <value>Column heading</value>
+    <value>列標題</value>
   </data>
   <data name="Description38" xml:space="preserve">
-    <value>If checked, the first identified column is used as the column header</value>
+    <value>如果選中，則使用第一個標識的列作為列標題</value>
   </data>
   <data name="DisplayName17" xml:space="preserve">
-    <value>Row header</value>
+    <value>行標題</value>
   </data>
   <data name="Description39" xml:space="preserve">
-    <value>If checked, the first identified row is used as the row header</value>
+    <value>如果選中，則使用第一個標識的行作為行標題</value>
   </data>
   <data name="Description40" xml:space="preserve">
-    <value>Generated DataTable variable</value>
+    <value>生成的DataTable變數</value>
   </data>
   <data name="DisplayName18" xml:space="preserve">
-    <value>Row</value>
+    <value>行</value>
   </data>
   <data name="Description41" xml:space="preserve">
-    <value>The DataRow object from which to retrieve the value</value>
+    <value>要從中檢索值的DataRow對象</value>
   </data>
   <data name="DisplayName19" xml:space="preserve">
-    <value>Column</value>
+    <value>列</value>
   </data>
   <data name="Description42" xml:space="preserve">
-    <value>The DataColumn object whose value is to be retrieved from the DataRow.  If this property is set, the ColumnName and ColumnIndex properties are ignored.</value>
+    <value>要從DataRow檢索其值的DataColumn對象。如果設定了此内容，則忽略ColumnName和ColumnIndex内容。</value>
   </data>
   <data name="DisplayName20" xml:space="preserve">
-    <value>Column index</value>
+    <value>列索引</value>
   </data>
   <data name="Description43" xml:space="preserve">
-    <value>The index of the column whose value is to be retrieved from the DataRow</value>
+    <value>要從DataRow檢索其值的列的索引</value>
   </data>
   <data name="DisplayName21" xml:space="preserve">
-    <value>Column name</value>
+    <value>列名稱</value>
   </data>
   <data name="Description44" xml:space="preserve">
-    <value>The name of the column whose value is to be retrieved from the DataRow.  If this property is set, the ColumnIndex property is ignored</value>
+    <value>要從DataRow檢索其值的列的名稱。如果設定了此内容，則忽略ColumnIndex内容</value>
   </data>
   <data name="DisplayName22" xml:space="preserve">
-    <value>value</value>
+    <value>值</value>
   </data>
   <data name="Description45" xml:space="preserve">
-    <value>Specify the column value of the DataRow</value>
+    <value>指定DataRow的列值</value>
   </data>
   <data name="DisplayName23" xml:space="preserve">
     <value>DataTable1</value>
   </data>
   <data name="Description46" xml:space="preserve">
-    <value>The first table to use in this operation is stored in the DataTable variable.  This field only supports DataTable variables</value>
+    <value>要在此操作中使用的第一個錶，存儲在DataTable變數中。該欄位僅支持DataTable變數</value>
   </data>
   <data name="DisplayName24" xml:space="preserve">
     <value>DataTable2</value>
   </data>
   <data name="Description47" xml:space="preserve">
-    <value>The second table to be used in this operation is stored in the DataTable variable.  This field only supports DataTable variables</value>
+    <value>要在此操作中使用的第二個錶，存儲在DataTable變數中。該欄位僅支持DataTable變數</value>
   </data>
   <data name="DisplayName25" xml:space="preserve">
     <value>JoinType</value>
   </data>
   <data name="Description48" xml:space="preserve">
-    <value>The DataTable variable in which to perform the lookup</value>
+    <value>要在其中執行查找的DataTable變數</value>
   </data>
   <data name="DisplayName26" xml:space="preserve">
-    <value>Find value</value>
+    <value>查找值</value>
   </data>
   <data name="Description49" xml:space="preserve">
-    <value>The value to search for in the specified DataTable variable</value>
+    <value>要在指定DataTable變數中蒐索的值</value>
   </data>
   <data name="Category7" xml:space="preserve">
-    <value>Start column</value>
+    <value>開始列</value>
   </data>
   <data name="Description50" xml:space="preserve">
-    <value>The DataColumn object whose value is to be retrieved from the DataRow.  Setting a variable in this property field disables the other two properties</value>
+    <value>要從DataRow檢索其值的DataColumn對象。在此内容欄位中設定變數會禁用其他兩個内容</value>
   </data>
   <data name="Description51" xml:space="preserve">
-    <value>The index of the column whose value is to be retrieved from the DataRow.  Setting a variable in this property field disables the other two properties</value>
+    <value>要從DataRow檢索其值的列的索引。在此内容欄位中設定變數會禁用其他兩個内容</value>
   </data>
   <data name="Description52" xml:space="preserve">
-    <value>The name of the column whose value is to be retrieved from the DataRow.  Setting a variable in this property field disables the other two properties</value>
+    <value>要從DataRow檢索其值的列的名稱。在此内容欄位中設定變數會禁用其他兩個内容</value>
   </data>
   <data name="Category8" xml:space="preserve">
-    <value>End column</value>
+    <value>結束列</value>
   </data>
   <data name="Description53" xml:space="preserve">
-    <value>Returns the cell found at the coordinates between this column and the value in the RowIndex property</value>
+    <value>返回在此列與RowIndex内容中的值之間的座標處找到的儲存格</value>
   </data>
   <data name="Description54" xml:space="preserve">
-    <value>Returns the column index of the cell found at the coordinates between this column and the value of the RowIndex property</value>
+    <value>返回在此列與RowIndex屬性值之間的座標處找到的儲存格的列索引</value>
   </data>
   <data name="Description55" xml:space="preserve">
-    <value>Returns the column name of the cell found at the coordinates between this column and the value in the RowIndex property</value>
+    <value>返回在此列與RowIndex内容中的值之間的座標處找到的儲存格的列名稱</value>
   </data>
   <data name="DisplayName27" xml:space="preserve">
-    <value>Cell value</value>
+    <value>儲存格值</value>
   </data>
   <data name="Description56" xml:space="preserve">
-    <value>The value found in the cell</value>
+    <value>儲存格中找到的值</value>
   </data>
   <data name="DisplayName28" xml:space="preserve">
-    <value>Row index</value>
+    <value>行索引</value>
   </data>
   <data name="Description57" xml:space="preserve">
-    <value>Row index of the cell</value>
+    <value>儲存格的Row索引</value>
   </data>
   <data name="DisplayName29" xml:space="preserve">
-    <value>aims</value>
+    <value>目標</value>
   </data>
   <data name="Description58" xml:space="preserve">
-    <value>Merge the DataTable object of the source DataTable</value>
+    <value>合併源DataTable的DataTable對象</value>
   </data>
   <data name="DisplayName30" xml:space="preserve">
-    <value>source</value>
+    <value>源</value>
   </data>
   <data name="Description59" xml:space="preserve">
-    <value>The DataTable object to be added to the target DataTable</value>
+    <value>要添加到目標DataTable的DataTable對象</value>
   </data>
   <data name="DisplayName31" xml:space="preserve">
-    <value>Merge operation</value>
+    <value>合併操作</value>
   </data>
   <data name="Description60" xml:space="preserve">
-    <value>Specify what to do when merging two DataTables</value>
+    <value>指定合併兩個DataTable時要執行的操作</value>
   </data>
   <data name="Description61" xml:space="preserve">
-    <value>The DataTable object to write to the string</value>
+    <value>要寫入字串的DataTable對象</value>
   </data>
   <data name="DisplayName32" xml:space="preserve">
-    <value>Text</value>
+    <value>文字</value>
   </data>
   <data name="Description62" xml:space="preserve">
-    <value>DataTable as a string output</value>
+    <value>DataTable作為字串的輸出</value>
   </data>
   <data name="Description63" xml:space="preserve">
-    <value>The DataTable object from which to remove the column</value>
+    <value>要從中删除列的DataTable對象</value>
   </data>
   <data name="Description64" xml:space="preserve">
-    <value>The DataColumn object to be removed from the column set of the DataTable.  If this property is set, the other two column index options are ignored</value>
+    <value>要從DataTable的列集合中删除的DataColumn對象。如果設定了此内容，則忽略其它兩個列索引選項</value>
   </data>
   <data name="Description65" xml:space="preserve">
-    <value>The index of the column to remove from the column set of the DataTable.  If this property is set, the other two column index options are ignored</value>
+    <value>要從DataTable的列集合中删除的列的索引。如果設定了此内容，則忽略其它兩個列索引選項</value>
   </data>
   <data name="Description66" xml:space="preserve">
-    <value>The name of the column to remove from the column set of the DataTable.  If this property is set, the other two column index options are ignored</value>
+    <value>要從DataTable的列集合中删除的列的名稱。如果設定了此内容，則忽略其它兩個列索引選項</value>
   </data>
   <data name="Description67" xml:space="preserve">
-    <value>The DataRow object to delete.  Ignore row indexing option if this property is set</value>
+    <value>要删除的DataRow對象。如果設定了此内容，則忽略行索引選項</value>
   </data>
   <data name="Description68" xml:space="preserve">
-    <value>The index of the row to delete.  Ignore DataRow indexing option if this property is set</value>
+    <value>要删除的行的索引。如果設定了此内容，則忽略DataRow索引選項</value>
   </data>
   <data name="Description69" xml:space="preserve">
-    <value>The DataTable variable from which to remove duplicate rows</value>
+    <value>要從中删除重複行的DataTable變數</value>
   </data>
   <data name="Description70" xml:space="preserve">
-    <value>Outputs a DataTable with duplicate rows removed, stored in the DataTable variable.  Placing the same variable as the variable in the Input field changes the initial variable, while providing a new variable makes the initial variable unaffected.</value>
+    <value>輸出已删除重複行的DataTable，存儲在DataTable變數中。放置與Input欄位中的變數相同的變數會更改初始變數，而提供新變數會使初始變數不受影響。</value>
   </data>
   <data name="Description71" xml:space="preserve">
-    <value>The DataTable variable to be sorted</value>
+    <value>要排序的DataTable變數</value>
   </data>
   <data name="Category9" xml:space="preserve">
-    <value>Column sort</value>
+    <value>列排序</value>
   </data>
   <data name="Description72" xml:space="preserve">
-    <value>The variable of the column sorted by it.  This field only supports DataColumn variables.  Setting a variable in this property field disables the other two properties</value>
+    <value>按其排序的列的變數。該欄位僅支持DataColumn變數。在此内容欄位中設定變數會禁用其他兩個内容</value>
   </data>
   <data name="DisplayName33" xml:space="preserve">
-    <value>Name</value>
+    <value>名稱</value>
   </data>
   <data name="DisplayName34" xml:space="preserve">
-    <value>Sort</value>
+    <value>排序</value>
   </data>
   <data name="Description73" xml:space="preserve">
-    <value>The sorted DataTable variable.  Placing the same variable as the variable in the Input field changes the initial variable, and adding a new variable leaves the initial variable unaffected.</value>
+    <value>排序後的DataTable變數。放置與Input欄位中的變數相同的變數會更改初始變數，而添加新變數會使初始變數不受影響。</value>
   </data>
   <data name="DisplayName35" xml:space="preserve">
-    <value>Date time</value>
+    <value>日期時間</value>
   </data>
   <data name="DisplayName36" xml:space="preserve">
-    <value>Conversion type</value>
+    <value>轉換類型</value>
   </data>
   <data name="DisplayName37" xml:space="preserve">
-    <value>Time</value>
+    <value>時間</value>
   </data>
   <data name="DisplayName38" xml:space="preserve">
-    <value>Time type</value>
+    <value>時間類型</value>
   </data>
   <data name="DisplayName39" xml:space="preserve">
-    <value>UI Element</value>
+    <value>UI元素</value>
   </data>
   <data name="Description74" xml:space="preserve">
-    <value>Enter UIElement</value>
+    <value>輸入UIElement</value>
   </data>
   <data name="DisplayName40" xml:space="preserve">
-    <value>Use coordinate points</value>
+    <value>使用座標點</value>
   </data>
   <data name="Description75" xml:space="preserve">
-    <value>The text of the popup window.</value>
+    <value>快顯視窗的文字。</value>
   </data>
   <data name="Description76" xml:space="preserve">
-    <value>The title of the popup window.</value>
+    <value>快顯視窗的標題。</value>
   </data>
   <data name="Description77" xml:space="preserve">
-    <value>Duration until the pop-up window closes automatically.  By default, pop-ups do not close.</value>
+    <value>持續時間，直到快顯視窗自動關閉。默認情况下，快顯視窗不會關閉。</value>
   </data>
   <data name="Description78" xml:space="preserve">
-    <value>This represents the full path or external URL of the HTML file.</value>
+    <value>這表示HTML檔案的完整路徑或外部URL。</value>
   </data>
   <data name="Description79" xml:space="preserve">
-    <value>The string returned by the provided HTML page.</value>
+    <value>提供的HTML頁面返回的字串。</value>
   </data>
   <data name="Description80" xml:space="preserve">
-    <value>The label of the form field.</value>
+    <value>表單欄位的標籤。</value>
   </data>
   <data name="Description81" xml:space="preserve">
-    <value>An array of options to choose from.  If you set it to contain only one element, a text box will appear to compose the text.  If it is set to contain 2 or 3 elements, they will appear as the radio button to choose from.  If it is set to contain more than 3 items, they will be displayed as a combo box for selection.  This field only supports string array variables.</value>
+    <value>可供選擇的選項數組。如果將其設定為只包含一個元素，則會出現一個文字方塊來編寫文字。如果將其設定為包含2或3個元素，則它們將顯示為要從中選擇的單選按鈕。如果將其設定為包含3個以上的項，則它們將作為下拉式列示方塊顯示以供選擇。此欄位只支持字串數組變數。</value>
   </data>
   <data name="Description82" xml:space="preserve">
-    <value>Enter the title of the dialog.</value>
+    <value>輸入對話方塊的標題。</value>
   </data>
   <data name="Description83" xml:space="preserve">
-    <value>The value inserted by the user in the input dialog.</value>
+    <value>用戶在輸入對話方塊中插入的值。</value>
   </data>
   <data name="Description84" xml:space="preserve">
-    <value>The title of the message box dialog.</value>
+    <value>訊息方塊對話方塊的標題。</value>
   </data>
   <data name="Description85" xml:space="preserve">
-    <value>The text to display in the message box.</value>
+    <value>要顯示在訊息方塊中的文字。</value>
   </data>
   <data name="Description86" xml:space="preserve">
-    <value>A string representing the button pressed in the message box dialog.  It can be: Ok, Yes, No or Cancel</value>
+    <value>表示訊息方塊對話方塊中按下的按鈕的字串。它可以是：Ok，Yes，No或Cancel</value>
   </data>
   <data name="DisplayName41" xml:space="preserve">
-    <value>System folder</value>
+    <value>系統資料夾</value>
   </data>
   <data name="DisplayName42" xml:space="preserve">
-    <value>Folder path</value>
+    <value>資料夾路徑</value>
   </data>
   <data name="DisplayName43" xml:space="preserve">
-    <value>Variable name</value>
+    <value>變數名稱</value>
   </data>
   <data name="DisplayName44" xml:space="preserve">
-    <value>Variable</value>
+    <value>變數值</value>
   </data>
   <data name="DisplayName45" xml:space="preserve">
-    <value>Password</value>
+    <value>密碼</value>
   </data>
   <data name="DisplayName46" xml:space="preserve">
-    <value>Result</value>
+    <value>結果</value>
   </data>
   <data name="DisplayName47" xml:space="preserve">
-    <value>Beep type</value>
+    <value>提示音類型</value>
   </data>
   <data name="Description87" xml:space="preserve">
-    <value>The path to the file.  If the path is incomplete, create a file in the project folder.</value>
+    <value>檔案的路徑。如果路徑不完整，則在項目資料夾中創建檔案。</value>
   </data>
   <data name="Description88" xml:space="preserve">
-    <value>The text to be attached to the file.</value>
+    <value>要附加到檔案中的文字。</value>
   </data>
   <data name="Description89" xml:space="preserve">
-    <value>The path to the file to be copied.</value>
+    <value>要複製的檔案的路徑。</value>
   </data>
   <data name="Description90" xml:space="preserve">
-    <value>The target path of the file to be copied.</value>
+    <value>要複製檔案的目標路徑。</value>
   </data>
   <data name="Description91" xml:space="preserve">
-    <value>The full path to the directory to be created.</value>
+    <value>要創建的目錄的完整路徑。</value>
   </data>
   <data name="Description92" xml:space="preserve">
-    <value>The name of the file to create.</value>
+    <value>要創建的檔案的名稱。</value>
   </data>
   <data name="Description93" xml:space="preserve">
-    <value>The full path to the file to be created.</value>
+    <value>要創建的檔案的完整路徑。</value>
   </data>
   <data name="Description94" xml:space="preserve">
-    <value>The path to the file or directory to be permanently deleted.</value>
+    <value>要永久删除的檔案或目錄的路徑。</value>
   </data>
   <data name="Description95" xml:space="preserve">
-    <value>The path to the file to move.</value>
+    <value>要移動的檔案的路徑。</value>
   </data>
   <data name="Description96" xml:space="preserve">
-    <value>The target path to move the file.</value>
+    <value>要移動檔案的目標路徑。</value>
   </data>
   <data name="Description97" xml:space="preserve">
-    <value>The full path to check.</value>
+    <value>要檢查的完整路徑。</value>
   </data>
   <data name="Description98" xml:space="preserve">
-    <value>Declare whether a document or file is found.</value>
+    <value>聲明是否找到檔案或檔案。</value>
   </data>
   <data name="Description99" xml:space="preserve">
-    <value>The path to the file to be read.</value>
+    <value>要讀取的檔案的路徑。</value>
   </data>
   <data name="Description100" xml:space="preserve">
-    <value>The text extracted from the file stored in the string variable.</value>
+    <value>從存儲在字串變數中的檔案中選取的文字。</value>
   </data>
   <data name="Description101" xml:space="preserve">
-    <value>The path to the file to be written.</value>
+    <value>要寫入的檔案的路徑。</value>
   </data>
   <data name="Description102" xml:space="preserve">
-    <value>The text to be written to the file.</value>
+    <value>要寫入檔案的文字。</value>
   </data>
   <data name="DisplayName48" xml:space="preserve">
-    <value>Credential name</value>
+    <value>憑據名稱</value>
   </data>
   <data name="Description103" xml:space="preserve">
-    <value>The name of the credential obtained in the system</value>
+    <value>系統中獲取的憑據名稱</value>
   </data>
   <data name="DisplayName49" xml:space="preserve">
-    <value>Timeout (ms)</value>
+    <value>超時時間（毫秒）</value>
   </data>
   <data name="Description104" xml:space="preserve">
-    <value>Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds)</value>
+    <value>指定在引發錯誤之前等待活動運行的時間量（以毫秒為組織）。預設值為30000毫秒（30秒）</value>
   </data>
   <data name="Description105" xml:space="preserve">
-    <value>The secure password of the retrieved credentials</value>
+    <value>檢索到的憑證的安全密碼</value>
   </data>
   <data name="DisplayName50" xml:space="preserve">
-    <value>UserName</value>
+    <value>用戶名</value>
   </data>
   <data name="Description106" xml:space="preserve">
-    <value>User name of the retrieved voucher</value>
+    <value>檢索到的憑證的用戶名</value>
   </data>
   <data name="Description107" xml:space="preserve">
-    <value>Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised. The default value is 30000 milliseconds (30 seconds)</value>
+    <value>指定在引發錯誤之前等待活動運行的時間量（以毫秒為組織），預設值為30000毫秒（30秒）</value>
   </data>
   <data name="DisplayName51" xml:space="preserve">
-    <value>Error continues to execute</value>
+    <value>錯誤繼續執行</value>
   </data>
   <data name="Description108" xml:space="preserve">
-    <value>Specifies whether automation should continue even if the activity raises an error</value>
+    <value>指定即使活動引發錯誤，自動化是否仍應繼續</value>
   </data>
   <data name="Category10" xml:space="preserve">
-    <value>Credential option</value>
+    <value>憑證選項</value>
   </data>
   <data name="Description109" xml:space="preserve">
-    <value>Set the username of the credential</value>
+    <value>設定憑證的用戶名</value>
   </data>
   <data name="Description110" xml:space="preserve">
-    <value>Set the password for the credential</value>
+    <value>設定憑證的密碼</value>
   </data>
   <data name="DisplayName52" xml:space="preserve">
-    <value>Credential name</value>
+    <value>憑證名稱</value>
   </data>
   <data name="Description111" xml:space="preserve">
-    <value>The name of the credential to update</value>
+    <value>要更新的憑據名稱</value>
   </data>
   <data name="Description112" xml:space="preserve">
-    <value>The PowerShell command to execute.</value>
+    <value>要執行的PowerShell命令。</value>
   </data>
   <data name="Description113" xml:space="preserve">
-    <value>A collection of PSObjects passed to the writer of the pipeline used to execute the command.  Can be the output of another InvokePowerShell activity.</value>
+    <value>傳遞給用於執行命令的筦道的編寫器的PSObjects的集合。可以是另一個InvokePowerShell活動的輸出。</value>
   </data>
   <data name="Description114" xml:space="preserve">
-    <value>A set of type parameters objets returned when the command is executed.  Can be used to pipe several InvokePowerShell activities.</value>
+    <value>命令執行時返回的一組類型參數objets。可以用於筦道幾個InvokePowerShell活動。</value>
   </data>
   <data name="Description115" xml:space="preserve">
-    <value>Workflow file path, must be enclosed in double quotes</value>
+    <value>工作流檔案路徑，必須用雙引號括起來</value>
   </data>
   <data name="ReselectIt" xml:space="preserve">
-    <value>Reselect</value>
+    <value>重新選取</value>
   </data>
   <data name="TapScreen" xml:space="preserve">
-    <value>Indicate on screen</value>
+    <value>點擊荧幕</value>
   </data>
   <data name="DragControlHere" xml:space="preserve">
-    <value>Drag and drop controls here</value>
+    <value>拖放控制項到這裡</value>
   </data>
   <data name="GuideText" xml:space="preserve">
-    <value>Guide</value>
+    <value>嚮導</value>
   </data>
   <data name="DoubleQuotesHintText" xml:space="preserve">
-    <value>Text must be enclosed in double quotes</value>
+    <value>文字必須用雙引號括起來</value>
   </data>
   <data name="EditCode" xml:space="preserve">
-    <value>Edit code</value>
+    <value>編輯程式碼</value>
   </data>
   <data name="EditParameter" xml:space="preserve">
-    <value>Edit parameter</value>
+    <value>編輯參數</value>
   </data>
   <data name="EnterPassword" xml:space="preserve">
-    <value>Enter password</value>
+    <value>輸入密碼</value>
   </data>
   <data name="ImportParameters" xml:space="preserve">
-    <value>Import parameters</value>
+    <value>導入參數</value>
   </data>
   <data name="LevelText" xml:space="preserve">
-    <value>Level</value>
+    <value>級別</value>
   </data>
   <data name="NewsText" xml:space="preserve">
-    <value>News</value>
+    <value>消息</value>
   </data>
   <data name="SpecialFolder" xml:space="preserve">
-    <value>Special folder</value>
+    <value>特殊資料夾</value>
   </data>
   <data name="WorkflowFilepathTip" xml:space="preserve">
-    <value>Workflow file path, must be enclosed in double quotes</value>
+    <value>工作流檔案路徑，必須用雙引號括起來</value>
   </data>
   <data name="CommonText" xml:space="preserve">
     <value>Common</value>
@@ -700,133 +700,133 @@
     <value>Input</value>
   </data>
   <data name="DisplayName53" xml:space="preserve">
-    <value>Save type</value>
+    <value>保存類型</value>
   </data>
   <data name="DisplayName54" xml:space="preserve">
-    <value>Default filename</value>
+    <value>默認檔名</value>
   </data>
   <data name="DisplayName55" xml:space="preserve">
-    <value>Save as location</value>
+    <value>另存為位置</value>
   </data>
   <data name="xBuildingDataTable" xml:space="preserve">
-    <value>Build DataTable</value>
+    <value>構建資料表</value>
   </data>
   <data name="xOK" xml:space="preserve">
-    <value>OK</value>
+    <value>確定</value>
   </data>
   <data name="xCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>取消</value>
   </data>
   <data name="xConfigurationWizard" xml:space="preserve">
-    <value>Filter Wizard</value>
+    <value>配寘嚮導</value>
   </data>
   <data name="xDataSheetInput" xml:space="preserve">
-    <value>Input DataTable</value>
+    <value>資料表（輸入）</value>
   </data>
   <data name="xDataSheetOutput" xml:space="preserve">
-    <value>Output DataTable</value>
+    <value>資料表（輸出）</value>
   </data>
   <data name="xFilterRows" xml:space="preserve">
-    <value>Filter Rows</value>
+    <value>過濾行</value>
   </data>
   <data name="xRowFilteringMode" xml:space="preserve">
-    <value>Rows Filtering Mode</value>
+    <value>行過濾模式</value>
   </data>
   <data name="xKeep" xml:space="preserve">
-    <value>Keep</value>
+    <value>保留</value>
   </data>
   <data name="xDelete" xml:space="preserve">
-    <value>Remove</value>
+    <value>删除</value>
   </data>
   <data name="xCol" xml:space="preserve">
-    <value>Column</value>
+    <value>列</value>
   </data>
   <data name="xOperation" xml:space="preserve">
-    <value>Operation</value>
+    <value>操作</value>
   </data>
   <data name="xVal" xml:space="preserve">
-    <value>Value</value>
+    <value>值</value>
   </data>
   <data name="xOutputCol" xml:space="preserve">
-    <value>Output column</value>
+    <value>輸出列</value>
   </data>
   <data name="xColSelectMode" xml:space="preserve">
-    <value>Column selection mode</value>
+    <value>列選擇模式</value>
   </data>
   <data name="xGenerateDataTable" xml:space="preserve">
-    <value>Generate data table</value>
+    <value>生成資料表</value>
   </data>
   <data name="xInputExample" xml:space="preserve">
-    <value>Sample Input</value>
+    <value>輸入示例</value>
   </data>
   <data name="xPreviewText" xml:space="preserve">
-    <value>Test Preview</value>
+    <value>預覽測試</value>
   </data>
   <data name="xDatasheetOption" xml:space="preserve">
-    <value>Datasheet options</value>
+    <value>資料表選項</value>
   </data>
   <data name="xAutoDetectColType" xml:space="preserve">
-    <value>AutoDetect Column Types</value>
+    <value>自動檢測列類型</value>
   </data>
   <data name="xFirstLineAsHeader" xml:space="preserve">
-    <value>Use First Row as Column Headers</value>
+    <value>首行作數據表頭</value>
   </data>
   <data name="xIgnoreFirstLine" xml:space="preserve">
-    <value>Ignore First Row</value>
+    <value>忽略首行</value>
   </data>
   <data name="xFormatOption" xml:space="preserve">
-    <value>Formatting Options</value>
+    <value>格式選項</value>
   </data>
   <data name="xColDelimiter" xml:space="preserve">
-    <value>Column Separators</value>
+    <value>列分隔符號</value>
   </data>
   <data name="xLineBreak" xml:space="preserve">
-    <value>NewLine Separator</value>
+    <value>分行符號</value>
   </data>
   <data name="xFixedFormatOption" xml:space="preserve">
-    <value>Fixed formatting Options</value>
+    <value>固定格式選項</value>
   </data>
   <data name="xPredefinedColumns" xml:space="preserve">
-    <value>Predefined Columns</value>
+    <value>預定義列</value>
   </data>
   <data name="xPreview" xml:space="preserve">
-    <value>Preview</value>
+    <value>預覽</value>
   </data>
   <data name="xInputTable1" xml:space="preserve">
-    <value>Input DataTable 1</value>
+    <value>輸入資料表1</value>
   </data>
   <data name="xInputTable2" xml:space="preserve">
-    <value>Input DataTable 2</value>
+    <value>輸入資料表2</value>
   </data>
   <data name="xInputTable" xml:space="preserve">
-    <value>Output DataTable</value>
+    <value>輸入資料表</value>
   </data>
   <data name="xColEditWizard" xml:space="preserve">
-    <value>Column Editing Wizard</value>
+    <value>列編輯嚮導</value>
   </data>
   <data name="xColName" xml:space="preserve">
-    <value>Column Name</value>
+    <value>列名</value>
   </data>
   <data name="xDataType" xml:space="preserve">
-    <value>type of data</value>
+    <value>資料類型</value>
   </data>
   <data name="xEmptyAllowed" xml:space="preserve">
-    <value>Allowed to be empty</value>
+    <value>允許為空</value>
   </data>
   <data name="xAutoIncrement" xml:space="preserve">
-    <value>Auto increment</value>
+    <value>自動遞增</value>
   </data>
   <data name="xDefaultVal" xml:space="preserve">
-    <value>Defaults</value>
+    <value>預設值</value>
   </data>
   <data name="xUniqueConstraint" xml:space="preserve">
-    <value>Unique constraint</value>
+    <value>唯一約束</value>
   </data>
   <data name="xMaxLength" xml:space="preserve">
-    <value>The maximum length</value>
+    <value>最大長度</value>
   </data>
   <data name="xJoinTableTitle" xml:space="preserve">
-    <value>Join Wizard</value>
+    <value>附加資料表</value>
   </data>
   <data name="xForEach" xml:space="preserve">
     <value>ForEach</value>
@@ -835,9 +835,12 @@
     <value>in</value>
   </data>
   <data name="xDataTableFieldHint" xml:space="preserve">
-    <value>DataTable Variable</value>
+    <value>DataTable變數</value>
   </data>
-  <data name="xDataTableFieldHint" xml:space="preserve">
-    <value>DataTable Variable</value>
+  <data name="IgnoredActivity" xml:space="preserve">
+    <value>忽略的活動</value>
+  </data>
+  <data name="WriteCommentInTextProperty" xml:space="preserve">
+    <value>請在Text屬性中寫下註釋內容</value>
   </data>
 </root>

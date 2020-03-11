@@ -118,957 +118,954 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Category1" xml:space="preserve">
-    <value>Connection configuration</value>
+    <value>连接配置</value>
   </data>
   <data name="Description1" xml:space="preserve">
-    <value>The connection string used to establish a database connection</value>
+    <value>用于建立数据库连接的连接字符串</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
-    <value>Connection string</value>
+    <value>连接字符串</value>
   </data>
   <data name="Description2" xml:space="preserve">
-    <value>The name of the database provider used to access the database</value>
+    <value>用于访问数据库的数据库提供程序的名称</value>
   </data>
   <data name="DisplayName2" xml:space="preserve">
-    <value>Program name</value>
+    <value>程序名称</value>
   </data>
   <data name="Category2" xml:space="preserve">
-    <value>Output</value>
+    <value>输出</value>
   </data>
   <data name="Description3" xml:space="preserve">
-    <value>Database Connectivity</value>
+    <value>数据库连接</value>
   </data>
   <data name="DisplayName3" xml:space="preserve">
-    <value>Variable for saving database connections (DatabaseConnection only)</value>
+    <value>用于保存数据库连接的变量(仅支持DatabaseConnection)</value>
   </data>
   <data name="Category3" xml:space="preserve">
-    <value>Disconnect</value>
+    <value>断开连接</value>
   </data>
   <data name="Description4" xml:space="preserve">
-    <value>Database connection to close (DatabaseConnection variable)</value>
+    <value>要关闭的数据库连接(DatabaseConnection变量)</value>
   </data>
   <data name="Category4" xml:space="preserve">
-    <value>Option</value>
+    <value>选项</value>
   </data>
   <data name="DisplayName4" xml:space="preserve">
-    <value>Timeout</value>
+    <value>超时时间</value>
   </data>
   <data name="Description5" xml:space="preserve">
-    <value>Specify browser response timeout (ms)</value>
+    <value>指定浏览器响应超时时间(毫秒)</value>
   </data>
   <data name="DisplayName5" xml:space="preserve">
-    <value>Error continues to execute</value>
+    <value>错误继续执行</value>
   </data>
   <data name="Description6" xml:space="preserve">
-    <value>Whether an error occurs or not</value>
+    <value>出现错误是否继续执行</value>
   </data>
   <data name="DisplayName6" xml:space="preserve">
-    <value>Existing database connection</value>
+    <value>现有数据库连接</value>
   </data>
   <data name="Category5" xml:space="preserve">
-    <value>Enter</value>
+    <value>输入</value>
   </data>
   <data name="Description7" xml:space="preserve">
-    <value>Insert the DataTable variable in the table.  The name and description of the DataTable column must match the name and description in the database table</value>
+    <value>插入表中的DataTable变量。DataTable列的名称和描述必须与数据库表中的名称和描述相匹配</value>
   </data>
   <data name="Description8" xml:space="preserve">
-    <value>The SQL table in which to insert data</value>
+    <value>要在其中插入数据的SQL表</value>
   </data>
   <data name="DisplayName7" xml:space="preserve">
-    <value>Table Name</value>
+    <value>表名</value>
   </data>
   <data name="DisplayName8" xml:space="preserve">
-    <value>Results of the</value>
+    <value>执行结果</value>
   </data>
   <data name="Description9" xml:space="preserve">
-    <value>Store the number of affected rows in the Int32 variable</value>
+    <value>将受影响的行数存储到Int32变量中</value>
   </data>
   <data name="DisplayName9" xml:space="preserve">
-    <value>Command type</value>
+    <value>命令类型</value>
   </data>
   <data name="Description10" xml:space="preserve">
-    <value>Specify how to interpret the command string</value>
+    <value>指定如何解释命令字符串</value>
   </data>
   <data name="Description11" xml:space="preserve">
-    <value>Executed SQL command statement</value>
+    <value>执行的SQL命令语句</value>
   </data>
   <data name="DisplayName10" xml:space="preserve">
-    <value>Parameter</value>
+    <value>参数</value>
   </data>
   <data name="Description12" xml:space="preserve">
-    <value>For UPDATE, INSERT, and DELETE statements, the return value is the number of rows affected by the command.  For all other types of statements, the return value is -1</value>
+    <value>对于UPDATE，INSERT和DELETE语句，返回值是受命令影响的行数。对于所有其他类型的语句，返回值为-1</value>
   </data>
   <data name="Description13" xml:space="preserve">
-    <value>Store the output of the SQL query in the DataTable variable</value>
+    <value>将SQL查询的输出存储在DataTable变量中</value>
   </data>
   <data name="DisplayName11" xml:space="preserve">
-    <value>Transaction</value>
+    <value>事务</value>
   </data>
   <data name="Description14" xml:space="preserve">
-    <value>Specifies whether database operations in this activity should be wrapped in a database transaction</value>
+    <value>指定此活动中的数据库操作是否应包装在数据库事务中</value>
   </data>
   <data name="DisplayName12" xml:space="preserve">
-    <value>File path</value>
+    <value>文件路径</value>
   </data>
   <data name="DisplayName13" xml:space="preserve">
-    <value>Separator</value>
+    <value>分隔符</value>
   </data>
   <data name="DisplayName14" xml:space="preserve">
-    <value>Character Encoding</value>
+    <value>字符编码</value>
   </data>
   <data name="DisplayName15" xml:space="preserve">
-    <value>Column name</value>
+    <value>列名</value>
   </data>
   <data name="DisplayName16" xml:space="preserve">
-    <value>Row</value>
+    <value>行</value>
   </data>
   <data name="DisplayName17" xml:space="preserve">
-    <value>Column</value>
+    <value>列</value>
   </data>
   <data name="DisplayName18" xml:space="preserve">
-    <value>Sheet Name</value>
+    <value>工作表名称</value>
   </data>
   <data name="DisplayName19" xml:space="preserve">
-    <value>Cell content</value>
+    <value>单元格内容</value>
   </data>
   <data name="Description15" xml:space="preserve">
-    <value>The delay in milliseconds after the activity is performed.  The default time is 3000 milliseconds.</value>
+    <value>执行活动后的延迟时间(以毫秒为单位)。默认时间为3000毫秒。</value>
   </data>
   <data name="Description16" xml:space="preserve">
-    <value>The time (in milliseconds) before the deferred activity begins any operation.  The default time is 0 milliseconds.</value>
+    <value>延迟活动开始执行任何操作之前的时间(以毫秒为单位)。默认时间为0毫秒。</value>
   </data>
   <data name="Category6" xml:space="preserve">
-    <value>New/Open Document Options</value>
+    <value>新建/打开文档选项</value>
   </data>
   <data name="DisplayName20" xml:space="preserve">
-    <value>Whether to create a new document</value>
+    <value>是否创建新文档</value>
   </data>
   <data name="DisplayName21" xml:space="preserve">
-    <value>Visible</value>
+    <value>流程是否可见</value>
   </data>
   <data name="Category7" xml:space="preserve">
-    <value>Save option</value>
+    <value>保存选项</value>
   </data>
   <data name="DisplayName22" xml:space="preserve">
-    <value>Whether the program exits</value>
+    <value>程序是否退出</value>
   </data>
   <data name="DisplayName23" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="DisplayName24" xml:space="preserve">
-    <value>Save As</value>
+    <value>另存为</value>
   </data>
   <data name="Category8" xml:space="preserve">
-    <value>Paste option</value>
+    <value>粘贴选项</value>
   </data>
   <data name="Description17" xml:space="preserve">
-    <value>Paste the starting cell of the cell range</value>
+    <value>粘贴单元格区域的起始单元格</value>
   </data>
   <data name="Description18" xml:space="preserve">
-    <value>Paste the work area name of the cell area</value>
+    <value>粘贴单元格区域的工作薄名称</value>
   </data>
   <data name="Category9" xml:space="preserve">
-    <value>Copy Option</value>
+    <value>复制选项</value>
   </data>
   <data name="Description19" xml:space="preserve">
-    <value>Store a DataTable that reads data</value>
+    <value>存储读取数据的DataTable</value>
   </data>
   <data name="Description20" xml:space="preserve">
-    <value>DataTable variable name to write data to</value>
+    <value>写入数据的DataTable变量名</value>
   </data>
   <data name="DisplayName25" xml:space="preserve">
-    <value>Row operation</value>
+    <value>行列操作</value>
   </data>
   <data name="DisplayName26" xml:space="preserve">
-    <value>Row selection</value>
+    <value>行列选择</value>
   </data>
   <data name="DisplayName27" xml:space="preserve">
-    <value>Line number / column number (start)</value>
+    <value>行号/列号(开始)</value>
   </data>
   <data name="DisplayName28" xml:space="preserve">
-    <value>Line number / column number (end)</value>
+    <value>行号/列号(结束)</value>
   </data>
   <data name="DisplayName29" xml:space="preserve">
-    <value>Cell fill color</value>
+    <value>单元格填充色</value>
   </data>
   <data name="DisplayName30" xml:space="preserve">
-    <value>Alignment</value>
+    <value>对齐方式</value>
   </data>
   <data name="Category10" xml:space="preserve">
-    <value>Font setting</value>
+    <value>字体设置</value>
   </data>
   <data name="DisplayName31" xml:space="preserve">
-    <value>Font</value>
+    <value>字体</value>
   </data>
   <data name="DisplayName32" xml:space="preserve">
-    <value>Font size</value>
+    <value>字号</value>
   </data>
   <data name="DisplayName33" xml:space="preserve">
-    <value>Colour</value>
+    <value>颜色</value>
   </data>
   <data name="DisplayName34" xml:space="preserve">
-    <value>Bold</value>
+    <value>粗体</value>
   </data>
   <data name="DisplayName35" xml:space="preserve">
-    <value>Italic</value>
+    <value>斜体</value>
   </data>
   <data name="DisplayName36" xml:space="preserve">
-    <value>Bottom line</value>
+    <value>底线</value>
   </data>
   <data name="Category11" xml:space="preserve">
-    <value>Row height column width</value>
+    <value>行高列宽</value>
   </data>
   <data name="DisplayName37" xml:space="preserve">
-    <value>Row height</value>
+    <value>行高</value>
   </data>
   <data name="DisplayName38" xml:space="preserve">
-    <value>Column width</value>
+    <value>列宽</value>
   </data>
   <data name="Category12" xml:space="preserve">
-    <value>Frame</value>
+    <value>边框</value>
   </data>
   <data name="DisplayName39" xml:space="preserve">
-    <value>Border selection</value>
+    <value>边框选择</value>
   </data>
   <data name="DisplayName40" xml:space="preserve">
-    <value>Worksheet order</value>
+    <value>工作表次序</value>
   </data>
   <data name="DisplayName41" xml:space="preserve">
-    <value>Function option</value>
+    <value>功能选项</value>
   </data>
   <data name="DisplayName42" xml:space="preserve">
-    <value>Worksheet new name</value>
+    <value>工作表新名称</value>
   </data>
   <data name="DisplayName43" xml:space="preserve">
-    <value>VBA name</value>
+    <value>VBA名称</value>
   </data>
   <data name="DisplayName44" xml:space="preserve">
-    <value>Return Value</value>
+    <value>返回值</value>
   </data>
   <data name="DisplayName45" xml:space="preserve">
-    <value>Path</value>
+    <value>路径</value>
   </data>
   <data name="DisplayName46" xml:space="preserve">
-    <value>Exists</value>
+    <value>是否存在</value>
   </data>
   <data name="DisplayName47" xml:space="preserve">
-    <value>Local path</value>
+    <value>本地路径</value>
   </data>
   <data name="DisplayName48" xml:space="preserve">
-    <value>Create folder</value>
+    <value>创建文件夹</value>
   </data>
   <data name="DisplayName49" xml:space="preserve">
-    <value>Include subfolders</value>
+    <value>包含子文件夹</value>
   </data>
   <data name="DisplayName50" xml:space="preserve">
-    <value>Cover</value>
+    <value>覆盖</value>
   </data>
   <data name="DisplayName51" xml:space="preserve">
-    <value>Enumerate file</value>
+    <value>枚举文件</value>
   </data>
   <data name="DisplayName52" xml:space="preserve">
-    <value>FTP path</value>
+    <value>FTP路径</value>
   </data>
   <data name="DisplayName53" xml:space="preserve">
-    <value>Create</value>
+    <value>创建</value>
   </data>
   <data name="Category13" xml:space="preserve">
-    <value>server</value>
+    <value>服务器</value>
   </data>
   <data name="DisplayName54" xml:space="preserve">
-    <value>Host</value>
+    <value>主机</value>
   </data>
   <data name="DisplayName55" xml:space="preserve">
-    <value>Port</value>
+    <value>端口</value>
   </data>
   <data name="Category14" xml:space="preserve">
-    <value>Credential</value>
+    <value>凭据</value>
   </data>
   <data name="DisplayName56" xml:space="preserve">
-    <value>Username</value>
+    <value>用户名</value>
   </data>
   <data name="DisplayName57" xml:space="preserve">
-    <value>Password</value>
+    <value>密码</value>
   </data>
   <data name="DisplayName58" xml:space="preserve">
-    <value>Anonymous login</value>
+    <value>匿名登录</value>
   </data>
   <data name="Category15" xml:space="preserve">
-    <value>Security Settings</value>
+    <value>安全设置</value>
   </data>
   <data name="DisplayName59" xml:space="preserve">
-    <value>FTPS mode</value>
+    <value>FTPS模式</value>
   </data>
   <data name="DisplayName60" xml:space="preserve">
-    <value>Use SFTP</value>
+    <value>使用SFTP</value>
   </data>
   <data name="DisplayName61" xml:space="preserve">
-    <value>Client certificate path</value>
+    <value>客户端证书路径</value>
   </data>
   <data name="DisplayName62" xml:space="preserve">
-    <value>Client certificate password</value>
+    <value>客户端证书密码</value>
   </data>
   <data name="DisplayName63" xml:space="preserve">
-    <value>Accept all certificates</value>
+    <value>接受所有证书</value>
   </data>
   <data name="Category16" xml:space="preserve">
-    <value>Log in</value>
+    <value>登录</value>
   </data>
   <data name="DisplayName64" xml:space="preserve">
-    <value>Mail account</value>
+    <value>邮件账户</value>
   </data>
   <data name="Description21" xml:space="preserve">
-    <value>Email account used to send mail</value>
+    <value>用于发送邮件的电子邮件帐户</value>
   </data>
   <data name="Description22" xml:space="preserve">
-    <value>The password for the email account used to send the message</value>
+    <value>用于发送邮件的电子邮件帐户的密码</value>
   </data>
   <data name="Description23" xml:space="preserve">
-    <value>Email server host used</value>
+    <value>使用的电子邮件服务器主机</value>
   </data>
   <data name="Description24" xml:space="preserve">
-    <value>The port that the email will pass through</value>
+    <value>电子邮件将通过的端口</value>
   </data>
   <data name="DisplayName65" xml:space="preserve">
-    <value>Folder</value>
+    <value>文件夹</value>
   </data>
   <data name="Description25" xml:space="preserve">
-    <value>Retrieve the message's mail folder</value>
+    <value>检索消息的邮件文件夹</value>
   </data>
   <data name="DisplayName66" xml:space="preserve">
-    <value>Secure connection</value>
+    <value>安全连接</value>
   </data>
   <data name="Description26" xml:space="preserve">
-    <value>Specify SSL and/or TLS encryption for the connection</value>
+    <value>指定用于连接的SSL和/或TLS加密</value>
   </data>
   <data name="DisplayName67" xml:space="preserve">
-    <value>Retrieve the number of messages</value>
+    <value>检索消息数</value>
   </data>
   <data name="Description27" xml:space="preserve">
-    <value>Number of messages retrieved from the top of the list</value>
+    <value>从列表顶部开始检索的消息数</value>
   </data>
   <data name="DisplayName68" xml:space="preserve">
-    <value>Tag message deletion</value>
+    <value>标记消息删除</value>
   </data>
   <data name="Description28" xml:space="preserve">
-    <value>Specifies whether the read message should be marked for deletion</value>
+    <value> 指定是否应将读取的消息标记为删除</value>
   </data>
   <data name="DisplayName69" xml:space="preserve">
-    <value>Mark as read</value>
+    <value>标为已读</value>
   </data>
   <data name="Description29" xml:space="preserve">
-    <value>Specifies whether the retrieved message is marked as read</value>
+    <value>指定是否将检索到的消息标记为已读</value>
   </data>
   <data name="DisplayName70" xml:space="preserve">
-    <value>Retrieve only unread messages</value>
+    <value>仅检索未读消息</value>
   </data>
   <data name="Description30" xml:space="preserve">
-    <value>Specifies whether to retrieve only unread messages</value>
+    <value>指定是否仅检索未读消息</value>
   </data>
   <data name="DisplayName71" xml:space="preserve">
-    <value>Retrieve all unread messages</value>
+    <value>检索所有未读消息</value>
   </data>
   <data name="Category17" xml:space="preserve">
-    <value>Filter</value>
+    <value>筛选</value>
   </data>
   <data name="DisplayName72" xml:space="preserve">
-    <value>Subject keyword</value>
+    <value>主题关键字</value>
   </data>
   <data name="Description31" xml:space="preserve">
-    <value>Filter the corresponding message based on the subject of the message</value>
+    <value>根据邮件主题筛选相应的邮件</value>
   </data>
   <data name="DisplayName73" xml:space="preserve">
-    <value>Sender keyword</value>
+    <value>发件人关键字</value>
   </data>
   <data name="Description32" xml:space="preserve">
-    <value>Filter the corresponding message based on the sender's address</value>
+    <value>根据发件人地址筛选相应的邮件</value>
   </data>
   <data name="DisplayName74" xml:space="preserve">
-    <value>Content keyword</value>
+    <value>内容关键字</value>
   </data>
   <data name="Description33" xml:space="preserve">
-    <value>Filter the corresponding message based on the message's hypertext content</value>
+    <value>根据邮件超文本内容筛选相应的邮件</value>
   </data>
   <data name="DisplayName75" xml:space="preserve">
-    <value>Message</value>
+    <value>消息</value>
   </data>
   <data name="Description34" xml:space="preserve">
-    <value>Use the retrieved message as a collection of MailMessage objects</value>
+    <value>将检索到的消息作为MailMessage对象的集合</value>
   </data>
   <data name="DisplayName76" xml:space="preserve">
-    <value>Mail</value>
+    <value>邮件</value>
   </data>
   <data name="Description35" xml:space="preserve">
-    <value>The message used to extract the image, this field only supports the MimeMessage variable.</value>
+    <value>用于提取图片的邮件，该字段仅支持MimeMessage变量</value>
   </data>
   <data name="Description36" xml:space="preserve">
-    <value>Store the mail in the mail to a local directory. If it is empty, it will not be saved.</value>
+    <value>将邮件中的邮件存储到本地目录,为空则不保存</value>
   </data>
   <data name="DisplayName77" xml:space="preserve">
-    <value>Picture path list</value>
+    <value>图片路径列表</value>
   </data>
   <data name="Description37" xml:space="preserve">
-    <value>Picture local save path list</value>
+    <value>图片本地保存路径列表</value>
   </data>
   <data name="DisplayName78" xml:space="preserve">
-    <value>Image resource list</value>
+    <value>图片资源列表</value>
   </data>
   <data name="Description38" xml:space="preserve">
-    <value>Save image information, divided into address and base64 code</value>
+    <value>保存图片信息，分为地址和base64码两种方式</value>
   </data>
   <data name="Description39" xml:space="preserve">
-    <value>Specifies whether messages should be sent using SSL</value>
+    <value>指定是否应使用SSL发送消息</value>
   </data>
   <data name="DisplayName79" xml:space="preserve">
-    <value>Target folder</value>
+    <value>目标文件夹</value>
   </data>
   <data name="Description40" xml:space="preserve">
-    <value>The mail folder to which you want to move the message</value>
+    <value>要将消息移动到的邮件文件夹</value>
   </data>
   <data name="DisplayName80" xml:space="preserve">
-    <value>Source folder</value>
+    <value>源文件夹</value>
   </data>
   <data name="Description41" xml:space="preserve">
-    <value>A folder where you can find mail messages</value>
+    <value>可以找到邮件消息的文件夹</value>
   </data>
   <data name="DisplayName81" xml:space="preserve">
-    <value>Mail message</value>
+    <value>邮件消息</value>
   </data>
   <data name="Description42" xml:space="preserve">
-    <value>MailMessage object to move</value>
+    <value>要移动的MailMessage对象</value>
   </data>
   <data name="Description43" xml:space="preserve">
-    <value>To save the full path of the MailMessage object</value>
+    <value>要保存MailMessage对象的完整路径</value>
   </data>
   <data name="Description44" xml:space="preserve">
-    <value>The MailMessage object to save</value>
+    <value>要保存的MailMessage对象</value>
   </data>
   <data name="Description45" xml:space="preserve">
-    <value>The full path to save the MimeMessage attachment</value>
+    <value>要保存MimeMessage附件的完整路径</value>
   </data>
   <data name="Description46" xml:space="preserve">
-    <value>MimeMessage attachment to save</value>
+    <value>要保存的MimeMessage附件</value>
   </data>
   <data name="DisplayName82" xml:space="preserve">
-    <value>Attachment list</value>
+    <value>附件列表</value>
   </data>
   <data name="Description47" xml:space="preserve">
-    <value>Retrieved attachment</value>
+    <value>检索到的附件</value>
   </data>
   <data name="Category18" xml:space="preserve">
-    <value>Sender</value>
+    <value>寄件人</value>
   </data>
   <data name="DisplayName83" xml:space="preserve">
-    <value>Name</value>
+    <value>名称</value>
   </data>
   <data name="Description48" xml:space="preserve">
-    <value>Sender's display name</value>
+    <value>发件人的显示名称</value>
   </data>
   <data name="DisplayName84" xml:space="preserve">
-    <value>Sender</value>
+    <value>发件人</value>
   </data>
   <data name="Description49" xml:space="preserve">
-    <value>Sender's email address</value>
+    <value>发件人的电子邮件地址</value>
   </data>
   <data name="Category19" xml:space="preserve">
-    <value>Recipient</value>
+    <value>收件人</value>
   </data>
   <data name="Description50" xml:space="preserve">
-    <value>Primary recipient of the email</value>
+    <value>电子邮件的主要收件人</value>
   </data>
   <data name="DisplayName85" xml:space="preserve">
-    <value>Cc</value>
+    <value>抄送</value>
   </data>
   <data name="Description51" xml:space="preserve">
-    <value>Secondary recipient of the email</value>
+    <value>电子邮件的次要收件人</value>
   </data>
   <data name="DisplayName86" xml:space="preserve">
-    <value>BCC</value>
+    <value>密件抄送</value>
   </data>
   <data name="Description52" xml:space="preserve">
-    <value>Hidden recipient of email</value>
+    <value>电子邮件的隐藏收件人</value>
   </data>
   <data name="Category20" xml:space="preserve">
-    <value>e-mail</value>
+    <value>电子邮件</value>
   </data>
   <data name="DisplayName87" xml:space="preserve">
-    <value>Subject</value>
+    <value>主题</value>
   </data>
   <data name="Description53" xml:space="preserve">
-    <value>Email subject</value>
+    <value>电子邮件的主题</value>
   </data>
   <data name="DisplayName88" xml:space="preserve">
-    <value>Text</value>
+    <value>正文</value>
   </data>
   <data name="Description54" xml:space="preserve">
-    <value>The body of the email</value>
+    <value>电子邮件的正文</value>
   </data>
   <data name="DisplayName89" xml:space="preserve">
-    <value>Priority</value>
+    <value>优先级</value>
   </data>
   <data name="Description55" xml:space="preserve">
-    <value>Mail priority flag</value>
+    <value>邮件的优先级标志</value>
   </data>
   <data name="DisplayName90" xml:space="preserve">
-    <value>HTML format</value>
+    <value>HTML格式</value>
   </data>
   <data name="Description56" xml:space="preserve">
-    <value>Specify whether the body of the message is written in HTML format</value>
+    <value>指定邮件正文是否以HTML格式编写</value>
   </data>
   <data name="Category21" xml:space="preserve">
-    <value>Attachments</value>
+    <value>附件</value>
   </data>
   <data name="DisplayName91" xml:space="preserve">
-    <value>File</value>
+    <value>文件</value>
   </data>
   <data name="Description57" xml:space="preserve">
-    <value>Attachments to add to the email</value>
+    <value>要添加到电子邮件中的附件</value>
   </data>
   <data name="Category22" xml:space="preserve">
-    <value>Forward</value>
+    <value>转发</value>
   </data>
   <data name="DisplayName92" xml:space="preserve">
-    <value>Message body</value>
+    <value>消息体</value>
   </data>
   <data name="Description58" xml:space="preserve">
-    <value>For messages to be forwarded, this field only supports MailMessage objects.</value>
+    <value>要转发的消息,该字段仅支持MailMessage对象</value>
   </data>
   <data name="DisplayName93" xml:space="preserve">
-    <value>Archive path (.pst)</value>
+    <value>存档路径(.pst)</value>
   </data>
   <data name="Description59" xml:space="preserve">
-    <value>Outlook data file save path</value>
+    <value>Outlook数据文件的保存路径</value>
   </data>
   <data name="DisplayName94" xml:space="preserve">
-    <value>To be archived account</value>
+    <value>待存档账户</value>
   </data>
   <data name="Description60" xml:space="preserve">
-    <value>Outlook account name</value>
+    <value>Outlook账户名</value>
   </data>
   <data name="DisplayName95" xml:space="preserve">
-    <value>Mail object</value>
+    <value>邮件对象</value>
   </data>
   <data name="Description61" xml:space="preserve">
-    <value>Specify mail object</value>
+    <value>指定邮件对象</value>
   </data>
   <data name="DisplayName96" xml:space="preserve">
-    <value>Timeout (ms)</value>
+    <value>超时时间(毫秒)</value>
   </data>
   <data name="Description62" xml:space="preserve">
-    <value>Specifies the amount of time, in milliseconds, to wait for an activity to run before an error is raised.  The default is 30000 milliseconds (30 seconds)</value>
+    <value>指定在引发错误之前等待活动运行的时间量（以毫秒为单位）。默认值为30000毫秒（30秒）</value>
   </data>
   <data name="DisplayName97" xml:space="preserve">
-    <value>Get the number of messages</value>
+    <value>获取邮件个数</value>
   </data>
   <data name="DisplayName98" xml:space="preserve">
-    <value>Output mailing list</value>
+    <value>输出邮件列表</value>
   </data>
   <data name="DisplayName99" xml:space="preserve">
-    <value>Mail directory</value>
+    <value>邮件目录</value>
   </data>
   <data name="Description63" xml:space="preserve">
-    <value>From which mail directory to get mail</value>
+    <value>从哪个邮件目录去获取邮件</value>
   </data>
   <data name="DisplayName100" xml:space="preserve">
-    <value>Account</value>
+    <value>账户</value>
   </data>
   <data name="DisplayName101" xml:space="preserve">
-    <value>Filter</value>
+    <value>过滤器</value>
   </data>
   <data name="Description64" xml:space="preserve">
-    <value>Only messages that match the filter will be retrieved.</value>
+    <value>只有符合过滤条件的邮件才会被获取</value>
   </data>
   <data name="DisplayName102" xml:space="preserve">
-    <value>Get attachment</value>
+    <value>获取附件</value>
   </data>
   <data name="DisplayName103" xml:space="preserve">
-    <value>Get only unread messages</value>
+    <value>只获取未读邮件</value>
   </data>
   <data name="Description65" xml:space="preserve">
-    <value>Whether to get only unread mail, check by default</value>
+    <value>是否只获取未读邮件，默认打勾</value>
   </data>
   <data name="DisplayName104" xml:space="preserve">
-    <value>Mark as read</value>
+    <value>标记为已读</value>
   </data>
   <data name="Description66" xml:space="preserve">
-    <value>Whether to automatically mark received messages as read</value>
+    <value>是否将接收到的邮件自动标记成已读</value>
   </data>
   <data name="Description67" xml:space="preserve">
-    <value>Outlook mail directory</value>
+    <value>Outlook邮件目录</value>
   </data>
   <data name="DisplayName105" xml:space="preserve">
-    <value>Reply to everyone</value>
+    <value>回复所有人</value>
   </data>
   <data name="Description68" xml:space="preserve">
-    <value>If you don't check it, you will only reply to the sender. If you check it, you will not only give the sender, but also reply to all the CCs.</value>
+    <value>不勾选的话只回复给发送者，勾选的话不仅给发送者，还会给所有抄送者回复邮件</value>
   </data>
   <data name="DisplayName106" xml:space="preserve">
-    <value>Save path</value>
+    <value>保存路径</value>
   </data>
   <data name="Description69" xml:space="preserve">
-    <value>Attachment path</value>
+    <value>附件的保存路径</value>
   </data>
   <data name="Description70" xml:space="preserve">
-    <value>Output attachment list</value>
+    <value>输出附件列表</value>
   </data>
   <data name="Description71" xml:space="preserve">
-    <value>Regular expression filter, only attachment names that match the filter will be saved</value>
+    <value>正则表达式过滤器，只有符合过滤条件的附件名才会被保存</value>
   </data>
   <data name="DisplayName107" xml:space="preserve">
-    <value>Secret delivery</value>
+    <value>密送</value>
   </data>
   <data name="DisplayName108" xml:space="preserve">
-    <value>Display name</value>
+    <value>显示名</value>
   </data>
   <data name="Description72" xml:space="preserve">
-    <value>The expected display name that the messaging system must support in order to use</value>
+    <value>预期的显示名称，邮件系统必须支持该功能才能使用</value>
   </data>
   <data name="DisplayName109" xml:space="preserve">
-    <value>Whether to save as a draft</value>
+    <value>是否保存成草稿</value>
   </data>
   <data name="DisplayName110" xml:space="preserve">
-    <value>Cursor moving distance</value>
+    <value>游标移动距离</value>
   </data>
   <data name="DisplayName111" xml:space="preserve">
-    <value>Whether to select</value>
+    <value>是否选中</value>
   </data>
   <data name="Category23" xml:space="preserve">
-    <value>Direction</value>
+    <value>方向</value>
   </data>
   <data name="DisplayName112" xml:space="preserve">
-    <value>Left</value>
+    <value>左</value>
   </data>
   <data name="DisplayName113" xml:space="preserve">
-    <value>Right</value>
+    <value>右</value>
   </data>
   <data name="DisplayName114" xml:space="preserve">
-    <value>Up</value>
+    <value>上</value>
   </data>
   <data name="DisplayName115" xml:space="preserve">
-    <value>Down</value>
+    <value>下</value>
   </data>
   <data name="DisplayName116" xml:space="preserve">
-    <value>beginning</value>
+    <value>开头</value>
   </data>
   <data name="DisplayName117" xml:space="preserve">
-    <value>End</value>
+    <value>结尾</value>
   </data>
   <data name="DisplayName118" xml:space="preserve">
-    <value>Next page</value>
+    <value>下一页</value>
   </data>
   <data name="DisplayName119" xml:space="preserve">
-    <value>Font size</value>
+    <value>字体大小</value>
   </data>
   <data name="DisplayName120" xml:space="preserve">
-    <value>Font color</value>
+    <value>字体颜色</value>
   </data>
   <data name="DisplayName121" xml:space="preserve">
-    <value>Underline</value>
+    <value>下划线</value>
   </data>
   <data name="DisplayName122" xml:space="preserve">
-    <value>Font shadow</value>
+    <value>字体阴影</value>
   </data>
   <data name="Category24" xml:space="preserve">
-    <value>Page attribute</value>
+    <value>页面属性</value>
   </data>
   <data name="Category25" xml:space="preserve">
-    <value>Page margin</value>
+    <value>页面边距</value>
   </data>
   <data name="DisplayName123" xml:space="preserve">
-    <value>Left margin</value>
+    <value>左边距</value>
   </data>
   <data name="DisplayName124" xml:space="preserve">
-    <value>Right margin</value>
+    <value>右边距</value>
   </data>
   <data name="DisplayName125" xml:space="preserve">
-    <value>Top margin</value>
+    <value>上边距</value>
   </data>
   <data name="DisplayName126" xml:space="preserve">
-    <value>Bottom margin</value>
+    <value>下边距</value>
   </data>
   <data name="DisplayName127" xml:space="preserve">
-    <value>Backspace</value>
+    <value>退格次数</value>
   </data>
   <data name="DisplayName128" xml:space="preserve">
-    <value>Copy</value>
+    <value>复制</value>
   </data>
   <data name="DisplayName129" xml:space="preserve">
-    <value>Paste</value>
+    <value>粘贴</value>
   </data>
   <data name="DisplayName130" xml:space="preserve">
-    <value>Document content</value>
+    <value>文档内容</value>
   </data>
   <data name="Description73" xml:space="preserve">
-    <value>Get all the content text in a Word document</value>
+    <value>获取到Word文档中的全部内容文字</value>
   </data>
   <data name="Category26" xml:space="preserve">
-    <value>Image</value>
+    <value>图片</value>
   </data>
   <data name="DisplayName131" xml:space="preserve">
-    <value>Image link</value>
+    <value>图片链接</value>
   </data>
   <data name="Category27" xml:space="preserve">
-    <value>Bookmark</value>
+    <value>书签</value>
   </data>
   <data name="DisplayName132" xml:space="preserve">
-    <value>Bookmark name</value>
+    <value>书签名称</value>
   </data>
   <data name="Category28" xml:space="preserve">
-    <value>Hyperlinks</value>
+    <value>超链接</value>
   </data>
   <data name="DisplayName133" xml:space="preserve">
-    <value>Hyperlink name</value>
+    <value>超链接名称</value>
   </data>
   <data name="DisplayName134" xml:space="preserve">
-    <value>Hyperlink label</value>
+    <value>超链接标签</value>
   </data>
   <data name="DisplayName135" xml:space="preserve">
-    <value>Hyperlink address</value>
+    <value>超链接地址</value>
   </data>
   <data name="DisplayName136" xml:space="preserve">
-    <value>Pagination/line feeds</value>
+    <value>分页/换行次数</value>
   </data>
   <data name="DisplayName137" xml:space="preserve">
-    <value>Pagination</value>
+    <value>分页</value>
   </data>
   <data name="DisplayName138" xml:space="preserve">
-    <value>Wrap</value>
+    <value>换行</value>
   </data>
   <data name="DisplayName139" xml:space="preserve">
-    <value>Text content</value>
+    <value>文本内容</value>
   </data>
   <data name="Description74" xml:space="preserve">
-    <value>The number of lines written before writing text</value>
+    <value>写入文本前写入的行数</value>
   </data>
   <data name="AddText" xml:space="preserve">
-    <value>Add</value>
+    <value>添加</value>
   </data>
   <data name="ConfigureDatabaseConnection" xml:space="preserve">
-    <value>Configure database connection</value>
+    <value>配置数据库连接</value>
   </data>
   <data name="ConnectionConfiguration" xml:space="preserve">
-    <value>Connection configuration</value>
+    <value>连接配置</value>
   </data>
   <data name="ConnectionSettings" xml:space="preserve">
-    <value>Connection settings</value>
+    <value>连接设置</value>
   </data>
   <data name="ConnectionWizard" xml:space="preserve">
-    <value>Connection Wizard</value>
+    <value>连接向导</value>
   </data>
   <data name="ContentText" xml:space="preserve">
-    <value>Content</value>
+    <value>内容</value>
   </data>
   <data name="DeleteText" xml:space="preserve">
-    <value>Delete</value>
+    <value>删除</value>
   </data>
   <data name="EditSQL" xml:space="preserve">
-    <value>Edit SQL</value>
+    <value>SQL编辑</value>
   </data>
   <data name="EndArea" xml:space="preserve">
-    <value>End area</value>
+    <value>结束区域</value>
   </data>
   <data name="HideText" xml:space="preserve">
-    <value>Hide</value>
+    <value>隐藏</value>
   </data>
   <data name="MailFolder" xml:space="preserve">
-    <value>Mail folder</value>
+    <value>邮件文件夹</value>
   </data>
   <data name="MailMessage" xml:space="preserve">
-    <value>Mail message</value>
+    <value>邮件消息</value>
   </data>
   <data name="NewDatabaseConnection" xml:space="preserve">
-    <value>New database connection</value>
+    <value>新建数据库连接</value>
   </data>
   <data name="ParameterText" xml:space="preserve">
-    <value>Parameter</value>
+    <value>参数</value>
   </data>
   <data name="StartArea" xml:space="preserve">
-    <value>Start area</value>
+    <value>开始区域</value>
   </data>
   <data name="Category30" xml:space="preserve">
-    <value>Cell Options</value>
+    <value>单元格选项</value>
   </data>
   <data name="Description76" xml:space="preserve">
-    <value>VB expression representing the cell name, such as A1</value>
+    <value>代表单元格名称的VB表达式，如A1</value>
   </data>
   <data name="DisplayName141" xml:space="preserve">
-    <value>Cell Name</value>
+    <value>单元格名称</value>
   </data>
   <data name="Category31" xml:space="preserve">
-    <value>Sheet Options</value>
+    <value>工作表选项</value>
   </data>
   <data name="Description77" xml:space="preserve">
-    <value>Blank represents the currently active worksheet</value>
+    <value>为空代表当前活动工作表</value>
   </data>
   <data name="Category32" xml:space="preserve">
-    <value>StartingCell</value>
+    <value>单元格起始</value>
   </data>
   <data name="Category33" xml:space="preserve">
-    <value>EndingCell</value>
+    <value>单元格结束</value>
   </data>
   <data name="DisplayName142" xml:space="preserve">
-    <value>Merge / Split</value>
+    <value>合并/拆分</value>
   </data>
   <data name="Description78" xml:space="preserve">
-    <value>VB expression representing the cell name, such as B2</value>
+    <value>代表单元格名称的VB表达式，如B2</value>
   </data>
   <data name="DisplayName143" xml:space="preserve">
-    <value>Destination File Path</value>
+    <value>目标文件路径</value>
   </data>
   <data name="DisplayName144" xml:space="preserve">
-    <value>Target Cell row</value>
+    <value>目标单元格行</value>
   </data>
   <data name="DisplayName145" xml:space="preserve">
-    <value>Target Cell column</value>
+    <value>目标单元格列</value>
   </data>
   <data name="DisplayName146" xml:space="preserve">
-    <value>Target cell name</value>
+    <value>目标单元格名称</value>
   </data>
   <data name="DisplayName147" xml:space="preserve">
-    <value>Target sheet</value>
+    <value>目标工作表</value>
   </data>
   <data name="DisplayName148" xml:space="preserve">
-    <value>StartingCell row</value>
+    <value>起始单元格行</value>
   </data>
   <data name="DisplayName149" xml:space="preserve">
-    <value>StartingCell column</value>
+    <value>起始单元格列</value>
   </data>
   <data name="DisplayName150" xml:space="preserve">
-    <value>StartingCell name</value>
+    <value>起始单元格名称</value>
   </data>
   <data name="DisplayName151" xml:space="preserve">
-    <value>EndingCell row</value>
+    <value>终点单元格行</value>
   </data>
   <data name="DisplayName152" xml:space="preserve">
-    <value>EndingCell column</value>
+    <value>终点单元格列</value>
   </data>
   <data name="DisplayName153" xml:space="preserve">
-    <value>EndingCell name</value>
+    <value>终点单元格名称</value>
   </data>
   <data name="Category34" xml:space="preserve">
-    <value>EndingCell</value>
+    <value>单元格终点</value>
   </data>
   <data name="DisplayName154" xml:space="preserve">
-    <value>Header</value>
+    <value>表头</value>
   </data>
   <data name="DisplayName155" xml:space="preserve">
-    <value>All Sheets</value>
+    <value>所有工作表</value>
   </data>
   <data name="Category35" xml:space="preserve">
-    <value>Regional options</value>
+    <value>区域选项</value>
   </data>
   <data name="DisplayName156" xml:space="preserve">
-    <value>All Ranges</value>
+    <value>所有区域</value>
   </data>
   <data name="DisplayName157" xml:space="preserve">
-    <value>StartingCell row</value>
+    <value>单元格起始行</value>
   </data>
   <data name="DisplayName158" xml:space="preserve">
-    <value>StartingCell column</value>
+    <value>单元格起始列</value>
   </data>
   <data name="DisplayName159" xml:space="preserve">
-    <value>StartingCell name</value>
+    <value>单元格起始名称</value>
   </data>
   <data name="DisplayName160" xml:space="preserve">
-    <value>EndingCell row</value>
+    <value>单元格终点行</value>
   </data>
   <data name="DisplayName161" xml:space="preserve">
-    <value>EndingCell column</value>
+    <value>单元格终点列</value>
   </data>
   <data name="DisplayName162" xml:space="preserve">
-    <value>EndingCell name</value>
+    <value>单元格终点名称</value>
   </data>
   <data name="Category36" xml:space="preserve">
-    <value>Replace option</value>
+    <value>替换选项</value>
   </data>
   <data name="DisplayName163" xml:space="preserve">
-    <value>Find content</value>
+    <value>查找内容</value>
   </data>
   <data name="DisplayName164" xml:space="preserve">
-    <value>Replace content</value>
+    <value>替换内容</value>
   </data>
   <data name="DisplayName165" xml:space="preserve">
-    <value>Case sensitive</value>
+    <value>区分大小写</value>
   </data>
   <data name="DisplayName166" xml:space="preserve">
-    <value>Cell match</value>
+    <value>单元格匹配</value>
   </data>
   <data name="DisplayName167" xml:space="preserve">
-    <value>Distinguish half-full angle</value>
+    <value>区分半全角</value>
   </data>
   <data name="Category37" xml:space="preserve">
-    <value>Row and column options</value>
+    <value>行列数选项</value>
   </data>
   <data name="DisplayName168" xml:space="preserve">
-    <value>Valid data</value>
+    <value>有效数据</value>
   </data>
   <data name="DisplayName169" xml:space="preserve">
-    <value>Active area</value>
+    <value>活动区域</value>
   </data>
   <data name="DisplayName170" xml:space="preserve">
-    <value>A1 cell column / row cutoff</value>
+    <value>A1单元格列/行截止</value>
   </data>
   <data name="DisplayName171" xml:space="preserve">
-    <value>Rows</value>
+    <value>行数</value>
   </data>
   <data name="Description79" xml:space="preserve">
-    <value>Number of valid rows in the worksheet</value>
+    <value>工作表中有效行数</value>
   </data>
   <data name="DisplayName172" xml:space="preserve">
-    <value>Number of columns</value>
+    <value>列数</value>
   </data>
   <data name="DisplayName173" xml:space="preserve">
-    <value>Line / column number</value>
+    <value>行号/列号</value>
   </data>
   <data name="DisplayName174" xml:space="preserve">
-    <value>Row / Column</value>
+    <value>行/列</value>
   </data>
   <data name="DisplayName175" xml:space="preserve">
-    <value>Row / Column data</value>
+    <value>行/列数据</value>
   </data>
   <data name="DisplayName176" xml:space="preserve">
-    <value>List of sheet names</value>
+    <value>工作表名称列表</value>
   </data>
   <data name="Category38" xml:space="preserve">
-    <value>Open / New Document option</value>
+    <value>打开/新建文档选项</value>
   </data>
   <data name="FilePathToOpen" xml:space="preserve">
-    <value>Path of file to open</value>
+    <value>打开文件路径</value>
   </data>
   <data name="FilePathToSave" xml:space="preserve">
-    <value>File save path</value>
+    <value>文件保存路径</value>
   </data>
   <data name="Description80" xml:space="preserve">
-    <value>VB expression for cell name, such as A1</value>
+    <value>代表单元格名称的VB表达式，如A1</value>
   </data>
   <data name="Description81" xml:space="preserve">
-    <value>VB expression for cell name, such as B2</value>
+    <value>代表单元格名称的VB表达式，如B2</value>
   </data>
   <data name="DisplayName177" xml:space="preserve">
-    <value>Cell data</value>
+    <value>单元格数据</value>
   </data>
   <data name="xPrompt" xml:space="preserve">
-    <value>Prompt</value>
+    <value>提示</value>
   </data>
   <data name="xRequireValidPath1" xml:space="preserve">
-    <value>Non-creating a new document requires adding a valid path</value>
+    <value>非创建新文档需要添加有效路径</value>
   </data>
   <data name="xRequireValidPath2" xml:space="preserve">
-    <value>Save as requires adding a valid path</value>
+    <value>另存为需要添加有效路径</value>
   </data>
   <data name="xFileNotExist" xml:space="preserve">
-    <value>File does not exist, please check the validity of the path</value>
+    <value>文件不存在，请检查路径有效性</value>
   </data>
   <data name="xExcelExecError" xml:space="preserve">
-    <value>EXCEL execution process error</value>
+    <value>EXCEL执行过程出错</value>
   </data>
   <data name="xRequireCorrectSavePath1" xml:space="preserve">
-    <value>This document is a new file, please enter the correct save path!</value>
+    <value>此文档为新建文件,请输入正确保存路径!</value>
   </data>
   <data name="xRequireCorrectSavePath2" xml:space="preserve">
-    <value>Save as should enter the correct save path!</value>
-  </data>
-  <data name="xRequireCorrectSavePath2" xml:space="preserve">
-    <value>Save as should enter the correct save path!</value>
+    <value>另存为应输入正确保存路径!</value>
   </data>
 </root>

@@ -22,15 +22,38 @@ namespace RPA.UIAutomation.Activities.Keyboard
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
-        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //ウィンドウインジケータ
+        [Localize.LocalizedDisplayName("DisplayName2")] //窗口指示器 //Window selector //セレクター
         [Localize.LocalizedDescription("Description2")] //用于在执行活动时查找特定UI元素的Text属性 //The Text property used to find specific UI elements when performing activities //アクティビティの実行時に特定のUI要素を見つけるために使用されるTextプロパティ
         public InArgument<string> Selector { get; set; }
+        
         [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
         [OverloadGroup("G1")]
         [Browsable(true)]
         [Localize.LocalizedDisplayName("DisplayName3")] //UI元素 //UI Element //UI要素
         [Localize.LocalizedDescription("Description3")] //输入UIElement //Enter UIElement //UIElementを入力
         public InArgument<UiElement> Element { get; set; }
+
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [Localize.LocalizedDisplayName("DisplayName60")] //窗口标题 //Window Title
+        [Localize.LocalizedDescription("Description132")] //输入屏幕标题以通过AutomationId或Name识别元素。  *前后是通配符。
+        public InArgument<string> WindowTitle { get; set; }
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("AutomationId")]
+        [Localize.LocalizedDescription("Description133")] //元素的AutomationId属性
+        public InArgument<string> AutomationId { get; set; }
+
+        [Localize.LocalizedCategory("Category2")] //UI对象 //UI Object //UIオブジェクト
+        [OverloadGroup("G1")]
+        [Browsable(true)]
+        [DisplayName("Name")]
+        [Localize.LocalizedDescription("Description134")] //元素的AutomationId属性
+        public InArgument<string> Name { get; set; }
 
         [Category("Common")]
         [Localize.LocalizedDescription("Description55")] //指定即使当前活动失败，也要继续执行其余的活动。只支持布尔值(True,False)。 //Specifies that the remaining activities will continue even if the current activity fails. Only Boolean values are supported. //現在のアクティビティが失敗した場合でも、アクティビティの残りを続行するように指定します。 ブール値（True、False）のみがサポートされています。
@@ -58,12 +81,13 @@ namespace RPA.UIAutomation.Activities.Keyboard
         }
 
         [RequiredArgument]
-        [Category("输入项")]
+        [Localize.LocalizedCategory("Category13")] //输入项
         public InArgument<string> Text { get; set; }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName83")] //运行时的鼠标操作 //Mouse operation at runtime //実行時のマウス操作
+        [Localize.LocalizedDescription("Description138")] //キーボード入力の前に、指定のマウス操作を行うかどうかを指定します
         public bool isRunClick { get; set; }
-
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         public Int32 ClickType { get; set; }
@@ -71,12 +95,34 @@ namespace RPA.UIAutomation.Activities.Keyboard
         public Int32 MouseButton { get; set; }
 
         [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public InArgument<Int32> offsetX { get; set; }
-        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
-        public InArgument<Int32> offsetY { get; set; }
-        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
         [Localize.LocalizedDisplayName("DisplayName48")] //使用坐标点 //Use coordinate points //座標点を使用する
+        [Localize.LocalizedDescription("Description135")] //実行時のマウス操作がTrueの場合、要素の座標ではなく入力された座標をクリック後に入力します。
         public bool usePoint { get; set; }
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName66")] // X Coordinate
+        [Localize.LocalizedDescription("Description136")] //座標点を使用するがTrueの場合、マウス操作を行うX座標
+        public InArgument<Int32> offsetX { get; set; }
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName67")] // Y Coordinate
+        [Localize.LocalizedDescription("Description137")] //座標点を使用するがTrueの場合、マウス操作を行うY座標
+        public InArgument<Int32> offsetY { get; set; }
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName84")] //输入前单击偏移 //Click offset before input //入力前にオフセット位置をクリック
+        public bool moveOffsetClick { get; set; } = false;
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName85")] //运动偏移量X //移動オフセット X
+        [Localize.LocalizedDescription("Description140")] //X轴上要从元素中心偏移的像素数 //要素の中心からずらすX軸のピクセル数
+        public InArgument<Int32> moveOffsetX { get; set; } = 0;
+
+        [Localize.LocalizedCategory("Category10")] //鼠标选项 //Mouse options //マウスオプション
+        [Localize.LocalizedDisplayName("DisplayName86")] //运动偏移量Y //移動オフセット Y
+        [Localize.LocalizedDescription("Description141")] //Y轴上要从元素中心偏移的像素数 //要素の中心からずらすY軸のピクセル数
+        public InArgument<Int32> moveOffsetY { get; set; } = 0;
+
 
         [Browsable(false)]
         public string SourceImgPath { get; set; }
@@ -164,6 +210,26 @@ namespace RPA.UIAutomation.Activities.Keyboard
 
             try
             {
+                string expValue = Text.Get(context);
+                List<string> strList = new List<string>();
+                ParseStringToList(ref expValue, ref strList);
+
+                // Prioritize to use the AutomationId or Name property to get faster.
+                var nativeElement = UIAutomationCommon.GetNativeElement(context, WindowTitle, AutomationId, Name);
+                if (nativeElement != null)
+                {
+                    if (moveOffsetClick)
+                    {
+                        int moveX = moveOffsetX.Get(context);
+                        int moveY = moveOffsetY.Get(context);
+                        UIAutomationCommon.MoveOnNativeElement(nativeElement, moveX, moveY);
+                        FlaUI.Core.Input.Mouse.Click();
+                    }
+                    DoSendKeys(context, strList);
+                    Thread.Sleep(_delayAfter);
+                    return;
+                }
+
                 var selStr = Selector.Get(context);
                 UiElement element = Common.GetValueOrDefault(context, this.Element, null);
                 if (element == null && selStr != null)
@@ -171,75 +237,69 @@ namespace RPA.UIAutomation.Activities.Keyboard
                     element = UiElement.FromSelector(selStr);
                 }
                
-                Int32 pointX = 0;
-                Int32 pointY = 0;
-                if (usePoint)
+                //Int32 pointX = 0;
+                //Int32 pointY = 0;
+                //if (usePoint)
+                //{
+                //    pointX = offsetX.Get(context);
+                //    pointY = offsetY.Get(context);
+                //}
+                //else
+                //{
+                //    if (element != null)
+                //    {
+                //        pointX = element.GetClickablePoint().X;
+                //        pointY = element.GetClickablePoint().Y;
+                //        //element.SetForeground();//输入框置前窗口会导致焦点跳出，去除
+                //    }
+                //}
+                var point = UIAutomationCommon.GetPoint(context, usePoint, offsetX, offsetY, element, false);
+                if (point.X == -1 && point.Y == -1)
                 {
-                    pointX = offsetX.Get(context);
-                    pointY = offsetY.Get(context);
+                    UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, Localize.LocalizedResources.GetString("msgNoElementFound"));
+                    return;
                 }
-                else
-                {
-                    if (element != null)
-                    {
-                        pointX = element.GetClickablePoint().X;
-                        pointY = element.GetClickablePoint().Y;
-                        //element.SetForeground();//输入框置前窗口会导致焦点跳出，去除
-                    }
-                }
-                string expValue = Text.Get(context);
-                List<string> strList = new List<string>();
-                ParseStringToList(ref expValue, ref strList);
                 if (isRunClick)
                 {
-                    UiElement.MouseMoveTo(pointX, pointY);
+                    UiElement.MouseMoveTo(point);
                     UiElement.MouseAction((Plugins.Shared.Library.UiAutomation.ClickType)ClickType, (Plugins.Shared.Library.UiAutomation.MouseButton)MouseButton);
                 }
-                foreach (string _strValue in strList)
-                {
-                    string strValue = _strValue;
-                    if (strValue.Contains("[(") && strValue.Contains(")]"))
-                    {
-                        strValue = strValue.Replace("[(", "");
-                        strValue = strValue.Replace(")]", "");
-                        Thread.Sleep(100);
-                        if(Common.DealVirtualKeyPress(strValue.ToUpper()))
-                        {
-                            Common.DealVirtualKeyRelease(strValue.ToUpper());
-                        }
-                        else
-                        {
-                            SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", "找不到键值");
-                            if (ContinueOnError.Get(context))
-                            {
-                                return;
-                            }
-                            else
-                            {
-                                throw new NotImplementedException("找不到键值");
-                            }
-                        }
-                    }
-                    else if (strValue != null && strValue != "")
-                    {
-                        Thread.Sleep(100);
-                        SendKeys.SendWait(strValue);
-                    }
-                }
+                DoSendKeys(context, strList);
                 Thread.Sleep(_delayAfter);
             }
             catch (Exception e)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个错误产生", e.Message);
-                if (ContinueOnError.Get(context))
+                UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, e.Message);
+            }
+        }
+
+        private void DoSendKeys(CodeActivityContext context, List<string> strList)
+        {
+            foreach (string _strValue in strList)
+            {
+                string strValue = _strValue;
+                if (strValue.Contains("[(") && strValue.Contains(")]"))
                 {
-                    return;
+                    strValue = strValue.Replace("[(", "");
+                    strValue = strValue.Replace(")]", "");
+                    Thread.Sleep(100);
+                    if (Common.DealVirtualKeyPress(strValue.ToUpper()))
+                    {
+                        Common.DealVirtualKeyRelease(strValue.ToUpper());
+                    }
+                    else
+                    {
+                        UIAutomationCommon.HandleContinueOnError(context, ContinueOnError, "找不到键值");
+                        return;
+                    }
                 }
-                else
+                else if (strValue != null && strValue != "")
                 {
-                    throw new NotImplementedException(e.Message);
+                    Thread.Sleep(100);
+                    SendKeys.SendWait(strValue);
                 }
             }
         }
+
     }
 }

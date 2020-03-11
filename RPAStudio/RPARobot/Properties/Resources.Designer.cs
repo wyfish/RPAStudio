@@ -22,7 +22,7 @@ namespace RPARobot.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace RPARobot.Properties {
         ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RPARobot.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace RPARobot.Properties {
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,54 +61,9 @@ namespace RPARobot.Properties {
         }
         
         /// <summary>
-        ///   View logs に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string BrowseLogs_ToolTip {
-            get {
-                return ResourceManager.GetString("BrowseLogs.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Please export the machine code file and send it to the authorized party to complete the authorization に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ExportMachineCode_ToolTip {
-            get {
-                return ResourceManager.GetString("ExportMachineCode.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Select the authorization code file to complete the import, or directly drag the authorization code file to the current window に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string ImportMachineCode_ToolTip {
-            get {
-                return ResourceManager.GetString("ImportMachineCode.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Refresh に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string Refresh_ToolTip {
-            get {
-                return ResourceManager.GetString("Refresh.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Register your product に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string RegisterYourProduct_ToolTip {
-            get {
-                return ResourceManager.GetString("RegisterYourProduct.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   型 System.Byte[] のローカライズされたリソースを検索します。
         /// </summary>
-        public static byte[] RPARobot_settings {
+        internal static byte[] RPARobot_settings {
             get {
                 object obj = ResourceManager.GetObject("RPARobot_settings", resourceCulture);
                 return ((byte[])(obj));
@@ -116,27 +71,9 @@ namespace RPARobot.Properties {
         }
         
         /// <summary>
-        ///   Search に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string Search_HintText {
-            get {
-                return ResourceManager.GetString("Search.HintText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   User settings に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string UserSettings_ToolTip {
-            get {
-                return ResourceManager.GetString("UserSettings.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   型 System.Byte[] のローカライズされたリソースを検索します。
         /// </summary>
-        public static byte[] verify_public_rsa {
+        internal static byte[] verify_public_rsa {
             get {
                 object obj = ResourceManager.GetObject("verify_public_rsa", resourceCulture);
                 return ((byte[])(obj));

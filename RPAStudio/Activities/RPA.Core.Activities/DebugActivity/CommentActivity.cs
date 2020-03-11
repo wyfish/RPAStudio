@@ -23,7 +23,7 @@ namespace RPA.Core.Activities.DebugActivity
 
         public CommentActivity()
         {
-            Text = "// 请在Text属性中写下注释内容";
+            Text = $"// {Localize.LocalizedResources.GetString("WriteCommentInTextProperty")}"; // 请在Text属性中写下注释内容
 
             var builder = new AttributeTableBuilder();
             builder.AddCustomAttributes(typeof(CommentActivity), "Text", new EditorAttribute(typeof(TextEditor), typeof(DialogPropertyValueEditor)));

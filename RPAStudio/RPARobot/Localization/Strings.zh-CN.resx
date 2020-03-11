@@ -145,12 +145,12 @@
     <value>确定</value>
   </data>
   <data name="PermanentText" xml:space="preserve">
-    <value>永久有效　</value>
+    <value>永久有效</value>
   </data>
   <data name="RegisteredText" xml:space="preserve">
     <value>程序已注册</value>
   </data>
-  <data name="RegisterYourProductTitle" xml:space="preserve">
+  <data name="RegisterYourProduct" xml:space="preserve">
     <value>注册产品</value>
   </data>
   <data name="RegistrationInformationHeader" xml:space="preserve">
@@ -172,12 +172,78 @@
     <value>系统设置</value>
   </data>
   <data name="TillText" xml:space="preserve">
-    <value>截止到　</value>
+    <value>截止到</value>
   </data>
-  <data name="UserSettingsTitle" xml:space="preserve">
+  <data name="UserSettings" xml:space="preserve">
     <value>用户设置</value>
   </data>
   <data name="ValidityPeriodText" xml:space="preserve">
     <value>有效期：</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="ComputerName" xml:space="preserve">
+    <value>机器名：</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>Ip地址：</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>版本号：</value>
+  </data>
+  <data name="CopyInformation" xml:space="preserve">
+    <value>复制信息</value>
+  </data>
+  <data name="LocateCurrentPackage" xml:space="preserve">
+    <value>定位当前包</value>
+  </data>
+  <data name="RemoveCurrentPackage" xml:space="preserve">
+    <value>移除当前包</value>
+  </data>
+  <data name="RecordingSettings" xml:space="preserve">
+    <value>录像设置</value>
+  </data>
+  <data name="EnableScreenRecording" xml:space="preserve">
+    <value>启用屏幕录像</value>
+  </data>
+  <data name="FramesText" xml:space="preserve">
+    <value>帧数：</value>
+  </data>
+  <data name="QualityText" xml:space="preserve">
+    <value>画质：</value>
+  </data>
+  <data name="ControlCenterConfiguration" xml:space="preserve">
+    <value>控制中心配置</value>
+  </data>
+  <data name="EnableControlCenter" xml:space="preserve">
+    <value>启用控制中心</value>
+  </data>
+  <data name="ControlCenterAddress" xml:space="preserve">
+    <value>控制中心地址：</value>
+  </data>
+  <data name="BrowseLogsToolTip" xml:space="preserve">
+    <value>浏览日志</value>
+  </data>
+  <data name="ExportMachineCodeToolTip" xml:space="preserve">
+    <value>请将机器码文件导出并发送给授权方完成授权</value>
+  </data>
+  <data name="ImportMachineCodeToolTip" xml:space="preserve">
+    <value>选择授权码文件来完成导入，也可直接拖拽授权码文件到当前窗口</value>
+  </data>
+  <data name="RefreshToolTip" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="SearchHintText" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="BrowseVideos" xml:space="preserve">
+    <value>浏览录像</value>
+  </data>
+  <data name="AboutProducts" xml:space="preserve">
+    <value>关于产品</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>停止</value>
   </data>
 </root>

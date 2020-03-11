@@ -60,14 +60,15 @@ namespace Plugins.Shared.Library.UiAutomation
         {
             get
             {
-                try
-                {
-                    return automationElement.AutomationId;
-                }
-                catch (Exception)
-                {
-                    return "";
-                }
+                //try
+                //{
+                //    return automationElement.AutomationId;
+                //}
+                //catch (Exception)
+                //{
+                //    return "";
+                //}
+                return FromAutomationProperty(automationElement.FrameworkAutomationElement.AutomationId);
             }
         }
 
@@ -83,14 +84,15 @@ namespace Plugins.Shared.Library.UiAutomation
         {
             get
             {
-                try
-                {
-                    return automationElement.ClassName;
-                }
-                catch (Exception)
-                {
-                    return "";
-                }
+                //try
+                //{
+                //    return automationElement.ClassName;
+                //}
+                //catch (Exception)
+                //{
+                //    return "";
+                //}
+                return FromAutomationProperty(automationElement.FrameworkAutomationElement.ClassName);
             }
         }
 
@@ -115,16 +117,22 @@ namespace Plugins.Shared.Library.UiAutomation
         {
             get
             {
-                try
-                {
-                    return automationElement.Name;
-                }
-                catch (Exception)
-                {
+                //try
+                //{
+                //    return automationElement.Name;
+                //}
+                //catch (Exception)
+                //{
 
-                    return "";
-                }
+                //    return "";
+                //}
+                return FromAutomationProperty(automationElement.FrameworkAutomationElement.Name);
             }
+        }
+
+        private string FromAutomationProperty(IAutomationProperty<string> value)
+        {
+            return value.ToDisplayText();
         }
 
         public IntPtr WindowHandle
@@ -535,4 +543,15 @@ namespace Plugins.Shared.Library.UiAutomation
 
        
     }
+
+    public static class AutomationPropertyExtensions
+    {
+        public static string ToDisplayText<T>(this FlaUI.Core.IAutomationProperty<T> automationProperty)
+        {
+            T value;
+            var success = automationProperty.TryGetValue(out value);
+            return success ? (value == null ? String.Empty : value.ToString()) : "";
+        }
+    }
+
 }

@@ -29,9 +29,15 @@ namespace RPA.UIAutomation.Activities.Keyboard
 
         private void UiElement_OnSelected(UiElement uiElement)
         {
+            // Get the window title to identify the element from Name/AutomationId
+            string title = UIAutomationCommon.GetRootWindowTitle(UiCommon.GetForegroundWindow());
+            setPropertyValue("WindowTitle", new InArgument<string>(title));
+
             var screenshotsPath = uiElement.CaptureInformativeScreenshotToFile();
             navigateTextBlock.Visibility = System.Windows.Visibility.Hidden;
             setPropertyValue("SourceImgPath", screenshotsPath);
+            setPropertyValue("AutomationId", new InArgument<string>(uiElement.AutomationId));
+            setPropertyValue("Name", new InArgument<string>(uiElement.Name));
             setPropertyValue("Selector", new InArgument<string>(uiElement.Selector));
             setPropertyValue("visibility", System.Windows.Visibility.Visible);
             InArgument<Int32> _offsetX = uiElement.GetClickablePoint().X;

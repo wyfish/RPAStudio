@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:libs="clr-namespace:RPARobot.Librarys"
+                    xmlns:lclz="clr-namespace:RPARobot.Localization"
                     >
 <!--设置全局样式，全局引用-->
     <libs:BoolVisibilityConverter x:Key="BoolVisibilityConverter"/>
@@ -89,10 +90,13 @@
 
 
     <ContextMenu x:Key="PackageItemContextMenu">
-        <MenuItem Header="复制信息"  Command="{Binding CopyItemInfoCommand}" CommandParameter="{Binding}"/>
-        <MenuItem Header="定位当前包"  Command="{Binding LocateItemCommand}" CommandParameter="{Binding}"/>
+        <!--复制信息-->
+        <MenuItem Header="{x:Static lclz:Strings.CopyInformation}"  Command="{Binding CopyItemInfoCommand}" CommandParameter="{Binding}"/>
+        <!--定位当前包-->
+        <MenuItem Header="{x:Static lclz:Strings.LocateCurrentPackage}"  Command="{Binding LocateItemCommand}" CommandParameter="{Binding}"/>
         <Separator />
-        <MenuItem Header="移除当前包"  Command="{Binding RemoveItemCommand}" CommandParameter="{Binding}"/>
+        <!--移除当前包-->
+        <MenuItem Header="{x:Static lclz:Strings.RemoveCurrentPackage}"  Command="{Binding RemoveItemCommand}" CommandParameter="{Binding}"/>
     </ContextMenu>
 
 
