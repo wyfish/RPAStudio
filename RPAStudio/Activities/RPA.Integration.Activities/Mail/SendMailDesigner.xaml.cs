@@ -11,6 +11,7 @@ using System.Activities.Expressions;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Activities.Presentation.View;
+using Plugins.Shared.Library.Editors;
 
 namespace RPA.Integration.Activities.Mail
 {
@@ -128,8 +129,13 @@ namespace RPA.Integration.Activities.Mail
 
                 //使用MODELITEM PROPERTY赋值数组 会出现错误
                 //expressTextBox3.ExpressionActivityEditor.
-                expressTextBox3.Expression.Properties["ExpressionText"].SetValue(str);
+                //expressTextBox3.Expression.Properties["ExpressionText"].SetValue(str);
             }
+        }
+
+        private void AttachFiles_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            ArgumentCollectionEditor.ShowDialog("Files", base.ModelItem);
         }
     }
 }
