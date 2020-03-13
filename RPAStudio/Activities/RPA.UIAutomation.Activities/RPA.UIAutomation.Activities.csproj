@@ -14,6 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +97,9 @@
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tesseract, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Tesseract.3.3.0\lib\net45\Tesseract.dll</HintPath>
+    </Reference>
     <Reference Include="UIAutomationClient" />
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WebDriver, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -193,6 +198,8 @@
     <Compile Include="Browser\TabSwitchDesigner.xaml.cs">
       <DependentUpon>TabSwitchDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OCR\TesseractActivity.cs" />
+    <Compile Include="OCR\TesseractDesigner.xaml.cs" />
     <Compile Include="Properties\Resources.zh-CN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -823,6 +830,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="OCR\TesseractDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Text\ClickTextDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -987,6 +998,13 @@ xcopy "$(TargetDir)*.nupkg" "$(ProjectDir)..\nupkgs\"  /Y
 xcopy "$(TargetDir)*.nupkg" "$(SolutionDir)RPAStudio\$(OutDir)Packages\"  /Y
 del "$(TargetDir)*.nupkg"</PostBuildEvent>
   </PropertyGroup>
+  <Import Project="..\..\packages\Tesseract.3.3.0\build\Tesseract.targets" Condition="Exists('..\..\packages\Tesseract.3.3.0\build\Tesseract.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Tesseract.3.3.0\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Tesseract.3.3.0\build\Tesseract.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

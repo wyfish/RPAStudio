@@ -69,6 +69,9 @@
       <Activity Name="Attach Window" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="A container that can be attached to an open window and perform multiple actions in it, which is also automatically generated when using the Desktop logger"/>
       <Activity Name="Search Window" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="Find the specified window"/>
     </Group>
+    <Group Name="OCR">
+      <!--<Activity Name="TesseractOCR" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.TesseractActivity,RPA.UIAutomation.Activities" ToolTip="TesseractOCR. Too low image resolution or pixels will affect recognition."/>-->
+    </Group>
     <Group Name="Image">
       <Group Name="File">
         <Activity Name="Load Image" Icon="Resources/Image/LoadImage.png" TypeOf="RPA.UIAutomation.Activities.Image.LoadImageActivity,RPA.UIAutomation.Activities" ToolTip="Load image and save it to Image variable"/>

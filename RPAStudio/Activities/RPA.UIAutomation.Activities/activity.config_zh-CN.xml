@@ -80,6 +80,7 @@
       <Group Name="阿里云OCR">
         <Activity Name="印刷文字识别" Icon="Resources/OCR/ALiOCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.AliOCRActivity,RPA.UIAutomation.Activities" ToolTip="印刷文字识别"/>
       </Group>
+      <!--<Activity Name="Tesseract识别" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.TesseractActivity,RPA.UIAutomation.Activities" ToolTip="Tesseract识别,图像分辨率或像素过低会影响识别。"/>-->
     </Group>
     <Group Name="Image">
       <Group Name="文件">

@@ -80,6 +80,7 @@
       <Group Name="阿裡雲OCR">
         <Activity Name="印刷文字識別" Icon="Resources/OCR/ALiOCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.AliOCRActivity,RPA.UIAutomation.Activities" ToolTip="印刷文字識別"/>
       </Group>
+      <!--<Activity Name="Tesseract識別" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.TesseractActivity,RPA.UIAutomation.Activities" ToolTip="Tesseract識別,圖像分辨率或像素過低會影響識別"/>-->
     </Group>
     <Group Name="Image">
       <Group Name="檔案">
