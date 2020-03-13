@@ -4,14 +4,14 @@ using System.ComponentModel;
 using Plugins.Shared.Library;
 using System.Diagnostics;
 using MailKit.Security;
-using MailKit.Net.Smtp;
 using MimeKit;
-using System.Collections;
-using System.Linq.Expressions;
 using System.Collections.Generic;
 using System.IO;
 using MimeKit.Text;
-using System.Net.Mail;
+using System.Activities.Presentation.Metadata;
+using Plugins.Shared.Library.Editors;
+using Microsoft.Windows.Design.PropertyEditing;
+using Plugins.Shared.Library.Extensions;
 
 namespace RPA.Integration.Activities.Mail
 {
@@ -109,11 +109,36 @@ namespace RPA.Integration.Activities.Mail
             }
         }
 
-
         [Localize.LocalizedCategory("Category21")] //附件 //Attachments //添付ファイル
         [Localize.LocalizedDisplayName("DisplayName91")] //文件 //File //ファイル
-        [Localize.LocalizedDescription("Description57")] //要添加到电子邮件中的附件 //Attachments to add to the email //メールに追加する添付ファイル
-        public InArgument<string[]> AttachFiles { get; set; }
+        public List<InArgument<string>> Files
+        {
+            get;
+            set;
+        } = new List<InArgument<string>>();
+
+        [Browsable(false)]
+        [DefaultValue(null)]
+        [Localize.LocalizedCategory("Category21")] //附件 //Attachments //添付ファイル
+        public List<string> Attachments
+        {
+            get;
+            set;
+        }
+
+        [Localize.LocalizedCategory("Category21")] //附件 //Attachments //添付ファイル
+        [DefaultValue(null)]
+        [DisplayName("附件列表")]
+        public InArgument<IEnumerable<string>> AttachmentsCollection
+        {
+            get;
+            set;
+        }
+
+        //[Localize.LocalizedCategory("Category21")] //附件 //Attachments //添付ファイル
+        //[Localize.LocalizedDisplayName("DisplayName91")] //文件 //File //ファイル
+        //[Localize.LocalizedDescription("Description57")] //要添加到电子邮件中的附件 //Attachments to add to the email //メールに追加する添付ファイル
+        //public InArgument<string[]> AttachFiles { get; set; }
 
 
         [Localize.LocalizedCategory("Category22")] //转发 //Forward //進む
@@ -130,6 +155,70 @@ namespace RPA.Integration.Activities.Mail
             }
         }
 
+        protected override void CacheMetadata(CodeActivityMetadata metadata)
+        {
+            base.CacheMetadata(metadata);
+
+            if (Attachments != null)
+            {
+                if (Attachments.Count == 0)
+                {
+                    Attachments = null;
+                }
+                else
+                {
+                    if (Files == null)
+                    {
+                        Files = new List<InArgument<string>>();
+                    }
+                    foreach (string attachment in Attachments)
+                    {
+                        Files.Add(new InArgument<string>(attachment));
+                    }
+                    Attachments = null;
+                }
+            }
+
+            int num = 1;
+            foreach (InArgument<string> file in Files)
+            {
+                RuntimeArgument argument = new RuntimeArgument("attachmentArg" + ++num, typeof(string), ArgumentDirection.In);
+                metadata.Bind(file, argument);
+                metadata.AddArgument(argument);
+            }
+        }
+
+        public SendMail()
+        {
+            var builder = new AttributeTableBuilder();
+            builder.AddCustomAttributes(typeof(SendMail), "Files", new EditorAttribute(typeof(ArgumentCollectionEditor), typeof(DialogPropertyValueEditor)));
+            MetadataStore.AddAttributeTable(builder.CreateTable());
+        }
+
+        private static void AddAttachments(List<string> attachments, string attPath)
+        {
+            try
+            {
+                string text = null;
+                if (!Path.IsPathRooted(attPath))
+                {
+                    text = Path.Combine(Environment.CurrentDirectory, attPath);
+                }
+                if (File.Exists(text))
+                {
+                    attachments.Add(text);
+                }
+                else
+                {
+                    attachments.Add(attPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "有一个异常产生", ex.Message);
+            }
+        }
+
         protected override void Execute(CodeActivityContext context)
         {
             string username = Email.Get(context);               //发送端账号   
@@ -143,11 +232,21 @@ namespace RPA.Integration.Activities.Mail
             string[] recervers_Bcc = Receivers_Bcc.Get(context);//密送
             string mailTopic = MailTopic.Get(context);          //邮件的主题       
             string mailBody = MailBody.Get(context);            //发送的邮件正文  
-            string[] attachFiles = AttachFiles.Get(context);    //附件列表
+            //string[] attachFiles = AttachFiles.Get(context);    //附件列表
             MimeMessage transMsg = TransMailMessage.Get(context);
 
             try
             {
+				List<string> attachments = Attachments ?? new List<string>();
+                foreach (InArgument<string> file in Files)
+                {
+                    AddAttachments(attachments, file.Get(context));
+                }
+                foreach (string item in AttachmentsCollection.Get(context).EmptyIfNull())
+                {
+                    AddAttachments(attachments, item);
+                }
+
                 MailKit.Net.Smtp.SmtpClient client = new MailKit.Net.Smtp.SmtpClient();
                 client.Connect(server, port, SecureConnection);
                 client.Authenticate(username, password);
@@ -237,20 +336,20 @@ namespace RPA.Integration.Activities.Mail
 
                 msg.Priority = msgProperty;
 
-                if (attachFiles != null)
+                if (Files != null)
                 {
-                    foreach (var p in attachFiles)
+                    foreach (var p in Files)
                     {
                         try
                         {
-                            if (!string.IsNullOrEmpty(p.Trim()))
+                            if (!string.IsNullOrEmpty(p.Get(context)))
                             {
                                 var attimg = new MimePart()
                                 {
-                                    Content = new MimeContent(File.OpenRead(p), ContentEncoding.Default),
+                                    Content = new MimeContent(File.OpenRead(p.Get(context)), ContentEncoding.Default),
                                     ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                                     ContentTransferEncoding = ContentEncoding.Base64,
-                                    FileName = Path.GetFileName(p)
+                                    FileName = Path.GetFileName(p.Get(context))
                                 };
                                 multipart.Add(attimg);
                             }
