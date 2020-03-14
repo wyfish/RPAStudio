@@ -95,5 +95,10 @@
       <Activity Name="删除重複行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="從指定的DataTable中删除重複的行數據"/>
       <Activity Name="排序資料表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="DataTable根據指定列的值按昇冪或降序對整數進行排序"/>
     </Group>
+    <Group Name="String">
+      <Activity Name="IsMatch" Icon="Resources/StringActivity/IsMatch.png"  TypeOf="RPA.Core.Activities.StringActivity.IsMatchActivity,RPA.Core.Activities" ToolTip="指示指定的正則表達式是否使用指定的輸入字符串，使用指定的匹配選項在指定的輸入字符串中找到匹配項"/>
+      <Activity Name="Matches" Icon="Resources/StringActivity/Matches.png"  TypeOf="RPA.Core.Activities.StringActivity.Matches,RPA.Core.Activities" ToolTip="在輸入字符串中搜索正則表達式的所有匹配項並返回所有成功的匹配項"/>
+      <Activity Name="Replace" Icon="Resources/StringActivity/Replace.png"  TypeOf="RPA.Core.Activities.StringActivity.Replace,RPA.Core.Activities" ToolTip="在指定的輸入字符串中，用指定的替換字符串替換與正則表達式模式匹配的字符串"/>
+    </Group>
   </Group>
 </activity.config>

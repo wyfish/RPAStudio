@@ -95,5 +95,10 @@ Indicates whether changes are retained and how to handle missing schemas in the 
       <Activity Name="Delete Duplicate Rows" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="Remove duplicate row data from the specified DataTable"/>
       <Activity Name="Sort Data Table" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="The DataTable sorts the integers in ascending or descending order based on the value of the specified column."/>
     </Group>
+    <Group Name="String">
+      <Activity Name="IsMatch" Icon="Resources/StringActivity/IsMatch.png"  TypeOf="RPA.Core.Activities.StringActivity.IsMatchActivity,RPA.Core.Activities" ToolTip="Indicates whether the specified regular expression uses the specified input string and uses the specified matching options to find a match in the specified input string"/>
+      <Activity Name="Matches" Icon="Resources/StringActivity/Matches.png"  TypeOf="RPA.Core.Activities.StringActivity.Matches,RPA.Core.Activities" ToolTip="Search all occurrences of the regular expression in the input string and return all successful occurrences"/>
+      <Activity Name="Replace" Icon="Resources/StringActivity/Replace.png"  TypeOf="RPA.Core.Activities.StringActivity.Replace,RPA.Core.Activities" ToolTip="Replaces a string that matches a regular expression pattern with the specified replacement string in the specified input string"/>
+    </Group>
   </Group>
 </activity.config>

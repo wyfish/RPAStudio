@@ -870,4 +870,16 @@
   <data name="key252" xml:space="preserve">
     <value>错误执行</value>
   </data>
+  <data name="key253" xml:space="preserve">
+    <value>要搜索匹配项的字符串。</value>
+  </data>
+  <data name="key254" xml:space="preserve">
+    <value>要匹配的正则表达式模式。</value>
+  </data>
+  <data name="key255" xml:space="preserve">
+    <value>要替换的字符串。</value>
+  </data>
+  <data name="key256" xml:space="preserve">
+    <value>替换字符串。</value>
+  </data>
 </root>

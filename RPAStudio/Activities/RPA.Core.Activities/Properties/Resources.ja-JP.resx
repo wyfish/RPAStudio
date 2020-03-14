@@ -870,4 +870,16 @@
   <data name="key252" xml:space="preserve">
     <value>エラー実行</value>
   </data>
+  <data name="key253" xml:space="preserve">
+    <value>一致を検索する文字列。</value>
+  </data>
+  <data name="key254" xml:space="preserve">
+    <value>一致する正規表現パターン。</value>
+  </data>
+  <data name="key255" xml:space="preserve">
+    <value>置換される文字列。</value>
+  </data>
+  <data name="key256" xml:space="preserve">
+    <value>文字列を置き換えます。</value>
+  </data>
 </root>

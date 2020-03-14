@@ -367,6 +367,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.zh-TW.resx</DependentUpon>
     </Compile>
+    <Compile Include="StringActivity\IsMatchActivity.cs" />
+    <Compile Include="StringActivity\IsMatchDesigner.xaml.cs" />
+    <Compile Include="StringActivity\Matches.cs" />
+    <Compile Include="StringActivity\MatchesDesigner.xaml.cs" />
+    <Compile Include="StringActivity\Replace.cs" />
+    <Compile Include="StringActivity\ReplaceDesigner.xaml.cs" />
     <Compile Include="Workflow\CompilerRunner.cs" />
     <Compile Include="Workflow\InvokeCodeActivity.cs" />
     <Compile Include="Workflow\InvokeCodeDesigner.xaml.cs">
@@ -661,6 +667,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="StringActivity\IsMatchDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StringActivity\MatchesDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StringActivity\ReplaceDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Workflow\InvokeCodeDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -765,6 +783,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Execute\InvokeComMethod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\StringActivity\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

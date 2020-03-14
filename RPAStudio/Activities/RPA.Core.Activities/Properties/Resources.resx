@@ -175,7 +175,7 @@
     <value>Copy files or folders</value>
   </data>
   <data name="Category3" xml:space="preserve">
-    <value>Enter</value>
+    <value>Input</value>
   </data>
   <data name="Description15" xml:space="preserve">
     <value>The DataColumn object to be attached to the column set of the DataTable.  If this property is set, all properties under the Options category are ignored</value>
@@ -869,5 +869,17 @@
   </data>
   <data name="key252" xml:space="preserve">
     <value>Error execution</value>
+  </data>
+  <data name="key253" xml:space="preserve">
+    <value>The string to search for a match.</value>
+  </data>
+  <data name="key254" xml:space="preserve">
+    <value>The regular expression pattern to match.</value>
+  </data>
+  <data name="key255" xml:space="preserve">
+    <value>The string to be replaced.</value>
+  </data>
+  <data name="key256" xml:space="preserve">
+    <value>Replace string.</value>
   </data>
 </root>

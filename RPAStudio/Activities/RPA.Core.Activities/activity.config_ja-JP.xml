@@ -95,5 +95,10 @@
       <Activity Name="行項目を取得" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="指定された列に基づいてDataRow変数から値を取得します"/>
       <Activity Name="重複行を削除" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="指定したDataTableから重複行データを削除します"/>
     </Group>
+    <Group Name="String">
+      <Activity Name="文字列の一致をチェック" Icon="Resources/StringActivity/IsMatch.png"  TypeOf="RPA.Core.Activities.StringActivity.IsMatchActivity,RPA.Core.Activities" ToolTip="指定された正規表現が指定された入力文字列を使用し、指定された一致オプションを使用して指定された入力文字列の一致を見つけるかどうかを示します"/>
+      <Activity Name="一致する文字列を取得" Icon="Resources/StringActivity/Matches.png"  TypeOf="RPA.Core.Activities.StringActivity.Matches,RPA.Core.Activities" ToolTip="入力文字列内のすべての正規表現を検索し、成功したすべての出現を返します"/>
+      <Activity Name="置換" Icon="Resources/StringActivity/Replace.png"  TypeOf="RPA.Core.Activities.StringActivity.Replace,RPA.Core.Activities" ToolTip="正規表現パターンに一致する文字列を、指定された入力文字列の指定された置換文字列で置き換えます"/>
+    </Group>
   </Group>
 </activity.config>
