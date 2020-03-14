@@ -99,41 +99,25 @@ namespace RPA.Core.Activities.OrchestratorActivity
 
         protected override void Execute(CodeActivityContext context)
         {
-            try
-            {
-                Int32 _timeout = TimeoutMS.Get(context);
-                Thread.Sleep(_timeout);
-                latch = new CountdownEvent(1);
-                Thread td = new Thread(() =>
+            Int32 _timeout = TimeoutMS.Get(context);
+            CallWithTimeout(new Action(() => {
+                try
                 {
                     string credName = CredentialName.Get(context);
                     string userName = UserName.Get(context);
                     SecureString credentialName = PassWord.Get(context);
                     IntPtr inP = Marshal.SecureStringToBSTR(credentialName);
                     string passWord = Marshal.PtrToStringBSTR(inP);
-                    System.Diagnostics.Debug.WriteLine(" secureStr.ToString() : " + passWord);
                     WriteCred(credName, userName, passWord, CRED_TYPE.GENERIC, CRED_PERSIST.LOCAL_MACHINE);
-
-                    refreshData(latch);
-                });
-                td.TrySetApartmentState(ApartmentState.STA);
-                td.IsBackground = true;
-                td.Start();
-                latch.Wait();
-            }
-            catch (Exception e)
-            {
-                bool isRunOnError = errorContinue.Get(context);
-                if (isRunOnError)
-                {
-                    //错误继续运行代码段
                 }
-                else
+                catch (Exception e)
                 {
                     SharedObject.Instance.Output(SharedObject.enOutputType.Error, "设置凭证执行过程出错", e.Message);
                 }
-            }
+
+            }), _timeout);
         }
+
 
         public static int WriteCred(string key, string userName, string secret, CRED_TYPE type, CRED_PERSIST credPersist)
         {
@@ -173,6 +157,26 @@ namespace RPA.Core.Activities.OrchestratorActivity
             }
             System.Diagnostics.Debug.WriteLine("Error:" + message);
             return 1;
+        }
+        private void CallWithTimeout(Action action, int timeoutMilliseconds)
+        {
+            Thread threadToKill = null;
+            Action wrappedAction = () =>
+            {
+                threadToKill = Thread.CurrentThread;
+                action();
+            };
+
+            IAsyncResult result = wrappedAction.BeginInvoke(null, null);
+            if (result.AsyncWaitHandle.WaitOne(timeoutMilliseconds))
+            {
+                wrappedAction.EndInvoke(result);
+            }
+            else
+            {
+                threadToKill.Abort();
+                throw new TimeoutException();
+            }
         }
     }
 }

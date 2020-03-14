@@ -78,16 +78,18 @@ namespace RPA.Core.Activities.OrchestratorActivity
 
         protected override void Execute(CodeActivityContext context)
         {
-            try
-            {
-                Int32 _timeout = TimeoutMS.Get(context);
-                Thread.Sleep(_timeout);
-                latch = new CountdownEvent(1);
-                Thread td = new Thread(() =>
+            Int32 _timeout = TimeoutMS.Get(context);
+            CallWithTimeout(new Action(() => {
+                try
                 {
                     string credName = CredentialName.Get(context);
                     IntPtr credPtr = new IntPtr();
                     WReadCred(credName, CRED_TYPE.GENERIC, CRED_PERSIST.LOCAL_MACHINE, out credPtr);
+                    if (credPtr.ToInt32() == 0)
+                    {
+                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "凭证不存在");
+                        return;
+                    }
                     Credential lRawCredential = (Credential)Marshal.PtrToStructure(credPtr, typeof(Credential));
                     SecureString securePassWord = new SecureString();
                     foreach (char c in lRawCredential.CredentialBlob)
@@ -96,19 +98,33 @@ namespace RPA.Core.Activities.OrchestratorActivity
                     }
                     UserName.Set(context, lRawCredential.UserName);
                     PassWord.Set(context, securePassWord);
+                }
+                catch (Exception e)
+                {
+                    SharedObject.Instance.Output(SharedObject.enOutputType.Error, "读取凭证执行过程出错", e.Message);
+                }
 
-                    refreshData(latch);
-                });
-                td.TrySetApartmentState(ApartmentState.STA);
-                td.IsBackground = true;
-                td.Start();
-                latch.Wait();
-                //System.Diagnostics.Debug.WriteLine("UserName:" + lRawCredential.UserName);
-                //System.Diagnostics.Debug.WriteLine("CredentialBlob:" + lRawCredential.CredentialBlob);
-            }
-            catch (Exception e)
+            }), _timeout);
+        }
+
+        private void CallWithTimeout(Action action, int timeoutMilliseconds)
+        {
+            Thread threadToKill = null;
+            Action wrappedAction = () =>
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Error, "读取凭证执行过程出错", e.Message);
+                threadToKill = Thread.CurrentThread;
+                action();
+            };
+
+            IAsyncResult result = wrappedAction.BeginInvoke(null, null);
+            if (result.AsyncWaitHandle.WaitOne(timeoutMilliseconds))
+            {
+                wrappedAction.EndInvoke(result);
+            }
+            else
+            {
+                threadToKill.Abort();
+                throw new TimeoutException();
             }
         }
 
