@@ -58,6 +58,7 @@
     <Group Name="执行" >
       <Activity Name="执行代码" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="同步执行VB.Net代码，支持传递参数"/>
       <Activity Name="执行工作流文件" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="同步执行一个工作流文件，支持传递参数"/>
+      <Activity Name="InvokeComMethod" Icon="Resources/Execute/InvokeComMethod.png"  TypeOf="RPA.Core.Activities.Execute.InvokeComMethodActivity,RPA.Core.Activities" ToolTip="调用指定COM对象的方法"/>
     </Group>
     <Group Name="Checkpoint">
       <Activity Name="Check False" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="检查给定的布尔表达式是否为false，并在表达式为true时使用指定的消息生成错误。"/>

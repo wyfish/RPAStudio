@@ -58,6 +58,7 @@
     <Group Name="実行" >
       <Activity Name="コードの実行" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="VB.Netコードの同期実行、パラメーターの受け渡しのサポート"/>
       <Activity Name="ワークフローファイルの実行" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="ワークフローファイルの同期実行、パラメーターの受け渡しのサポート"/>
+      <Activity Name="COMメソッドを呼び出し" Icon="Resources/Execute/InvokeComMethod.png"  TypeOf="RPA.Core.Activities.Execute.InvokeComMethodActivity,RPA.Core.Activities" ToolTip="指定されたCOMオブジェクトのメソッドを呼び出します"/>
     </Group>
     <Group Name="チェックポイント">
       <Activity Name="False か確認" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="指定されたブール式がfalseかどうかを確認し、式がtrueの場合、指定されたメッセージを使用してエラーを生成します。"/>

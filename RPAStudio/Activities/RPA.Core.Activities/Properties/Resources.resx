@@ -685,7 +685,7 @@
     <value>Level</value>
   </data>
   <data name="NewsText" xml:space="preserve">
-    <value>News</value>
+    <value>Message</value>
   </data>
   <data name="SpecialFolder" xml:space="preserve">
     <value>Special folder</value>
@@ -848,5 +848,26 @@
   </data>
   <data name="CheckErrorMessage" xml:space="preserve">
     <value>If the expression is incorrect, an error message is displayed.</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>Specifies the flags used to control binding and how members and types are searched through reflection.</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>The class ID of the COM object.</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>The name of the method to be called.</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>ProgID of the object type of the method to be called.</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>A collection of parameters for the method to be called.</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="key252" xml:space="preserve">
+    <value>Error execution</value>
   </data>
 </root>

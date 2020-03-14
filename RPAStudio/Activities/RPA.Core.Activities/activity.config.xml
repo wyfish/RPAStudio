@@ -58,6 +58,7 @@
     <Group Name="Invoke" >
       <Activity Name="Invoke Code" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="Synchronous execution of VB.Net code, support for passing parameters"/>
       <Activity Name="Invoke Workflow File" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="Synchronous execution of a workflow file, support for passing parameters"/>
+      <Activity Name="InvokeComMethod" Icon="Resources/Execute/InvokeComMethod.png"  TypeOf="RPA.Core.Activities.Execute.InvokeComMethodActivity,RPA.Core.Activities" ToolTip="Call the method of the specified COM object"/>
     </Group>
     <Group Name="Checkpoint">
       <Activity Name="Check False" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="Checks if the given Boolean expression is false and generates an error using the specified message when the expression is true."/>

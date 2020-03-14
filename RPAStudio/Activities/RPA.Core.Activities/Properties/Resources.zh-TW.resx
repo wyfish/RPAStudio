@@ -849,4 +849,25 @@
   <data name="CheckErrorMessage" xml:space="preserve">
     <value>如果表達式不正確，將顯示錯誤消息。</value>
   </data>
+  <data name="Description116" xml:space="preserve">
+    <value>指定用於控制綁定的標誌以及通過反射進行成員和類型搜索的方式。</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>COM對象的類ID。</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>要調用的方法的名稱。</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>要調用的方法的對像類型的ProgID。</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>要調用的方法的參數集合。</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>公共</value>
+  </data>
+  <data name="key252" xml:space="preserve">
+    <value>錯誤執行</value>
+  </data>
 </root>

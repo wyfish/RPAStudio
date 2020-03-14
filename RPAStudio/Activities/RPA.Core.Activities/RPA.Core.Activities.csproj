@@ -291,6 +291,8 @@
     <Compile Include="Event\MonitorActivityDesigner.xaml.cs">
       <DependentUpon>MonitorActivityDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Execute\InvokeComMethod.xaml.cs" />
+    <Compile Include="Execute\InvokeComMethodActivity .cs" />
     <Compile Include="File\AppendLineActivity.cs" />
     <Compile Include="File\AppendLineDesigner.xaml.cs">
       <DependentUpon>AppendLineDesigner.xaml</DependentUpon>
@@ -607,6 +609,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Execute\InvokeComMethod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="File\AppendLineDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -753,6 +759,12 @@
     <Resource Include="activity.config_zh-TW.xml">
       <SubType>Designer</SubType>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Checkpoint\Checkpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Execute\InvokeComMethod.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

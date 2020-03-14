@@ -1,0 +1,52 @@
+﻿<sap:ActivityDesigner x:Class="RPA.Core.Activities.Execute.InvokeComMethod"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:pslc="clr-namespace:Plugins.Shared.Library.Controls;assembly=Plugins.Shared.Library"     
+    xmlns:lclz="clr-namespace:RPA.Core.Activities.Properties"
+    xmlns:sadc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation" 
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation" >
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Plugins.Shared.Library;Component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush>
+            <DrawingBrush.Drawing>
+                <ImageDrawing ImageSource="{Binding Path=ModelItem.icoPath}">
+                    <ImageDrawing.Rect>
+                        <Rect Location="0,0" Size="16,16"></Rect>
+                    </ImageDrawing.Rect>
+                </ImageDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </sap:ActivityDesigner.Icon>
+    <pslc:CollapsableActivity >
+        <Grid  Height="120" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="41*"/>
+                <RowDefinition Height="41*"/>
+                <RowDefinition Height="38*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="0,0,0,4.8">
+                <sapv:ExpressionTextBox x:Name="ProgIDTextBox" MaxLines="1" HintText="ProgID.Text must be quoted"
+                                    Expression="{Binding Path=ModelItem.ProgID, ConverterParameter=In ,Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter} }" 
+                                    ExpressionType="{x:Type sys:String}"
+                                    OwnerActivity="{Binding ModelItem}" Margin="0,0,0,6"/>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,0.2,0,38" Grid.RowSpan="2">
+                <sapv:ExpressionTextBox x:Name="MethodNameTextBox" MaxLines="1" HintText="Method name.Text must be quoted"
+                                    Expression="{Binding ModelItem.MethodName, ConverterParameter=In , Mode=TwoWay, Converter={StaticResource ArgumentToExpressionConverter}}" 
+                                    ExpressionType="{x:Type sys:String}"
+                                    OwnerActivity="{Binding ModelItem}" Margin="0,0,0,10" Height="30"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Button x:Name="EditArgumentsBtn" Background="White" Content="{x:Static lclz:Resources.EditParameter}" VerticalAlignment="Center" Width="102" Height="28"  HorizontalAlignment="Center" Margin="78,5,80,5" BorderThickness="0.5" Click="EditArgumentsBtn_Click"/>
+            </Grid>
+        </Grid>
+    </pslc:CollapsableActivity>
+</sap:ActivityDesigner>
