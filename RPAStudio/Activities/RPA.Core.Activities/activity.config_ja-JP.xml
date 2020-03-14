@@ -59,6 +59,10 @@
       <Activity Name="コードの実行" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="VB.Netコードの同期実行、パラメーターの受け渡しのサポート"/>
       <Activity Name="ワークフローファイルの実行" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="ワークフローファイルの同期実行、パラメーターの受け渡しのサポート"/>
     </Group>
+    <Group Name="チェックポイント">
+      <Activity Name="False か確認" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="指定されたブール式がfalseかどうかを確認し、式がtrueの場合、指定されたメッセージを使用してエラーを生成します。"/>
+      <Activity Name="True か確認" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckTrue,RPA.Core.Activities" ToolTip="指定されたブール式がtrueであるかどうかを確認し、式がfalseの場合、指定されたメッセージでエラーを生成します。"/>
+    </Group>
   </Group>
   <Group Name="ユーザーイベント" >
     <Activity Name="イベントを監視" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="ユーザーイベント" />

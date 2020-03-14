@@ -843,4 +843,10 @@
   <data name="WriteCommentInTextProperty" xml:space="preserve">
     <value>Textプロパティにコメントを書いてください</value>
   </data>
+  <data name="EvaluateExpression" xml:space="preserve">
+    <value>評価する式。</value>
+  </data>
+  <data name="CheckErrorMessage" xml:space="preserve">
+    <value>式が正しくない場合、エラーメッセージが表示されます。</value>
+  </data>
 </root>

@@ -59,6 +59,10 @@
       <Activity Name="Invoke Code" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="Synchronous execution of VB.Net code, support for passing parameters"/>
       <Activity Name="Invoke Workflow File" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="Synchronous execution of a workflow file, support for passing parameters"/>
     </Group>
+    <Group Name="Checkpoint">
+      <Activity Name="Check False" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="Checks if the given Boolean expression is false and generates an error using the specified message when the expression is true."/>
+      <Activity Name="Check True" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckTrue,RPA.Core.Activities" ToolTip="Checks if the given Boolean expression is true and generates an error with the specified message when the expression is false."/>
+    </Group>
   </Group>
   <Group Name="User Events" >
     <Activity Name="Monitor Events" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="User event" />

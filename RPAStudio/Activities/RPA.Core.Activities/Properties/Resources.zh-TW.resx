@@ -843,4 +843,10 @@
   <data name="WriteCommentInTextProperty" xml:space="preserve">
     <value>請在Text屬性中寫下註釋內容</value>
   </data>
+  <data name="EvaluateExpression" xml:space="preserve">
+    <value>要評估的表達式。</value>
+  </data>
+  <data name="CheckErrorMessage" xml:space="preserve">
+    <value>如果表達式不正確，將顯示錯誤消息。</value>
+  </data>
 </root>

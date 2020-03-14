@@ -111,6 +111,11 @@
     <Compile Include="Application\StartProcessDesigner.xaml.cs">
       <DependentUpon>StartProcessDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Checkpoint\CheckFalse.cs" />
+    <Compile Include="Checkpoint\CheckFalseDesigner.xaml.cs" />
+    <Compile Include="Checkpoint\CheckpointException.cs" />
+    <Compile Include="Checkpoint\CheckTrue.cs" />
+    <Compile Include="Checkpoint\CheckTrueDesigner.xaml.cs" />
     <Compile Include="Clipboard\CopySelectTextActivity.cs" />
     <Compile Include="Clipboard\CopySelectTextDesigner.xaml.cs">
       <DependentUpon>CopySelectTextDesigner.xaml</DependentUpon>
@@ -423,6 +428,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Application\StartProcessDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Checkpoint\CheckFalseDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Checkpoint\CheckTrueDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

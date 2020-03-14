@@ -59,6 +59,10 @@
       <Activity Name="執行程式碼" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="同步執行VB.Net程式碼，支持傳遞參數"/>
       <Activity Name="執行工作流檔案" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="同步執行一個工作流檔案，支持傳遞參數"/>
     </Group>
+    <Group Name="Checkpoint">
+      <Activity Name="Check False" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="檢查給定的布爾表達式是否為false，並在表達式為true時使用指定的消息生成錯誤。"/>
+      <Activity Name="Check True" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckTrue,RPA.Core.Activities" ToolTip="檢查給定的布爾表達式是否為true，並在表達式為false時使用指定的消息生成錯誤。"/>
+    </Group>
   </Group>
   <Group Name="用戶事件" >
     <Activity Name="監控事件" Icon="Resources/Event/monitor.png" TypeOf="RPA.Core.Activities.EventActivity.MonitorActivity,RPA.Core.Activities" ToolTip="用戶事件" />
