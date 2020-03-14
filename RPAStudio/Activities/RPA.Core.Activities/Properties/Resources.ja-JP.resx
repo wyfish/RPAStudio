@@ -685,7 +685,7 @@
     <value>レベル</value>
   </data>
   <data name="NewsText" xml:space="preserve">
-    <value>ニュース</value>
+    <value>メッセージ</value>
   </data>
   <data name="SpecialFolder" xml:space="preserve">
     <value>特別なフォルダ</value>
@@ -842,5 +842,44 @@
   </data>
   <data name="WriteCommentInTextProperty" xml:space="preserve">
     <value>Textプロパティにコメントを書いてください</value>
+  </data>
+  <data name="EvaluateExpression" xml:space="preserve">
+    <value>評価する式。</value>
+  </data>
+  <data name="CheckErrorMessage" xml:space="preserve">
+    <value>式が正しくない場合、エラーメッセージが表示されます。</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>バインディングの制御に使用されるフラグと、リフレクションを介してメンバーとタイプを検索する方法を指定します。</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>COMオブジェクトのクラスID。</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>呼び出されるメソッドの名前。</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>呼び出されるメソッドのオブジェクトタイプのProgID。</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>呼び出されるメソッドのパラメーターのコレクション。</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="key252" xml:space="preserve">
+    <value>エラー実行</value>
+  </data>
+  <data name="key253" xml:space="preserve">
+    <value>一致を検索する文字列。</value>
+  </data>
+  <data name="key254" xml:space="preserve">
+    <value>一致する正規表現パターン。</value>
+  </data>
+  <data name="key255" xml:space="preserve">
+    <value>置換される文字列。</value>
+  </data>
+  <data name="key256" xml:space="preserve">
+    <value>文字列を置き換えます。</value>
   </data>
 </root>

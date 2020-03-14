@@ -57,6 +57,9 @@
       <HintPath>..\..\packages\HtmlAgilityPack.1.11.12\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="MailKit, Version=2.4.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MailKit.2.4.1\lib\net45\MailKit.dll</HintPath>
       <Private>False</Private>
@@ -353,6 +356,8 @@
     <Compile Include="Mail\SendMailDesigner.xaml.cs">
       <DependentUpon>SendMailDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PDF\ReadPDFText.cs" />
+    <Compile Include="PDF\ReadPDFTextDesigner.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -659,6 +664,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="PDF\ReadPDFTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Word\Ope_Cursor\CursorMoveDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -710,6 +719,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Resources\PDF\pdf.png" />
     <Resource Include="activity.config_zh-CN.xml">
       <SubType>Designer</SubType>
     </Resource>

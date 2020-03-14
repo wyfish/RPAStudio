@@ -843,4 +843,43 @@
   <data name="WriteCommentInTextProperty" xml:space="preserve">
     <value>請在Text屬性中寫下註釋內容</value>
   </data>
+  <data name="EvaluateExpression" xml:space="preserve">
+    <value>要評估的表達式。</value>
+  </data>
+  <data name="CheckErrorMessage" xml:space="preserve">
+    <value>如果表達式不正確，將顯示錯誤消息。</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>指定用於控制綁定的標誌以及通過反射進行成員和類型搜索的方式。</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>COM對象的類ID。</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>要調用的方法的名稱。</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>要調用的方法的對像類型的ProgID。</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>要調用的方法的參數集合。</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>公共</value>
+  </data>
+  <data name="key252" xml:space="preserve">
+    <value>錯誤執行</value>
+  </data>
+  <data name="key253" xml:space="preserve">
+    <value>要搜索匹配項的字符串。</value>
+  </data>
+  <data name="key254" xml:space="preserve">
+    <value>要匹配的正則表達式模式。</value>
+  </data>
+  <data name="key255" xml:space="preserve">
+    <value>要替換的字符串。</value>
+  </data>
+  <data name="key256" xml:space="preserve">
+    <value>替換字符串。</value>
+  </data>
 </root>

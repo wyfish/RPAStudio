@@ -69,6 +69,9 @@
       <Activity Name="ウィンドウにアタッチ" Icon="Resources/Window/WindowAttach.png" TypeOf="RPA.UIAutomation.Activities.Window.WindowAttach,RPA.UIAutomation.Activities" ToolTip="開いているウィンドウにアタッチして、その中で複数のアクションを実行できるコンテナー。これは、デスクトップロガーの使用時に自動的に生成されます"/>
       <Activity Name="検索ウィンドウ" Icon="Resources/Window/findwindow.png" TypeOf="RPA.UIAutomation.Activities.Window.FindWindowActivity,RPA.UIAutomation.Activities" ToolTip="指定されたウィンドウを見つける"/>
     </Group>
+    <Group Name="OCR">
+      <!--<Activity Name="TesseractOCR" Icon="Resources/OCR/OCR.png" TypeOf="RPA.UIAutomation.Activities.OCR.TesseractActivity,RPA.UIAutomation.Activities" ToolTip="TesseractOCR。画像解像度、またはピクセルが低すぎると認識に影響します。"/>-->
+    </Group>
     <Group Name="画像">
       <Group Name="ファイル">
         <Activity Name="画像を読み込み" Icon="Resources/Image/LoadImage.png" TypeOf="RPA.UIAutomation.Activities.Image.LoadImageActivity,RPA.UIAutomation.Activities" ToolTip="画像を読み込み、画像変数に保存します"/>

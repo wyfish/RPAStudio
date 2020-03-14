@@ -58,6 +58,11 @@
     <Group Name="実行" >
       <Activity Name="コードの実行" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="VB.Netコードの同期実行、パラメーターの受け渡しのサポート"/>
       <Activity Name="ワークフローファイルの実行" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="ワークフローファイルの同期実行、パラメーターの受け渡しのサポート"/>
+      <Activity Name="COMメソッドを呼び出し" Icon="Resources/Execute/InvokeComMethod.png"  TypeOf="RPA.Core.Activities.Execute.InvokeComMethodActivity,RPA.Core.Activities" ToolTip="指定されたCOMオブジェクトのメソッドを呼び出します"/>
+    </Group>
+    <Group Name="チェックポイント">
+      <Activity Name="False か確認" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="指定されたブール式がfalseかどうかを確認し、式がtrueの場合、指定されたメッセージを使用してエラーを生成します。"/>
+      <Activity Name="True か確認" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckTrue,RPA.Core.Activities" ToolTip="指定されたブール式がtrueであるかどうかを確認し、式がfalseの場合、指定されたメッセージでエラーを生成します。"/>
     </Group>
   </Group>
   <Group Name="ユーザーイベント" >
@@ -89,6 +94,11 @@
       <Activity Name="繰り返し(各行)" Icon="Resources/DataTable/datatable.png" TypeOf="RPA.Core.Activities.DataTableActivity.ForEachRow,      RPA.Core.Activities" ToolTip="指定されたDataTable変数の各行で操作を実行します"/>
       <Activity Name="行項目を取得" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.GetRowItem,      RPA.Core.Activities" ToolTip="指定された列に基づいてDataRow変数から値を取得します"/>
       <Activity Name="重複行を削除" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="指定したDataTableから重複行データを削除します"/>
+    </Group>
+    <Group Name="String">
+      <Activity Name="文字列の一致をチェック" Icon="Resources/StringActivity/IsMatch.png"  TypeOf="RPA.Core.Activities.StringActivity.IsMatchActivity,RPA.Core.Activities" ToolTip="指定された正規表現が指定された入力文字列を使用し、指定された一致オプションを使用して指定された入力文字列の一致を見つけるかどうかを示します"/>
+      <Activity Name="一致する文字列を取得" Icon="Resources/StringActivity/Matches.png"  TypeOf="RPA.Core.Activities.StringActivity.Matches,RPA.Core.Activities" ToolTip="入力文字列内のすべての正規表現を検索し、成功したすべての出現を返します"/>
+      <Activity Name="置換" Icon="Resources/StringActivity/Replace.png"  TypeOf="RPA.Core.Activities.StringActivity.Replace,RPA.Core.Activities" ToolTip="正規表現パターンに一致する文字列を、指定された入力文字列の指定された置換文字列で置き換えます"/>
     </Group>
   </Group>
 </activity.config>

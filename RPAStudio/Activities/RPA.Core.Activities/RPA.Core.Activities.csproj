@@ -111,6 +111,11 @@
     <Compile Include="Application\StartProcessDesigner.xaml.cs">
       <DependentUpon>StartProcessDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Checkpoint\CheckFalse.cs" />
+    <Compile Include="Checkpoint\CheckFalseDesigner.xaml.cs" />
+    <Compile Include="Checkpoint\CheckpointException.cs" />
+    <Compile Include="Checkpoint\CheckTrue.cs" />
+    <Compile Include="Checkpoint\CheckTrueDesigner.xaml.cs" />
     <Compile Include="Clipboard\CopySelectTextActivity.cs" />
     <Compile Include="Clipboard\CopySelectTextDesigner.xaml.cs">
       <DependentUpon>CopySelectTextDesigner.xaml</DependentUpon>
@@ -286,6 +291,8 @@
     <Compile Include="Event\MonitorActivityDesigner.xaml.cs">
       <DependentUpon>MonitorActivityDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Execute\InvokeComMethod.xaml.cs" />
+    <Compile Include="Execute\InvokeComMethodActivity .cs" />
     <Compile Include="File\AppendLineActivity.cs" />
     <Compile Include="File\AppendLineDesigner.xaml.cs">
       <DependentUpon>AppendLineDesigner.xaml</DependentUpon>
@@ -360,6 +367,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.zh-TW.resx</DependentUpon>
     </Compile>
+    <Compile Include="StringActivity\IsMatchActivity.cs" />
+    <Compile Include="StringActivity\IsMatchDesigner.xaml.cs" />
+    <Compile Include="StringActivity\Matches.cs" />
+    <Compile Include="StringActivity\MatchesDesigner.xaml.cs" />
+    <Compile Include="StringActivity\Replace.cs" />
+    <Compile Include="StringActivity\ReplaceDesigner.xaml.cs" />
     <Compile Include="Workflow\CompilerRunner.cs" />
     <Compile Include="Workflow\InvokeCodeActivity.cs" />
     <Compile Include="Workflow\InvokeCodeDesigner.xaml.cs">
@@ -369,6 +382,8 @@
     <Compile Include="Workflow\InvokeWorkflowFileDesigner.xaml.cs">
       <DependentUpon>InvokeWorkflowFileDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Workflow\RetryScopeActivity.cs" />
+    <Compile Include="Workflow\RetryScopeDesigner.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -423,6 +438,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Application\StartProcessDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Checkpoint\CheckFalseDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Checkpoint\CheckTrueDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -594,6 +617,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Execute\InvokeComMethod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="File\AppendLineDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -642,11 +669,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="StringActivity\IsMatchDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StringActivity\MatchesDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StringActivity\ReplaceDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Workflow\InvokeCodeDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Workflow\InvokeWorkflowFileDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Workflow\RetryScopeDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -740,6 +783,18 @@
     <Resource Include="activity.config_zh-TW.xml">
       <SubType>Designer</SubType>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Checkpoint\Checkpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Execute\InvokeComMethod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\StringActivity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Workflow\ReteyScope.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

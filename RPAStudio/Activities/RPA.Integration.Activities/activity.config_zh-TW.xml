@@ -41,8 +41,8 @@
         <Activity Name="設定儲存格內容" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="設定指定位置儲存格的文字內容"/>
       </Group>
       <Group Name="行/列">
-        <Activity Name="讀取行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="讀取一行或一列數據"/>
-        <Activity Name="複製行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="在指定位置複製一行或一列數據"/>
+        <Activity Name="複製行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="讀取一行或一列數據"/>
+        <Activity Name="粘貼行/列" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="在指定位置複製一行或一列數據"/>
         <Activity Name="行/列操作" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="包括對行或列的隱藏/新增/删除操作"/>
         <Activity Name="獲取行/列數" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="獲取相應相應工作簿行/列總數，遇空行/列截止"/>
       </Group>

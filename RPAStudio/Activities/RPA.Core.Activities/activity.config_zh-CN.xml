@@ -58,6 +58,11 @@
     <Group Name="执行" >
       <Activity Name="执行代码" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeCodeActivity,RPA.Core.Activities" ToolTip="同步执行VB.Net代码，支持传递参数"/>
       <Activity Name="执行工作流文件" Icon="Resources/Workflow/invoke.png"  TypeOf="RPA.Core.Activities.Workflow.InvokeWorkflowFileActivity,RPA.Core.Activities" ToolTip="同步执行一个工作流文件，支持传递参数"/>
+      <Activity Name="InvokeComMethod" Icon="Resources/Execute/InvokeComMethod.png"  TypeOf="RPA.Core.Activities.Execute.InvokeComMethodActivity,RPA.Core.Activities" ToolTip="调用指定COM对象的方法"/>
+    </Group>
+    <Group Name="Checkpoint">
+      <Activity Name="Check False" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckFalse,RPA.Core.Activities" ToolTip="检查给定的布尔表达式是否为false，并在表达式为true时使用指定的消息生成错误。"/>
+      <Activity Name="Check True" Icon="Resources/Checkpoint/Checkpoint.png"  TypeOf="RPA.Core.Activities.Checkpoint.CheckTrue,RPA.Core.Activities" ToolTip="检查给定的布尔表达式是否为true，并在表达式为false时使用指定的消息生成错误。"/>
     </Group>
   </Group>
   <Group Name="用户事件" >
@@ -89,6 +94,11 @@
       <Activity Name="删除数据行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDataRow,   RPA.Core.Activities" ToolTip="从指定的DataTable中删除DataColumn"/>
       <Activity Name="删除重复行" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.RemoveDuplicateRows,   RPA.Core.Activities" ToolTip="从指定的DataTable中删除重复的行数据"/>
       <Activity Name="排序数据表" Icon="Resources/DataTable/datatable.png"  TypeOf="RPA.Core.Activities.DataTableActivity.SortDataTable,   RPA.Core.Activities" ToolTip="DataTable根据指定列的值按升序或降序对整数进行排序"/>
+    </Group>
+    <Group Name="String">
+      <Activity Name="IsMatch" Icon="Resources/StringActivity/IsMatch.png"  TypeOf="RPA.Core.Activities.StringActivity.IsMatchActivity,RPA.Core.Activities" ToolTip="指示指定的正则表达式是否使用指定的输入字符串，使用指定的匹配选项在指定的输入字符串中找到匹配项"/>
+      <Activity Name="Matches" Icon="Resources/StringActivity/Matches.png"  TypeOf="RPA.Core.Activities.StringActivity.Matches,RPA.Core.Activities" ToolTip="在输入字符串中搜索正则表达式的所有匹配项并返回所有成功的匹配项"/>
+      <Activity Name="Replace" Icon="Resources/StringActivity/Replace.png"  TypeOf="RPA.Core.Activities.StringActivity.Replace,RPA.Core.Activities" ToolTip="在指定的输入字符串中，用指定的替换字符串替换与正则表达式模式匹配的字符串"/>
     </Group>
   </Group>
 </activity.config>

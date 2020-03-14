@@ -133,7 +133,7 @@
     <value>UI Object</value>
   </data>
   <data name="DisplayName1" xml:space="preserve">
-    <value>Window selector</value>
+    <value>Selector</value>
   </data>
   <data name="Description3" xml:space="preserve">
     <value>The Text property used to find specific UI elements when performing activities</value>
@@ -175,7 +175,7 @@
     <value>Copy files or folders</value>
   </data>
   <data name="Category3" xml:space="preserve">
-    <value>Enter</value>
+    <value>Input</value>
   </data>
   <data name="Description15" xml:space="preserve">
     <value>The DataColumn object to be attached to the column set of the DataTable.  If this property is set, all properties under the Options category are ignored</value>
@@ -685,7 +685,7 @@
     <value>Level</value>
   </data>
   <data name="NewsText" xml:space="preserve">
-    <value>News</value>
+    <value>Message</value>
   </data>
   <data name="SpecialFolder" xml:space="preserve">
     <value>Special folder</value>
@@ -842,5 +842,44 @@
   </data>
   <data name="WriteCommentInTextProperty" xml:space="preserve">
     <value>Please write a comment in the Text property</value>
+  </data>
+  <data name="EvaluateExpression" xml:space="preserve">
+    <value>The expression to evaluate.</value>
+  </data>
+  <data name="CheckErrorMessage" xml:space="preserve">
+    <value>If the expression is incorrect, an error message is displayed.</value>
+  </data>
+  <data name="Description116" xml:space="preserve">
+    <value>Specifies the flags used to control binding and how members and types are searched through reflection.</value>
+  </data>
+  <data name="Description117" xml:space="preserve">
+    <value>The class ID of the COM object.</value>
+  </data>
+  <data name="Description118" xml:space="preserve">
+    <value>The name of the method to be called.</value>
+  </data>
+  <data name="Description119" xml:space="preserve">
+    <value>ProgID of the object type of the method to be called.</value>
+  </data>
+  <data name="Description120" xml:space="preserve">
+    <value>A collection of parameters for the method to be called.</value>
+  </data>
+  <data name="Category11" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="key252" xml:space="preserve">
+    <value>Error execution</value>
+  </data>
+  <data name="key253" xml:space="preserve">
+    <value>The string to search for a match.</value>
+  </data>
+  <data name="key254" xml:space="preserve">
+    <value>The regular expression pattern to match.</value>
+  </data>
+  <data name="key255" xml:space="preserve">
+    <value>The string to be replaced.</value>
+  </data>
+  <data name="key256" xml:space="preserve">
+    <value>Replace string.</value>
   </data>
 </root>

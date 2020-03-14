@@ -41,8 +41,8 @@
           <Activity Name="セルに書き込み" Icon="Resources/Excel/setcell.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.CellSet,RPA.Integration.Activities" ToolTip="指定した場所のセルのテキストコンテンツを設定します"/>
         </Group>
         <Group Name="行/列">
-          <Activity Name="行/列の読み込み" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="データの行または列を読み取る"/>
-          <Activity Name="行/列のコピー" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="指定した位置でデータの行または列をコピーします"/>
+          <Activity Name="行/列のコピー" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.ReadRowCol,RPA.Integration.Activities" ToolTip="データの行または列を読み取る"/>
+          <Activity Name="行/列の貼り付け" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.InsertRowCol,RPA.Integration.Activities" ToolTip="指定した位置でデータの行または列をコピーします"/>
           <Activity Name="行/列を操作" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.RowCol,RPA.Integration.Activities" ToolTip="行または列の非表示/追加/削除操作を含める"/>
           <Activity Name="行/列数のカウント" Icon="Resources/Excel/rowcol.png" TypeOf="RPA.Integration.Activities.ExcelPlugins.GetCounts,RPA.Integration.Activities" ToolTip="対応するワークブックの行/列の対応する総数を取得します。"/>
         </Group>
