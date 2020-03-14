@@ -25,7 +25,7 @@ namespace RPA.Integration.Activities.Mail
 
         private void AttachFiles_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ArgumentCollectionEditor.ShowDialog("附件", base.ModelItem);
+            ArgumentCollectionEditor.ShowDialog("Files", base.ModelItem);
         }
     }
 }
