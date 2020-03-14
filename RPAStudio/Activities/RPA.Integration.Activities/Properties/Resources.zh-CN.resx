@@ -1068,4 +1068,25 @@
   <data name="xRequireCorrectSavePath2" xml:space="preserve">
     <value>另存为应输入正确保存路径!</value>
   </data>
+  <data name="key319" xml:space="preserve">
+    <value>文件选项</value>
+  </data>
+  <data name="key320" xml:space="preserve">
+    <value>文件路径</value>
+  </data>
+  <data name="key321" xml:space="preserve">
+    <value>文件密码</value>
+  </data>
+  <data name="key322" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="key323" xml:space="preserve">
+    <value>页面范围</value>
+  </data>
+  <data name="key324" xml:space="preserve">
+    <value>输出</value>
+  </data>
+  <data name="key325" xml:space="preserve">
+    <value>PDF文本</value>
+  </data>
 </root>

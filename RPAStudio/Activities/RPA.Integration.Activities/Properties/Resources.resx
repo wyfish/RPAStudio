@@ -1068,4 +1068,25 @@
   <data name="xRequireCorrectSavePath2" xml:space="preserve">
     <value>Save as should enter the correct save path!</value>
   </data>
+  <data name="key319" xml:space="preserve">
+    <value>File options</value>
+  </data>
+  <data name="key320" xml:space="preserve">
+    <value>File path</value>
+  </data>
+  <data name="key321" xml:space="preserve">
+    <value>File password</value>
+  </data>
+  <data name="key322" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="key323" xml:space="preserve">
+    <value>Page range</value>
+  </data>
+  <data name="key324" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="key325" xml:space="preserve">
+    <value>PDF Text</value>
+  </data>
 </root>
