@@ -382,6 +382,8 @@
     <Compile Include="Workflow\InvokeWorkflowFileDesigner.xaml.cs">
       <DependentUpon>InvokeWorkflowFileDesigner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Workflow\RetryScopeActivity.cs" />
+    <Compile Include="Workflow\RetryScopeDesigner.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -687,6 +689,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Workflow\RetryScopeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Plugins.Shared.Library\Plugins.Shared.Library.csproj">
@@ -786,6 +792,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\StringActivity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Workflow\ReteyScope.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
