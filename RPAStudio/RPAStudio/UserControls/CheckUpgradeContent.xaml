@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPAStudio.UserControls"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cmd="http://www.galasoft.ch/mvvmlight"
              mc:Ignorable="d" 
@@ -23,23 +24,24 @@
             </Grid.ColumnDefinitions>
             <Grid>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Uid="CurrentVersion" VerticalAlignment="Center" Foreground="Black" FontSize="13">当前版本</TextBlock>
+                    <TextBlock Text="{x:Static lclz:Strings.CurrentVersionText}" VerticalAlignment="Center" Foreground="Black" FontSize="13"/>
                     <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" Foreground="Blue" Text="{Binding CurrentVersionName}" FontSize="13"/>
-                    <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Margin="10,0" FontSize="13" Command="{Binding ShowCurrentVersionUpdateLogCommand}">查看日志</Button>
+                    <Button Content="{x:Static lclz:Strings.ViewLogs}" Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Margin="10,0" FontSize="13" Command="{Binding ShowCurrentVersionUpdateLogCommand}"/>
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1" Visibility="{Binding IsCheckUpgradeSuccess,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
                 <Grid Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
                     <StackPanel Orientation="Horizontal" >
-                        <TextBlock x:Uid="LatestVersion" VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
+                        <TextBlock Text="{x:Static lclz:Strings.LatestVersionText}" VerticalAlignment="Center" Foreground="Black" FontSize="13"/>
                         <TextBlock VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="#FFEE581B" Text="{Binding LatestVersionName}" FontSize="13"/>
                         <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Margin="10,0" FontSize="13" Command="{Binding ShowLatestVersionUpdateLogCommand}">查看日志</Button>
                     </StackPanel>
                 </Grid>
                 <Grid Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
                     <StackPanel Orientation="Horizontal" >
-                        <TextBlock x:Uid="LatestVersion" VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
-                        <TextBlock x:Uid="NoNewVersionFound" VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="Black" Text="未发现新版本" FontSize="13" FontWeight="Bold" />
+                        <TextBlock Text="{x:Static lclz:Strings.LatestVersionText}" VerticalAlignment="Center" Foreground="Black" FontSize="13"/>
+                        <!--未发现新版本-->
+                        <TextBlock Text="{x:Static lclz:Strings.NoNewVersionFound}" VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="Black" FontSize="13" FontWeight="Bold" />
                     </StackPanel>
                 </Grid>
             </Grid>
@@ -47,7 +49,7 @@
             <Grid Grid.Column="1" Visibility="{Binding IsCheckUpgradeSuccess,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
                 <Grid Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}">
                     <StackPanel Orientation="Horizontal" >
-                        <TextBlock VerticalAlignment="Center" Foreground="Black" FontSize="13">最新版本</TextBlock>
+                        <TextBlock Text="{x:Static lclz:Strings.LatestVersionText}" VerticalAlignment="Center" Foreground="Black" FontSize="13"/>
                         <TextBlock VerticalAlignment="Center" Margin="5,0,0,0"  Foreground="Red" Text="获取升级信息出错，请检查！" FontSize="13" FontWeight="Bold" />
                     </StackPanel>
                 </Grid>
@@ -59,7 +61,7 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" FontSize="13" Foreground="Black">当前版本更新日志</TextBlock>
+            <TextBlock Text="{x:Static lclz:Strings.CurrentVersionUpdateLog}" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="13" Foreground="Black"/>
             <TextBox Grid.Row="1" Margin="10,0" Padding="5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontSize="13" Text="{Binding CurrentVersionUpdateLog}" />
         </Grid>
         <Grid Grid.Row="1" Visibility="{Binding IsShowLatestVersionUpdateLog,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
@@ -67,7 +69,7 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Uid="LatestUpdateLog" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="13" Foreground="Black">最新版本更新日志</TextBlock>
+            <TextBlock Text="{x:Static lclz:Strings.LatestVersionUpdateLog}" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="13" Foreground="Black"/>
             <TextBox Grid.Row="1" Margin="10,0" Padding="5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontSize="13" Text="{Binding LatestVersionUpdateLog}" />
         </Grid>
         <Grid Grid.Row="2" Margin="10,0" Visibility="{Binding IsShowProgressBar,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}">
@@ -76,7 +78,8 @@
         <Grid Grid.Row="3">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Style="{StaticResource ToolBarButtonStyle}"  Command="{Binding DoUpgradeCommand}" FontSize="13" Width="80" Height="25" Margin="10,0" Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">立即更新</Button>
-                <Button x:Uid="CheckForUpdates" Style="{StaticResource ToolBarButtonStyle}"  Command="{Binding CheckUpgradeCommand}" FontSize="13" Width="80" Height="25" Margin="10,0">检查更新</Button>
+                <!--检查更新-->
+                <Button Content="{x:Static lclz:Strings.CheckUpdates}" Style="{StaticResource ToolBarButtonStyle}"  Command="{Binding CheckUpgradeCommand}" FontSize="13" Width="80" Height="25" Margin="10,0"/>
             </StackPanel>
         </Grid>
     </Grid>

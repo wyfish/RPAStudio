@@ -47,7 +47,7 @@
             </MenuItem.Icon>
         </MenuItem>
         <Separator />
-        <MenuItem Header="{x:Static lclz:Strings.ProjectSettingsTitle}" Command="{Binding OpenProjectSettingsCommand}" CommandParameter="{Binding}" >
+        <MenuItem Header="{x:Static lclz:Strings.ProjectSettingsText}" Command="{Binding OpenProjectSettingsCommand}" CommandParameter="{Binding}" >
             <MenuItem.Icon>
                 <Image Source="pack://application:,,,/Resources/Image/Project/settings.png"/>
             </MenuItem.Icon>
