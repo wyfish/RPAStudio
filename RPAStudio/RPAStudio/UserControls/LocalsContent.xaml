@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPAStudio.UserControls"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:libs="clr-namespace:RPAStudio.Librarys"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cmd="http://www.galasoft.ch/mvvmlight"
@@ -35,13 +36,16 @@
             </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView x:Name="gridView">
-                    <GridViewColumn x:Uid="Name" DisplayMemberBinding="{Binding Path=Name}" Header="名称" Width="{Binding ElementName=columnName,Path=ActualWidth}" />
-                    <GridViewColumn x:Uid="Value" Header="值" Width="{Binding ElementName=columnValue,Path=ActualWidth}">
+                    <!--名称-->
+                    <GridViewColumn Header="{x:Static lclz:Strings.NameText}" DisplayMemberBinding="{Binding Path=Name}" Width="{Binding ElementName=columnName,Path=ActualWidth}" />
+                    <!--值-->
+                    <GridViewColumn Header="{x:Static lclz:Strings.ValueText}" Width="{Binding ElementName=columnValue,Path=ActualWidth}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
                                     <TextBox Text="{Binding Value}" ToolTip="{Binding Value}"  IsReadOnly="True" VerticalAlignment="Center" Margin="0,0,30,0" MaxHeight="50" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" />
-                                    <libs:ColorButtonThreeState x:Uid="ViewAttributeValues" Margin="0,0,0,0" Width="25" Height="25" ToolTip="查看属性值" Command="{Binding ViewValueDetailCommand}" def_img="pack://application:,,,/Resources/Image/Dock/view-variable.png" HorizontalAlignment="Right" />
+                                    <!--查看属性值-->
+                                    <libs:ColorButtonThreeState Margin="0,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.ViewAttributeValuesToolTip}" Command="{Binding ViewValueDetailCommand}" def_img="pack://application:,,,/Resources/Image/Dock/view-variable.png" HorizontalAlignment="Right" />
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

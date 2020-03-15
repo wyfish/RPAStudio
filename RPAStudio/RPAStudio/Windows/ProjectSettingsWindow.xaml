@@ -10,7 +10,7 @@
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         DataContext="{Binding ProjectSettings, Source={StaticResource Locator}}"
         Icon="/Resources/Ico/RPAStudio.ico"
-        Title="{x:Static lclz:Strings.ProjectSettingsTitle}" Height="280" Width="470" ResizeMode="NoResize">
+        Title="{x:Static lclz:Strings.ProjectSettingsText}" Height="280" Width="470" ResizeMode="NoResize">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
             <cmd:EventToCommand Command="{Binding LoadedCommand}" PassEventArgsToCommand="True" ></cmd:EventToCommand>
@@ -34,7 +34,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Grid.ColumnSpan="2">
-                <TextBlock VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{x:Static lclz:Strings.ProjectSettingsTitle}"/>
+                <TextBlock VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{x:Static lclz:Strings.ProjectSettingsText}"/>
             </Grid>
             <Grid Grid.Row="1" Grid.ColumnSpan="2">
                 <TextBlock VerticalAlignment="Center" FontSize="14" Text="{x:Static lclz:Strings.ProjectSettingsDesc}" />

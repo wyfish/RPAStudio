@@ -70,11 +70,29 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Show Activity group に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ActivityGroupToolTip {
+            get {
+                return ResourceManager.GetString("ActivityGroupToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Activity に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ActivityText {
             get {
                 return ResourceManager.GetString("ActivityText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Add folder に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AddFolder {
+            get {
+                return ResourceManager.GetString("AddFolder", resourceCulture);
             }
         }
         
@@ -151,6 +169,60 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Toggle Breakpoint に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BreakPoint2Text {
+            get {
+                return ResourceManager.GetString("BreakPoint2Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Break point に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BreakPointText {
+            get {
+                return ResourceManager.GetString("BreakPointText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Toggle Breakpoint (F9) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BreakPointToolTip {
+            get {
+                return ResourceManager.GetString("BreakPointToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Break に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BreakText {
+            get {
+                return ResourceManager.GetString("BreakText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Break execution (Pause) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BreakToolTip {
+            get {
+                return ResourceManager.GetString("BreakToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Browse project files に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BrowseProjectFiles {
+            get {
+                return ResourceManager.GetString("BrowseProjectFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   by に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ByText {
@@ -169,11 +241,47 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Check for updates に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CheckUpdates {
+            get {
+                return ResourceManager.GetString("CheckUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Choose a local source path に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ChooseLocalSourcePath {
             get {
                 return ResourceManager.GetString("ChooseLocalSourcePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Clear all breakpoints に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ClearAllBreakPointsText {
+            get {
+                return ResourceManager.GetString("ClearAllBreakPointsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Clear all breakpoints (Shift+F9) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ClearAllBreakPointsToolTip {
+            get {
+                return ResourceManager.GetString("ClearAllBreakPointsToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Crear all に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ClearAllToolTip {
+            get {
+                return ResourceManager.GetString("ClearAllToolTip", resourceCulture);
             }
         }
         
@@ -187,11 +295,47 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Collapse All に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CollapseAllToolTip {
+            get {
+                return ResourceManager.GetString("CollapseAllToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dark に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ColorDark {
+            get {
+                return ResourceManager.GetString("ColorDark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Light に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ColorLight {
+            get {
+                return ResourceManager.GetString("ColorLight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ask に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ConfirmText {
             get {
                 return ResourceManager.GetString("ConfirmText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Continue に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ContinueText {
+            get {
+                return ResourceManager.GetString("ContinueText", resourceCulture);
             }
         }
         
@@ -232,6 +376,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Current version update log に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CurrentVersionUpdateLog {
+            get {
+                return ResourceManager.GetString("CurrentVersionUpdateLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Custom に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string CustomContent {
@@ -246,6 +399,33 @@ namespace RPAStudio.Localization {
         public static string CustomPathText {
             get {
                 return ResourceManager.GetString("CustomPathText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cut に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string CutText {
+            get {
+                return ResourceManager.GetString("CutText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Debug に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Debug2Text {
+            get {
+                return ResourceManager.GetString("Debug2Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Debug に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DebugText {
+            get {
+                return ResourceManager.GetString("DebugText", resourceCulture);
             }
         }
         
@@ -313,6 +493,24 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Depens に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DependsText {
+            get {
+                return ResourceManager.GetString("DependsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Deploy に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DeployText {
+            get {
+                return ResourceManager.GetString("DeployText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Description に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DescriptionText {
@@ -327,6 +525,15 @@ namespace RPAStudio.Localization {
         public static string DescriptionWithColon {
             get {
                 return ResourceManager.GetString("DescriptionWithColon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Edit に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string EditText {
+            get {
+                return ResourceManager.GetString("EditText", resourceCulture);
             }
         }
         
@@ -385,11 +592,65 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Expand All に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ExpandAllToolTip {
+            get {
+                return ResourceManager.GetString("ExpandAllToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Flow Chart に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FlowChartText {
+            get {
+                return ResourceManager.GetString("FlowChartText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   General に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string GeneralText {
+            get {
+                return ResourceManager.GetString("GeneralText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Help に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string HelpText {
+            get {
+                return ResourceManager.GetString("HelpText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Highlight element に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string HighlightElementText {
+            get {
+                return ResourceManager.GetString("HighlightElementText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Import workflow… に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ImportWorkflowDot {
             get {
                 return ResourceManager.GetString("ImportWorkflowDot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InformationText {
+            get {
+                return ResourceManager.GetString("InformationText", resourceCulture);
             }
         }
         
@@ -412,6 +673,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Interrupt on exception に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string InterruptOnException {
+            get {
+                return ResourceManager.GetString("InterruptOnException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Include pre-release versions に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string IsIncludePrereleaseCheckBox {
@@ -430,11 +700,56 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Use this option to change the interface language in Studio and the robot. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LanguageDescription {
+            get {
+                return ResourceManager.GetString("LanguageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Language に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LanguageText {
+            get {
+                return ResourceManager.GetString("LanguageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Latest version に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LatestVersionText {
+            get {
+                return ResourceManager.GetString("LatestVersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Latest update log に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LatestVersionUpdateLog {
+            get {
+                return ResourceManager.GetString("LatestVersionUpdateLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   License: に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string LicenseWithColon {
             get {
                 return ResourceManager.GetString("LicenseWithColon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Loading... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LoadingText {
+            get {
+                return ResourceManager.GetString("LoadingText", resourceCulture);
             }
         }
         
@@ -471,6 +786,15 @@ namespace RPAStudio.Localization {
         public static string logStarted {
             get {
                 return ResourceManager.GetString("logStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Log に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LogText {
+            get {
+                return ResourceManager.GetString("LogText", resourceCulture);
             }
         }
         
@@ -655,11 +979,38 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   New Project に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string NewProjectText {
+            get {
+                return ResourceManager.GetString("NewProjectText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   New version に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string NewVersionText {
             get {
                 return ResourceManager.GetString("NewVersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No function に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string NoFunction {
+            get {
+                return ResourceManager.GetString("NoFunction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No new version found に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string NoNewVersionFound {
+            get {
+                return ResourceManager.GetString("NoNewVersionFound", resourceCulture);
             }
         }
         
@@ -700,6 +1051,24 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Open log に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenLogText {
+            get {
+                return ResourceManager.GetString("OpenLogText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open log (Ctrl+L) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenLogToolTip {
+            get {
+                return ResourceManager.GetString("OpenLogToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Open the project に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string OpenProject {
@@ -736,6 +1105,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Open に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OpenText {
+            get {
+                return ResourceManager.GetString("OpenText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Operating rules に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string OperatingRule {
@@ -750,6 +1128,15 @@ namespace RPAStudio.Localization {
         public static string OperatingText {
             get {
                 return ResourceManager.GetString("OperatingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Option に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OptionText {
+            get {
+                return ResourceManager.GetString("OptionText", resourceCulture);
             }
         }
         
@@ -783,6 +1170,15 @@ namespace RPAStudio.Localization {
         /// <summary>
         ///   Package Manager に類似しているローカライズされた文字列を検索します。
         /// </summary>
+        public static string PackageManagerText {
+            get {
+                return ResourceManager.GetString("PackageManagerText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Package Manager に類似しているローカライズされた文字列を検索します。
+        /// </summary>
         public static string PackageManagerTitle {
             get {
                 return ResourceManager.GetString("PackageManagerTitle", resourceCulture);
@@ -804,6 +1200,15 @@ namespace RPAStudio.Localization {
         public static string PacketSourceAddress {
             get {
                 return ResourceManager.GetString("PacketSourceAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Paste に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PasteText {
+            get {
+                return ResourceManager.GetString("PasteText", resourceCulture);
             }
         }
         
@@ -831,6 +1236,24 @@ namespace RPAStudio.Localization {
         public static string PathText {
             get {
                 return ResourceManager.GetString("PathText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Create a new automated blank process に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ProcessDescription {
+            get {
+                return ResourceManager.GetString("ProcessDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Process に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ProcessText {
+            get {
+                return ResourceManager.GetString("ProcessText", resourceCulture);
             }
         }
         
@@ -873,9 +1296,9 @@ namespace RPAStudio.Localization {
         /// <summary>
         ///   Project settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string ProjectSettingsTitle {
+        public static string ProjectSettingsText {
             get {
-                return ResourceManager.GetString("ProjectSettingsTitle", resourceCulture);
+                return ResourceManager.GetString("ProjectSettingsText", resourceCulture);
             }
         }
         
@@ -903,6 +1326,33 @@ namespace RPAStudio.Localization {
         public static string PublishProjectTitle {
             get {
                 return ResourceManager.GetString("PublishProjectTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recent に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RecentText {
+            get {
+                return ResourceManager.GetString("RecentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Record activity に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RecordActivityText {
+            get {
+                return ResourceManager.GetString("RecordActivityText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Refresh に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RefreshText {
+            get {
+                return ResourceManager.GetString("RefreshText", resourceCulture);
             }
         }
         
@@ -943,6 +1393,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Release Package に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ReleaseToolTip {
+            get {
+                return ResourceManager.GetString("ReleaseToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Publish to に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ReleaseToText {
@@ -966,6 +1425,15 @@ namespace RPAStudio.Localization {
         public static string RemoveFromList {
             get {
                 return ResourceManager.GetString("RemoveFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Remove unused screenshots に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RemoveScreenshots {
+            get {
+                return ResourceManager.GetString("RemoveScreenshots", resourceCulture);
             }
         }
         
@@ -1006,6 +1474,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Run (F5) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string RunToolTip {
+            get {
+                return ResourceManager.GetString("RunToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   A directory with the same name already exists に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SameNameDirectoryAlreadyExists {
@@ -1029,6 +1506,96 @@ namespace RPAStudio.Localization {
         public static string SameNameProjectAlreadyExists {
             get {
                 return ResourceManager.GetString("SameNameProjectAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save All に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SaveAllText {
+            get {
+                return ResourceManager.GetString("SaveAllText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save All（Ctrl+Shift+S） に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SaveAllTooltip {
+            get {
+                return ResourceManager.GetString("SaveAllTooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save As に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SaveAsText {
+            get {
+                return ResourceManager.GetString("SaveAsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SaveText {
+            get {
+                return ResourceManager.GetString("SaveText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save(Ctrl+S) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SaveToolTip {
+            get {
+                return ResourceManager.GetString("SaveToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search Activity に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SearchActivity {
+            get {
+                return ResourceManager.GetString("SearchActivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search code snippet に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SearchCodeSnippet {
+            get {
+                return ResourceManager.GetString("SearchCodeSnippet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search project files に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SearchProjectFiles {
+            get {
+                return ResourceManager.GetString("SearchProjectFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search results are empty に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SearchResultsEmpty {
+            get {
+                return ResourceManager.GetString("SearchResultsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SearchText {
+            get {
+                return ResourceManager.GetString("SearchText", resourceCulture);
             }
         }
         
@@ -1060,6 +1627,24 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Sequence に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SequenceText {
+            get {
+                return ResourceManager.GetString("SequenceText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sequence（Ctrl+N） に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SequenceToolTip {
+            get {
+                return ResourceManager.GetString("SequenceToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Set as main file に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SetAsMainFile {
@@ -1074,6 +1659,15 @@ namespace RPAStudio.Localization {
         public static string SetFromAddress {
             get {
                 return ResourceManager.GetString("SetFromAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Show all files に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ShowAllFiles {
+            get {
+                return ResourceManager.GetString("ShowAllFiles", resourceCulture);
             }
         }
         
@@ -1114,6 +1708,105 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Show time stamp に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ShowTimeStamp {
+            get {
+                return ResourceManager.GetString("ShowTimeStamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Slow Debug に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SlowDebugText {
+            get {
+                return ResourceManager.GetString("SlowDebugText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Debug runs at different speeds from the slowest 1x to the fastest 4x に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SlowDebugToolTip {
+            get {
+                return ResourceManager.GetString("SlowDebugToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Start に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StartText {
+            get {
+                return ResourceManager.GetString("StartText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   State machine に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StateMachineText {
+            get {
+                return ResourceManager.GetString("StateMachineText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Step-In に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StepInText {
+            get {
+                return ResourceManager.GetString("StepInText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Step-In (F11) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StepInToolTip {
+            get {
+                return ResourceManager.GetString("StepInToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Step-Over に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StepOverText {
+            get {
+                return ResourceManager.GetString("StepOverText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Step-Over (Shift+F11) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StepOverToolTip {
+            get {
+                return ResourceManager.GetString("StepOverToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Stop に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StopText {
+            get {
+                return ResourceManager.GetString("StopText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Stop (F12) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StopToolTip {
+            get {
+                return ResourceManager.GetString("StopToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Tag: に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TagWithColon {
@@ -1141,6 +1834,24 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Use this option to change the theme in Studio. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ThemeDescription {
+            get {
+                return ResourceManager.GetString("ThemeDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Theme に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ThemeText {
+            get {
+                return ResourceManager.GetString("ThemeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   The specified path does not exist に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ThePathDoesNotExist {
@@ -1155,6 +1866,15 @@ namespace RPAStudio.Localization {
         public static string TheSoftwareFailedAuthorizationTest {
             get {
                 return ResourceManager.GetString("TheSoftwareFailedAuthorizationTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Track に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TrackText {
+            get {
+                return ResourceManager.GetString("TrackText", resourceCulture);
             }
         }
         
@@ -1204,11 +1924,38 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   Value に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ValueText {
+            get {
+                return ResourceManager.GetString("ValueText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Variable Tracking に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string VariableTracking {
             get {
                 return ResourceManager.GetString("VariableTracking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Varidate に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string VaridateText {
+            get {
+                return ResourceManager.GetString("VaridateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Varidate（F8） に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string VaridateToolTip {
+            get {
+                return ResourceManager.GetString("VaridateToolTip", resourceCulture);
             }
         }
         
@@ -1249,6 +1996,15 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   View attribute values に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewAttributeValuesToolTip {
+            get {
+                return ResourceManager.GetString("ViewAttributeValuesToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   View license information に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ViewLicenseInformation {
@@ -1258,11 +2014,29 @@ namespace RPAStudio.Localization {
         }
         
         /// <summary>
+        ///   View Log に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ViewLogs {
+            get {
+                return ResourceManager.GetString("ViewLogs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   View project information に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ViewProjectInformation {
             get {
                 return ResourceManager.GetString("ViewProjectInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Warning に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string WarningText {
+            get {
+                return ResourceManager.GetString("WarningText", resourceCulture);
             }
         }
         

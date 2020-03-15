@@ -255,7 +255,7 @@
   <data name="ProjectSettingsDesc" xml:space="preserve">
     <value>名前や説明などのプロジェクト関連の構成を変更します</value>
   </data>
-  <data name="ProjectSettingsTitle" xml:space="preserve">
+  <data name="ProjectSettingsText" xml:space="preserve">
     <value>プロジェクト設定</value>
   </data>
   <data name="ProjectText" xml:space="preserve">
@@ -265,7 +265,7 @@
     <value>プロジェクトをパブリッシュ</value>
   </data>
   <data name="ReleaseContent" xml:space="preserve">
-    <value>パブリッシュ</value>
+    <value>リリース</value>
   </data>
   <data name="ReleaseLocationText" xml:space="preserve">
     <value>リリース場所</value>
@@ -611,5 +611,275 @@
   </data>
   <data name="xSendHotkey" xml:space="preserve">
     <value>ホットキーを送信</value>
+  </data>
+  <data name="CheckUpdates" xml:space="preserve">
+    <value>更新を確認</value>
+  </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>読み込み中...</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="DebugText" xml:space="preserve">
+    <value>デバッグ</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="SequenceText" xml:space="preserve">
+    <value>シーケンス</value>
+  </data>
+  <data name="SequenceToolTip" xml:space="preserve">
+    <value>シーケンス（Ctrl+N）</value>
+  </data>
+  <data name="FlowChartText" xml:space="preserve">
+    <value>フローチャート</value>
+  </data>
+  <data name="StateMachineText" xml:space="preserve">
+    <value>ステートマシン</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SaveToolTip" xml:space="preserve">
+    <value>保存（Ctrl+S）</value>
+  </data>
+  <data name="SaveAllText" xml:space="preserve">
+    <value>すべて保存</value>
+  </data>
+  <data name="SaveAsText" xml:space="preserve">
+    <value>名前を付けて保存</value>
+  </data>
+  <data name="SaveAllTooltip" xml:space="preserve">
+    <value>すべて保存（Ctrl+Shift+S）</value>
+  </data>
+  <data name="RunToolTip" xml:space="preserve">
+    <value>実行（F5）</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="CutText" xml:space="preserve">
+    <value>切り取り</value>
+  </data>
+  <data name="PasteText" xml:space="preserve">
+    <value>貼り付け</value>
+  </data>
+  <data name="DependsText" xml:space="preserve">
+    <value>依存</value>
+  </data>
+  <data name="PackageManagerText" xml:space="preserve">
+    <value>パッケージマネージャ</value>
+  </data>
+  <data name="DeployText" xml:space="preserve">
+    <value>デプロイ</value>
+  </data>
+  <data name="ReleaseToolTip" xml:space="preserve">
+    <value>パッケージを公開します</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="StopToolTip" xml:space="preserve">
+    <value>停止（F12）</value>
+  </data>
+  <data name="BreakText" xml:space="preserve">
+    <value>中断</value>
+  </data>
+  <data name="BreakToolTip" xml:space="preserve">
+    <value>中断（一時停止）</value>
+  </data>
+  <data name="StepInText" xml:space="preserve">
+    <value>ステップ イン</value>
+  </data>
+  <data name="StepInToolTip" xml:space="preserve">
+    <value>ステップ イン（F11）</value>
+  </data>
+  <data name="StepOverText" xml:space="preserve">
+    <value>ステップ オーバー</value>
+  </data>
+  <data name="StepOverToolTip" xml:space="preserve">
+    <value>ステップ オーバー（Shift+F11）</value>
+  </data>
+  <data name="VaridateText" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="VaridateToolTip" xml:space="preserve">
+    <value>エラーチェック（F8）</value>
+  </data>
+  <data name="BreakPointText" xml:space="preserve">
+    <value>ブレークポイント</value>
+  </data>
+  <data name="BreakPointToolTip" xml:space="preserve">
+    <value>ブレークポイントの切り替え (F9)</value>
+  </data>
+  <data name="BreakPoint2Text" xml:space="preserve">
+    <value>ブレークポイントの切り替え</value>
+  </data>
+  <data name="ClearAllBreakPointsText" xml:space="preserve">
+    <value>すべてのブレークポイントをクリア</value>
+  </data>
+  <data name="ClearAllBreakPointsToolTip" xml:space="preserve">
+    <value>すべてのブレークポイントをクリア (Shift+F9)</value>
+  </data>
+  <data name="SlowDebugText" xml:space="preserve">
+    <value>低速デバッグ</value>
+  </data>
+  <data name="SlowDebugToolTip" xml:space="preserve">
+    <value>最も遅い1xから最も速い4xまでの異なる速度でデバッグを実行</value>
+  </data>
+  <data name="OptionText" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="HighlightElementText" xml:space="preserve">
+    <value>要素を強調表示</value>
+  </data>
+  <data name="RecordActivityText" xml:space="preserve">
+    <value>アクティビティを記録</value>
+  </data>
+  <data name="InterruptOnException" xml:space="preserve">
+    <value>例外割り込み</value>
+  </data>
+  <data name="LogText" xml:space="preserve">
+    <value>ログ</value>
+  </data>
+  <data name="OpenLogText" xml:space="preserve">
+    <value>ログを開く</value>
+  </data>
+  <data name="OpenLogToolTip" xml:space="preserve">
+    <value>ログを開く (Ctrl+L)</value>
+  </data>
+  <data name="ContinueText" xml:space="preserve">
+    <value>続行</value>
+  </data>
+  <data name="Debug2Text" xml:space="preserve">
+    <value>デバッグ</value>
+  </data>
+  <data name="ExpandAllToolTip" xml:space="preserve">
+    <value>すべて展開</value>
+  </data>
+  <data name="CollapseAllToolTip" xml:space="preserve">
+    <value>すべて折りたたむ</value>
+  </data>
+  <data name="ActivityGroupToolTip" xml:space="preserve">
+    <value>アクティビティーグループ</value>
+  </data>
+  <data name="SearchActivity" xml:space="preserve">
+    <value>アクティビティを検索</value>
+  </data>
+  <data name="SearchResultsEmpty" xml:space="preserve">
+    <value>検索結果は空です</value>
+  </data>
+  <data name="CurrentVersionUpdateLog" xml:space="preserve">
+    <value>現在バージョン更新ログ</value>
+  </data>
+  <data name="LatestVersionText" xml:space="preserve">
+    <value>最新バージョン</value>
+  </data>
+  <data name="LatestVersionUpdateLog" xml:space="preserve">
+    <value>最新バージョン更新ログ</value>
+  </data>
+  <data name="ValueText" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="ViewAttributeValuesToolTip" xml:space="preserve">
+    <value>属性値を表示</value>
+  </data>
+  <data name="NoNewVersionFound" xml:space="preserve">
+    <value>更新バージョンはありません</value>
+  </data>
+  <data name="TrackText" xml:space="preserve">
+    <value>追跡</value>
+  </data>
+  <data name="WarningText" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="InformationText" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="ClearAllToolTip" xml:space="preserve">
+    <value>すべてクリア</value>
+  </data>
+  <data name="ShowTimeStamp" xml:space="preserve">
+    <value>時間を表示</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="RefreshText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="SearchProjectFiles" xml:space="preserve">
+    <value>プロジェクトファイルを検索</value>
+  </data>
+  <data name="ShowAllFiles" xml:space="preserve">
+    <value>すべてのファイルを表示</value>
+  </data>
+  <data name="BrowseProjectFiles" xml:space="preserve">
+    <value>プロジェクトファイルを参照</value>
+  </data>
+  <data name="RemoveScreenshots" xml:space="preserve">
+    <value>使用しないスクリーンショットを削除</value>
+  </data>
+  <data name="AddFolder" xml:space="preserve">
+    <value>フォルダを追加</value>
+  </data>
+  <data name="SearchCodeSnippet" xml:space="preserve">
+    <value>コードスニペットを検索</value>
+  </data>
+  <data name="ProcessText" xml:space="preserve">
+    <value>プロセス</value>
+  </data>
+  <data name="ProcessDescription" xml:space="preserve">
+    <value>新しい自動化された空白プロセスを作成する</value>
+  </data>
+  <data name="ViewLogs" xml:space="preserve">
+    <value>ログを表示</value>
+  </data>
+  <data name="NewProjectText" xml:space="preserve">
+    <value>新規プロジェクト</value>
+  </data>
+  <data name="RecentText" xml:space="preserve">
+    <value>最近使用したプロセス</value>
+  </data>
+  <data name="NoFunction" xml:space="preserve">
+    <value>機能なし</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="GeneralText" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>Studioとロボットのインターフェース言語を変更します。</value>
+  </data>
+  <data name="ThemeText" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>Studioのテーマを変更します。</value>
+  </data>
+  <data name="ColorLight" xml:space="preserve">
+    <value>ライト</value>
+  </data>
+  <data name="ColorDark" xml:space="preserve">
+    <value>ダーク</value>
+  </data>
+  <data name="ExecutionCancelled" xml:space="preserve">
+    <value>実行がキャンセルされました</value>
+  </data>
+  <data name="ExceptionOccurredWhileDebugging" xml:space="preserve">
+    <value>例外が発生したためデバッグを停止します！</value>
+  </data>
+  <data name="ExceptionOccurredMessage" xml:space="preserve">
+    <value>{0} 実行中に例外が発生しました</value>
+  </data>
+  <data name="ErrorWhileDebugging" xml:space="preserve">
+    <value>デバッグ中の実行エラー</value>
   </data>
 </root>
