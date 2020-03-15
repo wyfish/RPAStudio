@@ -51,8 +51,8 @@
         
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" x:Uid="OK" Content="{x:Static lclz:Strings.OKText}" Command="{Binding OkCommand}" IsDefault="True" ></Button>
-                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" x:Uid="Cancel" Content="{x:Static lclz:Strings.CancelText}" Command="{Binding CancelCommand}" Margin="15,0,10,0" ></Button>
+                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Content="{x:Static lclz:Strings.OKText}" Command="{Binding OkCommand}" IsDefault="True" ></Button>
+                <Button Style="{StaticResource ToolBarButtonStyle}"  Width="80" Height="25" Content="{x:Static lclz:Strings.CancelText}" Command="{Binding CancelCommand}" Margin="15,0,10,0" ></Button>
             </StackPanel>
         </Grid>
     </Grid>

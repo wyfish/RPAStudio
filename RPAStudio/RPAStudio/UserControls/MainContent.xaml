@@ -33,14 +33,15 @@
                                 <fluent:BackstageTabItem Header="{x:Static lclz:Strings.xStart}">
                                     <uc:StartContent/>
                                 </fluent:BackstageTabItem>
-
+                                <!--设置-->
                                 <fluent:BackstageTabItem Header="{x:Static lclz:Strings.xSettings}">
                                     <uc:SetUpContent/>                              
                                 </fluent:BackstageTabItem>
                                 <fluent:BackstageTabItem >
                                     <fluent:BackstageTabItem.Header>
                                         <StackPanel Orientation="Horizontal">
-                                            <TextBlock x:Uid="CheckUpdates(检查更新)" Text="{Binding P_CheckUpdates}" />
+                                            <!--检查更新-->
+                                            <TextBlock Text="{x:Static lclz:Strings.CheckUpdates}" />
                                             <Border Visibility="{Binding IsNeedUpgrade,Mode=OneWay, Converter={StaticResource BoolCollapsedConverter}}" CornerRadius="5" Width="10" Height="10" Background="Red" Margin="3,0,0,0"></Border>
                                         </StackPanel>
                                     </fluent:BackstageTabItem.Header>
@@ -55,7 +56,8 @@
                                 <Border BorderBrush="#ababab" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="360" Height="120" Background="White" >
                                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                                         <Image Width="40" Height="40" gif:ImageBehavior.AnimatedSource="pack://application:,,,/Resources/Image/Ribbon/loading.gif"/>
-                                        <TextBlock x:Uid="Loading" FontSize="15" Margin="0,10,0,0">正在加载……</TextBlock>
+                                        <!--正在加载……-->
+                                        <TextBlock Text="{x:Static lclz:Strings.LoadingText}" FontSize="15" Margin="0,10,0,0"/>
                                     </StackPanel>
                                     
                                 </Border>
@@ -66,7 +68,8 @@
                 </Grid>
             </fluent:Ribbon.Menu>
             <fluent:Ribbon.ToolBarItems>
-                <fluent:Button x:Uid="Help" Size="Small" Icon="pack://application:,,,/Resources/Image/Ribbon/help.png" ToolTip="帮助" />
+                <!--帮助-->
+                <fluent:Button Size="Small" Icon="pack://application:,,,/Resources/Image/Ribbon/help.png" ToolTip="{x:Static lclz:Strings.HelpText}" />
             </fluent:Ribbon.ToolBarItems>
             <fluent:Ribbon.QuickAccessItems>
                 <fluent:QuickAccessMenuItem Target="{Binding Source={x:Reference saveButton}}"
@@ -85,20 +88,23 @@
                                            LargeIcon="pack://application:,,,/Resources/Image/Ribbon/new.png"
                                            IsEnabled="True"
                                            VerticalAlignment="Top">
-                        <fluent:MenuItem x:Uid="SequenceDiagram(序列图)" Header="{Binding P_SequenceDiagram}" 
+                        <!--序列图-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.SequenceText}" 
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/sequence.png"
                                          Command="{Binding NewSequenceDocumentCommand}"
-                                         ToolTip="{Binding P_SequenceDiagram_ToolTip}"
+                                         ToolTip="{x:Static lclz:Strings.SequenceToolTip}"
                                         />
-                        <fluent:MenuItem x:Uid="FlowChart(流程图)" Header="{Binding P_FlowChart}" 
+                        <!--流程图-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.FlowChartText}" 
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/flowchart.png"
                                          Command="{Binding NewFlowchartDocumentCommand}"
-                                         ToolTip="{Binding P_FlowChart}"
+                                         ToolTip="{x:Static lclz:Strings.FlowChartText}"
                                         />
-                        <fluent:MenuItem x:Uid="StateMachine(状态机)" Header="{Binding P_StateMachine}" 
+                        <!--状态机-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.StateMachineText}" 
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/state-machine.png"
                                          Command="{Binding NewStateMachineDocumentCommand}"
-                                         ToolTip="{Binding P_StateMachine}"
+                                         ToolTip="{x:Static lclz:Strings.StateMachineText}"
                                         />
                         <!--<fluent:MenuItem Header="全局处理器" 
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/global-handler.png"
@@ -106,17 +112,20 @@
                                          ToolTip="全局处理器"
                                         />-->
                     </fluent:DropDownButton>
-                    <fluent:SplitButton x:Uid="Save(保存)" x:Name="saveButton" Header="{Binding P_Save}" ToolTip="{Binding P_Save_ToolTip}"
+                    <!--保存-->
+                    <fluent:SplitButton x:Name="saveButton" Header="{x:Static lclz:Strings.SaveText}" ToolTip="{x:Static lclz:Strings.SaveToolTip}"
                                         Icon="pack://application:,,,/Resources/Image/Ribbon/save.png"
                                         LargeIcon="pack://application:,,,/Resources/Image/Ribbon/save.png"
                                         Command="{Binding SaveCommand}"
                                         IsEnabled="{Binding IsDocumentExist}"
                                         FocusManager.IsFocusScope="True">
-                        <fluent:MenuItem x:Uid="SaveAs(另存为)" Header="{Binding P_SaveAs}" 
+                        <!--另存为-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.SaveAsText}" 
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/save-as.png"
                                          Command="{Binding SaveAsCommand}"
                                         />
-                        <fluent:MenuItem x:Uid="SaveAll(全部保存)" Header="{Binding P_SaveAll}" ToolTip="{Binding P_SaveAll_ToolTip}"
+                        <!--全部保存-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.SaveAllText}" ToolTip="{x:Static lclz:Strings.SaveAllTooltip}"
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/save-all.png"
                                          Command="{Binding SaveAllCommand}"
                                         />
@@ -124,26 +133,31 @@
                     <!--<fluent:Button Header="另存为 模板" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/template.png"
                                    />-->
-                    <fluent:Button x:Uid="Run(运行)" Header="{Binding P_Run}"
+                    <!--运行-->
+                    <fluent:Button Header="{x:Static lclz:Strings.RunText}"
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/run.png"
                                    Command="{Binding RunWorkflowCommand}"
-                                   ToolTip="{Binding P_Run_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.RunToolTip}"
                                    />
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox x:Uid="Edit(编辑)" Header="{Binding P_Edit}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
-                    <fluent:Button x:Uid="Cut(剪切)" Header="{Binding P_Cut}"
+                <!--编辑-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.EditText}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
+                    <!--剪切-->
+                    <fluent:Button Header="{x:Static lclz:Strings.CutText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/cut.png"
                                    SizeDefinition="Middle,Small"
                                    Command="{Binding CutCommand}" CommandTarget="{Binding CurrentDesignerView}"
                                    FocusManager.IsFocusScope="True" >
                     </fluent:Button>
-                    <fluent:Button x:Uid="Copy(复制)" Header="{Binding P_Copy}"
+                    <!--复制-->
+                    <fluent:Button Header="{x:Static lclz:Strings.CopyText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/copy.png"
                                    SizeDefinition="Middle,Small"
                                    Command="{Binding CopyCommand}" CommandTarget="{Binding CurrentDesignerView}"
                                    FocusManager.IsFocusScope="True" >
                     </fluent:Button>
-                    <fluent:Button x:Uid="Paste(粘贴)" Header="{Binding P_Paste}"
+                    <!--粘贴-->
+                    <fluent:Button Header="{x:Static lclz:Strings.PasteText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/paste.png"
                                    SizeDefinition="Middle,Small"
                                    Command="{Binding PasteCommand}" CommandTarget="{Binding CurrentDesignerView}"
@@ -157,8 +171,10 @@
                                    ToolTip="运行UI浏览器"
                                    />
                 </fluent:RibbonGroupBox>-->
-                <fluent:RibbonGroupBox x:Uid="Depends(依赖)" Header="{Binding P_Depends}">
-                    <fluent:Button x:Uid="PackageManager(包管理器)" Header="{Binding P_PackageManager}" 
+                <!--依赖-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.DependsText}">
+                    <!--包管理器-->
+                    <fluent:Button Header="{x:Static lclz:Strings.PackageManagerText}" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/package-manager.png"
                                    Command="{Binding LaunchPackageManagerCommand}"
                                    ToolTip="{x:Static lclz:Strings.xPackageToolTip}"
@@ -181,27 +197,33 @@
                                    ToolTip="{x:Static lclz:Strings.xOpenActivityStore}"
                                    />
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox x:Uid="Deploy(部署)" Header="{Binding P_Deploy}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
-                    <fluent:Button x:Uid="Release(发布)" Header="{Binding P_Release}" 
+                <!--部署-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.DeployText}" IsEnabled="{Binding IsWorkflowRunningOrDebugging,Mode=OneWay, Converter={StaticResource BoolNotConverter}}">
+                    <!--发布-->
+                    <fluent:Button Header="{x:Static lclz:Strings.ReleaseContent}" 
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/publish.png"
                                    Command="{Binding PublishCommand}"
-                                   ToolTip="{Binding P_Release_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.ReleaseToolTip}"
                                    />
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
-            <fluent:RibbonTabItem x:Uid="Execution(执行)" Header="{Binding P_Execution}">
-                <fluent:RibbonGroupBox x:Uid="Start2(启动)" Header="{Binding P_Start2}">
-                    <fluent:Button x:Uid="Run(运行)" Header="{Binding P_Run}" x:Name="runButton" 
+            <!--执行-->
+            <fluent:RibbonTabItem Header="{x:Static lclz:Strings.DebugText}">
+                <!--启动-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.StartText}">
+                    <!--运行-->
+                    <fluent:Button Header="{x:Static lclz:Strings.RunText}" x:Name="runButton" 
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/run.png"
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/run.png"
                                    Command="{Binding RunWorkflowCommand}"
-                                   ToolTip="{Binding P_Run_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.RunToolTip}"
                                    />
-                    <fluent:Button x:Uid="Stop(停止)" Header="停止" x:Name="stopButton"
+                    <!--停止-->
+                    <fluent:Button Header="{x:Static lclz:Strings.StopText}" x:Name="stopButton"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/stop.png"
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/stop.png"
                                    Command="{Binding StopWorkflowCommand}"
-                                   ToolTip="{Binding P_Stop_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.StopToolTip}"
                                    />
                     <fluent:Button Header="{Binding DebugOrContinueWorkflowButtonHeader}" 
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/debug.png"
@@ -210,80 +232,92 @@
                                    ToolTip="{Binding DebugOrContinueWorkflowButtonToolTip}"
                                    />
                 </fluent:RibbonGroupBox>
-                <fluent:RibbonGroupBox x:Uid="Debug(调试)" Header="{Binding P_Debug}" >
-                    <fluent:Button x:Uid="Break(中断)" Header="{Binding P_Break}"
+                <!--调试-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.Debug2Text}" >
+                    <!--中断-->
+                    <fluent:Button Header="{x:Static lclz:Strings.BreakText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/break.png"
                                    SizeDefinition="Middle,Small"
                                    Command="{Binding BreakCommand}"
-                                   ToolTip="{Binding P_Break_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.BreakToolTip}"
                                    FocusManager.IsFocusScope="True" >
                     </fluent:Button>
-                    <fluent:Button x:Uid="StepInto(逐语句)" Header="{Binding P_StepInto}"
+                    <!--逐语句-->
+                    <fluent:Button Header="{x:Static lclz:Strings.StepInText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/step-into.png"
                                    SizeDefinition="Middle,Small"
-                                   ToolTip="{Binding P_StepInto_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.StepInToolTip}"
                                    Command="{Binding StepIntoCommand}"
                                    FocusManager.IsFocusScope="True" >
                     </fluent:Button>
-                    <fluent:Button x:Uid="StepOver(逐过程)" Header="{Binding P_StepOver}"
+                    <!--逐过程-->
+                    <fluent:Button Header="{x:Static lclz:Strings.StepOverText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/step-over.png"
                                    SizeDefinition="Middle,Small"
-                                   ToolTip="{Binding P_StepOver_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.StepOverToolTip}"
                                    Command="{Binding StepOverCommand}"
                                    FocusManager.IsFocusScope="True" >
                     </fluent:Button>
-                    <fluent:Button x:Uid="Varidate(校验)" Header="{Binding P_Varidate}"
+                    <!--校验-->
+                    <fluent:Button Header="{x:Static lclz:Strings.VaridateText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/validate.png"
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/validate.png"
-                                   ToolTip="{Binding P_Varidate_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.VaridateToolTip}"
                                    Command="{Binding ValidateWorkflowCommand}"
                                    IsEnabled="{Binding IsDocumentExist}"
                                    />
-                    <fluent:SplitButton x:Uid="BreakPoint(断点)" Header="{Binding P_BreakPoint}" ToolTip="{Binding P_BreakPoint_ToolTip}"
+                    <!--断点-->
+                    <fluent:SplitButton Header="{x:Static lclz:Strings.BreakPointText}" ToolTip="{x:Static lclz:Strings.BreakPointToolTip}"
                                         Icon="pack://application:,,,/Resources/Image/Ribbon/breakpoints.png"
                                         LargeIcon="pack://application:,,,/Resources/Image/Ribbon/breakpoints.png"
                                         Command="{Binding ToggleBreakpointCommand}"
                                         IsEnabled="{Binding IsDocumentExist}"
                                         FocusManager.IsFocusScope="True">
-                        <fluent:MenuItem x:Uid="BreakPoint2(切换断点)" Header="{Binding P_BreakPoint2}"  ToolTip="{Binding P_BreakPoint2_ToolTip}"
+                        <!--切换断点-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.BreakPoint2Text}"  ToolTip="{x:Static lclz:Strings.BreakPoint2Text}"
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/breakpoints.png"
                                          Command="{Binding ToggleBreakpointCommand}"
                                         />
-                        <fluent:MenuItem x:Uid="CrearAllBreakPoints(清除所有断点)" Header="{Binding P_CrearAllBreakPoints}" ToolTip="{Binding P_CrearAllBreakPoints_ToolTip}"
+                        <!--清除所有断点-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.ClearAllBreakPointsText}" ToolTip="{x:Static lclz:Strings.ClearAllBreakPointsToolTip}"
                                          Icon="pack://application:,,,/Resources/Image/Ribbon/remove-all-breakpoints.png"
                                          Command="{Binding RemoveAllBreakpointsCommand}"
                                         />
                     </fluent:SplitButton>
-
-                    <fluent:Button x:Uid="SlowDebug(慢速 调试)" Header="{Binding P_SlowDebug}"  ToolTip="{Binding P_SlowDebug_ToolTip}"
+                    <!--慢速 调试-->
+                    <fluent:Button Header="{x:Static lclz:Strings.SlowDebugText}"  ToolTip="{x:Static lclz:Strings.SlowDebugToolTip}"
                                    Icon="{Binding SlowStepIcon}"
                                    LargeIcon="{Binding SlowStepIcon}"
                                    Background="{Binding SlowStepBackground}"
                                    Command="{Binding SlowStepCommand}"
                                    IsEnabled="{Binding IsDocumentExist}"
                                    />
-
-                    <fluent:DropDownButton x:Uid="Option(选项)" Header="{Binding P_Option}"
+                    <!--选项-->
+                    <fluent:DropDownButton Header="{x:Static lclz:Strings.OptionText}"
                                            LargeIcon="pack://application:,,,/Resources/Image/Ribbon/options.png"
-                                           ToolTip="{Binding P_Option}"
+                                           ToolTip="{x:Static lclz:Strings.OptionText}"
                                            VerticalAlignment="Top">
-                        <fluent:MenuItem x:Uid="HighlightElement(高亮元素)" Header="{Binding P_HighlightElement}" IsCheckable="True"
+                        <!--高亮元素-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.HighlightElementText}" IsCheckable="True"
                                          IsChecked="{Binding IsHighlightElements}"
                                         />
-                        <fluent:MenuItem x:Uid="RecordActivity(记录活动)" Header="{Binding P_RecordActivity}"  IsCheckable="True"
+                        <!--记录活动-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.RecordActivityText}" IsCheckable="True"
                                          IsChecked="{Binding IsLogActivities}"
                                         />
-                        <fluent:MenuItem x:Uid="InterruptOnException(异常时中断)" Header="{Binding P_InterruptOnException}" IsCheckable="True"
+                        <!--异常时中断-->
+                        <fluent:MenuItem Header="{x:Static lclz:Strings.InterruptOnException}" IsCheckable="True"
                                           IsChecked="{Binding IsBreakOnExceptions}"
                                         />
                     </fluent:DropDownButton>
                 </fluent:RibbonGroupBox>
-
-                <fluent:RibbonGroupBox x:Uid="Log(日志)" Header="{Binding P_Log}">
-                    <fluent:Button x:Uid="OpenLog(打开日志)" Header="{Binding P_OpenLog}"
+                <!--日志-->
+                <fluent:RibbonGroupBox Header="{x:Static lclz:Strings.LogText}">
+                    <!--打开日志-->
+                    <fluent:Button Header="{x:Static lclz:Strings.OpenLogText}"
                                    Icon="pack://application:,,,/Resources/Image/Ribbon/open-logs.png"
                                    LargeIcon="pack://application:,,,/Resources/Image/Ribbon/open-logs.png"
-                                   ToolTip="{Binding P_OpenLog_ToolTip}"
+                                   ToolTip="{x:Static lclz:Strings.OpenLogToolTip}"
                                    Command="{Binding OpenLogsCommand}"/>
                 </fluent:RibbonGroupBox>
                 

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPAStudio.UserControls"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cmd="http://www.galasoft.ch/mvvmlight"
              mc:Ignorable="d" 
@@ -39,7 +40,7 @@
         <Grid Grid.Column="1" Grid.Row="1"  >
             <Grid>
                 <StackPanel>
-                    <TextBlock x:Uid="NewProject" Text="新建项目" Foreground="#707070" FontSize="14" />
+                    <TextBlock Text="{x:Static lclz:Strings.NewProjectText}" Foreground="#707070" FontSize="14" />
                     <Rectangle Height="1" StrokeDashArray="3" Stroke="#c7c8c9" Margin="0,2,0,0"/>
                 </StackPanel>
 
@@ -60,8 +61,8 @@
                             </Grid>
                             <Grid Grid.Column="1">
                                 <StackPanel Margin="10,0,0,0">
-                                    <TextBlock x:Uid="Process" FontSize="13" Foreground="#383838" FontWeight="Bold">流程</TextBlock>
-                                    <TextBlock x:Uid="ProcessDescription" Foreground="#606060" Margin="0,5,0,0" >新建一个自动化的空白流程</TextBlock>
+                                    <TextBlock Text="{x:Static lclz:Strings.ProcessText}" FontSize="13" Foreground="#383838" FontWeight="Bold"/>
+                                    <TextBlock Text="{x:Static lclz:Strings.ProcessDescription}" Foreground="#606060" Margin="0,5,0,0"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -78,7 +79,7 @@
         <Grid Grid.Column="3" Grid.Row="1">
             <Grid>
                 <StackPanel>
-                    <TextBlock x:Uid="Recent" Text="最近" Foreground="#707070" FontSize="14" />
+                    <TextBlock Text="{x:Static lclz:Strings.RecentText}" Foreground="#707070" FontSize="14" />
                     <Rectangle Height="1" StrokeDashArray="3" Stroke="#c7c8c9" Margin="0,2,0,0"/>
                 </StackPanel>
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,25,0,0">

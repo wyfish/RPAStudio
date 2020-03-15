@@ -300,14 +300,16 @@ namespace RPAStudio.Executor
             }
             else
             {
-                MessageBox.Show(App.Current.MainWindow, "工作流校验错误，请检查参数配置", ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                // 工作流校验错误，请检查参数配置
+                MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowCheckError"), ResxIF.GetString("ErrorText"), MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
         private UnhandledExceptionAction WorkflowApplicationOnUnhandledException(WorkflowApplicationUnhandledExceptionEventArgs e)
         {
             var name = e.ExceptionSource.DisplayName;
-            SharedObject.Instance.Output(SharedObject.enOutputType.Error, string.Format("{0} 执行时出现异常", name), e.UnhandledException.ToString());
+            // {0} 执行时出现异常
+            SharedObject.Instance.Output(SharedObject.enOutputType.Error, string.Format(ResxIF.GetString("ExceptionOccurredMessage"), name), e.UnhandledException.ToString());
 
             return UnhandledExceptionAction.Terminate;
         }
@@ -320,8 +322,9 @@ namespace RPAStudio.Executor
                 {
                     Common.RunInUI(() =>
                     {
-                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, "调试时执行错误", obj.TerminationException.ToString());
-                        MessageBox.Show(App.Current.MainWindow, obj.TerminationException.Message, "调试时执行错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                        // 调试时执行错误
+                        SharedObject.Instance.Output(SharedObject.enOutputType.Error, ResxIF.GetString("ErrorWhileDebugging"), obj.TerminationException.ToString());
+                        MessageBox.Show(App.Current.MainWindow, obj.TerminationException.Message, ResxIF.GetString("ErrorWhileDebugging"), MessageBoxButton.OK, MessageBoxImage.Error);
                     });
                 }
             }
@@ -349,11 +352,12 @@ namespace RPAStudio.Executor
                 try
                 {
                     Continue(enOperate.Stop);//防止有事件卡住未往下走导致无法正常停止
-                    m_app.Terminate("执行已取消", new TimeSpan(0, 0, 0, 30));
+                    m_app.Terminate(ResxIF.GetString("ExecutionCancelled"), new TimeSpan(0, 0, 0, 30)); // 执行已取消
                 }
                 catch (Exception )
                 {
-                    MessageBox.Show(App.Current.MainWindow, "停止调试发生异常！", ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Warning);
+                    // 停止调试发生异常！
+                    MessageBox.Show(App.Current.MainWindow, ResxIF.GetString("ExceptionOccurredWhileDebugging"), ResxIF.GetString("PronptText"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }

@@ -255,7 +255,7 @@
   <data name="ProjectSettingsDesc" xml:space="preserve">
     <value>修改项目相关配置如名称和描述</value>
   </data>
-  <data name="ProjectSettingsTitle" xml:space="preserve">
+  <data name="ProjectSettingsText" xml:space="preserve">
     <value>项目设置</value>
   </data>
   <data name="ProjectText" xml:space="preserve">
@@ -611,5 +611,275 @@
   </data>
   <data name="xSendHotkey" xml:space="preserve">
     <value>发送热键</value>
+  </data>
+  <data name="CheckUpdates" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>正在加载……</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="DebugText" xml:space="preserve">
+    <value>执行</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="SequenceText" xml:space="preserve">
+    <value>序列图</value>
+  </data>
+  <data name="SequenceToolTip" xml:space="preserve">
+    <value>序列图（Ctrl+N）</value>
+  </data>
+  <data name="FlowChartText" xml:space="preserve">
+    <value>流程图</value>
+  </data>
+  <data name="StateMachineText" xml:space="preserve">
+    <value>状态机</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SaveToolTip" xml:space="preserve">
+    <value>保存（Ctrl+S）</value>
+  </data>
+  <data name="SaveAllText" xml:space="preserve">
+    <value>全部保存</value>
+  </data>
+  <data name="SaveAsText" xml:space="preserve">
+    <value>另存为</value>
+  </data>
+  <data name="SaveAllTooltip" xml:space="preserve">
+    <value>全部保存（Ctrl+Shift+S）</value>
+  </data>
+  <data name="RunToolTip" xml:space="preserve">
+    <value>运行（F5）</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="CutText" xml:space="preserve">
+    <value>剪切</value>
+  </data>
+  <data name="PasteText" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="DependsText" xml:space="preserve">
+    <value>依赖</value>
+  </data>
+  <data name="PackageManagerText" xml:space="preserve">
+    <value>包管理器</value>
+  </data>
+  <data name="DeployText" xml:space="preserve">
+    <value>部署</value>
+  </data>
+  <data name="ReleaseToolTip" xml:space="preserve">
+    <value>打包发布</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="StopToolTip" xml:space="preserve">
+    <value>停止（F12）</value>
+  </data>
+  <data name="BreakText" xml:space="preserve">
+    <value>中断</value>
+  </data>
+  <data name="BreakToolTip" xml:space="preserve">
+    <value>中断执行（暂停）</value>
+  </data>
+  <data name="StepInText" xml:space="preserve">
+    <value>逐语句</value>
+  </data>
+  <data name="StepInToolTip" xml:space="preserve">
+    <value>逐语句（F11）</value>
+  </data>
+  <data name="StepOverText" xml:space="preserve">
+    <value>逐过程</value>
+  </data>
+  <data name="StepOverToolTip" xml:space="preserve">
+    <value>逐过程（Shift+F11）</value>
+  </data>
+  <data name="VaridateText" xml:space="preserve">
+    <value>校验</value>
+  </data>
+  <data name="VaridateToolTip" xml:space="preserve">
+    <value>检查错误（F8）</value>
+  </data>
+  <data name="BreakPointText" xml:space="preserve">
+    <value>断点</value>
+  </data>
+  <data name="BreakPointToolTip" xml:space="preserve">
+    <value>切换断点（F9）</value>
+  </data>
+  <data name="BreakPoint2Text" xml:space="preserve">
+    <value>切换断点</value>
+  </data>
+  <data name="ClearAllBreakPointsText" xml:space="preserve">
+    <value>清除所有断点</value>
+  </data>
+  <data name="ClearAllBreakPointsToolTip" xml:space="preserve">
+    <value>清除所有断点（Shift+F9）</value>
+  </data>
+  <data name="SlowDebugText" xml:space="preserve">
+    <value>慢速 调试</value>
+  </data>
+  <data name="SlowDebugToolTip" xml:space="preserve">
+    <value>以最慢的1x到最快4x进行不同速度的调试运行</value>
+  </data>
+  <data name="OptionText" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="HighlightElementText" xml:space="preserve">
+    <value>高亮元素</value>
+  </data>
+  <data name="RecordActivityText" xml:space="preserve">
+    <value>记录活动</value>
+  </data>
+  <data name="InterruptOnException" xml:space="preserve">
+    <value>异常时中断</value>
+  </data>
+  <data name="LogText" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="OpenLogText" xml:space="preserve">
+    <value>打开日志</value>
+  </data>
+  <data name="OpenLogToolTip" xml:space="preserve">
+    <value>打开日志（Ctrl+L）</value>
+  </data>
+  <data name="ContinueText" xml:space="preserve">
+    <value>继续</value>
+  </data>
+  <data name="Debug2Text" xml:space="preserve">
+    <value>调试</value>
+  </data>
+  <data name="ExpandAllToolTip" xml:space="preserve">
+    <value>展开所有</value>
+  </data>
+  <data name="CollapseAllToolTip" xml:space="preserve">
+    <value>折叠所有</value>
+  </data>
+  <data name="ActivityGroupToolTip" xml:space="preserve">
+    <value>显示活动分组</value>
+  </data>
+  <data name="SearchActivity" xml:space="preserve">
+    <value>搜索活动</value>
+  </data>
+  <data name="SearchResultsEmpty" xml:space="preserve">
+    <value>搜索结果为空</value>
+  </data>
+  <data name="CurrentVersionUpdateLog" xml:space="preserve">
+    <value>当前版本更新日志</value>
+  </data>
+  <data name="LatestVersionText" xml:space="preserve">
+    <value>最新版本</value>
+  </data>
+  <data name="LatestVersionUpdateLog" xml:space="preserve">
+    <value>最新版本更新日志</value>
+  </data>
+  <data name="ValueText" xml:space="preserve">
+    <value>値</value>
+  </data>
+  <data name="ViewAttributeValuesToolTip" xml:space="preserve">
+    <value>查看属性值</value>
+  </data>
+  <data name="NoNewVersionFound" xml:space="preserve">
+    <value>未发现新版本</value>
+  </data>
+  <data name="TrackText" xml:space="preserve">
+    <value>跟踪</value>
+  </data>
+  <data name="WarningText" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="InformationText" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="ClearAllToolTip" xml:space="preserve">
+    <value>清空所有</value>
+  </data>
+  <data name="ShowTimeStamp" xml:space="preserve">
+    <value>显示时间</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="RefreshText" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="SearchProjectFiles" xml:space="preserve">
+    <value>搜索项目文件</value>
+  </data>
+  <data name="ShowAllFiles" xml:space="preserve">
+    <value>显示所有文件</value>
+  </data>
+  <data name="BrowseProjectFiles" xml:space="preserve">
+    <value>浏览项目文件</value>
+  </data>
+  <data name="RemoveScreenshots" xml:space="preserve">
+    <value>移除无用的截图</value>
+  </data>
+  <data name="AddFolder" xml:space="preserve">
+    <value>添加文件夹</value>
+  </data>
+  <data name="SearchCodeSnippet" xml:space="preserve">
+    <value>搜索代码片断</value>
+  </data>
+  <data name="ProcessText" xml:space="preserve">
+    <value>流程</value>
+  </data>
+  <data name="ProcessDescription" xml:space="preserve">
+    <value>新建一个自动化的空白流程</value>
+  </data>
+  <data name="ViewLogs" xml:space="preserve">
+    <value>查看日志</value>
+  </data>
+  <data name="NewProjectText" xml:space="preserve">
+    <value>新建项目</value>
+  </data>
+  <data name="RecentText" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="NoFunction" xml:space="preserve">
+    <value>暂无功能</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="GeneralText" xml:space="preserve">
+    <value>常规</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>使用此选项可更改Studio和机器人中的界面语言。</value>
+  </data>
+  <data name="ThemeText" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>使用此选项可更改Studio中的界面主题。</value>
+  </data>
+  <data name="ColorLight" xml:space="preserve">
+    <value>浅色</value>
+  </data>
+  <data name="ColorDark" xml:space="preserve">
+    <value>深色</value>
+  </data>
+  <data name="ExecutionCancelled" xml:space="preserve">
+    <value>执行已取消</value>
+  </data>
+  <data name="ExceptionOccurredWhileDebugging" xml:space="preserve">
+    <value>停止调试发生异常！</value>
+  </data>
+  <data name="ExceptionOccurredMessage" xml:space="preserve">
+    <value>{0} 执行时出现异常</value>
+  </data>
+  <data name="ErrorWhileDebugging" xml:space="preserve">
+    <value>调试时执行错误</value>
   </data>
 </root>

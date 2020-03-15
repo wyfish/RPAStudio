@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RPAStudio.UserControls"
+        xmlns:lclz="clr-namespace:RPAStudio.Localization"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:ignore="http://www.galasoft.ch/ignore"
@@ -41,7 +42,7 @@
         <Grid Grid.Column="1" Grid.Row="1"  >
             <Grid>
                 <StackPanel>
-                    <TextBlock x:Uid="SetUp" Text="设置" Foreground="#707070" FontSize="14" />
+                    <TextBlock Text="{x:Static lclz:Strings.xSettings}" Foreground="#707070" FontSize="14" />
                     <Rectangle Height="1" StrokeDashArray="3" Stroke="#c7c8c9" Margin="0,2,0,0"/>
                 </StackPanel>
                 <StackPanel Margin="0,25,0,0">
@@ -56,7 +57,7 @@
                             </Grid>
                             <Grid Grid.Column="1">
                                 <StackPanel Margin="7,0,0,0">
-                                    <TextBlock x:Uid="Process" FontSize="25" Foreground="#383838" FontWeight="Bold">常规</TextBlock>
+                                    <TextBlock Text="{x:Static lclz:Strings.GeneralText}" FontSize="25" Foreground="#383838" FontWeight="Bold"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -70,7 +71,7 @@
         <Grid Grid.Column="3" Grid.Row="1">
             <Grid>
                 <StackPanel>
-                    <TextBlock x:Uid="Routine" Text="常规" Foreground="#707070" FontSize="14" />
+                    <TextBlock Text="{x:Static lclz:Strings.GeneralText}" Foreground="#707070" FontSize="14" />
                     <Rectangle Height="1" StrokeDashArray="3" Stroke="#c7c8c9" Margin="0,2,0,0"/>
                 </StackPanel>
                 <StackPanel Margin="0,25,0,0">
@@ -81,8 +82,8 @@
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Margin="0,4,0,597.6" Grid.RowSpan="2"  >
                             <StackPanel Margin="-8,-11,8.4,-34" >
-                                <TextBlock x:Uid="Language" FontSize="15" Foreground="#383838" FontWeight="Bold">语言</TextBlock>
-                                <TextBlock x:Uid="LanguageDescribe" FontSize="15" Foreground="#383838">使用此选项可更改Studio和机器人中的界面语言。</TextBlock>
+                                <TextBlock Text="{x:Static lclz:Strings.LanguageText}" FontSize="15" Foreground="#383838" FontWeight="Bold"/>
+                                <TextBlock Text="{x:Static lclz:Strings.LanguageDescription}" FontSize="15" Foreground="#383838"/>
                                 <ComboBox Width="110" Height="27" HorizontalAlignment="Left" SelectedIndex="0">
                                     <TextBlock FontSize="15">中文(简体)</TextBlock>
                                     <TextBlock FontSize="15">English</TextBlock>
@@ -93,11 +94,11 @@
                         </Grid>
                         <Grid Margin="0,28,0,51.6" Grid.RowSpan="2">
                             <StackPanel Margin="-8,43,6.4,9.6">
-                                <TextBlock x:Uid="Theme" FontSize="15" Foreground="#383838" FontWeight="Bold">主题</TextBlock>
-                                <TextBlock x:Uid="ThemeDescribe" FontSize="15" Foreground="#383838">使用此选项可更改Studio中的界面主题。</TextBlock>
+                                <TextBlock Text="{x:Static lclz:Strings.ThemeText}" FontSize="15" Foreground="#383838" FontWeight="Bold"/>
+                                <TextBlock Text="{x:Static lclz:Strings.ThemeDescription}" FontSize="15" Foreground="#383838"/>
                                 <ComboBox Width="110" Height="27" HorizontalAlignment="Left" SelectedIndex="0">
-                                    <TextBlock FontSize="15">浅色</TextBlock>
-                                    <TextBlock FontSize="15">深色</TextBlock>
+                                    <TextBlock Text="{x:Static lclz:Strings.ColorLight}" FontSize="15"/>
+                                    <TextBlock Text="{x:Static lclz:Strings.ColorDark}" FontSize="15"/>
                                 </ComboBox>
                             </StackPanel>
                         </Grid>

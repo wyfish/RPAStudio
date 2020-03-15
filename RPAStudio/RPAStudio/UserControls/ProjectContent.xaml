@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RPAStudio.UserControls"
+             xmlns:lclz="clr-namespace:RPAStudio.Localization"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:cmd="http://www.galasoft.ch/mvvmlight"
              xmlns:libs="clr-namespace:RPAStudio.Librarys"
@@ -33,20 +34,20 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <libs:ColorButtonThreeState x:Uid="ExpandAll" Margin="5,0,0,0" Width="25" Height="25" ToolTip="展开所有" Command="{Binding ExpandAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-expand-all.png" />
-                <libs:ColorButtonThreeState x:Uid="CollapseAll" Margin="10,0,0,0" Width="25" Height="25" ToolTip="折叠所有" Command="{Binding CollapseAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-collapse-all.png" />
-                <libs:ColorButtonThreeState x:Uid="Refresh" Margin="10,0,0,0" Width="25" Height="25" ToolTip="刷新" Command="{Binding RefreshCommand}" def_img="pack://application:,,,/Resources/Image/Dock/refresh.png" />
-                <Grid x:Uid="ShowAllFiles" Margin="10,0,0,0" Width="25" Height="25" ToolTip="显示所有文件" >
+                <libs:ColorButtonThreeState Margin="5,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.ExpandAllToolTip}" Command="{Binding ExpandAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-expand-all.png" />
+                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.CollapseAllToolTip}" Command="{Binding CollapseAllCommand}" def_img="pack://application:,,,/Resources/Image/Dock/activities-collapse-all.png" />
+                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.RefreshText}" Command="{Binding RefreshCommand}" def_img="pack://application:,,,/Resources/Image/Dock/refresh.png" />
+                <Grid Margin="10,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.ShowAllFiles}" >
                     <libs:ColorButtonThreeState Command="{Binding ShowAllFilesCommand}" Visibility="{Binding IsShowAllFiles,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}" def_img="pack://application:,,,/Resources/Image/Project/show-all.png" def="#c2c2c2"/>
                     <libs:ColorButtonThreeState Command="{Binding ShowAllFilesCommand}" Visibility="{Binding IsShowAllFiles,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" def_img="pack://application:,,,/Resources/Image/Project/show-all.png" />
                 </Grid>
-                <libs:ColorButtonThreeState x:Uid="ProjectSettings" Margin="10,0,0,0" Width="25" Height="25" ToolTip="项目设置" Command="{Binding OpenProjectSettingsCommand}" def_img="pack://application:,,,/Resources/Image/Dock/settings.png" />
-                <libs:ColorButtonThreeState x:Uid="BrowseProjectFiles" Margin="10,0,0,0" Width="25" Height="25" ToolTip="浏览项目文件" Command="{Binding OpenProjectDirCommand}" def_img="pack://application:,,,/Resources/Image/Dock/file-explorer.png" />
-                <libs:ColorButtonThreeState x:Uid="RemoveScreenshots" Margin="10,0,0,0" Width="25" Height="25" ToolTip="移除无用的截图" Command="{Binding RemoveUnusedScreenshotsCommand}" def_img="pack://application:,,,/Resources/Image/Project/remove-unused-screenshots.png" />
+                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.ProjectSettingsText}" Command="{Binding OpenProjectSettingsCommand}" def_img="pack://application:,,,/Resources/Image/Dock/settings.png" />
+                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.BrowseProjectFiles}" Command="{Binding OpenProjectDirCommand}" def_img="pack://application:,,,/Resources/Image/Dock/file-explorer.png" />
+                <libs:ColorButtonThreeState Margin="10,0,0,0" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.RemoveScreenshots}" Command="{Binding RemoveUnusedScreenshotsCommand}" def_img="pack://application:,,,/Resources/Image/Project/remove-unused-screenshots.png" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" Focusable="True">
-            <uc:SearchTextBoxControl x:Uid="SearchProjectFiles" HintText="搜索项目文件" SearchText="{Binding SearchText}" />
+            <uc:SearchTextBoxControl HintText="{x:Static lclz:Strings.SearchProjectFiles}" SearchText="{Binding SearchText}" />
         </Grid>
         <TreeView ItemsSource="{Binding ProjectItems}" Grid.Row="2" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}"
                   dd:DragDrop.IsDragSource="True"
@@ -120,7 +121,7 @@
             </TreeView.ItemTemplate>
         </TreeView>
         <Grid Grid.Row="2" Visibility="{Binding IsSearchResultEmpty,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-            <TextBlock x:Uid="SearchResultsEmpty" FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060">搜索结果为空</TextBlock>
+            <TextBlock Text="{x:Static lclz:Strings.SearchResultsEmpty}" FontSize="14" Margin="0,30,0,0" HorizontalAlignment="Center" Foreground="#FF606060"/>
         </Grid>
     </Grid>
 </UserControl>

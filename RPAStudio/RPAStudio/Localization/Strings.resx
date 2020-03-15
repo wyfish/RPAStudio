@@ -255,7 +255,7 @@
   <data name="ProjectSettingsDesc" xml:space="preserve">
     <value>Modify project related configuration such as name and description</value>
   </data>
-  <data name="ProjectSettingsTitle" xml:space="preserve">
+  <data name="ProjectSettingsText" xml:space="preserve">
     <value>Project settings</value>
   </data>
   <data name="ProjectText" xml:space="preserve">
@@ -611,5 +611,275 @@
   </data>
   <data name="xSendHotkey" xml:space="preserve">
     <value>Send Hotkey</value>
+  </data>
+  <data name="CheckUpdates" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="DebugText" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="SequenceText" xml:space="preserve">
+    <value>Sequence</value>
+  </data>
+  <data name="SequenceToolTip" xml:space="preserve">
+    <value>Sequence（Ctrl+N）</value>
+  </data>
+  <data name="FlowChartText" xml:space="preserve">
+    <value>Flow Chart</value>
+  </data>
+  <data name="StateMachineText" xml:space="preserve">
+    <value>State machine</value>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveToolTip" xml:space="preserve">
+    <value>Save(Ctrl+S)</value>
+  </data>
+  <data name="SaveAllText" xml:space="preserve">
+    <value>Save All</value>
+  </data>
+  <data name="SaveAsText" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="SaveAllTooltip" xml:space="preserve">
+    <value>Save All（Ctrl+Shift+S）</value>
+  </data>
+  <data name="RunToolTip" xml:space="preserve">
+    <value>Run (F5)</value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CutText" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="PasteText" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="DependsText" xml:space="preserve">
+    <value>Depens</value>
+  </data>
+  <data name="PackageManagerText" xml:space="preserve">
+    <value>Package Manager</value>
+  </data>
+  <data name="DeployText" xml:space="preserve">
+    <value>Deploy</value>
+  </data>
+  <data name="ReleaseToolTip" xml:space="preserve">
+    <value>Release Package</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="StopToolTip" xml:space="preserve">
+    <value>Stop (F12)</value>
+  </data>
+  <data name="BreakText" xml:space="preserve">
+    <value>Break</value>
+  </data>
+  <data name="BreakToolTip" xml:space="preserve">
+    <value>Break execution (Pause)</value>
+  </data>
+  <data name="StepInText" xml:space="preserve">
+    <value>Step-In</value>
+  </data>
+  <data name="StepInToolTip" xml:space="preserve">
+    <value>Step-In (F11)</value>
+  </data>
+  <data name="StepOverText" xml:space="preserve">
+    <value>Step-Over</value>
+  </data>
+  <data name="StepOverToolTip" xml:space="preserve">
+    <value>Step-Over (Shift+F11)</value>
+  </data>
+  <data name="VaridateText" xml:space="preserve">
+    <value>Varidate</value>
+  </data>
+  <data name="VaridateToolTip" xml:space="preserve">
+    <value>Varidate（F8）</value>
+  </data>
+  <data name="BreakPointText" xml:space="preserve">
+    <value>Break point</value>
+  </data>
+  <data name="BreakPointToolTip" xml:space="preserve">
+    <value>Toggle Breakpoint (F9)</value>
+  </data>
+  <data name="BreakPoint2Text" xml:space="preserve">
+    <value>Toggle Breakpoint</value>
+  </data>
+  <data name="ClearAllBreakPointsText" xml:space="preserve">
+    <value>Clear all breakpoints</value>
+  </data>
+  <data name="ClearAllBreakPointsToolTip" xml:space="preserve">
+    <value>Clear all breakpoints (Shift+F9)</value>
+  </data>
+  <data name="SlowDebugText" xml:space="preserve">
+    <value>Slow Debug</value>
+  </data>
+  <data name="SlowDebugToolTip" xml:space="preserve">
+    <value>Debug runs at different speeds from the slowest 1x to the fastest 4x</value>
+  </data>
+  <data name="OptionText" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="HighlightElementText" xml:space="preserve">
+    <value>Highlight element</value>
+  </data>
+  <data name="RecordActivityText" xml:space="preserve">
+    <value>Record activity</value>
+  </data>
+  <data name="InterruptOnException" xml:space="preserve">
+    <value>Interrupt on exception</value>
+  </data>
+  <data name="LogText" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="OpenLogText" xml:space="preserve">
+    <value>Open log</value>
+  </data>
+  <data name="OpenLogToolTip" xml:space="preserve">
+    <value>Open log (Ctrl+L)</value>
+  </data>
+  <data name="ContinueText" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Debug2Text" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="ExpandAllToolTip" xml:space="preserve">
+    <value>Expand All</value>
+  </data>
+  <data name="CollapseAllToolTip" xml:space="preserve">
+    <value>Collapse All</value>
+  </data>
+  <data name="ActivityGroupToolTip" xml:space="preserve">
+    <value>Show Activity group</value>
+  </data>
+  <data name="SearchActivity" xml:space="preserve">
+    <value>Search Activity</value>
+  </data>
+  <data name="SearchResultsEmpty" xml:space="preserve">
+    <value>Search results are empty</value>
+  </data>
+  <data name="CurrentVersionUpdateLog" xml:space="preserve">
+    <value>Current version update log</value>
+  </data>
+  <data name="LatestVersionText" xml:space="preserve">
+    <value>Latest version</value>
+  </data>
+  <data name="LatestVersionUpdateLog" xml:space="preserve">
+    <value>Latest update log</value>
+  </data>
+  <data name="ValueText" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ViewAttributeValuesToolTip" xml:space="preserve">
+    <value>View attribute values</value>
+  </data>
+  <data name="NoNewVersionFound" xml:space="preserve">
+    <value>No new version found</value>
+  </data>
+  <data name="TrackText" xml:space="preserve">
+    <value>Track</value>
+  </data>
+  <data name="WarningText" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="InformationText" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="ClearAllToolTip" xml:space="preserve">
+    <value>Crear all</value>
+  </data>
+  <data name="ShowTimeStamp" xml:space="preserve">
+    <value>Show time stamp</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="RefreshText" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="SearchProjectFiles" xml:space="preserve">
+    <value>Search project files</value>
+  </data>
+  <data name="ShowAllFiles" xml:space="preserve">
+    <value>Show all files</value>
+  </data>
+  <data name="BrowseProjectFiles" xml:space="preserve">
+    <value>Browse project files</value>
+  </data>
+  <data name="RemoveScreenshots" xml:space="preserve">
+    <value>Remove unused screenshots</value>
+  </data>
+  <data name="AddFolder" xml:space="preserve">
+    <value>Add folder</value>
+  </data>
+  <data name="SearchCodeSnippet" xml:space="preserve">
+    <value>Search code snippet</value>
+  </data>
+  <data name="ProcessText" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="ProcessDescription" xml:space="preserve">
+    <value>Create a new automated blank process</value>
+  </data>
+  <data name="ViewLogs" xml:space="preserve">
+    <value>View Log</value>
+  </data>
+  <data name="NewProjectText" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="RecentText" xml:space="preserve">
+    <value>Recent</value>
+  </data>
+  <data name="NoFunction" xml:space="preserve">
+    <value>No function</value>
+  </data>
+  <data name="OpenText" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="GeneralText" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>Use this option to change the interface language in Studio and the robot.</value>
+  </data>
+  <data name="ThemeText" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>Use this option to change the theme in Studio.</value>
+  </data>
+  <data name="ColorLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ColorDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ExecutionCancelled" xml:space="preserve">
+    <value>Execution cancelled</value>
+  </data>
+  <data name="ExceptionOccurredWhileDebugging" xml:space="preserve">
+    <value>Stop debugging an exception occurred!</value>
+  </data>
+  <data name="ExceptionOccurredMessage" xml:space="preserve">
+    <value>{0} An exception occurred during execution</value>
+  </data>
+  <data name="ErrorWhileDebugging" xml:space="preserve">
+    <value>Execution error while debugging</value>
   </data>
 </root>
