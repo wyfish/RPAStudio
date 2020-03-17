@@ -13,6 +13,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         InArgument<Int32> _CellRow_Begin = 1;
         [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
         [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
+        [Localize.LocalizedDescription("UsedRangeApplied")] //如果为空白，则使用UsedRange //UsedRange is applied if it is blank //空白の場合はUsedRangeが適用されます
         [Browsable(true)]
         public InArgument<Int32> CellRow_Begin
         {
@@ -29,6 +30,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         InArgument<Int32> _CellColumn_Begin = 1;
         [Localize.LocalizedCategory("Category32")] //单元格起始 //Start Cell //開始セル
         [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
+        [Localize.LocalizedDescription("UsedRangeApplied")] //如果为空白，则使用UsedRange //UsedRange is applied if it is blank //空白の場合はUsedRangeが適用されます
         [Browsable(true)]
         public InArgument<Int32> CellColumn_Begin
         {
@@ -54,6 +56,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         InArgument<Int32> _CellRow_End = 1;
         [Localize.LocalizedCategory("Category33")] //单元格结束 //End Cell //終了セル
         [Localize.LocalizedDisplayName("DisplayName16")] //行 //Row //行
+        [Localize.LocalizedDescription("UsedRangeApplied")] //如果为空白，则使用UsedRange //UsedRange is applied if it is blank //空白の場合はUsedRangeが適用されます
         [Browsable(true)]
         public InArgument<Int32> CellRow_End
         {
@@ -84,6 +87,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         InArgument<Int32> _CellColumn_End = 1;
         [Localize.LocalizedCategory("Category33")] //单元格结束 //End Cell //終了セル
         [Localize.LocalizedDisplayName("DisplayName17")] //列 //Column //コラム
+        [Localize.LocalizedDescription("UsedRangeApplied")] //如果为空白，则使用UsedRange //UsedRange is applied if it is blank //空白の場合はUsedRangeが適用されます
         [Browsable(true)]
         public InArgument<Int32> CellColumn_End
         {
@@ -135,24 +139,30 @@ namespace RPA.Integration.Activities.ExcelPlugins
             Excel::Application excelApp = property.GetValue(context.DataContext) as Excel::Application;
             try
             {
-                string cellName_Begin = CellName_Begin.Get(context);
-                string cellName_End = CellName_End.Get(context);
-                int cellRow_Begin = CellRow_Begin.Get(context);
-                int cellColumn_Begin = CellColumn_Begin.Get(context);
-                int cellRow_End = CellRow_End.Get(context);
-                int cellColumn_End = CellColumn_End.Get(context);
-                
-                string sheetName = SheetName.Get(context);
-                Excel::_Worksheet sheet;
-                if (sheetName == null)
-                    sheet = excelApp.ActiveSheet;
-                else
-                    sheet = excelApp.ActiveWorkbook.Sheets[sheetName];
+                //string cellName_Begin = CellName_Begin.Get(context);
+                //string cellName_End = CellName_End.Get(context);
+                //int cellRow_Begin = CellRow_Begin.Get(context);
+                //int cellColumn_Begin = CellColumn_Begin.Get(context);
+                //int cellRow_End = CellRow_End.Get(context);
+                //int cellColumn_End = CellColumn_End.Get(context);
 
+                //string sheetName = SheetName.Get(context);
+                //Excel::_Worksheet sheet;
+                //if (sheetName == null)
+                //    sheet = excelApp.ActiveSheet;
+                //else
+                //    sheet = excelApp.ActiveWorkbook.Sheets[sheetName];
+
+                //Excel::Range range1, range2;
+                //range1 = cellName_Begin == null ? sheet.Cells[cellRow_Begin, cellColumn_Begin] : sheet.Range[cellName_Begin];
+                //range2 = cellName_End == null ? sheet.Cells[cellRow_End, cellColumn_End] : sheet.Range[cellName_End];
+
+                Excel::_Worksheet sheet;
                 Excel::Range range1, range2;
-                range1 = cellName_Begin == null ? sheet.Cells[cellRow_Begin, cellColumn_Begin] : sheet.Range[cellName_Begin];
-                range2 = cellName_End == null ? sheet.Cells[cellRow_End, cellColumn_End] : sheet.Range[cellName_End];
-                if(cellMergeOrUnMerge == CellMergeOrUnMerge.合并单元格)
+                RangeFunction.GetRange(excelApp, context, SheetName, CellName_Begin, CellName_End,
+                                       CellRow_Begin, CellColumn_Begin, CellRow_End, CellColumn_End,
+                                       out sheet, out range1, out range2);
+                if (cellMergeOrUnMerge == CellMergeOrUnMerge.合并单元格)
                     sheet.Range[range1, range2].Merge();
                 else
                     sheet.Range[range1, range2].UnMerge();

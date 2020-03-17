@@ -69,7 +69,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
         [RequiredArgument]
         [Localize.LocalizedDisplayName("DisplayName19")] //单元格内容 //Cell content //セルコンテンツ
         [Browsable(true)]
-        [Description("可设置公式 例\"= Sum(A1 / B1)\"")]
+        [Localize.LocalizedDescription("FormulaExample")] //可设置公式 例\"= Sum(A1 / B1)\"
         public InArgument<Object> CellContent
         {
             get

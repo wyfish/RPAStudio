@@ -26,8 +26,8 @@ namespace RPA.Integration.Activities.PDF
         }
 
         InArgument<string> _PathUrl;
-        [Localize.LocalizedCategory("key319")] //文件选项
-        [Localize.LocalizedDisplayName("key320")] //文件路径
+        [Localize.LocalizedCategory("FileOption")] //文件选项
+        [Localize.LocalizedDisplayName("FilePath")] //文件路径
         [RequiredArgument]
         [Browsable(true)]
         public InArgument<string> PathUrl
@@ -42,8 +42,8 @@ namespace RPA.Integration.Activities.PDF
             }
         }
 
-        [Localize.LocalizedCategory("key319")] //文件选项
-        [Localize.LocalizedDisplayName("key321")] //文件密码
+        [Localize.LocalizedCategory("FileOption")] //文件选项
+        [Localize.LocalizedDisplayName("FilePassword")] //文件密码
         [Browsable(true)]
         public InArgument<string> PassWord
         {
@@ -51,8 +51,8 @@ namespace RPA.Integration.Activities.PDF
         }
 
         public InArgument<string> _Range = "全部";
-        [Localize.LocalizedCategory("key322")] //选项
-        [Localize.LocalizedDisplayName("key323")] //页面范围
+        [Localize.LocalizedCategory("OptionText")] //选项
+        [Localize.LocalizedDisplayName("PageRange")] //页面范围
         [Browsable(true)]
         [RequiredArgument]
         public InArgument<string> Range
@@ -68,8 +68,8 @@ namespace RPA.Integration.Activities.PDF
         }
         
 
-        [Localize.LocalizedCategory("key324")] //输出
-        [Localize.LocalizedDisplayName("key325")] //PDF文本
+        [Localize.LocalizedCategory("OutputText")] //输出
+        [Localize.LocalizedDisplayName("PDFText")] //PDF文本
         [Browsable(true)]
         public OutArgument<string> PDFText
         {

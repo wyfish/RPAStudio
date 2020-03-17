@@ -29,6 +29,7 @@ namespace RPA.Integration.Activities.ExcelPlugins
 
         [Localize.LocalizedCategory("Category31")] //工作表选项 //Sheet Options //シートオプション
         [Localize.LocalizedDisplayName("DisplayName18")] //工作表名称 //Worksheet name //ワークシート名
+        [Localize.LocalizedDescription("Description77")] //为空代表当前活动工作表 //Blank represents the currently active worksheet //空白の場合はアクティブシートとなります
         [Browsable(true)]
         public InArgument<string> SheetName
         {

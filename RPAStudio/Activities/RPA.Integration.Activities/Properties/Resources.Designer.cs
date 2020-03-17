@@ -1105,7 +1105,7 @@ namespace RPA.Integration.Activities.Properties {
         }
         
         /// <summary>
-        ///   VB expression representing the cell name, such as A1 に類似しているローカライズされた文字列を検索します。
+        ///   VB expression for cell name, such as A1 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description76 {
             get {
@@ -1123,7 +1123,7 @@ namespace RPA.Integration.Activities.Properties {
         }
         
         /// <summary>
-        ///   VB expression representing the cell name, such as B2 に類似しているローカライズされた文字列を検索します。
+        ///   VB expression for cell name, such as B2 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Description78 {
             get {
@@ -1146,24 +1146,6 @@ namespace RPA.Integration.Activities.Properties {
         public static string Description8 {
             get {
                 return ResourceManager.GetString("Description8", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   VB expression for cell name, such as A1 に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string Description80 {
-            get {
-                return ResourceManager.GetString("Description80", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   VB expression for cell name, such as B2 に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string Description81 {
-            get {
-                return ResourceManager.GetString("Description81", resourceCulture);
             }
         }
         
@@ -2779,6 +2761,33 @@ namespace RPA.Integration.Activities.Properties {
         }
         
         /// <summary>
+        ///   File options に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FileOption {
+            get {
+                return ResourceManager.GetString("FileOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File password に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FilePassword {
+            get {
+                return ResourceManager.GetString("FilePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File path に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FilePath {
+            get {
+                return ResourceManager.GetString("FilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Path of file to open に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string FilePathToOpen {
@@ -2793,6 +2802,15 @@ namespace RPA.Integration.Activities.Properties {
         public static string FilePathToSave {
             get {
                 return ResourceManager.GetString("FilePathToSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Formula can be set Example \&quot;= Sum (A1 / B1) \&quot; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FormulaExample {
+            get {
+                return ResourceManager.GetString("FormulaExample", resourceCulture);
             }
         }
         
@@ -2833,6 +2851,33 @@ namespace RPA.Integration.Activities.Properties {
         }
         
         /// <summary>
+        ///   Option に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OptionText {
+            get {
+                return ResourceManager.GetString("OptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Output に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string OutputText {
+            get {
+                return ResourceManager.GetString("OutputText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Page range に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PageRange {
+            get {
+                return ResourceManager.GetString("PageRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Parameter に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ParameterText {
@@ -2842,11 +2887,29 @@ namespace RPA.Integration.Activities.Properties {
         }
         
         /// <summary>
+        ///   PDF Text に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PDFText {
+            get {
+                return ResourceManager.GetString("PDFText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Start area に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string StartArea {
             get {
                 return ResourceManager.GetString("StartArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   UsedRange is applied if it is blank に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UsedRangeApplied {
+            get {
+                return ResourceManager.GetString("UsedRangeApplied", resourceCulture);
             }
         }
         
