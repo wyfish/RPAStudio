@@ -12,6 +12,7 @@ using log4net;
 using System.Collections.Generic;
 using RPARobot.Services;
 using System.Threading.Tasks;
+using RPARobot.Localization;
 
 namespace RPARobot.ViewModel
 {
@@ -293,7 +294,8 @@ namespace RPARobot.ViewModel
                     ?? (_removeItemCommand = new RelayCommand(
                     () =>
                     {
-                        var ret = AutoCloseMessageBoxService.Show(App.Current.MainWindow, "确定移除当前包吗？", "询问", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+                        //确定移除当前包吗？ 询问
+                        var ret = AutoCloseMessageBoxService.Show(App.Current.MainWindow, ResxIF.GetString("AreYouSureToRemoveThePackage"), ResxIF.GetString("ConfirmText"), MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
                         if (ret == MessageBoxResult.Yes)
                         {
                             //卸载已安装的包，删除nupkg包
@@ -618,23 +620,27 @@ namespace RPARobot.ViewModel
                     ?? (_startCommand = new RelayCommand(
                     () =>
                     {
-                        Log(SharedObject.enOutputType.Trace, "流程启动");
+                        //流程启动
+                        Log(SharedObject.enOutputType.Trace, ResxIF.GetString("ProcessStart"));
                         //授权判断，未授权不允许运行
                         var isRegistered = ViewModelLocator.Instance.Register.IsNotExpired();
                         ViewModelLocator.Instance.Startup.RefreshProgramStatus(isRegistered);
 
                         if (!isRegistered)
                         {
-                            Log(SharedObject.enOutputType.Warning, "软件未通过授权检测，请注册产品！");
-                            AutoCloseMessageBoxService.Show(App.Current.MainWindow, "软件未通过授权检测，请注册产品！", "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                            //软件未通过授权检测，请注册产品！
+                            Log(SharedObject.enOutputType.Warning, ResxIF.GetString("AuthorizationTestFailed"));
+                            //软件未通过授权检测，请注册产品！ 提示
+                            AutoCloseMessageBoxService.Show(App.Current.MainWindow, ResxIF.GetString("AuthorizationTestFailed"), ResxIF.GetString("PromptText"), MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                         }
 
                         //如果已经有一个项目正在运行，则不允许再运行
                         if(ViewModelLocator.Instance.Main.IsWorkflowRunning)
                         {
-                            Log(SharedObject.enOutputType.Warning, "已经有工作流正在运行，请等待它结束后再运行！");
-                            AutoCloseMessageBoxService.Show(App.Current.MainWindow, "已经有工作流正在运行，请等待它结束后再运行！", "提示", MessageBoxButton.OK, MessageBoxImage.Information);
+                            //已经有工作流正在运行，请等待它结束后再运行！
+                            Log(SharedObject.enOutputType.Warning, ResxIF.GetString("WorkflowAlreadyRunning"));
+                            AutoCloseMessageBoxService.Show(App.Current.MainWindow, ResxIF.GetString("WorkflowAlreadyRunning"), ResxIF.GetString("PromptText"), MessageBoxButton.OK, MessageBoxImage.Information);
                             return;
                         }
 
@@ -655,7 +661,7 @@ namespace RPARobot.ViewModel
                                         ViewModelLocator.Instance.Main.IsWorkflowRunning = true;
                                         ViewModelLocator.Instance.Main.WorkflowRunningName = Name;
                                         ViewModelLocator.Instance.Main.WorkflowRunningToolTip = ToolTip;
-                                        ViewModelLocator.Instance.Main.WorkflowRunningStatus = "正在加载项目依赖项";
+                                        ViewModelLocator.Instance.Main.WorkflowRunningStatus = ResxIF.GetString("LoadingProjectDependencies"); //正在加载项目依赖项
                                     });
                                     var serv = new LoadDependenciesService(projectJsonFile);
                                     await serv.LoadDependencies();
@@ -677,8 +683,9 @@ namespace RPARobot.ViewModel
 
                                     Common.RunInUI(() => {
                                         this.IsRunning = false;
-                                        Log(SharedObject.enOutputType.Warning, "加载项目依赖项出错！");
-                                        AutoCloseMessageBoxService.Show(App.Current.MainWindow, "加载项目依赖项出错！", "提示", MessageBoxButton.OK, MessageBoxImage.Error);
+                                        //加载项目依赖项出错！
+                                        Log(SharedObject.enOutputType.Warning, ResxIF.GetString("LoadingProjectDependenciesError"));
+                                        AutoCloseMessageBoxService.Show(App.Current.MainWindow, ResxIF.GetString("LoadingProjectDependenciesError"), ResxIF.GetString("PromptText"), MessageBoxButton.OK, MessageBoxImage.Error);
                                     });
                                 }
                             });
@@ -704,8 +711,8 @@ namespace RPARobot.ViewModel
         private void LogToOutputWindow(SharedObject.enOutputType type, string msg, string msgDetails)
         {
             Log(type, msg);
-            
-            Logger.Debug(string.Format("活动日志：type={0},msg={1},msgDetails={2}", type.ToString(), msg, msgDetails), logger);
+            //活动日志：type={0},msg={1},msgDetails={2}
+            Logger.Debug(string.Format(ResxIF.GetString("ActivityLog"), type, msg, msgDetails), logger);
         }
 
        

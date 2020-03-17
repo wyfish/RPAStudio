@@ -246,4 +246,61 @@
   <data name="StopText" xml:space="preserve">
     <value>停止</value>
   </data>
+  <data name="StartText" xml:space="preserve">
+    <value>啟動</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="ProcessStart" xml:space="preserve">
+    <value>流程啟動</value>
+  </data>
+  <data name="AuthorizationTestFailed" xml:space="preserve">
+    <value>軟件未通過授權檢測，請註冊產品！</value>
+  </data>
+  <data name="WorkflowAlreadyRunning" xml:space="preserve">
+    <value>已經有工作流正在運行，請等待它結束後再運行！</value>
+  </data>
+  <data name="PromptText" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="LoadingProjectDependencies" xml:space="preserve">
+    <value>正在加載項目依賴項</value>
+  </data>
+  <data name="LoadingProjectDependenciesError" xml:space="preserve">
+    <value>加載項目依賴項出錯！</value>
+  </data>
+  <data name="AreYouSureToReset" xml:space="preserve">
+    <value>確認重置為默認設置嗎？</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>詢問</value>
+  </data>
+  <data name="ActivityLog" xml:space="preserve">
+    <value>活動日誌：type={0},msg={1},msgDetails={2}</value>
+  </data>
+  <data name="AreYouSureToRemoveThePackage" xml:space="preserve">
+    <value>確定移除當前包嗎？</value>
+  </data>
+  <data name="TheProcessStarted" xml:space="preserve">
+    <value>流程運行開始……</value>
+  </data>
+  <data name="ScreenRecordingStarted" xml:space="preserve">
+    <value>屏幕錄像開始……</value>
+  </data>
+  <data name="YYYYMMDD" xml:space="preserve">
+    <value>yyyy年MM月dd日HH時mm分ss秒</value>
+  </data>
+  <data name="RunningText" xml:space="preserve">
+    <value>正在運行</value>
+  </data>
+  <data name="EndProcessRun" xml:space="preserve">
+    <value>流程運行結束</value>
+  </data>
+  <data name="EndScreenRecording" xml:space="preserve">
+    <value>屏幕錄像結束</value>
+  </data>
+  <data name="PackageToolTip" xml:space="preserve">
+    <value>名稱：{0}\r\n版本：{1}\r\n發布說明：{2}\r\n項目描述：{3}\r\n發佈時間：{4}</value>
+  </data>
 </root>

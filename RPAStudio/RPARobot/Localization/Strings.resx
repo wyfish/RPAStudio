@@ -246,4 +246,61 @@
   <data name="StopText" xml:space="preserve">
     <value>Stop</value>
   </data>
+  <data name="StartText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ProcessStart" xml:space="preserve">
+    <value>Process start</value>
+  </data>
+  <data name="AuthorizationTestFailed" xml:space="preserve">
+    <value>The software failed the authorization test, please register the product!</value>
+  </data>
+  <data name="WorkflowAlreadyRunning" xml:space="preserve">
+    <value>A workflow is already running, please wait for it to finish before running!</value>
+  </data>
+  <data name="PromptText" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="LoadingProjectDependencies" xml:space="preserve">
+    <value>Loading project dependencies</value>
+  </data>
+  <data name="LoadingProjectDependenciesError" xml:space="preserve">
+    <value>Error loading project dependencies!</value>
+  </data>
+  <data name="AreYouSureToReset" xml:space="preserve">
+    <value>Are you sure you want to reset to default settings?</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ActivityLog" xml:space="preserve">
+    <value>Activity log: type = {0}, msg = {1}, msgDetails = {2}</value>
+  </data>
+  <data name="AreYouSureToRemoveThePackage" xml:space="preserve">
+    <value>Are you sure you want to remove the current package?</value>
+  </data>
+  <data name="TheProcessStarted" xml:space="preserve">
+    <value>The process starts ...</value>
+  </data>
+  <data name="ScreenRecordingStarted" xml:space="preserve">
+    <value>The screen recording begins ...</value>
+  </data>
+  <data name="YYYYMMDD" xml:space="preserve">
+    <value>yyyyMMddHHmmss</value>
+  </data>
+  <data name="RunningText" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="EndProcessRun" xml:space="preserve">
+    <value>End of process run</value>
+  </data>
+  <data name="EndScreenRecording" xml:space="preserve">
+    <value>Screen recording ends</value>
+  </data>
+  <data name="PackageToolTip" xml:space="preserve">
+    <value>Name: {0}\r\nVersion: {1}\r\nRelease Notes: {2}\r\nProject Description: {3}\r\nRelease Time: {4}</value>
+  </data>
 </root>
