@@ -424,7 +424,8 @@ namespace RPARobot.ViewModel
                     () =>
                     {
                         //重置默认设置
-                        var ret = AutoCloseMessageBoxService.Show(m_view, "确认重置为默认设置吗？", "询问", MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
+                        //确认重置为默认设置吗？ 询问
+                        var ret = AutoCloseMessageBoxService.Show(m_view, Localization.ResxIF.GetString("AreYouSureToReset"), Localization.ResxIF.GetString("ConfirmText"), MessageBoxButton.OKCancel, MessageBoxImage.Question, MessageBoxResult.Cancel);
                         if (ret == MessageBoxResult.OK)
                         {
                             IsAutoRun = false;

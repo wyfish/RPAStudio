@@ -180,6 +180,7 @@
       <DependentUpon>TransactionDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Excel\Common\CommonVariable.cs" />
+    <Compile Include="Excel\Common\RangeFunction.cs" />
     <Compile Include="Excel\CSVPlugins\AppendCSV.cs" />
     <Compile Include="Excel\CSVPlugins\CSVEncoding.cs" />
     <Compile Include="Excel\CSVPlugins\ReadCSV.cs" />
@@ -438,6 +439,7 @@
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -447,10 +449,12 @@
     <EmbeddedResource Include="Properties\Resources.zh-CN.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.zh-TW.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.zh-TW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

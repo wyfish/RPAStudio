@@ -196,10 +196,10 @@
     <value>情報をコピー</value>
   </data>
   <data name="LocateCurrentPackage" xml:space="preserve">
-    <value>現在のパッケージを見つける</value>
+    <value>このパッケージがあるフォルダを開く</value>
   </data>
   <data name="RemoveCurrentPackage" xml:space="preserve">
-    <value>現在のパッケージを削除</value>
+    <value>このパッケージを削除</value>
   </data>
   <data name="RecordingSettings" xml:space="preserve">
     <value>レコーディング設定</value>
@@ -245,5 +245,62 @@
   </data>
   <data name="StopText" xml:space="preserve">
     <value>停止</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>開始</value>
+  </data>
+  <data name="UpdateText" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="ProcessStart" xml:space="preserve">
+    <value>プロセス開始</value>
+  </data>
+  <data name="AuthorizationTestFailed" xml:space="preserve">
+    <value>ソフトウェアの認証テストに失敗しました。製品を登録してください！</value>
+  </data>
+  <data name="WorkflowAlreadyRunning" xml:space="preserve">
+    <value>ワークフローは既に実行中です。実行する前にワークフローが完了するまでお待ちください！</value>
+  </data>
+  <data name="PromptText" xml:space="preserve">
+    <value>ヒント</value>
+  </data>
+  <data name="LoadingProjectDependencies" xml:space="preserve">
+    <value>プロジェクトの依存関係の読み込み</value>
+  </data>
+  <data name="LoadingProjectDependenciesError" xml:space="preserve">
+    <value>プロジェクトの依存関係の読み込み中にエラーが発生しました！</value>
+  </data>
+  <data name="AreYouSureToReset" xml:space="preserve">
+    <value>デフォルト設定にリセットしてもよろしいですか？</value>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="ActivityLog" xml:space="preserve">
+    <value>アクティビティログ：type={0}, msg={1}, msgDetails={2}</value>
+  </data>
+  <data name="AreYouSureToRemoveThePackage" xml:space="preserve">
+    <value>現在のパッケージを削除してもよろしいですか？</value>
+  </data>
+  <data name="TheProcessStarted" xml:space="preserve">
+    <value>プロセスが開始されます...</value>
+  </data>
+  <data name="ScreenRecordingStarted" xml:space="preserve">
+    <value>画面の記録が始まります...</value>
+  </data>
+  <data name="YYYYMMDD" xml:space="preserve">
+    <value>yyyy年MM月dd日HH時mm分ss秒</value>
+  </data>
+  <data name="RunningText" xml:space="preserve">
+    <value>実行中</value>
+  </data>
+  <data name="EndProcessRun" xml:space="preserve">
+    <value>プロセス実行の終了</value>
+  </data>
+  <data name="EndScreenRecording" xml:space="preserve">
+    <value>画面記録が終了します</value>
+  </data>
+  <data name="PackageToolTip" xml:space="preserve">
+    <value>名前：{0} \r\nバージョン：{1} \r\nリリースノート：{2}\r\nプロジェクトの説明：{3}\r\nリリース時間：{4}</value>
   </data>
 </root>

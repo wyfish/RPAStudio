@@ -17,6 +17,7 @@ using Newtonsoft.Json.Linq;
 using Flurl.Http;
 using Plugins.Shared.Library;
 using System.Threading;
+using RPARobot.Localization;
 
 namespace RPARobot.ViewModel
 {
@@ -235,7 +236,8 @@ namespace RPARobot.ViewModel
         /// <param name="obj">对象</param>
         private void BeginRun(RunManager obj)
         {
-            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "流程运行开始……");
+            //流程运行开始……
+            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, ResxIF.GetString("TheProcessStarted"));
 
             //不应该更新状态为START，不然和用户自己设置的标识冲突了
             //Task.Run(async()=> {
@@ -251,8 +253,9 @@ namespace RPARobot.ViewModel
 
             if (ViewModelLocator.Instance.UserPreferences.IsEnableScreenRecorder)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "屏幕录像开始……");
-                var screenRecorderFilePath = App.LocalRPAStudioDir + @"\ScreenRecorder\" + obj.m_packageItem.Name + @"(" + DateTime.Now.ToString("yyyy年MM月dd日HH时mm分ss秒") + ").mp4";
+                //屏幕录像开始……
+                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, ResxIF.GetString("ScreenRecordingStarted"));
+                var screenRecorderFilePath = App.LocalRPAStudioDir + @"\ScreenRecorder\" + obj.m_packageItem.Name + @"(" + DateTime.Now.ToString(ResxIF.GetString("YYYYMMDD")) + ").mp4";
                 FFmpegService = new FFmpegService(screenRecorderFilePath, ViewModelLocator.Instance.UserPreferences.FPS, ViewModelLocator.Instance.UserPreferences.Quality);//默认存到%localappdata%下RPASTUDIO下的ScreenRecorder目录下
 
                 Task.Run(() =>
@@ -282,13 +285,13 @@ namespace RPARobot.ViewModel
                 IsWorkflowRunning = true;
                 WorkflowRunningName = obj.m_packageItem.Name;
                 WorkflowRunningToolTip = obj.m_packageItem.ToolTip;
-                WorkflowRunningStatus = "正在运行";
+                WorkflowRunningStatus = ResxIF.GetString("RunningText"); //正在运行
             });
         }
 
         private void EndRun(RunManager obj)
         {
-            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "流程运行结束");
+            SharedObject.Instance.Output(SharedObject.enOutputType.Trace, ResxIF.GetString("EndProcessRun")); //流程运行结束
 
             Task.Run(async () =>
             {
@@ -305,7 +308,7 @@ namespace RPARobot.ViewModel
 
             if (ViewModelLocator.Instance.UserPreferences.IsEnableScreenRecorder)
             {
-                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, "屏幕录像结束");
+                SharedObject.Instance.Output(SharedObject.enOutputType.Trace, ResxIF.GetString("EndScreenRecording")); //屏幕录像结束
                 FFmpegService.StopCaptureScreen();
                 FFmpegService = null;
             }
@@ -383,7 +386,8 @@ namespace RPARobot.ViewModel
                 var pkg = repo.FindPackage(name, version);
                 item.Package = pkg;
                 var publishedTime = pkg.Published.Value.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss");
-                item.ToolTip = string.Format("名称：{0}\r\n版本：{1}\r\n发布说明：{2}\r\n项目描述：{3}\r\n发布时间：{4}", item.Name, item.Version, pkg.ReleaseNotes, pkg.Description, (publishedTime == null ? "未知" : publishedTime));
+                string toolTip = ResxIF.GetString("PackageToolTip"); //"名称：{0}\r\n版本：{1}\r\n发布说明：{2}\r\n项目描述：{3}\r\n发布时间：{4}"
+                item.ToolTip = string.Format(toolTip, item.Name, item.Version, pkg.ReleaseNotes, pkg.Description, (publishedTime == null ? "未知" : publishedTime));
 
                 if (IsWorkflowRunning && item.Name == WorkflowRunningName)
                 {

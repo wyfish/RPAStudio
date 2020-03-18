@@ -889,7 +889,7 @@
     <value>Cell Options</value>
   </data>
   <data name="Description76" xml:space="preserve">
-    <value>VB expression representing the cell name, such as A1</value>
+    <value>VB expression for cell name, such as A1</value>
   </data>
   <data name="DisplayName141" xml:space="preserve">
     <value>Cell Name</value>
@@ -910,7 +910,7 @@
     <value>Merge / Split</value>
   </data>
   <data name="Description78" xml:space="preserve">
-    <value>VB expression representing the cell name, such as B2</value>
+    <value>VB expression for cell name, such as B2</value>
   </data>
   <data name="DisplayName143" xml:space="preserve">
     <value>Destination File Path</value>
@@ -1038,12 +1038,6 @@
   <data name="FilePathToSave" xml:space="preserve">
     <value>File save path</value>
   </data>
-  <data name="Description80" xml:space="preserve">
-    <value>VB expression for cell name, such as A1</value>
-  </data>
-  <data name="Description81" xml:space="preserve">
-    <value>VB expression for cell name, such as B2</value>
-  </data>
   <data name="DisplayName177" xml:space="preserve">
     <value>Cell data</value>
   </data>
@@ -1068,25 +1062,31 @@
   <data name="xRequireCorrectSavePath2" xml:space="preserve">
     <value>Save as should enter the correct save path!</value>
   </data>
-  <data name="key319" xml:space="preserve">
+  <data name="FileOption" xml:space="preserve">
     <value>File options</value>
   </data>
-  <data name="key320" xml:space="preserve">
+  <data name="FilePath" xml:space="preserve">
     <value>File path</value>
   </data>
-  <data name="key321" xml:space="preserve">
+  <data name="FilePassword" xml:space="preserve">
     <value>File password</value>
   </data>
-  <data name="key322" xml:space="preserve">
+  <data name="OptionText" xml:space="preserve">
     <value>Option</value>
   </data>
-  <data name="key323" xml:space="preserve">
+  <data name="PageRange" xml:space="preserve">
     <value>Page range</value>
   </data>
-  <data name="key324" xml:space="preserve">
+  <data name="OutputText" xml:space="preserve">
     <value>Output</value>
   </data>
-  <data name="key325" xml:space="preserve">
+  <data name="PDFText" xml:space="preserve">
     <value>PDF Text</value>
+  </data>
+  <data name="UsedRangeApplied" xml:space="preserve">
+    <value>UsedRange is applied if it is blank</value>
+  </data>
+  <data name="FormulaExample" xml:space="preserve">
+    <value>Formula can be set Example \"= Sum (A1 / B1) \"</value>
   </data>
 </root>

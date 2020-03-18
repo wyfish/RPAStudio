@@ -79,6 +79,15 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   The software failed the authorization test, please register the product! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string AuthorizationTestFailed {
+            get {
+                return ResourceManager.GetString("AuthorizationTestFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Automatically open the main window after startup に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string AutomaticallyOpenWindowContent {
@@ -250,6 +259,24 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Loading project dependencies に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LoadingProjectDependencies {
+            get {
+                return ResourceManager.GetString("LoadingProjectDependencies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Error loading project dependencies! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LoadingProjectDependenciesError {
+            get {
+                return ResourceManager.GetString("LoadingProjectDependenciesError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Locate the current package に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string LocateCurrentPackage {
@@ -282,6 +309,24 @@ namespace RPARobot.Localization {
         public static string PermanentText {
             get {
                 return ResourceManager.GetString("PermanentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Process start に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ProcessStart {
+            get {
+                return ResourceManager.GetString("ProcessStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Prompt に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PromptText {
+            get {
+                return ResourceManager.GetString("PromptText", resourceCulture);
             }
         }
         
@@ -385,6 +430,15 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Start に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string StartText {
+            get {
+                return ResourceManager.GetString("StartText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Status : に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string StatusText {
@@ -421,6 +475,15 @@ namespace RPARobot.Localization {
         }
         
         /// <summary>
+        ///   Update に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UpdateText {
+            get {
+                return ResourceManager.GetString("UpdateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   User settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string UserSettings {
@@ -444,6 +507,15 @@ namespace RPARobot.Localization {
         public static string VersionText {
             get {
                 return ResourceManager.GetString("VersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   A workflow is already running, please wait for it to finish before running! に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string WorkflowAlreadyRunning {
+            get {
+                return ResourceManager.GetString("WorkflowAlreadyRunning", resourceCulture);
             }
         }
     }

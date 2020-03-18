@@ -142,8 +142,10 @@
                                             <TextBlock IsHitTestVisible="False" controls:HighlightableTextBlock.HightlightText="{Binding SearchText}" controls:HighlightableTextBlock.HighlightBrush="Transparent" controls:HighlightableTextBlock.HighlightTextBrush="#ff9052" Text="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Left" />
                                         </Grid>
                                         <Grid HorizontalAlignment="Right" Visibility="{Binding IsMouseOver,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}">
-                                            <libs:ColorButtonThreeState Visibility="{Binding IsNeedUpdate,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" Width="25" Height="25" ToolTip="启动" ToolTipService.InitialShowDelay="500" Command="{Binding StartCommand}" def_img="pack://application:,,,/Resources/Image/Main/start.png" />
-                                            <libs:ColorButtonThreeState Visibility="{Binding IsNeedUpdate,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}" Width="25" Height="25" ToolTip="更新" ToolTipService.InitialShowDelay="500" Command="{Binding UpdateCommand}" def_img="pack://application:,,,/Resources/Image/Main/update.png" />
+                                            <!--启动-->
+                                            <libs:ColorButtonThreeState Visibility="{Binding IsNeedUpdate,Mode=OneWay, Converter={StaticResource BoolNotVisibilityConverter}}" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.StartText}" ToolTipService.InitialShowDelay="500" Command="{Binding StartCommand}" def_img="pack://application:,,,/Resources/Image/Main/start.png" />
+                                            <!--更新-->
+                                            <libs:ColorButtonThreeState Visibility="{Binding IsNeedUpdate,Mode=OneWay, Converter={StaticResource BoolVisibilityConverter}}" Width="25" Height="25" ToolTip="{x:Static lclz:Strings.UpdateText}" ToolTipService.InitialShowDelay="500" Command="{Binding UpdateCommand}" def_img="pack://application:,,,/Resources/Image/Main/update.png" />
                                         </Grid>
                                     </Grid>
                                 </Grid>

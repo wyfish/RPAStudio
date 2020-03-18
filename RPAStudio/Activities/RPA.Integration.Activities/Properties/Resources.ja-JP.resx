@@ -898,7 +898,7 @@
     <value>シートオプション</value>
   </data>
   <data name="Description77" xml:space="preserve">
-    <value>空白は現在アクティブなワークシートを表します</value>
+    <value>空白の場合はアクティブシートとなります</value>
   </data>
   <data name="Category32" xml:space="preserve">
     <value>開始セル</value>
@@ -1038,12 +1038,6 @@
   <data name="FilePathToSave" xml:space="preserve">
     <value>ファイル保存パス</value>
   </data>
-  <data name="Description80" xml:space="preserve">
-    <value>A1などのセル名を表すVB表現</value>
-  </data>
-  <data name="Description81" xml:space="preserve">
-    <value>B2などのセル名を表すVB表現</value>
-  </data>
   <data name="DisplayName177" xml:space="preserve">
     <value>セルのデータ</value>
   </data>
@@ -1068,25 +1062,31 @@
   <data name="xRequireCorrectSavePath2" xml:space="preserve">
     <value>正しい保存パスを入力してください。</value>
   </data>
-  <data name="key319" xml:space="preserve">
+  <data name="FileOption" xml:space="preserve">
     <value>ファイルオプション</value>
   </data>
-  <data name="key320" xml:space="preserve">
+  <data name="FilePath" xml:space="preserve">
     <value>ファイルパス</value>
   </data>
-  <data name="key321" xml:space="preserve">
+  <data name="FilePassword" xml:space="preserve">
     <value>ファイルのパスワード</value>
   </data>
-  <data name="key322" xml:space="preserve">
+  <data name="OptionText" xml:space="preserve">
     <value>オプション</value>
   </data>
-  <data name="key323" xml:space="preserve">
+  <data name="PageRange" xml:space="preserve">
     <value>ページ範囲</value>
   </data>
-  <data name="key324" xml:space="preserve">
+  <data name="OutputText" xml:space="preserve">
     <value>出力</value>
   </data>
-  <data name="key325" xml:space="preserve">
+  <data name="PDFText" xml:space="preserve">
     <value>PDFテキスト</value>
+  </data>
+  <data name="UsedRangeApplied" xml:space="preserve">
+    <value>空白の場合はUsedRangeが適用されます</value>
+  </data>
+  <data name="FormulaExample" xml:space="preserve">
+    <value>数式を設定できます例\"= Sum（A1 / B1）\"</value>
   </data>
 </root>
