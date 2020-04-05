@@ -49,6 +49,9 @@
 ## 版权声明
   * 本软件使用 GPL3.0 协议，请严格遵照协议内容!
 ## 合作及联系
-  * QQ交流群: 767682308
+  * QQ交流群:
+  一群：767682308（一群满，请加二群）
+  二群：1074756455
   * 联系邮箱：miaogy@turbochain.ai
+  <img src="https://github.com/rpa-ai/RPAStudio/raw/master/RPAStudio/ico/qq2.jpg" width="440" height="540">
   <img src="https://github.com/rpa-ai/RPAStudio/raw/master/RPAStudio/ico/qq.jpg" width="440" height="540">
